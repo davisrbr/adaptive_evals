@@ -1,19 +1,34 @@
 import json
 import re
 from typing import Union
+import numpy as np
 
 from inspect_ai.model import get_model, Model, GenerateConfig
-from inspect_ai.model._chat_message import ChatMessageSystem, ChatMessageUser
+from inspect_ai.model import ChatMessageSystem, ChatMessageUser
 from inspect_ai.scorer import scorer, Score, Target, accuracy, stderr, max_score
-from inspect_ai.scorer._metric import Metric, ValueToFloat, metric, value_to_float
-from inspect_ai.solver._task_state import TaskState
+from inspect_ai.scorer import Metric, ValueToFloat, metric, value_to_float
+from inspect_ai.solver import TaskState
 
 from system_prompts import get_judge_system_prompt, JUDGE_SYSTEM_PROMPT_HARMBENCH
 from common import process_target_response 
 from inspect_tools import labelling_function_harmbench
 
 
-@scorer(metrics=[accuracy(), stderr()])
+@metric
+def max() -> Metric:
+    """Compute max of all scores.
+
+    Returns:
+       max metric
+    """
+
+    def metric(scores: list[Score]) -> float:
+        return np.max([score.as_float() for score in scores]).item()
+
+    return metric
+
+
+@scorer(metrics=[max()])
 def pair_scorer(
     judge_model: Union[str, Model] = "openai/gpt-4",
     max_tokens: int = 200,
@@ -74,7 +89,7 @@ def pair_scorer(
     return score
 
 
-@scorer(metrics=[accuracy(), stderr()])
+@scorer(metrics=[max()])
 def pair_scorer_heirarchal(
     judge_model_primary: Union[str, Model] = "openai/gpt-4o-mini",
     judge_model_secondary: Union[str, Model] = "openai/gpt-4o",
@@ -162,7 +177,7 @@ def pair_scorer_heirarchal(
     return score
 
 
-@scorer(metrics=[max_score(), accuracy(), stderr()])
+@scorer(metrics=[max()])
 def secondary_scorer(
     judge_model: Union[str, Model] = "openai/gpt-4",
     max_tokens: int = 200,
@@ -218,7 +233,7 @@ def secondary_scorer(
 
     return score
 
-@scorer(metrics=[accuracy(), stderr()])
+@scorer(metrics=[max()])
 def final_scorer():
     async def score(state: TaskState, target: Target) -> Score:
         # Retrieve the final score value from the state
@@ -229,7 +244,7 @@ def final_scorer():
     
     return score
 
-@scorer(metrics=[accuracy(), stderr()])
+@scorer(metrics=[max()])
 def jailbreakbench_scorer(
     judge_model: Union[str, Model] = "openai/gpt-4o",
     max_tokens: int = 200,
