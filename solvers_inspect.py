@@ -4,7 +4,7 @@ from inspect_ai.scorer._target import Target
 from inspect_ai.solver import solver, Generate
 from inspect_ai.solver._task_state import TaskState
 
-from scorers_inspect import pair_scorer, pair_scorer_heirarchal
+from scorers_inspect import pair_scorer, pair_scorer_heirarchal, strongreject_scorer
 from common import extract_json
 from system_prompts import  get_attacker_system_prompt
 from adaptive_prompts import get_adaptive_examples, get_attacker_system_prompt_adaptive, get_attacker_system_prompt_adaptive2, get_attacker_system_prompt_adaptive3
@@ -22,6 +22,7 @@ def pair_solver(
     judge_model_name: str = "openai/gpt-4",
     attack_model_name: str = "together/mistralai/Mixtral-8x22B-Instruct-v0.1",
     n_last_messages: int = 2,
+    use_strongreject_scorer: bool = False,
     heirarchal_scorer: bool = False
 ):
     """
@@ -32,6 +33,8 @@ def pair_solver(
         target_model_name (str): Name of the target language model.
         judge_model_name (str): Name of the judge language model.
         attack_model_name (str): Name of the attack language model.
+        use_strongreject_scorer (bool): Whether to use the strongreject scorer.
+        heirarchal_scorer (bool): Whether to use a heirarchal PAIR scorer.
     Returns:
         Callable: Solver function.
     """
@@ -41,11 +44,16 @@ def pair_solver(
         max_connections=10000
     ))
     target_model = get_model(target_model_name, config=GenerateConfig(
-        max_tokens=10000,
+        max_tokens=1000,
         temperature=0.0,
         max_connections=10000
     ))
-    scorer_fn = pair_scorer(judge_model=judge_model_name) if not heirarchal_scorer else pair_scorer_heirarchal(judge_model_primary=judge_model_name, judge_model_secondary="openai/gpt-4o")
+    if use_strongreject_scorer and heirarchal_scorer:
+        raise ValueError("Cannot use both strongreject scorer and heirarchal scorer")   
+    elif not use_strongreject_scorer: 
+        scorer_fn = pair_scorer(judge_model=judge_model_name) if not heirarchal_scorer else pair_scorer_heirarchal(judge_model_primary=judge_model_name, judge_model_secondary="openai/gpt-4o")
+    else:
+        scorer_fn = strongreject_scorer(judge_model=judge_model_name)
 
     async def solve(state: TaskState, generate: Generate) -> TaskState:
         goal = state.metadata.get("Goal")

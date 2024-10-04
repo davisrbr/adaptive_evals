@@ -32,7 +32,8 @@ def pair_task(
     max_iterations: int = 10,
     n_last_messages: int = 4, 
     epochs: int = 10, 
-    heirarchal_scorer: bool = False
+    use_strongreject_scorer: bool = False,
+    heirarchal_scorer: bool = False,
 ):
     """
     PAIR task within Inspect
@@ -44,9 +45,10 @@ def pair_task(
                 max_iterations=max_iterations,
                 target_model_name=target_model_name,
                 judge_model_name=judge_model_name,
+                attack_model_name=attack_model_name,
                 n_last_messages=n_last_messages,
+                use_strongreject_scorer=use_strongreject_scorer,
                 heirarchal_scorer=heirarchal_scorer,
-                attack_model_name=attack_model_name
             ),
         ],
         # scorer=secondary_scorer(judge_model="openai/gpt-4o"),
