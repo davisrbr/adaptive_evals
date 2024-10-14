@@ -133,6 +133,8 @@ def task_decomposition_task(
             basic_agent(
                 init=system_message(TASK_DECOMPOSITION_PROMPT),
                 # tools=[bash(timeout=180), python(timeout=180)], TODO: WRITE DECOMPOSITION TOOL
+                decomposition_attack_solver(
+                )
                 max_attempts=max_attempts,
             ),
         ],
