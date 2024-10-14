@@ -132,6 +132,8 @@ def task_decomposition_task(
             basic_agent(
                 init=system_message(TASK_DECOMPOSITION_PROMPT),
                 # tools=[bash(timeout=180), python(timeout=180)], TODO: WRITE DECOMPOSITION TOOL
+                decomposition_attack_solver(
+                )
                 max_attempts=max_attempts,
             ),
         ],
@@ -182,7 +184,7 @@ if __name__ == "__main__":
     #             heirarchal_scorer=False
     #         )
     #         eval(task, epochs=Epochs(20, "max"), max_connections=10000)[0]
-
+'''
     for max_iterations in [2]:
         for n_adaptive_examples in [3]:
             task = pair_task_adaptive(
@@ -197,3 +199,11 @@ if __name__ == "__main__":
                 heirarchal_scorer=True
             )
             eval(task, epochs=Epochs(20, "max"), max_connections=10000)[0]  
+'''
+    for max_iterations in [2]:
+        for n_adaptive_examples in [3]:
+            task = task_decomposition_task(
+                max_attempts=3,
+                epochs=20
+            )
+            eval(task, epochs=Epochs(20, "max"), max_connections=10000)[0]
