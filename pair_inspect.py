@@ -1,9 +1,10 @@
 from inspect_ai import Task, task
 from inspect_ai import Epochs, Task, eval
 from inspect_ai.solver import basic_agent, system_message
+from inspect_ai.solver._task_state import Sample
 from inspect_ai.scorer import at_least
 from data_inspect import jb_behaviors_dataset, jb_behaviors_dataset_embeddings
-from solvers_inspect import pair_solver, pair_solver_adaptive
+from solvers_inspect import pair_solver, pair_solver_adaptive, decomposition_attack_solver
 from scorers_inspect import final_scorer, jailbreakbench_scorer, secondary_scorer
 
 import numpy as np
@@ -117,26 +118,25 @@ and the final task combination could be :
 ### Step-by-Step Decomposition:
 """
 
+jb_behaviors_dataset = [
+    Sample(input=item.input, target=item.target, metadata=item.metadata, sandbox=item.sandbox if hasattr(item, 'sandbox') else None)
+    for item in jb_behaviors_dataset
+]
 
 @task
 def task_decomposition_task(
+    dataset: list = jb_behaviors_dataset,
     # judge_model_name: str = "openai/gpt-4", 
-    max_attempts: int = 3,
     epochs: int = 10
 ):
     """
     Task Decomposition task within Inspect
     """
     return Task(
-        dataset=jb_behaviors_dataset,
+        dataset=dataset,
         plan=[
-            basic_agent(
-                init=system_message(TASK_DECOMPOSITION_PROMPT),
-                # tools=[bash(timeout=180), python(timeout=180)], TODO: WRITE DECOMPOSITION TOOL
-                decomposition_attack_solver(
-                )
-                max_attempts=max_attempts,
-            ),
+            decomposition_attack_solver(
+            )
         ],
         scorer=final_scorer(),
         epochs=Epochs(epochs, jb_reducer)
@@ -237,17 +237,5 @@ if __name__ == "__main__":
         # )
         # eval(task, epochs=Epochs(20, "max"), max_connections=10000, log_dir="pair_task_22B_log")[0]  
 
-        task = pair_task_adaptive(
-            max_iterations=2,
-            n_last_messages=2,
-            n_adaptive_examples=3,
-            epochs=20,
-            judge_model_name="openai/gpt-4o-mini",
-            target_model_name="together/meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
-            attack_model_name="together/mistralai/Mixtral-8x22B-Instruct-v0.1",
-            use_strongreject_scorer=False,
-            heirarchal_scorer=True,
-            use_embeddings=True,
-            dataset=[dataset]
-        )
-        eval(task, epochs=Epochs(20, "max"), max_connections=10000, log_dir="pair_task_adaptive_embeddings_22B_log")[0]  
+        task = task_decomposition_task(dataset=[dataset])
+        eval(task, epochs=Epochs(20, "max"), max_connections=10000, log_dir="pair_task_adaptive_embeddings_22B_log", model="together/mistralai/Mixtral-8x22B-Instruct-v0.1")[0] 

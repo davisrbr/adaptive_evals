@@ -164,17 +164,17 @@ def decomposition_attack_solver(
     heirarchal_scorer: bool = False
 ):
     attack_model = get_model(attack_model_name, config=GenerateConfig(
-        max_tokens=1024,
+        max_tokens=10000,
         temperature=1.0,
         max_connections=10000
     ))
     decomposition_model = get_model(decomposition_model_name, config=GenerateConfig(
-        max_tokens=1024,
+        max_tokens=10000,
         temperature=1.0,
         max_connections=10000
     ))
     target_model = get_model(target_model_name, config=GenerateConfig(
-        max_tokens=1000,
+        max_tokens=10000,
         temperature=0.0,
         max_connections=10000
     ))
@@ -214,7 +214,11 @@ def decomposition_attack_solver(
 
         # Decode the json response from the decomposition model
         extracted_data, _ = extract_json(decomposition_response.completion, use_gpt4_mini=False)
-        print(f"Extracted data: {extracted_data}")
+        if extracted_data is None:
+            print("Error: Failed to extract data from decomposition response.")
+            state.completed = True
+            state.store.set("error", "Failed to extract decomposition data.")
+            return state
 
         for decomp_round in range(max_decomposition_rounds):
             print(f"Decomposition round {decomp_round + 1}/{max_decomposition_rounds}")
@@ -542,5 +546,3 @@ def pair_solver_adaptive(
     return solve
 
 
-if __name__ == "__main__":
-    
