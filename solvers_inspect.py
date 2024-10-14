@@ -384,6 +384,7 @@ def pair_solver_adaptive(
     n_last_messages: int = 2,
     n_adaptive_examples: int = 3,
     heirarchal_scorer: bool = False,
+    use_embeddings: bool = False,
     use_strongreject_scorer: bool = False
 ):
     """
@@ -418,11 +419,15 @@ def pair_solver_adaptive(
         scorer_fn = pair_scorer(judge_model=judge_model_name) if not heirarchal_scorer else pair_scorer_heirarchal(judge_model_primary=judge_model_name, judge_model_secondary="openai/gpt-4o")
 
     adaptive_prompt_generator = AdaptiveJailbreakRetrieval()
-    adaptive_prompt = adaptive_prompt_generator.get_prompt(n_adaptive_examples)
 
     async def solve(state: TaskState, generate: Generate) -> TaskState:
         goal = state.metadata.get("Goal")
         target_text = state.metadata.get("Target")
+
+        if not use_embeddings:
+            adaptive_prompt = adaptive_prompt_generator.get_prompt(n_adaptive_examples)
+        else:
+            adaptive_prompt = adaptive_prompt_generator.get_prompt_embedding_model(n_adaptive_examples, state.metadata.get("nearest_adaptive_prompts"))
 
         if not goal or not target_text:
             state.completed = True
@@ -452,7 +457,7 @@ def pair_solver_adaptive(
                     response = state.store.get(f"iteration_{i}_response", "").replace('"', '\\"')
                     score = state.store.get(f"iteration_{i}_score", 0)
                     history_entries.append(
-                        f'"prompt_{i}": "{prompt}", "response_{i}": "{response}", "score_{i}": {score}'
+                        f'"prompt": "{prompt}", "response": "{response}", "score": {score}'
                     )
 
             # Construct the full JSON payload

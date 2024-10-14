@@ -2,7 +2,7 @@ from inspect_ai import Task, task
 from inspect_ai import Epochs, Task, eval
 from inspect_ai.solver import basic_agent, system_message
 from inspect_ai.scorer import at_least
-from data_inspect import jb_behaviors_dataset
+from data_inspect import jb_behaviors_dataset, jb_behaviors_dataset_embeddings
 from solvers_inspect import pair_solver, pair_solver_adaptive
 from scorers_inspect import final_scorer, jailbreakbench_scorer, secondary_scorer
 
@@ -22,9 +22,6 @@ np.random.seed(42)
 # jb_behaviors_dataset = jb_behaviors_dataset[8*7:8*8] # privacy
 # attack_model_name: str = "together/mistralai/Mixtral-8x22B-Instruct-v0.1",
 
-jb_behaviors_dataset = [example for example in jb_behaviors_dataset if example.metadata.get('Source') == 'TDC/HarmBench']
-# jb_behaviors_dataset = np.random.choice(jb_behaviors_dataset, 10)
-jb_behaviors_dataset = np.random.choice(jb_behaviors_dataset, 30)
 
 jb_reducer = at_least(1, 10)
 
@@ -38,12 +35,13 @@ def pair_task(
     epochs: int = 10, 
     use_strongreject_scorer: bool = False,
     heirarchal_scorer: bool = False,
+    dataset: list = jb_behaviors_dataset,
 ):
     """
     PAIR task within Inspect
     """
     return Task(
-        dataset=jb_behaviors_dataset,
+        dataset=dataset,
         plan=[
             pair_solver(
                 max_iterations=max_iterations,
@@ -70,13 +68,15 @@ def pair_task_adaptive(
     n_adaptive_examples: int = 2,
     use_strongreject_scorer: bool = False,
     heirarchal_scorer: bool = False,
-    epochs: int = 10
+    use_embeddings: bool = False,
+    epochs: int = 10, 
+    dataset: list = jb_behaviors_dataset,
 ):
     """
     PAIR task within Inspect
     """
     return Task(
-        dataset=jb_behaviors_dataset,
+        dataset=dataset,
         plan=[
             pair_solver_adaptive(
                 max_iterations=max_iterations,
@@ -86,7 +86,8 @@ def pair_task_adaptive(
                 n_last_messages=n_last_messages,
                 n_adaptive_examples=n_adaptive_examples,
                 heirarchal_scorer=heirarchal_scorer,
-                use_strongreject_scorer=use_strongreject_scorer
+                use_strongreject_scorer=use_strongreject_scorer,
+                use_embeddings=use_embeddings
             ),
         ],
         scorer=final_scorer(), # secondary_scorer(judge_model="openai/gpt-4o"),
@@ -183,17 +184,68 @@ if __name__ == "__main__":
     #         )
     #         eval(task, epochs=Epochs(20, "max"), max_connections=10000)[0]
 
-    for max_iterations in [2]:
-        for n_adaptive_examples in [3]:
-            task = pair_task_adaptive(
-                max_iterations=max_iterations,
-                n_last_messages=2,
-                n_adaptive_examples=n_adaptive_examples,
-                epochs=20,
-                judge_model_name="openai/gpt-4o-mini",
-                target_model_name="together/meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
-                attack_model_name="together/mistralai/Mixtral-8x7B-Instruct-v0.1",
-                use_strongreject_scorer=False,
-                heirarchal_scorer=True
-            )
-            eval(task, epochs=Epochs(20, "max"), max_connections=10000)[0]  
+    # jb_behaviors_dataset = [example for example in jb_behaviors_dataset if example.metadata.get('Source') == 'TDC/HarmBench']
+    jb_behaviors_dataset_embeddings = [example for example in jb_behaviors_dataset_embeddings if example.metadata.get('Source') == 'TDC/HarmBench']
+    # jb_behaviors_dataset = np.random.choice(jb_behaviors_dataset, 30)
+    jb_behaviors_dataset = np.random.choice(jb_behaviors_dataset_embeddings, 30)
+
+    # for dataset in jb_behaviors_dataset:
+    #     for max_iterations in [2]:
+    #         for n_adaptive_examples in [3]:
+    #             task = pair_task_adaptive(
+    #                 max_iterations=max_iterations,
+    #                 n_last_messages=2,
+    #                 n_adaptive_examples=n_adaptive_examples,
+    #                 epochs=20,
+    #                 judge_model_name="openai/gpt-4o-mini",
+    #                 target_model_name="together/meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+    #                 attack_model_name="together/mistralai/Mixtral-8x7B-Instruct-v0.1",
+    #                 use_strongreject_scorer=False,
+    #                 heirarchal_scorer=True,
+    #                 dataset=[dataset]
+    #             )
+    #             eval(task, epochs=Epochs(20, "max"), max_connections=10000)[0]  
+
+    # for dataset in jb_behaviors_dataset:
+    #     for max_iterations in [2]:
+    #         task = pair_task(
+    #             max_iterations=max_iterations,
+    #             n_last_messages=2,
+    #             epochs=20,
+    #             judge_model_name="openai/gpt-4o-mini",
+    #             target_model_name="together/meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+    #             attack_model_name="together/mistralai/Mixtral-8x7B-Instruct-v0.1",
+    #             use_strongreject_scorer=False,
+    #             heirarchal_scorer=True,
+    #             dataset=[dataset]
+    #         )
+    #         eval(task, epochs=Epochs(20, "max"), max_connections=10000, log_dir="logs/pair_task_log")[0]  
+
+    for dataset in jb_behaviors_dataset:
+        # task = pair_task(
+        #     max_iterations=2,
+        #     n_last_messages=2,
+        #     epochs=20,
+        #     judge_model_name="openai/gpt-4o-mini",
+        #     target_model_name="together/meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+        #     attack_model_name="together/mistralai/Mixtral-8x7B-Instruct-v0.1",
+        #     use_strongreject_scorer=False,
+        #     heirarchal_scorer=True,
+        #     dataset=[dataset]
+        # )
+        # eval(task, epochs=Epochs(20, "max"), max_connections=10000, log_dir="pair_task_22B_log")[0]  
+
+        task = pair_task_adaptive(
+            max_iterations=2,
+            n_last_messages=2,
+            n_adaptive_examples=3,
+            epochs=20,
+            judge_model_name="openai/gpt-4o-mini",
+            target_model_name="together/meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+            attack_model_name="together/mistralai/Mixtral-8x22B-Instruct-v0.1",
+            use_strongreject_scorer=False,
+            heirarchal_scorer=True,
+            use_embeddings=True,
+            dataset=[dataset]
+        )
+        eval(task, epochs=Epochs(20, "max"), max_connections=10000, log_dir="pair_task_adaptive_embeddings_22B_log")[0]  
