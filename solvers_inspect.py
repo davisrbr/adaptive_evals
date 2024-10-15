@@ -1,12 +1,10 @@
-from inspect_ai.model import get_model, GenerateConfig
-from inspect_ai.model._chat_message import ChatMessageSystem, ChatMessageUser
-from inspect_ai.scorer._target import Target
-from inspect_ai.solver import solver, Generate
-from inspect_ai.solver._task_state import TaskState
+from inspect_ai.model import get_model, GenerateConfig, ChatMessageSystem, ChatMessageUser
+from inspect_ai.scorer import Target
+from inspect_ai.solver import solver, Generate, TaskState
 
 from scorers_inspect import pair_scorer, pair_scorer_heirarchal, strongreject_scorer, subtask_scorer
-from common import extract_json
-from system_prompts import  get_attacker_system_prompt, get_decomposition_system_prompt, get_compose_system_prompt, judge_composition_system_prompt
+from common import extract_json, extract_json_decomp, get_decomposistion_init_prompt, extract_subattack_json,get_init_msg
+from system_prompts import  get_attacker_system_prompt, get_decomposition_system_prompt, get_compose_system_prompt, get_subtask_attacker_system_prompt
 from adaptive_prompts import AdaptiveJailbreakRetrieval, get_adaptive_examples, get_attacker_system_prompt_adaptive, get_attacker_system_prompt_adaptive2, get_attacker_system_prompt_adaptive3
 
 
@@ -156,7 +154,6 @@ def decomposition_attack_solver(
     judge_model_name: str = "openai/gpt-4",
     attack_model_name: str = "together/mistralai/Mixtral-8x22B-Instruct-v0.1",
     decomposition_model_name: str = "together/mistralai/Mixtral-8x22B-Instruct-v0.1",
-    min_decompositions: int = 1,
     max_decompositions: int = 3,
     max_decomposition_rounds: int = 3,
     n_last_messages: int = 2,
@@ -174,7 +171,7 @@ def decomposition_attack_solver(
         max_connections=10000
     ))
     target_model = get_model(target_model_name, config=GenerateConfig(
-        max_tokens=10000,
+        max_tokens=2000,
         temperature=0.0,
         max_connections=10000
     ))
@@ -201,19 +198,21 @@ def decomposition_attack_solver(
 
         print(f"Top goal: {top_goal}, Top target text: {top_target_text}")
 
-        # Generate decomposition system prompt
-        decomposition_prompt = get_decomposition_system_prompt(top_goal, top_target_text, min_decompositions, max_decompositions)
+        # Generate decomposition system and user prompt
+        decomposition_prompt = get_decomposition_system_prompt(top_goal, top_target_text, max_decompositions)
         decomposition_system_message = ChatMessageSystem(content=decomposition_prompt)
+        decomposition_user = get_decomposistion_init_prompt(top_goal, max_decompositions)
+        decomposition_user_message = ChatMessageUser(content=decomposition_user)
 
         # Initialize attack_messages with decomposition system message
-        attack_messages = [decomposition_system_message]
+        attack_messages = [decomposition_system_message, decomposition_user_message]
         print("Sending decomposition prompt to attack model...")
-        print("Attack messages:", attack_messages)
+        print("Decomposition messages:", attack_messages)
         decomposition_response = await attack_model.generate(attack_messages)
         print(f"Decomposition response: {decomposition_response.completion}")
 
         # Decode the json response from the decomposition model
-        extracted_data, _ = extract_json(decomposition_response.completion, use_gpt4_mini=False)
+        extracted_data = extract_json_decomp(decomposition_response.completion, max_decompositions)
         if extracted_data is None:
             print("Error: Failed to extract data from decomposition response.")
             state.completed = True
@@ -231,10 +230,10 @@ def decomposition_attack_solver(
                     print(f"Iteration {iteration}/{max_iterations} for decomposition #{decomp_num}")
 
                     # Initialize the attack message format based on the iteration
-                    init_message = '{"improvement": "", "prompt": ""}'
+                    init_message = get_init_msg(decomp)
 
                     # Generate attacker system prompt
-                    subtask_attacker_prompt = get_subtask_attacker_system_prompt(top_goal, top_target_text, decomp)
+                    subtask_attacker_prompt = get_subtask_attacker_system_prompt(decomp)
                     subtask_attack_system_message = ChatMessageSystem(content=subtask_attacker_prompt)
 
                     # Prepare the attack messages
@@ -339,10 +338,10 @@ def decomposition_attack_solver(
                 for decomp_num, decomp in extracted_data.items():
                     decomposition[round, decomp_num] = state.store[f"best_response_{iteration}_round_{round}_{decomp_num}"]
 
-            compose_user_message = ChatMessageUser(content=str(decomposition))
+            compose_userpyth_message = ChatMessageUser(content=str(decomposition))
             print("Generating compose output...")
-            compose_generated = await decomposition_model.generate([compose_system_message, compose_user_message])
-            state.set(f"compose_generated_round_{decomp_round}", compose_generated)
+            compose_generated = await decomposition_model.generate([compose_system_message, compose_userpyth_message])
+            state.store.set(f"compose_generated_round_{decomp_round}", compose_generated)
 
             # pass to judge
             if not target_response or not target_response.completion:

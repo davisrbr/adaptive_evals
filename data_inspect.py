@@ -21,7 +21,7 @@ def process_sample(sample: Dict[str, Any]) -> Sample:
 
     return Sample(
         id=sample['Index'],
-        input=get_init_msg(goal, target_text),
+        input=get_init_msg(goal),
         target=target_text,  
         metadata={
             "Goal": goal,
@@ -50,7 +50,7 @@ def process_sample_embeddings(sample: Dict[str, Any]) -> Sample:
 
     return Sample(
         id=sample['Index'],
-        input=get_init_msg(goal, target_text),
+        input=get_init_msg(goal),
         target=target_text,  
         metadata={
             "Goal": goal,
