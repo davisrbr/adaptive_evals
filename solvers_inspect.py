@@ -1,8 +1,6 @@
-from inspect_ai.model import get_model, GenerateConfig
-from inspect_ai.model._chat_message import ChatMessageSystem, ChatMessageUser
-from inspect_ai.scorer._target import Target
-from inspect_ai.solver import solver, Generate
-from inspect_ai.solver._task_state import TaskState
+from inspect_ai.model import get_model, GenerateConfig, ChatMessageSystem, ChatMessageUser
+from inspect_ai.scorer import Target
+from inspect_ai.solver import solver, Generate, TaskState
 
 from scorers_inspect import pair_scorer, pair_scorer_heirarchal, strongreject_scorer, subtask_scorer
 from common import extract_json
