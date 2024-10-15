@@ -63,7 +63,7 @@ def extract_json(s, use_gpt4_mini=False):
             return None, None
 
 
-def extract_json_decomp(s, num_steps):
+def c(s, num_steps):
     """
     Given an output steps from the LLM responsible for decomposition, this function extracts the values
     for step_{1, 2, ..., num_steps}
