@@ -127,7 +127,7 @@ jb_behaviors_dataset = [
 def task_decomposition_task(
     dataset: list = jb_behaviors_dataset,
     # judge_model_name: str = "openai/gpt-4", 
-    epochs: int = 10
+    epochs: int = 1
 ):
     """
     Task Decomposition task within Inspect
@@ -238,4 +238,4 @@ if __name__ == "__main__":
         # eval(task, epochs=Epochs(20, "max"), max_connections=10000, log_dir="pair_task_22B_log")[0]  
 
         task = task_decomposition_task(dataset=[dataset])
-        eval(task, epochs=Epochs(20, "max"), max_connections=10000, log_dir="pair_task_adaptive_embeddings_22B_log", model="together/mistralai/Mixtral-8x22B-Instruct-v0.1")[0] 
+        eval(task, epochs=Epochs(2, "max"), max_connections=10000, log_dir="decompose_task_log", model="together/mistralai/Mixtral-8x22B-Instruct-v0.1")[0] 
