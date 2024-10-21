@@ -282,6 +282,47 @@ This prompt is effective because the language models have strict filters and cla
     return prompt
 
 
+def get_generation_prompt(context, use_cot: bool = False):
+    if use_cot:
+        generation_prompt = f"""
+Generate a new multiple-choice question that is challenging for an AI assistant. The question should use the patterns of the failure cases below. Provide your reasoning step-by-step to create a new question that follows these patterns. Base your question on the following questions and answers:
+
+{context}
+
+First, identify common patterns in the failure cases and explain them. Begin your response with a <Begin Reasoning> tag and then end your reasoning with a <End Reasoning> tag.
+
+After identifying the patterns, use these patterns to create a new question.
+
+After this, present **only** your new final question in JSON format (without any additional text). Do not prepend the letter of the choice to the choices. Replace the placeholders with your actual content. For example:
+
+```json
+{{
+    "question": "What is the capital of France?",
+    "choices": ["Berlin", "Paris", "Madrid", "Rome"], # Note: This is just the choices, not the letters
+    "answer": ["B"] # Note: This is just the letter of the correct answer choice
+}}
+```
+"""
+    else:
+        generation_prompt = f"""
+Generate a new multiple-choice question that is challenging for an AI assistant. The question should use the patterns of the failure cases below to create a new question that is challenging for an AI assistant. Base your question on the following questions and answers:
+
+{context}
+
+Present **only** your new final question in JSON format (without any additional text). Do not prepend the letter of the choice to the choices. Replace the placeholders with your actual content. For example:
+
+```json
+{{
+    "question": "What is the capital of France?",
+    "choices": ["Berlin", "Paris", "Madrid", "Rome"], # Note: This is just the choices, not the letters
+    "answer": ["B"]  # Note: This is just the letter of the correct answer choice
+}}
+```
+"""
+    return generation_prompt
+
+
+
 
 
 
