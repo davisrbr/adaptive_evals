@@ -1,12 +1,12 @@
 from inspect_ai.scorer import CORRECT, INCORRECT, Score, Scorer, Target, accuracy, stderr, scorer
 from inspect_ai.solver import solver, Generate, TaskState
-from inspect_ai.model import GenerateConfig, get_model
+from inspect_ai.model import ChatMessageUser, GenerateConfig, get_model
 from inspect_ai.log import read_eval_log
 from inspect_ai.dataset import Sample
 from typing import List, Literal, Tuple
 import random
 import re
-from adaptive_prompts import get_generation_prompt
+from adaptive_prompts import AdaptiveTruthfulQARetrieval, get_generation_prompt
 import logging
 
 # Configure logging
@@ -19,9 +19,11 @@ def adaptive_truthfulqa_solver(
     n_positive_samples: int = 5,
     n_negative_samples: int = 5,
     generator_model_name: str = "openai/gpt-4",
-    answer_model_name: str = "openai/gpt-4o-mini",
+    eval_model_name: str = "openai/gpt-4o-mini",
     target: Literal["mc1", "mc2"] = "mc1",
     use_cot: bool = False,
+    use_embeddings: bool = False,
+    embeddings_model_name: str = 'sentence-transformers/all-mpnet-base-v2',
 ) -> Generate:
     """
     Solver that generates new questions based on the model's performance and evaluates the model on them.
@@ -35,8 +37,7 @@ def adaptive_truthfulqa_solver(
 
         # intialize generator model that creates new questions and answer model that is evaluated on them
         generator_model = get_model(generator_model_name, config=GenerateConfig(max_connections=10000, temperature=0.5))
-        answer_model = get_model(answer_model_name, config=GenerateConfig(max_connections=10000, temperature=0))
-
+        eval_model = get_model(eval_model_name, config=GenerateConfig(max_connections=10000, temperature=0))
         # Load the initial evaluation log
         eval_log = read_eval_log(initial_log_path)
 
@@ -51,12 +52,16 @@ def adaptive_truthfulqa_solver(
             sample for sample in sample_logs if sample.score.value != "C"
         ]
 
-        num_correct = min(len(correct_samples), n_positive_samples)
-        num_incorrect = min(len(incorrect_samples), n_negative_samples)
+        if not use_embeddings:
+            num_correct = min(len(correct_samples), n_positive_samples)
+            num_incorrect = min(len(incorrect_samples), n_negative_samples)
 
-        # Sample correct and incorrect samples
-        sampled_correct = random.sample(correct_samples, num_correct) if num_correct > 0 else []
-        sampled_incorrect = random.sample(incorrect_samples, num_incorrect) if num_incorrect > 0 else []
+            # Sample correct and incorrect samples
+            sampled_correct = random.sample(correct_samples, num_correct) if num_correct > 0 else []
+            sampled_incorrect = random.sample(incorrect_samples, num_incorrect) if num_incorrect > 0 else []
+        else:
+            adaptive_retrieval = AdaptiveTruthfulQARetrieval(incorrect_samples, embeddings_model_name)
+            
 
         # Prepare context for the generator model
         context = ""
@@ -108,7 +113,7 @@ def adaptive_truthfulqa_solver(
             generated_sample.metadata['adjusted_target'] = adjusted_target
 
             # Generate the model's answer
-            answer_response = await answer_model.generate(mc_prompt)
+            answer_response = await eval_model.generate(mc_prompt)
 
             # Store the model's answer
             generated_sample.metadata['model_answer'] = str(answer_response.completion)
@@ -260,15 +265,14 @@ def format_multiple_choice_prompt(sample: Sample, multiple_correct: bool = False
 @scorer(metrics=[accuracy(), stderr()])
 def adaptive_truthfulqa_scorer() -> Scorer:
     """
-    Simple scorer for generated multiple choice answers, required by the `adaptive_truthfulqa` solver.
-
-    Assumes that the correct answer is already in the state store.
+    Scorer for the adaptive TruthfulQA task.
     """
 
     async def score(state: TaskState, target: Target) -> Score:
         try:
-            value = state.store.get('generated_sample').metadata['score']
-            answer = state.store.get('generated_sample').metadata['model_answer']
+            generated_sample = state.store.get('generated_sample')
+            value = generated_sample.metadata['score']
+            answer = generated_sample.metadata['model_answer']
             explanation = ""
             return Score(
                 value=CORRECT if value == "C" else INCORRECT,
@@ -279,10 +283,11 @@ def adaptive_truthfulqa_scorer() -> Scorer:
         except Exception as e:
             state.error = str(e)
             return Score(
-                value=CORRECT,
-                answer="[ERROR, so giving correct]",
+                value=INCORRECT,
+                answer="[ERROR]",
                 target=target,
                 explanation=str(e),
             )
 
     return score
+
