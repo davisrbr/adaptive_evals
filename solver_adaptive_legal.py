@@ -2,6 +2,7 @@ import os
 import random
 import re
 import logging
+import pandas as pd
 from typing import Any, List, Literal, Tuple
 
 from inspect_ai.scorer import CORRECT, INCORRECT, Score, Scorer, Target, accuracy, stderr, scorer
@@ -75,7 +76,7 @@ def adaptive_legal_solver(
 
         # Generate a new question
         try:
-            generation_prompt = f"Based on the examples below, generate a new legal question similar in style.\n\n{context}\nNew Question:"
+            generation_prompt = f"Based on the examples below, generate a new legal question similar in style. Structure your answer choices in the same way as the examples. Make sure to provide the answer choice in the same format as the examples.\n\n{context}\nNew Question:"
             generation_response = await generator_model.generate(generation_prompt)
             generated_text = generation_response.completion
 
@@ -122,35 +123,67 @@ def adaptive_legal_solver(
 
 def parse_generated_question(generated_text: str, task_name: str) -> Sample:
     """
-    Parses the generated text to extract the question and answer.
+    Parses the generated text to extract the last question and answer.
     Returns a Sample object if successful, None otherwise.
     """
     try:
         # For LegalBench tasks, use the prompt template to structure the question
         prompt_template_path = f"legalbench/tasks/{task_name}/base_prompt.txt"
-        with open(prompt_template_path) as in_file:
+        with open(prompt_template_path, 'r') as in_file:
             prompt_template = in_file.read()
 
-        # Assuming the generated text includes the question and the answer separated by a delimiter
-        # Adjust parsing logic based on the actual format of generated_text
-        split_text = generated_text.strip().split("Answer:")
-        if len(split_text) != 2:
-            logger.debug("Generated text format is incorrect.")
+        # Split the generated text to find all occurrences of 'Answer:'
+        # We will consider only the last question and answer for our new sample
+        answer_positions = [m.start() for m in re.finditer(r'\bAnswer:', generated_text)]
+        if not answer_positions:
+            logger.debug("No 'Answer:' found in the generated text.")
             return None
 
-        question_text = split_text[0].strip()
-        answer_text = split_text[1].strip()
+        # Extract the last question and answer segment
+        last_answer_pos = answer_positions[-1]
+        question_and_answer = generated_text[last_answer_pos:]
 
-        # Generate the prompt using the template and the question text
-        prompt = generate_prompts(prompt_template=prompt_template, data_df=[{'question': question_text}])[0]
+        # Extract the answer text
+        answer_match = re.search(r'Answer:\s*(.*)', question_and_answer, re.DOTALL)
+        if not answer_match:
+            logger.debug("Could not extract the answer from the generated text.")
+            return None
+        answer_text = answer_match.group(1).strip()
 
-        # Assuming choices are ["A", "B", "C"]
-        choices = ["A", "B", "C"]
+        # Extract the question including options up to the last 'Answer:'
+        question_text = generated_text[:last_answer_pos].strip()
+
+        # Now, reconstruct the full prompt by combining the extracted question and inserting 'Answer:'
+        full_prompt = f"{question_text}\nAnswer:"
+
+        # Extract choices from the question text using regex
+        option_pattern = r"Option\s+([A-Z]|\d+):\s*(.*)"
+        options = re.findall(option_pattern, question_text)
+        if not options:
+            logger.debug("No options found in the question text.")
+            return None
+
+        # The choices are the option texts
+        choices = [opt_text for _, opt_text in options]
+
+        # Prepare a DataFrame with the extracted question components for prompt generation
+        data = {
+            'question': question_text,
+            'options': choices,
+        }
+        df = pd.DataFrame([data])
+
+        # Generate the prompt using the template and the extracted question
+        prompts = generate_prompts(prompt_template=prompt_template, data_df=df)
+        prompt = prompts[0]
+
+        # Set the target as the extracted answer text
+        target = answer_text
 
         return Sample(
             input=prompt,
             choices=choices,
-            target=answer_text,
+            target=target,
             metadata={"task_name": task_name}
         )
     except Exception as e:
