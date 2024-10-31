@@ -100,10 +100,10 @@ if __name__ == "__main__":
 
         if json_files:
             try:
-                initial_log_path = max(
+                initial_log_path = os.path.join(log_dir, max(
                     json_files,
                     key=lambda x: os.path.getctime(os.path.join(log_dir, x))
-                )
+                ))
                 print(f"Skipping initial truthfulqa task for {eval_model} because it already exists, in {log_dir}, called {initial_log_path}")
             except Exception as e:
                 print(f"An error occurred while retrieving the latest JSON file: {e}")
@@ -111,7 +111,10 @@ if __name__ == "__main__":
         else:
             print(f"No JSON files found in {log_dir}. Proceeding with the initial truthfulqa task.")
             eval(task, epochs=Epochs(3, "max"), max_connections=10000, log_dir=log_dir, model=eval_model)[0]
-            initial_log_path = lo
+            initial_log_path = os.path.join(log_dir, max(
+                    [f for f in os.listdir(log_dir) if f.endswith('.json')],
+                key=lambda x: os.path.getctime(os.path.join(log_dir, x))
+            ))
 
         for generator_model in model_list_generator:
             # then, run the adaptive truthfulqa task
