@@ -198,9 +198,9 @@ def adaptive_legal(
 if __name__ == "__main__":
     # List of models to use for generation and evaluation
     model_list_generator = [
-        # "openai/gpt-4o",
+        "openai/gpt-4o",
         # "openai/gpt-4o-mini",
-        "anthropic/claude-3-5-sonnet-20240620",
+        # "anthropic/claude-3-5-sonnet-20240620",
         # "together/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
         # "together/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
     ]
@@ -224,8 +224,8 @@ if __name__ == "__main__":
     initial_log_path = "logs/2024-10-30T10-44-42-04-00_legalbench-initial-aggregated_gQXZisrb6539kQGbrUWSMC.json"
     # initial_log_path = "logs/2024-10-30T10-35-29-04-00_legalbench-initial-aggregated_m6nH9qBkc6hrgRkcuRfGqx.json"
     for positive_samples in [1]:
-        # for negative_samples in [4, 8, 16, 32]:
-        for negative_samples in [32]:
+        for negative_samples in [4, 8, 16, 32, 64]:
+        # for negative_samples in [32]:
     # for positive_samples in [4]:
     #     for negative_samples in [60]:
     # for positive_samples in [2]:
@@ -277,14 +277,15 @@ if __name__ == "__main__":
                     eval_model_name="openai/gpt-4o",
                     use_cot_generator=True,
                     use_cot_evaluator=False,
-                    randomize_sampling=True,
+                    randomize_sampling=False,
+                    judge_model_name="openai/o1-preview",
                 )
                 eval(
                     task,
                     epochs=Epochs(30, "mean"),
                     max_connections=1000,
                     log_dir=log_dir,
-                    model="openai/gpt-4o-mini",
+                    model="openai/gpt-4o",
                     temperature=0,
                 )
     # for task_name in task_names:

@@ -282,6 +282,7 @@ def adaptive_legal_judge_solver(
         # Prepare the judging prompt using a classifying pattern
         ground_truth_text = "\n".join([f"Question {i+1}: {q}" for i, q in enumerate(ground_truth_questions[:2])])  # Limit to just 2 questions
 
+        # motivation for using a classifying pattern: https://cookbook.openai.com/examples/custom-llm-as-a-judge#llm-as-a-judge-3-classifying-instead-of-rating
         judge_prompt = f"""\
 You are comparing a generated question to a set of ground truth questions for a legal task. Here is the data:
 [BEGIN DATA]
@@ -303,10 +304,20 @@ Answer the question by selecting one of the following options:
 
 Answer the question by calling `select_choice` with your reasoning in a step-by-step manner to be sure that your conclusion is correct. Avoid simply stating the correct answer at the outset. Select a single choice by setting the `choice` parameter to a single choice from A, B, or C.
 
-Example:
+Example 1:
 [Reasoning]:
 First, I will compare the generated question to the ground truth questions. The generated question follows the same style and format. It is clear and free of factual errors.
 `select_choice(choice="A")`
+
+Example 2:
+[Reasoning]:
+First, I will compare the generated question to the ground truth questions. The document created for the review has two equally valid interpretations. The generated question is therefore incorrect because it is impossible to tell which interpretation is correct.
+`select_choice(choice="C")`
+
+Example 3:
+[Reasoning]:
+First, I will compare the generated question to the ground truth questions. It is phrased awkwardly and presents the statutes out of order, but it is still a valid question. It contains a small factual error (some of the dates that are not relevant for answering the question are impossible), but it is still a valid question.
+`select_choice(choice="B")`
 """
 
         # Function to parse the choice from the model output
