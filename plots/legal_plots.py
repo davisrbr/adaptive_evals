@@ -183,7 +183,8 @@ for key, value in adaptive_logs.items():
             'Generator Model': generator_model_name,
             'use_cot': 'CoT' if key.use_cot_generator else 'No CoT',
             'Accuracy Type': '(no judge)',
-            'Accuracy': value.accuracy
+            'Accuracy': value.accuracy,
+            'num_samples': value.total_samples
         }
         data.append(entry_no_judge)
         print(f"Appending entry: {entry_no_judge}")
@@ -194,7 +195,8 @@ for key, value in adaptive_logs.items():
                 'Generator Model': generator_model_name,
                 'use_cot': 'CoT' if key.use_cot_generator else 'No CoT',
                 'Accuracy Type': '(o1 judge)',
-                'Accuracy': value.accuracy_with_judge
+                'Accuracy': value.accuracy_with_judge,
+                'num_samples': value.total_samples_with_judge
             }
             data.append(entry_with_judge)
             print(f"Appending entry: {entry_with_judge}")
@@ -203,11 +205,14 @@ for key, value in adaptive_logs.items():
 
 # Create a DataFrame for plotting
 df = pd.DataFrame(data)
+# Filter to get a single instance per group, taking the one with most samples if there are multiple
+def filter_group(group):
+    return group.sort_values('num_samples', ascending=False).head(1)
+df = df.groupby(['Generator Model', 'use_cot', 'Accuracy Type']).apply(filter_group).reset_index(drop=True)
 
 # Print DataFrame contents
 print("DataFrame contents:")
 print(df)
-
 # Create a new column combining 'use_cot' and 'Accuracy Type' for grouping
 df['Category'] = df['use_cot'] + ' ' + df['Accuracy Type']
 
@@ -228,13 +233,16 @@ palette = {
     'No CoT (o1 judge)': 'red'
 }
 
+# save df to csv
+df.to_csv("adaptive_legal_results_4o_mini.csv", index=False)
+
 # Create the bar plot
 sns.barplot(
     data=df,
     x='Generator Model',
     y='Accuracy',
     hue='Category',
-    order=df['Generator Model'].unique(),
+    order=['gpt-4o-mini', 'gpt-4o', 'Meta-Llama-3.1-405B', 'claude-3-5-sonnet'],
     hue_order=category_order,
     palette=palette
 )
@@ -242,7 +250,7 @@ sns.barplot(
 # Adjust labels and title
 plt.xlabel('Question Writer Model', fontsize=16)
 plt.ylabel('Accuracy', fontsize=16)
-plt.title(f'Adaptive LegalBench evaluation for {eval_model_name.split("/")[-1]}', fontsize=22)
+# plt.title(f'Adaptive evaluation (LegalBench)for {eval_model_name.split("/")[-1]}', fontsize=22)
 
 # Increase fontsize of labels and ticks
 plt.xticks(fontsize=16)
@@ -290,12 +298,16 @@ for key, value in adaptive_logs.items():
 # Create a DataFrame for plotting
 df = pd.DataFrame(data)
 
+# save df to csv
+df.to_csv("adaptive_legal_results_4o.csv", index=False)
+
 # Get the list of generator models
+# generator_models = ["Meta-Llama-3.1-405B-Instruct-Turbo", "gpt-4o", "claude-3-5-sonnet-20240620"] # df['Generator Model'].unique()
 generator_models = ["Meta-Llama-3.1-405B-Instruct-Turbo", "gpt-4o"] # df['Generator Model'].unique()
 print(df)
 
 # Set up the plot with subplots for each generator model
-num_models = len(generator_models) # because we are not using claude-3-5-sonnet :()
+num_models = len(generator_models) 
 fig, axes = plt.subplots(1, num_models, figsize=(5 * num_models, 6), sharey=True)
 
 # Ensure axes is iterable
@@ -421,7 +433,7 @@ for i, gen_model in enumerate(generator_models):
     ax.set_xlabel('Number of examples', fontsize=16)
 
 # Adjust layout and add a super title
-plt.suptitle(f'Adaptive LegalBench evaluation for {eval_model_name.split("/")[-1]}', fontsize=22)
+# plt.suptitle(f'Adaptive evaluation (LegalBench) for {eval_model_name.split("/")[-1]}', fontsize=22)
 plt.tight_layout(rect=[0, 0.08, 1, 0.95])
 plt.savefig(f"adaptive_legal_accuracy_{eval_model_name.split('/')[-1]}_dumbb.png", dpi=300)
 plt.show()

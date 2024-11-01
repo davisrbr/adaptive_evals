@@ -85,8 +85,10 @@ def adaptive_truthfulqa(
 
 
 if __name__ == "__main__":
-    model_list_generator = ["openai/gpt-4o", "anthropic/claude-3-5-sonnet-20240620", "openai/gpt-4o-mini", "together/mistralai/Mixtral-8x22B-Instruct-v0.1"]
-    model_list_eval = ["openai/gpt-4o", "openai/gpt-4o-mini", "together/mistralai/Mixtral-8x22B-Instruct-v0.1"][1:]
+    # model_list_generator = ["openai/gpt-4o", "openai/gpt-4o-mini", "together/mistralai/Mixtral-8x22B-Instruct-v0.1", "anthropic/claude-3-5-sonnet-20240620"]
+    model_list_generator = ["together/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo"]
+    model_list_eval = ["openai/gpt-4o-mini"]
+    # model_list_eval = ["openai/gpt-4o", "openai/gpt-4o-mini", "together/mistralai/Mixtral-8x22B-Instruct-v0.1", "anthropic/claude-3-5-sonnet-20240620"]
 
     for eval_model in model_list_eval:
         # first, run the initial truthfulqa task
@@ -104,13 +106,23 @@ if __name__ == "__main__":
                     json_files,
                     key=lambda x: os.path.getctime(os.path.join(log_dir, x))
                 ))
+                assert os.path.exists(initial_log_path), f"Initial log path {initial_log_path} does not exist"
                 print(f"Skipping initial truthfulqa task for {eval_model} because it already exists, in {log_dir}, called {initial_log_path}")
+                initial_log = read_eval_log(initial_log_path)
+                assert initial_log.status == "success", f"Initial log {initial_log_path} did not complete successfully"
             except Exception as e:
                 print(f"An error occurred while retrieving the latest JSON file: {e}")
-                # Handle the error as needed, possibly continue or exit
+                eval(task, epochs=Epochs(1, "max"), max_connections=10000, log_dir=log_dir, model=eval_model)[0]
+                initial_log_path = os.path.join(log_dir, max(
+                        [f for f in os.listdir(log_dir) if f.endswith('.json')],
+                    key=lambda x: os.path.getctime(os.path.join(log_dir, x))
+                ))
+                assert os.path.exists(initial_log_path), f"Initial log path {initial_log_path} does not exist"
+                initial_log = read_eval_log(initial_log_path)
+                assert initial_log.status == "success", f"Initial log {initial_log_path} did not complete successfully"
         else:
             print(f"No JSON files found in {log_dir}. Proceeding with the initial truthfulqa task.")
-            eval(task, epochs=Epochs(3, "max"), max_connections=10000, log_dir=log_dir, model=eval_model)[0]
+            eval(task, epochs=Epochs(1, "max"), max_connections=10000, log_dir=log_dir, model=eval_model)[0]
             initial_log_path = os.path.join(log_dir, max(
                     [f for f in os.listdir(log_dir) if f.endswith('.json')],
                 key=lambda x: os.path.getctime(os.path.join(log_dir, x))
@@ -118,12 +130,13 @@ if __name__ == "__main__":
 
         for generator_model in model_list_generator:
             # then, run the adaptive truthfulqa task
-            for positive_samples in [2, 4, 8]:
-                for negative_samples in [4, 8, 16]:
+            for positive_samples in [1]:
+                for negative_samples in [8]:
                     log_dir = f"new_logs/initial_adaptive_truthfulqa_log_{eval_model.replace('/', '_')}"
                     # get latest json in log_dir
+                    print(f"initial_log_path: {initial_log_path}")
                     task = adaptive_truthfulqa(
-                        initial_log_path=f"new_logs/initial_truthfulqa_log_{eval_model.replace('/', '_')}/{initial_log_path}",
+                        initial_log_path=initial_log_path,
                         n_positive_samples=positive_samples,
                         n_negative_samples=negative_samples,
                         generator_model_name=generator_model,
@@ -134,7 +147,7 @@ if __name__ == "__main__":
                     eval(task, epochs=Epochs(30, "mean"), max_connections=10000, log_dir=log_dir, model=eval_model, temperature=0)[0] 
 
                     task = adaptive_truthfulqa(
-                        initial_log_path=f"new_logs/initial_truthfulqa_log_{eval_model.replace('/', '_')}/{initial_log_path}",
+                        initial_log_path=initial_log_path,
                         n_positive_samples=positive_samples,
                         n_negative_samples=negative_samples,
                         generator_model_name=generator_model,
@@ -143,4 +156,3 @@ if __name__ == "__main__":
                         use_cot=True,
                     )
                     eval(task, epochs=Epochs(30, "mean"), max_connections=10000, log_dir=log_dir, model=eval_model, temperature=0)[0] 
-
