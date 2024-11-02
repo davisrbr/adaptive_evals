@@ -303,7 +303,8 @@ df.to_csv("adaptive_legal_results_4o.csv", index=False)
 
 # Get the list of generator models
 # generator_models = ["Meta-Llama-3.1-405B-Instruct-Turbo", "gpt-4o", "claude-3-5-sonnet-20240620"] # df['Generator Model'].unique()
-generator_models = ["Meta-Llama-3.1-405B-Instruct-Turbo", "gpt-4o"] # df['Generator Model'].unique()
+# generator_models = ["Meta-Llama-3.1-405B-Instruct-Turbo", "gpt-4o"] # df['Generator Model'].unique()
+generator_models = ["gpt-4o"] # df['Generator Model'].unique()
 print(df)
 
 # Set up the plot with subplots for each generator model
@@ -407,9 +408,9 @@ for i, gen_model in enumerate(generator_models):
 
     # Annotate the baseline accuracy for the leftmost plot
     if i == 0:
-        ax.text(np.log2(x_ticks[0]) - 0.2, initial_accuracy - 0.08,
-                f'Accuracy on LegalBench: {initial_accuracy:.2f}', color='gray', fontsize=18)
-        ax.set_ylabel('Accuracy', fontsize=18)
+        ax.text(np.log2(x_ticks[0]) - 0.1, initial_accuracy - 0.08,
+                f'LegalBench accuracy: {initial_accuracy:.2f}', color='gray', fontsize=18)
+        ax.set_ylabel('gpt-4o adaptive accuracy', fontsize=20)
     else:
         ax.set_ylabel('')
 
@@ -419,21 +420,21 @@ for i, gen_model in enumerate(generator_models):
         model_name = "claude-3-5-sonnet"
     elif "Instruct-Turbo" in model_name:
         model_name = model_name.replace("-Instruct-Turbo", "")
-    ax.set_title(f'{model_name}', fontsize=18)
+    # ax.set_title(f'{model_name}', fontsize=18)
     ax.set_ylim(0, 1)
     ax.set_yticks([0, 0.25, 0.5, 0.75, 1])
     ax.set_yticklabels(ax.get_yticks(), fontsize=16)
 
     # Adjust legend
     if i == num_models - 1:
-        ax.legend(fontsize=12)
+        ax.legend(fontsize=16)
     else:
         ax.legend().set_visible(False)
 
-    ax.set_xlabel('Number of examples', fontsize=16)
+    ax.set_xlabel('number of adaptive shots', fontsize=20)
 
 # Adjust layout and add a super title
 # plt.suptitle(f'Adaptive evaluation (LegalBench) for {eval_model_name.split("/")[-1]}', fontsize=22)
 plt.tight_layout(rect=[0, 0.08, 1, 0.95])
-plt.savefig(f"adaptive_legal_accuracy_{eval_model_name.split('/')[-1]}_dumbb.png", dpi=300)
+plt.savefig(f"adaptive_legal_accuracy_{eval_model_name.split('/')[-1]}_dumbb_gpt4o.png", dpi=300)
 plt.show()

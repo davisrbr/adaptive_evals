@@ -72,6 +72,9 @@ df = pd.DataFrame(data)
 # Print the first few rows of the DataFrame for inspection
 print(df.head())
 
+# save df to csv
+df.to_csv("adaptive_truthfulqa_results.csv", index=False)
+
 # Set the visual style
 sns.set(style="whitegrid")
 
