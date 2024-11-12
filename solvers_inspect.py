@@ -401,7 +401,8 @@ def pair_solver_adaptive(
     judge_model_name: str = "openai/gpt-4",
     attack_model_name: str = "together/mistralai/Mixtral-8x22B-Instruct-v0.1",
     n_last_messages: int = 2,
-    n_adaptive_examples: int = 3,
+    n_similar_adaptive_examples: int = 3,
+    n_furthest_adaptive_examples: int = 3,
     heirarchal_scorer: bool = False,
     use_embeddings: bool = False,
     use_strongreject_scorer: bool = False
@@ -444,9 +445,9 @@ def pair_solver_adaptive(
         target_text = state.metadata.get("Target")
 
         if not use_embeddings:
-            adaptive_prompt = adaptive_prompt_generator.get_prompt(n_adaptive_examples)
+            adaptive_prompt = adaptive_prompt_generator.get_prompt(n_similar_adaptive_examples + n_furthest_adaptive_examples)
         else:
-            adaptive_prompt = adaptive_prompt_generator.get_prompt_embedding_model(n_adaptive_examples, state.metadata.get("nearest_adaptive_prompts"))
+            adaptive_prompt = adaptive_prompt_generator.get_prompt_embedding_model(n_similar_adaptive_examples, state.metadata.get("nearest_adaptive_prompts"), n_furthest_adaptive_examples, state.metadata.get("furthest_adaptive_prompts"))
 
         if not goal or not target_text:
             state.completed = True
