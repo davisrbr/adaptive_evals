@@ -29,11 +29,11 @@ jb_reducer = at_least(1, 10)
 @task
 def pair_task(
     target_model_name: str = "together/meta-llama/Llama-2-7b-chat-hf", 
-    judge_model_name: str = "openai/gpt-4", 
+    judge_model_name: str = "openai/gpt-4o-mini", 
     attack_model_name: str = "together/mistralai/Mixtral-8x22B-Instruct-v0.1",
-    max_iterations: int = 10,
-    n_last_messages: int = 4, 
-    epochs: int = 10, 
+    max_iterations: int = 3,
+    n_last_messages: int = 2, 
+    epochs: int = 2, 
     use_strongreject_scorer: bool = False,
     heirarchal_scorer: bool = False,
     dataset: list = jb_behaviors_dataset,
@@ -63,14 +63,15 @@ def pair_task(
 def pair_task_adaptive(
     target_model_name: str = "together/meta-llama/Llama-2-7b-chat-hf", 
     attack_model_name: str = "together/mistralai/Mixtral-8x22B-Instruct-v0.1",
-    judge_model_name: str = "openai/gpt-4", 
-    max_iterations: int = 10,
-    n_last_messages: int = 4, 
-    n_adaptive_examples: int = 2,
+    judge_model_name: str = "openai/gpt-4o-mini", 
+    max_iterations: int = 3,
+    n_last_messages: int = 2, 
+    n_similar_adaptive_examples: int = 2,
+    n_furthest_adaptive_examples: int = 2,
     use_strongreject_scorer: bool = False,
     heirarchal_scorer: bool = False,
     use_embeddings: bool = False,
-    epochs: int = 10, 
+    epochs: int = 2, 
     dataset: list = jb_behaviors_dataset,
 ):
     """
@@ -85,7 +86,8 @@ def pair_task_adaptive(
                 attack_model_name=attack_model_name,
                 judge_model_name=judge_model_name,
                 n_last_messages=n_last_messages,
-                n_adaptive_examples=n_adaptive_examples,
+                n_similar_adaptive_examples=n_similar_adaptive_examples,
+                n_furthest_adaptive_examples=n_furthest_adaptive_examples,
                 heirarchal_scorer=heirarchal_scorer,
                 use_strongreject_scorer=use_strongreject_scorer,
                 use_embeddings=use_embeddings

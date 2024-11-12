@@ -87,6 +87,7 @@ def embed_dataset(dataset_name: str, split: str, hub_name: str, feature: str, ta
 
     # Push the dataset with the FAISS index to the hub
     dataset.push_to_hub(hub_name)
+    print(f"Dataset pushed to {hub_name}")
 
 if __name__ == "__main__":
     embed_dataset()
