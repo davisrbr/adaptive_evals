@@ -45,7 +45,8 @@ def process_sample_embeddings(sample: Dict[str, Any]) -> Sample:
     """
     goal = sample['Goal']
     target_text = sample['Target']
-    nearest_adaptive_prompts = [sample[f'similar_{i}']for i in range(1, 21)]
+    nearest_adaptive_prompts = [sample[f'most_similar_{i}']for i in range(1, 21)]
+    furthest_adaptive_prompts = [sample[f'least_similar_{i}']for i in range(1, 21)]
     attacker_prompt = get_attacker_system_prompt(goal, target_text)
 
     return Sample(
@@ -59,6 +60,7 @@ def process_sample_embeddings(sample: Dict[str, Any]) -> Sample:
             "Source": sample.get('Source', ''),
             "attacker_prompt": attacker_prompt,
             "nearest_adaptive_prompts": nearest_adaptive_prompts,
+            "furthest_adaptive_prompts": furthest_adaptive_prompts,
             "Target": target_text
         }
     )
