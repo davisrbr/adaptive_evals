@@ -315,7 +315,7 @@ def jailbreakbench_scorer(
 
 @scorer(metrics=[max()])
 def strongreject_scorer(
-    judge_model: Union[str, Model] = "openai/gpt-4o-mini",
+    judge_model: Union[str, Model] = "openai/gpt-4o",
     max_tokens: int = 500,
     temperature: float = 0.0
 ):
