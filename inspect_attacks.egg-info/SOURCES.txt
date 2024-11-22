@@ -2,6 +2,7 @@ README.md
 setup.py
 data/__init__.py
 data/data_inspect.py
+data/dataset_embedder.py
 inspect_attacks.egg-info/PKG-INFO
 inspect_attacks.egg-info/SOURCES.txt
 inspect_attacks.egg-info/dependency_links.txt
@@ -24,7 +25,6 @@ tasks/task_adaptive_legal.py
 tasks/task_adaptive_truthfulqa.py
 utils_plotting/__init__.py
 utils_plotting/common.py
-utils_plotting/dataset_embedder.py
 utils_plotting/inspect_tools.py
 utils_plotting/pair_plot_one_off.py
 utils_plotting/plot_random_adaptive_results.py

@@ -404,7 +404,8 @@ def pair_solver_adaptive(
     percentiles_and_samples: list = [(1.0, 2), (0.5, 2)],  # List of (percentile, n_samples) tuples
     heirarchal_scorer: bool = False,
     use_embeddings: bool = True,
-    use_strongreject_scorer: bool = False
+    use_strongreject_scorer: bool = False,
+    filter_artifacts: dict = {"model_name": "llama-2-7b-chat-hf", "jailbroken": True, "method": "DSN"},
 ):
     """
     Solver that iteratively generates and refines adversarial prompts to jailbreak the target model.
@@ -437,7 +438,7 @@ def pair_solver_adaptive(
     else:
         scorer_fn = pair_scorer(judge_model=judge_model_name) if not heirarchal_scorer else pair_scorer_heirarchal(judge_model_primary=judge_model_name, judge_model_secondary="openai/gpt-4o")
 
-    adaptive_prompt_generator = AdaptiveJailbreakRetrieval()
+    adaptive_prompt_generator = AdaptiveJailbreakRetrieval(filter_artifacts=filter_artifacts)
 
     async def solve(state: TaskState, generate: Generate) -> TaskState:
         goal = state.metadata.get("Goal")

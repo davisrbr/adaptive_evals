@@ -90,7 +90,7 @@ def test_adaptive_truthfulqa_solver(sample_log_path):
     assert result.status == "success"
 
 def test_pair_solver():
-    """Test the PAIR solver implementation"""
+    """Test PAIR implementation"""
     task = Task(
         dataset=MemoryDataset(
             name="test_pair",

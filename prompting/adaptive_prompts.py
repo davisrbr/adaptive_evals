@@ -190,12 +190,20 @@ Note that this jailbreak has a behavioral goal with the same theme {category} as
 
 
 class AdaptiveJailbreakRetrieval:
-    def __init__(self, embeddings_model_name: str = "all-mpnet-base-v2"):
+    def __init__(self, embeddings_model_name: str = "all-mpnet-base-v2", filter_artifacts: dict = None):
         self.dataset = load_dataset("JailbreakBench/JBB-Behaviors", "judge_comparison", trust_remote_code=True)
         # filter the dataset to only include
         self.dataset = self.dataset['test'].filter(self.filter_function)
         if embeddings_model_name is not None:
-            self.dataset = load_dataset(f"davisrbr/JBB-behaviors-embeddings-{embeddings_model_name}", trust_remote_code=True)['test'].filter(self.filter_function)
+            if filter_artifacts is not None:
+                def filter_function_artifacts(example): 
+                    for key, value in filter_artifacts.items():
+                        if example[key] != value:
+                            return False
+                    return True
+                self.dataset = load_dataset("davisrbr/jailbreakbench-goal-embeddings-artifacts", trust_remote_code=True).filter(filter_function_artifacts)
+            else:
+                self.dataset = load_dataset(f"davisrbr/JBB-behaviors-embeddings-{embeddings_model_name}", trust_remote_code=True)['test'].filter(self.filter_function)
 
     def get_prompt(self, n):
         if n == 0:

@@ -3,7 +3,7 @@ from inspect_ai import Epochs, Task, eval
 from inspect_ai.solver import basic_agent, system_message
 from inspect_ai.solver._task_state import Sample
 from inspect_ai.scorer import at_least
-from data.data_inspect import jb_behaviors_dataset, jb_behaviors_dataset_embeddings
+from data.data_inspect import jb_behaviors_dataset, jb_behaviors_dataset_embeddings, jb_behaviors_dataset_embeddings_artifacts
 from solvers.solvers_inspect import pair_solver, pair_solver_adaptive, decomposition_attack_solver
 from scorers.scorers_inspect import final_scorer, jailbreakbench_scorer, secondary_scorer
 
@@ -71,7 +71,8 @@ def pair_task_adaptive(
     heirarchal_scorer: bool = False,
     use_embeddings: bool = True,
     epochs: int = 2, 
-    dataset: list = jb_behaviors_dataset_embeddings,
+    dataset: list = jb_behaviors_dataset_embeddings_artifacts,
+    filter_artifacts: dict = {"model_name": "llama-2-7b-chat-hf", "jailbroken": True, "method": "DSN"},
 ):
     """
     PAIR task within Inspect
@@ -92,7 +93,8 @@ def pair_task_adaptive(
                 percentiles_and_samples=percentiles_and_samples,
                 heirarchal_scorer=heirarchal_scorer,
                 use_strongreject_scorer=use_strongreject_scorer,
-                use_embeddings=use_embeddings
+                use_embeddings=use_embeddings,
+                filter_artifacts=filter_artifacts
             ),
         ],
         scorer=final_scorer(),
@@ -108,9 +110,13 @@ jb_behaviors_dataset = [
 if __name__ == "__main__":
     # run both pair and pair adaptive tasks
     # loop over just different percentiles and samples
-    for percentiles_and_samples in [[(1.0, 2), (0.5, 2)], [(1.0, 2), (0.8, 2)], [(1.0, 2), (0.2, 2)]]:
+    for percentiles_and_samples in [[(1.0, 2), (0.5, 2)]]: #, [(1.0, 2), (0.8, 2)], [(1.0, 2), (0.2, 2)]]:
     # for percentiles_and_samples in [[(1.0, 4), (0.5, 4)], [(1.0, 4), (0.8, 4)], [(1.0, 4), (0.2, 4)]]:
         task = pair_task_adaptive(epochs=10, percentiles_and_samples=percentiles_and_samples)
-        eval(task, epochs=Epochs(1, "max"), max_connections=10000, log_dir=f"logs/pair_task_adaptive_log_{percentiles_and_samples}")[0]  
-    task = pair_task(epochs=10)
-    eval(task, epochs=Epochs(1, "max"), max_connections=10000, log_dir="logs/pair_task_log" )[0]  
+        eval(task, epochs=Epochs(1, "max"), max_connections=10000, log_dir=f"experiment_logs/logs/pair_task_adaptive_log_artifacts_{percentiles_and_samples}")[0]  
+        for model_name in ["llama-2-7b-chat-hf", "gpt-4-0125-preview"]:
+            for method in ["DSN", "manual", "PAIR"]:
+                task = pair_task_adaptive(epochs=1, percentiles_and_samples=percentiles_and_samples, filter_artifacts={"model_name": model_name, "method": method})
+                eval(task, epochs=Epochs(1, "max"), max_connections=10000, log_dir=f"experiment_logs/logs/pair_task_adaptive_log_artifacts_{percentiles_and_samples}_{model_name}_{method}")[0]  
+    task = pair_task(epochs=1)
+    eval(task, epochs=Epochs(1, "max"), max_connections=10000, log_dir="experiment_logs/logs/pair_task_log" )[0]  
