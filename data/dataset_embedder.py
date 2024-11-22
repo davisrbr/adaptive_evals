@@ -5,6 +5,7 @@ import click
 import re
 import pandas as pd
 from legalbench.utils import generate_prompts
+import jailbreakbench as jbb
 
 @click.command()
 @click.option("--dataset_name", type=str, default="truthfulqa/truthful_qa", help="Dataset name")

@@ -67,21 +67,21 @@ def process_sample_embeddings(sample: Dict[str, Any]) -> Sample:
         }
     )
 # # Load and preprocess the dataset
-# jb_behaviors_dataset = hf_dataset(
-#     path="JailbreakBench/JBB-Behaviors", 
-#     name="behaviors",
-#     split="harmful",
-#     sample_fields=process_sample,
-#     cache_dir="~/data",
-# )[:30]  # Take first 30 samples
+jb_behaviors_dataset = hf_dataset(
+    path="JailbreakBench/JBB-Behaviors", 
+    name="behaviors",
+    split="harmful",
+    sample_fields=process_sample,
+    cache_dir="~/data",
+)[:30]  # Take first 30 samples
 
-# # Load and preprocess the dataset with embeddings, using same indices
-# jb_behaviors_dataset_embeddings = hf_dataset(
-#     path="davisrbr/jb-behaviors-dataset-embedding-nn-all-mpnet-base-v2",
-#     split="train", 
-#     sample_fields=process_sample_embeddings,
-#     cache_dir="~/data",
-# )[:30]  # Take first 30 samples to match
+# Load and preprocess the dataset with embeddings, using same indices
+jb_behaviors_dataset_embeddings = hf_dataset(
+    path="davisrbr/jb-behaviors-dataset-embedding-nn-all-mpnet-base-v2",
+    split="train", 
+    sample_fields=process_sample_embeddings,
+    cache_dir="~/data",
+)[:30]  # Take first 30 samples to match
 
 artifact = jbb.read_artifact(
     method="DSN",
