@@ -4,8 +4,8 @@ from inspect_ai.solver import basic_agent, system_message
 from inspect_ai.solver._task_state import Sample
 from inspect_ai.scorer import at_least
 from data.data_inspect import jb_behaviors_dataset, jb_behaviors_dataset_embeddings
-from solvers.solver_inspect import pair_solver, pair_solver_adaptive, decomposition_attack_solver
-from scorers.scorer_inspect import final_scorer, jailbreakbench_scorer, secondary_scorer
+from solvers.solvers_inspect import pair_solver, pair_solver_adaptive, decomposition_attack_solver
+from scorers.scorers_inspect import final_scorer, jailbreakbench_scorer, secondary_scorer
 
 import numpy as np
 

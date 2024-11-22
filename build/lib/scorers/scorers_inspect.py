@@ -9,9 +9,9 @@ from inspect_ai.scorer import scorer, Score, Target, accuracy, stderr, max_score
 from inspect_ai.scorer import Metric, ValueToFloat, metric, value_to_float
 from inspect_ai.solver import TaskState
 
-from system_prompts import get_judge_system_prompt, JUDGE_SYSTEM_PROMPT_HARMBENCH
-from common import process_target_response 
-from inspect_tools import labelling_function_harmbench
+from prompting.system_prompts import get_judge_system_prompt, JUDGE_SYSTEM_PROMPT_HARMBENCH
+from utils_plotting.common import process_target_response 
+from utils_plotting.inspect_tools import labelling_function_harmbench
 
 
 @metric

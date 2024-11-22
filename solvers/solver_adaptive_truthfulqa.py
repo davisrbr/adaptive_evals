@@ -6,7 +6,7 @@ from inspect_ai.dataset import Sample
 from typing import List, Literal, Tuple
 import random
 import re
-from adaptive_prompts import AdaptiveTruthfulQARetrieval, get_generation_prompt
+from prompting.adaptive_prompts import AdaptiveTruthfulQARetrieval, get_generation_prompt
 import logging
 
 # Configure logging

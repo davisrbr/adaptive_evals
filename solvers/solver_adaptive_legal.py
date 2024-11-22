@@ -9,6 +9,8 @@ from inspect_ai.solver import solver, Generate, TaskState
 from inspect_ai.model import GenerateConfig, get_model
 from inspect_ai.log import read_eval_log
 from inspect_ai.dataset import Sample
+import sys
+sys.path.append('..')
 from legalbench.utils import generate_prompts
 import pandas as pd
 
