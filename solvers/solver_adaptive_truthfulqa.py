@@ -62,7 +62,6 @@ def adaptive_truthfulqa_solver(
         else:
             adaptive_retrieval = AdaptiveTruthfulQARetrieval(incorrect_samples, embeddings_model_name)
             
-
         # Prepare context for the generator model
         context = ""
         for sample_item in sampled_correct + sampled_incorrect:
