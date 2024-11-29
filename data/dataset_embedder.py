@@ -50,7 +50,7 @@ def embed_dataset(dataset_name: str, split: str, hub_name: str, feature: str, ta
 
     elif task_type == 'legalbench':
         if task_name is None:
-            raise ValueError("For LegalBench tasks, please provide the --task_name parameter.")
+            raise ValueError("For LegalBench tasks, please provide the --task_name parameter. I have used a few of the maud* ones previously")
 
         # Load the LegalBench dataset
         prompt_template_path = f"legalbench/tasks/{task_name}/base_prompt.txt"
