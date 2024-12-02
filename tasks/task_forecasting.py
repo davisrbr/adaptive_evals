@@ -8,16 +8,21 @@ https://arxiv.org/abs/2402.18563
 Based on https://github.com/dannyallover/llm_forecasting
 Dataset: https://huggingface.co/datasets/YuehHanChen/forecasting
 
-Implementing base eval with the paper's best zero shot prompt
+advanced_forecasting_solver uses Halawi's retrieval, reasoning, and ensembling setup with their best scratchpad prompts
 
-Example:
+- Point to your own chromedriver path in util_forecastings/information_retrieval.py
+- Add keys.py in util_forecastings
+
+Examples:
 inspect eval task_forecasting.py --model openai/gpt-4
+inspect eval task_forecasting.py --solver=advanced_forecasting_solver --model=openai/gpt-4o-2024-08-06
 """
+
 from inspect_ai import Task, task 
 from inspect_ai.dataset import hf_dataset, Sample
 from inspect_ai.model import GenerateConfig 
 from solvers.solvers_forecasting import zero_shot_forecasting_solver
-from scorers.scorers_inspect import brier_score
+from scorers.scorers_forecasting import brier_score
 
 
 @task
@@ -63,11 +68,14 @@ def forecasting() -> Task:
         lambda x: x.metadata["is_resolved"] is True and x.metadata["question_type"] == "binary"
     )
 
+    # Select only the first 2 samples for testing
+    dataset = dataset[:2]
+
     return Task(
         dataset=dataset,
         solver=zero_shot_forecasting_solver(),
         scorer=[brier_score()],
-        config=GenerateConfig(temperature=0.5),
+        #config=GenerateConfig(temperature=0.5),
     )
 
 
