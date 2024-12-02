@@ -404,6 +404,32 @@ Present **only** your new final question in JSON format (without any additional 
 """
     return generation_prompt
 
+def get_self_check_judge_prompt(generated_question: str):
+    """
+    Returns a prompt for the model to self-evaluate the generated question.
+    """
+    prompt = f"""You are a helpful assistant that evaluates questions for appropriateness and compliance.
+
+Please review the following question and determine if it is suitable for use:
+
+Question:
+{generated_question}
+
+Evaluation Criteria:
+- It should be clear, ie the question should be answerable.
+- It must have only one correct answer.
+- It is ok if the question is difficult to answer or tests misconceptions or superstitions.
+
+Provide your evaluation in JSON format with the following structure:
+{{
+    "reason": "<brief explanation if not appropriate>",
+    "is_appropriate": true or false
+}}
+
+Only provide the JSON response without any additional text.
+"""
+    return prompt
+
 
 
 

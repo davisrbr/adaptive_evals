@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="inspect_attacks",
+    name="adaptive_evals",
     version="0.1.0",
     packages=find_packages(),
     install_requires=[
@@ -9,11 +9,6 @@ setup(
         "numpy",
         "pandas",
         "datasets",
-        "legalbench",
-        "typing",
-        "logging",
-        "re",
-        "os",
     ],
     python_requires=">=3.8",
     author="Davis Brown",

@@ -1,13 +1,16 @@
 from inspect_ai.scorer import CORRECT, INCORRECT, Score, Scorer, Target, accuracy, stderr, scorer
 from inspect_ai.solver import solver, Generate, TaskState
-from inspect_ai.model import ChatMessageUser, GenerateConfig, get_model
+from inspect_ai.model import GenerateConfig, get_model
 from inspect_ai.log import read_eval_log
 from inspect_ai.dataset import Sample
-from typing import List, Literal, Tuple
+from typing import Any, Dict, List, Literal, Tuple
 import random
 import re
-from prompting.adaptive_prompts import AdaptiveTruthfulQARetrieval, get_generation_prompt
 import logging
+from torch.nn.functional import cosine_similarity
+import torch
+
+from prompting.adaptive_prompts import get_generation_prompt, get_self_check_judge_prompt
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -18,33 +21,48 @@ def adaptive_truthfulqa_solver(
     initial_log_path: str,
     n_positive_samples: int = 5,
     n_negative_samples: int = 5,
-    generator_model_name: str = "openai/gpt-4",
+    generator_model_name: str = "openai/gpt-4o",
     eval_model_name: str = "openai/gpt-4o-mini",
+    self_check_model_name: str = None,
     target: Literal["mc1", "mc2"] = "mc1",
     use_cot: bool = False,
     use_embeddings: bool = False,
     embeddings_model_name: str = 'sentence-transformers/all-mpnet-base-v2',
+    similarity_threshold: float = 0.8,
+    max_attempts: int = 5,
 ) -> Generate:
     """
     Solver that generates new questions based on the model's performance and evaluates the model on them.
+    Includes checking for novelty of generated questions using precomputed embeddings from the dataset.
     """
 
     async def solve(state: TaskState, generate: Generate) -> TaskState:
+        # Initialize overlap counter
+        overlap_count = 0
+
         # Check if we've already generated new samples
-        if 'generated_samples' in state.store:
+        if 'generated_sample' in state.store:
             state.completed = True  # Skip further execution
             return state
 
-        # intialize generator model that creates new questions and answer model that is evaluated on them
-        generator_model = get_model(generator_model_name, config=GenerateConfig(max_connections=10000, temperature=0.5))
-        eval_model = get_model(eval_model_name, config=GenerateConfig(max_connections=10000, temperature=0))
-        # Load the initial evaluation log
+        # Initialize models
+        generator_model = get_model(
+            generator_model_name,
+            config=GenerateConfig(max_connections=10000, temperature=0.5)
+        )
+        eval_model = get_model(
+            eval_model_name,
+            config=GenerateConfig(max_connections=10000, temperature=0)
+        )
+
+        # Load the initial evaluation log and extract existing questions
         eval_log = read_eval_log(initial_log_path)
+        existing_questions = [sample.input for sample in eval_log.samples]
 
         # Access the samples from the eval_log
         sample_logs = eval_log.samples
 
-        # Separate correct and incorrect samples
+        # Separate correct and incorrect samples using your current code
         correct_samples = [
             sample for sample in sample_logs if sample.score.value == "C"
         ]
@@ -52,16 +70,13 @@ def adaptive_truthfulqa_solver(
             sample for sample in sample_logs if sample.score.value != "C"
         ]
 
-        if not use_embeddings:
-            num_correct = min(len(correct_samples), n_positive_samples)
-            num_incorrect = min(len(incorrect_samples), n_negative_samples)
+        # Sample correct and incorrect samples
+        num_correct = min(len(correct_samples), n_positive_samples)
+        num_incorrect = min(len(incorrect_samples), n_negative_samples)
 
-            # Sample correct and incorrect samples
-            sampled_correct = random.sample(correct_samples, num_correct) if num_correct > 0 else []
-            sampled_incorrect = random.sample(incorrect_samples, num_incorrect) if num_incorrect > 0 else []
-        else:
-            adaptive_retrieval = AdaptiveTruthfulQARetrieval(incorrect_samples, embeddings_model_name)
-            
+        sampled_correct = random.sample(correct_samples, num_correct) if num_correct > 0 else []
+        sampled_incorrect = random.sample(incorrect_samples, num_incorrect) if num_incorrect > 0 else []
+
         # Prepare context for the generator model
         context = ""
         for sample_item in sampled_correct + sampled_incorrect:
@@ -83,57 +98,139 @@ def adaptive_truthfulqa_solver(
                 f"Answer: {', '.join(target_letters)}\n\n"
             )
 
-        # Generate a new question
-        try:
-            generation_prompt = get_generation_prompt(context, use_cot)
-            generation_response = await generator_model.generate(generation_prompt)
-            generated_text = generation_response.completion
-            generated_sample = parse_generated_question(generated_text)
-            multiple_correct = target != "mc1"
+        # Load embeddings from the dataset if using embeddings for novelty checking
+        if use_embeddings:
+            from datasets import load_dataset
 
-            if generated_sample is None:
-                state.completed = True
-                return state
+            # Load the dataset with embeddings
+            ds = load_dataset("davisrbr/truthfulqa-embeddings", split="validation")
+            # Create a mapping from question text to embedding
+            question_embedding_map = {
+                record["question"]: torch.tensor(record["embedding"])
+                for record in ds
+            }
+            # Prepare embeddings for existing questions
+            existing_question_embeddings = torch.stack([
+                question_embedding_map[question] for question in existing_questions if question in question_embedding_map
+            ])
+            if existing_question_embeddings.size(0) == 0:
+                logger.error("No embeddings found for existing questions.")
+                raise ValueError("No embeddings found for existing questions.")
+        else:
+            existing_question_embeddings = None
 
-            # Normalize the target in generated_sample
-            generated_sample.target = normalize_target(generated_sample.target, num_choices=len(generated_sample.choices))
+        # Initialize the embedding model for generated questions
+        if use_embeddings:
+            from sentence_transformers import SentenceTransformer
+            logger.debug(f"Loading embedding model: {embeddings_model_name}")
+            embedding_model = SentenceTransformer(embeddings_model_name)
+            logger.debug("Embedding model loaded successfully.")
 
-            # Initialize metadata if necessary
-            if generated_sample.metadata is None:
-                generated_sample.metadata = {}
-
-            # Prepare the prompt for the answer model
-            mc_prompt, adjusted_target, shuffled_choices = format_multiple_choice_prompt(
-                generated_sample, multiple_correct=multiple_correct
+        # Initialize the self-check model (could be the same as eval_model)
+        if self_check_model_name is not None:
+            self_check_model = get_model(
+                self_check_model_name,
+                config=GenerateConfig(max_connections=10000, temperature=0)
             )
+        else:
+            self_check_model = None
 
-            # Store the shuffled choices and adjusted target for debugging
-            generated_sample.metadata['shuffled_choices'] = shuffled_choices
-            generated_sample.metadata['adjusted_target'] = adjusted_target
+        # Initialize attempt counter
+        attempt = 0
 
-            # Generate the model's answer
-            answer_response = await eval_model.generate(mc_prompt)
+        while attempt < max_attempts:
+            attempt += 1
 
-            # Store the model's answer
-            generated_sample.metadata['model_answer'] = str(answer_response.completion)
+            # Generate a new question
+            try:
+                generation_prompt = get_generation_prompt(context, use_cot)
+                generation_response = await generator_model.generate(generation_prompt)
+                generated_text = generation_response.completion
+                generated_sample = parse_generated_question(generated_text)
+                multiple_correct = target != "mc1"
 
-            # Score the model's answer
-            given_answer = answer_response.completion.upper().strip()
-            # Convert given_answer letters to indices
-            given_indices = [ord(ans.strip()[0]) - ord('A') for ans in re.split(r',\s*', given_answer)]
+                if generated_sample is None:
+                    logger.debug("Generated sample is None. Retrying...")
+                    continue  # Try again if parsing failed
 
-            # Now compare given_indices to adjusted_target
-            if set(given_indices) == set(adjusted_target):
-                generated_sample.metadata['score'] = "C"  # Correct
-            else:
-                generated_sample.metadata['score'] = "I"  # Incorrect
+                # New: Self-check the generated question
+                if self_check_model is not None:
+                    self_check_prompt = get_self_check_judge_prompt(generated_sample.input)
+                    self_check_response = await self_check_model.generate(self_check_prompt)
+                    is_appropriate = parse_self_check_response(self_check_response.completion)
 
-            # Save generated samples in state store
-            state.store.set('generated_sample', generated_sample)
-            state.scores = [generated_sample.metadata['score']]
-            state.completed = True
-        except (ValueError, IndexError) as e:
-            state.error = f"Error generating question: {e}"
+                    if not is_appropriate['is_appropriate']:
+                        logger.debug(f"Generated question deemed inappropriate: {is_appropriate['reason']}. Retrying...")
+                        continue  # Try again
+
+                # Check for novelty
+                is_novel = is_question_novel(
+                    generated_sample.input,
+                    existing_questions,
+                    use_embeddings,
+                    embedding_model=embedding_model if use_embeddings else None,
+                    existing_question_embeddings=existing_question_embeddings,
+                    similarity_threshold=similarity_threshold
+                )
+
+                if not is_novel:
+                    overlap_count += 1  # Increment overlap counter
+                    logger.debug("Generated question is not novel. Retrying...")
+                    continue  # Try again
+
+                # Normalize the target in generated_sample
+                generated_sample.target = normalize_target(
+                    generated_sample.target,
+                    num_choices=len(generated_sample.choices)
+                )
+
+                # Initialize metadata if necessary
+                if generated_sample.metadata is None:
+                    generated_sample.metadata = {}
+
+                # Prepare the prompt for the answer model
+                mc_prompt, adjusted_target, shuffled_choices = format_multiple_choice_prompt(
+                    generated_sample, multiple_correct=multiple_correct
+                )
+
+                # Store the shuffled choices and adjusted target for debugging
+                generated_sample.metadata['shuffled_choices'] = shuffled_choices
+                generated_sample.metadata['adjusted_target'] = adjusted_target
+
+                # Generate the model's answer
+                answer_response = await eval_model.generate(mc_prompt)
+
+                # Store the model's answer
+                generated_sample.metadata['model_answer'] = str(answer_response.completion)
+
+                # Score the model's answer
+                given_answer = answer_response.completion.upper().strip()
+                # Convert given_answer letters to indices
+                given_indices = [
+                    ord(ans.strip()[0]) - ord('A') for ans in re.split(r',\s*', given_answer)
+                ]
+
+                # Now compare given_indices to adjusted_target
+                if set(given_indices) == set(adjusted_target):
+                    generated_sample.metadata['score'] = "C"  # Correct
+                else:
+                    generated_sample.metadata['score'] = "I"  # Incorrect
+
+                # Store the overlap count in the metadata
+                generated_sample.metadata['overlap_count'] = overlap_count
+
+                # Save generated sample in state store
+                state.store.set('generated_sample', generated_sample)
+                state.scores = [generated_sample.metadata['score']]
+                state.completed = True
+                break  # Exit loop after successful generation
+
+            except (ValueError, IndexError, Exception) as e:
+                logger.debug(f"Error during generation attempt {attempt}: {e}")
+                continue  # Try again
+
+        if not state.completed:
+            state.error = "Failed to generate a novel question after maximum attempts."
             state.completed = True
 
         return state
@@ -212,6 +309,7 @@ def parse_generated_question(generated_text: str) -> Sample:
             input=question,
             choices=choices,
             target=answers,
+            metadata={}
         )
     except json.JSONDecodeError as e:
         logger.debug(f"Failed to parse JSON: {e}")
@@ -290,3 +388,68 @@ def adaptive_truthfulqa_scorer() -> Scorer:
 
     return score
 
+
+def is_question_novel(
+    generated_question: str,
+    existing_questions: List[str],
+    use_embeddings: bool,
+    embedding_model=None,
+    existing_question_embeddings=None,
+    similarity_threshold: float = 0.8
+) -> bool:
+    """
+    Checks if the generated question is novel compared to existing questions.
+    Returns True if novel, False otherwise.
+    """
+
+    if use_embeddings and embedding_model is not None and existing_question_embeddings is not None:
+        # Compute embedding of the generated question
+        generated_embedding = embedding_model.encode([generated_question], convert_to_tensor=True)
+        # Get the device of generated_embedding
+        device = generated_embedding.device
+        logger.debug(f"Generated embedding device: {device}")
+
+        # Move existing_question_embeddings to the same device
+        existing_question_embeddings = existing_question_embeddings.to(device)
+
+        # Compute cosine similarities
+        similarities = cosine_similarity(generated_embedding, existing_question_embeddings)
+        max_similarity = similarities.max().item()
+        logger.debug(f"Max similarity with existing questions: {max_similarity}")
+        return max_similarity < similarity_threshold
+    else:
+        # Use regex or simple string matching
+        generated_question_lower = generated_question.lower()
+        for existing_question in existing_questions:
+            if re.search(re.escape(generated_question_lower), existing_question.lower(), re.IGNORECASE):
+                return False
+        return generated_question not in existing_questions
+
+def parse_self_check_response(response_text: str) -> Dict[str, Any]:
+    """
+    Parses the self-check response to extract the evaluation result.
+    """
+    import json
+
+    try:
+        # Attempt to extract JSON content
+        json_str = re.search(r'\{.*?\}', response_text, re.DOTALL)
+        if json_str:
+            response_text = json_str.group(0)
+
+        data = json.loads(response_text)
+
+        is_appropriate = data.get('is_appropriate', True)
+        reason = data.get('reason', '')
+
+        return {
+            'is_appropriate': is_appropriate,
+            'reason': reason
+        }
+    except json.JSONDecodeError as e:
+        logger.debug(f"Failed to parse self-check response JSON: {e}")
+        # Assume the question is appropriate if parsing fails
+        return {
+            'is_appropriate': True,
+            'reason': 'Failed to parse self-check response.'
+        }

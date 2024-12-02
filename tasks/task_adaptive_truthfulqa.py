@@ -6,7 +6,7 @@ from inspect_ai.scorer import choice
 from inspect_ai.solver import multiple_choice, solver
 from typing import Any, Literal
 from eval_dump_inspect import labels_to_positions
-from solver_adaptive_truthfulqa import adaptive_truthfulqa_scorer, adaptive_truthfulqa_solver
+from solvers.solver_adaptive_truthfulqa import adaptive_truthfulqa_scorer, adaptive_truthfulqa_solver
 
 @task
 def truthfulqa_initial(target: Literal["mc1", "mc2"] = "mc1") -> Task:
@@ -60,8 +60,13 @@ def adaptive_truthfulqa(
     n_negative_samples: int = 8,
     generator_model_name: str = "openai/gpt-4o-mini",
     eval_model_name: str = "openai/gpt-4o-mini",
+    self_check_model_name: str = None,
     target: Literal["mc1", "mc2"] = "mc1",
     use_cot: bool = False,
+    use_embeddings: bool = False,
+    embeddings_model_name: str = 'sentence-transformers/all-mpnet-base-v2',
+    similarity_threshold: float = 0.8,
+    max_attempts: int = 5,
 ) -> Task:
     """
     Adaptive TruthfulQA task that generates new questions based on model errors and evaluates the model on them.
@@ -76,8 +81,13 @@ def adaptive_truthfulqa(
                 n_negative_samples=n_negative_samples,
                 generator_model_name=generator_model_name,
                 eval_model_name=eval_model_name,
+                self_check_model_name=self_check_model_name,
                 target=target,
                 use_cot=use_cot,
+                use_embeddings=use_embeddings,
+                embeddings_model_name=embeddings_model_name,
+                similarity_threshold=similarity_threshold,
+                max_attempts=max_attempts,
             ),
         ],
         scorer=adaptive_truthfulqa_scorer(),
@@ -109,7 +119,7 @@ if __name__ == "__main__":
                 assert os.path.exists(initial_log_path), f"Initial log path {initial_log_path} does not exist"
                 print(f"Skipping initial truthfulqa task for {eval_model} because it already exists, in {log_dir}, called {initial_log_path}")
                 initial_log = read_eval_log(initial_log_path)
-                assert initial_log.status == "success", f"Initial log {initial_log_path} did not complete successfully"
+                assert initial_log.status == "success", f"Initial log {iitial_log_path} did not complete successfully"
             except Exception as e:
                 print(f"An error occurred while retrieving the latest JSON file: {e}")
                 eval(task, epochs=Epochs(1, "max"), max_connections=10000, log_dir=log_dir, model=eval_model)[0]
