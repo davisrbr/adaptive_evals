@@ -453,3 +453,34 @@ def parse_self_check_response(response_text: str) -> Dict[str, Any]:
             'is_appropriate': True,
             'reason': 'Failed to parse self-check response.'
         }
+
+@scorer
+def press_truthfulqa_scorer() -> Scorer:
+    """
+    Scorer for the PRESS TruthfulQA task.
+    """
+
+    async def score(state: TaskState, target: Target) -> Score:
+        try:
+            generated_samples = state.store.get('generated_samples')
+            # Implement scoring logic for the generated samples
+            # For simplicity, we'll set the value to INCORRECT for now
+            value = INCORRECT  # Replace with actual logic
+            answer = "[EVALUATION PENDING]"
+            explanation = "Scoring logic not yet implemented."
+            return Score(
+                value=value,
+                answer=answer,
+                target=target,
+                explanation=explanation,
+            )
+        except Exception as e:
+            state.error = str(e)
+            return Score(
+                value=INCORRECT,
+                answer="[ERROR]",
+                target=target,
+                explanation=str(e),
+            )
+
+    return score

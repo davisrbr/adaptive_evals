@@ -7,6 +7,7 @@ from inspect_ai.solver import multiple_choice, solver
 from typing import Any, Literal
 from eval_dump_inspect import labels_to_positions
 from solvers.solver_adaptive_truthfulqa import adaptive_truthfulqa_scorer, adaptive_truthfulqa_solver
+from solvers.solver_press_truthfulqa import press_truthfulqa_solver, press_truthfulqa_scorer
 
 @task
 def truthfulqa_initial(target: Literal["mc1", "mc2"] = "mc1") -> Task:
@@ -93,6 +94,35 @@ def adaptive_truthfulqa(
         scorer=adaptive_truthfulqa_scorer(),
     )
 
+@task
+def press_truthfulqa(
+    initial_log_path: str,
+    n_iterations: int = 5,
+    quiz_length: int = 10,
+    generator_model_name: str = "openai/gpt-4o",
+    evaluator_model_name: str = "openai/gpt-4o-mini",
+    eval_model_name: str = "openai/gpt-4o-mini",
+    target: Literal["mc1", "mc2"] = "mc1",
+) -> Task:
+    """
+    Adaptive TruthfulQA task that implements the PRESS Method to generate report cards
+    and generates new questions based on these summaries.
+    """
+    return Task(
+        dataset=MemoryDataset(name="press_truthfulqa", samples=[]),
+        solver=[
+            press_truthfulqa_solver(
+                initial_log_path=initial_log_path,
+                n_iterations=n_iterations,
+                quiz_length=quiz_length,
+                generator_model_name=generator_model_name,
+                evaluator_model_name=evaluator_model_name,
+                eval_model_name=eval_model_name,
+                target=target,
+            ),
+        ],
+        scorer=press_truthfulqa_scorer(),
+    )
 
 if __name__ == "__main__":
     # model_list_generator = ["openai/gpt-4o", "openai/gpt-4o-mini", "together/mistralai/Mixtral-8x22B-Instruct-v0.1", "anthropic/claude-3-5-sonnet-20240620"]
@@ -119,7 +149,7 @@ if __name__ == "__main__":
                 assert os.path.exists(initial_log_path), f"Initial log path {initial_log_path} does not exist"
                 print(f"Skipping initial truthfulqa task for {eval_model} because it already exists, in {log_dir}, called {initial_log_path}")
                 initial_log = read_eval_log(initial_log_path)
-                assert initial_log.status == "success", f"Initial log {iitial_log_path} did not complete successfully"
+                assert initial_log.status == "success", f"Initial log {initial_log_path} did not complete successfully"
             except Exception as e:
                 print(f"An error occurred while retrieving the latest JSON file: {e}")
                 eval(task, epochs=Epochs(1, "max"), max_connections=10000, log_dir=log_dir, model=eval_model)[0]
