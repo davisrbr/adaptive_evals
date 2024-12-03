@@ -9,6 +9,7 @@ This project implements adaptive:
 - Adaptive evaluations for hallucinations with [TruthfulQA](https://github.com/sylinrl/TruthfulQA)
 - Adaptive evaluations for legal judgement with [LegalBench](https://github.com/HazyResearch/legalbench/tree/main)
 - [In progress] Adaptive evaluations for forecasting with [llm_forecasting](https://github.com/dannyallover/llm_forecasting) 
+- [In progress] Initial dataset generation for [cyberbullying generation](https://www.notion.so/Cyberbullying-evaluation-13034fe4007d803cbc8be0f29d4cd74c)
 
 ## Project Structure
 
@@ -21,6 +22,9 @@ This project implements adaptive:
 - `solvers/`: Contains the core logic for different evaluation approaches
   - `solvers_inspect.py`: Main solver implementations including PAIR and decomposition
   - `solver_adaptive_truthfulqa.py`: TruthfulQA-specific adaptive solver
+  - `solver_press_truthfulqa.py`: PRESS method for TruthfulQA adaptive evaluation
+  - `solver_adaptive_legal.py`: LegalBench adaptive solver
+  - `solvers_forecasting.py`: vanilla and llm_forecasting adaptive solvers
 
 ## Task Implementations
 
