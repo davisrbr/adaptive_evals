@@ -12,11 +12,11 @@ This project implements adaptive:
 
 ## Project Structure
 
-- `tasks/`: Contains task definitions and evaluation configurations
+- `tasks/`: Contains task definitions and evaluation configurations. The general set-up here is standard evaluation run -> adaptive evaluation run using logs from previous -> ...
   - `pair_inspect.py`: Implements PAIR tasks and configurations
   - `task_adaptive_truthfulqa.py`: TruthfulQA adaptive evaluation tasks
   - `task_adaptive_legal.py`: LegalBench adaptive evaluation tasks
-  - `eval_adaptive_mc.py`: Multiple choice adaptive evaluation framework
+  - `eval_adaptive_mc.py`: Standard multiple choice evaluation, on which adaptive evaluations are built
 
 - `solvers/`: Contains the core logic for different evaluation approaches
   - `solvers_inspect.py`: Main solver implementations including PAIR and decomposition
