@@ -3,3 +3,5 @@ pair_task_adaptive_embeddings_22B_log/
 logs/
 __pycache__/
 *.json
+build/
+*.egg-info/
