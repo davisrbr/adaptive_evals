@@ -563,7 +563,9 @@ def advanced_forecasting_solver():
                 question=state.input_text,
                 background_info=state.metadata["background"],
                 resolution_criteria=state.metadata["resolution_criteria"],
-                retrieval_dates=[state.metadata["date_begin"], state.metadata["date_close"]],
+                #retrieval_date
+                #retrieval_dates=[state.metadata["date_begin"], state.metadata["date_close"]], 
+                retrieval_dates=[state.metadata["date_begin"], state.metadata["retrieval_date"]], 
                 urls_in_background=state.metadata.get("extracted_urls", []),
             )
 
@@ -572,7 +574,7 @@ def advanced_forecasting_solver():
                 background_info=state.metadata["background"],
                 resolution_criteria=state.metadata["resolution_criteria"],
                 # today_to_close_date = [retrieval_dates[1], question_dates[1]], change later
-                today_to_close_date_range=[state.metadata["date_begin"], state.metadata["date_close"]],
+                today_to_close_date_range=[state.metadata["retrieval_date"], state.metadata["date_close"]],
                 retrieved_info=all_summaries,
                 reasoning_prompt_templates=REASONING_CONFIG["BASE_REASONING_PROMPT_TEMPLATES"],
                 base_model_names=all_models,

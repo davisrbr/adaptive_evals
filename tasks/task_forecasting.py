@@ -42,20 +42,29 @@ def forecasting() -> Task:
                 "date_begin": record["date_begin"],
                 "date_close": record["date_close"],
                 # Additional metadata not used in prompt
-                "gpt_3p5_category": record["gpt_3p5_category"],
+                #"gpt_3p5_category": record["gpt_3p5_category"],
                 "url": record["url"],
                 "community_predictions": record["community_predictions"],
                 "question_type": record["question_type"],
                 "extracted_urls": record["extracted_urls"],
                 "date_resolve_at": record["date_resolve_at"],
                 "data_source": record["data_source"],
-                "is_resolved": record["is_resolved"]
+                "is_resolved": record["is_resolved"], 
+                "retrieval_date": record["sampled_retrieval_date"]
             }
         )
 
     # Load dataset
+    # dataset = hf_dataset(
+    #     "YuehHanChen/forecasting",
+    #     split="test",
+    #     trust=True,
+    #     sample_fields=record_to_sample,
+    #     auto_id=True,
+    #     shuffle=True,
+    # )
     dataset = hf_dataset(
-        "YuehHanChen/forecasting",
+        "prithvi3/forecast_sample_test_filtered_earlyres",
         split="test",
         trust=True,
         sample_fields=record_to_sample,
@@ -65,11 +74,11 @@ def forecasting() -> Task:
 
     # Filter for resolved binary questions
     dataset = dataset.filter(
-        lambda x: x.metadata["is_resolved"] is True and x.metadata["question_type"] == "binary"
+        lambda x: x.metadata["is_resolved"] is True and x.metadata["question_type"].lower() == "binary"
     )
 
     # Select only the first 2 samples for testing
-    dataset = dataset[:2]
+    dataset = dataset[:5]
 
     return Task(
         dataset=dataset,
