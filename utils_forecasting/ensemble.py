@@ -3,6 +3,7 @@ import logging
 
 # Related third-party imports
 import numpy as np
+from inspect_ai.log import transcript
 
 # Local application/library-specific imports
 from . import string_utils, utils, model_eval
@@ -171,40 +172,88 @@ async def meta_reason(
         ), "weights must have the same length as reasoning_prompt_templates"
     all_base_reasonings = []
     all_base_reasoning_full_prompts = []
-    for i, base_model_name in enumerate(base_model_names):
-        (
-            base_reasonings,
-            base_reasoning_full_prompts,
-        ) = await model_eval.async_make_forecast(
+     # Group all base model reasonings in one step
+    with transcript().step("base_model_reasonings"):
+        for i, base_model_name in enumerate(base_model_names):
+            # Create a step for each model
+            with transcript().step(f"model_{base_model_name}"):
+                # Log before making forecast
+                transcript().info({
+                    "model": base_model_name,
+                    "temperature": base_temperature,
+                })
+                (
+                    base_reasonings,
+                    base_reasoning_full_prompts,
+                ) = await model_eval.async_make_forecast(
+                    question=question,
+                    background_info=background_info,
+                    resolution_criteria=resolution_criteria,
+                    dates=today_to_close_date_range,
+                    retrieved_info=retrieved_info,
+                    reasoning_prompt_templates=reasoning_prompt_templates[i],
+                    model_name=base_model_name,
+                    temperature=base_temperature,
+                    return_prompt=True,
+                )
+                # Log results
+                transcript().info({
+                    "prompts_used": base_reasoning_full_prompts,
+                    "reasonings": base_reasonings
+                })
+                # list of lists (not flattened)
+                all_base_reasonings.append(base_reasonings)
+                all_base_reasoning_full_prompts.append(base_reasoning_full_prompts)
+    # Group aggregation in its own step
+    with transcript().step("aggregation"):
+        transcript().info({
+            "aggregation_method": aggregation_method,
+            "meta_model": meta_model_name if aggregation_method == "meta" else None,
+        })
+        aggregation_dict = aggregate_base_reasonings(
+            base_reasonings=all_base_reasonings,
             question=question,
             background_info=background_info,
+            today_to_close_date_range=today_to_close_date_range,
             resolution_criteria=resolution_criteria,
-            dates=today_to_close_date_range,
             retrieved_info=retrieved_info,
-            reasoning_prompt_templates=reasoning_prompt_templates[i],
-            model_name=base_model_name,
-            temperature=base_temperature,
-            return_prompt=True,
+            aggregation_method=aggregation_method,
+            answer_type=answer_type,
+            weights=weights,
+            end_words=end_words,
+            model_name=meta_model_name,  # meta model name
+            meta_prompt_template=meta_prompt_template,
+            meta_temperature=meta_temperature,
         )
-        # list of lists (not flattened)
-        all_base_reasonings.append(base_reasonings)
-        all_base_reasoning_full_prompts.append(base_reasoning_full_prompts)
-    aggregation_dict = aggregate_base_reasonings(
-        base_reasonings=all_base_reasonings,
-        question=question,
-        background_info=background_info,
-        today_to_close_date_range=today_to_close_date_range,
-        resolution_criteria=resolution_criteria,
-        retrieved_info=retrieved_info,
-        aggregation_method=aggregation_method,
-        answer_type=answer_type,
-        weights=weights,
-        end_words=end_words,
-        model_name=meta_model_name,  # meta model name
-        meta_prompt_template=meta_prompt_template,
-        meta_temperature=meta_temperature,
-    )
-    aggregation_dict["base_reasoning_full_prompts"] = all_base_reasoning_full_prompts
+        aggregation_dict["base_reasoning_full_prompts"] = all_base_reasoning_full_prompts
+
+        # Log detailed results based on aggregation method
+        if aggregation_method == "meta":
+            transcript().info({
+                "meta_process": {
+                    "meta_prompt": aggregation_dict["meta_prompt"],
+                    "meta_reasoning": aggregation_dict["meta_reasoning"],
+                    "meta_prediction": aggregation_dict["meta_prediction"]
+                }
+            })
+        else:
+            transcript().info({
+                "simple_aggregation": {
+                    "method": aggregation_method,
+                    "base_predictions": aggregation_dict["base_predictions"],
+                    "final_prediction": aggregation_dict["meta_prediction"]
+                }
+            })
+        # Log overall results
+        transcript().info({
+            "final_results": {
+                "prediction": aggregation_dict["meta_prediction"],
+                "method_used": aggregation_method,
+                "num_base_models": len(base_model_names),
+                "num_base_predictions": len([item for sublist in aggregation_dict["base_predictions"] for item in sublist])
+            }
+        })
+
     return aggregation_dict
 
 
