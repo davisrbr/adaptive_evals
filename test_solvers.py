@@ -1,5 +1,5 @@
 import pytest
-from inspect_ai import Epochs, Task, task, eval
+from inspect_ai import Epochs, Task, eval
 from inspect_ai.dataset import Sample, MemoryDataset
 from inspect_ai.scorer import choice
 from inspect_ai.solver import multiple_choice
