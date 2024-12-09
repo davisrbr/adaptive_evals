@@ -7,10 +7,13 @@ from inspect_ai.log import read_eval_log
 from inspect_ai.scorer import choice
 from inspect_ai.solver import multiple_choice
 from typing import Any, Literal, Optional
-from solver_adaptive_legal import adaptive_legal_scorer, adaptive_legal_solver, adaptive_legal_judge_solver, adaptive_legal_judge_scorer
+from solvers.solver_adaptive_legal import adaptive_legal_scorer, adaptive_legal_solver, adaptive_legal_judge_solver, adaptive_legal_judge_scorer
 from datasets import load_dataset
+import sys
+sys.path.append("..")
 from legalbench.utils import generate_prompts
 from legalbench.tasks import TASKS
+from solvers.solver_adaptive_legal import rewording_legal_solver
 
 @task
 def legalbench_initial(task_name: str = "maud_accuracy_of_target_general_rw_bringdown_timing_answer") -> Task:
@@ -22,7 +25,7 @@ def legalbench_initial(task_name: str = "maud_accuracy_of_target_general_rw_brin
     """
 
     # Load the prompt template for the specified task
-    prompt_template_path = f"legalbench/tasks/{task_name}/base_prompt.txt"
+    prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt.txt"
     with open(prompt_template_path) as in_file:
         prompt_template = in_file.read()
 
@@ -88,7 +91,7 @@ def legalbench_initial_aggregated(task_names: list[str] = [
 
     for task_name in task_names:
         # Load the prompt template for the specified task
-        prompt_template_path = f"legalbench/tasks/{task_name}/base_prompt.txt"
+        prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt.txt"
         with open(prompt_template_path) as in_file:
             prompt_template = in_file.read()
 
@@ -195,6 +198,157 @@ def adaptive_legal(
         ],
     )
 
+@task
+def legalbench_reworded(
+    task_name: str = "maud_accuracy_of_target_general_rw_bringdown_timing_answer",
+    model_name: str = "openai/gpt-4o-mini",
+    rewording_model_name: str = "openai/gpt-4o-mini",
+    cot: bool = False,
+    debug: bool = False
+) -> Task:
+    """
+    Evaluation task for the LegalBench dataset with reworded questions.
+
+    Args:
+        task_name (str): The name of the LegalBench task to evaluate.
+        model_name (str): The name of the model used to answer the question.
+        rewording_model_name (str): The name of the model used to reword the question.
+        debug (bool): If True, use only a 5 question subset for debugging.
+    """
+
+    # Load the prompt template for the specified task
+    prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt.txt"
+    with open(prompt_template_path) as in_file:
+        prompt_template = in_file.read()
+
+    # Define a function to convert dataset records to Sample objects
+    def record_to_sample(record: dict[str, Any]) -> Sample:
+        # Convert the single record into a pandas DataFrame
+        df = pd.DataFrame([record])
+
+        # Generate the prompt using the template and record data
+        prompts = generate_prompts(prompt_template=prompt_template, data_df=df)
+        prompt = prompts[0]
+
+        # Extract the options from the prompt
+        option_pattern = r"Option ([A-Z]): (.*)"
+        options_matches = re.findall(option_pattern, prompt)
+
+        # Create choices based on options extracted
+        choices = [match[1] for match in options_matches]
+
+        # The target is the letter of the correct answer
+        target = record["answer"].strip()
+
+        return Sample(
+            input=prompt,
+            choices=choices,
+            target=target,
+            metadata={"task_name": task_name}
+        )
+
+    # Load the LegalBench dataset
+    dataset = hf_dataset(
+        path="nguha/legalbench",
+        name=task_name,
+        sample_fields=record_to_sample,
+        split="test",  # Use "test" or "validation" as appropriate
+        auto_id=True,
+        shuffle=True,
+    )
+
+    # If in debug mode, limit to 5 samples
+    if debug:
+        dataset = dataset[:5]
+
+    return Task(
+        dataset=dataset,
+        solver=[
+            rewording_legal_solver(model_name=model_name, rewording_model_name=rewording_model_name, cot=cot),
+            multiple_choice(multiple_correct=False, shuffle=True)
+        ],
+        scorer=choice(),
+    )
+
+@task
+def legalbench_reworded_aggregated(
+    task_names: list[str] = [
+        'maud_accuracy_of_target_general_rw_bringdown_timing_answer',
+        'maud_accuracy_of_target_capitalization_rw_(outstanding_shares)_bringdown_standard_answer',
+        'maud_accuracy_of_target_general_rw_bringdown_timing_answer',
+    ],
+    model_name: str = "openai/gpt-4o-mini",
+    rewording_model_name: str = "openai/gpt-4o-mini",
+    cot: bool = False,
+    debug: bool = False
+) -> Task:
+    """
+    Aggregated evaluation task for multiple LegalBench datasets with reworded questions.
+
+    Args:
+        task_names (list[str]): The list of LegalBench task names to evaluate.
+        model_name (str): The name of the model used to answer the question.
+        rewording_model_name (str): The name of the model used to reword the question.
+        cot (bool): Whether to use chain-of-thought prompting.
+        debug (bool): If True, use only a 5 question subset for debugging.
+    """
+    # Initialize an empty list to collect samples from all tasks
+    all_samples = []
+
+    for task_name in task_names:
+        # Load the prompt template for the specified task
+        prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt.txt"
+        with open(prompt_template_path) as in_file:
+            prompt_template = in_file.read()
+
+        # Define a function to convert dataset records to Sample objects
+        def record_to_sample(record: dict[str, Any]) -> Sample:
+            df = pd.DataFrame([record])
+            prompts = generate_prompts(prompt_template=prompt_template, data_df=df)
+            prompt = prompts[0]
+
+            option_pattern = r"Option ([A-Z]): (.*)"
+            options_matches = re.findall(option_pattern, prompt)
+            choices = [match[1] for match in options_matches]
+            target = record["answer"].strip()
+
+            return Sample(
+                input=prompt,
+                choices=choices,
+                target=target,
+                metadata={"task_name": task_name}
+            )
+
+        # Load the LegalBench dataset for this task
+        dataset = hf_dataset(
+            path="nguha/legalbench",
+            name=task_name,
+            sample_fields=record_to_sample,
+            split="test",
+            auto_id=True,
+            shuffle=True,
+        )
+
+        # Collect samples from this dataset
+        samples = dataset.samples
+        all_samples.extend(samples)
+
+    # Create a combined dataset
+    combined_dataset = MemoryDataset(name="legalbench_reworded_aggregated", samples=all_samples)
+
+    # If in debug mode, limit to 5 samples
+    if debug:
+        combined_dataset = combined_dataset[:5]
+
+    return Task(
+        dataset=combined_dataset,
+        solver=[
+            rewording_legal_solver(model_name=model_name, rewording_model_name=rewording_model_name, cot=cot),
+            multiple_choice(multiple_correct=False, shuffle=True)
+        ],
+        scorer=choice(),
+    )
+
 if __name__ == "__main__":
     # List of models to use for generation and evaluation
     model_list_generator = [
@@ -205,8 +359,8 @@ if __name__ == "__main__":
         # "together/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
     ]
     model_list_eval = [
-        "openai/gpt-4o",
-        # "openai/gpt-4o-mini",
+        # "openai/gpt-4o",
+        "openai/gpt-4o-mini",
         # "anthropic/claude-3-5-sonnet-20240620",
     ]
 
@@ -221,7 +375,8 @@ if __name__ == "__main__":
 
     # for this run, we are always evaluation gpt-4o, and sweep across generator models and n_positive_samples/n_negative_samples
     # this is for an adaptive evaluation with the aggregated task
-    initial_log_path = "logs/2024-10-30T10-44-42-04-00_legalbench-initial-aggregated_gQXZisrb6539kQGbrUWSMC.json"
+    initial_log_path = "logs/2024-12-06T14-38-07-05-00_legalbench-initial-aggregated_CP3Juo4BSyFjLMzfJ8VYyU.json"
+    # initial_log_path = "logs/2024-10-30T10-44-42-04-00_legalbench-initial-aggregated_gQXZisrb6539kQGbrUWSMC.json"
     # initial_log_path = "logs/2024-10-30T10-35-29-04-00_legalbench-initial-aggregated_m6nH9qBkc6hrgRkcuRfGqx.json"
     for positive_samples in [1]:
         for negative_samples in [4, 8, 16, 32, 64]:
