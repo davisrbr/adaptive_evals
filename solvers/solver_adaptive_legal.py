@@ -13,6 +13,12 @@ import sys
 sys.path.append('..')
 from legalbench.utils import generate_prompts
 import pandas as pd
+from inspect_ai.solver._multiple_choice import (
+    answer_options,
+    SINGLE_ANSWER_TEMPLATE,
+    SINGLE_ANSWER_TEMPLATE_COT,
+    parse_answers,
+)
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -155,7 +161,7 @@ def adaptive_legal_solver(
                     break  # Parsing succeeded, exit the loop
                 except ValueError as e:
                     logger.debug(str(e))
-                    print(f"Error parsing JSON: {e}, attempt {attempt + 1} of {n}")
+                    print(f"Error parsing JSON: {e}, attempt {attempt + 1} of {num_attempts}")
             else:
                 print("Failed to parse JSON after maximum retry attempts.")
                 state.error = "Failed to parse JSON after maximum retry attempts."
@@ -401,3 +407,94 @@ def adaptive_legal_judge_scorer() -> Scorer:
             )
 
     return score
+
+@solver
+def rewording_legal_solver(
+    model_name: str = "openai/gpt-4o",
+    rewording_model_name: Optional[str] = None,
+    num_attempts: int = 3,
+    cot: bool = False,
+) -> Generate:
+    """
+    Solver that rewords the existing question and evaluates the model on it.
+    """
+
+    async def solve(state: TaskState, generate: Generate) -> TaskState:
+        original_prompt = state.user_prompt.text
+
+        # Prepare the rewording prompt
+        rewording_prompt = (
+            f"Please rephrase the following question without changing its meaning. "
+            f"Ensure that all answer choices and key information are preserved.\n\n"
+            f"Example 1:\n"
+            f"Original Question:\n"
+            f"What is the capital of France?\n"
+            f"Reworded Question:\n"
+            f"Can you tell me the name of France's capital city?\n\n"
+            f"Example 2:\n"
+            f"Original Question:\n"
+            f"Explain the process of photosynthesis.\n"
+            f"Reworded Question:\n"
+            f"How does photosynthesis work?\n\n"
+            f"Example 3:\n"
+            f"Original Question:\n"
+            f"Who wrote the novel '1984'?\n"
+            f"Reworded Question:\n"
+            f"Identify the author of the book titled '1984'.\n\n"
+            f"Now, rephrase the question below:\n\n"
+            f"Original Question:\n{original_prompt}\n"
+            f"Reworded Question:"
+        )
+
+        # Use rewording_model_name if provided, else use model_name
+        rewording_model_to_use = rewording_model_name or model_name
+        rewording_model = get_model(
+            rewording_model_to_use,
+            config=GenerateConfig(max_connections=10000, temperature=0)
+        )
+
+        # Try to generate the reworded question
+        for _ in range(num_attempts):
+            try:
+                rewording_response = await rewording_model.generate(rewording_prompt)
+                reworded_prompt = rewording_response.completion.strip()
+                if reworded_prompt:
+                    break
+            except Exception as e:
+                continue
+        else:
+            state.error = "Failed to generate a reworded question."
+            state.completed = True
+            return state
+
+        # Use the exact template from _multiple_choice.py
+        letters = ",".join(chr(65 + i) for i in range(len(state.choices)))
+        if not cot: 
+            formatted_prompt = SINGLE_ANSWER_TEMPLATE.format(
+                letters=letters,
+                question=reworded_prompt,
+                choices=answer_options(state.choices)
+            )
+        else:
+            formatted_prompt = SINGLE_ANSWER_TEMPLATE_COT.format(
+                letters=letters,
+                question=reworded_prompt,
+                choices=answer_options(state.choices)
+            )
+
+        # Update the state with the new prompt
+        state.user_prompt.text = formatted_prompt
+
+        # Use generate to get the answer
+        state = await generate(state)
+
+        # Parse the answer using parse_answers
+        answers = parse_answers(state)
+        if answers and answers.group(1):
+            state.answer = answers.group(1)
+        else:
+            state.error = "Failed to parse answer from model response"
+        
+        return state
+
+    return solve
