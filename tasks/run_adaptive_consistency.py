@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 import logging
 from utils_consistency.consistency_question_generator import generate_consistency_checks
-from utils_consistency.forecaster import main_parallel_forecast_processing_combined
+from utils_consistency.forecaster import main_parallel_forecast_processing
 from utils_consistency.metrics import calculate_consistency_metrics
 from utils_consistency.adaptive_consistency_generator import (
     main_adversarial_generation,
@@ -99,7 +99,7 @@ def run_adaptive_evaluation(
         
         # 2. Run forecasting
         forecast_path = os.path.join(output_dir, f"forecasts_{timestamp}.csv")
-        forecast_df = main_parallel_forecast_processing_combined(
+        forecast_df = main_parallel_forecast_processing(
             input_csv=consistency_path,
             output_csv=forecast_path,
             **kwargs
@@ -117,16 +117,21 @@ def run_adaptive_evaluation(
             adversarial_config = GenerationConfig(
                 n_questions=10,
                 samples_per_bucket={
-                    'worst': 5,
-                    'poor': 5,
+                    'worst': 3,
+                    'poor': 3,
                     'medium': 2,
                     'best': 2
                 },
                 samples_per_consistency={
-                    'not': 15,
-                    'consequence': 15,
-                    'paraphrase': 15
-                }
+                    'not': 10,
+                    'consequence': 10,
+                    'paraphrase': 10,
+                    'and': 10,
+                    'or': 10,
+                },
+                model="gpt-4o",
+                temperature=0.7,
+                checkpoint_dir="adversarial_checkpoints"
             )
         
         analysis, generated_df = main_adversarial_generation(
@@ -162,6 +167,6 @@ if __name__ == "__main__":
     input_dataset = pd.read_csv("hf://datasets/prithvi3/filtered_forecast_sample_test/test_data_12_05_24_6_filtered.csv")
     results = run_adaptive_evaluation(
         input_dataset=input_dataset,
-        consistency_types=['not', 'paraphrase', 'consequence'],
-        sample_size=20
+        consistency_types=['not', 'paraphrase', 'consequence', 'and', 'or'],
+        sample_size=15
     )
