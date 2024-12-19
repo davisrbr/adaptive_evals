@@ -11,6 +11,7 @@ import logging
 import time
 from tqdm import tqdm
 import os
+import random
 
 
 # Dictionary containing all operator prompts
@@ -228,7 +229,13 @@ Notes:
 }
 
 question_generation_prompt = """ 
-You are helpful assistant who will help generate a related question that can be meaningfully combined with an input question in a forecasting context. First analyze the input question and explain your reasoning about what type of related question would be valuable. Then output your generated question in the specified format.
+You are a helpful assistant who will help generate {num_questions} related questions that can be meaningfully combined with an input question in a forecasting context. First analyze the input question and explain your reasoning about what type of related question would be valuable. Then output your generated question in the specified format.
+
+For each question you generate, follow this format:
+Reasoning: [Clear reasoning as to why this is a relevant question]
+Title: [A concise and specific title for the question]
+Body: [A detailed description or additional context for this forecasting question, including the resolution criteria]
+
 
 Requirements for the generated question:
 1. Must be answerable with a probability between 0 and 1
@@ -295,9 +302,79 @@ First, provide your reasoning about:
 2. What type of related question would provide valuable insight when combined
 3. Why this relationship would matter to forecasters
 
-Then generate your related question within the format (That is, closed within double asterisk **):
-**Your generated question**
+- Most importantly, the generated questions should be complete in itself and make no references to the original question. That is, the question should be answerable just from the title.
+
+Strictly follow this format for each question you generate:
+Reasoning: [Generated Reasoning]
+Title: [Generated Title]
+Body: [Generated Body]
+
+YOU MUST GENERATE EXACTLY {num_questions} BLOCKS OF QUESTIONS OF THE ABOVE FORMAT.
 """
+
+
+def question_generate(input_question: str, prompt_template: str, n_generated_relevant_questions: int = 3) -> List[Dict]:
+    """
+    Generate a list of related questions using GPT-4o based on an input question.
+
+    Args:
+        input_question (str): The original question to generate related questions for.
+        prompt_template (str): The prompt template containing examples and instructions.
+        n_generated_relevant_questions (int): Number of related questions to generate.
+
+    Returns:
+        List[Dict]: A list of dictionaries, each containing 'reasoning', 'title', and 'body' for the generated questions.
+    """
+    client = OpenAI()  # Assumes OPENAI_API_KEY is set in environment variables
+
+    # Modify the prompt to request multiple questions
+    formatted_prompt = prompt_template.format(
+        question=input_question,
+        num_questions=n_generated_relevant_questions
+    )
+
+    try:
+        logging.info(f"Generating {n_generated_relevant_questions} related questions for: {input_question}")
+        response = client.chat.completions.create(
+            model="gpt-4o",
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant specialized in generating related forecasting questions."},
+                {"role": "user", "content": formatted_prompt}
+            ],
+            temperature=1,
+        )
+
+        response_text = response.choices[0].message.content
+
+        # Parse the response to extract multiple questions
+        questions = []
+        question_parts = re.split(r"Reasoning:", response_text)[1:]  # Split into separate questions
+        for i, part in enumerate(question_parts):
+            if "Title:" in part and "Body:" in part:
+                reasoning = part.split("Title:")[0].strip()
+                title = part.split("Title:")[1].split("Body:")[0].strip()
+                body = part.split("Body:")[1].strip()
+
+                # Assign a unique ID to each generated question
+                # You could base this on i, a timestamp, or any unique scheme
+                question_id = f"generated_{int(time.time())}_{i}"
+
+                questions.append({"id": question_id, "reasoning": reasoning, "title": title, "body": body})
+
+        if len(questions) == 0:
+            raise ValueError("No questions were generated")
+            
+        logging.info(f"Generated {len(questions)} related questions (requested {n_generated_relevant_questions})")
+        return questions
+
+
+
+    except Exception as e:
+        print(f"Error generating questions: {e}")
+        return []
+
+
+
 
 def get_operator_prompt(operator: str) -> str:
     """
@@ -313,7 +390,7 @@ def get_operator_prompt(operator: str) -> str:
 
 def create_full_prompt(q1, q2=None, operator='or'):
     operator_prompt = get_operator_prompt(operator)
-    
+
     # Single question operators (e.g., 'not')
     if operator.lower() in ['not', 'paraphrase', 'consequence']:
         q1_formatted = f"""Question:
@@ -327,8 +404,15 @@ def create_full_prompt(q1, q2=None, operator='or'):
     # Double question operators (e.g., 'or', 'and', 'cond')
     else:
         if q2 is None:
-            raise ValueError(f"Operator '{operator}' requires two questions but only one was provided")
-            
+            # Generate related question using `question_generate`
+            # prompt_template = question_generation_prompt
+            # generated_q2 = question_generate(q1['title'] + " " + q1['body'], prompt_template)
+            # if not generated_q2:  # Handle failed generation
+            raise ValueError("Need 2 questions for OR, AND, COND operators")
+
+            # Use generated question directly
+            #q2 = {"title": generated_q2["title"], "body": generated_q2["body"]}
+
         q1_formatted = f"""Question 1:
         Title: {q1['title']}
         Body: {q1['body']}"""
@@ -345,6 +429,7 @@ def create_full_prompt(q1, q2=None, operator='or'):
 
     return full_prompt
 
+
 def llm_generate(operator: str, questions: List[Dict[str, str]]) -> Dict[str, str]:
     """
     Takes operator prompt and questions, creates full prompt and gets GPT-4o response.
@@ -354,7 +439,8 @@ def llm_generate(operator: str, questions: List[Dict[str, str]]) -> Dict[str, st
         questions: List of Question dictionaries (each with 'title' and 'body') to combine.
 
     Returns:
-        A dictionary in the same format as the input questions with combined logic.
+        A dictionary in the same format as the input questions with combined logic,
+        including related question information for multi-question operators.
     """
     # Check operator and validate the number of questions
     if operator in ['not', 'paraphrase', 'consequence']:
@@ -365,7 +451,7 @@ def llm_generate(operator: str, questions: List[Dict[str, str]]) -> Dict[str, st
 
     elif operator in ['or', 'and', 'cond']:
         if len(questions) != 2:
-            raise ValueError(f"Operator '{operator}' requires exactly 2 questions.")
+            raise ValueError("Need 2 questions for OR, AND, COND operators")
         # Generate prompt for a double question operator
         full_prompt = create_full_prompt(questions[0], questions[1], operator=operator)
 
@@ -402,19 +488,34 @@ def llm_generate(operator: str, questions: List[Dict[str, str]]) -> Dict[str, st
     if operator == 'not':
         resolution_date = questions[0]['resolution_date']
     else:
-        resolution_date = max(
-            datetime.fromisoformat(q['resolution_date'].replace('Z', '+00:00')) for q in questions
-        ).isoformat()
+        resolution_date = questions[0]['resolution_date']
 
-    # Construct output question format
-    combined_question = {
-        "id": f"combined-{operator}-{'-'.join(q['id'] for q in questions)}",
+    # Base question attributes
+    base_question = {
         "title": combined_title,
         "body": combined_body,
         "resolution_date": resolution_date,
         "question_type": "binary",
-        "data_source": "llm_generated"
+        "data_source": "llm_generated",
+        "created_date": questions[0]['created_date']
     }
+
+    # Construct output question format based on operator type
+    if operator in ['or', 'and', 'cond']:
+        # For multi-question operators, include both the related question and the combined question
+        combined_question = {
+            **base_question,
+            "id": f"combined-{operator}-{'-'.join(q['id'] for q in questions)}",
+            "related_question_title": questions[1]['title'],
+            "related_question_body": questions[1]['body'],
+            "related_question_id": questions[1]['id']
+        }
+    else:
+        # For single-question operators, just include the transformed question
+        combined_question = {
+            **base_question,
+            "id": f"transformed-{operator}-{questions[0]['id']}"
+        }
 
     return combined_question
 
@@ -422,42 +523,64 @@ def llm_generate(operator: str, questions: List[Dict[str, str]]) -> Dict[str, st
 def process_question(
     question: Dict,
     consistency_type: str,
+    related_questions_map: Optional[Dict[str, List[Dict]]] = None,
     api_key: Optional[str] = None,
     pre_request_sleep: float = 1.0
 ) -> Tuple[Dict, Dict]:
     """
     Process a single question to generate its transformed version.
-    
+
     Args:
-        question: Original question dictionary
-        consistency_type: Type of transformation to apply
-        api_key: OpenAI API key
-        pre_request_sleep: Time to sleep before API call
-        
+        question: Original question dictionary.
+        consistency_type: Type of transformation to apply.
+        related_questions_map: Pre-generated related questions for the given question.
+        api_key: OpenAI API key.
+        pre_request_sleep: Time to sleep before API call.
+
     Returns:
-        Tuple of (original question, transformed question)
+        Tuple of (original question, transformed question).
     """
     try:
         # Sleep before API call to avoid rate limits
         time.sleep(pre_request_sleep)
-        
+
+        # Determine the related question for multi-question types
+        related_question = None
+        if consistency_type in {'and', 'or', 'cond'} and related_questions_map:
+            logging.info(f"Sampling a related question for consistency type '{consistency_type}'")
+            related_questions = related_questions_map.get(question['id'], [])
+            if related_questions:
+                related_question = random.choice(related_questions)
+                logging.info(f"Sampled related question: {related_question['title']}")
+            else:
+                logging.warning(f"No related questions found for question {question['id']}")
+
+
+        # Prepare the input for `llm_generate`
+        input_questions = [question]
+        if related_question:
+            input_questions.append(related_question)
+
+        # Call the LLM to generate the transformed question
         transformed_q = llm_generate(
             consistency_type,
-            [question],
+            input_questions,
             # api_key=api_key
         )
         transformed_q['created_date'] = question['created_date']
-        
+
         return question, transformed_q
-        
+
     except Exception as e:
         logging.error(f"Error processing question {question['title']}: {e}")
         return question, None
+
     
 
 def generate_transformed_questions_parallel(
     questions: List[Dict],
     consistency_type: str,
+    related_questions_map: Optional[Dict[str, List[Dict]]] = None,
     max_workers: int = 5,
     pre_request_sleep: float = 1.0,
     api_key: Optional[str] = None
@@ -476,9 +599,11 @@ def generate_transformed_questions_parallel(
     process_func = partial(
         process_question,
         consistency_type=consistency_type,
+        related_questions_map=related_questions_map,
         api_key=api_key,
         pre_request_sleep=pre_request_sleep
     )
+
     
     # Create a list to store results in order
     transformed_questions = [None] * len(questions)
@@ -513,31 +638,63 @@ def create_final_dataframe(
     consistency_type: str
 ) -> pd.DataFrame:
     """
-    Create DataFrame with original and transformed questions (NOT/paraphrase/consequence).
+    Create DataFrame with questions based on consistency type.
     
     Args:
         original_questions: List of original question dictionaries
         transformed_questions: List of transformed question dictionaries
-        consistency_type: Type of transformation applied ('not', 'paraphrase', 'consequence')
+        consistency_type: Type of transformation applied
         
     Returns:
-        DataFrame with original and transformed questions paired
+        DataFrame with questions structured for the consistency type
     """
     pairs = []
     
     for orig_q, trans_q in zip(original_questions, transformed_questions):
-        if trans_q:  # Only include pairs where transformation succeeded
-            pair = {
-                'original_title': orig_q['title'],
-                'original_body': orig_q['body'],
-                'original_resolution_date': orig_q['resolution_date'],
-                'original_created_date': orig_q['created_date'],
-                f'{consistency_type}_title': trans_q['title'],
-                f'{consistency_type}_body': trans_q['body'],
-                f'{consistency_type}_resolution_date': trans_q['resolution_date'],
-                f'{consistency_type}_created_date': trans_q['created_date']
+        if trans_q:  # Only include successful transformations
+            base_pair = {
+                'question_P_title': orig_q['title'],
+                'question_P_body': orig_q['body'],
+                'question_P_id': orig_q['id'],
+                'question_P_resolution_date': orig_q['resolution_date'],
+                'question_P_created_date': orig_q['created_date'],
+                'consistency_type': consistency_type,
+                'forecast_needed_P': True,  # Always need P forecast
+                'forecast_needed_Q': True,  # Always need Q forecast
+                'forecast_needed_R': False  # By default
             }
-            pairs.append(pair)
+            
+            if consistency_type in ['not', 'paraphrase', 'consequence']:
+                # Single question operators
+                base_pair.update({
+                    'question_Q_title': trans_q['title'],
+                    'question_Q_body': trans_q['body'],
+                    'question_Q_id': trans_q['id'],
+                    # Just use question_P values for now
+                    'question_Q_resolution_date': orig_q['resolution_date'],
+                    'question_Q_created_date': orig_q['created_date'],
+                    'question_R_title': None,
+                    'question_R_body': None,
+                    'question_R_id': None, 
+                    'question_R_resolution_date': None,
+                    'question_R_created_date': None
+                })
+            else:
+                # AND/OR/COND operators
+                base_pair.update({
+                    'question_Q_title': trans_q.get('related_question_title'),
+                    'question_Q_body': trans_q.get('related_question_body'),
+                    'question_Q_id': trans_q.get('related_question_id'),
+                    'question_R_title': trans_q['title'],  # The combined question (P AND Q, P OR Q)
+                    'question_R_body': trans_q['body'],
+                    'question_R_id': trans_q['id'],
+                    # Just use question_P values for now
+                    'question_R_resolution_date': orig_q['resolution_date'],
+                    'question_R_created_date': orig_q['created_date'],
+                    'forecast_needed_R': True
+                })
+            
+            pairs.append(base_pair)
     
     df = pd.DataFrame(pairs)
     
@@ -547,108 +704,336 @@ def create_final_dataframe(
     
     return df
 
+#For AND, OR, COND checks, this pre-generates multiple relevant questions for each question 
+def generate_related_questions_parallel(questions: List[Dict], 
+                                      n_generated_relevant_questions: int, 
+                                      max_workers: int = 5,
+                                      pre_request_sleep: float = 1.0) -> Dict[str, List[Dict]]:
+    """
+    Generate related questions for multiple questions in parallel.
+    
+    Args:
+        questions: List of original question dictionaries
+        n_generated_relevant_questions: Number of related questions to generate per question
+        max_workers: Maximum number of parallel workers
+        pre_request_sleep: Sleep time before each API call
+        
+    Returns:
+        Dictionary mapping question IDs to lists of related questions
+    """
+    related_questions_map = {}
+    
+    def process_single_question(question: Dict) -> Tuple[str, List[Dict]]:
+        try:
+            time.sleep(pre_request_sleep)  # Avoid rate limits
+            related = question_generate(
+                question['title'] + " " + question['body'],
+                question_generation_prompt,
+                n_generated_relevant_questions=n_generated_relevant_questions
+            )
+            return question['id'], related
+        except Exception as e:
+            logging.error(f"Error generating related questions for {question['id']}: {str(e)}")
+            return question['id'], []
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Submit all questions for processing
+        futures = list(executor.submit(process_single_question, q) for q in questions)
+        
+        # Process results with progress bar
+        for future in tqdm(
+            concurrent.futures.as_completed(futures),
+            total=len(questions),
+            desc="Generating related questions"
+        ):
+            try:
+                qid, related = future.result()
+                if related:  # Only add if we got related questions
+                    related_questions_map[qid] = related
+            except Exception as e:
+                logging.error(f"Error processing future: {str(e)}")
+                continue
+
+    return related_questions_map
+
+def collect_questions_for_forecasting(output_dir: str, timestamp: str) -> List[Dict]:
+    """
+    Collect all unique questions that need forecasting from various CSVs.
+    
+    Args:
+        output_dir: Directory containing the CSV files
+        timestamp: Timestamp used in filenames
+        
+    Returns:
+        List of unique questions requiring forecasts
+    """
+    questions_to_forecast = []
+    
+    # Load pre-generated questions
+    pre_gen_path = os.path.join(output_dir, f'pre_generated_questions_{timestamp}.csv')
+    if os.path.exists(pre_gen_path):
+        pre_gen_df = pd.read_csv(pre_gen_path)
+        for _, row in pre_gen_df.iterrows():
+            questions_to_forecast.append({
+                'title': row['question_title'],
+                'body': row['question_body'],
+                'id': row['question_id'],
+                'type': 'related'
+            })
+    
+    # Load final consistency checks
+    final_path = os.path.join(output_dir, f'combined_consistency_checks_{timestamp}.csv')
+    final_df = pd.read_csv(final_path)
+    
+    # Add P questions
+    p_questions = final_df[final_df['forecast_needed_P']].apply(
+        lambda x: {
+            'title': x['question_P_title'],
+            'body': x['question_P_body'],
+            'id': x['question_P_id'],
+            'type': 'original',
+            'resolution_date': x['question_P_resolution_date'],
+            'created_date': x['question_P_created_date']
+        }, axis=1
+    ).tolist()
+    questions_to_forecast.extend(p_questions)
+    
+    # Add Q questions
+    q_questions = final_df[final_df['forecast_needed_Q']].apply(
+        lambda x: {
+            'title': x['question_Q_title'],
+            'body': x['question_Q_body'],
+            'id': x['question_Q_id'],
+            'type': 'transformed_or_related',
+            'resolution_date': x['question_Q_resolution_date'],
+            'created_date': x['question_Q_created_date']
+        }, axis=1
+    ).tolist()
+    questions_to_forecast.extend(q_questions)
+    
+    # Add R questions (combined questions for AND/OR)
+    r_questions = final_df[final_df['forecast_needed_R']].apply(
+        lambda x: {
+            'title': x['question_R_title'],
+            'body': x['question_R_body'],
+            'id': x['question_R_id'],
+            'type': 'combined',
+            'resolution_date': x['question_R_resolution_date'],
+            'created_date': x['question_R_created_date']
+        }, axis=1
+    ).tolist()
+    questions_to_forecast.extend(r_questions)
+    
+    # Remove duplicates based on question ID
+    seen_ids = set()
+    unique_questions = []
+    for q in questions_to_forecast:
+        if pd.notna(q['id']) and q['id'] not in seen_ids:
+            seen_ids.add(q['id'])
+            unique_questions.append(q)
+    
+    return unique_questions
+
 def generate_consistency_checks(
     formatted_questions: List[Dict],
     consistency_types: List[str],
     output_dir: str = "outputs",
     max_workers: int = 5,
     pre_request_sleep: float = 1.0,
-    api_key: Optional[str] = None
+    api_key: Optional[str] = None,
+    n_generated_relevant_questions: int = 3
 ) -> pd.DataFrame:
     """
     Generate and combine consistency checks in one workflow.
-    
-    Args:
-        formatted_questions: List of formatted question dictionaries
-        consistency_types: List of consistency types to generate
-        output_dir: Directory for checkpoints and output
-        max_workers: Maximum parallel workers
-        pre_request_sleep: Sleep time before API calls
-        api_key: OpenAI API key
-        
-    Returns:
-        Combined DataFrame with all consistency checks
     """
     os.makedirs(output_dir, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    
+
     # Initialize combined data storage
     combined_data = []
-    
+
     logging.info(f"Starting consistency generation with {len(formatted_questions)} questions")
-    
-    # Generate each type of consistency check
+
+    # Step 1: Identify multi-question types
+    multi_question_types = {'and', 'or', 'cond'}
+    requires_related_questions = any(ct in multi_question_types for ct in consistency_types)
+
+    # Step 2: Pre-generate related questions if needed
+    related_questions_map = {}
+    if requires_related_questions:
+        logging.info("Starting parallel generation of related questions")
+        related_questions_map = generate_related_questions_parallel(
+            questions=formatted_questions,
+            n_generated_relevant_questions=n_generated_relevant_questions,
+            max_workers=max_workers,
+            pre_request_sleep=pre_request_sleep
+        )
+        
+        # Save all pre-generated questions for forecasting
+        all_related_questions = []
+        for qid, related_list in related_questions_map.items():
+            for rel_q in related_list:
+                all_related_questions.append({
+                    'original_question_id': qid,
+                    'question_title': rel_q['title'],
+                    'question_body': rel_q['body'],
+                    'question_id': rel_q['id'],
+                    'question_type': 'related'
+                })
+        
+        # Save pre-generated questions to CSV
+        related_questions_df = pd.DataFrame(all_related_questions)
+        related_checkpoint_path = os.path.join(output_dir, f'pre_generated_questions_{timestamp}.csv')
+        related_questions_df.to_csv(related_checkpoint_path, index=False)
+        logging.info(f"Saved {len(all_related_questions)} pre-generated questions to {related_checkpoint_path}")
+
+    # Step 3: Generate each type of consistency check
     for consistency_type in consistency_types:
         logging.info(f"\nProcessing {consistency_type.upper()} transformations")
-        
+
         try:
-            # Generate transformed questions
             transformed_questions = generate_transformed_questions_parallel(
                 formatted_questions,
                 consistency_type,
                 max_workers=max_workers,
                 pre_request_sleep=pre_request_sleep,
-                api_key=api_key
+                api_key=api_key,
+                related_questions_map=related_questions_map if consistency_type in multi_question_types else None
             )
+
+            # Create dataframe for this consistency type
+            type_df = create_final_dataframe(formatted_questions, transformed_questions, consistency_type)
             
-            # Process and standardize the data
-            for orig, trans in zip(formatted_questions, transformed_questions):
-                if trans:  # Only include successful transformations
-                    standardized_row = {
-                        'original_title': orig['title'],
-                        'original_body': orig['body'],
-                        'original_resolution_date': orig['resolution_date'],
-                        'original_created_date': orig['created_date'],
-                        'consistency_title': trans['title'],
-                        'consistency_body': trans['body'],
-                        'consistency_resolution_date': trans['resolution_date'],
-                        'consistency_created_date': trans['created_date'],
-                        'consistency_type': consistency_type
-                    }
-                    combined_data.append(standardized_row)
-            
-            # Save checkpoint after each consistency type
-            checkpoint_df = pd.DataFrame(combined_data)
+            # Add to combined data
+            combined_data.append(type_df)
+
+            # Save checkpoint
             checkpoint_path = os.path.join(output_dir, f'checkpoint_{consistency_type}_{timestamp}.csv')
-            checkpoint_df.to_csv(checkpoint_path, index=False)
-            logging.info(f"Saved checkpoint for {consistency_type} with {len(checkpoint_df)} total rows")
-            
+            type_df.to_csv(checkpoint_path, index=False)
+            logging.info(f"Saved checkpoint for {consistency_type} with {len(type_df)} rows")
+
         except Exception as e:
             logging.error(f"Error processing {consistency_type}: {str(e)}")
             continue
+
+    # Step 4: Create final combined DataFrame
+    if combined_data:
+        final_df = pd.concat(combined_data, ignore_index=True)
+        if not final_df.empty:
+            final_df = final_df.sort_values(['consistency_type', 'question_P_title'])
+
+        # Save final output
+        output_path = os.path.join(output_dir, f'combined_consistency_checks_{timestamp}.csv')
+        final_df.to_csv(output_path, index=False)
+
+        # Log summary statistics
+        logging.info("\nGeneration Summary:")
+        logging.info(f"Total rows generated: {len(final_df)}")
+        logging.info("\nDistribution of consistency types:")
+        logging.info(final_df['consistency_type'].value_counts().to_string())
+
+        return final_df
+    else:
+        return pd.DataFrame()
+
+
+#Testing 
+def prepare_questions(df: pd.DataFrame, sample_size: int = 1) -> List[Dict]:
+    """
+    Filter and sample questions from the dataset.
     
-    # Create final combined DataFrame
-    final_df = pd.DataFrame(combined_data)
-    final_df = final_df.sort_values(['consistency_type', 'original_title'])
+    Args:
+        df: Raw DataFrame from HuggingFace dataset
+        sample_size: Number of questions to sample
+        
+    Returns:
+        List of formatted question dictionaries
+    """
+    # Filter for resolved binary questions
+    filtered_df = df[
+        (df['is_resolved'] == True) & 
+        (df['question_type'].str.lower() == 'binary')
+    ].copy()
     
-    # Save final output
-    output_path = os.path.join(output_dir, f'combined_consistency_checks_{timestamp}.csv')
-    final_df.to_csv(output_path, index=False)
+    # Adjust sample size if it exceeds available data
+    actual_sample_size = min(sample_size, len(filtered_df))
+    logging.info(f"Sampling {actual_sample_size} questions from {len(filtered_df)} available questions")
     
-    # Log summary statistics
-    logging.info("\nGeneration Summary:")
-    logging.info(f"Total rows generated: {len(final_df)}")
-    logging.info("\nDistribution of consistency types:")
-    logging.info(final_df['consistency_type'].value_counts().to_string())
+    # Randomly sample questions
+    sampled_df = filtered_df.sample(n=actual_sample_size, random_state=0)
     
-    return final_df
+    # Format questions in the required structure
+    formatted_questions = []
+    for _, row in sampled_df.iterrows():
+        question = {
+            'id': str(random.randint(10000, 99999)),
+            'title': row['question'],
+            'body': f"{row['background']}\n\nResolution Criteria:\n{row['resolution_criteria']}",
+            'resolution_date': row['date_resolve_at'],
+            'created_date': row['date_begin'],
+            'question_type': 'binary',
+            'data_source': row['data_source']
+        }
+        formatted_questions.append(question)
+    
+    return formatted_questions
+
+p_questions = [{
+    'id': 'a7b22c16-9982-4380-b94f-28c7d25b2c9a',
+    'title': 'Will the United States pass a federal law regulating the ethical use of artificial intelligence in energy management before January 1, 2028?',
+    'body': 'This question will resolve as Yes if the United States federal government enacts legislation that specifically addresses and regulates the ethical use of artificial intelligence in energy management systems before January 1, 2028. The legislation must be signed into law by the President and must include specific provisions regarding AI ethics in energy management applications. The law must contain at least one section explicitly dealing with ethical guidelines or restrictions for AI systems used in energy grid management, power distribution, or energy resource allocation. For resolution purposes, executive orders or state-level legislation will not qualify. The law must be federal in scope and must be formally published in the Federal Register. If no such law is enacted by the specified date, or if enacted legislation does not specifically address AI ethics in energy management, the question will resolve as No.',
+    'resolution_date': '2027-12-31 23:59:59+00:00',
+    'question_type': 'binary',
+    'data_source': 'metaculus',
+    'url': 'https://www.metaculus.com/questions/8924',
+    'metadata': {
+        'topics': [
+            {'id': 245, 'slug': 'artificial-intelligence-regulation', 'name': 'AI Regulation', 'link_id': 28901, 'num_questions': 87},
+            {'id': 312, 'slug': 'us-federal-legislation', 'name': 'US Federal Legislation', 'link_id': 29045, 'num_questions': 156},
+            {'id': 433, 'slug': 'energy-management', 'name': 'Energy Management', 'link_id': 29788, 'num_questions': 45}
+        ]
+    }
+}, {
+    'id': 'c9d44e18-8894-4570-d96f-40e9f47d4c1b',
+    'title': 'Will Tesla achieve full self-driving capability rated at SAE Level 5 before 2027?',
+    'body': 'This question will resolve as Yes if Tesla releases and obtains regulatory approval for a fully autonomous driving system rated at SAE Level 5 before January 1, 2027. SAE Level 5 means the system can operate without human intervention under all conditions. To qualify, the system must: 1) Be officially rated as SAE Level 5 by an recognized automotive safety organization, 2) Receive regulatory approval for unrestricted use in at least one major market (US, EU, or China), and 3) Be commercially available for purchase in Tesla vehicles. The system must operate without any geographic restrictions, weather limitations, or requirement for special infrastructure. If these criteria are not met by the specified date, or if Tesla only achieves a lower SAE level, the question resolves as No.',
+    'resolution_date': '2026-12-31 23:59:59+00:00',
+    'question_type': 'binary',
+    'data_source': 'metaculus',
+    'url': 'https://www.metaculus.com/questions/7823',
+    'metadata': {
+        'topics': [
+            {'id': 184, 'slug': 'elon-musk', 'name': 'Elon Musk', 'link_id': 27681, 'num_questions': 159},
+            {'id': 422, 'slug': 'autonomous-vehicles', 'name': 'Autonomous Vehicles', 'link_id': 29777, 'num_questions': 83},
+            {'id': 367, 'slug': 'tesla', 'name': 'Tesla', 'link_id': 29234, 'num_questions': 92}
+        ]
+    }
+}]
 
 # Example usage
-# if __name__ == "__main__":
-#     # Load DataFrame
-#     df = pd.read_csv("hf://datasets/prithvi3/filtered_forecast_sample_test/test_data_12_05_24_6_filtered.csv")
+if __name__ == "__main__":
+    # Load DataFrame
+    #testing
+    input_dataset = pd.read_csv("hf://datasets/prithvi3/filtered_forecast_sample_test/test_data_12_05_24_6_filtered.csv").iloc[:3, :]
+    sample_size = 3
+    print(input_dataset.head(2))
+
+    # # Configure logging
+    # logging.basicConfig(
+    #     level=logging.INFO,
+    #     format='%(asctime)s - %(levelname)s - %(message)s'
+    # )
+
+    df = pd.read_csv(input_dataset) if isinstance(input_dataset, str) else input_dataset
+    formatted_questions = prepare_questions(df, sample_size=sample_size)
     
-#     # Configure logging
-#     logging.basicConfig(
-#         level=logging.INFO,
-#         format='%(asctime)s - %(levelname)s - %(message)s'
-#     )
-    
-#     # Generate and combine all consistency checks
-#     combined_df = generate_consistency_checks(
-#         input_df=df,
-#         consistency_types=['not', 'paraphrase', 'consequence'],
-#         sample_size=100,
-#         max_workers=5,
-#         pre_request_sleep=1.0
-#     )
+    # Generate and combine all consistency checks
+    combined_df = generate_consistency_checks(
+        formatted_questions=formatted_questions,
+        consistency_types=['or', 'not', 'and', 'paraphrase', 'consequence'],
+    )
+    combined_df.to_csv("consistency_checks_test.csv", index=False)
+    print(combined_df)
+    # generated_q = question_generate(p_questions[1]['title'] + " " + p_questions[1]['body'], question_generation_prompt)
+    # print(generated_q)
+
