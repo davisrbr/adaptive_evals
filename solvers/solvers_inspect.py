@@ -18,6 +18,7 @@ def pair_solver(
     judge_model_name: str = "openai/gpt-4",
     attack_model_name: str = "together/mistralai/Mixtral-8x22B-Instruct-v0.1",
     n_last_messages: int = 3,
+    cutoff: int = 1,
     use_strongreject_scorer: bool = False,
     heirarchal_scorer: bool = False,
 ):
@@ -35,6 +36,8 @@ def pair_solver(
         attack_model_name (str): Name of the attack language model.
         use_strongreject_scorer (bool): Whether to use the strongreject scorer.
         heirarchal_scorer (bool): Whether to use a heirarchal PAIR scorer.
+        cutoff (int): The cutoff score to pass the output judged by the weak model to the 
+            strong model, in the case of heirarchal scorer.
     Returns:
         Callable: Solver function.
     """
@@ -65,6 +68,7 @@ def pair_solver(
             else pair_scorer_heirarchal(
                 judge_model_primary=judge_model_name,
                 judge_model_secondary="openai/gpt-4o",
+                cutoff=cutoff,
             )
         )
     else:
