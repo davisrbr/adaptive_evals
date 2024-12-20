@@ -2,7 +2,7 @@ from inspect_ai.model import get_model, GenerateConfig, ChatMessageSystem, ChatM
 from inspect_ai.scorer import Target
 from inspect_ai.solver import solver, Generate, TaskState
 
-from prompting.adaptive_prompts import get_attacker_system_prompt_adaptive3
+from prompting.adaptive_prompts import AdaptiveJailbreakRetrieval, get_attacker_system_prompt_adaptive3
 from scorers.scorers_inspect import pair_scorer, pair_scorer_heirarchal, strongreject_scorer
 from utils_plotting.common import extract_json, get_init_msg, process_target_response
 from prompting.pair_prompting import get_attacker_system_prompts
