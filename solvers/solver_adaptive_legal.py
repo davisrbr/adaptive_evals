@@ -91,7 +91,7 @@ def adaptive_legal_solver(
             context_examples += f"{sample_item.target}\n\n"
 
         # Load the base prompt for the task
-        prompt_template_path = f"legalbench/tasks/{task_name}/base_prompt.txt"
+        prompt_template_path = f"/Users/davisbrown/adaptive_evals/legalbench/tasks/{task_name}/base_prompt.txt"
         with open(prompt_template_path, 'r') as f:
             base_prompt = f.read()
 
