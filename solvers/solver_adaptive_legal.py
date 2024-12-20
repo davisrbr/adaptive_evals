@@ -420,11 +420,15 @@ def rewording_legal_solver(
     """
 
     async def solve(state: TaskState, generate: Generate) -> TaskState:
+        # Remove the template from the original prompt if it exists
         original_prompt = state.user_prompt.text
+        for template in [SINGLE_ANSWER_TEMPLATE, SINGLE_ANSWER_TEMPLATE_COT]:
+            if original_prompt.startswith(template):
+                original_prompt = original_prompt[len(template):].strip()
 
         # Prepare the rewording prompt
         rewording_prompt = (
-            f"Please rephrase the following question without changing its meaning. "
+            f"Please rephrase the following question without changing its meaning. You might need to keep the exact wording where when a technical (e.g., legal or scientific) term is used."
             f"Ensure that all answer choices and key information are preserved.\n\n"
             f"Example 1:\n"
             f"Original Question:\n"
