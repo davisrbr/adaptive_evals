@@ -78,7 +78,7 @@ def legalbench_initial_aggregated(task_names: list[str] = [
     'maud_accuracy_of_target_general_rw_bringdown_timing_answer',
     'maud_accuracy_of_target_capitalization_rw_(outstanding_shares)_bringdown_standard_answer',
     'maud_accuracy_of_target_general_rw_bringdown_timing_answer',
-]) -> Task:
+], debug: bool = False) -> Task:
     """
     Initial evaluation task for multiple LegalBench datasets aggregated into a single dataset.
 
@@ -128,7 +128,7 @@ def legalbench_initial_aggregated(task_names: list[str] = [
             sample_fields=record_to_sample,
             split="test",  # Use "test" or "validation" as appropriate
             auto_id=True,
-            shuffle=True,
+            shuffle=True if not debug else False,
         )
 
         # Collect samples from this dataset
@@ -137,6 +137,8 @@ def legalbench_initial_aggregated(task_names: list[str] = [
 
     # Create a combined dataset
     combined_dataset = MemoryDataset(name="legalbench_aggregated", samples=all_samples)
+    if debug:
+        combined_dataset = combined_dataset[:50]
 
     return Task(
         dataset=combined_dataset,
@@ -326,7 +328,7 @@ def legalbench_reworded_aggregated(
             sample_fields=record_to_sample,
             split="test",
             auto_id=True,
-            shuffle=True,
+            shuffle=True if not debug else False,
         )
 
         # Collect samples from this dataset
@@ -336,9 +338,9 @@ def legalbench_reworded_aggregated(
     # Create a combined dataset
     combined_dataset = MemoryDataset(name="legalbench_reworded_aggregated", samples=all_samples)
 
-    # If in debug mode, limit to 5 samples
+    # If in debug mode, limit to 30 samples
     if debug:
-        combined_dataset = combined_dataset[:5]
+        combined_dataset = combined_dataset[:30]
 
     return Task(
         dataset=combined_dataset,

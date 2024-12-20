@@ -12,7 +12,6 @@ from inspect_ai.scorer import choice
 from inspect_ai.solver import multiple_choice
 
 
-
 @task
 def truthfulqa(target: Literal["mc1", "mc2"] = "mc1") -> Task:
     """
