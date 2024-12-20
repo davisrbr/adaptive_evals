@@ -11,6 +11,11 @@ from torch.nn.functional import cosine_similarity
 import torch
 
 from prompting.adaptive_prompts import get_generation_prompt, get_self_check_judge_prompt
+from inspect_ai.solver._multiple_choice import (
+    answer_options,
+    SINGLE_ANSWER_TEMPLATE,
+    parse_answers,
+)
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -484,3 +489,85 @@ def press_truthfulqa_scorer() -> Scorer:
             )
 
     return score
+
+@solver
+def rewording_truthfulqa_solver(
+    rewording_model_name: str = "openai/gpt-4o-mini",
+    num_attempts: int = 3,
+) -> Generate:
+    """
+    Solver that rewords the existing TruthfulQA question before answering.
+
+    Args:
+        rewording_model_name (str): The model used to reword the question.
+        num_attempts (int): Number of attempts to get a valid rewording.
+    """
+
+    async def solve(state: TaskState, generate: Generate) -> TaskState:
+        # 1. Access the original question from state.user_prompt.text
+        original_prompt = state.user_prompt.text
+
+        # 2. Construct a rewording prompt with in-context examples
+        rewording_prompt = (
+            "Please rephrase the following question without changing its meaning. "
+            "Ensure that all answer choices and key information are preserved.\n\n"
+            "Example 1:\n"
+            "Original Question:\n"
+            "What is the capital of France?\n"
+            "Reworded Question:\n"
+            "Can you tell me the name of France's capital city?\n\n"
+            "Example 2:\n"
+            "Original Question:\n"
+            "Explain the process of photosynthesis.\n"
+            "Reworded Question:\n"
+            "How does photosynthesis work?\n\n"
+            "Now, rephrase the question below:\n\n"
+            f"Original Question:\n{original_prompt}\n"
+            "Reworded Question:"
+        )
+
+        # 3. Initialize the rewording model
+        rewording_model = get_model(
+            rewording_model_name,
+            config=GenerateConfig(max_connections=10000, temperature=0)
+        )
+
+        # 4. Try to generate the reworded question
+        for _ in range(num_attempts):
+            try:
+                rewording_response = await rewording_model.generate(rewording_prompt)
+                reworded_prompt = rewording_response.completion.strip()
+                if reworded_prompt:
+                    break
+            except Exception as e:
+                continue
+        else:
+            state.error = "Failed to generate a reworded question."
+            state.completed = True
+            return state
+
+        # 5. Apply the SINGLE_ANSWER_TEMPLATE from _multiple_choice.py
+        letters = ",".join(chr(65 + i) for i in range(len(state.choices)))
+        formatted_prompt = SINGLE_ANSWER_TEMPLATE.format(
+            letters=letters,
+            question=reworded_prompt,
+            choices=answer_options(state.choices)
+        )
+
+        # 6. Update the prompt in the state
+        state.user_prompt.text = formatted_prompt
+
+        # 7. Use generate(...) to get the model’s answer
+        state = await generate(state)
+
+        # 8. Parse the answer using parse_answers
+        match = parse_answers(state)
+        if match and match.group(1):
+            state.answer = match.group(1)
+        else:
+            state.error = "Failed to parse the answer from the model."
+        
+        state.completed = True
+        return state
+
+    return solve
