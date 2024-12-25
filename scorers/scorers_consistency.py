@@ -30,46 +30,55 @@ def consistency_scorer():
                 logging.warning(f"No check data for {ct_value}")
                 scores[key] = 0.0
                 continue
-                
-            # Get forecasts
-            p_forecast = check_data['P'].get('forecast', 0.0)
-            q_forecast = check_data['Q'].get('forecast', 0.0)
             
-            # Log the forecasts
-            logging.info(f"P forecast: {p_forecast:.3f} - {check_data['P']['title']}")
-            logging.info(f"Q forecast: {q_forecast:.3f} - {check_data['Q']['title']}")
+            # Convert single check to list for uniform processing
+            check_data_list = check_data if isinstance(check_data, list) else [check_data]
+            type_scores = []
             
-            try:
-                # Score based on consistency type using frequentist metrics
-                if ct_value == 'not':
-                    scores[key] = negation_frequentist_metric(p_forecast, q_forecast, beta_min)
-                    logging.info(f"NOT check: negation_frequentist_metric(P={p_forecast:.3f}, Q={q_forecast:.3f})")
+            for check in check_data_list:
+                # Get forecasts
+                p_forecast = check['P'].get('forecast', 0.0)
+                q_forecast = check['Q'].get('forecast', 0.0)
+                
+                # Log the forecasts
+                logging.info(f"P forecast: {p_forecast:.3f} - {check['P']['title']}")
+                logging.info(f"Q forecast: {q_forecast:.3f} - {check['Q']['title']}")
+                
+                try:
+                    # Score based on consistency type using frequentist metrics
+                    if ct_value == 'not':
+                        score = negation_frequentist_metric(p_forecast, q_forecast, beta_min)
+                        logging.info(f"NOT check: negation_frequentist_metric(P={p_forecast:.3f}, Q={q_forecast:.3f})")
+                        
+                    elif ct_value == 'or':
+                        r_forecast = check['R'].get('forecast', 0.0)
+                        logging.info(f"R forecast: {r_forecast:.3f} - {check['R']['title']}")
+                        score = or_frequentist_metric(p_forecast, q_forecast, r_forecast, beta_min)
+                        logging.info(f"OR check: or_frequentist_metric(P={p_forecast:.3f}, Q={q_forecast:.3f}, R={r_forecast:.3f})")
+                        
+                    elif ct_value == 'and':
+                        r_forecast = check['R'].get('forecast', 0.0)
+                        logging.info(f"R forecast: {r_forecast:.3f} - {check['R']['title']}")
+                        score = and_frequentist_metric(p_forecast, q_forecast, r_forecast, beta_min)
+                        logging.info(f"AND check: and_frequentist_metric(P={p_forecast:.3f}, Q={q_forecast:.3f}, R={r_forecast:.3f})")
                     
-                elif ct_value == 'or':
-                    r_forecast = check_data['R'].get('forecast', 0.0)
-                    logging.info(f"R forecast: {r_forecast:.3f} - {check_data['R']['title']}")
-                    scores[key] = or_frequentist_metric(p_forecast, q_forecast, r_forecast, beta_min)
-                    logging.info(f"OR check: or_frequentist_metric(P={p_forecast:.3f}, Q={q_forecast:.3f}, R={r_forecast:.3f})")
+                    elif ct_value == 'consequence':
+                        score = consequence_frequentist_metric(p_forecast, q_forecast, beta_min)
+                        logging.info(f"CONSEQUENCE check: consequence_frequentist_metric(P={p_forecast:.3f}, Q={q_forecast:.3f})")
                     
-                elif ct_value == 'and':
-                    r_forecast = check_data['R'].get('forecast', 0.0)
-                    logging.info(f"R forecast: {r_forecast:.3f} - {check_data['R']['title']}")
-                    scores[key] = and_frequentist_metric(p_forecast, q_forecast, r_forecast, beta_min)
-                    logging.info(f"AND check: and_frequentist_metric(P={p_forecast:.3f}, Q={q_forecast:.3f}, R={r_forecast:.3f})")
-                
-                elif ct_value == 'consequence':
-                    scores[key] = consequence_frequentist_metric(p_forecast, q_forecast, beta_min)
-                    logging.info(f"CONSEQUENCE check: consequence_frequentist_metric(P={p_forecast:.3f}, Q={q_forecast:.3f})")
-                
-                elif ct_value == 'paraphrase':
-                    scores[key] = paraphrase_frequentist_metric(p_forecast, q_forecast, beta_min)
-                    logging.info(f"PARAPHRASE check: paraphrase_frequentist_metric(P={p_forecast:.3f}, Q={q_forecast:.3f})")
-                
-                logging.info(f"Frequentist metric score: {scores[key]:.3f}\n")
-                
-            except Exception as e:
-                logging.error(f"Error calculating {ct_value} metric: {str(e)}")
-                scores[key] = 0.0
+                    elif ct_value == 'paraphrase':
+                        score = paraphrase_frequentist_metric(p_forecast, q_forecast, beta_min)
+                        logging.info(f"PARAPHRASE check: paraphrase_frequentist_metric(P={p_forecast:.3f}, Q={q_forecast:.3f})")
+                    
+                    type_scores.append(score)
+                    logging.info(f"Frequentist metric score: {score:.3f}\n")
+                    
+                except Exception as e:
+                    logging.error(f"Error calculating {ct_value} metric: {str(e)}")
+                    type_scores.append(0.0)
+            
+            # Average the scores for this type
+            scores[key] = sum(type_scores) / len(type_scores) if type_scores else 0.0
 
         return Score(
             value=scores,
