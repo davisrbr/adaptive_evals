@@ -47,7 +47,7 @@ def initial_consistency() -> Task:
                  x.metadata["question_type"].lower() == "binary"
     )
 
-    dataset = dataset[:10]
+    dataset = dataset[:25]
     
     return Task(
         dataset=dataset,
@@ -88,7 +88,7 @@ def adaptive_consistency(
 #             # max_connections=1000,
 #             # log_dir=log_dir,
 #             model="openai/gpt-4o",
-#             temperature=0.5,
+#             temperature=0,
 #             start_log=True
 #         )[0]
 
@@ -105,12 +105,12 @@ if __name__ == "__main__":
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s'
     )
-    initial_log_path = "logs/2024-12-25T17-27-59+05-30_initial-consistency_GKYRSR7PwuDkKWXKBHdu7e.eval"
+    initial_log_path = "logs/2024-12-25T22-58-22+05-30_initial-consistency_deh8XnNgMSTzUbZdwwRFbv.eval"
     task = adaptive_consistency(initial_log_path=initial_log_path)
     result = eval(
         task,
         model="openai/gpt-4o",
-        temperature=0.5,
+        temperature=0,
         start_log=True
     )[0]
     
