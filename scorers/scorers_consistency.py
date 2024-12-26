@@ -12,8 +12,8 @@ from utils_consistency.metrics import (
 
 @scorer(
     metrics={
-        f"{ct.value}_score": [mean(), stderr()]
-        for ct in ConsistencyType
+        **{f"{ct.value}_score": [mean(), stderr()] for ct in ConsistencyType},
+        "overall_score": [mean(), stderr()]  # Add overall score metric
     }
 )
 def consistency_scorer():
@@ -21,6 +21,8 @@ def consistency_scorer():
         checks = state.metadata.get('consistency_checks', {})
         scores = {}
         beta_min = 1e-3  # regularization term
+
+        all_type_scores = []  # Store all scores to calculate overall mean
         
         for ct_value, check_data in checks.items():
             key = f"{ct_value}_score"
@@ -71,6 +73,7 @@ def consistency_scorer():
                         logging.info(f"PARAPHRASE check: paraphrase_frequentist_metric(P={p_forecast:.3f}, Q={q_forecast:.3f})")
                     
                     type_scores.append(score)
+                    all_type_scores.append(score)  # Add to overall scores list
                     logging.info(f"Frequentist metric score: {score:.3f}\n")
                     
                 except Exception as e:
@@ -79,6 +82,10 @@ def consistency_scorer():
             
             # Average the scores for this type
             scores[key] = sum(type_scores) / len(type_scores) if type_scores else 0.0
+
+        # Calculate overall score as mean of all individual scores
+        scores["overall_score"] = sum(all_type_scores) / len(all_type_scores) if all_type_scores else 0.0
+        logging.info(f"\n=== Overall Score: {scores['overall_score']:.3f} ===")
 
         return Score(
             value=scores,
