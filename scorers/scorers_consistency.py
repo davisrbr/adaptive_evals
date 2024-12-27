@@ -9,6 +9,7 @@ from utils_consistency.metrics import (
     consequence_frequentist_metric, 
     paraphrase_frequentist_metric
 )
+import numpy as np
 
 @scorer(
     metrics={
@@ -81,11 +82,23 @@ def consistency_scorer():
                     type_scores.append(0.0)
             
             # Average the scores for this type
-            scores[key] = sum(type_scores) / len(type_scores) if type_scores else 0.0
+            if type_scores:
+                mean_score = sum(type_scores) / len(type_scores)
+                stderr_score = np.std(type_scores, ddof=1) / np.sqrt(len(type_scores)) if len(type_scores) > 1 else 0
+                scores[key] = mean_score
+                logging.info(f"{key}: mean={mean_score:.3f}, stderr={stderr_score:.3f}")
+            else:
+                scores[key] = 0.0
 
         # Calculate overall score as mean of all individual scores
-        scores["overall_score"] = sum(all_type_scores) / len(all_type_scores) if all_type_scores else 0.0
-        logging.info(f"\n=== Overall Score: {scores['overall_score']:.3f} ===")
+        if all_type_scores:
+            overall_mean = sum(all_type_scores) / len(all_type_scores)
+            overall_stderr = np.std(all_type_scores, ddof=1) / np.sqrt(len(all_type_scores)) if len(all_type_scores) > 1 else 0
+            scores["overall_score"] = overall_mean
+            logging.info(f"\n=== Overall Score: mean={overall_mean:.3f}, stderr={overall_stderr:.3f} ===")
+        else:
+            scores["overall_score"] = 0.0
+            logging.info("\n=== Overall Score: mean=0.000, stderr=0.000 ===")
 
         return Score(
             value=scores,
