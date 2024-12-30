@@ -387,7 +387,7 @@ def adaptive_legal_judge_scorer() -> Scorer:
             if judge_choice == "A":
                 value = CORRECT
             elif judge_choice == "B":
-                value = CORRECT  # You can adjust this if you want to differentiate between A and B
+                value = CORRECT
             else:
                 value = INCORRECT
 
@@ -499,6 +499,123 @@ def rewording_legal_solver(
         else:
             state.error = "Failed to parse answer from model response"
         
+        return state
+
+    return solve
+
+@solver
+def rewording_legal_judge_solver(
+    judge_model_name: Optional[str | list[str]] = None,
+    num_attempts: int = 3,
+) -> Generate:
+    """
+    Solver that judges whether a reworded legal question preserves the 
+    original question's meaning, accuracy, and important legal details.
+
+    Args:
+        judge_model_name (str | list[str]): Name(s) of the model used to judge the reworded question.
+        num_attempts (int): Number of attempts to generate a valid judgment.
+    """
+
+    async def solve(state: TaskState, generate: Generate) -> TaskState:
+        # If no judge model name is provided, skip judgment
+        if not judge_model_name:
+            logger.debug("No judge model name provided for rewording_legal_judge_solver, skipping judgment.")
+            state.completed = True
+            return state
+
+        # Retrieve the original and reworded prompts from the state. 
+        # These need to have been stored previously, e.g., in rewording_legal_solver or elsewhere.
+        original_prompt = state.store.get("original_legal_prompt")
+        reworded_prompt = state.store.get("reworded_legal_prompt")
+
+        if not original_prompt or not reworded_prompt:
+            state.error = (
+                "Missing original_legal_prompt or reworded_legal_prompt in state.store. "
+                "Ensure the rewording solver stores these in the state before calling the judge."
+            )
+            state.completed = True
+            return state
+
+        # Initialize the judge model
+        judge_model = get_model(judge_model_name, config=GenerateConfig(max_connections=10000))
+
+        # Prepare the prompt to compare original vs reworded question
+        # We use a classification approach, similar to adaptive_legal_judge_solver
+        judge_prompt = f"""\
+You are comparing an original legal question to a reworded version of that question. 
+The goal is to determine whether the reworded question accurately preserves the original legal 
+meaning, context, and important details, including answer choices or disclaimers, 
+if any apply. Carefully check:
+
+1. Whether the reworded question omits or alters critical legal terminology.
+2. Whether any details that might affect the answer (such as contract clauses, timeline, 
+   or references to laws/statutes) are changed inappropriately.
+3. Whether the reworded question introduces factual or logical inconsistencies that 
+   were not in the original question.
+
+Data to compare:
+==========
+ORIGINAL QUESTION:
+{original_prompt}
+
+REWORDED QUESTION:
+{reworded_prompt}
+==========
+
+Select one of the following options by calling 'select_choice' with your reasoning 
+in a step-by-step manner. Do not give the final choice outside of 'select_choice':
+
+(A) The reworded question is correct, preserves the legal meaning, 
+    and has no important omissions or factual errors.
+(B) The reworded question is mostly correct but has some minor omissions, 
+    slightly awkward phrasing, or small errors. Overall, it remains a valid 
+    rewording that maintains most of the original meaning.
+(C) The reworded question significantly changes the meaning or omits 
+    key legal details, introducing important factual or logical errors.
+
+Your final answer should include your reasoning about the differences, then conclude with:
+  `select_choice(choice="A" or "B" or "C")`
+  
+Example:
+[Reasoning]:
+Step 1: Compare ...
+Step 2: ...
+Conclusion: ...
+`select_choice(choice="B")`
+"""
+
+        def parse_choice(completion: str) -> str:
+            # Looks for pattern like: `select_choice(choice="A")`
+            match = re.search(r'`select_choice\(choice=["\']([A-C])["\']\)`', completion)
+            if match:
+                return match.group(1)
+            else:
+                return None
+
+        # Attempt to get a valid classification from the judge model
+        for _ in range(num_attempts):
+            try:
+                judge_response = await judge_model.generate(judge_prompt)
+                judge_output = judge_response.completion.strip()
+                choice = parse_choice(judge_output)
+                if choice:
+                    # Store the classification and reasoning in state metadata
+                    state.store.set("reworded_judge_choice", choice)
+                    state.store.set("reworded_judge_reasoning", judge_output)
+
+                    state.completed = True
+                    return state
+                else:
+                    logger.debug("Failed to parse judge choice from model output, retrying...")
+                    continue
+            except Exception as e:
+                logger.debug(f"Error during reworded question judgment: {e}")
+                continue
+
+        # If no valid classification was produced after all attempts
+        state.error = "Failed to get a valid judgment for the reworded question."
+        state.completed = True
         return state
 
     return solve
