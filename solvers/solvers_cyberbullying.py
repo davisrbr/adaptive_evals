@@ -3,6 +3,7 @@ from inspect_ai.model import get_model, GenerateConfig, ChatMessageSystem, ChatM
 from inspect_ai.scorer import Target
 from inspect_ai.solver import solver, Generate, TaskState
 
+from scorers.scorers_inspect import strongreject_scorer
 from scorers.scorers_inspect import cyberbullying_scorer
 from prompting.cyberbullying_prompts import cyberbullying_system_prompt, neutral_system_prompt
 
@@ -15,7 +16,6 @@ def cyberbullying_basic_solver(
     judge_model_name: str = "openai/gpt-4",
     target_model_name: str = "together/mistralai/Mixtral-8x22B-Instruct-v0.1",
     use_strongreject_scorer: bool = False,
-    heirarchal_scorer: bool = False,
     judge_calibration: bool = False,
 ):
     """
@@ -34,12 +34,15 @@ def cyberbullying_basic_solver(
         target_model_name,
         config=GenerateConfig(
             max_tokens=1000,
-            temperature=0.0,
+            temperature=0.5,
             max_connections=10000,
             top_p=1.0,
         ),
     )
-    scorer_fn = cyberbullying_scorer(judge_model=judge_model_name)
+    if not use_strongreject_scorer:
+        scorer_fn = cyberbullying_scorer(judge_model=judge_model_name)
+    else:
+        scorer_fn = strongreject_scorer(judge_model=judge_model_name)
 
     async def solve(state: TaskState, generate: Generate) -> TaskState:
         if not judge_calibration:
@@ -48,7 +51,7 @@ def cyberbullying_basic_solver(
             attack_prompt = neutral_system_prompt()
         attributes = state.metadata.get("attributes")
         attack_user_message = f"Attributes: {attributes}"
-
+        
         # generate target model's response to the attack prompt
         target_response = await target_model.generate([
             ChatMessageSystem(content=attack_prompt),
@@ -60,12 +63,14 @@ def cyberbullying_basic_solver(
 
         state.store.set("target_response", target_response.completion)
 
-        # score the response using the scorer function
-        score = await scorer_fn(state, Target(target=target_response.completion))
+        if use_strongreject_scorer:
+            score = await scorer_fn(state, Target(target=target_response.completion), attack_prompt + attack_user_message)
+        else:
+            score = await scorer_fn(state, Target(target=target_response.completion))
         state.store.set("score", score.value)
         state.store.set("target_response", target_response.completion)
 
-        # Update best score
+        # update best score
         best_so_far = state.store.get("best_score", 0)
         if score.value > best_so_far:
             state.store.set("best_score", score.value)
