@@ -1,8 +1,11 @@
 from typing import Dict, Any
 from inspect_ai.dataset import Sample, json_dataset
+from inspect_ai.model import ChatMessageSystem, ChatMessageUser
+
+from prompting.cyberbullying_prompts import cyberbullying_system_prompt
 
 
-def process_sample(sample: Dict[str, Any]) -> Sample:
+def process_sample_cyberbullying(sample: Dict[str, Any]) -> Sample:
     """
     Processes a raw sample into an Inspect Sample.
 
@@ -13,10 +16,16 @@ def process_sample(sample: Dict[str, Any]) -> Sample:
         Sample: Processed Inspect Sample.
     """
     attributes = sample  
+    attack_user_message = f"Attributes: {attributes}"
+    attack_prompt = cyberbullying_system_prompt()
+    input_text = [
+        ChatMessageSystem(content=attack_prompt),
+        ChatMessageUser(content=attack_user_message)
+    ]
 
     return Sample(
         id=sample['name'],
-        input=str(attributes),
+        input=input_text,
         metadata={
             "attributes": attributes,
             "age": attributes.get('age', ''),
@@ -33,17 +42,10 @@ def process_sample(sample: Dict[str, Any]) -> Sample:
         }
     )
 
-cyberbullying_personas = json_dataset(
-    json_file="/Users/davisbrown/adaptive_evals/data/cyberbullying_personas.json",
-    sample_fields=process_sample,
-    shuffle=True,
-    seed=42,
-    limit=25,
-)
 if __name__ == "__main__":
     cyberbullying_personas = json_dataset(
         json_file="data/cyberbullying_personas.json",
-        sample_fields=process_sample,
+        sample_fields=process_sample_cyberbullying,
         shuffle=True,
         seed=42,
         limit=2,

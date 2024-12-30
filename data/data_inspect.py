@@ -1,5 +1,6 @@
 from typing import Dict, Any
 from inspect_ai.dataset import Sample, hf_dataset
+from inspect_ai.dataset import json_dataset
 import numpy as np
 
 from prompting.system_prompts import get_attacker_system_prompt
