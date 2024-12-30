@@ -7,13 +7,12 @@ from inspect_ai.log import read_eval_log
 from inspect_ai.scorer import choice
 from inspect_ai.solver import multiple_choice
 from typing import Any, Literal, Optional
-from solvers.solver_adaptive_legal import adaptive_legal_scorer, adaptive_legal_solver, adaptive_legal_judge_solver, adaptive_legal_judge_scorer
+from solvers.solver_adaptive_legal import adaptive_legal_scorer, adaptive_legal_solver, adaptive_legal_judge_solver, adaptive_legal_judge_scorer, rewording_legal_solver, rewording_legal_judge_solver
 from datasets import load_dataset
 import sys
 sys.path.append("..")
 from legalbench.utils import generate_prompts
 from legalbench.tasks import TASKS
-from solvers.solver_adaptive_legal import rewording_legal_solver
 
 @task
 def legalbench_initial(task_name: str = "maud_accuracy_of_target_general_rw_bringdown_timing_answer") -> Task:
@@ -347,6 +346,90 @@ def legalbench_reworded_aggregated(
         solver=[
             rewording_legal_solver(model_name=model_name, rewording_model_name=rewording_model_name, cot=cot),
             multiple_choice(multiple_correct=False, shuffle=True)
+        ],
+        scorer=choice(),
+    )
+
+@task
+def legalbench_reworded_judged(
+    task_name: str = "maud_accuracy_of_target_general_rw_bringdown_timing_answer",
+    model_name: str = "openai/gpt-4o-mini",
+    rewording_model_name: Optional[str] = "openai/gpt-4o-mini",
+    judge_model_name: Optional[str] = None,
+    cot: bool = False,
+    debug: bool = False,
+) -> Task:
+    """
+    Evaluation task for the LegalBench dataset with reworded questions and a 
+    judge solver to verify that the reworded questions preserve original legal content.
+
+    Args:
+        task_name: The name of the LegalBench task to evaluate.
+        model_name: The name of the model used to answer the question.
+        rewording_model_name: The name of the model used to reword the question.
+        judge_model_name: The name of the model used to judge the correctness of rewording.
+        cot: Whether to use chain-of-thought prompting for the question solver.
+        debug: If True, use only a small subset for debugging.
+    """
+
+    # Load the prompt template for the specified task
+    prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt.txt"
+    with open(prompt_template_path) as in_file:
+        prompt_template = in_file.read()
+
+    # A function to convert dataset records into Sample objects
+    def record_to_sample(record: dict[str, Any]) -> Sample:
+        df = pd.DataFrame([record])
+        prompts = generate_prompts(prompt_template=prompt_template, data_df=df)
+        prompt = prompts[0]
+
+        # Extract multiple-choice options from the prompt
+        option_pattern = r"Option ([A-Z]): (.*)"
+        options_matches = re.findall(option_pattern, prompt)
+        choices = [match[1] for match in options_matches]
+
+        target = record["answer"].strip()  # The correct letter
+
+        return Sample(
+            input=prompt,
+            choices=choices,
+            target=target,
+            metadata={"task_name": task_name},
+        )
+
+    # Load the dataset; choose split="test" vs "validation" as appropriate
+    dataset = hf_dataset(
+        path="nguha/legalbench",
+        name=task_name,
+        sample_fields=record_to_sample,
+        split="test",
+        auto_id=True,
+        shuffle=True,
+    )
+
+    # If debug mode is on, reduce the dataset size
+    if debug:
+        dataset = dataset[:5]
+
+    return Task(
+        dataset=dataset,
+        solver=[
+            # 1) Reword the question
+            rewording_legal_solver(
+                model_name=model_name,
+                rewording_model_name=rewording_model_name,
+                cot=cot,
+            ),
+            # 2) Answer the reworded question
+            multiple_choice(
+                multiple_correct=False,
+                shuffle=True,
+            ),
+            # 3) Judge whether the reworded question preserves the original meaning
+            rewording_legal_judge_solver(
+                judge_model_name=judge_model_name,
+                num_attempts=3,
+            ),
         ],
         scorer=choice(),
     )
