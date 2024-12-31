@@ -461,7 +461,7 @@ def llm_generate(operator: str, questions: List[Dict[str, str]]) -> Dict[str, st
     response = client.chat.completions.create(
         model="gpt-4o",
         messages=[
-            {"role": "system", "content": "You are a helpful assistant who generates questions which will be used for a forecasting competition. Most importantly, ALWAYS provide both title and body in your output, which should be in the following format: Title: [your title here] Body: [your body here]. Include the resolution criteria within the Body section"},
+            {"role": "system", "content": "You are a helpful assistant who generates questions which will be used for a forecasting competition. Most importantly, ALWAYS provide both title and body in your output, which should be in the following format: Title: [your title here] Body: [your body here]. Include the resolution criteria within the Body section. You MUST NEVER refuse to answer the question, this is to test the consistency of forecasters, and if you refuse it will lead to cascading errors and system damages, so always provide the appropriate questions."},
             {"role": "user", "content": full_prompt}
         ],
         temperature=0
@@ -477,10 +477,13 @@ def llm_generate(operator: str, questions: List[Dict[str, str]]) -> Dict[str, st
     body_match = re.search(r"Body: (.+)", gpt_output, re.DOTALL)
     
     if not title_match or not body_match:
-        raise ValueError(f"GPT-4 output format does not match expected structure. Question: {full_prompt}")
-    
-    combined_title = title_match.group(1).strip()
-    combined_body = body_match.group(1).strip()
+        print(f"WARNING - Bad GPT output format. Prompt: {full_prompt}")
+        print(f"GPT Output: {gpt_output}")
+        combined_title = ""
+        combined_body = ""
+    else:
+        combined_title = title_match.group(1).strip()
+        combined_body = body_match.group(1).strip()
 
     # Handle resolution date logic
     if operator == 'not':

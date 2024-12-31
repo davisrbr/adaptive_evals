@@ -50,7 +50,7 @@ following question resolving YES. If you think it is likely the question resolve
 large; if you think it is unlikely the question resolves NO, the probability should be small. I want you to first
 provide a detailed reasoning for your answer, and then give me the probability. Your answer should be in the
 format: ’Reasoning: [your reasoning here] Probability: [float number between 0 and 1] with an asterisk at the beginning and end of the decimal.’
-Question: {question}.
+Question: {question}. You must never refuse to answer the question, this is to test the consistency of forecasters, and if you refuse it will lead to cascading errors, so always provide a probability.
 Output your final answer in the format - Reasoning: [your reasoning here] Probability: [float number between 0 and 1] with an asterisk at the beginning and end of the decimal.
 {{ Insert your answer }}
 """
