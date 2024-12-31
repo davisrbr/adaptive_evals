@@ -1,5 +1,5 @@
 from inspect_ai.solver import TaskState
-from inspect_ai.scorer import scorer, Score, Target, mean, stderr
+from inspect_ai.scorer import scorer, Score, Target, mean, stderr, Scorer, accuracy, CORRECT, INCORRECT
 from solvers.solvers_consistency import ConsistencyType
 import logging
 from utils_consistency.metrics import (
@@ -21,7 +21,7 @@ import numpy as np
         "overall_score": [mean(), stderr()]  # Add overall score metric
     }
 )
-def consistency_scorer():
+def consistency_scorer() -> Scorer:
     async def score(state: TaskState, target: Target) -> Score:
         checks = state.metadata.get('consistency_checks', {})
         scores = {}
@@ -139,4 +139,93 @@ def consistency_scorer():
             value=scores,
             answer=str(checks)
         )
+    return score
+
+@scorer(metrics=[accuracy()])
+def adaptive_consistency_judge_scorer() -> Scorer:
+    """
+    Scorer that interprets the judgment from the judge model.
+    """
+
+    async def score(state: TaskState, target: Target) -> Score:
+        try:
+            generated_sample = state.store.get('generated_sample')
+            judge_choice = generated_sample.metadata.get('judge_choice', None)
+            judge_reasoning = generated_sample.metadata.get('judge_reasoning', '')
+
+            if not judge_choice:
+                state.error = "No judge_choice found in generated_sample metadata."
+                return Score(
+                    value=INCORRECT,
+                    answer="[NO JUDGE CHOICE]",
+                    target=target,
+                    explanation="No judge_choice found."
+                )
+
+            if judge_choice == "A":
+                value = CORRECT
+            elif judge_choice == "B":
+                value = CORRECT
+            else:
+                value = INCORRECT
+
+            return Score(
+                value=value,
+                answer=f"Judge Choice: {judge_choice}",
+                target=target,
+                explanation=judge_reasoning,
+            )
+        except Exception as e:
+            state.error = str(e)
+            return Score(
+                value=INCORRECT,
+                answer="[ERROR]",
+                target=target,
+                explanation=str(e),
+            )
+
+    return score
+
+@scorer(metrics=[mean(), stderr()])
+def temp_adaptive_consistency_judge_scorer() -> Scorer:
+    """
+    Scorer that processes the judgments from the adaptive consistency judge solver.
+    Returns the accuracy of the judged samples.
+    """
+    
+    async def score(state: TaskState, target: Target) -> Score:
+        try:
+            # Get accuracy from state metadata
+            accuracy = state.metadata.get('accuracy', 0.0)
+            judgments = state.metadata.get('judgments', [])
+            
+            # Calculate accuracy string
+            judgment_counts = {
+                'A': sum(1 for j in judgments if j['judgment'] == 'A'),
+                'B': sum(1 for j in judgments if j['judgment'] == 'B'),
+                'C': sum(1 for j in judgments if j['judgment'] == 'C')
+            }
+            
+            judgment_summary = (
+                f"Total samples: {len(judgments)}\n"
+                f"Excellent (A): {judgment_counts['A']}\n"
+                f"Acceptable (B): {judgment_counts['B']}\n"
+                f"Unsuitable (C): {judgment_counts['C']}\n"
+                f"Accuracy: {accuracy:.3f}"
+            )
+
+            return Score(
+                value=accuracy,
+                answer=judgment_summary,
+                explanation=f"Processed {len(judgments)} judgments. Accuracy is ratio of acceptable (A/B) to total judgments."
+            )
+            
+        except Exception as e:
+            state.error = str(e)
+            return Score(
+                value=0.0,
+                answer="[ERROR]",
+                explanation=str(e)
+            )
+
     return score

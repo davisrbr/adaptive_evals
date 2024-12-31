@@ -860,3 +860,381 @@ def adaptive_consistency_solver(
         
     return solve
 
+@solver
+def adaptive_consistency_judge_solver(
+    initial_log_path: str,
+    judge_model_name: Optional[str | list[str]] = None,
+    num_attempts: int = 5,
+) -> Generate:
+    """
+    Solver that judges the quality of generated question pairs from the adaptive consistency solver.
+
+    Args:
+        initial_log_path (str): Path to the initial evaluation log containing ground truth question pairs.
+        judge_model_name (str): Name of the model used to judge the generated questions.
+        num_attempts (int): Number of attempts to generate a valid judgment.
+    """
+
+    async def solve(state: TaskState, generate: Generate) -> TaskState:
+        if not judge_model_name:
+            logging.info("No judge model name provided, skipping judgment.")
+            state.completed = True
+            return state
+
+        try:
+            # Load the initial evaluation log to get ground truth questions
+            initial_eval_log = read_eval_log(initial_log_path)
+            ground_truth_samples = initial_eval_log.samples
+
+            # Extract the ground truth question pairs
+            ground_truth_pairs = []
+            for sample in ground_truth_samples:
+                logging.info(f'Ground Truth sample: {sample}')
+                if 'question_p' in sample.metadata and 'question_q' in sample.metadata:
+                    p = sample.metadata['question_p']
+                    q = sample.metadata['question_q']
+                    pair_text = f"Question P: {p['title']}\n{p['body']}\n\nQuestion Q: {q['title']}\n{q['body']}"
+                    ground_truth_pairs.append(pair_text)
+
+            random.seed(42)
+            random.shuffle(ground_truth_pairs)
+
+            # Get the generated sample from the state.store
+            generated_sample = state.store.get('generated_sample', None)
+            if not generated_sample:
+                state.error = "No generated sample found in state."
+                state.completed = True
+                return state
+
+            generated_pair = generated_sample.input
+
+            # Initialize the judge model
+            judge_model = get_model(judge_model_name)
+
+            # Prepare the judging prompt
+            ground_truth_text = "\n\n".join([f"Pair {i+1}:\n{q}" for i, q in enumerate(ground_truth_pairs[:2])])
+
+            judge_prompt = f"""\
+You are evaluating pairs of forecasting questions to determine if they are suitable for logical combination operations and consistency testing. Here is the data:
+[BEGIN DATA]
+************
+[Ground Truth Question Pairs]:
+{ground_truth_text}
+************
+[Generated Question Pair]:
+{generated_pair}
+************
+[END DATA]
+
+Evaluate whether the generated question pair is suitable for logical combination operations (AND, OR, Negation/NOT, etc.) and consistency testing. Consider:
+
+1. Resolution Criteria:
+- Do both questions have clear, unambiguous resolution criteria?
+- Are the resolution timeframes compatible and well-specified?
+- Can outcomes be definitively determined?
+
+2. Logical Relationship:
+- Is there a meaningful logical or causal relationship between the questions?
+- Would combining these questions yield insights about forecaster consistency?
+- Do the questions share relevant context or domain knowledge?
+
+3. Question Quality:
+- Are the questions not vague or ambigious (for example asking about Country X without specifying the country name, or asking whether the net worth of someone will increase 'a lot' without specifying concrete numbers would be ambigious)?
+
+Answer by selecting one of the following options:
+
+(A) EXCELLENT PAIR - The questions are highly suitable for consistency testing:
+- Both questions have precise resolution criteria
+- Clear and meaningful logical relationship exists
+- Questions are genuinely forecastable
+- Logical combinations would yield valuable insights
+- Follows similar style and quality as ground truth pairs
+
+(B) ACCEPTABLE PAIR - The questions are usable but have minor issues:
+- Resolution criteria may need minor clarification
+- Logical relationship exists but could be stronger
+- Questions are forecastable but may have some ambiguity
+- Logical combinations would be valid but not optimal
+- Similar to ground truth pairs but with room for improvement
+
+(C) UNSUITABLE PAIR - The questions have significant issues:
+- Unclear resolution criteria
+- No meaningful relationship
+- Logical combinations would not yield useful insights
+- Significantly lower quality than ground truth pairs
+
+Answer by calling `select_choice` with your reasoning in a step-by-step manner. Avoid stating the conclusion upfront.
+
+Example 1:
+[Reasoning]:
+1. First, I examine the resolution criteria:
+   - Question P has clear metrics and deadline
+   - Question Q has precise thresholds
+
+2. Next, I evaluate the logical relationship:
+   - Questions are in related domains (technology adoption) or one question might have some implication on another
+   - Causal relationship might exist (success of P likely affects Q) or some kind of correlation
+
+3. Finally, I check forecasting quality:
+   - Both questions are genuinely uncertain
+   - Timeframes allow for meaningful forecasting
+   - Logical combinations would reveal useful patterns
+
+`select_choice(choice="A")`
+
+Example 2:
+[Reasoning]:
+1. First, I examine the resolution criteria:
+   - Question P lacks specific thresholds
+   - Question Q resolution is ambiguous
+
+2. Next, I evaluate the logical relationship:
+   - Questions are from completely unrelated domains
+   - No meaningful connection for consistency testing
+
+3. Finally, I check forecasting quality:
+   - Q is effectively deterministic and P is impossible to ever resolve 
+   - Logical combinations would be nonsensical
+
+`select_choice(choice="C")`"""
+
+            # Function to parse the choice from the model output
+            def parse_choice(completion: str) -> str:
+                match = re.search(r'`select_choice\(choice=["\']([A-C])["\']\)`', completion)
+                if match:
+                    return match.group(1)
+                else:
+                    return None
+
+            # Try generating the judgment
+            for _ in range(num_attempts):
+                try:
+                    judge_response = await judge_model.generate(judge_prompt)
+                    judge_output = judge_response.completion.strip()
+                    choice = parse_choice(judge_output)
+                    if choice:
+                        # Store the judgment in the sample's metadata
+                        generated_sample.metadata['judge_choice'] = choice
+                        generated_sample.metadata['judge_reasoning'] = judge_output
+                        # Update the state
+                        state.store.set('generated_sample', generated_sample)
+                        state.completed = True
+                        return state
+                    else:
+                        continue  # Retry if parsing failed
+                except Exception as e:
+                    logging.info(f"Error generating judgment: {e}")
+                    continue  # Retry on exception
+
+            # If all attempts failed
+            state.error = "Failed to get a valid judgment after maximum retry attempts."
+            state.completed = True
+            return state
+
+        except Exception as e:
+            state.error = f"Error in adaptive consistency judge solver: {str(e)}"
+            state.completed = True
+            logging.error(f"Error in solver: {str(e)}", exc_info=True)
+            return state
+
+    return solve
+
+#TO:DO - fix the above judge solver and remove the temp version
+@solver
+def temp_adaptive_consistency_judge_solver(
+    initial_log_path: str,
+    adaptive_log_path: str,
+    judge_model_name: Optional[str | list[str]] = None,
+    num_attempts: int = 5,
+) -> Generate:
+    """
+    Solver that judges the quality of all generated question pairs from the log.
+    """
+
+    async def solve(state: TaskState, generate: Generate) -> TaskState:
+        if not judge_model_name:
+            logging.info("No judge model name provided, skipping judgment.")
+            state.completed = True
+            return state
+
+        try:
+            # Load both evaluation logs
+            eval_log = read_eval_log(adaptive_log_path)  # Current eval log to judge
+            initial_eval_log = read_eval_log(initial_log_path)  # For ground truth
+            
+            # Extract ground truth question pairs from initial log
+            ground_truth_pairs = []
+            for sample in initial_eval_log.samples:
+                if 'question_p' in sample.metadata and 'question_q' in sample.metadata:
+                    p = sample.metadata['question_p']
+                    q = sample.metadata['question_q']
+                    pair_text = f"Question P: {p['title']}\n{p['body']}\n\nQuestion Q: {q['title']}\n{q['body']}"
+                    ground_truth_pairs.append(pair_text)
+
+            random.seed(42)
+            random.shuffle(ground_truth_pairs)
+
+            # Initialize judge model
+            judge_model = get_model(judge_model_name)
+
+            # Prepare ground truth text once
+            ground_truth_text = "\n\n".join([f"Pair {i+1}:\n{q}" for i, q in enumerate(ground_truth_pairs[:2])])
+
+            # Initialize accuracy tracking
+            judgments = []
+
+            # Process each sample in the eval log
+            for sample in eval_log.samples:
+                consistency_checks = sample.metadata.get('consistency_checks', {})
+                
+                for check_type, checks in consistency_checks.items():
+                    if not isinstance(checks, list):
+                        continue
+                        
+                    for check in checks:
+                        # Format the question pair
+                        generated_pair = (
+                            f"Question P:\n{check['P']['title']}\n{check['P'].get('body', '')}\n\n"
+                            f"Question Q:\n{check['Q']['title']}\n{check['Q'].get('body', '')}"
+                        )
+
+                        # Prepare the full judge prompt with ground truth context
+                        judge_prompt = f"""\
+You are evaluating pairs of forecasting questions to determine if they are suitable for logical combination operations and consistency testing. Here is the data:
+[BEGIN DATA]
+************
+[Ground Truth Question Pairs]:
+{ground_truth_text}
+************
+[Generated Question Pair]:
+{generated_pair}
+************
+[END DATA]
+
+Evaluate whether the generated question pair is suitable for logical combination operations (AND, OR, Negation/NOT, etc.) and consistency testing. Consider:
+
+1. Resolution Criteria:
+- Do both questions have clear, unambiguous resolution criteria?
+- Are the resolution timeframes compatible and well-specified?
+- Can outcomes be definitively determined?
+
+2. Logical Relationship:
+- Is there a meaningful logical or causal relationship between the questions?
+- Would combining these questions yield insights about forecaster consistency?
+- Do the questions share relevant context or domain knowledge?
+
+3. Question Quality:
+- Are the questions not vague or ambigious (for example asking about Country X without specifying the country name, or asking whether the net worth of someone will increase 'a lot' without specifying concrete numbers would be ambigious)?
+
+Answer by selecting one of the following options:
+
+(A) EXCELLENT PAIR - The questions are highly suitable for consistency testing:
+- Both questions have precise resolution criteria
+- Clear and meaningful logical relationship exists
+- Questions are genuinely forecastable
+- Logical combinations would yield valuable insights
+- Follows similar style and quality as ground truth pairs
+
+(B) ACCEPTABLE PAIR - The questions are usable but have minor issues:
+- Resolution criteria may need minor clarification
+- Logical relationship exists but could be stronger
+- Questions are forecastable but may have some ambiguity
+- Logical combinations would be valid but not optimal
+- Similar to ground truth pairs but with room for improvement
+
+(C) UNSUITABLE PAIR - The questions have significant issues:
+- Unclear resolution criteria
+- No meaningful relationship
+- Logical combinations would not yield useful insights
+- Significantly lower quality than ground truth pairs
+
+Answer by calling `select_choice` with your reasoning in a step-by-step manner. Avoid stating the conclusion upfront.
+
+Example 1:
+[Reasoning]:
+1. First, I examine the resolution criteria:
+   - Question P has clear metrics and deadline
+   - Question Q has precise thresholds
+
+2. Next, I evaluate the logical relationship:
+   - Questions are in related domains (technology adoption) or one question might have some implication on another
+   - Causal relationship might exist (success of P likely affects Q) or some kind of correlation
+
+3. Finally, I check forecasting quality:
+   - Both questions are genuinely uncertain
+   - Timeframes allow for meaningful forecasting
+   - Logical combinations would reveal useful patterns
+
+`select_choice(choice="A")`
+
+Example 2:
+[Reasoning]:
+1. First, I examine the resolution criteria:
+   - Question P lacks specific thresholds
+   - Question Q resolution is ambiguous
+
+2. Next, I evaluate the logical relationship:
+   - Questions are from completely unrelated domains
+   - No meaningful connection for consistency testing
+
+3. Finally, I check forecasting quality:
+   - Q is effectively deterministic and P is impossible to ever resolve 
+   - Logical combinations would be nonsensical
+
+`select_choice(choice="C")`"""
+
+                        # Function to parse the choice from the model output
+                        def parse_choice(completion: str) -> str:
+                            match = re.search(r'`select_choice\(choice=["\']([A-C])["\']\)`', completion)
+                            if match:
+                                return match.group(1)
+                            else:
+                                return None
+
+                        # Try generating the judgment
+                        judgment = None
+                        judge_reasoning = None
+                        for _ in range(num_attempts):
+                            try:
+                                judge_response = await judge_model.generate(judge_prompt)
+                                judge_output = judge_response.completion.strip()
+                                choice = parse_choice(judge_output)
+                                if choice:
+                                    judgment = choice
+                                    judge_reasoning = judge_output
+                                    break
+                            except Exception as e:
+                                logging.info(f"Error generating judgment: {e}")
+                                continue
+
+                        if judgment:
+                            # Store judgment details
+                            judgment_details = {
+                                'check_type': check_type,
+                                'question_pair': generated_pair,
+                                'judgment': judgment,
+                                'reasoning': judge_reasoning
+                            }
+                            judgments.append(judgment_details)
+                            
+                            # Store judgment in the check's metadata
+                            check['judge_choice'] = judgment
+                            check['judge_reasoning'] = judge_reasoning
+
+            # Store final results in state metadata
+            state.metadata['judgments'] = judgments
+            total_samples = len(judgments)
+            correct_samples = sum(1 for j in judgments if j['judgment'] in ['A', 'B'])
+            state.metadata['accuracy'] = correct_samples / total_samples if total_samples > 0 else 0.0
+            
+            state.completed = True
+            return state
+
+        except Exception as e:
+            state.error = f"Error in adaptive consistency judge solver: {str(e)}"
+            state.completed = True
+            logging.error(f"Error in solver: {str(e)}", exc_info=True)
+            return state
+
+    return solve
+
