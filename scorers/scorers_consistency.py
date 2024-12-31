@@ -7,7 +7,11 @@ from utils_consistency.metrics import (
     or_frequentist_metric,
     and_frequentist_metric, 
     consequence_frequentist_metric, 
-    paraphrase_frequentist_metric
+    paraphrase_frequentist_metric, 
+    but_frequentist_metric, 
+    cond_frequentist_metric,
+    andor_frequentist_metric, 
+    expevidence_frequentist_metric
 )
 import numpy as np
 
@@ -72,13 +76,44 @@ def consistency_scorer():
                     elif ct_value == 'paraphrase':
                         score = paraphrase_frequentist_metric(p_forecast, q_forecast, beta_min)
                         logging.info(f"PARAPHRASE check: paraphrase_frequentist_metric(P={p_forecast:.3f}, Q={q_forecast:.3f})")
+
+                    elif ct_value == 'but':
+                        r_forecast = check['R'].get('forecast', 0.0)
+                        logging.info(f"R forecast: {r_forecast:.3f} - {check['R']['title']}")
+                        score = but_frequentist_metric(p_forecast, q_forecast, r_forecast, beta_min)
+                        logging.info(f"BUT check: but_frequentist_metric(P={p_forecast:.3f}, not P and Q={q_forecast:.3f}, P or Q={r_forecast:.3f})")
+
+                    elif ct_value == 'cond':
+                        r_forecast = check['R'].get('forecast', 0.0)
+                        logging.info(f"R forecast: {r_forecast:.3f} - {check['R']['title']}")
+                        score = cond_frequentist_metric(p_forecast, q_forecast, r_forecast, beta_min)
+                        logging.info(f"COND check: but_frequentist_metric(P={p_forecast:.3f}, Q|P={q_forecast:.3f}, P and Q={r_forecast:.3f})")
+
+                    elif ct_value == 'andor':
+                        r_forecast = check['R'].get('forecast', 0.0)
+                        s_forecast = check['S'].get('forecast', 0.0)
+                        logging.info(f"R forecast: {r_forecast:.3f} - {check['R']['title']}")
+                        logging.info(f"S forecast: {s_forecast:.3f} - {check['S']['title']}")
+                        score = andor_frequentist_metric(p_forecast, q_forecast, r_forecast, s_forecast, beta_min)
+                        logging.info(f"AndOr check: andor_frequentist_metric(P={p_forecast:.3f}, Q={q_forecast:.3f}, P and Q={r_forecast:.3f}, P or Q={s_forecast:.3f})")
+
+                    elif ct_value == 'expevidence':
+                        r_forecast = check['R'].get('forecast', 0.0)
+                        s_forecast = check['S'].get('forecast', 0.0)
+                        logging.info(f"R forecast: {r_forecast:.3f} - {check['R']['title']}")
+                        logging.info(f"S forecast: {s_forecast:.3f} - {check['S']['title']}")
+                        score = expevidence_frequentist_metric(p_forecast, q_forecast, r_forecast, s_forecast, beta_min)
+                        logging.info(f"ExpEvidence check: expevidence_frequentist_metric(P={p_forecast:.3f}, Q={q_forecast:.3f}, P | Q={r_forecast:.3f}, P | -Q={s_forecast:.3f})")
                     
+                    
+                    check['score'] = float(score)
                     type_scores.append(score)
                     all_type_scores.append(score)  # Add to overall scores list
                     logging.info(f"Frequentist metric score: {score:.3f}\n")
                     
                 except Exception as e:
                     logging.error(f"Error calculating {ct_value} metric: {str(e)}")
+                    check['score'] = 0.0
                     type_scores.append(0.0)
             
             # Average the scores for this type
