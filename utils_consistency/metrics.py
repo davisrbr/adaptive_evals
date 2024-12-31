@@ -324,7 +324,6 @@ def expevidence_frequentist_metric(
     f_p_given_q: float,  # b = F(P|Q)
     f_p_given_not_q: float,  # c = F(P|¬Q)
     beta_min: float = 1e-3,
-    sigma : float = 0.05,
 ) -> float:
     """
     Calculate the EXPEVIDENCE (Expected Evidence) consistency violation metric.
@@ -335,7 +334,6 @@ def expevidence_frequentist_metric(
         f_p_given_q (float): F(P|Q), conditional probability of P given Q
         f_p_given_not_q (float): F(P|¬Q), conditional probability of P given not Q
         beta_min (float): Small regularization term to avoid division by zero
-        sigma (float): based on n, default n = 400 => sigma = 0.05
     
     Returns:
         float: The EXPEVIDENCE consistency violation metric
@@ -363,7 +361,7 @@ def expevidence_frequentist_metric(
     term2 = d * d * b * (1 - b)
     term3 = (1 - d) * (1 - d) * c * (1 - c)
     term4 = (b - c) * (b - c) * d * (1 - d)
-    denominator = sigma * np.sqrt(term1 + term2 + term3 + term4 + beta_min) 
+    denominator = np.sqrt(term1 + term2 + term3 + term4 + beta_min) 
     
     # Compute the EXPEVIDENCE consistency violation metric
     result = numerator / denominator

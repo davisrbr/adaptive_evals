@@ -1,9 +1,10 @@
 from inspect_ai.solver import solver, TaskState, Generate 
 from inspect_ai.model import ChatMessageUser, ModelOutput, GenerateConfig, get_model
+from inspect_ai.dataset import Sample
 from sentence_transformers import SentenceTransformer
 import torch
 from inspect_ai.log import read_eval_log
-from typing import Dict, Any, List, Set
+from typing import Dict, Any, List, Set, Optional
 import asyncio
 from enum import Enum
 import logging
@@ -14,7 +15,7 @@ from utils_consistency.consistency_question_generator import (
     llm_generate,
     question_generation_prompt
 )
-from utils_consistency.forecaster import BINARY_SCRATCH_PAD_PROMPT_NEW_6
+from utils_consistency.forecaster import BINARY_SCRATCH_PAD_PROMPT_NEW_6, BASIC_COT_FORECASTER
 import json
 from datetime import datetime
 import pandas as pd
@@ -41,7 +42,7 @@ NUM_BATCHES = 2
 # Num Adaptive Questions / Num Batches = Num of Questions generated per batch; for each batch, we provide previous batch's questions as context to encourage novelty
 QUESTIONS_PER_BATCH = NUM_ADAPTIVE_QUESTIONS_TO_GENERATE // NUM_BATCHES
 #Num worst performing examples PER consistency check shown to the model 
-NUM_QUESTIONS_IN_CONTEXT = 5
+NUM_QUESTIONS_IN_CONTEXT = 2
 
 #Checking Novelty of adaptive generatied question by comparing cosine sim with initial dataset
 class NoveltyChecker:
@@ -157,10 +158,12 @@ def consistency_solver():
                         metadata=state.metadata
                     )
 
-                    prompt = BINARY_SCRATCH_PAD_PROMPT_NEW_6.format(
-                        question=question['title'],
-                        background=question['body']
-                    )
+                    # prompt = BINARY_SCRATCH_PAD_PROMPT_NEW_6.format(
+                    #     question=question['title'],
+                    #     background=question['body']
+                    # )
+
+                    prompt = BASIC_COT_FORECASTER.format(question=question['title'] + "\n\n" + question['body'])
                     
                     forecast_state.messages.append(ChatMessageUser(content=prompt))
                     response_state = await generate(forecast_state)
@@ -221,6 +224,10 @@ def consistency_solver():
                 'data_source': 'generated'
             }
             
+            #for judge model
+            state.metadata['question_p'] = base_question
+            state.metadata['question_q'] = formatted_related
+
             # Generate related question forecast once
             logging.info("Generating related question forecast")
             related_forecast = await generate_forecast(formatted_related)
@@ -399,22 +406,21 @@ def consistency_solver():
             
     return solve
 
+
 @solver
 def adaptive_consistency_solver(
     initial_log_path: str,
     dataset_questions: List[str] = None,  
     use_embeddings: bool = False, 
-    consistency_types: List[str] = ['not', 'paraphrase', 'consequence', 'and', 'or'], 
+    consistency_types: List[str] = [ct.value for ct in ConsistencyType], 
     generator_model_name: str = "openai/o1-mini",
     eval_model_name: str = 'openai/gpt-4o'
 ) -> Generate:
     """
-    Solver that generates adversarial consistency questions based on previous performance
-    by extracting examples from eval logs.
+    Solver that generates adversarial consistency questions based on previous performance.
     """
     generator_model = get_model(generator_model_name)
     eval_model = get_model(eval_model_name, config=GenerateConfig(temperature=0))
-
 
     # Initialize novelty checker if enabled
     novelty_checker = None
@@ -423,17 +429,15 @@ def adaptive_consistency_solver(
             dataset_questions = ['']
         novelty_checker = NoveltyChecker()
         novelty_checker.initialize_with_dataset(dataset_questions)
-
     
     async def solve(state: TaskState, generate: Generate) -> TaskState:
-
         async def generate_forecast(q: Dict[str, Any]) -> Dict[str, Any]:
-            prompt = BINARY_SCRATCH_PAD_PROMPT_NEW_6.format(
-                question=q['title'],
-                background=q['body']
-            )
+            # prompt = BINARY_SCRATCH_PAD_PROMPT_NEW_6.format(
+            #     question=q['title'],
+            #     background=q['body']
+            # )
+            prompt = BASIC_COT_FORECASTER.format(question=q['title'] + "\n\n" + q['body'])
             
-            # Generate using the prompt directly instead of TaskState
             response = await eval_model.generate(prompt)
             
             if response and hasattr(response, 'completion'):
@@ -453,7 +457,6 @@ def adaptive_consistency_solver(
         logging.info("=== Starting Batched Adaptive Solver ===")
         logging.info(f"Initial state metadata: {state.metadata}")
 
-        # Store all generated questions here before forecasting
         all_generated_questions = []
         
         if 'consistency_checks' in state.metadata:
@@ -461,18 +464,9 @@ def adaptive_consistency_solver(
             return state
             
         try:
-            # Load evaluation log and log details
+            # Load evaluation log
             eval_log = read_eval_log(initial_log_path)
             logging.info(f"Loaded eval log with {len(eval_log.samples)} samples")
-            
-            # Check structure of first sample
-            if eval_log.samples:
-                sample = eval_log.samples[0]
-                logging.info("\n=== Sample Structure ===")
-                logging.info(f"Sample scores: {sample.scores}")
-                logging.info(f"Sample metadata: {sample.metadata}")
-                if 'consistency_checks' in sample.metadata:
-                    logging.info(f"Sample consistency_checks: {sample.metadata['consistency_checks']}")
 
             # Generate questions in batches
             for batch_num in range(NUM_BATCHES):
@@ -480,59 +474,51 @@ def adaptive_consistency_solver(
                 
                 # Create prompt with challenging examples from logs
                 generation_prompt = """You are an expert in generating forecasting questions that are extraordinarily challenging, highly detailed, and test the extremes of logical consistency.
-                Given the example questions and their scores below, generate new challenging question pairs/triplets that go far beyond basic scenarios.
+                Given the example questions and their scores below, generate new challenging question pairs that go far beyond basic scenarios.
 
                 DEFINITIONS OF CONSISTENCY TYPES:
                 1. Logical Negation (NOT): 
-                - Requires questions P and Q only
                 - Q must be the exact logical negation of P
                 - P(Q) = 1 - P(P)
-                - Example:
-                    P: "Will SpaceX launch Starship in 2024?"
-                    Q: "Will SpaceX NOT launch Starship in 2024?"
-                    (Q is the exact logical negation of P)
 
                 2. Consequence: 
-                - Requires questions P and Q only
                 - Q must be a logical prerequisite for P
                 - P(Q) must be greater than P(P)
-                - Example:
-                    P: "Will computers in Italy send emails in 2050?"
-                    Q: "Will computers in Italy have internet?"
-                    (Q is necessary for P)
 
                 3. Paraphrase: 
-                - Requires questions P and Q only
                 - Q must restate P with exactly the same meaning
                 - P(Q) must equal P(P)
-                - Example:
-                    P: "Will global temperatures rise by 2°C by 2030?"
-                    Q: "Will Earth's average temperature increase by 2 degrees Celsius before 2031?"
-                    (Same meaning, different wording)
 
                 4. AND: 
-                - Requires questions P, Q, and R
                 - R must be the logical conjunction of P and Q
-                - Example:
-                    P: "Will SpaceX launch Starship in 2024?"
-                    Q: "Will Blue Origin launch New Glenn in 2024?"
-                    R: "Will both SpaceX's Starship and Blue Origin's New Glenn launch in 2024?"
-                    (R is true only if both P AND Q are true)
+                - P(R) = P(P AND Q)
 
                 5. OR: 
-                - Requires questions P, Q, and R
                 - R must be the logical disjunction of P and Q
-                - Example:
-                    P: "Will the US win Olympic gold in basketball?"
-                    Q: "Will the US win Olympic gold in swimming?"
-                    R: "Will the US win Olympic gold in either basketball or swimming?"
-                    (R is true if either P OR Q is true)
+                - P(R) = P(P OR Q)
+
+                6. ANDOR:
+                - Tests the relationship: P(P) + P(Q) = P(P OR Q) + P(P AND Q)
+                - Requires carefully crafted P and Q where this relationship is challenging to maintain
+
+                7. BUT:
+                - Tests the relationship: P(P OR Q) = P(P) + P(NOT P AND Q)
+                - Requires P and Q where this complex probability relationship is difficult to assess
+
+                8. COND:
+                - Tests the relationship: P(P)P(Q|P) = P(P AND Q)
+                - Requires P and Q where conditional probability is particularly challenging
+
+                9. EXPEVIDENCE:
+                - Tests the relationship: P(P) = P(P|Q)P(Q) + P(P|NOT Q)(1 - P(Q))
+                - Requires P and Q where evidence-based probability updating is complex
 
                 REQUIREMENTS FOR EXCEPTIONAL DIFFICULTY:
                 1. Resolution Criteria:
                 - Each question MUST include explicit resolution conditions
                 - Specify exact metrics, thresholds, and deadlines
-                - The question should not be ambigious, should be complete on its own and should not refer to other questions (that is Q should be completely forecastable without needing info from P or R)
+                - The question should not be ambigious, should be complete on its own and should not refer to other questions (that is Q should be completely forecastable without needing info from P)
+
 
                 2. Complexity Factors:
                 - Multiple interdependent variables that affect each other
@@ -560,129 +546,135 @@ def adaptive_consistency_solver(
                 - Threshold effects
                 - Nonlinear relationships
 
+                5. Reason why a particular consistency check is extremely difficult for the base questions (P, Q)
+
+                Most importantly, do NOT make the question title ambigious or create wrong details for difficulty (e.g. Asking about a country that doesn't exist, or asking if something is significant, which is too vague).
+
                 PART 1: EXAMPLE QUESTIONS BY CONSISTENCY TYPE AND PERFORMANCE
 
                 Examples of questions from worst to better inconsistency scores per consistency check:\n"""
 
                 # Get examples from logs for each consistency type
+                # Get examples from logs for each consistency type
                 for ct in consistency_types:
                     generation_prompt += f"\n=== {ct.upper()} Examples ===\n"
-                    logging.info(f"\nProcessing consistency type: {ct}")
+                    # Add tuple explanation based on consistency type
+                    tuple_explanation = {
+                        'not': "Tuple is (P, ¬P). Generate only base questions P and not P.",
+                        'paraphrase': "Tuple is (P, Q). Generate only base questions P and Q where Q paraphrases P.",
+                        'consequence': "Tuple is (P, Q). Generate only base questions P and Q where Q is a prerequisite for P.",
+                        'and': "Tuple is (P, Q, P∧Q). Generate only base questions P and Q, we'll derive P∧Q.",
+                        'or': "Tuple is (P, Q, P∨Q). Generate only base questions P and Q, we'll derive P∨Q.",
+                        'andor': "Tuple is (P, Q, P∧Q, P∨Q). Generate only base questions P and Q, we'll derive P∧Q and P∨Q.",
+                        'but': "Tuple is (P, ¬P∧Q, P∨Q). Generate only base questions P and Q, we'll derive ¬P∧Q and P∨Q from them.",
+                        'cond': "Tuple is (P, Q|P, P∧Q). Generate only base questions P and Q, we'll derive Q|P and P∧Q from them.", 
+                        'expevidence': "Tuple is (P, Q, P|Q, P|¬Q). Generate only base questions P and Q, we'll derive P|Q and P|¬Q from them."
+                    }
+                    generation_prompt += f"{tuple_explanation[ct]}\n"
                     
-                    # Get samples with this consistency type and sort by score
                     scored_samples = [
                         sample for sample in eval_log.samples 
                         if ct in sample.metadata.get('consistency_checks', {})
                     ]
-                    logging.info(f"Found {len(scored_samples)} samples for {ct}")
                     
                     if scored_samples:
-                        # Sort by the appropriate score from the Score object
                         scored_samples.sort(
                             key=lambda x: x.scores['consistency_scorer'].value[f'{ct}_score'], 
                             reverse=True
                         )
                         
-                        # Take worst examples
-                        # for sample in scored_samples[:NUM_QUESTIONS_IN_CONTEXT]:
                         for sample in scored_samples[:NUM_QUESTIONS_IN_CONTEXT]:
                             inconsistency_score = sample.scores['consistency_scorer'].value[f'{ct}_score']
                             checks = sample.metadata['consistency_checks'][ct]
                             
                             generation_prompt += f"\nInconsistency Score: [{inconsistency_score:.3f}] (higher = worse)\n"
-                            generation_prompt += f"P: {checks['P']['title']}\n"
-                            generation_prompt += f"Q: {checks['Q']['title']}\n"
-                            if 'R' in checks:  # For AND/OR
-                                generation_prompt += f"R: {checks['R']['title']}\n"
+                            # Show the actual tuple components based on consistency type
+                            if ct == 'not':
+                                generation_prompt += f"P: {checks['P']['title']}\n"
+                                generation_prompt += f"¬P: {checks['Q']['title']}\n"
+                            elif ct == 'paraphrase' or ct == 'consequence':
+                                generation_prompt += f"P: {checks['P']['title']}\n"
+                                generation_prompt += f"Q: {checks['Q']['title']}\n"
+                            elif ct == 'and':
+                                generation_prompt += f"P: {checks['P']['title']}\n"
+                                generation_prompt += f"Q: {checks['Q']['title']}\n"
+                                generation_prompt += f"P∧Q: {checks['R']['title']}\n"
+                            elif ct == 'or':
+                                generation_prompt += f"P: {checks['P']['title']}\n"
+                                generation_prompt += f"Q: {checks['Q']['title']}\n"
+                                generation_prompt += f"P∨Q: {checks['R']['title']}\n"
+                            elif ct == 'andor':
+                                generation_prompt += f"P: {checks['P']['title']}\n"
+                                generation_prompt += f"Q: {checks['Q']['title']}\n"
+                                generation_prompt += f"P∧Q: {checks['R']['title']}\n"
+                                generation_prompt += f"P∨Q: {checks['S']['title']}\n"
+                            elif ct == 'but':
+                                generation_prompt += f"P: {checks['P']['title']}\n"
+                                generation_prompt += f"¬P∧Q: {checks['Q']['title']}\n"
+                                generation_prompt += f"P∨Q: {checks['R']['title']}\n"
+                            elif ct == 'cond':
+                                generation_prompt += f"P: {checks['P']['title']}\n"
+                                generation_prompt += f"Q|P: {checks['Q']['title']}\n"
+                                generation_prompt += f"P∧Q: {checks['R']['title']}\n"
+                            elif ct == 'expevidence':
+                                generation_prompt += f"P: {checks['P']['title']}\n"
+                                generation_prompt += f"Q: {checks['Q']['title']}\n"
+                                generation_prompt += f"P|Q: {checks['R']['title']}\n"
+                                generation_prompt += f"P|¬Q: {checks['S']['title']}\n"
                             generation_prompt += "---\n"
 
                 if batch_num > 0:
-                    generation_prompt += "\nPREVIOUS BATCHES QUESTIONS which you already generated (Generate novel questions different from these in terms of topic and harder in difficulty):\n"
+                    generation_prompt += "\nPREVIOUSLY GENERATED QUESTIONS:\n"
                     for prev_q in all_generated_questions:
-                        generation_prompt += f"\nConsistency Type: {prev_q['consistency']['type']}\n"
-                        generation_prompt += f"P: {prev_q['original']['title']}\n"
-                        generation_prompt += f"Q: {prev_q['second']['title']}\n"
-                        if 'combined' in prev_q:
-                            generation_prompt += f"R: {prev_q['combined']['title']}\n"
+                        generation_prompt += f"\nConsistency Type: {prev_q['consistency_type']}\n"
+                        generation_prompt += f"P: {prev_q['P']['title']}\n"
+                        generation_prompt += f"Q: {prev_q['Q']['title']}\n"
                         generation_prompt += "---\n"
-                    
-                    # Add warning about non-novel questions if using embeddings
-                    if use_embeddings and novelty_checker.repeated_questions:
-                        generation_prompt += "\nAVOID GENERATING QUESTIONS SIMILAR TO THESE (they were flagged as too similar to existing questions):\n"
-                        for q in novelty_checker.repeated_questions:
-                            generation_prompt += f"{q}\n---\n"
 
-                generation_prompt += f"\n PART 2: Generate {QUESTIONS_PER_BATCH} new challenging questions that push the boundaries of forecasting difficulty. The questions must be novel, complex, and highly detailed. Do not restrict yourself to a single consistency type and generate questions across consistencies. Each question must have clear resolution criteria while incorporating multiple layers of uncertainty. Output in this exact JSON format:"
+                generation_prompt += f"\n PART 2: Generate {QUESTIONS_PER_BATCH} new challenging questions that are not similar to the previously generated questions. Output in this exact JSON format:\n"
 
                 generation_prompt += """
                 {
-                    "question_pairs": [
+                    "questions": [
                         {
-                            "original": {
+                            "P": {
                                 "title": "Question P title",
-                                "body": "Full question P body with resolution criteria",
-                                "challenge_factors": [
-                                    "List specific factors that make this pair/triplet challenging",
-                                    "Include multiple detailed challenge factors",
-                                    "Explain interdependencies and complexity"
-                                ]
+                                "body": "Full question P body with resolution criteria"
                             },
-                            "second": {
+                            "Q": {
                                 "title": "Question Q title",
                                 "body": "Full question Q body with resolution criteria"
                             },
-                            "combined": {
-                                "title": "Question R title (only for AND/OR)",
-                                "body": "Full question R body (only for AND/OR)"
-                            },
-                            "consistency": {
-                                "type": "not|consequence|paraphrase|and|or",
-                                "challenge_rationale": "Detailed explanation of why this type was chosen and what makes it particularly challenging"
-                            }
+                            "consistency_type": "not|consequence|paraphrase|and|or|andor|but|cond|expevidence",
+                            "challenge_rationale": "Detailed explanation of why this consistency type is particularly challenging for these questions"
                         }
                     ]
                 }"""
-                logging.info("\n=== Generation Prompt ===")
-                logging.info(generation_prompt)
+
 
                 # Get generated questions
                 response = await generator_model.generate(generation_prompt)
                 response_text = response.completion
-                logging.info("\n=== LLM Response ===")
-                logging.info(response_text)
                 
-                # JSON parsing
                 try:
-                    # Extract questions JSON from the response
                     if "```json" in response_text:
-                        # If the response includes markdown formatting
                         json_start = response_text.find("{")
                         json_end = response_text.rfind("}") + 1
                         if json_start != -1 and json_end != -1:
                             response_text = response_text[json_start:json_end]
                     
-                    # Parse JSON
-                    batch_questions = json.loads(response_text)['question_pairs']
+                    batch_questions = json.loads(response_text)['questions']
+                    
                     if use_embeddings:
-                        # Check novelty of each question before adding
-                        novel_questions = []
-                        for question in batch_questions:
-                            if novelty_checker.is_novel(question):
-                                novel_questions.append(question)
-                                novelty_checker.add_generated_question(question)
-                            else:
-                                logging.warning(f"Question was not novel: {question['original']['title']}")
-                        
+                        novel_questions = [
+                            q for q in batch_questions 
+                            if novelty_checker.is_novel(q)
+                        ]
+                        for q in novel_questions:
+                            novelty_checker.add_generated_question(q)
                         all_generated_questions.extend(novel_questions)
-                        logging.info(f"Added {len(novel_questions)} novel questions from batch {batch_num + 1}")
-                        
-                        # If we didn't get enough novel questions, log a warning
-                        if len(novel_questions) < QUESTIONS_PER_BATCH:
-                            logging.warning(f"Only got {len(novel_questions)} novel questions in batch {batch_num + 1}")
                     else:
-                        # If not using embeddings, add all questions directly
                         all_generated_questions.extend(batch_questions)
-                        logging.info(f"Added {len(batch_questions)} questions from batch {batch_num + 1}")
 
                 except json.JSONDecodeError as e:
                     logging.error(f"Failed to parse batch {batch_num + 1}: {e}")
@@ -690,92 +682,167 @@ def adaptive_consistency_solver(
                     raise
 
             # Initialize consistency_checks dict
-            if 'consistency_checks' not in state.metadata:
-                state.metadata['consistency_checks'] = {}
-
+            state.metadata['consistency_checks'] = {ct: [] for ct in consistency_types}
             
-            async def process_question(question, ct):
+            async def process_question(question):
+                ct = question['consistency_type'].lower()
                 logging.info(f"Processing question with consistency type: {ct}")
-                
-                # Run forecasts concurrently for P and Q
-                p_forecast, q_forecast = await asyncio.gather(
-                    generate_forecast(question['original']),
-                    generate_forecast(question['second'])
-                )
-                
-                logging.info(f"P forecast: {p_forecast}")
-                logging.info(f"Q forecast: {q_forecast}")
 
-                # Create base question object (P)
+                # Format base question
                 base_question = {
                     'id': str(uuid.uuid4()),
-                    'title': question['original']['title'],
-                    'body': question['original']['body'],
-                    'resolution_date': question.get('resolution_date', '2024-06-29'),
+                    'title': question['P']['title'],
+                    'body': question['P']['body'],
+                    'resolution_date': None,
                     'created_date': datetime.now().strftime('%Y-%m-%d'),
                     'question_type': 'binary',
-                    'data_source': 'generated',
-                    'forecast': p_forecast['probability'],
-                    'forecast_reasoning': p_forecast['reasoning']
+                    'data_source': 'generated'
                 }
 
-                # Create Q question object
-                transformed_question = {
-                    'title': question['second']['title'],
-                    'body': question['second']['body'],
-                    'resolution_date': question.get('resolution_date', '2024-06-29'),
-                    'question_type': 'binary',
-                    'data_source': 'llm_generated',
+                # Format Q question
+                second_question = {
+                    'id': f'q-{base_question["id"]}',
+                    'title': question['Q']['title'],
+                    'body': question['Q']['body'],
+                    'resolution_date': None,
                     'created_date': datetime.now().strftime('%Y-%m-%d'),
-                    'id': f'transformed-{ct}-{base_question["id"]}',
-                    'forecast': q_forecast['probability'],
-                    'forecast_reasoning': q_forecast['reasoning']
+                    'question_type': 'binary',
+                    'data_source': 'generated'
                 }
 
-                check_result = {
-                    'P': base_question,
-                    'Q': transformed_question
-                }
-
-                # Add R forecast for AND/OR
-                if ct in ['and', 'or'] and 'combined' in question:
-                    r_forecast = await generate_forecast(question['combined'])
-                    logging.info(f"R forecast: {r_forecast}")
-                    combined_question = {
-                        'title': question['combined']['title'],
-                        'body': question['combined']['body'],
-                        'resolution_date': question.get('resolution_date', '2024-06-29'),
-                        'question_type': 'binary',
-                        'data_source': 'llm_generated',
-                        'created_date': datetime.now().strftime('%Y-%m-%d'),
-                        'id': f'combined-{ct}-{base_question["id"]}',
-                        'forecast': r_forecast['probability'],
-                        'forecast_reasoning': r_forecast['reasoning']
+                # Store the generated sample in state.store
+                generated_sample = Sample(
+                    id=base_question['id'],
+                    input=f"Question P:\n{base_question['title']}\n{base_question['body']}\n\nQuestion Q:\n{second_question['title']}\n{second_question['body']}",
+                    metadata={
+                        'question_p': base_question,
+                        'question_q': second_question,
+                        'consistency_type': ct
                     }
-                    check_result['R'] = combined_question
+                )
+                state.store.set('generated_sample', generated_sample)
 
-                return ct, check_result
+                # Use get_transformed_forecast helper from consistency_solver for the appropriate transformations
+                async def get_transformed_forecast(operator: str, questions: List[Dict]) -> Dict:
+                    transformed = await asyncio.to_thread(llm_generate, operator=operator, questions=questions)
+                    forecast = await generate_forecast(transformed)
+                    return {**transformed, 'forecast': forecast['probability'], 'forecast_reasoning': forecast['reasoning']}
 
-            # Initialize consistency_checks dict with ALL types
-            state.metadata['consistency_checks'] = {
-                ct: [] for ct in consistency_types
-            }
+                # Process according to consistency type
+                if ct in ['not', 'consequence', 'paraphrase']:
+                    # Generate forecasts
+                    p_forecast = await generate_forecast(base_question)
+                    q_forecast = await generate_forecast(second_question)
+                    
+                    return ct, {
+                        'P': {**base_question, 'forecast': p_forecast['probability'], 
+                             'forecast_reasoning': p_forecast['reasoning']},
+                        'Q': {**second_question, 'forecast': q_forecast['probability'], 
+                             'forecast_reasoning': q_forecast['reasoning']}
+                    }
 
-            logging.info("Starting parallel processing of all questions...")
+                elif ct in ['and', 'or']:
+                    # Generate combined question
+                    transformed = await get_transformed_forecast(ct, [base_question, second_question])
+                    
+                    # Generate forecasts
+                    p_forecast = await generate_forecast(base_question)
+                    q_forecast = await generate_forecast(second_question)
+                    r_forecast = await generate_forecast(transformed)
+                    
+                    return ct, {
+                        'P': {**base_question, 'forecast': p_forecast['probability'],
+                             'forecast_reasoning': p_forecast['reasoning']},
+                        'Q': {**second_question, 'forecast': q_forecast['probability'],
+                             'forecast_reasoning': q_forecast['reasoning']},
+                        'R': {**transformed, 'forecast': r_forecast['probability'],
+                             'forecast_reasoning': r_forecast['reasoning']}
+                    }
+                
+                elif ct == 'andor':
+                    p_and_q = await get_transformed_forecast("and", [base_question, second_question])
+                    p_or_q = await get_transformed_forecast("or", [base_question, second_question])
+                    
+                    p_forecast = await generate_forecast(base_question)
+                    q_forecast = await generate_forecast(second_question)
+                    r_forecast = await generate_forecast(p_and_q)
+                    s_forecast = await generate_forecast(p_or_q)
+                    
+                    return ct, {
+                        'P': {**base_question, 'forecast': p_forecast['probability'],
+                             'forecast_reasoning': p_forecast['reasoning']},
+                        'Q': {**second_question, 'forecast': q_forecast['probability'],
+                             'forecast_reasoning': q_forecast['reasoning']},
+                        'R': {**p_and_q, 'forecast': r_forecast['probability'],
+                             'forecast_reasoning': r_forecast['reasoning']},
+                        'S': {**p_or_q, 'forecast': s_forecast['probability'],
+                             'forecast_reasoning': s_forecast['reasoning']}
+                    }
+
+                elif ct == 'but':
+                    not_p = await get_transformed_forecast("not", [base_question])
+                    not_p_and_q = await get_transformed_forecast("and", [not_p, second_question])
+                    p_or_q = await get_transformed_forecast("or", [base_question, second_question])
+                    
+                    p_forecast = await generate_forecast(base_question)
+                    q_forecast = await generate_forecast(not_p_and_q)
+                    r_forecast = await generate_forecast(p_or_q)
+                    
+                    return ct, {
+                        'P': {**base_question, 'forecast': p_forecast['probability'],
+                             'forecast_reasoning': p_forecast['reasoning']},
+                        'Q': {**not_p_and_q, 'forecast': q_forecast['probability'],
+                             'forecast_reasoning': q_forecast['reasoning']},
+                        'R': {**p_or_q, 'forecast': r_forecast['probability'],
+                             'forecast_reasoning': r_forecast['reasoning']}
+                    }
+
+                elif ct == 'cond':
+                    q_given_p = await get_transformed_forecast("cond", [base_question, second_question])
+                    p_and_q = await get_transformed_forecast("and", [base_question, second_question])
+                    
+                    p_forecast = await generate_forecast(base_question)
+                    q_forecast = await generate_forecast(q_given_p)
+                    r_forecast = await generate_forecast(p_and_q)
+                    
+                    return ct, {
+                        'P': {**base_question, 'forecast': p_forecast['probability'],
+                             'forecast_reasoning': p_forecast['reasoning']},
+                        'Q': {**q_given_p, 'forecast': q_forecast['probability'],
+                             'forecast_reasoning': q_forecast['reasoning']},
+                        'R': {**p_and_q, 'forecast': r_forecast['probability'],
+                             'forecast_reasoning': r_forecast['reasoning']}
+                    }
+
+                elif ct == 'expevidence':
+                    not_q = await get_transformed_forecast("not", [second_question])
+                    p_given_q = await get_transformed_forecast("cond", [second_question, base_question])
+                    p_given_not_q = await get_transformed_forecast("cond", [not_q, base_question])
+                    p_forecast = await generate_forecast(base_question)
+                    q_forecast = await generate_forecast(second_question)
+                    r_forecast = await generate_forecast(p_given_q)
+                    s_forecast = await generate_forecast(p_given_not_q)
+                    
+                    return ct, {
+                        'P': {**base_question, 'forecast': p_forecast['probability'],
+                             'forecast_reasoning': p_forecast['reasoning']},
+                        'Q': {**second_question, 'forecast': q_forecast['probability'],
+                             'forecast_reasoning': q_forecast['reasoning']},
+                        'R': {**p_given_q, 'forecast': r_forecast['probability'],
+                             'forecast_reasoning': r_forecast['reasoning']},
+                        'S': {**p_given_not_q, 'forecast': s_forecast['probability'],
+                             'forecast_reasoning': s_forecast['reasoning']}
+                    }
+
             # Process all questions concurrently
-            tasks = [
-                process_question(question, question['consistency']['type'].lower())
-                for question in all_generated_questions
-            ]
-
-            # Wait for all forecasts to complete
+            tasks = [process_question(question) for question in all_generated_questions]
             results = await asyncio.gather(*tasks)
 
             # Store results in metadata
             for ct, check_result in results:
                 state.metadata['consistency_checks'][ct].append(check_result)
                 logging.info(f"Stored check result for {ct}")
-                
+            
             logging.info("\n=== Final State ===")
             logging.info(f"Final metadata: {state.metadata}")
             

@@ -44,6 +44,17 @@ Instructions:
 7. Output your final answer (a number between 0 and 1) with an asterisk at the beginning and end of the decimal.
 {{ Insert your answer }} """
 
+BASIC_COT_FORECASTER = """ 
+You are an informed and well-calibrated forecaster. I need you to give me your best probability estimate for the
+following question resolving YES. If you think it is likely the question resolves YES, the probability should be
+large; if you think it is unlikely the question resolves NO, the probability should be small. I want you to first
+provide a detailed reasoning for your answer, and then give me the probability. Your answer should be in the
+format: ’Reasoning: [your reasoning here] Probability: [float number between 0 and 1] with an asterisk at the beginning and end of the decimal.’
+Question: {question}.
+Output your final answer in the format - Reasoning: [your reasoning here] Probability: [float number between 0 and 1] with an asterisk at the beginning and end of the decimal.
+{{ Insert your answer }}
+"""
+
 def extract_probability(text: str) -> Optional[float]:
     """
     Extract probability value surrounded by asterisks from text.

@@ -1,6 +1,6 @@
 from inspect_ai import Task, task, eval
 from inspect_ai.dataset import Sample, hf_dataset, MemoryDataset
-from solvers.solvers_consistency import consistency_solver, adaptive_consistency_solver
+from solvers.solvers_consistency import consistency_solver, adaptive_consistency_solver, ConsistencyType
 from scorers.scorers_consistency import consistency_scorer
 import logging
 import os
@@ -49,7 +49,7 @@ def initial_consistency() -> Task:
 
     #dataset_questions = [sample.input for sample in dataset]
 
-    dataset = dataset[:25]
+    dataset = dataset[:2]
     
     return Task(
         dataset=dataset,
@@ -60,8 +60,8 @@ def initial_consistency() -> Task:
 
 @task
 def adaptive_consistency(
-    initial_log_path: str = "logs/2024-12-25T17-27-59+05-30_initial-consistency_GKYRSR7PwuDkKWXKBHdu7e.eval",
-    consistency_types: List[str] = ['not', 'paraphrase', 'consequence', 'and', 'or'],
+    initial_log_path: str,
+    consistency_types: List[str] = [ct.value for ct in ConsistencyType],
     use_embeddings: bool = False, 
     dataset_path: Optional[str] = None,
 ) -> Task:
@@ -117,30 +117,30 @@ def adaptive_consistency(
         scorer=[consistency_scorer()]
     )
 
-# if __name__ == "__main__":
-#     logging.basicConfig(level=logging.INFO)
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     
-#     log_dir = "logs/initial_consistency"
-#     os.makedirs(log_dir, exist_ok=True)
+    log_dir = "logs/initial_consistency"
+    os.makedirs(log_dir, exist_ok=True)
     
-#     try:
-#         task = initial_consistency()
-#         initial_log = eval(
-#             task, 
-#             # epochs=Epochs(1, "max"),
-#             # max_connections=1000,
-#             # log_dir=log_dir,
-#             model="openai/gpt-4o",
-#             temperature=0,
-#             start_log=True
-#         )[0]
+    try:
+        task = initial_consistency()
+        initial_log = eval(
+            task, 
+            # epochs=Epochs(1, "max"),
+            # max_connections=1000,
+            # log_dir=log_dir,
+            model="openai/gpt-4o",
+            temperature=0,
+            start_log=True
+        )[0]
 
-#         print("\nEvaluation complete")
-#         # print(f"Initial log path: {initial_log.location}")
+        print("\nEvaluation complete")
+        # print(f"Initial log path: {initial_log.location}")
         
-#     except Exception as e:
-#         logging.error(f"Error in evaluation pipeline: {str(e)}")
-#         raise
+    except Exception as e:
+        logging.error(f"Error in evaluation pipeline: {str(e)}")
+        raise
 
 
 # if __name__ == "__main__":
@@ -148,7 +148,8 @@ def adaptive_consistency(
 #        level=logging.INFO,
 #        format='%(asctime)s - %(levelname)s - %(message)s'
 #    )
-#    initial_log_path = "logs/2024-12-25T22-58-22+05-30_initial-consistency_deh8XnNgMSTzUbZdwwRFbv.eval"
+#    #initial_log_path = "logs/2024-12-26T11-19-29+05-30_initial-consistency_cExeriowwKWrcS4rBbUc9f.eval"
+#    initial_log_path = "logs/2024-12-31T17-15-52+05-30_initial-consistency_UTAkQsnkDXChYvD99KBRDT.eval"
    
 #    dataset_path="prithvi3/filtered_forecast_sample_test"
 
