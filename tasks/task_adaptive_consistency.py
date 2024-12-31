@@ -43,13 +43,15 @@ def initial_consistency() -> Task:
     )
 
     dataset = dataset.filter(
-        lambda x: x.metadata["is_resolved"] is True and 
-                 x.metadata["question_type"].lower() == "binary"
+    lambda x: (
+        x.metadata["is_resolved"] is True and 
+        x.metadata["question_type"].lower() == "binary" and 
+        "sqrt" not in x.input.lower() #one bad question
     )
+)
 
     #dataset_questions = [sample.input for sample in dataset]
-
-    dataset = dataset[:2]
+    #dataset = dataset[:2]
     
     return Task(
         dataset=dataset,
@@ -152,6 +154,7 @@ def temp_adaptive_judge(
         scorer=[temp_adaptive_consistency_judge_scorer()]
     )
 
+#INITIAL CONSISTENCY
 
 # if __name__ == "__main__":
 #     logging.basicConfig(level=logging.INFO)
@@ -178,54 +181,56 @@ def temp_adaptive_judge(
 #         logging.error(f"Error in evaluation pipeline: {str(e)}")
 #         raise
 
-
-# if __name__ == "__main__":
-#    logging.basicConfig(
-#        level=logging.INFO,
-#        format='%(asctime)s - %(levelname)s - %(message)s'
-#    )
-#    #initial_log_path = "logs/2024-12-26T11-19-29+05-30_initial-consistency_cExeriowwKWrcS4rBbUc9f.eval"
-#    initial_log_path = "logs/2024-12-31T18-27-08+05-30_initial-consistency_njAobmajK8z8AMLiJo7BJS.eval"
-   
-#    dataset_path="prithvi3/filtered_forecast_sample_test"
-
-#    task = adaptive_consistency(
-#        initial_log_path=initial_log_path,
-#        use_embeddings=False,  # Enable embeddings if needed
-#        dataset_path=None  # Provide dataset path when using embeddings
-#    )
-   
-#    result = eval(
-#        task,
-#        model="openai/gpt-4o",
-#        temperature=0,
-#        start_log=True
-#    )[0]
-   
-#    print("\nEvaluation complete")
-
+#ADAPTIVE CONSISTENCY
 
 if __name__ == "__main__":
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(levelname)s - %(message)s'
-    )
+   logging.basicConfig(
+       level=logging.INFO,
+       format='%(asctime)s - %(levelname)s - %(message)s'
+   )
+   #initial_log_path = "logs/2024-12-26T11-19-29+05-30_initial-consistency_cExeriowwKWrcS4rBbUc9f.eval"
+   initial_log_path = "logs/2024-12-31T20-20-44+05-30_initial-consistency_CtRhvzAAkDnGJgXJ868DUB.eval"
+   
+   dataset_path="prithvi3/filtered_forecast_sample_test"
+
+   task = adaptive_consistency(
+       initial_log_path=initial_log_path,
+       use_embeddings=False,  # Enable embeddings if needed
+       dataset_path=None  # Provide dataset path when using embeddings
+   )
+   
+   result = eval(
+       task,
+       model="openai/gpt-4o",
+       temperature=0,
+       start_log=True
+   )[0]
+   
+   print("\nEvaluation complete")
+
+#JUDGE
+
+# if __name__ == "__main__":
+#     logging.basicConfig(
+#         level=logging.INFO,
+#         format='%(asctime)s - %(levelname)s - %(message)s'
+#     )
     
-    # Paths to evaluation logs
-    initial_log_path = "logs/2024-12-31T18-27-08+05-30_initial-consistency_njAobmajK8z8AMLiJo7BJS.eval"
-    adaptive_log_path = "logs/2024-12-31T18-28-15+05-30_adaptive-consistency_aDE5pPq8oawANKvx28FtX6.eval"  # This would be your adaptive eval log
+#     # Paths to evaluation logs
+#     initial_log_path = "logs/2024-12-31T18-27-08+05-30_initial-consistency_njAobmajK8z8AMLiJo7BJS.eval"
+#     adaptive_log_path = "logs/2024-12-31T18-28-15+05-30_adaptive-consistency_aDE5pPq8oawANKvx28FtX6.eval"  # This would be your adaptive eval log
     
-    task = temp_adaptive_judge(
-        initial_log_path=initial_log_path,
-        adaptive_log_path=adaptive_log_path,
-    )
+#     task = temp_adaptive_judge(
+#         initial_log_path=initial_log_path,
+#         adaptive_log_path=adaptive_log_path,
+#     )
     
-    result = eval(
-        task,
-        model="openai/gpt-4o",
-        temperature=0,
-        start_log=True
-    )[0]
+#     result = eval(
+#         task,
+#         model="openai/gpt-4o",
+#         temperature=0,
+#         start_log=True
+#     )[0]
     
     #print("\nEvaluation complete")
     #print(f"Judge accuracy: {result.scores[0].value:.3f}")  # Access accuracy score

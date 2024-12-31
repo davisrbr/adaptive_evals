@@ -24,7 +24,10 @@ import numpy as np
 def consistency_scorer() -> Scorer:
     async def score(state: TaskState, target: Target) -> Score:
         checks = state.metadata.get('consistency_checks', {})
-        scores = {}
+        # Initialize scores with defaults for all consistency types
+        scores = {f"{ct.value}_score": 0.0 for ct in ConsistencyType}
+        scores["overall_score"] = 0.0
+        # scores = {}
         beta_min = 1e-3  # regularization term
 
         all_type_scores = []  # Store all scores to calculate overall mean
