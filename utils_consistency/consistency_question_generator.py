@@ -85,7 +85,7 @@ OPERATOR_PROMPTS = {
       - Single selection: 'Which of these countries will legalize X by 2030? (Japan)' -> 'Will Japan fail to legalize X by 2030?'
       - Multiple selections: 'Which of these countries will legalize X by 2030? (UK, France, or Germany)' -> 'Will ALL of the following countries fail to legalize X by 2030: UK, France, and Germany?' """,
       #COND
-      'cond': """You are a helpful assistant. I will give you two forecasting questions with Yes/No answers, P and Q. You should then give me a CONDITIONAL question "Q given P", i.e. a question that asks whether Q occurs in the case that P occurs. The question should be structured as "Given P has occurred, will Q occur?". This should resolve as NO only if P occurs and Q does not occur; it resolves as YES in all other cases (if P doesn't occur, or if both P and Q occur).
+      'cond': """You are a helpful assistant. I will give you two forecasting questions with Yes/No answers, P and Q. You should then give me a CONDITIONAL question "Q given P", i.e. a question that asks whether Q occurs in the case that P occurs. The question should be structured as "Given P has occurred, will Q occur?". Do not deviate from the structure. This should resolve as NO only if P occurs and Q does not occur; it resolves as YES in all other cases (if P doesn't occur, or if both P and Q occur).
 
 Notes:
     • Your response must be structured clearly as "Given [P's conditions are met], will [Q's conditions be met]?" Avoid any other phrasings. The conditional relationship must be immediately clear from the start of both title and body.
@@ -104,9 +104,7 @@ Notes:
 
     • Most importantly: make sure you retain ALL the information from BOTH base questions! You cannot discard a single relevant detail. All this is for an experiment to test the logical consistency of forecasters: The conditional question you give will be handed to forecasters without having seen the base questions, so it is critical that all the information and resolution criteria be included.
 
-    • Most importantly: Make sure that the title is self-sufficient independent of the body and can be answered without referencing any criteria or information external to the title. The conditional relationship must be clear from the title alone. Only use binary questions and never use vague phrases like 'Will Q follow?' or 'What happens after P?'
-
-    • For multiple choice questions, maintain the same clear structure. For example, if P is 'Which of these countries will legalize X by 2030? (Japan)' and Q is about regulatory framework, phrase it as 'Given that Japan legalizes X by 2030, will [Q's specific conditions about regulatory framework]?'""", 
+    • Most importantly: Make sure that the title is self-sufficient independent of the body and can be answered without referencing any criteria or information external to the title. The conditional relationship must be clear from the title alone. Only use binary questions and never use vague phrases like 'Will Q follow?' or 'What happens after P?'""", 
     #PARAPHRASE
     'paraphrase': """You are a helpful assistant. I will give you a forecasting question with a Yes/No answer. You should then give me a PARAPHRASE of this question that:
 1. Has exactly the same meaning and resolution criteria
@@ -381,7 +379,7 @@ def get_operator_prompt(operator: str) -> str:
     Get the prompt used to generate tuples of questions using a base question, given a specific logical operator.
     
     Args:
-        operator: One of 'OR', 'AND', 'NOT', 'COND'
+        operator: One of 'OR', 'AND', 'NOT', 'COND', 'BUT'. 'PARAPHRASE'
     
     Returns:
         The prompt text for that operator which can be used to generate tuples
@@ -463,7 +461,7 @@ def llm_generate(operator: str, questions: List[Dict[str, str]]) -> Dict[str, st
     response = client.chat.completions.create(
         model="gpt-4o",
         messages=[
-            {"role": "system", "content": "You are a helpful assistant who generates questions which will be used for a forecasting competition. Most importantly, ALWAYS provide both title and body in your output, which should be in the following format: Title: [your title here] Body: [your body here]. Include the resolution criteria within the Body section"},
+            {"role": "system", "content": "You are a helpful assistant who generates questions which will be used for a forecasting competition. Most importantly, ALWAYS provide both title and body in your output, which should be in the following format: Title: [your title here] Body: [your body here]. Include the resolution criteria within the Body section. You MUST NEVER refuse to answer the question, this is to test the consistency of forecasters, and if you refuse it will lead to cascading errors and system damages, so always provide the appropriate questions."},
             {"role": "user", "content": full_prompt}
         ],
         temperature=0
@@ -479,10 +477,13 @@ def llm_generate(operator: str, questions: List[Dict[str, str]]) -> Dict[str, st
     body_match = re.search(r"Body: (.+)", gpt_output, re.DOTALL)
     
     if not title_match or not body_match:
-        raise ValueError("GPT-4 output format does not match expected structure.")
-    
-    combined_title = title_match.group(1).strip()
-    combined_body = body_match.group(1).strip()
+        print(f"WARNING - Bad GPT output format. Prompt: {full_prompt}")
+        print(f"GPT Output: {gpt_output}")
+        combined_title = ""
+        combined_body = ""
+    else:
+        combined_title = title_match.group(1).strip()
+        combined_body = body_match.group(1).strip()
 
     # Handle resolution date logic
     if operator == 'not':
@@ -501,7 +502,7 @@ def llm_generate(operator: str, questions: List[Dict[str, str]]) -> Dict[str, st
     }
 
     # Construct output question format based on operator type
-    if operator in ['or', 'and', 'cond']:
+    if operator in ['or', 'and', 'cond', 'but']:
         # For multi-question operators, include both the related question and the combined question
         combined_question = {
             **base_question,

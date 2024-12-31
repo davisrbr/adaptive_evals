@@ -1,7 +1,7 @@
 from inspect_ai import Task, task, eval
 from inspect_ai.dataset import Sample, hf_dataset, MemoryDataset
-from solvers.solvers_consistency import consistency_solver, adaptive_consistency_solver
-from scorers.scorers_consistency import consistency_scorer
+from solvers.solvers_consistency import consistency_solver, adaptive_consistency_solver, ConsistencyType, adaptive_consistency_judge_solver, temp_adaptive_consistency_judge_solver
+from scorers.scorers_consistency import consistency_scorer, adaptive_consistency_judge_scorer, temp_adaptive_consistency_judge_scorer
 import logging
 import os
 import random
@@ -43,13 +43,15 @@ def initial_consistency() -> Task:
     )
 
     dataset = dataset.filter(
-        lambda x: x.metadata["is_resolved"] is True and 
-                 x.metadata["question_type"].lower() == "binary"
+    lambda x: (
+        x.metadata["is_resolved"] is True and 
+        x.metadata["question_type"].lower() == "binary" and 
+        "sqrt" not in x.input.lower() #one bad question
     )
+)
 
     #dataset_questions = [sample.input for sample in dataset]
-
-    dataset = dataset[:25]
+    #dataset = dataset[:2]
     
     return Task(
         dataset=dataset,
@@ -60,8 +62,8 @@ def initial_consistency() -> Task:
 
 @task
 def adaptive_consistency(
-    initial_log_path: str = "logs/2024-12-25T17-27-59+05-30_initial-consistency_GKYRSR7PwuDkKWXKBHdu7e.eval",
-    consistency_types: List[str] = ['not', 'paraphrase', 'consequence', 'and', 'or'],
+    initial_log_path: str,
+    consistency_types: List[str] = [ct.value for ct in ConsistencyType],
     use_embeddings: bool = False, 
     dataset_path: Optional[str] = None,
 ) -> Task:
@@ -104,6 +106,22 @@ def adaptive_consistency(
         # dataset = dataset[:25]
         dataset_questions = [sample.input for sample in dataset]
     
+    # return Task(
+    #     dataset=MemoryDataset(name="adaptive_consistency", samples=[]),
+    #     solver=[
+    #         adaptive_consistency_solver(
+    #             initial_log_path=initial_log_path,
+    #             consistency_types=consistency_types,
+    #             use_embeddings=use_embeddings,
+    #             dataset_questions=dataset_questions,
+    #         ), 
+    #         adaptive_consistency_judge_solver(
+    #             initial_log_path=initial_log_path,
+    #             judge_model_name="openai/o1-mini",
+    #         )
+    #     ],
+    #     scorer=[consistency_scorer(), adaptive_consistency_judge_scorer()]
+    # )
     return Task(
         dataset=MemoryDataset(name="adaptive_consistency", samples=[]),
         solver=[
@@ -116,6 +134,27 @@ def adaptive_consistency(
         ],
         scorer=[consistency_scorer()]
     )
+
+@task
+def temp_adaptive_judge(
+    initial_log_path: str,
+    adaptive_log_path: str,
+) -> Task:
+    """Creates a task to judge the adaptive consistency questions"""
+    
+    return Task(
+        dataset=MemoryDataset(name="temp_adaptive_judge", samples=[]),
+        solver=[
+            temp_adaptive_consistency_judge_solver(
+                initial_log_path=initial_log_path,
+                adaptive_log_path=adaptive_log_path,
+                judge_model_name="openai/gpt-4o", #placeholder
+            )
+        ],
+        scorer=[temp_adaptive_consistency_judge_scorer()]
+    )
+
+#INITIAL CONSISTENCY
 
 # if __name__ == "__main__":
 #     logging.basicConfig(level=logging.INFO)
@@ -142,27 +181,56 @@ def adaptive_consistency(
 #         logging.error(f"Error in evaluation pipeline: {str(e)}")
 #         raise
 
+#ADAPTIVE CONSISTENCY
+
+if __name__ == "__main__":
+   logging.basicConfig(
+       level=logging.INFO,
+       format='%(asctime)s - %(levelname)s - %(message)s'
+   )
+   #initial_log_path = "logs/2024-12-26T11-19-29+05-30_initial-consistency_cExeriowwKWrcS4rBbUc9f.eval"
+   initial_log_path = "logs/2024-12-31T20-20-44+05-30_initial-consistency_CtRhvzAAkDnGJgXJ868DUB.eval"
+   
+   dataset_path="prithvi3/filtered_forecast_sample_test"
+
+   task = adaptive_consistency(
+       initial_log_path=initial_log_path,
+       use_embeddings=False,  # Enable embeddings if needed
+       dataset_path=None  # Provide dataset path when using embeddings
+   )
+   
+   result = eval(
+       task,
+       model="openai/gpt-4o",
+       temperature=0,
+       start_log=True
+   )[0]
+   
+   print("\nEvaluation complete")
+
+#JUDGE
 
 # if __name__ == "__main__":
-#    logging.basicConfig(
-#        level=logging.INFO,
-#        format='%(asctime)s - %(levelname)s - %(message)s'
-#    )
-#    initial_log_path = "logs/2024-12-25T22-58-22+05-30_initial-consistency_deh8XnNgMSTzUbZdwwRFbv.eval"
-   
-#    dataset_path="prithvi3/filtered_forecast_sample_test"
-
-#    task = adaptive_consistency(
-#        initial_log_path=initial_log_path,
-#        use_embeddings=False,  # Enable embeddings if needed
-#        dataset_path=None  # Provide dataset path when using embeddings
-#    )
-   
-#    result = eval(
-#        task,
-#        model="openai/gpt-4o",
-#        temperature=0,
-#        start_log=True
-#    )[0]
-   
-#    print("\nEvaluation complete")
+#     logging.basicConfig(
+#         level=logging.INFO,
+#         format='%(asctime)s - %(levelname)s - %(message)s'
+#     )
+    
+#     # Paths to evaluation logs
+#     initial_log_path = "logs/2024-12-31T18-27-08+05-30_initial-consistency_njAobmajK8z8AMLiJo7BJS.eval"
+#     adaptive_log_path = "logs/2024-12-31T18-28-15+05-30_adaptive-consistency_aDE5pPq8oawANKvx28FtX6.eval"  # This would be your adaptive eval log
+    
+#     task = temp_adaptive_judge(
+#         initial_log_path=initial_log_path,
+#         adaptive_log_path=adaptive_log_path,
+#     )
+    
+#     result = eval(
+#         task,
+#         model="openai/gpt-4o",
+#         temperature=0,
+#         start_log=True
+#     )[0]
+    
+    #print("\nEvaluation complete")
+    #print(f"Judge accuracy: {result.scores[0].value:.3f}")  # Access accuracy score
