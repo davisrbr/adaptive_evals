@@ -1,0 +1,69 @@
+You are an expert in Python.
+
+Key Principles
+- Write concise, technical responses with accurate Python examples.
+- This project is written using Inspect. Inspect breaks things up into tasks, sovlers, scorers, and tools
+    - To create an evaluation, write a function that returns a Task. This task will bring together the dataset, solvers, scorer, and configuration required for the evaluation. 
+    - Solvers are the heart of Inspect evaluations and can serve a wide variety of purposes, including:
+        - Providing system prompts
+        - Prompt engineering (e.g. chain of thought)
+        - Model generation
+        - Self critique
+        - Multi-turn dialog
+        - Running an agent scaffold
+    - Tasks have a single top-level solver that defines an execution plan. This solver could be implemented with arbitrary Python code (calling the model as required) or could consist of a set of other solvers composed together. Solvers can therefore play two differnet roles:
+        - Composite specifications for task execution; and
+        - Components that can be chained together.
+    - Tools: Inspect supports registering Python functions as tools for compatible models (OpenAI, Claude 3, Gemini, Mistral). These tools can be used within an agent scaffold that pursues an objective over multiple interactions with a model. Built-in tools include:
+        - Bash/Python execution
+        - Web Browser with full navigation and interaction support
+        - Web Search via Google Search API
+    - Scorers gauge how well solvers match the dataset target. Several examples exist in scorers/:
+        - Extracting answers from model outputs via heuristics
+        - Comparing outputs to targets using text similarity
+        - Using another model to check alignment with the ideal answer
+        - Evaluating compliance with a specific format or rubric
+    - Scorers then compute metrics like accuracy() (percentage correct) and mean() (average).
+
+
+- All tests reside in the tests/ directory.
+- For any complex functionality-- like a new solver or a new task-- implement tests in tests/. Check existing tests to see if it fits in some existing test file, otherwise create a new one. Tests should not be expensive.
+- Prefer iteration and modularization over code duplication.
+- Use descriptive variable names with auxiliary verbs (e.g., is_active, has_permission).
+- Use lowercase with underscores for directories and files (e.g., routers/user_routes.py).
+- Favor named exports for routes and utility functions.
+
+Ruff
+- Your code will be Ruff-formatted afterwards.
+- We don't care about: E501 (line too long), E402 (module level import not at top of file), E741 (ambiguous variable name), F403 (import star).
+
+Python
+- Use def for pure functions.
+- Use type hints for all function signatures. Prefer Pydantic models over raw dictionaries for input validation.
+- Import at the top of the file.
+- Avoid unnecessary curly braces in conditional statements.
+- For single-line statements in conditionals, omit curly braces.
+- Use concise, one-line syntax for simple conditional statements (e.g., if condition: do_something()).
+
+Scripts
+- These are our experiment runners- they call the tasks defined in the tasks/ directory with different experiment parameters.
+- By default, use click for command line arguments.
+- Some standard arguments:
+    - --epochs (int) Number of epochs to run, inspect will take the std / aggregate across epochs.
+    - --num_samples (int) Number of samples to take for each epoch.
+    - --initial_log_path (str) Used for adaptive evaluation tasks. The path to the initial evaluation log, this will be parsed with read_eval_log.
+    - --generator_model_name (str) Name of the model used to generate new questions.
+    - --eval_model_name (str) Name of the model used to evaluate the new questions.
+    - --judge_model_name (str) Name of the model used to score generated questions for validity/etc.
+
+Error Handling and Validation
+- Prioritize error handling and edge cases:
+  - Handle errors and edge cases at the beginning of functions.
+  - Use early returns for error conditions to avoid deeply nested if statements.
+  - Place the happy path last in the function for improved readability.
+  - Avoid unnecessary else statements; use the if-return pattern instead.
+  - Use guard clauses to handle preconditions and invalid states early.
+  - Write user-friendly debug and error messages.
+
+Caching
+- Where possible, inspect can cache prompts with generate(config={"cache-prompt": True}), this is a good idea for expensive models and/or prompts that are run multiple times.
