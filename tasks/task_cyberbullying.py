@@ -17,11 +17,11 @@ def cyberbullying_task(
     num_samples: int | bool = 25,
 ):
     """
-    PAIR task within Inspect
+    Task designed to get a baseline for cyberbullying / calibrate the judge.
     """
     
     dataset = json_dataset(
-        json_file="/Users/davisbrown/adaptive_evals/data/cyberbullying_personas.json",
+        json_file="../data/cyberbullying_personas.json",
         sample_fields=process_sample_cyberbullying,
         shuffle=True,
         seed=42,
@@ -44,7 +44,7 @@ def cyberbullying_task(
 
 @task
 def cyberbullying_jailbreak_task(
-    target_model_name: str = "together/mistralai/Mixtral-8x22B-Instruct-v0.1", 
+    target_model_name: str = "together/meta-llama/Llama-2-7b-chat-hf",
     judge_model_name: str = "openai/gpt-4o-mini", 
     attack_model_name: str = "together/mistralai/Mixtral-8x22B-Instruct-v0.1",
     n_streams: int = 1, 
@@ -62,7 +62,7 @@ def cyberbullying_jailbreak_task(
     """
     
     dataset = json_dataset(
-        json_file="/Users/davisbrown/adaptive_evals/data/cyberbullying_personas.json",
+        json_file="../data/cyberbullying_personas.json",
         sample_fields=process_sample_cyberbullying,
         shuffle=True,
         seed=42,
@@ -113,7 +113,7 @@ def cyberbullying_adaptive_task(
     n_streams: int = 1,
 ):
     dataset = json_dataset(
-        json_file="/Users/davisbrown/adaptive_evals/data/cyberbullying_personas.json",
+        json_file="../data/cyberbullying_personas.json",
         sample_fields=process_sample_cyberbullying,
         shuffle=True,
         seed=42,
