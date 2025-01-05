@@ -1,0 +1,87 @@
+check_type,P_title,P_forecast,Q_title,Q_forecast,R_title,R_forecast,score
+paraphrase,"Will the Bitcoin price exceed $100,000 by December 31, 2025?",0.45,"Is Bitcoin expected to reach a value higher than $100,000 by the end of 2025?",0.35,,,0.14494275891311215
+paraphrase,Will the Tokyo 2024 Paralympics introduction ceremony occur without any delays?,0.85,Is it expected that there will be no delays in the Tokyo 2024 Paralympics opening ceremony?,0.85,,,0.0
+paraphrase,Will the Grammy Awards 2025 introduce a new category for Best Virtual Performance?,0.35,Is a new 'Best Virtual Performance' category expected to be added to the Grammy Awards in 2025?,0.65,,,0.44426165831931935
+paraphrase,Will the S&P 500 index see a yearly growth exceeding 10% in 2026?,0.35,Is it projected that the S&P 500 index will grow by more than 10% in 2026?,0.35,,,0.0
+paraphrase,Will Apple launch a foldable iPhone model by September 2025?,0.45,Is Apple planning to introduce a foldable iPhone model by September 2025?,0.45,,,0.0
+paraphrase,Will Elon Musk announce a new Tesla electric vehicle model in early 2027?,0.65,Is Elon Musk anticipated to unveil a new Tesla EV model in the early part of 2027?,0.65,,,0.0
+paraphrase,"Will the UK implement a nationwide ban on single-use plastics by July 1, 2025?",0.65,Is the UK expected to enforce a nationwide prohibition on single-use plastics by mid-2025?,0.65,,,0.0
+paraphrase,Will Netflix release a new original series set in the Star Wars universe by March 2026?,0.01,Is Netflix anticipated to launch a Star Wars-based original series by March 2026?,0.01,,,0.0
+paraphrase,Will the FIFA World Cup 2026 witness the introduction of video assistant referees (VAR) technology?,0.95,Is VAR technology expected to be used in the FIFA World Cup 2026?,0.95,,,0.0
+paraphrase,Will Amazon achieve carbon neutrality in its global operations by 2030?,0.25,Is Amazon expected to reach carbon neutrality for its global operations by 2030?,0.15,,,0.17789201674120503
+paraphrase,Will the Microsoft Surface Duo 3 be released before the end of 2024?,0.65,Is the release of Microsoft Surface Duo 3 expected by late 2024?,0.65,,,0.0
+paraphrase,Will Spain win the UEFA European Championship in 2028?,0.15,Is Spain expected to emerge as champions in the 2028 UEFA European Championship?,0.15,,,0.0
+paraphrase,Will Tesla's Cybertruck be officially launched in North America by June 2026?,0.85,Is the official launch of Tesla's Cybertruck in North America expected by June 2026?,0.85,,,0.0
+paraphrase,"Will Facebook rebrand to Meta Platforms Inc. by January 1, 2025?",1.0,Is Facebook expected to adopt the name Meta Platforms Inc. by the start of 2025?,0.95,,,0.22703830459325003
+paraphrase,Will NASA land the first woman on Mars by 2032?,0.15,Is NASA expected to achieve the landing of the first female astronaut on Mars by 2032?,0.15,,,0.0
+paraphrase,Will the European Union implement a digital privacy regulation similar to GDPR by 2027?,0.65,Is a GDPR-like digital privacy regulation expected to be adopted by the EU by 2027?,0.15,,,0.8380019039424886
+paraphrase,Will the Louvre Museum feature an exhibit dedicated to digital art by 2025?,0.35,Is a digital art exhibit expected to be showcased at the Louvre Museum by 2025?,0.35,,,0.0
+paraphrase,Will the International Space Station complete a decade of operation by November 2030?,0.85,Is the International Space Station expected to celebrate ten years of operation by November 2030?,0.85,,,0.0
+paraphrase,Will India introduce a national electric vehicle incentive program by 2026?,0.75,Is a national EV incentive program expected to be introduced in India by 2026?,0.75,,,0.0
+paraphrase,Will the New York Times publish an investigative report on cryptocurrency fraud by April 2025?,0.75,Is an investigative piece on crypto fraud expected to be published by the New York Times by April 2025?,0.75,,,0.0
+paraphrase,"Will Canada legalize recreational marijuana nationwide by July 1, 2026?",1.0,Is nationwide recreational marijuana legalization expected in Canada by mid-2026?,1.0,,,0.0
+paraphrase,Will the Hollywood Foreign Press Association introduce a humanitarian award by 2027?,0.65,Is a new humanitarian category expected to be added to the Hollywood Foreign Press Awards by 2027?,0.65,,,0.0
+paraphrase,Will Google achieve quantum supremacy with its new processor by 2028?,0.65,Is Google anticipated to attain quantum supremacy using its new processor by 2028?,0.65,,,0.0
+paraphrase,Will Amazon Web Services introduce quantum computing services by 2027?,0.75,Are quantum computing services expected to be offered by Amazon Web Services by 2027?,0.85,,,0.17789201674120497
+paraphrase,Will the United Nations pass a binding resolution on climate change mitigation by 2029?,0.35,Is a binding climate change mitigation resolution anticipated to be passed by the UN by 2029?,0.35,,,0.0
+paraphrase,Will NASA's Artemis program land the first woman on the Moon by 2026?,0.65,Is the Artemis program expected to achieve the Moon landing of the first woman by 2026?,0.65,,,0.0
+paraphrase,Will the World Health Organization declare COVID-19 endemic by December 2025?,0.65,Is COVID-19 expected to be classified as endemic by the WHO by the end of 2025?,0.75,,,0.15504341823651052
+paraphrase,Will Sony release a PlayStation VR2 headset with full-texture mapping by Q3 2025?,0.65,Is the PlayStation VR2 with full-texture mapping expected to be released by Sony in the third quarter of 2025?,0.65,,,0.0
+paraphrase,Will the European Space Agency launch a mission to Venus by 2031?,0.65,Is a Venus mission expected to be launched by the European Space Agency by 2031?,0.35,,,0.44426165831931935
+paraphrase,Will Harvard University offer a degree in Artificial Intelligence Ethics by 2025?,0.35,Is a degree program in AI Ethics expected to be available at Harvard by 2025?,0.35,,,0.0
+paraphrase,Will Facebook implement end-to-end encryption for all its messaging services by 2027?,0.75,Is end-to-end encryption expected to be adopted by Facebook for all messaging services by 2027?,0.75,,,0.0
+paraphrase,Will Spotify launch a podcast subscription model without advertisements by mid-2026?,0.65,Is an ad-free podcast subscription service expected to be released by Spotify by mid-2026?,0.75,,,0.15504341823651052
+paraphrase,Will the International Olympic Committee include esports as an official sport in the 2032 Olympics?,0.35,Is esports expected to be an official sport in the 2032 Summer Olympics by the IOC?,0.35,,,0.0
+paraphrase,Will Tesla's Gigafactory in Berlin achieve full production capacity by 2027?,0.75,Is full production capacity anticipated at Tesla's Berlin Gigafactory by 2027?,0.75,,,0.0
+paraphrase,Will NASA's James Webb Space Telescope discover microbial life on Europa by 2030?,0.05,Is the discovery of microbial life on Europa expected by NASA's James Webb Telescope by 2030?,0.05,,,0.0
+paraphrase,Will Apple achieve a 50% market share in the global smartphone industry by 2029?,0.1,Is Apple expected to hold half of the global smartphone market by 2029?,0.1,,,0.0
+paraphrase,Will the World Bank double its funding for renewable energy projects in developing countries by 2026?,0.35,Is the World Bank expected to enhance funding for renewables in developing countries by 2026?,0.65,,,0.44426165831931935
+paraphrase,Will Netflix acquire exclusive streaming rights to the Marvel Cinematic Universe films by 2027?,0.05,Is exclusive streaming of Marvel movies anticipated to be secured by Netflix by 2027?,0.05,,,0.0
+paraphrase,Will the International Monetary Fund raise its global funding cap by 20% by 2028?,0.45,Is the IMF expected to boost its global funding ceiling by twenty percent by 2028?,0.65,,,0.28988551782622424
+paraphrase,Will SpaceX successfully launch a manned mission to Mars by 2035?,0.35,Is a crewed Mars mission expected to be successfully launched by SpaceX by 2035?,0.45,,,0.14494275891311215
+paraphrase,Will the Tokyo 2024 Olympics introduce mixed-gender relay events in track and field?,0.95,Are mixed-gender relay events in track and field expected to be part of the Tokyo 2024 Olympics?,0.95,,,0.0
+paraphrase,Will the Amazon rainforest experience a deforestation rate below the global average by 2030?,0.35,Is deforestation in the Amazon anticipated to be lower than the global average by 2030?,0.35,,,0.0
+paraphrase,Will Google Fonts introduce support for 500 new languages by 2026?,0.15,Is the introduction of 500 new language supports expected in Google Fonts by 2026?,0.25,,,0.17789201674120503
+paraphrase,Will the World Economic Forum establish a global digital currency standard by 2027?,0.15,Is a universal digital currency standard expected to be created by the World Economic Forum by 2027?,0.15,,,0.0
+paraphrase,Will the FIFA introduce VAR technology in all matches by the 2030 World Cup?,0.85,Is VAR technology expected to be used in all matches during the 2030 FIFA World Cup?,0.9,,,0.10696563746013962
+paraphrase,Will Microsoft achieve carbon-negative operations across all data centers by 2035?,0.75,Is Microsoft expected to reach carbon-negative status for all data centers by 2035?,0.75,,,0.0
+paraphrase,Will the United Nations ban the use of drones in warfare by 2030?,0.15,Is a drone warfare ban expected to be implemented by the United Nations by 2030?,0.15,,,0.0
+paraphrase,Will Apple launch a mixed-reality headset with advanced haptic feedback by late 2025?,0.65,Is a mixed-reality headset with enhanced haptic feedback anticipated to be launched by Apple by late 2025?,0.65,,,0.0
+paraphrase,Will the European Commission implement a digital tax on large tech companies by 2026?,0.65,Is a digital tax on big tech companies expected to be introduced by the European Commission by 2026?,0.65,,,0.0
+paraphrase,Will Samsung unveil a foldable laptop with dual displays by 2027?,0.65,Is a dual-display foldable laptop anticipated to be launched by Samsung by 2027?,0.65,,,0.0
+paraphrase,Will the World Health Organization eradicate malaria globally by 2040?,0.25,Is malaria expected to be eradicated globally by the WHO by 2040?,0.15,,,0.17789201674120503
+paraphrase,Will Apple's M4 chip be integrated into all new MacBook Pro models by 2025?,0.85,Is the integration of the M4 chip into all MacBook Pro models by Apple expected by 2025?,0.75,,,0.17789201674120497
+paraphrase,Will Instagram implement AI-driven content moderation across all user posts by 2026?,0.75,Is AI-powered content moderation expected to be applied to all Instagram posts by 2026?,0.75,,,0.0
+paraphrase,Will the United States pass a federal law banning facial recognition technology by 2030?,0.25,Is a federal ban on facial recognition technology expected to be enacted in the US by 2030?,0.25,,,0.0
+paraphrase,Will Tesla open a supercharging station in every major city in the US by 2028?,0.85,Is the opening of Tesla supercharging stations in every major US city expected by 2028?,0.85,,,0.0
+paraphrase,Will the European Central Bank decrease the interest rates by 2% by 2027?,0.25,Is a 2% interest rate reduction anticipated by the European Central Bank by 2027?,0.25,,,0.0
+paraphrase,Will Facebook introduce cryptocurrency payment options in its platform by 2026?,0.35,Are crypto payment options expected to be added to Facebook's platform by 2026?,0.35,,,0.0
+paraphrase,Will Netflix expand its streaming services to include virtual reality content by 2027?,0.35,Is the inclusion of virtual reality content anticipated in Netflix's streaming services by 2027?,0.35,,,0.0
+paraphrase,Will Amazon establish a drone delivery network across Europe by 2028?,0.35,Is the creation of an Amazon drone delivery network across Europe expected by 2028?,0.35,,,0.0
+paraphrase,Will the United States achieve net-zero carbon emissions by 2050?,0.65,Is net-zero carbon emissions expected to be attained by the USA by 2050?,0.65,,,0.0
+paraphrase,Will Harvard University establish a satellite campus in Africa by 2029?,0.15,Is the creation of an African satellite campus by Harvard expected by 2029?,0.15,,,0.0
+paraphrase,Will the International Renewable Energy Agency (IRENA) double its membership by 2030?,0.01,Is a twofold increase in IRENA's membership anticipated by 2030?,0.05,,,0.1655211777204736
+paraphrase,Will Spotify acquire exclusive streaming rights to all Bad Bunny albums by 2026?,0.15,Is Spotify expected to secure exclusive streaming of all Bad Bunny albums by 2026?,0.15,,,0.0
+paraphrase,Will the United Kingdom host the FIFA World Cup in 2034?,0.15,Is the UK expected to be the host of the 2034 FIFA World Cup?,0.15,,,0.0
+paraphrase,Will renewable energy constitute 50% of the global energy mix by 2030?,0.35,Is renewable energy expected to account for fifty percent of the global energy portfolio by 2030?,0.35,,,0.0
+paraphrase,Will Tesla's Autopilot achieve full Level 5 autonomy by 2029?,0.35,Is full Level 5 autonomy anticipated for Tesla's Autopilot by 2029?,0.35,,,0.0
+paraphrase,Will the United States implement a universal basic income program by 2035?,0.25,Is a universal basic income program expected to be introduced in the US by 2035?,0.25,,,0.0
+paraphrase,Will Facebook (Meta) achieve over a billion active users by 2028?,0.85,Is Facebook anticipated to exceed one billion active users by Meta by 2028?,1.0,,,0.41844626448875305
+paraphrase,Will the International Court of Justice rule against climate change denial by 2030?,0.05,Is it expected that the ICJ will rule against climate change denial by 2030?,0.25,,,0.4116934847963092
+paraphrase,Will Apple Car become commercially available in Europe by 2027?,0.45,Is the commercial release of Apple Car in Europe anticipated by 2027?,0.65,,,0.28988551782622424
+paraphrase,Will the International Renewable Energy Agency certify five new countries' renewable energy plans by 2026?,0.75,Are five new countries' renewable energy plans expected to be certified by IRENA by 2026?,0.75,,,0.0
+paraphrase,Will NASA's Artemis program land a mixed-gender crew on the Moon by 2030?,0.75,Is a mixed-gender Moon landing anticipated by NASA's Artemis program by 2030?,0.85,,,0.17789201674120497
+paraphrase,Will the United States establish a nationwide high-speed rail network by 2040?,0.15,Is a nationwide high-speed rail network expected to be built in the US by 2040?,0.25,,,0.17789201674120503
+paraphrase,Will Facebook's Metaverse platform integrate virtual real estate by 2029?,0.75,Is the integration of virtual real estate into Facebook's Metaverse expected by 2029?,0.85,,,0.17789201674120497
+paraphrase,Will the European Union ban gasoline cars from all member countries by 2035?,0.75,Is a ban on gasoline cars across the EU expected by 2035?,0.85,,,0.17789201674120497
+paraphrase,Will the World Health Organization certify a universal COVID-19 vaccine by 2027?,0.35,Is a universal COVID-19 vaccine certification anticipated by the WHO by 2027?,0.25,,,0.15504341823651052
+paraphrase,Will Twitter launch a subscription-based ad-free tier by late 2025?,0.65,Is Twitter expected to offer an ad-free subscription model by late 2025?,0.65,,,0.0
+paraphrase,Will Google achieve quantum supremacy with its new quantum computer by 2032?,0.65,Is Google anticipated to reach quantum supremacy with its new quantum machine by 2032?,0.65,,,0.0
+paraphrase,Will the United Nations adopt a global treaty on ocean pollution by 2030?,0.65,Is a global ocean pollution treaty expected to be adopted by the UN by 2030?,0.65,,,0.0
+paraphrase,Will Amazon Web Services achieve carbon-neutral operations by 2035?,0.65,Is AWS expected to attain carbon-neutral status worldwide by 2035?,0.65,,,0.0
+paraphrase,Will Microsoft acquire Twitter by the end of 2026?,0.15,Is Microsoft expected to finalize Twitter's acquisition by the end of 2026?,0.1,,,0.1069656374601395
+paraphrase,Will the International Olympic Committee add skateboarding as a permanent sport by 2030?,0.75,Is skateboarding anticipated to become a permanent Olympic sport by the IOC by 2030?,0.75,,,0.0
+paraphrase,Will Tesla's Solar Roof achieve mass production by 2027?,0.65,Is mass production of Tesla's Solar Roof expected to commence by 2027?,0.65,,,0.0
+paraphrase,Will the World Health Organization eradicate polio globally by 2035?,0.75,Is global polio eradication expected by the WHO by 2035?,0.65,,,0.15504341823651052
+paraphrase,Will Facebook roll out a virtual reality meeting feature to all users by 2026?,0.75,Is a VR meeting feature expected to be available to all Facebook users by 2026?,0.65,,,0.15504341823651052
+paraphrase,Will NASA's Artemis program land two astronauts on Mars by 2040?,0.25,Is the landing of two astronauts on Mars by Artemis expected by NASA by 2040?,0.35,,,0.15504341823651052
