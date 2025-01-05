@@ -485,20 +485,11 @@ def llm_generate(operator: str, questions: List[Dict[str, str]]) -> Dict[str, st
         combined_title = title_match.group(1).strip()
         combined_body = body_match.group(1).strip()
 
-    # Handle resolution date logic
-    if operator == 'not':
-        resolution_date = questions[0]['resolution_date']
-    else:
-        resolution_date = questions[0]['resolution_date']
 
     # Base question attributes
     base_question = {
         "title": combined_title,
         "body": combined_body,
-        "resolution_date": resolution_date,
-        "question_type": "binary",
-        "data_source": "llm_generated",
-        "created_date": questions[0]['created_date']
     }
 
     # Construct output question format based on operator type
