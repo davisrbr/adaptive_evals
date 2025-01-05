@@ -25,7 +25,7 @@ def consistency_scorer() -> Scorer:
     async def score(state: TaskState, target: Target) -> Score:
         checks = state.metadata.get('consistency_checks', {})
         # Initialize scores with defaults for all consistency types
-        scores = {f"{ct.value}_score": 0.0 for ct in ConsistencyType}
+        scores = {f"{ct.value}_score": None for ct in ConsistencyType}
         scores["overall_score"] = 0.0
         # scores = {}
         beta_min = 1e-3  # regularization term
@@ -38,7 +38,7 @@ def consistency_scorer() -> Scorer:
             
             if not check_data:
                 logging.warning(f"No check data for {ct_value}")
-                scores[key] = 0.0
+                scores[key] = None
                 continue
             
             # Convert single check to list for uniform processing
@@ -116,7 +116,7 @@ def consistency_scorer() -> Scorer:
                     
                 except Exception as e:
                     logging.error(f"Error calculating {ct_value} metric: {str(e)}")
-                    check['score'] = 0.0
+                    check['score'] = None
                     type_scores.append(0.0)
             
             # Average the scores for this type
@@ -126,7 +126,7 @@ def consistency_scorer() -> Scorer:
                 scores[key] = mean_score
                 logging.info(f"{key}: mean={mean_score:.3f}, stderr={stderr_score:.3f}")
             else:
-                scores[key] = 0.0
+                scores[key] = None
 
         # Calculate overall score as mean of all individual scores
         if all_type_scores:
@@ -135,7 +135,7 @@ def consistency_scorer() -> Scorer:
             scores["overall_score"] = overall_mean
             logging.info(f"\n=== Overall Score: mean={overall_mean:.3f}, stderr={overall_stderr:.3f} ===")
         else:
-            scores["overall_score"] = 0.0
+            scores["overall_score"] = None
             logging.info("\n=== Overall Score: mean=0.000, stderr=0.000 ===")
 
         return Score(
