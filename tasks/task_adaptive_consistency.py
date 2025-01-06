@@ -263,10 +263,20 @@ if __name__ == "__main__":
         for ct in ConsistencyType
     ]
 
+    # tasks = [
+    #     adaptive_consistency(
+    #         initial_log_path=initial_log_path,
+    #         consistency_types=['paraphrase', 'consequence'],  # Pass single consistency type as list
+    #         use_embeddings=False,
+    #         dataset_path=None
+    #     )
+    # ]
+
 
     # Evaluate all tasks
     results = eval(
         tasks,
+        max_connections=1,
         model="openai/gpt-4o",
         temperature=0,
         start_log=True,
