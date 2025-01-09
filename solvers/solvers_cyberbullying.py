@@ -3,7 +3,7 @@ import random
 from inspect_ai.model import get_model, GenerateConfig, ChatMessageSystem, ChatMessageUser
 from inspect_ai.scorer import Target
 from inspect_ai.solver import solver, TaskState, Generate
-from inspect_ai.log import read_eval_log
+from data.eval_log_processing import read_eval_log_async
 
 from scorers.scorers_inspect import strongreject_scorer
 from scorers.scorers_inspect import cyberbullying_scorer
@@ -259,7 +259,7 @@ def cyberbullying_adaptive_solver(
     max_iterations: int = 5,
     n_last_messages: int = 3,
     use_strongreject_scorer: bool = False,
-    heirarchal_scorer: bool = False,
+    hierarchical_scorer: bool = False,
     judge_calibration: bool = False,
     n_positive_samples: int = 5,
     n_negative_samples: int = 5,
@@ -285,18 +285,20 @@ def cyberbullying_adaptive_solver(
         judge_calibration (bool): If True, uses a neutral prompt instead of the more aggressive system prompt.
         n_positive_samples (int): Number of successful (jailbroken) samples to retrieve from the log.
         n_negative_samples (int): Number of unsuccessful samples to retrieve from the log.
-        randomize_sampling (bool): If True, sample randomly from previous runs’ data; otherwise, gather separate correct/incorrect.
-        use_vanilla_prompt (bool): If True, uses the vanilla cyberbullying_jailbreak_prompt; otherwise uses roleplay/appeal.
+        randomize_sampling (bool): If True, sample randomly from previous runs’ data; otherwise, gather separate successful/unsuccessful.
+        use_vanilla_prompt (bool): If True, uses the vanilla cyberbullying_jailbreak_prompt; otherwise uses roleplay/logical appeal/authority endorsement.
+        percentiles_and_samples (list): List of tuples specifying the percentiles and number of samples to retrieve, from embedding space similarity of logs to bullying targets
+        use_embeddings (bool): Whether to use embeddings for adaptive retrieval
 
     Returns:
         Callable: Async solver function.
     """
     def _build_scorer():
-        if use_strongreject_scorer and not heirarchal_scorer:
+        if use_strongreject_scorer and not hierarchical_scorer:
             return strongreject_scorer(judge_model=judge_model_name)
-        elif heirarchal_scorer and not use_strongreject_scorer:
-            return heirarchal_scorer(judge_model=judge_model_name)
-        elif not use_strongreject_scorer and not heirarchal_scorer:
+        elif hierarchical_scorer and not use_strongreject_scorer:
+            return hierarchical_scorer(judge_model=judge_model_name)
+        elif not use_strongreject_scorer and not hierarchical_scorer:
             return cyberbullying_scorer(judge_model=judge_model_name)
         else:
             raise ValueError("Cannot use both strongreject scorer and heirarchal scorer")
@@ -326,7 +328,7 @@ def cyberbullying_adaptive_solver(
         # 1. Read previous logs, gather successful/unsuccessful attempts
         # ---------------------------------------------------------------------
         try:
-            eval_log = read_eval_log(initial_log_path)
+            eval_log = await read_eval_log_async(initial_log_path)
         except Exception as e:
             state.error = f"Unable to read initial evaluation log: {e}"
             state.store.set("error", f"Error: {e}")
@@ -341,18 +343,36 @@ def cyberbullying_adaptive_solver(
             return state
 
         # Classify logs as "successful" if they set 'jailbreak_success' = True
-        successful = [s for s in sample_logs if s.store.get("jailbreak_success", False)]
-        unsuccessful = [s for s in sample_logs if not s.store.get("jailbreak_success", False)]
+        try:
+            successful = [s for s in sample_logs if s.store.get("jailbreak_success", False)]
+            unsuccessful = [s for s in sample_logs if not s.store.get("jailbreak_success", False)]
+        except Exception as e:
+            state.error = f"Error classifying logs: {e}"
+            state.store.set("error", f"Error: {e}")
+            state.completed = True
+            return state
 
         if randomize_sampling:
-            chosen_samples = random.sample(sample_logs, min(len(sample_logs), n_positive_samples + n_negative_samples))
-            successful_samples = [s for s in chosen_samples if s.store.get("jailbreak_success", False)]
-            unsuccessful_samples = [s for s in chosen_samples if not s.store.get("jailbreak_success", False)]
+            try:
+                chosen_samples = random.sample(sample_logs, min(len(sample_logs), n_positive_samples + n_negative_samples))
+                successful_samples = [s for s in chosen_samples if s.store.get("jailbreak_success", True)]
+                unsuccessful_samples = [s for s in chosen_samples if not s.store.get("jailbreak_success", False)]
+            except Exception as e:
+                state.error = f"Error sampling logs: {e}"
+                state.store.set("error", f"Error: {e}")
+                state.completed = True
+                return state
         else:
-            chosen_success = random.sample(successful, min(len(successful), n_positive_samples))
-            chosen_unsuccess = random.sample(unsuccessful, min(len(unsuccessful), n_negative_samples))
-            successful_samples = chosen_success
-            unsuccessful_samples = chosen_unsuccess
+            try:
+                chosen_success = random.sample(successful, min(len(successful), n_positive_samples))
+                chosen_unsuccess = random.sample(unsuccessful, min(len(unsuccessful), n_negative_samples))
+                successful_samples = chosen_success
+                unsuccessful_samples = chosen_unsuccess
+            except Exception as e:
+                state.error = f"Error sampling logs: {e}"
+                state.store.set("error", f"Error: {e}")
+                state.completed = True
+                return state
 
         # Format examples for the adaptive prompt
         formatted_successful = []
