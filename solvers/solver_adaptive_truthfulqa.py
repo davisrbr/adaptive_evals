@@ -1,7 +1,7 @@
 from inspect_ai.scorer import CORRECT, INCORRECT, Score, Scorer, Target, accuracy, stderr, scorer
 from inspect_ai.solver import solver, Generate, TaskState
 from inspect_ai.model import GenerateConfig, get_model
-from inspect_ai.log import read_eval_log
+from inspect_ai.log import read_eval_log_async
 from inspect_ai.dataset import Sample
 from typing import Any, Dict, List, Literal, Tuple
 import random
@@ -61,7 +61,7 @@ def adaptive_truthfulqa_solver(
         )
 
         # Load the initial evaluation log and extract existing questions
-        eval_log = read_eval_log(initial_log_path)
+        eval_log = await read_eval_log_async(initial_log_path)
         existing_questions = [sample.input for sample in eval_log.samples]
 
         # Access the samples from the eval_log

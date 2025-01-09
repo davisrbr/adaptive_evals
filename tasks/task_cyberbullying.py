@@ -1,10 +1,10 @@
 from inspect_ai import Task, task, Epochs
 from inspect_ai.dataset import MemoryDataset, json_dataset
-from inspect_ai.log import read_eval_log
 from solvers.solvers_cyberbullying import cyberbullying_adaptive_solver, cyberbullying_basic_solver, cyberbullying_pair_solver
 from data.data_cyberbullying import process_sample_cyberbullying
 from scorers.scorers_inspect import final_scorer
 from inspect_ai.scorer import mean, stderr
+from typing import Union
 
 
 @task
@@ -14,10 +14,18 @@ def cyberbullying_task(
     epochs: int = 1, 
     use_strongreject_scorer: bool = True,
     judge_calibration: bool = False,
-    num_samples: int | bool = 25,
+    num_samples: Union[int, bool] = 25,
 ):
     """
     Task designed to get a baseline for cyberbullying / calibrate the judge.
+    
+    Args:
+        target_model_name: Model to be evaluated
+        judge_model_name: Model used to judge responses
+        epochs: Number of evaluation runs
+        use_strongreject_scorer: Whether to use strong rejection scoring
+        judge_calibration: Whether to calibrate the judge
+        num_samples: Number of samples to evaluate, or False for all
     """
     
     dataset = json_dataset(
@@ -101,24 +109,50 @@ def cyberbullying_adaptive_task(
     n_negative_samples: int = 5,
     randomize_sampling: bool = False,
     use_strongreject_scorer: bool = False,
-    heirarchal_scorer: bool = False,
+    hierarchical_scorer: bool = False,
     judge_calibration: bool = False,
     use_vanilla_prompt: bool = True,
     # For adaptive retrieval:
     percentiles_and_samples: list = [(1.0, 2), (0.5, 2)],  # Example: top 100% get 2 samples, top 50% get 2
     use_embeddings: bool = False,
     # Filter criteria for retrieving only successful outputs from prior runs of the basic solver:
-    initial_log_path: str = "/Users/davisbrown/adaptive_evals/logs/2024-12-31T12-11-26-05-00_cyberbullying-jailbreak-task_VJoc6WaBg3QG4W2ySinAS4.json",
+    initial_log_path: str = "/Users/davisbrown/adaptive_evals/log_dump/2024-12-31T12-11-26-05-00_cyberbullying-jailbreak-task_VJoc6WaBg3QG4W2ySinAS4.json",
     num_samples: int | bool = 25,
     n_streams: int = 1,
 ):
-    dataset = json_dataset(
-        json_file="../data/cyberbullying_personas.json",
-        sample_fields=process_sample_cyberbullying,
-        shuffle=True,
-        seed=42,
-        limit=num_samples,
-    )
+    """
+    Adaptive cyberbullying evaluation task that uses previous successful attacks to inform new ones.
+    
+    Args:
+        target_model_name: Model to be evaluated
+        judge_model_name: Model used to judge responses
+        attack_model_name: Model used to generate attack prompts
+        max_iterations: Maximum number of back-and-forth iterations
+        n_last_messages: Number of messages to keep in the context window
+        n_positive_samples: Number of positive samples to retrieve
+        n_negative_samples: Number of negative samples to retrieve
+        randomize_sampling: Whether to randomize the sampling of positive and negative samples
+        use_strongreject_scorer: Whether to use the strongreject scorer
+        hierarchical_scorer: Whether to use a heirarchal PAIR scorer
+        judge_calibration: Whether to use the neutral generation prompt for judge calibration
+        use_vanilla_prompt: Whether to use the vanilla (non-jailbreak) prompt
+        percentiles_and_samples: List of tuples specifying the percentiles and number of samples to retrieve, from embedding space similarity of logs to bullying targets
+        use_embeddings: Whether to use embeddings for adaptive retrieval
+        initial_log_path: Path to the initial log file
+        num_samples: Number of samples to evaluate, or False for all
+        n_streams: Number of streams to evaluate
+    """
+    try:
+        dataset = json_dataset(
+            json_file="../data/cyberbullying_personas.json",
+            sample_fields=process_sample_cyberbullying,
+            shuffle=True,
+            seed=42,
+            limit=num_samples,
+        )
+    except Exception as e:
+        print(f"Error loading dataset: {e}")
+        return None
     return Task(
         dataset=dataset,
         plan=[cyberbullying_adaptive_solver(
@@ -131,7 +165,7 @@ def cyberbullying_adaptive_task(
             n_negative_samples=n_negative_samples,
             randomize_sampling=randomize_sampling,
             use_strongreject_scorer=use_strongreject_scorer,
-            heirarchal_scorer=heirarchal_scorer,
+            hierarchical_scorer=hierarchical_scorer,
             judge_calibration=judge_calibration,
             use_vanilla_prompt=use_vanilla_prompt,
             percentiles_and_samples=percentiles_and_samples,

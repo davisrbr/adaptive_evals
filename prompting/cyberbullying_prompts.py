@@ -1,4 +1,14 @@
 import json
+import os
+import json
+import pickle
+from typing import Dict, List, Any, Optional
+import numpy as np
+from sentence_transformers import SentenceTransformer
+
+
+_EMBEDDING_CACHE: Dict[str, Any] = {}
+_EMBEDDING_MODEL = None
 
 
 def get_cyberbullying_attacker_system_prompts():
@@ -549,3 +559,154 @@ def get_adaptive_cyberbullying_examples(percentile: float, examples: list, n_sam
     end_idx = min(len(sorted_examples), start_idx + n_samples)
     
     return sorted_examples[start_idx:end_idx]
+
+
+def _initialize_model_if_needed() -> None:
+    """
+    Lazily initialize the embedding model.
+    """
+    global _EMBEDDING_MODEL
+    if _EMBEDDING_MODEL is None:
+        _EMBEDDING_MODEL = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
+
+
+def embed_cyberbullying_logs(log_path: str, cache_path: Optional[str] = None) -> List[Dict[str, Any]]:
+    """
+    Loads an Inspect evaluation log, embeds successes/failures, and caches results to avoid recomputing.
+
+    Args:
+        log_path: Path to the JSON or pickled evaluation log.
+        cache_path: Optional path to store or retrieve cached embeddings.
+
+    Returns:
+        A list of embedded sample dicts, each having:
+          'input', 'target_response', 'store', 'embedding' (ndarray), etc.
+    """
+    global _EMBEDDING_CACHE
+    _initialize_model_if_needed()
+
+    if not cache_path:
+        cache_path = log_path + ".embedcache.pkl"
+
+    # If already in memory cache, return it
+    if log_path in _EMBEDDING_CACHE:
+        return _EMBEDDING_CACHE[log_path]
+
+    # If on disk, load it
+    if os.path.exists(cache_path):
+        with open(cache_path, "rb") as f:
+            embedded_logs = pickle.load(f)
+        _EMBEDDING_CACHE[log_path] = embedded_logs
+        return embedded_logs
+
+    # Otherwise, read the log raw
+    with open(log_path, "r") as f:
+        data = json.load(f)
+    sample_logs = data.get("samples", [])
+
+    # Embed each sample
+    embedded_logs = []
+    for sample in sample_logs:
+        # Combine relevant text for embedding:
+        # e.g., user input + target response + any stored reasoning
+        relevant_text = sample.get("input", "") + "\n" + sample["store"].get("target_response", "")
+        reasoning_trace = sample["store"].get("reasoning_trace", "")
+        if reasoning_trace:
+            relevant_text += "\n" + reasoning_trace
+
+        embedding_vec = _EMBEDDING_MODEL.encode(relevant_text)
+        sample["embedding"] = embedding_vec
+        embedded_logs.append(sample)
+
+    # Cache in memory and on disk
+    _EMBEDDING_CACHE[log_path] = embedded_logs
+    with open(cache_path, "wb") as f:
+        pickle.dump(embedded_logs, f)
+
+    return embedded_logs
+
+
+def retrieve_similar_examples(
+    base_text: str,
+    embedded_logs: List[Dict[str, Any]],
+    top_k: int = 4
+) -> List[Dict[str, Any]]:
+    """
+    Compute similarity between base_text embedding and each sample in embedded_logs, return top_k.
+
+    Args:
+        base_text: Text to embed for retrieval.
+        embedded_logs: The embedded logs from embed_cyberbullying_logs.
+        top_k: Number of most similar examples to return.
+
+    Returns:
+        A sorted list (descending similarity) of up to top_k items from embedded_logs.
+    """
+    _initialize_model_if_needed()
+    if not embedded_logs:
+        return []
+
+    base_emb = _EMBEDDING_MODEL.encode(base_text)
+    base_emb_norm = base_emb / np.linalg.norm(base_emb)
+
+    # Dot product for similarity
+    similarities = []
+    for s in embedded_logs:
+        emb_s = s.get("embedding")
+        if emb_s is None:
+            continue
+        emb_s_norm = emb_s / np.linalg.norm(emb_s)
+        score = float(np.dot(base_emb_norm, emb_s_norm))
+        similarities.append((s, score))
+
+    # Sort by score descending
+    similarities.sort(key=lambda x: x[1], reverse=True)
+    top_items = [item[0] for item in similarities[:top_k]]
+    return top_items
+
+
+def retrieve_examples_by_percentiles(
+    embedded_logs: List[Dict[str, Any]],
+    percentiles_and_samples: List[tuple]
+) -> List[Dict[str, Any]]:
+    """
+    Retrieve examples from certain percentile slices of their existing scores.
+
+    This can be used if the logs contain a 'best_score' or custom score we want
+    to slice by. We then pick some number of samples from the slice.
+
+    Args:
+        embedded_logs: Already embedded logs. Must have 'store' with 'best_score' or similar.
+        percentiles_and_samples: e.g. [(1.0, 2), (0.5, 2)]
+                                 top 100% get 2 samples, top 50% get 2.
+
+    Returns:
+        Combined list of examples from the requested percentile slices.
+    """
+    if not embedded_logs:
+        return []
+
+    # Example: we'll use store.best_score if present, else 0
+    scored_logs = []
+    for s in embedded_logs:
+        raw_score = s["store"].get("best_score", 0)
+        scored_logs.append((s, raw_score))
+
+    scored_logs.sort(key=lambda x: x[1])  # ascending
+    results = []
+    n = len(scored_logs)
+    if n == 0:
+        return []
+
+    for (pct, nm) in percentiles_and_samples:
+        # index at that percentile
+        idx = int(pct * (n - 1))
+        idx = max(0, min(idx, n - 1))
+        # Slice around idx
+        lower = max(0, idx - nm // 2)
+        upper = min(n, lower + nm)
+        selected = scored_logs[lower:upper]
+        for (ex, _) in selected:
+            results.append(ex)
+
+    return results
