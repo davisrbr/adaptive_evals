@@ -4,14 +4,16 @@ import re
 from inspect_ai import Epochs, Task, task, eval
 from inspect_ai.dataset import Sample, hf_dataset, MemoryDataset
 from inspect_ai.scorer import choice
-from inspect_ai.solver import multiple_choice
+from inspect_ai.solver import multiple_choice, chain_of_thought
 from typing import Any, Optional
 import sys
+
+from solvers.adaptive_utils import multiple_choice_save_cot
 sys.path.append("..")
 from legalbench.utils import generate_prompts
 
 from scorers.scorers_rewording import choice_judged, judge_scoring
-from solvers.solver_adaptive_legal import adaptive_legal_solver, adaptive_legal_judge_solver, adaptive_legal_solver_debug, rewording_legal_solver, rewording_legal_judge_solver
+from solvers.solver_adaptive_legal import adaptive_legal_solver, adaptive_legal_judge_solver, rewording_legal_solver, rewording_legal_judge_solver
 from scorers.scorers_legal import (
     adaptive_legal_scorer_judged,
     adaptive_legal_scorer,
@@ -83,12 +85,14 @@ def legalbench_initial_aggregated(task_names: list[str] = [
     'maud_financial_point_of_view_is_the_sole_consideration', 
     'maud_accuracy_of_fundamental_target_rws_bringdown_standard',
     'maud_accuracy_of_target_general_rw_bringdown_timing_answer',
-], debug: bool = False) -> Task:
+], debug: bool = False, use_example: bool = True, use_cot: bool = False, use_claude: bool = False) -> Task:
     """
     Initial evaluation task for multiple LegalBench datasets aggregated into a single dataset.
 
     Args:
         task_names (list[str]): The list of LegalBench task names to evaluate.
+        use_few_shot (bool): Whether to use few-shot prompting.
+        use_cot (bool): Whether to use chain-of-thought prompting.
     """
 
     # Initialize an empty list to collect samples from all tasks
@@ -96,7 +100,13 @@ def legalbench_initial_aggregated(task_names: list[str] = [
 
     for task_name in task_names:
         # Load the prompt template for the specified task
-        prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt.txt"
+        # check if claude in model name
+        if use_claude:
+            prompt_template_path = f"../legalbench/tasks/{task_name}/claude_prompt.txt"
+        elif use_example:
+            prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt.txt"
+        else:
+            prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt_wo_example.txt"
         with open(prompt_template_path) as in_file:
             prompt_template = in_file.read()
 
@@ -139,7 +149,7 @@ def legalbench_initial_aggregated(task_names: list[str] = [
         )
 
         if debug:
-            dataset = dataset[:30]
+            dataset = dataset[:10]
 
         # Collect samples from this dataset
         samples = dataset.samples
@@ -150,11 +160,13 @@ def legalbench_initial_aggregated(task_names: list[str] = [
     if debug:
         combined_dataset = combined_dataset[:50]
 
+    solvers = [
+       multiple_choice_save_cot(multiple_correct=False, shuffle=True, cot=use_cot)
+    ]
+
     return Task(
         dataset=combined_dataset,
-        solver=[
-            multiple_choice(multiple_correct=False, shuffle=True)
-        ],
+        solver=solvers,
         scorer=choice(),
     )
 
@@ -168,8 +180,11 @@ def adaptive_legal(
     eval_model_name: str = "openai/gpt-4o",
     use_cot_generator: bool = False,
     use_cot_evaluator: bool = False,
+    use_claude: bool = False,
+    use_example: bool = True,
     randomize_sampling: bool = False,
     judge_model_name: Optional[str] = None,
+    cot_in_context: bool = False,
 ) -> Task:
     """
     Adaptive evaluation task for the LegalBench dataset.
@@ -185,6 +200,8 @@ def adaptive_legal(
         use_cot_evaluator (bool): Whether to use chain-of-thought prompting for evaluation.
         randomize_sampling (bool): Whether to shuffle sample selection.
         judge_model_name (Optional[str]): Name of the model used to judge correctness.
+        use_claude (bool): Whether to use Claude for generation and evaluation.
+        use_example (bool): Whether to use examples in the prompt.
 
     Returns:
         Task: An Inspect Task instance that runs an adaptive solver pipeline
@@ -200,6 +217,9 @@ def adaptive_legal(
         adaptive_legal_solver(
             initial_log_path=initial_log_path,
             task_name=task_name,
+            cot_in_context=cot_in_context,
+            use_claude=use_claude,
+            use_example=use_example,
             n_positive_samples=n_positive_samples,
             n_negative_samples=n_negative_samples,
             generator_model_name=generator_model_name,
@@ -233,33 +253,6 @@ def adaptive_legal(
         dataset=dataset,
         solver=solver_list,
         scorer=scorer_list,
-    )
-
-@task
-def adaptive_legal_debug(
-    initial_log_path: str,
-) -> Task:
-    """
-    Adaptive evaluation task for the LegalBench dataset.
-
-    Args:
-        initial_log_path (str): Path to the initial evaluation log.
-
-    """
-
-    # We'll start with an empty dataset because the solver will populate new samples
-    dataset = MemoryDataset(name="adaptive_legal", samples=[])
-
-    solver_list = [
-        adaptive_legal_solver_debug(
-            initial_log_path=initial_log_path,
-        )
-    ]
-
-    return Task(
-        dataset=dataset,
-        solver=solver_list,
-        scorer=choice(),
     )
 
 @task
@@ -345,6 +338,8 @@ def legalbench_reworded_aggregated(
     model_name: str = "openai/gpt-4o-mini",
     rewording_model_name: str = "openai/gpt-4o-mini",
     cot: bool = False,
+    use_claude: bool = False,
+    use_example: bool = True,
     debug: bool = False
 ) -> Task:
     """
@@ -355,6 +350,8 @@ def legalbench_reworded_aggregated(
         model_name (str): The name of the model used to answer the question.
         rewording_model_name (str): The name of the model used to reword the question.
         cot (bool): Whether to use chain-of-thought prompting.
+        use_claude (bool): Whether to use Claude for rewording.
+        use_example (bool): Whether to use examples in the prompt.
         debug (bool): If True, use only a 5 question subset for debugging.
     """
     # Initialize an empty list to collect samples from all tasks
@@ -362,7 +359,12 @@ def legalbench_reworded_aggregated(
 
     for task_name in task_names:
         # Load the prompt template for the specified task
-        prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt.txt"
+        if use_claude:
+            prompt_template_path = f"../legalbench/tasks/{task_name}/claude_prompt.txt"
+        elif use_example:
+            prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt.txt"
+        else:
+            prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt_wo_example.txt"
         with open(prompt_template_path) as in_file:
             prompt_template = in_file.read()
 

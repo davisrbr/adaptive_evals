@@ -31,8 +31,11 @@ def adaptive_legal_solver(
     randomize_sampling: bool = False,
     generator_model_name: str = "openai/gpt-4",
     eval_model_name: str = "openai/gpt-4",
+    cot_in_context: bool = False,
     use_cot_generator: bool = False,
     use_cot_evaluator: bool = False,
+    use_claude: bool = False,
+    use_example: bool = True,
     num_attempts: int = 30,
 ) -> Generate:
     """
@@ -87,9 +90,16 @@ def adaptive_legal_solver(
             sample_data = json.dumps(sample_data)   
             context_examples += f"{status} Answered Example:\n"
             context_examples += f"Sample Data:\n{sample_data}\n"
-            context_examples += f"{sample_item.target}\n\n"
+            if cot_in_context:
+                context_examples += f"Reasoning trace from the model for this example:\n{sample_item.store.get('chain_of_thought')}\n"
+            context_examples += f"Correct answer for this example:\n{sample_item.target}\n\n"
 
-        prompt_template_path = f"/Users/davisbrown/adaptive_evals/legalbench/tasks/{task_name}/base_prompt.txt"
+        if use_claude:
+            prompt_template_path = f"/Users/davisbrown/adaptive_evals/legalbench/tasks/{task_name}/claude_prompt.txt"
+        elif use_example:
+            prompt_template_path = f"/Users/davisbrown/adaptive_evals/legalbench/tasks/{task_name}/base_prompt.txt"
+        else:
+            prompt_template_path = f"/Users/davisbrown/adaptive_evals/legalbench/tasks/{task_name}/base_prompt_wo_example.txt"
         with open(prompt_template_path, 'r') as f:
             base_prompt = f.read()
 
@@ -102,10 +112,15 @@ def adaptive_legal_solver(
         try:
             if use_cot_generator:
                 json_format = "{{\"reasoning_for_question\": [REASONING], \"text\": [TEXT], \"reasoning_for_answer\": [REASONING], \"answer\": [ANSWER]}}"
-                reasoning_prompt = "'reasoning_for_question' is your step by step reasoning for the question, (for example, 'The model seems to have been confused about the relative importance of the clauses of the statute, and has interpreted them incorrectly; I will make a similar question but have a different clause emphasized in my invented document'), 'reasoning_for_answer' is your step by step reasoning for the answer, here you should explain why the answer to your constructed question is correct (for example, 'Because the question asks about statute A, the correct answer is clause A of statute A')"
+                reasoning_prompt = "'reasoning_for_question' is your step by step reasoning for the question, (for example, 'The model seems to have been confused about the relative importance of the clauses of the statute, and has interpreted them incorrectly; I will make a similar question but have a different clause emphasized in my invented document'), 'reasoning_for_answer' is your step by step reasoning for the answer, here you should explain why the answer to your constructed question is correct (for example, 'Because the question asks about statute A during time period B, the correct answer is clause A during time period B instead of statute X during time period Y')"
             else:
                 json_format = '{{"text": [TEXT], "answer": [ANSWER]}}'
                 reasoning_prompt = ""
+
+            if cot_in_context:
+                context_examples = f"Next, you will see some examples of questions and answers that the model has answered correctly and incorrectly. These examples will include reasoning traces from the model. Pay attention to the model reasoning here, and see if you can notice confusions or failures in the model's reasoning as it attempts to work through the question. You will use these reasoning traces to inform your question generation.\n{context_examples}"
+            else:
+                context_examples = f"Next, you will see some examples of questions and answers that the model has answered correctly and incorrectly. Use these examples to inform your question generation.\n{context_examples}"
 
             generation_prompt = (
                 "You are to generate a new data sample for the following LegalBench task.\n\n"
@@ -117,7 +132,7 @@ def adaptive_legal_solver(
                 f"- Output the result as a JSON object with keys corresponding to the placeholders.\n"
                 f"- Ensure that the 'answer' key is included and contains the correct answer.\n"
                 f"- Do not include any additional text outside the JSON object.\n\n"
-                f"Examples:\n{context_examples}\n"
+                f"{context_examples}\n"
                 f"Now, generate a new data sample. Again, note that you are to make this question extremely difficult to answer correctly. Consider the examples provided, and how they might have caused the model to incorrectly answer the question."
                 f"Make your question more like the examples that were answered incorrectly, but make sure that it is distinct from the examples provided. Your goal is to understand why the failure modes of the model in the incorrectly answered examples, and to use this failure model to construct a new difficult question.\n\n"
                 f"Please format your JSON like {json_format}, where {reasoning_prompt}[TEXT] is the full text of the question, including all details (like documents, etc., but not including the letter of the answer-- do not, under any circumstances, include the letter of the answer in the text field) and [ANSWER] is the letter of the correct answer to the question. Do not prepend or append anything to your JSON, just the brackets and the keys and values. Please be sure to include all {4 if use_cot_generator else 2} keys in the JSON."
@@ -156,9 +171,10 @@ def adaptive_legal_solver(
                 state.completed = True
                 return state
 
-            data_df = pd.DataFrame([sample_data])
-            prompts = generate_prompts(prompt_template=base_prompt, data_df=data_df)
-            generated_prompt = prompts[0]
+            # data_df = pd.DataFrame([sample_data])
+            # prompts = generate_prompts(prompt_template=base_prompt, data_df=data_df)
+            # generated_prompt = prompts[0]
+            generated_prompt = sample_data.get('text', '')
             # prepend the multiple choice template to the prompt
             SINGLE_ANSWER_TEMPLATE = "Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where $LETTER is the letter of the correct answer."
             SINGLE_ANSWER_TEMPLATE_COT = "Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where $LETTER is the letter of the correct answer. Think step by step before answering."
