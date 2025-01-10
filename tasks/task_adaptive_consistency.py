@@ -57,7 +57,7 @@ def create_csv_sample(row: pd.Series) -> Sample:
     )
 
 @task
-def initial_consistency(csv_path: Optional[str] = None) -> Task:
+def initial_consistency(csv_path: Optional[str] = None, consistency_types: List[str] = None) -> Task:
     """Initial consistency evaluation task."""
     if csv_path:
         # Process CSV input
@@ -74,14 +74,23 @@ def initial_consistency(csv_path: Optional[str] = None) -> Task:
         
     else:
         # Original HuggingFace dataset processing
+        if consistency_types is None:
+            consistency_types = [ct.value for ct in ConsistencyType]
+        
+        # Validate consistency types
+        valid_types = set(ct.value for ct in ConsistencyType)
+        invalid_types = set(consistency_types) - valid_types
+        if invalid_types:
+            raise ValueError(f"Invalid consistency types: {invalid_types}")
+
         def record_to_sample(record: dict) -> Sample:
             return Sample(
                 input=record['question'],
-                target=str(record['resolution']),
+                target="",
                 metadata={
                     'id': str(random.randint(10000, 99999)),
-                    'question_type': record['question_type'],
-                    'is_resolved': record.get('is_resolved', False),
+                    'question_type': None,
+                    'is_resolved': None,
                     'original_data': {
                         'title': record['question'],
                         'body': record['background'],
@@ -90,7 +99,7 @@ def initial_consistency(csv_path: Optional[str] = None) -> Task:
             )
 
         dataset = hf_dataset(
-            "prithvi3/filtered_forecast_sample_test",
+            "prithvi3/consistency_sample_test",
             split="test",
             trust=True,
             sample_fields=record_to_sample,
@@ -100,17 +109,15 @@ def initial_consistency(csv_path: Optional[str] = None) -> Task:
 
         dataset = dataset.filter(
             lambda x: (
-                x.metadata["is_resolved"] is True and 
-                x.metadata["question_type"].lower() == "binary" and 
-                "sqrt" not in x.input.lower()
+                "d20" not in x.input.lower()
             )
         )
-        dataset = dataset[:3]
+        # dataset = dataset[:2] testing
 
         return Task(
             dataset=dataset,
-            solver=consistency_solver(),
-            scorer=consistency_scorer()
+            solver=consistency_solver(use_pretransformed=False, consistency_types=consistency_types),
+            scorer=consistency_scorer(consistency_types)
         )
 
 @task
@@ -182,7 +189,7 @@ def adaptive_consistency(
                 dataset_questions=dataset_questions,
             )
         ],
-        scorer=[consistency_scorer()]
+        scorer=[consistency_scorer(consistency_types=["not", "cond", "but", "expevidence", "or"])]
     )
 
 @task
@@ -220,12 +227,13 @@ def temp_adaptive_judge(
 #         args = parser.parse_args()
         
 #         # Create task based on whether CSV path is provided
-#         task = initial_consistency(args.csv_path)
-        
+#         task = initial_consistency(args.csv_path, consistency_types=["not", "cond", "but", "expevidence", "or"])
+
 #         initial_log = eval(
 #             task, 
 #             model="openai/gpt-4o",
 #             temperature=0,
+#             max_connections=1000,
 #             start_log=True
 #         )[0]
 
@@ -248,29 +256,31 @@ if __name__ == "__main__":
     
     # Construct the path relative to project root
     project_root = Path(__file__).parent.parent
-    initial_log_path =str(project_root  / "logs" / '2025-01-05T18-27-01+05-30_initial-consistency_3f8K9pe7m7TXieyh4yodUe.eval') # Paleka full dataset
+    # initial_log_path =str(project_root  / "logs" / '2025-01-05T18-27-01+05-30_initial-consistency_3f8K9pe7m7TXieyh4yodUe.eval') # Paleka full dataset
+    initial_log_path = str(project_root / "logs" / '2025-01-10T17-20-15+05-30_initial-consistency_ePmV3dmkw4goT3vWXH6hpr.eval')  # 100Q from Paleka Base Qs
 
     
     #dataset_path = "prithvi3/filtered_forecast_sample_test"
     
-    tasks = [
-        adaptive_consistency(
-            initial_log_path=initial_log_path,
-            consistency_types=[ct.value],  # Pass single consistency type as list
-            use_embeddings=False,
-            dataset_path=None
-        )
-        for ct in ConsistencyType
-    ]
-
     # tasks = [
     #     adaptive_consistency(
     #         initial_log_path=initial_log_path,
-    #         consistency_types=['paraphrase', 'consequence'],  # Pass single consistency type as list
+    #         consistency_types=[ct.value],  # Pass single consistency type as list
     #         use_embeddings=False,
     #         dataset_path=None
     #     )
+    #     for ct in ConsistencyType
     # ]
+
+    #['not', 'andor', 'cond', 'but', 'expevidence', 'or']
+    tasks = [
+        adaptive_consistency(
+            initial_log_path=initial_log_path,
+            consistency_types=['paraphrase'],  # Pass single consistency type as list
+            use_embeddings=False,
+            dataset_path=None
+        )
+    ]
 
 
     # Evaluate all tasks
