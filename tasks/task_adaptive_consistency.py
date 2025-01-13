@@ -112,7 +112,7 @@ def initial_consistency(csv_path: Optional[str] = None, consistency_types: List[
                 "d20" not in x.input.lower()
             )
         )
-        # dataset = dataset[:2] testing
+        # dataset = dataset[:12] # testing
 
         return Task(
             dataset=dataset,
@@ -126,6 +126,7 @@ def adaptive_consistency(
     consistency_types: List[str] = [ct.value for ct in ConsistencyType],
     use_embeddings: bool = False, 
     dataset_path: Optional[str] = None,
+    eval_model_name: str = None
 ) -> Task:
     """Creates adversarial consistency questions using metrics from previous evaluations"""
 
@@ -187,6 +188,7 @@ def adaptive_consistency(
                 consistency_types=consistency_types,
                 use_embeddings=use_embeddings,
                 dataset_questions=dataset_questions,
+                eval_model_name=eval_model_name
             )
         ],
         scorer=[consistency_scorer(consistency_types=["not", "cond", "but", "expevidence", "or"])]
@@ -229,13 +231,23 @@ def temp_adaptive_judge(
 #         # Create task based on whether CSV path is provided
 #         task = initial_consistency(args.csv_path, consistency_types=["not", "cond", "but", "expevidence", "or"])
 
+#         # initial_log = eval(
+#         #     task, 
+#         #     model=["anthropic/claude-3-5-sonnet-20241022", "google/gemini-2.0-flash-exp"],
+#         #     temperature=0,
+#         #     max_samples=1,
+#         #     max_subprocesses=2,
+#         #     start_log=True
+#         # )[0]
+#         #"together/deepseek-ai/DeepSeek-V3", "together/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo"
 #         initial_log = eval(
 #             task, 
-#             model="openai/gpt-4o",
+#             model=["together/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo"],
 #             temperature=0,
-#             max_connections=1000,
+#             max_samples=5,
 #             start_log=True
 #         )[0]
+
 
 #         print("\nEvaluation complete")
         
@@ -250,15 +262,14 @@ if __name__ == "__main__":
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s'
     )
-    #initial_log_path = "logs/2024-12-26T11-19-29+05-30_initial-consistency_cExeriowwKWrcS4rBbUc9f.eval"
-    #initial_log_path = "logs/2024-12-31T20-20-44+05-30_initial-consistency_CtRhvzAAkDnGJgXJ868DUB.eval" #Inital log for 100 samples, forecasting dataset
     
     
     # Construct the path relative to project root
     project_root = Path(__file__).parent.parent
-    # initial_log_path =str(project_root  / "logs" / '2025-01-05T18-27-01+05-30_initial-consistency_3f8K9pe7m7TXieyh4yodUe.eval') # Paleka full dataset
-    initial_log_path = str(project_root / "logs" / '2025-01-10T17-20-15+05-30_initial-consistency_ePmV3dmkw4goT3vWXH6hpr.eval')  # 100Q from Paleka Base Qs
-
+    # initial_log_path = str(project_root / "logs" / '2025-01-10T17-20-15+05-30_initial-consistency_ePmV3dmkw4goT3vWXH6hpr.eval')  # GPT4o 100Q from Paleka Base Qs
+    # initial_log_path = str(project_root / "logs" / '2025-01-11T17-42-09+05-30_initial-consistency_oBsm3VnGHHvjN4FkmzU7SX.eval')  # Gemini 100Q from Paleka Base Qs
+    # initial_log_path = str(project_root / "logs" / '2025-01-13T10-22-49+05-30_initial-consistency_Y7QHsyfPQYaHFr6KNM4buM.eval') #LLAMA-3.1-70B-Instruct-Turbo
+    initial_log_path = str(project_root / "logs" / '2025-01-13T10-16-03+05-30_initial-consistency_SNK9agtDBSz2jNTLaLwZbb.eval') #DeepSeek-V3
     
     #dataset_path = "prithvi3/filtered_forecast_sample_test"
     
@@ -278,16 +289,17 @@ if __name__ == "__main__":
             initial_log_path=initial_log_path,
             consistency_types=['paraphrase'],  # Pass single consistency type as list
             use_embeddings=False,
-            dataset_path=None
+            dataset_path=None,
+            eval_model_name="together/deepseek-ai/DeepSeek-V3"
         )
     ]
-
+#"together/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo"
 
     # Evaluate all tasks
     results = eval(
         tasks,
         max_connections=1,
-        model="openai/gpt-4o",
+        model="together/deepseek-ai/DeepSeek-V3",
         temperature=0,
         start_log=True,
         max_tasks=len(ConsistencyType)  
