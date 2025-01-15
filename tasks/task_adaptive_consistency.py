@@ -112,7 +112,7 @@ def initial_consistency(csv_path: Optional[str] = None, consistency_types: List[
                 "d20" not in x.input.lower()
             )
         )
-        # dataset = dataset[:12] # testing
+        # dataset = dataset[:5] # testing
 
         return Task(
             dataset=dataset,
@@ -242,7 +242,7 @@ def temp_adaptive_judge(
 #         #"together/deepseek-ai/DeepSeek-V3", "together/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo"
 #         initial_log = eval(
 #             task, 
-#             model=["together/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo"],
+#             model=["together/deepseek-ai/DeepSeek-V3"],
 #             temperature=0,
 #             max_samples=5,
 #             start_log=True
@@ -269,10 +269,11 @@ if __name__ == "__main__":
     # initial_log_path = str(project_root / "logs" / '2025-01-10T17-20-15+05-30_initial-consistency_ePmV3dmkw4goT3vWXH6hpr.eval')  # GPT4o 100Q from Paleka Base Qs
     # initial_log_path = str(project_root / "logs" / '2025-01-11T17-42-09+05-30_initial-consistency_oBsm3VnGHHvjN4FkmzU7SX.eval')  # Gemini 100Q from Paleka Base Qs
     # initial_log_path = str(project_root / "logs" / '2025-01-13T10-22-49+05-30_initial-consistency_Y7QHsyfPQYaHFr6KNM4buM.eval') #LLAMA-3.1-70B-Instruct-Turbo
-    initial_log_path = str(project_root / "logs" / '2025-01-13T10-16-03+05-30_initial-consistency_SNK9agtDBSz2jNTLaLwZbb.eval') #DeepSeek-V3
+    # initial_log_path = str(project_root / "logs" / '2025-01-13T10-16-03+05-30_initial-consistency_SNK9agtDBSz2jNTLaLwZbb.eval') #DeepSeek-V3
+    initial_log_path = str(project_root / "logs" / '2025-01-14T23-17-02-05-00_initial-consistency_9b94gkQ6KS9B8dMqBdZjtp.eval') #DeepSeek-V3 fixed prob
     
     #dataset_path = "prithvi3/filtered_forecast_sample_test"
-    
+     
     # tasks = [
     #     adaptive_consistency(
     #         initial_log_path=initial_log_path,
@@ -293,7 +294,7 @@ if __name__ == "__main__":
             eval_model_name="together/deepseek-ai/DeepSeek-V3"
         )
     ]
-#"together/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo"
+#"together/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo", together/deepseek-ai/DeepSeek-V3
 
     # Evaluate all tasks
     results = eval(
