@@ -83,7 +83,10 @@ OPERATOR_PROMPTS = {
 
     • For multiple choice questions, be especially careful. For example:
       - Single selection: 'Which of these countries will legalize X by 2030? (Japan)' -> 'Will Japan fail to legalize X by 2030?'
-      - Multiple selections: 'Which of these countries will legalize X by 2030? (UK, France, or Germany)' -> 'Will ALL of the following countries fail to legalize X by 2030: UK, France, and Germany?' """,
+      - Multiple selections: 'Which of these countries will legalize X by 2030? (UK, France, or Germany)' -> 'Will ALL of the following countries fail to legalize X by 2030: UK, France, and Germany?' 
+      
+    - IMPORTANT:Ensure that all the information from the original question's body and title are included in the final question. Do not remove any information from title and body of the original questions, change it appropriately for the logical negation.
+      """,
       #COND
       'cond': """You are a helpful assistant. I will give you two forecasting questions with Yes/No answers, P and Q. You should then give me a CONDITIONAL question "Q given P", i.e. a question that asks whether Q occurs in the case that P occurs. The question should be structured as "Given P has occurred, will Q occur?". Do not deviate from the structure. This should resolve as NO only if P occurs and Q does not occur; it resolves as YES in all other cases (if P doesn't occur, or if both P and Q occur).
 
@@ -104,7 +107,10 @@ Notes:
 
     • Most importantly: make sure you retain ALL the information from BOTH base questions! You cannot discard a single relevant detail. All this is for an experiment to test the logical consistency of forecasters: The conditional question you give will be handed to forecasters without having seen the base questions, so it is critical that all the information and resolution criteria be included.
 
-    • Most importantly: Make sure that the title is self-sufficient independent of the body and can be answered without referencing any criteria or information external to the title. The conditional relationship must be clear from the title alone. Only use binary questions and never use vague phrases like 'Will Q follow?' or 'What happens after P?'""", 
+    • Most importantly: Make sure that the title is self-sufficient independent of the body and can be answered without referencing any criteria or information external to the title. The conditional relationship must be clear from the title alone. Only use binary questions and never use vague phrases like 'Will Q follow?' or 'What happens after P?' 
+    - The conditional question body must include every single detail from the body of the original questions 1 and 2 (not only resolution criteria but also include context and history if they're provided in the original question bodies)
+    - The ordering of the questions are VERY IMPORTANT. This ordering should be strictly followed: Given (Question 1), will (Question 2) occur? 
+    """, 
     #PARAPHRASE
     'paraphrase': """You are a helpful assistant. I will give you a forecasting question with a Yes/No answer. You should then give me a PARAPHRASE of this question that:
 1. Has exactly the same meaning and resolution criteria
@@ -300,7 +306,7 @@ First, provide your reasoning about:
 2. What type of related question would provide valuable insight when combined
 3. Why this relationship would matter to forecasters
 
-- Most importantly, the generated questions should be complete in itself and make no references to the original question. That is, the question should be answerable just from the title.
+- Most importantly, the generated questions should be complete in itself and make no references to the original question. That is, the question should be answerable just from the title. The question should be about a binary event only as mentioned in the examples.
 
 Strictly follow this format for each question you generate:
 Reasoning: [Generated Reasoning]
@@ -394,10 +400,49 @@ def create_full_prompt(q1, q2=None, operator='or'):
         q1_formatted = f"""Question:
         Title: {q1['title']}
         Body: {q1['body']}"""
+
+        all_info_single = """CRITICAL REQUIREMENTS FOR PRESERVING INFORMATION:
+
+1. CONTEXT AND CONTENT:
+   - Include ALL information from the original question body
+   - Include ALL context and background information
+   - Include ALL historical references
+   - Include ALL examples and scenarios
+   - Include ALL cited sources and their specific claims
+   
+2. RESOLUTION CRITERIA:
+   - Include ALL details about how the question resolves
+   - Include ALL specific dates and deadlines
+   - Include ALL numerical thresholds
+   - Include ALL qualifying conditions
+   - Include ALL examples of what does/doesn't qualify
+   - If negation is required, ensure resolution criteria are appropriately negated
+
+3. STRUCTURE:
+   - The body of your final question must contain EVERY SINGLE DETAIL from the original question body
+   - Nothing can be summarized or condensed
+   - Nothing can be paraphrased if it changes the meaning
+   - If the original contains quotes, include the full quotes
+   - If the original mentions specific reports or events, include all details about them
+
+4. VERIFICATION:
+   - Before submitting your answer, verify that you have included every piece of information from the original body
+   - Cross-check each detail to ensure nothing was missed
+   - If you're unsure about whether to include something, include it
+   - Verify that any necessary negations are logically correct
+
+Remember: The goal is to create a final question where someone who has never seen the original question would have access to ALL the same information contained in the original question. If performing a logical operation (like NOT), ensure the logic is correctly applied while preserving ALL original information.
+Your response should exactly be in the following format:
+Title: [Your Title Here]
+Body: [Your Body Here]
+\n"""
         
         full_prompt = f"""{operator_prompt}
 
-        {q1_formatted}"""
+        {q1_formatted}
+
+        {all_info_single}
+        """
         
     # Double question operators (e.g., 'or', 'and', 'cond')
     else:
@@ -418,12 +463,48 @@ def create_full_prompt(q1, q2=None, operator='or'):
         q2_formatted = f"""Question 2:
         Title: {q2['title']}
         Body: {q2['body']}"""
+
+        all_info = """CRITICAL REQUIREMENTS FOR PRESERVING INFORMATION:
+
+1. CONTEXT: Include ALL context from both original questions:
+   - All news reports and quotes
+   - All current situation descriptions
+   - All historical background
+   - All cited sources and their specific claims
+
+2. RESOLUTION CRITERIA: Include ALL details about how questions resolve:
+   - All specific dates and deadlines
+   - All numerical thresholds
+   - All qualifying conditions
+   - All examples of what does/doesn't qualify
+
+3. STRUCTURE:
+   - The body of your final question must contain EVERY SINGLE DETAIL from BOTH original question bodies
+   - Nothing can be summarized or condensed
+   - Nothing can be paraphrased if it changes the meaning
+   - If the original contains a quote, include the full quote
+   - If the original mentions specific reports or events, include all details about them
+
+4. VERIFICATION:
+   - Before submitting your answer, verify that you have included every piece of information from both original bodies
+   - Cross-check each detail to ensure nothing was missed
+   - If you're unsure about whether to include something, include it
+
+Remember: The goal is to create a final question where someone who has never seen the original questions would have access to ALL the same information contained in both original questions.
+
+Your response should exactly be in the following format:
+Title: [Your Title Here]
+Body: [Your Body Here]
+\n"""
         
         full_prompt = f"""{operator_prompt}
-
+       
         {q1_formatted}
 
-        {q2_formatted}"""
+        {q2_formatted} 
+
+        {all_info}
+        """
 
     return full_prompt
 
