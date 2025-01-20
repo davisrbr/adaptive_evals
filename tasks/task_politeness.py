@@ -14,7 +14,7 @@ from solvers.adaptive_utils import multiple_choice_save_cot
 
 
 TASK_POLITENESS_MULTISHOT_PROMPT_TEMPLATE = r"""
-The following are examples of utterances and their politeness ratings on a scale from -2 (very impolite) to +2 (very polite):
+The following are examples of utterances and their politeness ratings on a scale from -2 (very impolite) to +2 (very polite). At the end of these examples, you will be given a new utterance to rate:
 
 {dev_examples}
 
@@ -33,13 +33,16 @@ Answer: {answer}
 """.strip()
 
 @task
-def politeness_n_shot(n_examples: int = 5, debug: bool = False, cot: bool = False) -> Task:
+def politeness_n_shot(n_examples: int = 5, debug: int = -1, cot: bool = False) -> Task:
     """
-    Multilingual politeness task with 5-shot prompting
+    Multilingual politeness task with n-shot prompting
+    n_examples: number of examples to use for demonstrations
+    debug: number of examples to use for debugging (default: -1, which uses all examples)
+    cot: whether to use chain-of-thought prompting
     """
     dataset = get_politeness_dataset(split="test", shuffle=True)
     if debug:
-        dataset = dataset[:10]
+        dataset = dataset[:debug]
 
     return Task(
         dataset=dataset,
@@ -52,8 +55,8 @@ def politeness_n_shot(n_examples: int = 5, debug: bool = False, cot: bool = Fals
 
 @solver
 def politeness_n_shot_solver(n_examples: int = 5) -> Solver:
-    """A custom solver for politeness 5-shot.
-    Uses the first 5 examples from the dataset as demonstrations.
+    """A custom solver for politeness n-shot.
+    Uses the first n examples from the dataset as demonstrations.
     """
     dev_dataset = get_politeness_dataset(split="train", shuffle=False)[:n_examples]
 
