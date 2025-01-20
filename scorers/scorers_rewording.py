@@ -42,13 +42,26 @@ def accuracy_judged() -> Metric:
     Scores with value == JUDGE_FILTERED are skipped.
     """
     def compute(scores: list[Score]) -> float:
-        # Filter out all JUDGE_FILTERED
         filtered_scores = [s for s in scores if s.value != JUDGE_FILTERED]
+        # if there are no scores after filtering, return 1.0
         if not filtered_scores:
-            return 0.0
+            return 1.0
         to_float = value_to_float()
         float_vals = [to_float(s.value) for s in filtered_scores]
         return sum(float_vals) / len(filtered_scores)
+    return compute
+
+@metric("count_incorrect_after_judged")
+def count_incorrect_after_judged() -> Metric:
+    """
+    Compute the total number of samples that are answered incorrectly, excluding those that are JUDGE_FILTERED.
+    """
+    def compute(scores: list[Score]) -> float:
+        filtered_scores = [s for s in scores if s.value == INCORRECT]
+        # if there are no scores after filtering, return 1.0
+        if not filtered_scores:
+            return 0
+        return len(filtered_scores)
     return compute
 
 

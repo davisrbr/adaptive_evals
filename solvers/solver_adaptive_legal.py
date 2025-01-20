@@ -17,6 +17,8 @@ from inspect_ai.solver._multiple_choice import (
     parse_answers,
 )
 from data.eval_log_processing import read_eval_log_async
+from utils_elicitation.novelty import novelty_scorer
+from prompting.adaptive_prompts import get_self_check_judge_prompt
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -31,12 +33,18 @@ def adaptive_legal_solver(
     randomize_sampling: bool = False,
     generator_model_name: str = "openai/gpt-4",
     eval_model_name: str = "openai/gpt-4",
+    self_check_model_name: Optional[str] = None,
+    use_embeddings: bool = False,
+    embeddings_model_name: str = "sentence-transformers/all-mpnet-base-v2",
+    similarity_threshold: float = 0.6,
+    score_threshold: int = 4,
     cot_in_context: bool = False,
     use_cot_generator: bool = False,
     use_cot_evaluator: bool = False,
     use_claude: bool = False,
     use_example: bool = True,
     num_attempts: int = 30,
+    original_eval_model_name: Optional[str] = None,
 ) -> Generate:
     """
     Solver that generates new questions based on the model's performance
@@ -154,56 +162,99 @@ def adaptive_legal_solver(
                     raise ValueError("Missing 'answer' key in the generated sample data.")
                 return sample_data
 
-            for attempt in range(num_attempts):
-                # Generate the new sample data. Try up to num_attempts times if there is an error
-                # (typically ~2 attempts is enough to get all correct jsons for a run of 25 epochs with gpt-4o)
+            retry_count = 0
+            while retry_count < num_attempts:
                 try:
                     generation_response = await generator_model.generate(generation_prompt)
                     generated_text = generation_response.completion.strip()
                     sample_data = parse_json(generated_text)
+
+                    generated_prompt = sample_data.get('text', '')
+                    multiple_choice_template = SINGLE_ANSWER_TEMPLATE if not use_cot_evaluator else SINGLE_ANSWER_TEMPLATE_COT
+                    generated_prompt = multiple_choice_template + "\n\n" + generated_prompt
+                    correct_answer = sample_data.get('answer', '').strip()
+                    
+                    if not correct_answer:
+                        logger.debug("Empty answer in sample data")
+                        retry_count += 1
+                        continue
+
+                    generated_sample = Sample(
+                        input=generated_prompt,
+                        target=correct_answer,
+                        metadata={'sample_data': sample_data}
+                    )
+
+                    # Add novelty check
+                    if use_embeddings:
+                        existing_questions = [s.input for s in sample_logs]
+                        is_novel = novelty_scorer(
+                            generated_prompt,
+                            existing_questions,
+                            use_embeddings=True,
+                            embedding_model=embeddings_model_name,
+                        )
+                        if not is_novel:
+                            logger.debug("Generated question too similar to existing questions, retrying...")
+                            retry_count += 1
+                            continue
+
+                    # Add self-check if model specified
+                    if self_check_model_name:
+                        self_check_model = get_model(
+                            self_check_model_name,
+                            config=GenerateConfig(max_connections=10000),
+                        )
+                        
+                        choices = re.findall(r'\([A-Z]\)\s*(.*?)(?=\([A-Z]\)|\Z)', generated_prompt, re.DOTALL)
+                        choices = [choice.strip() for choice in choices if choice.strip()]
+                        
+                        self_check_prompt = get_self_check_judge_prompt(
+                            generated_question=generated_prompt,
+                            choices=choices,
+                            target=[correct_answer],
+                        )
+                        
+                        try:
+                            self_check_response = await self_check_model.generate(self_check_prompt)
+                            score = int(re.search(r'Total Score:\s*(\d+)', self_check_response.completion).group(1))
+                            if score < score_threshold:
+                                logger.debug(f"Self-check score {score} below threshold {score_threshold}, retrying...")
+                                retry_count += 1
+                                continue
+                            generated_sample.metadata["self_check_score"] = score
+                            generated_sample.metadata["self_check_response"] = self_check_response.completion
+                        except (AttributeError, ValueError) as e:
+                            logger.debug(f"Error parsing self-check score: {e}")
+                            retry_count += 1
+                            continue
+
+                    # If we get here, all checks passed
+                    answer_response = await eval_model.generate(generated_prompt)
+                    model_answer = answer_response.completion.strip()
+                    if "ANSWER:" in model_answer:
+                        model_answer = model_answer.split("ANSWER:")[-1].strip()
+
+                    generated_sample.metadata["model_answer"] = model_answer
+                    generated_sample.metadata["score"] = "C" if model_answer == correct_answer else "I"
+
+                    state.store.set("generated_sample", generated_sample)
+                    if original_eval_model_name:
+                        state.store.set("original_eval_model_name", original_eval_model_name)
+                    else:
+                        state.store.set("original_eval_model_name", eval_model_name)
+                    state.scores = [generated_sample.metadata["score"]]
                     break
-                except ValueError as e:
-                    logger.debug(str(e))
-                    print(f"Error parsing JSON: {e}, attempt {attempt + 1} of {num_attempts}")
+
+                except Exception as e:
+                    logger.debug(f"Error in generation attempt {retry_count + 1}: {e}")
+                    retry_count += 1
+                    continue
+
             else:
-                print("Failed to parse JSON after maximum retry attempts.")
-                state.error = "Failed to parse JSON after maximum retry attempts."
+                state.error = f"Failed to generate valid sample after {num_attempts} attempts"
                 state.completed = True
                 return state
-
-            # data_df = pd.DataFrame([sample_data])
-            # prompts = generate_prompts(prompt_template=base_prompt, data_df=data_df)
-            # generated_prompt = prompts[0]
-            generated_prompt = sample_data.get('text', '')
-            # prepend the multiple choice template to the prompt
-            SINGLE_ANSWER_TEMPLATE = "Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where $LETTER is the letter of the correct answer."
-            SINGLE_ANSWER_TEMPLATE_COT = "Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where $LETTER is the letter of the correct answer. Think step by step before answering."
-            multiple_choice_template = SINGLE_ANSWER_TEMPLATE if not use_cot_evaluator else SINGLE_ANSWER_TEMPLATE_COT
-            generated_prompt = multiple_choice_template + "\n\n" + generated_prompt
-            correct_answer = sample_data.get('answer', '').strip()
-            if not correct_answer:
-                state.error = "The 'answer' key is empty in the sample data."
-                state.completed = True
-                return state
-
-            generated_sample = Sample(
-                input=generated_prompt,
-                target=correct_answer,
-                metadata={'sample_data': sample_data}
-            )
-            answer_response = await eval_model.generate(generated_prompt)
-            model_answer = answer_response.completion.strip()
-            if "ANSWER:" in model_answer:
-                model_answer = model_answer.split("ANSWER:")[-1].strip()
-
-            generated_sample.metadata["model_answer"] = model_answer
-            if model_answer == correct_answer:
-                generated_sample.metadata["score"] = "C"
-            else:
-                generated_sample.metadata["score"] = "I"
-
-            state.store.set("generated_sample", generated_sample)
-            state.scores = [generated_sample.metadata["score"]]
 
         except Exception as e:
             state.error = f"Error generating or evaluating the sample: {e}"
@@ -390,7 +441,7 @@ def rewording_legal_solver(
                     state.store.set("original_prompt", original_prompt)
                     state.store.set("reworded_prompt", reworded_prompt)
                     break
-            except Exception as e:
+            except Exception:
                 continue
         else:
             state.error = "Failed to generate a reworded question."
