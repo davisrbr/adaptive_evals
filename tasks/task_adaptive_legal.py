@@ -22,7 +22,7 @@ from scorers.scorers_legal import (
 
 
 @task
-def legalbench_initial(task_name: str = "maud_accuracy_of_target_general_rw_bringdown_timing_answer") -> Task:
+def legalbench_initial(task_name: str = "maud_accuracy_of_target_general_rw_bringdown_timing_answer", use_cot: bool = False, debug: bool = False) -> Task:
     """
     Initial evaluation task for the LegalBench dataset.
 
@@ -45,20 +45,31 @@ def legalbench_initial(task_name: str = "maud_accuracy_of_target_general_rw_brin
         prompt = prompts[0]
 
         # Extract the options from the prompt
+        # Try to find options with letters first
         option_pattern = r"Option ([A-Z]): (.*)"
         options_matches = re.findall(option_pattern, prompt)
+        
+        # If no matches found, try numbered options
+        if not options_matches:
+            option_pattern = r"(\d+): (.*)"
+            options_matches = re.findall(option_pattern, prompt)
+            # replace all with this format in prompt with letters
+            prompt = re.sub(r"\d+", lambda m: chr(ord('A') + int(m.group(0))), prompt)
 
         # Create choices based on options extracted
         choices = [match[1] for match in options_matches]
 
         # The target is the letter of the correct answer
         target = record["answer"].strip()
+        # Convert numeric answer to letter if needed
+        if target.isdigit():
+            target = chr(ord('A') + int(target))
 
         return Sample(
             input=prompt,
             choices=choices,
             target=target,
-            metadata={"task_name": task_name}
+            metadata={"task_name": task_name, "debug": debug, "use_cot": use_cot, "original_prompt": prompts[0]}
         )
 
     # Load the LegalBench dataset
@@ -68,23 +79,25 @@ def legalbench_initial(task_name: str = "maud_accuracy_of_target_general_rw_brin
         sample_fields=record_to_sample,
         split="test",  # Use "test" or "validation" as appropriate
         auto_id=True,
-        shuffle=True,
+        shuffle=not debug,
     )
+    if debug:
+        dataset = dataset[:5]
 
     return Task(
         dataset=dataset,
         solver=[
-            multiple_choice(multiple_correct=False, shuffle=True)
+            multiple_choice_save_cot(multiple_correct=False, shuffle=False, cot=use_cot)
         ],
         scorer=choice(),
     )
 
 @task
 def legalbench_initial_aggregated(task_names: list[str] = [
-    'maud_ability_to_consummate_concept_is_subject_to_mae_carveouts',
+    # 'maud_ability_to_consummate_concept_is_subject_to_mae_carveouts',
     'maud_financial_point_of_view_is_the_sole_consideration', 
-    'maud_accuracy_of_fundamental_target_rws_bringdown_standard',
-    'maud_accuracy_of_target_general_rw_bringdown_timing_answer',
+    # 'maud_accuracy_of_fundamental_target_rws_bringdown_standard',
+    # 'maud_accuracy_of_target_general_rw_bringdown_timing_answer',
 ], debug: bool = False, use_example: bool = True, use_cot: bool = False, use_claude: bool = False) -> Task:
     """
     Initial evaluation task for multiple LegalBench datasets aggregated into a single dataset.
@@ -185,6 +198,7 @@ def adaptive_legal(
     randomize_sampling: bool = False,
     judge_model_name: Optional[str] = None,
     cot_in_context: bool = False,
+    original_eval_model_name: Optional[str] = None,
 ) -> Task:
     """
     Adaptive evaluation task for the LegalBench dataset.
@@ -202,7 +216,7 @@ def adaptive_legal(
         judge_model_name (Optional[str]): Name of the model used to judge correctness.
         use_claude (bool): Whether to use Claude for generation and evaluation.
         use_example (bool): Whether to use examples in the prompt.
-
+        original_eval_model_name (Optional[str]): Name of the model used to evaluate the original questions-- facilitates transfer experiment logging.
     Returns:
         Task: An Inspect Task instance that runs an adaptive solver pipeline
         and includes the judged scorer if a judge_model_name is provided.
@@ -227,6 +241,7 @@ def adaptive_legal(
             use_cot_generator=use_cot_generator,
             use_cot_evaluator=use_cot_evaluator,
             randomize_sampling=randomize_sampling,
+            original_eval_model_name=original_eval_model_name,
         )
     ]
     # If we have a judge model, include the judge solver
@@ -322,7 +337,7 @@ def legalbench_reworded(
         dataset=dataset,
         solver=[
             rewording_legal_solver(model_name=model_name, rewording_model_name=rewording_model_name, cot=cot),
-            multiple_choice(multiple_correct=False, shuffle=True)
+            multiple_choice_save_cot(multiple_correct=False, shuffle=True)
         ],
         scorer=choice(),
     )
@@ -412,7 +427,7 @@ def legalbench_reworded_aggregated(
         dataset=combined_dataset,
         solver=[
             rewording_legal_solver(model_name=model_name, rewording_model_name=rewording_model_name, cot=cot),
-            multiple_choice(multiple_correct=False, shuffle=True)
+            multiple_choice_save_cot(multiple_correct=False, shuffle=True)
         ],
         scorer=choice(),
     )
