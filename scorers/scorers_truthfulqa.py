@@ -201,7 +201,7 @@ def press_truthfulqa_scorer() -> Scorer:
 
     return score
 
-@scorer
+@scorer(metrics=[accuracy()])
 def re_evaluation_scorer() -> Scorer:
     """
     Simple scorer that inspects the 're_evaluation_samples' stored by

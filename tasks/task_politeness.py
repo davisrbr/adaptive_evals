@@ -24,11 +24,11 @@ Please rate the following utterance:
 
 TASK_POLITENESS_EXAMPLE_TEMPLATE = r"""
 Utterance: {utterance}
-(A) -2 (very impolite)
-(B) -1 (somewhat impolite)
-(C) 0 (neutral)
-(D) +1 (somewhat polite) 
-(E) +2 (very polite)
+(A) -2
+(B) -1
+(C) 0
+(D) +1
+(E) +2
 Answer: {answer}
 """.strip()
 

@@ -1,9 +1,13 @@
+import logging
 import os
 from inspect_ai import Epochs, Task, task, eval
 from inspect_ai.dataset import Sample, hf_dataset, MemoryDataset
-from inspect_ai.scorer import Score, ScoreReducer, choice, score_reducer, Scorer, Target, INCORRECT
-from inspect_ai.scorer._reducer.registry import score_reducer
+from inspect_ai.log import read_eval_log
+from inspect_ai.scorer import Score, ScoreReducer, choice, score_reducer
 from typing import Any, Literal, Optional
+
+from inspect_ai.solver._multiple_choice import valid_template
+from inspect_ai.solver._multiple_choice import SINGLE_ANSWER_TEMPLATE, SINGLE_ANSWER_TEMPLATE_COT
 
 import torch
 
@@ -340,56 +344,74 @@ def press_truthfulqa(
 @task
 def re_evaluate_adaptive_truthfulqa(
     adaptive_log_path: str,
-    new_model_name: str = "openai/gpt-4o-mini",
-    multiple_correct: bool = False,
-    temperature: float = 0.0,
     use_cot: bool = False,
-    custom_template: Optional[str] = None,
+    filter_by_incorrect: bool = False,
 ) -> Task:
     """
-    Re-evaluates the newly generated adaptive TruthfulQA questions on a new model.
-
-    Usage:
-        inspect eval truthfulqa.py -T re_evaluate_adaptive_truthfulqa
-            -T adaptive_log_path=PATH_TO_ADAPTIVE_LOG
-            -T new_model_name="openai/gpt-4o-mini"
-            -T multiple_correct=False
-            -T temperature=0.0
-            -T use_cot=False
-            -T custom_template=None
-
-    Args:
-        adaptive_log_path (str): Path to the final log from the adaptive_truthfulqa_solver.
-        new_model_name (str): The model name to evaluate on filtered, judge-accepted questions.
-        multiple_correct (bool): Whether there may be multiple correct answers to each question.
-        temperature (float): Model generation temperature.
-        use_cot (bool): If True, use chain-of-thought prompting with SINGLE_ANSWER_TEMPLATE_COT.
-        custom_template (Optional[str]): Custom template override. Must contain {question} and {choices} placeholders.
-
-    Returns:
-        Task object that, when run via "inspect eval", will load the log, filter
-        judge-approved questions, have the solver prompt the new model, then
-        compute how many the new model got right among those judge-approved questions.
+    Re-evaluates adaptive TruthfulQA questions that passed judge filtering.
+    The model will be inferred from the task configuration.
     """
+    logger = logging.getLogger(__name__)
+
+    # Load and validate log
+    eval_log = read_eval_log(adaptive_log_path)
+    if not eval_log.samples:
+        raise ValueError("No samples found in the adaptive truthfulqa log.")
+    logger.info(f"Found {len(eval_log.samples)} non-filtered samples in {adaptive_log_path}")
+
+    # Filter samples based on judge approval and prepare prompts
+    filtered_samples = []
+    for sample_item in eval_log.samples:
+        generated_sample = sample_item.store.get("generated_sample")
+        if not generated_sample:
+            continue
+        judge_choice = generated_sample.get("metadata", {}).get("judge_choice", "")
+        if judge_choice not in ["A", "B"]:
+            continue
+        if filter_by_incorrect and generated_sample.get("metadata", {}).get("score", "") != "I":
+            continue
+
+        # Get question data
+        question_str = generated_sample.get("input", "").strip()
+        choices = generated_sample.get("choices", [])
+        if not question_str or not choices:
+            continue
+        target = generated_sample.get("target", None)
+        if not target:
+            continue
+
+        # Create sample with prepared prompt
+        filtered_samples.append(Sample(
+            input=str(question_str),
+            choices=choices,
+            target=chr(65 + target[0]),  # Convert integer index to letter (0->A, 1->B, etc)
+            metadata={
+                "original_question": question_str,
+                "original_metadata": str(generated_sample.get("metadata", {})),
+                "original_eval_model": eval_log.eval.task_args.get("eval_model_name", "gpt-4o-mini"),
+                "original_generator_model": eval_log.eval.task_args.get("generator_model_name", "gpt-4o-mini"),
+                "original_judge_model": eval_log.eval.task_args.get("judge_model_name", "gpt-4o-mini"),
+                "original_embeddings_model": eval_log.eval.task_args.get("embeddings_model_name", "sentence-transformers/all-mpnet-base-v2"),
+                "original_store": str(generated_sample.get("store", {})),
+            }
+        ))
+
+    if not filtered_samples:
+        logger.info("No samples passed the judge filter. Nothing to evaluate.")
+        raise ValueError("No samples passed the judge filter from the adaptive solver log.")
+    logger.info(f"Found {len(filtered_samples)} samples post-judge-filter.")
+    dataset = MemoryDataset(
+        name="re_evaluate_adaptive_truthfulqa",
+        samples=filtered_samples
+    )
+
     return Task(
-        # We keep an empty MemoryDataset since the real data comes from the saved log
-        dataset=MemoryDataset(name="re_evaluate_adaptive_truthfulqa", samples=[]),
-        solver=[
-            evaluate_adaptive_truthfulqa_questions(
-                adaptive_log_path=adaptive_log_path,
-                new_model_name=new_model_name,
-                multiple_correct=multiple_correct,
-                temperature=temperature,
-                use_cot=use_cot,
-                custom_template=custom_template,
-            )
-        ],
-        # We use a simple custom scorer that checks "re_evaluation_samples"
-        scorer=[re_evaluation_scorer()],
-        epochs=Epochs(
-            epochs=1,
-            reducer=["mean"],  # or other aggregator if desired
-        ),
+        dataset=dataset,
+        # solver=[evaluate_adaptive_truthfulqa_questions()],
+        solver=[multiple_choice_save_cot(multiple_correct=False, shuffle=True, cot=use_cot)],
+        # scorer=re_evaluation_scorer(),
+        scorer=choice(),
+        reducer=("mean",),
     )
 
 if __name__ == "__main__":
