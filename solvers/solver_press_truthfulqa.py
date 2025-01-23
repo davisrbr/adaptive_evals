@@ -80,12 +80,11 @@ def press_truthfulqa_solver(
                 criteria=criteria
             )
 
-            # Generate the new summary (Stmp)
             progression_response = await evaluator_model.generate(progression_prompt)
             new_summary = progression_response.completion.strip()
             summaries.append(new_summary)
 
-            # Merge summaries to get the new summary Sj
+            # merge summaries to get the new summary sj
             if iteration == 0:
                 combined_summary = new_summary
             else:
