@@ -1,6 +1,7 @@
 import os
 import csv
 import logging
+import json
 from typing import Dict, List, Optional, Tuple
 import click
 
@@ -55,7 +56,7 @@ def extract_accuracy_metrics(eval_log: EvalLog) -> Tuple[Optional[float], Option
     """
     Parse the log results and return (accuracy, accuracy_judged, scorer_name_used).
 
-    Because re_evaluate_adaptive_truthfulqa uses scorer=choice() with a "mean" reducer,
+    Because re_evaluate_adaptive_truthfulqa sometimes uses scorer=choice() with a "mean" reducer,
     we still look for "accuracy" or "accuracy_judged" in each ScoreItem.
 
     Additional rules:
@@ -93,6 +94,57 @@ def extract_accuracy_metrics(eval_log: EvalLog) -> Tuple[Optional[float], Option
     return None, None, None
 
 
+def parse_re_eval_counts(eval_log: EvalLog) -> Tuple[int, int, int]:
+    """
+    Returns a 3-tuple:
+      (a) number of samples that passed judge filter,
+      (b) number of samples that were labeled incorrect in the adaptive pass,
+      (c) number of samples that were incorrect for the re-evaluation model.
+
+    Because re_evaluate_adaptive_truthfulqa sets:
+      sample.metadata["original_metadata"] = str(...)
+      which may include '"score": "I"' or "'score': 'I''.
+      We should parse that string rather than do a naive substring check.
+
+    And multiple_choice_save_cot sets sample.store["score"] = "I"
+    if the re-eval model answered incorrectly on that sample.
+    """
+    if not eval_log or not eval_log.samples:
+        return 0, 0, 0
+
+    total_passed_judge = len(eval_log.samples)
+    initially_incorrect = 0
+    re_eval_incorrect = 0
+
+    for sample in eval_log.samples:
+        # (b) Check if originally incorrect in the adaptive pass.
+        # We'll parse the original_metadata as Python or JSON
+        # so that we reliably check md_dict.get("score") == "I".
+        orig_md_str = sample.metadata.get("original_metadata", "")
+        # Try parsing it as JSON, fallback to other approaches if needed
+        parsed_md = None
+        if orig_md_str:
+            try:
+                # Some code saves it as a JSON-serialized dict
+                parsed_md = json.loads(orig_md_str)
+            except json.JSONDecodeError:
+                # Otherwise maybe it's Python literal format
+                import ast
+                try:
+                    parsed_md = ast.literal_eval(orig_md_str)
+                except Exception:
+                    parsed_md = None
+
+        if isinstance(parsed_md, dict) and parsed_md.get("score") == "I":
+            initially_incorrect += 1
+
+        # (c) Check if re-eval was incorrect (multiple_choice_save_cot sets sample.store["score"] = "I")
+        if sample.store and sample.store.get("score") == "I":
+            re_eval_incorrect += 1
+
+    return total_passed_judge, initially_incorrect, re_eval_incorrect
+
+
 def write_experiment_log(
     experiment_csv: str,
     eval_model_name: str,
@@ -104,10 +156,8 @@ def write_experiment_log(
     use_cot: bool,
     similarity_threshold: float,
     score_threshold: int,
-    n_datapoints: int,
     use_embeddings: bool,
     filter_incorrect: bool,
-    max_attempts: int,
     adaptive_accuracy: Optional[float],
     adaptive_accuracy_judged: Optional[float],
     adaptive_scorer_name: Optional[str],
@@ -115,66 +165,81 @@ def write_experiment_log(
     re_eval_accuracy_judged: Optional[float],
     re_eval_scorer_name: Optional[str],
     judge_model_name: Optional[str],
+    n_datapoints: int,
+    max_attempts: int,
+    # The following three are new counters we want for re-eval data
+    passed_judge_count: Optional[int] = None,
+    adaptive_incorrect_count: Optional[int] = None,
+    re_eval_incorrect_count: Optional[int] = None,
 ) -> None:
     """
-    Log the parameters and results of each experiment run to a CSV file.
-    Adds basic metrics (accuracy/accuracy_judged) from both the adaptive step
-    and the re-evaluation step if available, along with which scorer name produced them.
+    Appends a single row to the experiment CSV containing:
+      - all hyperparameters
+      - the logs
+      - metrics extracted from the logs
+      - counts of how many samples passed the judge filter,
+        how many were incorrectly answered in the adaptive pass,
+        and how many were incorrectly answered by the re-eval model
     """
-    os.makedirs(os.path.dirname(experiment_csv), exist_ok=True)
-    file_exists = os.path.exists(experiment_csv)
 
-    fieldnames = [
-        "eval_model",
-        "generator_model",
-        "self_check_model",
-        "re_eval_model",
-        "initial_log_path",
-        "adaptive_log_path",
-        "re_eval_log_path",
-        "use_cot",
-        "similarity_threshold",
-        "score_threshold",
-        "use_embeddings",
-        "filter_incorrect",
-        "adaptive_accuracy",
-        "adaptive_accuracy_judged",
-        "adaptive_scorer_name",
-        "re_eval_accuracy",
-        "re_eval_accuracy_judged",
-        "re_eval_scorer_name",
-        "judge_model",
-        "n_datapoints",
-        "max_attempts",
-    ]
+    file_exists = os.path.exists(experiment_csv)
     with open(experiment_csv, mode="a", newline="") as f:
+        fieldnames = [
+            "eval_model_name",
+            "generator_model_name",
+            "re_eval_model_name",
+            "initial_log_path",
+            "adaptive_log_path",
+            "re_eval_log_path",
+            "use_cot",
+            "similarity_threshold",
+            "score_threshold",
+            "use_embeddings",
+            "filter_incorrect",
+            "adaptive_accuracy",
+            "adaptive_accuracy_judged",
+            "adaptive_scorer_name",
+            "re_eval_accuracy",
+            "re_eval_accuracy_judged",
+            "re_eval_scorer_name",
+            "judge_model_name",
+            "n_datapoints",
+            "max_attempts",
+            "passed_judge_count",
+            "adaptive_incorrect_count",
+            "re_eval_incorrect_count",
+        ]
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         if not file_exists:
             writer.writeheader()
 
-        writer.writerow({
-            "eval_model": eval_model_name,
-            "generator_model": generator_model_name,
-            "self_check_model": eval_model_name,
-            "re_eval_model": re_eval_model_name,
-            "initial_log_path": initial_log_path,
-            "adaptive_log_path": adaptive_log_path,
-            "re_eval_log_path": re_eval_log_path or "",
-            "use_cot": use_cot,
-            "similarity_threshold": similarity_threshold,
-            "score_threshold": score_threshold,
-            "use_embeddings": use_embeddings,
-            "filter_incorrect": filter_incorrect,
-            "adaptive_accuracy": adaptive_accuracy if adaptive_accuracy is not None else "",
-            "adaptive_accuracy_judged": adaptive_accuracy_judged if adaptive_accuracy_judged is not None else "",
-            "adaptive_scorer_name": adaptive_scorer_name or "",
-            "re_eval_accuracy": re_eval_accuracy if re_eval_accuracy is not None else "",
-            "re_eval_accuracy_judged": re_eval_accuracy_judged if re_eval_accuracy_judged is not None else "",
-            "re_eval_scorer_name": re_eval_scorer_name or "",
-            "judge_model": judge_model_name or "",
-            "n_datapoints": n_datapoints,
-            "max_attempts": max_attempts,
-        })
+        writer.writerow(
+            {
+                "eval_model_name": eval_model_name,
+                "generator_model_name": generator_model_name,
+                "re_eval_model_name": re_eval_model_name,
+                "initial_log_path": initial_log_path,
+                "adaptive_log_path": adaptive_log_path,
+                "re_eval_log_path": re_eval_log_path,
+                "use_cot": use_cot,
+                "similarity_threshold": similarity_threshold,
+                "score_threshold": score_threshold,
+                "use_embeddings": use_embeddings,
+                "filter_incorrect": filter_incorrect,
+                "adaptive_accuracy": adaptive_accuracy,
+                "adaptive_accuracy_judged": adaptive_accuracy_judged,
+                "adaptive_scorer_name": adaptive_scorer_name,
+                "re_eval_accuracy": re_eval_accuracy,
+                "re_eval_accuracy_judged": re_eval_accuracy_judged,
+                "re_eval_scorer_name": re_eval_scorer_name,
+                "judge_model_name": judge_model_name,
+                "n_datapoints": n_datapoints,
+                "max_attempts": max_attempts,
+                "passed_judge_count": passed_judge_count,
+                "adaptive_incorrect_count": adaptive_incorrect_count,
+                "re_eval_incorrect_count": re_eval_incorrect_count,
+            }
+        )
 
 
 class TruthfulQAExperimentRunner:
@@ -225,39 +290,45 @@ class TruthfulQAExperimentRunner:
 
     def run_initial_experiments(self, adaptive_eval_models: List[str]) -> Dict[str, EvalLog]:
         """
-        Produces or loads the initial logs from truthfulqa_initial for each model.
-        Returns a dict of model -> EvalLog object.
+        Runs or loads the results of truthfulqa_initial for each model in adaptive_eval_models.
+        Returns a dict {model_name: EvalLog} for each successful evaluation.
         """
+        from inspect_ai.log import read_eval_log
         logs_by_model: Dict[str, EvalLog] = {}
-        cached_evals = read_eval_cache(self.cache_csv)
+
+        cached = read_eval_cache(self.cache_csv)
 
         for model_name in adaptive_eval_models:
-            # If we already have a cached log, skip re-generation
-            if model_name in cached_evals and os.path.exists(cached_evals[model_name]):
-                print(f"[Initial TQA] Using cached results for model={model_name}: {cached_evals[model_name]}")
-                init_log = read_eval_log(cached_evals[model_name])
-                if init_log and init_log.status == "success":
-                    logs_by_model[model_name] = init_log
+            if model_name in cached:
+                # Load existing
+                maybe_log = read_eval_log(cached[model_name])
+                if maybe_log and maybe_log.status == "success":
+                    logs_by_model[model_name] = maybe_log
+                    print(f"[Initial TQA] Using cached log for: {model_name}")
                     continue
-                else:
-                    print(
-                        f"[Initial TQA] Found a cached log for {model_name} but it did "
-                        "not succeed. We'll re-run."
-                    )
 
-            # Otherwise, run the initial TQA for this model
-            print(f"[Initial TQA] Running truthfulqa_initial for {model_name}")
-            log_dir = os.path.join(self.logs_dir, f"initial_{model_name.replace('/', '_')}")
-            os.makedirs(log_dir, exist_ok=True)
-
-            tqa_task = truthfulqa_initial(target="mc1", use_cot=self.use_cot, debug=False)
-            logs = eval(tqa_task, epochs=Epochs(1, "max"), log_dir=log_dir, model=model_name, log_level="critical")
-            if logs and logs[0].status == "success":
-                logs_by_model[model_name] = logs[0]
-                write_eval_cache(self.cache_csv, model_name, logs[0].location)
-            else:
-                print(f"[Initial TQA] Error: No success log for {model_name}. Skipped.")
-
+            print(f"[Initial TQA] Running truthfulqa_initial for: {model_name}")
+            tqa_task = truthfulqa_initial(
+                target="mc1",
+                use_cot=self.use_cot,
+                debug=False,
+            )
+            init_log_dir = os.path.join(
+                self.logs_dir, f"initial_{model_name.replace('/', '_')}"
+            )
+            os.makedirs(init_log_dir, exist_ok=True)
+            init_logs = eval(
+                tqa_task,
+                epochs=Epochs(self.n_datapoints, "max"),
+                log_dir=init_log_dir,
+                model=model_name,
+                log_level="critical",
+            )
+            if not init_logs or init_logs[0].status != "success":
+                print(f"[Initial TQA] No success log for {model_name}, skipping.")
+                continue
+            logs_by_model[model_name] = init_logs[0]
+            write_eval_cache(self.cache_csv, model_name, init_logs[0].location)
         return logs_by_model
 
     def run_adaptive_and_transfer_eval(
@@ -271,9 +342,10 @@ class TruthfulQAExperimentRunner:
         Runs adaptive_truthfulqa_refactor for each generator model, then
         re-evaluates those newly generated questions on each re_eval model.
         """
+        from inspect_ai.log import read_eval_log
+
         for generator_name in generator_models:
             print(f"[Adaptive Step] Working on eval={adaptive_eval_model_name}, generator={generator_name}")
-            # Create the adaptive task
             adaptive_task = adaptive_truthfulqa_refactor(
                 initial_log_path=initial_log_path,
                 n_positive_samples=self.n_pos,
@@ -309,11 +381,10 @@ class TruthfulQAExperimentRunner:
                 )
                 continue
 
-            # Extract partial results from the adaptive step
             adaptive_log = adaptive_logs[0]
             adaptive_accuracy, adaptive_accuracy_judged, adaptive_scorer = extract_accuracy_metrics(adaptive_log)
 
-            # Now re-evaluate these newly generated questions for each re-eval model
+            # Re-evaluation step for each re_eval model
             for re_eval_model in re_eval_models:
                 print(
                     f"[Re-Eval] Checking how re_eval_model={re_eval_model} does "
@@ -324,11 +395,7 @@ class TruthfulQAExperimentRunner:
                     use_cot=self.use_cot,
                     filter_by_incorrect=self.re_eval_filter_incorrect,
                 )
-                re_eval_logdir = os.path.join(
-                    adaptive_logdir,
-                    "re_eval",
-                    re_eval_model.replace("/", "_")
-                )
+                re_eval_logdir = os.path.join(adaptive_logdir, "re_eval", re_eval_model.replace("/", "_"))
                 os.makedirs(re_eval_logdir, exist_ok=True)
 
                 re_eval_log_path: Optional[str] = None
@@ -351,16 +418,24 @@ class TruthfulQAExperimentRunner:
                             f"gen={generator_name}, re-eval={re_eval_model})."
                         )
                         re_eval_acc, re_eval_acc_judged, re_eval_scorer = extract_accuracy_metrics(re_eval_logs[0])
+
+                        # Now parse how many samples were re-evaluated, how many were originally incorrect,
+                        # and how many the re-eval model got wrong
+                        passed_judge, adaptive_incorrect_cnt, re_eval_incorrect_cnt = parse_re_eval_counts(
+                            re_eval_logs[0]
+                        )
                     else:
                         print(
                             f"[Re-Eval] Returned no logs or non-success status for "
                             f"(eval={adaptive_eval_model_name}, gen={generator_name}, re-eval={re_eval_model})."
                         )
+                        passed_judge, adaptive_incorrect_cnt, re_eval_incorrect_cnt = (0, 0, 0)
                 except Exception as exc:
                     print(
                         f"[Re-Eval] Step failed for (eval={adaptive_eval_model_name}, "
                         f"gen={generator_name}, re-eval={re_eval_model}). Error: {exc}"
                     )
+                    passed_judge, adaptive_incorrect_cnt, re_eval_incorrect_cnt = (0, 0, 0)
 
                 # Log everything about this triple (eval model, generator, re-eval model)
                 write_experiment_log(
@@ -385,6 +460,9 @@ class TruthfulQAExperimentRunner:
                     judge_model_name=self.judge_model_name,
                     n_datapoints=self.n_datapoints,
                     max_attempts=self.max_attempts,
+                    passed_judge_count=passed_judge,
+                    adaptive_incorrect_count=adaptive_incorrect_cnt,
+                    re_eval_incorrect_count=re_eval_incorrect_cnt,
                 )
 
     def run_all(
@@ -480,9 +558,12 @@ def main(
     3) Finally, re-evaluates the newly generated questions with each model in --re-eval-models
        to test knowledge transfer or other cross-model performance differences.
 
-    We also parse basic metrics:
+    We also parse:
       - accuracy / accuracy_judged
-      - which scorer name we extracted them from
+      - which scorer provided it
+      - how many samples passed judge filter
+      - how many were incorrect in adaptive pass
+      - how many were incorrect in re-evaluation
     and store these in the experiment CSV.
     """
     runner = TruthfulQAExperimentRunner(
