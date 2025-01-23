@@ -57,7 +57,7 @@ def create_csv_sample(row: pd.Series) -> Sample:
     )
 
 @task
-def initial_consistency(csv_path: Optional[str] = None) -> Task:
+def initial_consistency(csv_path: Optional[str] = None, consistency_types: List[str] = None) -> Task:
     """Initial consistency evaluation task."""
     if csv_path:
         # Process CSV input
@@ -74,14 +74,23 @@ def initial_consistency(csv_path: Optional[str] = None) -> Task:
         
     else:
         # Original HuggingFace dataset processing
+        if consistency_types is None:
+            consistency_types = [ct.value for ct in ConsistencyType]
+        
+        # Validate consistency types
+        valid_types = set(ct.value for ct in ConsistencyType)
+        invalid_types = set(consistency_types) - valid_types
+        if invalid_types:
+            raise ValueError(f"Invalid consistency types: {invalid_types}")
+
         def record_to_sample(record: dict) -> Sample:
             return Sample(
                 input=record['question'],
-                target=str(record['resolution']),
+                target="",
                 metadata={
                     'id': str(random.randint(10000, 99999)),
-                    'question_type': record['question_type'],
-                    'is_resolved': record.get('is_resolved', False),
+                    'question_type': None,
+                    'is_resolved': None,
                     'original_data': {
                         'title': record['question'],
                         'body': record['background'],
@@ -90,7 +99,7 @@ def initial_consistency(csv_path: Optional[str] = None) -> Task:
             )
 
         dataset = hf_dataset(
-            "prithvi3/filtered_forecast_sample_test",
+            "prithvi3/consistency_sample_test",
             split="test",
             trust=True,
             sample_fields=record_to_sample,
@@ -100,17 +109,15 @@ def initial_consistency(csv_path: Optional[str] = None) -> Task:
 
         dataset = dataset.filter(
             lambda x: (
-                x.metadata["is_resolved"] is True and 
-                x.metadata["question_type"].lower() == "binary" and 
-                "sqrt" not in x.input.lower()
+                "d20" not in x.input.lower()
             )
         )
-        dataset = dataset[:3]
+        # dataset = dataset[:5] # testing
 
         return Task(
             dataset=dataset,
-            solver=consistency_solver(),
-            scorer=consistency_scorer()
+            solver=consistency_solver(use_pretransformed=False, consistency_types=consistency_types),
+            scorer=consistency_scorer(consistency_types)
         )
 
 @task
@@ -119,6 +126,7 @@ def adaptive_consistency(
     consistency_types: List[str] = [ct.value for ct in ConsistencyType],
     use_embeddings: bool = False, 
     dataset_path: Optional[str] = None,
+    eval_model_name: str = None
 ) -> Task:
     """Creates adversarial consistency questions using metrics from previous evaluations"""
 
@@ -180,9 +188,10 @@ def adaptive_consistency(
                 consistency_types=consistency_types,
                 use_embeddings=use_embeddings,
                 dataset_questions=dataset_questions,
+                eval_model_name=eval_model_name
             )
         ],
-        scorer=[consistency_scorer()]
+        scorer=[consistency_scorer(consistency_types=["not", "cond", "but", "expevidence", "or"])]
     )
 
 @task
@@ -220,14 +229,25 @@ def temp_adaptive_judge(
 #         args = parser.parse_args()
         
 #         # Create task based on whether CSV path is provided
-#         task = initial_consistency(args.csv_path)
-        
+#         task = initial_consistency(args.csv_path, consistency_types=["not", "cond", "but", "expevidence", "or"])
+
+#         # initial_log = eval(
+#         #     task, 
+#         #     model=["anthropic/claude-3-5-sonnet-20241022", "google/gemini-2.0-flash-exp"],
+#         #     temperature=0,
+#         #     max_samples=1,
+#         #     max_subprocesses=2,
+#         #     start_log=True
+#         # )[0]
+#         #"together/deepseek-ai/DeepSeek-V3", "together/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo"
 #         initial_log = eval(
 #             task, 
-#             model="openai/gpt-4o",
+#             model=["together/deepseek-ai/DeepSeek-V3"],
 #             temperature=0,
+#             max_samples=5,
 #             start_log=True
 #         )[0]
+
 
 #         print("\nEvaluation complete")
         
@@ -242,32 +262,45 @@ if __name__ == "__main__":
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s'
     )
-    #initial_log_path = "logs/2024-12-26T11-19-29+05-30_initial-consistency_cExeriowwKWrcS4rBbUc9f.eval"
-    #initial_log_path = "logs/2024-12-31T20-20-44+05-30_initial-consistency_CtRhvzAAkDnGJgXJ868DUB.eval" #Inital log for 100 samples, forecasting dataset
     
     
     # Construct the path relative to project root
     project_root = Path(__file__).parent.parent
-    initial_log_path =str(project_root  / "logs" / '2025-01-05T18-27-01+05-30_initial-consistency_3f8K9pe7m7TXieyh4yodUe.eval') # Paleka full dataset
-
+    # initial_log_path = str(project_root / "logs" / '2025-01-10T17-20-15+05-30_initial-consistency_ePmV3dmkw4goT3vWXH6hpr.eval')  # GPT4o 100Q from Paleka Base Qs
+    # initial_log_path = str(project_root / "logs" / '2025-01-11T17-42-09+05-30_initial-consistency_oBsm3VnGHHvjN4FkmzU7SX.eval')  # Gemini 100Q from Paleka Base Qs
+    # initial_log_path = str(project_root / "logs" / '2025-01-13T10-22-49+05-30_initial-consistency_Y7QHsyfPQYaHFr6KNM4buM.eval') #LLAMA-3.1-70B-Instruct-Turbo
+    # initial_log_path = str(project_root / "logs" / '2025-01-13T10-16-03+05-30_initial-consistency_SNK9agtDBSz2jNTLaLwZbb.eval') #DeepSeek-V3
+    initial_log_path = str(project_root / "logs" / '2025-01-14T23-17-02-05-00_initial-consistency_9b94gkQ6KS9B8dMqBdZjtp.eval') #DeepSeek-V3 fixed prob
     
     #dataset_path = "prithvi3/filtered_forecast_sample_test"
-    
+     
+    # tasks = [
+    #     adaptive_consistency(
+    #         initial_log_path=initial_log_path,
+    #         consistency_types=[ct.value],  # Pass single consistency type as list
+    #         use_embeddings=False,
+    #         dataset_path=None
+    #     )
+    #     for ct in ConsistencyType
+    # ]
+
+    #['not', 'andor', 'cond', 'but', 'expevidence', 'or']
     tasks = [
         adaptive_consistency(
             initial_log_path=initial_log_path,
-            consistency_types=[ct.value],  # Pass single consistency type as list
+            consistency_types=['paraphrase'],  # Pass single consistency type as list
             use_embeddings=False,
-            dataset_path=None
+            dataset_path=None,
+            eval_model_name="together/deepseek-ai/DeepSeek-V3"
         )
-        for ct in ConsistencyType
     ]
-
+#"together/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo", together/deepseek-ai/DeepSeek-V3
 
     # Evaluate all tasks
     results = eval(
         tasks,
-        model="openai/gpt-4o",
+        max_connections=1,
+        model="together/deepseek-ai/DeepSeek-V3",
         temperature=0,
         start_log=True,
         max_tasks=len(ConsistencyType)  
