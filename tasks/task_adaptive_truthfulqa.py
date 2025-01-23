@@ -31,8 +31,10 @@ from solvers.solver_press_truthfulqa import press_truthfulqa_solver
 from solvers.solver_evaluate_adaptive_questions import evaluate_adaptive_truthfulqa_questions
 
 from data.eval_log_processing import read_eval_log_async
-from eval_dump_inspect import labels_to_positions
 from utils_elicitation.novelty import novelty_filter_judged_only, novelty_filter_matrix_reducer
+
+def labels_to_positions(labels: list[int]) -> list[str]:
+    return [chr(ord("A") + i) for i, label in enumerate(labels) if label == 1]
 
 @score_reducer(name="sum_score")
 def sum_score() -> ScoreReducer:
@@ -150,7 +152,6 @@ def adaptive_truthfulqa(
             shuffle=True,
         )
 
-        # Build a mapping from question text to embeddings
         question_embedding_map = {
             s.input: torch.tensor(s.metadata["embedding"]) for s in ds
         }
