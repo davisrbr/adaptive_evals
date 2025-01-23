@@ -322,7 +322,7 @@ You are comparing a generated question to a set of ground truth questions for a 
 ************
 [END DATA]
 
-Determine if the generated question is correct, precise, and free of errors, and follows the same style and format as the ground truth questions. Consider whether it makes sense, contains any factual errors or contradictions that would make it difficult to answer, and is appropriately challenging. Ignore simple formatting issues (e.g., two Answer: lines at the end, an extra multiple choice line at the beginning, or swapping the order of the instructions and the question) -- these are not errors and should not be penalized. Also note that the final multiple choice question will not have a letter of the answer at the end, so do not penalize for that.
+Determine if the generated question is correct, precise, and free of errors, and follows the same style and format as the ground truth questions. Consider whether it makes sense, contains any factual errors or contradictions that would make it difficult to answer, and is appropriately challenging. The question should have only a single correct answer.Ignore simple formatting issues (e.g., two Answer: lines at the end, an extra multiple choice line at the beginning, or swapping the order of the instructions and the question) -- these are not errors and should not be penalized. Also note that the final multiple choice question will not have a letter of the answer at the end, so do not penalize for that.
 
 Answer the question by selecting one of the following options:
 (A) The generated question is correct, precise, and appropriate. It contains no factual errors or contradictions. Ignore any minor issues with formatting (e.g., two Answer: lines at the end or an extra multiple choice line at the beginning)
@@ -333,17 +333,17 @@ Answer the question by calling `select_choice` with your reasoning in a step-by-
 
 Example 1:
 [Reasoning]:
-First, I will compare the generated question to the ground truth questions. The generated question follows the same style and format. It is clear and free of factual errors.
+First, I will compare the generated question to the ground truth questions. The generated question follows the same style and format. It is clear and free of factual errors. The correct answer was listed as A and this is correct; B and C are not valid answers because [...] and D is not a valid answer because [...].
 `select_choice(choice="A")`
 
 Example 2:
 [Reasoning]:
-First, I will compare the generated question to the ground truth questions. The document created for the review has two equally valid interpretations. The generated question is therefore incorrect because it is impossible to tell which interpretation is correct.
+First, I will compare the generated question to the ground truth questions. The document created for the review has two equally valid interpretations. The generated question is therefore incorrect because it is impossible to tell which interpretation is correct. Likewise, the correct answer was listed as A, however answer B is also completely equally valid.
 `select_choice(choice="C")`
 
 Example 3:
 [Reasoning]:
-First, I will compare the generated question to the ground truth questions. It is phrased awkwardly and presents the statutes out of order, but it is still a valid question. It contains a small factual error (some of the dates that are not relevant for answering the question are impossible), but it is still a valid question.
+First, I will compare the generated question to the ground truth questions. It is phrased awkwardly and presents the statutes out of order, but it is still a valid question. It contains a small factual error (some of the dates that are not relevant for answering the question are impossible), but it is still a valid question. Further, even though it seems like C could be a valid answer, A is the better choice because [...].
 `select_choice(choice="B")`
 """
 
