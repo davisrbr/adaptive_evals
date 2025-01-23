@@ -108,7 +108,7 @@ def cyberbullying_adaptive_task(
     percentiles_and_samples: list = [(1.0, 2), (0.5, 2)],  # Example: top 100% get 2 samples, top 50% get 2
     use_embeddings: bool = False,
     # Filter criteria for retrieving only successful outputs from prior runs of the basic solver:
-    initial_log_path: str = "/Users/davisbrown/adaptive_evals/logs/2024-12-31T12-11-26-05-00_cyberbullying-jailbreak-task_VJoc6WaBg3QG4W2ySinAS4.json",
+    initial_log_path: str = "../logs/2024-12-31T12-11-26-05-00_cyberbullying-jailbreak-task_VJoc6WaBg3QG4W2ySinAS4.json",
     num_samples: int | bool = 25,
     n_streams: int = 1,
 ):
