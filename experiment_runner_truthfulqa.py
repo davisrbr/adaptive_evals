@@ -4,6 +4,7 @@ import logging
 import json
 from typing import Dict, List, Optional, Tuple
 import click
+import ast
 
 from inspect_ai import Epochs, eval
 from inspect_ai.log import EvalLog, read_eval_log
@@ -56,40 +57,31 @@ def extract_accuracy_metrics(eval_log: EvalLog) -> Tuple[Optional[float], Option
     """
     Parse the log results and return (accuracy, accuracy_judged, scorer_name_used).
 
-    Because re_evaluate_adaptive_truthfulqa sometimes uses scorer=choice() with a "mean" reducer,
-    we still look for "accuracy" or "accuracy_judged" in each ScoreItem.
-
-    Additional rules:
-      - If the reducer is "novelty_filter_judged_only", we only record "accuracy_judged".
-      - Otherwise (often "mean"), if "accuracy" or "accuracy_judged" exist, we record them.
+    Because re_evaluate_adaptive_truthfulqa uses multiple_choice_save_cot with a "mean" reducer,
+    we need to look for:
+    - "accuracy" in the metrics for regular accuracy
+    - "accuracy_judged" in the metrics for accuracy on judged samples only
     
-    We stop at the first ScoreItem that provides an accuracy or accuracy_judged.
+    We stop at the first ScoreItem that provides either metric.
     """
     if not eval_log or not eval_log.results:
         return None, None, None
 
     for score_item in (eval_log.results.scores or []):
-        # If this ScoreItem uses the "novelty_filter_judged_only" reducer:
-        if score_item.reducer == "novelty_filter_judged_only":
-            # Only record accuracy_judged
-            if "accuracy_judged" in score_item.metrics:
-                return (
-                    None,
-                    score_item.metrics["accuracy_judged"].value,
-                    score_item.scorer,
-                )
-        else:
-            # For "mean" or other reducers, look for "accuracy" or "accuracy_judged"
-            found_acc = score_item.metrics.get("accuracy")
-            found_acc_judged = score_item.metrics.get("accuracy_judged")
-            if found_acc or found_acc_judged:
-                acc_val = found_acc.value if found_acc else None
-                acc_judged_val = found_acc_judged.value if found_acc_judged else None
-                return (
-                    acc_val,
-                    acc_judged_val,
-                    score_item.scorer,
-                )
+        # Look for metrics in the score item
+        metrics = score_item.metrics or {}
+        
+        # Get accuracy values if they exist
+        accuracy = metrics.get("accuracy")
+        accuracy_judged = metrics.get("accuracy_judged")
+        
+        # If we found either metric, return the values
+        if accuracy is not None or accuracy_judged is not None:
+            return (
+                accuracy.value if accuracy else None,
+                accuracy_judged.value if accuracy_judged else None,
+                score_item.scorer,
+            )
 
     return None, None, None
 
@@ -100,14 +92,6 @@ def parse_re_eval_counts(eval_log: EvalLog) -> Tuple[int, int, int]:
       (a) number of samples that passed judge filter,
       (b) number of samples that were labeled incorrect in the adaptive pass,
       (c) number of samples that were incorrect for the re-evaluation model.
-
-    Because re_evaluate_adaptive_truthfulqa sets:
-      sample.metadata["original_metadata"] = str(...)
-      which may include '"score": "I"' or "'score': 'I''.
-      We should parse that string rather than do a naive substring check.
-
-    And multiple_choice_save_cot sets sample.store["score"] = "I"
-    if the re-eval model answered incorrectly on that sample.
     """
     if not eval_log or not eval_log.samples:
         return 0, 0, 0
@@ -117,29 +101,25 @@ def parse_re_eval_counts(eval_log: EvalLog) -> Tuple[int, int, int]:
     re_eval_incorrect = 0
 
     for sample in eval_log.samples:
-        # (b) Check if originally incorrect in the adaptive pass.
-        # We'll parse the original_metadata as Python or JSON
-        # so that we reliably check md_dict.get("score") == "I".
+        # Get the original metadata from the adaptive run
         orig_md_str = sample.metadata.get("original_metadata", "")
-        # Try parsing it as JSON, fallback to other approaches if needed
-        parsed_md = None
         if orig_md_str:
             try:
-                # Some code saves it as a JSON-serialized dict
                 parsed_md = json.loads(orig_md_str)
             except json.JSONDecodeError:
-                # Otherwise maybe it's Python literal format
-                import ast
                 try:
                     parsed_md = ast.literal_eval(orig_md_str)
                 except Exception:
                     parsed_md = None
 
-        if isinstance(parsed_md, dict) and parsed_md.get("score") == "I":
-            initially_incorrect += 1
+            # Check if originally incorrect in adaptive pass
+            if isinstance(parsed_md, dict) and parsed_md.get("score") == "I":
+                initially_incorrect += 1
 
-        # (c) Check if re-eval was incorrect (multiple_choice_save_cot sets sample.store["score"] = "I")
-        if sample.store and sample.store.get("score") == "I":
+        # Check if re-eval was incorrect
+        if hasattr(sample, 'score') and sample.score and sample.score.value == "I":
+            re_eval_incorrect += 1
+        elif sample.store.get("score") == "I":  # Backup check in store
             re_eval_incorrect += 1
 
     return total_passed_judge, initially_incorrect, re_eval_incorrect
@@ -342,7 +322,6 @@ class TruthfulQAExperimentRunner:
         Runs adaptive_truthfulqa_refactor for each generator model, then
         re-evaluates those newly generated questions on each re_eval model.
         """
-        from inspect_ai.log import read_eval_log
 
         for generator_name in generator_models:
             print(f"[Adaptive Step] Working on eval={adaptive_eval_model_name}, generator={generator_name}")
