@@ -299,7 +299,7 @@ class TruthfulQAExperimentRunner:
             os.makedirs(init_log_dir, exist_ok=True)
             init_logs = eval(
                 tqa_task,
-                epochs=Epochs(self.n_datapoints, "max"),
+                epochs=Epochs(1, "max"),
                 log_dir=init_log_dir,
                 model=model_name,
                 log_level="critical",
@@ -469,7 +469,12 @@ class TruthfulQAExperimentRunner:
 @click.command()
 @click.option(
     "--adaptive-eval-models",
-    default=["openai/gpt-4o-mini"],
+    default=[
+            # "openai/gpt-4o",
+            # "openai/gpt-4o-mini",
+            # "together/deepseek-ai/DeepSeek-V3",
+            "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        ],
     multiple=True,
     help="Models to run initial TQA and to evaluate adaptively in the new questions step.",
 )
@@ -481,13 +486,20 @@ class TruthfulQAExperimentRunner:
 )
 @click.option(
     "--generator-models",
-    default=["openai/gpt-4o-mini"],
+    default=["openai/gpt-4o"],
     multiple=True,
     help="Models to generate new questions during the adaptive step.",
 )
 @click.option(
     "--re-eval-models",
-    default=["openai/gpt-4o-mini"],
+    default=[
+            "openai/gpt-4o",
+            "openai/gpt-4o-mini",
+            "openai/o1-mini",
+            # "together/deepseek-ai/DeepSeek-V3",
+            # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+            # "anthropic/claude-3-5-sonnet-latest",
+        ],
     multiple=True,
     help="Models to re-evaluate the newly generated questions (transfer).",
 )
