@@ -468,6 +468,16 @@ class TruthfulQAExperimentRunner:
 
 @click.command()
 @click.option(
+    "--experiment-csv",
+    default="results/experiment_results.csv",
+    help="Path to the CSV file where experiment results will be stored.",
+)
+@click.option(
+    "--cache-csv",
+    default="results/experiment_cache.csv",
+    help="Path to the CSV file where cached logs will be stored.",
+)
+@click.option(
     "--adaptive-eval-models",
     default=[
             # "openai/gpt-4o",
@@ -530,6 +540,8 @@ class TruthfulQAExperimentRunner:
     help="If set, re-evaluation only uses previously incorrectly answered questions.",
 )
 def main(
+    experiment_csv: str,
+    cache_csv: str,
     n_datapoints: int,
     adaptive_eval_models: List[str],
     generator_models: List[str],
@@ -567,6 +579,8 @@ def main(
         re_eval_filter_incorrect=re_eval_filter_incorrect,
         n_datapoints=n_datapoints,
         max_attempts=max_attempts,
+        experiment_csv=experiment_csv,
+        cache_csv=cache_csv,
     )
     runner.run_all(
         adaptive_eval_models=list(adaptive_eval_models),
