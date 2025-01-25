@@ -105,7 +105,7 @@ def cyberbullying_basic_solver(
 def cyberbullying_pair_solver(
     max_iterations: int = 5,
     target_model_name: str = "together/meta-llama/Llama-2-7b-chat-hf",
-    judge_model_name: str = "openai/gpt-4",
+    judge_model_name: str = "openai/gpt-4o-mini",
     attack_model_name: str = "together/mistralai/Mixtral-8x22B-Instruct-v0.1",
     n_last_messages: int = 3,
     cutoff: int = 1,

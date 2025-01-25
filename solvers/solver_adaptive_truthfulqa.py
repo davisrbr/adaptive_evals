@@ -473,7 +473,7 @@ def rewording_truthfulqa_solver(
         # 6. Update the prompt in the state
         state.user_prompt.text = formatted_prompt
 
-        # 7. Use generate(...) to get the model’s answer
+        # 7. Use generate(...) to get the model's answer
         state = await generate(state)
 
         # 8. Parse the answer using parse_answers
@@ -553,6 +553,19 @@ def adaptive_truthfulqa_judge_solver(
         generated_sample = state.store.get('generated_sample', None)
         if not generated_sample:
             state.error = "No generated sample found in state."
+            state.completed = True
+            return state
+
+        if (
+            not generated_sample.target
+            or not isinstance(generated_sample.target, list)
+            or generated_sample.target[0] >= len(generated_sample.choices)
+        ):
+            state.error = (
+                "Generated question has an invalid target index (out of range)."
+            )
+            state.store.set("generated_sample", generated_sample)
+            state.scores = ["C"]
             state.completed = True
             return state
 
