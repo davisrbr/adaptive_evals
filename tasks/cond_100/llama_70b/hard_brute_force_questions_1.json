@@ -1,0 +1,652 @@
+{
+  "hard_questions": [
+    {
+      "consistency_score": 0.7999168469968047,
+      "hypothesis": "The model underestimates the impact of environmental factors on company-specific operations, particularly in the tech industry",
+      "questions": {
+        "P": {
+          "title": "Will Apple reduce its carbon footprint by 20% by 2027 through the use of renewable energy sources?",
+          "body": "This question resolves as YES if Apple reduces its carbon footprint by 20% by 2027 through the use of renewable energy sources, as reported by Apple's official sustainability reports or other credible sources like Greenpeace. Resolution criteria: Official reports from Apple, Greenpeace, or other reputable environmental organizations. Resolution date: December 31, 2027."
+        },
+        "Q_given_P": {
+          "title": "Given the reduction in carbon footprint, will Apple's revenue increase by 10% YoY in 2028 due to improved brand image?",
+          "body": "This question resolves as YES if Apple's revenue increases by 10% in 2028 due to improved brand image, given the reduction in carbon footprint, as reported by Apple's official earnings reports or other credible sources like Bloomberg. Resolution criteria: Official reports from Apple, Bloomberg, or other reputable financial news outlets. Resolution date: December 31, 2028."
+        },
+        "P_and_Q": {
+          "title": "Will Apple reduce its carbon footprint by 20% by 2027 and its revenue increase by 10% YoY in 2028?",
+          "body": "This question resolves as YES if both Apple reduces its carbon footprint by 20% by 2027 through the use of renewable energy sources and its revenue increases by 10% in 2028 due to improved brand image, as reported by Apple's official sustainability reports, Apple's official earnings reports, or other credible sources like Greenpeace or Bloomberg. Resolution criteria: Official reports from Apple, Greenpeace, Bloomberg, or other reputable sources. Resolution date: December 31, 2028."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.6232885483835958,
+      "hypothesis": "The model underestimates the impact of advancements in quantum computing on the development of artificial general intelligence (AGI) in the field of natural language processing, particularly in the context of language translation",
+      "questions": {
+        "P": {
+          "title": "Will Microsoft develop a quantum computer capable of performing complex calculations by 2030?",
+          "body": "This question resolves as YES if Microsoft develops a quantum computer capable of performing complex calculations by 2030, as reported by Microsoft's official blog or other credible sources like The Verge. Resolution criteria: Official reports from Microsoft, The Verge, or other reputable tech news outlets. Resolution date: December 31, 2030."
+        },
+        "Q_given_P": {
+          "title": "Given Microsoft's development of a quantum computer, will the development of AGI in natural language processing accelerate by 25% in the next 2 years?",
+          "body": "This question resolves as YES if the development of AGI in natural language processing accelerates by 25% in the next 2 years, given Microsoft's development of a quantum computer capable of performing complex calculations, as reported by research papers published in top-tier AI conferences like NeurIPS or ICLR, or other credible sources like Harvard Business Review. Resolution criteria: Research papers published in top-tier AI conferences, or official reports from Microsoft, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2032."
+        },
+        "P_and_Q": {
+          "title": "Will Microsoft develop a quantum computer capable of performing complex calculations by 2030 and the development of AGI in natural language processing accelerate by 25% in the next 2 years?",
+          "body": "This question resolves as YES if both Microsoft develops a quantum computer capable of performing complex calculations by 2030 and the development of AGI in natural language processing accelerates by 25% in the next 2 years, as reported by Microsoft's official blog, research papers published in top-tier AI conferences, or other credible sources like The Verge or Harvard Business Review. Resolution criteria: Official reports from Microsoft, research papers published in top-tier AI conferences, The Verge, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2032."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5878390014160705,
+      "hypothesis": "The model overestimates the impact of social media trends on company-specific sales, particularly in the context of electric vehicle manufacturing",
+      "questions": {
+        "P": {
+          "title": "Will the number of followers of Tesla's Twitter account increase by 25% in 2026?",
+          "body": "This question resolves as YES if the number of followers of Tesla's Twitter account increases by 25% in 2026, as reported by Twitter's official analytics or other credible sources like Hootsuite. Resolution criteria: Official reports from Twitter, Hootsuite, or other reputable social media analytics sources. Resolution date: December 31, 2026."
+        },
+        "Q_given_P": {
+          "title": "Given the increase in followers, will Tesla's sales increase by 20% in 2026?",
+          "body": "This question resolves as YES if Tesla's sales increase by 20% in 2026, given the increase in followers of Tesla's Twitter account, as reported by Tesla's official earnings reports or other credible sources like Bloomberg. Resolution criteria: Official reports from Tesla, Bloomberg, or other reputable financial news outlets. Resolution date: December 31, 2026."
+        },
+        "P_and_Q": {
+          "title": "Will the number of followers of Tesla's Twitter account increase by 25% in 2026 and Tesla's sales increase by 20% in 2026?",
+          "body": "This question resolves as YES if both the number of followers of Tesla's Twitter account increases by 25% in 2026 and Tesla's sales increase by 20% in 2026, as reported by Twitter's official analytics, Tesla's official earnings reports, or other credible sources like Hootsuite or Bloomberg. Resolution criteria: Official reports from Twitter, Tesla, Hootsuite, Bloomberg, or other reputable sources. Resolution date: December 31, 2026."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.575885788917059,
+      "hypothesis": "The model underestimates the impact of quantum computing on the development of artificial general intelligence (AGI) in the field of natural language processing",
+      "questions": {
+        "P": {
+          "title": "Will Google announce a breakthrough in quantum computing by 2027?",
+          "body": "This question resolves as YES if Google announces a breakthrough in quantum computing, such as the development of a quantum computer capable of performing complex calculations, by 2027, as reported by Google's official blog or other credible sources like MIT Technology Review. Resolution criteria: Official reports from Google, MIT Technology Review, or other reputable tech news outlets. Resolution date: December 31, 2027."
+        },
+        "Q_given_P": {
+          "title": "Given Google's breakthrough in quantum computing, will the development of AGI in natural language processing accelerate by 20% in the next 2 years?",
+          "body": "This question resolves as YES if the development of AGI in natural language processing accelerates by 20% in the next 2 years, given Google's breakthrough in quantum computing, as reported by research papers published in top-tier AI conferences like NeurIPS or ICLR, or other credible sources like Harvard Business Review. Resolution criteria: Research papers published in top-tier AI conferences, or official reports from Google, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2029."
+        },
+        "P_and_Q": {
+          "title": "Will Google announce a breakthrough in quantum computing by 2027 and the development of AGI in natural language processing accelerate by 20% in the next 2 years?",
+          "body": "This question resolves as YES if both Google announces a breakthrough in quantum computing by 2027 and the development of AGI in natural language processing accelerates by 20% in the next 2 years, as reported by Google's official blog, research papers published in top-tier AI conferences, or other credible sources like MIT Technology Review or Harvard Business Review. Resolution criteria: Official reports from Google, research papers published in top-tier AI conferences, MIT Technology Review, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2029."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5650495183368537,
+      "hypothesis": "The model underestimates the impact of quantum computing on the development of artificial general intelligence (AGI) in the field of natural language processing, particularly in the context of language translation",
+      "questions": {
+        "P": {
+          "title": "Will Microsoft develop a quantum computer capable of performing complex calculations by 2030?",
+          "body": "This question resolves as YES if Microsoft develops a quantum computer capable of performing complex calculations by 2030, as reported by Microsoft's official blog or other credible sources like The Verge. Resolution criteria: Official reports from Microsoft, The Verge, or other reputable tech news outlets. Resolution date: December 31, 2030."
+        },
+        "Q_given_P": {
+          "title": "Given Microsoft's development of a quantum computer, will the development of AGI in natural language processing accelerate by 25% in the next 2 years?",
+          "body": "This question resolves as YES if the development of AGI in natural language processing accelerates by 25% in the next 2 years, given Microsoft's development of a quantum computer capable of performing complex calculations, as reported by research papers published in top-tier AI conferences like NeurIPS or ICLR, or other credible sources like Harvard Business Review. Resolution criteria: Research papers published in top-tier AI conferences, or official reports from Microsoft, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2032."
+        },
+        "P_and_Q": {
+          "title": "Will Microsoft develop a quantum computer capable of performing complex calculations by 2030 and the development of AGI in natural language processing accelerate by 25% in the next 2 years?",
+          "body": "This question resolves as YES if both Microsoft develops a quantum computer capable of performing complex calculations by 2030 and the development of AGI in natural language processing accelerates by 25% in the next 2 years, as reported by Microsoft's official blog, research papers published in top-tier AI conferences, or other credible sources like The Verge or Harvard Business Review. Resolution criteria: Official reports from Microsoft, research papers published in top-tier AI conferences, The Verge, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2032."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5425849607699686,
+      "hypothesis": "The model underestimates the impact of advancements in quantum computing on the development of artificial general intelligence (AGI) in the field of natural language processing, particularly in the context of language translation",
+      "questions": {
+        "P": {
+          "title": "Will Google develop a quantum computer capable of performing complex calculations by 2031?",
+          "body": "This question resolves as YES if Google develops a quantum computer capable of performing complex calculations by 2031, as reported by Google's official blog or other credible sources like MIT Technology Review. Resolution criteria: Official reports from Google, MIT Technology Review, or other reputable tech news outlets. Resolution date: December 31, 2031."
+        },
+        "Q_given_P": {
+          "title": "Given Google's development of a quantum computer, will the development of AGI in natural language processing accelerate by 30% in the next 2 years?",
+          "body": "This question resolves as YES if the development of AGI in natural language processing accelerates by 30% in the next 2 years, given Google's development of a quantum computer capable of performing complex calculations, as reported by research papers published in top-tier AI conferences like NeurIPS or ICLR, or other credible sources like Harvard Business Review. Resolution criteria: Research papers published in top-tier AI conferences, or official reports from Google, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2033."
+        },
+        "P_and_Q": {
+          "title": "Will Google develop a quantum computer capable of performing complex calculations by 2031 and the development of AGI in natural language processing accelerate by 30% in the next 2 years?",
+          "body": "This question resolves as YES if both Google develops a quantum computer capable of performing complex calculations by 2031 and the development of AGI in natural language processing accelerates by 30% in the next 2 years, as reported by Google's official blog, research papers published in top-tier AI conferences, or other credible sources like MIT Technology Review or Harvard Business Review. Resolution criteria: Official reports from Google, research papers published in top-tier AI conferences, MIT Technology Review, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2033."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5315780484465057,
+      "hypothesis": "The model underestimates the impact of advancements in quantum computing on the development of artificial general intelligence (AGI) in the field of natural language processing, particularly in the context of language translation",
+      "questions": {
+        "P": {
+          "title": "Will Microsoft develop a quantum computer capable of performing complex calculations by 2030?",
+          "body": "This question resolves as YES if Microsoft develops a quantum computer capable of performing complex calculations by 2030, as reported by Microsoft's official blog or other credible sources like The Verge. Resolution criteria: Official reports from Microsoft, The Verge, or other reputable tech news outlets. Resolution date: December 31, 2030."
+        },
+        "Q_given_P": {
+          "title": "Given Microsoft's development of a quantum computer, will the development of AGI in natural language processing accelerate by 25% in the next 2 years?",
+          "body": "This question resolves as YES if the development of AGI in natural language processing accelerates by 25% in the next 2 years, given Microsoft's development of a quantum computer capable of performing complex calculations, as reported by research papers published in top-tier AI conferences like NeurIPS or ICLR, or other credible sources like Harvard Business Review. Resolution criteria: Research papers published in top-tier AI conferences, or official reports from Microsoft, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2032."
+        },
+        "P_and_Q": {
+          "title": "Will Microsoft develop a quantum computer capable of performing complex calculations by 2030 and the development of AGI in natural language processing accelerate by 25% in the next 2 years?",
+          "body": "This question resolves as YES if both Microsoft develops a quantum computer capable of performing complex calculations by 2030 and the development of AGI in natural language processing accelerates by 25% in the next 2 years, as reported by Microsoft's official blog, research papers published in top-tier AI conferences, or other credible sources like The Verge or Harvard Business Review. Resolution criteria: Official reports from Microsoft, research papers published in top-tier AI conferences, The Verge, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2032."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5039905096294248,
+      "hypothesis": "The model underestimates the impact of genetic engineering on crop yields in developing countries, particularly in the context of drought-resistant crops",
+      "questions": {
+        "P": {
+          "title": "Will the African Union implement policies to promote the use of genetic engineering in agriculture by 2029?",
+          "body": "This question resolves as YES if the African Union implements policies to promote the use of genetic engineering in agriculture by 2029, as reported by the African Union's official website or other credible sources like the African Agricultural Technology Foundation. Resolution criteria: Official reports from the African Union, the African Agricultural Technology Foundation, or other reputable sources. Resolution date: December 31, 2029."
+        },
+        "Q_given_P": {
+          "title": "Given the policies, will the adoption of genetically engineered drought-resistant crops in Ethiopia increase by 30% by 2032?",
+          "body": "This question resolves as YES if the adoption of genetically engineered drought-resistant crops in Ethiopia increases by 30% by 2032, given the implementation of policies by the African Union to promote the use of genetic engineering in agriculture, as reported by the Ethiopian Ministry of Agriculture or other credible sources like the International Service for the Acquisition of Agri-biotech Applications. Resolution criteria: Official reports from the Ethiopian Ministry of Agriculture, the International Service for the Acquisition of Agri-biotech Applications, or other reputable sources. Resolution date: December 31, 2032."
+        },
+        "P_and_Q": {
+          "title": "Will the African Union implement policies to promote the use of genetic engineering in agriculture by 2029 and the adoption of genetically engineered drought-resistant crops in Ethiopia increase by 30% by 2032?",
+          "body": "This question resolves as YES if both the African Union implements policies to promote the use of genetic engineering in agriculture by 2029 and the adoption of genetically engineered drought-resistant crops in Ethiopia increases by 30% by 2032, as reported by the African Union's official website, the Ethiopian Ministry of Agriculture, or other credible sources like the African Agricultural Technology Foundation or the International Service for the Acquisition of Agri-biotech Applications. Resolution criteria: Official reports from the African Union, the Ethiopian Ministry of Agriculture, the African Agricultural Technology Foundation, the International Service for the Acquisition of Agri-biotech Applications, or other reputable sources. Resolution date: December 31, 2032."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4963592057401186,
+      "hypothesis": "The model overgeneralizes tech company compliance based on industry trends",
+      "questions": {
+        "P": {
+          "title": "Will Meta comply with the EU's Digital Services Act in 2025?",
+          "body": "This question resolves as YES if Meta complies with the EU's Digital Services Act in 2025, as reported by Meta's official reports or other credible sources. Resolution criteria: Official reports from Meta, Bloomberg, or Reuters. Resolution date: December 31, 2025."
+        },
+        "Q_given_P": {
+          "title": "Given Meta's compliance with the EU's Digital Services Act, will Facebook's user growth rate increase by 5% in 2025?",
+          "body": "This question resolves as YES if Facebook's user growth rate increases by 5% in 2025, given that Meta complies with the EU's Digital Services Act in 2025, as reported by Facebook's official reports or other credible sources. Resolution criteria: Official reports from Facebook, Bloomberg, or Reuters. Resolution date: December 31, 2025."
+        },
+        "P_and_Q": {
+          "title": "Will Meta comply with the EU's Digital Services Act and Facebook's user growth rate increase by 5% in 2025?",
+          "body": "This question resolves as YES if both Meta complies with the EU's Digital Services Act and Facebook's user growth rate increases by 5% in 2025, as reported by Meta's official reports and Facebook's official reports or other credible sources. Resolution criteria: Official reports from Meta and Facebook, and official data from Bloomberg or Reuters. Resolution date: December 31, 2025."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4758879776256619,
+      "hypothesis": "The model underestimates the impact of advancements in quantum computing on the development of artificial general intelligence (AGI) in the field of natural language processing",
+      "questions": {
+        "P": {
+          "title": "Will Microsoft develop a quantum computer capable of performing complex calculations by 2030?",
+          "body": "This question resolves as YES if Microsoft develops a quantum computer capable of performing complex calculations by 2030, as reported by Microsoft's official blog or other credible sources like The Verge. Resolution criteria: Official reports from Microsoft, The Verge, or other reputable tech news outlets. Resolution date: December 31, 2030."
+        },
+        "Q_given_P": {
+          "title": "Given the development of the quantum computer, will the development of AGI in natural language processing accelerate by 25% in the next 2 years?",
+          "body": "This question resolves as YES if the development of AGI in natural language processing accelerates by 25% in the next 2 years, given Microsoft's development of a quantum computer capable of performing complex calculations, as reported by research papers published in top-tier AI conferences like NeurIPS or ICLR, or other credible sources like Harvard Business Review. Resolution criteria: Research papers published in top-tier AI conferences, or official reports from Microsoft, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2032."
+        },
+        "P_and_Q": {
+          "title": "Will Microsoft develop a quantum computer capable of performing complex calculations by 2030 and the development of AGI in natural language processing accelerate by 25% in the next 2 years?",
+          "body": "This question resolves as YES if both Microsoft develops a quantum computer capable of performing complex calculations by 2030 and the development of AGI in natural language processing accelerates by 25% in the next 2 years, as reported by Microsoft's official blog, research papers published in top-tier AI conferences, or other credible sources like The Verge or Harvard Business Review. Resolution criteria: Official reports from Microsoft, research papers published in top-tier AI conferences, The Verge, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2032."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4688827098540621,
+      "hypothesis": "The model underestimates the impact of quantum computing on the development of artificial general intelligence (AGI) in the field of natural language processing, particularly in the context of language translation",
+      "questions": {
+        "P": {
+          "title": "Will Google announce a breakthrough in quantum computing by 2028?",
+          "body": "This question resolves as YES if Google announces a breakthrough in quantum computing by 2028, as reported by Google's official blog or other credible sources like MIT Technology Review. Resolution criteria: Official reports from Google, MIT Technology Review, or other reputable tech news outlets. Resolution date: December 31, 2028."
+        },
+        "Q_given_P": {
+          "title": "Given Google's breakthrough in quantum computing, will the development of AGI in natural language processing accelerate by 30% in the next 3 years?",
+          "body": "This question resolves as YES if the development of AGI in natural language processing accelerates by 30% in the next 3 years, given Google's breakthrough in quantum computing, as reported by research papers published in top-tier AI conferences like NeurIPS or ICLR, or other credible sources like Harvard Business Review. Resolution criteria: Research papers published in top-tier AI conferences, or official reports from Google, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2031."
+        },
+        "P_and_Q": {
+          "title": "Will Google announce a breakthrough in quantum computing by 2028 and the development of AGI in natural language processing accelerate by 30% in the next 3 years?",
+          "body": "This question resolves as YES if both Google announces a breakthrough in quantum computing by 2028 and the development of AGI in natural language processing accelerates by 30% in the next 3 years, as reported by Google's official blog, research papers published in top-tier AI conferences, or other credible sources like MIT Technology Review or Harvard Business Review. Resolution criteria: Official reports from Google, research papers published in top-tier AI conferences, MIT Technology Review, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2031."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4457397301044157,
+      "hypothesis": "The model underestimates the impact of genetic engineering on crop yields in developing countries, particularly in the context of drought-resistant crops",
+      "questions": {
+        "P": {
+          "title": "Will the African Union implement policies to promote the use of genetic engineering in agriculture by 2029?",
+          "body": "This question resolves as YES if the African Union implements policies to promote the use of genetic engineering in agriculture by 2029, as reported by the African Union's official website or other credible sources like the African Agricultural Technology Foundation. Resolution criteria: Official reports from the African Union, the African Agricultural Technology Foundation, or other reputable sources. Resolution date: December 31, 2029."
+        },
+        "Q_given_P": {
+          "title": "Given the policies, will the adoption of genetically engineered drought-resistant crops in Ethiopia increase by 30% by 2032?",
+          "body": "This question resolves as YES if the adoption of genetically engineered drought-resistant crops in Ethiopia increases by 30% by 2032, given the implementation of policies by the African Union to promote the use of genetic engineering in agriculture, as reported by the Ethiopian Ministry of Agriculture or other credible sources like the International Service for the Acquisition of Agri-biotech Applications. Resolution criteria: Official reports from the Ethiopian Ministry of Agriculture, the International Service for the Acquisition of Agri-biotech Applications, or other reputable sources. Resolution date: December 31, 2032."
+        },
+        "P_and_Q": {
+          "title": "Will the African Union implement policies to promote the use of genetic engineering in agriculture by 2029 and the adoption of genetically engineered drought-resistant crops in Ethiopia increase by 30% by 2032?",
+          "body": "This question resolves as YES if both the African Union implements policies to promote the use of genetic engineering in agriculture by 2029 and the adoption of genetically engineered drought-resistant crops in Ethiopia increases by 30% by 2032, as reported by the African Union's official website, the Ethiopian Ministry of Agriculture, or other credible sources like the African Agricultural Technology Foundation or the International Service for the Acquisition of Agri-biotech Applications. Resolution criteria: Official reports from the African Union, the Ethiopian Ministry of Agriculture, the African Agricultural Technology Foundation, the International Service for the Acquisition of Agri-biotech Applications, or other reputable sources. Resolution date: December 31, 2032."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.432993311669576,
+      "hypothesis": "The model underestimates the impact of environmental factors on company-specific operations, particularly in the tech industry",
+      "questions": {
+        "P": {
+          "title": "Will the European Union implement a carbon pricing mechanism for the tech industry by 2028?",
+          "body": "This question resolves as YES if the European Union implements a carbon pricing mechanism for the tech industry by 2028, as reported by the European Commission's official website or other credible sources like Reuters. Resolution criteria: Official reports from the European Commission, Reuters, or other reputable news outlets. Resolution date: December 31, 2028."
+        },
+        "Q_given_P": {
+          "title": "Given the implementation, will the operating costs of Google's European data centers increase by 12% in the next 2 years?",
+          "body": "This question resolves as YES if the operating costs of Google's European data centers increase by 12% in the next 2 years, given the implementation of a carbon pricing mechanism for the tech industry by the European Union, as reported by Google's official reports or other credible sources like Bloomberg. Resolution criteria: Official reports from Google, Bloomberg, or other reputable sources. Resolution date: December 31, 2030."
+        },
+        "P_and_Q": {
+          "title": "Will the European Union implement a carbon pricing mechanism for the tech industry by 2028 and the operating costs of Google's European data centers increase by 12% in the next 2 years?",
+          "body": "This question resolves as YES if both the European Union implements a carbon pricing mechanism for the tech industry by 2028 and the operating costs of Google's European data centers increase by 12% in the next 2 years, as reported by the European Commission's official website, Google's official reports, or other credible sources like Reuters or Bloomberg. Resolution criteria: Official reports from the European Commission, Google, Reuters, Bloomberg, or other reputable sources. Resolution date: December 31, 2030."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4324627739471086,
+      "hypothesis": "The model underestimates the impact of genetic engineering on crop yields in developing countries, particularly in Africa",
+      "questions": {
+        "P": {
+          "title": "Will the African Union implement policies to promote the use of genetic engineering in agriculture by 2028?",
+          "body": "This question resolves as YES if the African Union implements policies to promote the use of genetic engineering in agriculture by 2028, as reported by the African Union's official website or other credible sources like the African Agricultural Technology Foundation. Resolution criteria: Official reports from the African Union, the African Agricultural Technology Foundation, or other reputable sources. Resolution date: December 31, 2028."
+        },
+        "Q_given_P": {
+          "title": "Given the policies, will the adoption of genetically engineered crops in Kenya increase by 20% by 2031?",
+          "body": "This question resolves as YES if the adoption of genetically engineered crops in Kenya increases by 20% by 2031, given the implementation of policies by the African Union to promote the use of genetic engineering in agriculture, as reported by the Kenyan Ministry of Agriculture or other credible sources like the International Service for the Acquisition of Agri-biotech Applications. Resolution criteria: Official reports from the Kenyan Ministry of Agriculture, the International Service for the Acquisition of Agri-biotech Applications, or other reputable sources. Resolution date: December 31, 2031."
+        },
+        "P_and_Q": {
+          "title": "Will the African Union implement policies to promote the use of genetic engineering in agriculture by 2028 and the adoption of genetically engineered crops in Kenya increase by 20% by 2031?",
+          "body": "This question resolves as YES if both the African Union implements policies to promote the use of genetic engineering in agriculture by 2028 and the adoption of genetically engineered crops in Kenya increases by 20% by 2031, as reported by the African Union's official website, the Kenyan Ministry of Agriculture, or other credible sources like the African Agricultural Technology Foundation or the International Service for the Acquisition of Agri-biotech Applications. Resolution criteria: Official reports from the African Union, the Kenyan Ministry of Agriculture, the African Agricultural Technology Foundation, the International Service for the Acquisition of Agri-biotech Applications, or other reputable sources. Resolution date: December 31, 2031."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4288272305539776,
+      "hypothesis": "The model underestimates the impact of advancements in quantum computing on the development of artificial general intelligence (AGI) in the field of natural language processing, particularly in the context of language translation",
+      "questions": {
+        "P": {
+          "title": "Will Google announce a breakthrough in quantum computing by 2028?",
+          "body": "This question resolves as YES if Google announces a breakthrough in quantum computing by 2028, as reported by Google's official blog or other credible sources like MIT Technology Review. Resolution criteria: Official reports from Google, MIT Technology Review, or other reputable tech news outlets. Resolution date: December 31, 2028."
+        },
+        "Q_given_P": {
+          "title": "Given Google's breakthrough in quantum computing, will the development of AGI in natural language processing accelerate by 30% in the next 3 years?",
+          "body": "This question resolves as YES if the development of AGI in natural language processing accelerates by 30% in the next 3 years, given Google's breakthrough in quantum computing, as reported by research papers published in top-tier AI conferences like NeurIPS or ICLR, or other credible sources like Harvard Business Review. Resolution criteria: Research papers published in top-tier AI conferences, or official reports from Google, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2031."
+        },
+        "P_and_Q": {
+          "title": "Will Google announce a breakthrough in quantum computing by 2028 and the development of AGI in natural language processing accelerate by 30% in the next 3 years?",
+          "body": "This question resolves as YES if both Google announces a breakthrough in quantum computing by 2028 and the development of AGI in natural language processing accelerates by 30% in the next 3 years, as reported by Google's official blog, research papers published in top-tier AI conferences, or other credible sources like MIT Technology Review or Harvard Business Review. Resolution criteria: Official reports from Google, research papers published in top-tier AI conferences, MIT Technology Review, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2031."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4243049542941891,
+      "hypothesis": "The model overestimates the impact of social media trends on company-specific sales, particularly in the context of electric vehicle manufacturing",
+      "questions": {
+        "P": {
+          "title": "Will the number of followers of Tesla's Twitter account increase by 25% in 2026?",
+          "body": "This question resolves as YES if the number of followers of Tesla's Twitter account increases by 25% in 2026, as reported by Twitter's official analytics or other credible sources like Hootsuite. Resolution criteria: Official reports from Twitter, Hootsuite, or other reputable social media analytics sources. Resolution date: December 31, 2026."
+        },
+        "Q_given_P": {
+          "title": "Given the increase in followers, will Tesla's sales increase by 20% in 2026?",
+          "body": "This question resolves as YES if Tesla's sales increase by 20% in 2026, given the increase in followers of Tesla's Twitter account, as reported by Tesla's official earnings reports or other credible sources like Bloomberg. Resolution criteria: Official reports from Tesla, Bloomberg, or other reputable financial news outlets. Resolution date: December 31, 2026."
+        },
+        "P_and_Q": {
+          "title": "Will the number of followers of Tesla's Twitter account increase by 25% in 2026 and Tesla's sales increase by 20% in 2026?",
+          "body": "This question resolves as YES if both the number of followers of Tesla's Twitter account increases by 25% in 2026 and Tesla's sales increase by 20% in 2026, as reported by Twitter's official analytics, Tesla's official earnings reports, or other credible sources like Hootsuite or Bloomberg. Resolution criteria: Official reports from Twitter, Tesla, Hootsuite, Bloomberg, or other reputable sources. Resolution date: December 31, 2026."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4125990677707028,
+      "hypothesis": "The model underestimates the impact of environmental factors on company-specific operations, particularly in the tech industry",
+      "questions": {
+        "P": {
+          "title": "Will the European Union implement a carbon pricing mechanism for the tech industry by 2028?",
+          "body": "This question resolves as YES if the European Union implements a carbon pricing mechanism for the tech industry by 2028, as reported by the European Commission's official website or other credible sources like Reuters. Resolution criteria: Official reports from the European Commission, Reuters, or other reputable news outlets. Resolution date: December 31, 2028."
+        },
+        "Q_given_P": {
+          "title": "Given the implementation of the carbon pricing mechanism, will the operating costs of Google's European data centers increase by 12% in the next 2 years?",
+          "body": "This question resolves as YES if the operating costs of Google's European data centers increase by 12% in the next 2 years, given the implementation of a carbon pricing mechanism for the tech industry by the European Union, as reported by Google's official reports or other credible sources like Bloomberg. Resolution criteria: Official reports from Google, Bloomberg, or other reputable sources. Resolution date: December 31, 2030."
+        },
+        "P_and_Q": {
+          "title": "Will the European Union implement a carbon pricing mechanism for the tech industry by 2028 and the operating costs of Google's European data centers increase by 12% in the next 2 years?",
+          "body": "This question resolves as YES if both the European Union implements a carbon pricing mechanism for the tech industry by 2028 and the operating costs of Google's European data centers increase by 12% in the next 2 years, as reported by the European Commission's official website, Google's official reports, or other credible sources like Reuters or Bloomberg. Resolution criteria: Official reports from the European Commission, Google, Reuters, Bloomberg, or other reputable sources. Resolution date: December 31, 2030."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4088789375514077,
+      "hypothesis": "The model underestimates the impact of environmental factors on company-specific operations, particularly in the tech industry",
+      "questions": {
+        "P": {
+          "title": "Will the European Union implement a carbon pricing mechanism for the tech industry by 2028?",
+          "body": "This question resolves as YES if the European Union implements a carbon pricing mechanism for the tech industry by 2028, as reported by the European Commission's official website or other credible sources like Reuters. Resolution criteria: Official reports from the European Commission, Reuters, or other reputable news outlets. Resolution date: December 31, 2028."
+        },
+        "Q_given_P": {
+          "title": "Given the implementation of the carbon pricing mechanism, will the operating costs of Google's European data centers increase by 12% in the next 2 years?",
+          "body": "This question resolves as YES if the operating costs of Google's European data centers increase by 12% in the next 2 years, given the implementation of a carbon pricing mechanism for the tech industry by the European Union, as reported by Google's official reports or other credible sources like Bloomberg. Resolution criteria: Official reports from Google, Bloomberg, or other reputable sources. Resolution date: December 31, 2030."
+        },
+        "P_and_Q": {
+          "title": "Will the European Union implement a carbon pricing mechanism for the tech industry by 2028 and the operating costs of Google's European data centers increase by 12% in the next 2 years?",
+          "body": "This question resolves as YES if both the European Union implements a carbon pricing mechanism for the tech industry by 2028 and the operating costs of Google's European data centers increase by 12% in the next 2 years, as reported by the European Commission's official website, Google's official reports, or other credible sources like Reuters or Bloomberg. Resolution criteria: Official reports from the European Commission, Google, Reuters, Bloomberg, or other reputable sources. Resolution date: December 31, 2030."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4024564821608448,
+      "hypothesis": "The model overestimates the impact of social media trends on company-specific sales",
+      "questions": {
+        "P": {
+          "title": "Will the number of followers of Tesla's Twitter account increase by 20% in 2025?",
+          "body": "This question resolves as YES if the number of followers of Tesla's Twitter account increases by 20% in 2025, as reported by Twitter's official analytics or other credible sources like Hootsuite. Resolution criteria: Official reports from Twitter, Hootsuite, or other reputable social media analytics sources. Resolution date: December 31, 2025."
+        },
+        "Q_given_P": {
+          "title": "Given the increase in followers, will Tesla's sales increase by 15% in 2025?",
+          "body": "This question resolves as YES if Tesla's sales increase by 15% in 2025, given the increase in followers of Tesla's Twitter account, as reported by Tesla's official earnings reports or other credible sources like Bloomberg. Resolution criteria: Official reports from Tesla, Bloomberg, or other reputable financial news outlets. Resolution date: December 31, 2025."
+        },
+        "P_and_Q": {
+          "title": "Will the number of followers of Tesla's Twitter account increase by 20% in 2025 and Tesla's sales increase by 15% in 2025?",
+          "body": "This question resolves as YES if both the number of followers of Tesla's Twitter account increases by 20% in 2025 and Tesla's sales increase by 15% in 2025, as reported by Twitter's official analytics, Tesla's official earnings reports, or other credible sources like Hootsuite or Bloomberg. Resolution criteria: Official reports from Twitter, Tesla, Hootsuite, Bloomberg, or other reputable sources. Resolution date: December 31, 2025."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3998734567935977,
+      "hypothesis": "The model underestimates the impact of quantum computing on the development of artificial general intelligence (AGI) in the field of natural language processing",
+      "questions": {
+        "P": {
+          "title": "Will Google announce a breakthrough in quantum computing by 2029?",
+          "body": "This question resolves as YES if Google announces a breakthrough in quantum computing by 2029, as reported by Google's official blog or other credible sources like MIT Technology Review. Resolution criteria: Official reports from Google, MIT Technology Review, or other reputable tech news outlets. Resolution date: December 31, 2029."
+        },
+        "Q_given_P": {
+          "title": "Given Google's breakthrough in quantum computing, will the development of AGI in natural language processing accelerate by 30% in the next 3 years?",
+          "body": "This question resolves as YES if the development of AGI in natural language processing accelerates by 30% in the next 3 years, given Google's breakthrough in quantum computing, as reported by research papers published in top-tier AI conferences like NeurIPS or ICLR, or other credible sources like Harvard Business Review. Resolution criteria: Research papers published in top-tier AI conferences, or official reports from Google, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2032."
+        },
+        "P_and_Q": {
+          "title": "Will Google announce a breakthrough in quantum computing by 2029 and the development of AGI in natural language processing accelerate by 30% in the next 3 years?",
+          "body": "This question resolves as YES if both Google announces a breakthrough in quantum computing by 2029 and the development of AGI in natural language processing accelerates by 30% in the next 3 years, as reported by Google's official blog, research papers published in top-tier AI conferences, or other credible sources like MIT Technology Review or Harvard Business Review. Resolution criteria: Official reports from Google, research papers published in top-tier AI conferences, MIT Technology Review, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2032."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3961766192347351,
+      "hypothesis": "The model overestimates the impact of advancements in quantum computing on the development of artificial general intelligence (AGI) in the field of natural language processing",
+      "questions": {
+        "P": {
+          "title": "Will Google announce a breakthrough in quantum computing by 2029?",
+          "body": "This question resolves as YES if Google announces a breakthrough in quantum computing by 2029, as reported by Google's official blog or other credible sources like MIT Technology Review. Resolution criteria: Official reports from Google, MIT Technology Review, or other reputable tech news outlets. Resolution date: December 31, 2029."
+        },
+        "Q_given_P": {
+          "title": "Given the breakthrough, will the development of AGI in natural language processing accelerate by 25% in the next 3 years?",
+          "body": "This question resolves as YES if the development of AGI in natural language processing accelerates by 25% in the next 3 years, given Google's breakthrough in quantum computing, as reported by research papers published in top-tier AI conferences like NeurIPS or ICLR, or other credible sources like Harvard Business Review. Resolution criteria: Research papers published in top-tier AI conferences, or official reports from Google, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2032."
+        },
+        "P_and_Q": {
+          "title": "Will Google announce a breakthrough in quantum computing by 2029 and the development of AGI in natural language processing accelerate by 25% in the next 3 years?",
+          "body": "This question resolves as YES if both Google announces a breakthrough in quantum computing by 2029 and the development of AGI in natural language processing accelerates by 25% in the next 3 years, as reported by Google's official blog, research papers published in top-tier AI conferences, or other credible sources like MIT Technology Review or Harvard Business Review. Resolution criteria: Official reports from Google, research papers published in top-tier AI conferences, MIT Technology Review, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2032."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3958400861184034,
+      "hypothesis": "The model underestimates the impact of quantum computing on the development of artificial general intelligence (AGI) in the field of natural language processing",
+      "questions": {
+        "P": {
+          "title": "Will IBM develop a quantum computer capable of performing complex calculations by 2032?",
+          "body": "This question resolves as YES if IBM develops a quantum computer capable of performing complex calculations by 2032, as reported by IBM's official blog or other credible sources like The Verge. Resolution criteria: Official reports from IBM, The Verge, or other reputable tech news outlets. Resolution date: December 31, 2032."
+        },
+        "Q_given_P": {
+          "title": "Given IBM's development of a quantum computer, will the development of AGI in natural language processing accelerate by 25% in the next 2 years?",
+          "body": "This question resolves as YES if the development of AGI in natural language processing accelerates by 25% in the next 2 years, given IBM's development of a quantum computer capable of performing complex calculations, as reported by research papers published in top-tier AI conferences like NeurIPS or ICLR, or other credible sources like Harvard Business Review. Resolution criteria: Research papers published in top-tier AI conferences, or official reports from IBM, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2034."
+        },
+        "P_and_Q": {
+          "title": "Will IBM develop a quantum computer capable of performing complex calculations by 2032 and the development of AGI in natural language processing accelerate by 25% in the next 2 years?",
+          "body": "This question resolves as YES if both IBM develops a quantum computer capable of performing complex calculations by 2032 and the development of AGI in natural language processing accelerates by 25% in the next 2 years, as reported by IBM's official blog, research papers published in top-tier AI conferences, or other credible sources like The Verge or Harvard Business Review. Resolution criteria: Official reports from IBM, research papers published in top-tier AI conferences, The Verge, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2034."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.39318842327793,
+      "hypothesis": "The model overestimates the impact of social media trends on company-specific sales, particularly in the context of electric vehicle manufacturing",
+      "questions": {
+        "P": {
+          "title": "Will the number of followers of Tesla's Twitter account increase by 25% in 2026?",
+          "body": "This question resolves as YES if the number of followers of Tesla's Twitter account increases by 25% in 2026, as reported by Twitter's official analytics or other credible sources like Hootsuite. Resolution criteria: Official reports from Twitter, Hootsuite, or other reputable social media analytics sources. Resolution date: December 31, 2026."
+        },
+        "Q_given_P": {
+          "title": "Given the increase in followers, will Tesla's sales increase by 20% in 2026?",
+          "body": "This question resolves as YES if Tesla's sales increase by 20% in 2026, given the increase in followers of Tesla's Twitter account, as reported by Tesla's official earnings reports or other credible sources like Bloomberg. Resolution criteria: Official reports from Tesla, Bloomberg, or other reputable financial news outlets. Resolution date: December 31, 2026."
+        },
+        "P_and_Q": {
+          "title": "Will the number of followers of Tesla's Twitter account increase by 25% in 2026 and Tesla's sales increase by 20% in 2026?",
+          "body": "This question resolves as YES if both the number of followers of Tesla's Twitter account increases by 25% in 2026 and Tesla's sales increase by 20% in 2026, as reported by Twitter's official analytics, Tesla's official earnings reports, or other credible sources like Hootsuite or Bloomberg. Resolution criteria: Official reports from Twitter, Tesla, Hootsuite, Bloomberg, or other reputable sources. Resolution date: December 31, 2026."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3848107670097012,
+      "hypothesis": "The model underestimates the impact of advancements in quantum computing on the development of artificial general intelligence (AGI) in the field of natural language processing",
+      "questions": {
+        "P": {
+          "title": "Will Google announce a breakthrough in quantum computing by 2029?",
+          "body": "This question resolves as YES if Google announces a breakthrough in quantum computing by 2029, as reported by Google's official blog or other credible sources like MIT Technology Review. Resolution criteria: Official reports from Google, MIT Technology Review, or other reputable tech news outlets. Resolution date: December 31, 2029."
+        },
+        "Q_given_P": {
+          "title": "Given the breakthrough, will the development of AGI in natural language processing accelerate by 30% in the next 3 years?",
+          "body": "This question resolves as YES if the development of AGI in natural language processing accelerates by 30% in the next 3 years, given Google's breakthrough in quantum computing, as reported by research papers published in top-tier AI conferences like NeurIPS or ICLR, or other credible sources like Harvard Business Review. Resolution criteria: Research papers published in top-tier AI conferences, or official reports from Google, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2032."
+        },
+        "P_and_Q": {
+          "title": "Will Google announce a breakthrough in quantum computing by 2029 and the development of AGI in natural language processing accelerate by 30% in the next 3 years?",
+          "body": "This question resolves as YES if both Google announces a breakthrough in quantum computing by 2029 and the development of AGI in natural language processing accelerates by 30% in the next 3 years, as reported by Google's official blog, research papers published in top-tier AI conferences, or other credible sources like MIT Technology Review or Harvard Business Review. Resolution criteria: Official reports from Google, research papers published in top-tier AI conferences, MIT Technology Review, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2032."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3844862896367174,
+      "hypothesis": "The model underestimates the impact of environmental factors on company-specific operations, particularly in the tech industry",
+      "questions": {
+        "P": {
+          "title": "Will the European Union implement a carbon pricing mechanism for the tech industry by 2028?",
+          "body": "This question resolves as YES if the European Union implements a carbon pricing mechanism for the tech industry by 2028, as reported by the European Commission's official website or other credible sources like Reuters. Resolution criteria: Official reports from the European Commission, Reuters, or other reputable news outlets. Resolution date: December 31, 2028."
+        },
+        "Q_given_P": {
+          "title": "Given the implementation of the carbon pricing mechanism, will the operating costs of Google's European data centers increase by 15% in the next 2 years?",
+          "body": "This question resolves as YES if the operating costs of Google's European data centers increase by 15% in the next 2 years, given the implementation of a carbon pricing mechanism for the tech industry by the European Union, as reported by Google's official reports or other credible sources like Bloomberg. Resolution criteria: Official reports from Google, Bloomberg, or other reputable sources. Resolution date: December 31, 2030."
+        },
+        "P_and_Q": {
+          "title": "Will the European Union implement a carbon pricing mechanism for the tech industry by 2028 and the operating costs of Google's European data centers increase by 15% in the next 2 years?",
+          "body": "This question resolves as YES if both the European Union implements a carbon pricing mechanism for the tech industry by 2028 and the operating costs of Google's European data centers increase by 15% in the next 2 years, as reported by the European Commission's official website, Google's official reports, or other credible sources like Reuters or Bloomberg. Resolution criteria: Official reports from the European Commission, Google, Reuters, Bloomberg, or other reputable sources. Resolution date: December 31, 2030."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3830084816723108,
+      "hypothesis": "The model underestimates the impact of advancements in quantum computing on the development of artificial general intelligence (AGI) in the field of natural language processing, particularly in the context of language translation",
+      "questions": {
+        "P": {
+          "title": "Will Google announce a breakthrough in quantum computing by 2028?",
+          "body": "This question resolves as YES if Google announces a breakthrough in quantum computing by 2028, as reported by Google's official blog or other credible sources like MIT Technology Review. Resolution criteria: Official reports from Google, MIT Technology Review, or other reputable tech news outlets. Resolution date: December 31, 2028."
+        },
+        "Q_given_P": {
+          "title": "Given Google's breakthrough in quantum computing, will the development of AGI in natural language processing accelerate by 30% in the next 3 years?",
+          "body": "This question resolves as YES if the development of AGI in natural language processing accelerates by 30% in the next 3 years, given Google's breakthrough in quantum computing, as reported by research papers published in top-tier AI conferences like NeurIPS or ICLR, or other credible sources like Harvard Business Review. Resolution criteria: Research papers published in top-tier AI conferences, or official reports from Google, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2031."
+        },
+        "P_and_Q": {
+          "title": "Will Google announce a breakthrough in quantum computing by 2028 and the development of AGI in natural language processing accelerate by 30% in the next 3 years?",
+          "body": "This question resolves as YES if both Google announces a breakthrough in quantum computing by 2028 and the development of AGI in natural language processing accelerates by 30% in the next 3 years, as reported by Google's official blog, research papers published in top-tier AI conferences, or other credible sources like MIT Technology Review or Harvard Business Review. Resolution criteria: Official reports from Google, research papers published in top-tier AI conferences, MIT Technology Review, Harvard Business Review, or other reputable sources. Resolution date: December 31, 2031."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3824011349360963,
+      "hypothesis": "The model assumes strong correlation between individual and national sports performance",
+      "questions": {
+        "P": {
+          "title": "Noah Lyles breaks the 200m world record in 2025",
+          "body": "Noah Lyles, the current world champion in the 200m, will attempt to break the world record at the 2025 World Athletics Championships. The current world record is 19.19, set by Erriyon Knighton in 2022. Will Noah Lyles break the 200m world record in 2025? Resolution criteria: Official results from the 2025 World Athletics Championships, as reported by World Athletics. Resolution date: August 15, 2025."
+        },
+        "Q_given_P": {
+          "title": "The United States wins at least 4 medals in men's sprint events at the 2025 World Championships",
+          "body": "Given that Noah Lyles breaks the 200m world record, will the United States win at least 4 medals in men's sprint events (100m, 200m, 4x100m relay) at the 2025 World Athletics Championships? Resolution criteria: Official results from the 2025 World Athletics Championships, as reported by World Athletics. Resolution date: August 15, 2025."
+        },
+        "P_and_Q": {
+          "title": "Noah Lyles breaks the 200m world record and the United States wins at least 4 medals in men's sprint events",
+          "body": "Will both Noah Lyles break the 200m world record and the United States win at least 4 medals in men's sprint events at the 2025 World Athletics Championships? Resolution criteria: Official results from the 2025 World Athletics Championships, as reported by World Athletics. Resolution date: August 15, 2025."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3768538897177531,
+      "hypothesis": "The model underestimates the impact of genetic engineering on crop yields in developing countries, particularly in the context of drought-resistant crops",
+      "questions": {
+        "P": {
+          "title": "Will the African Union implement policies to promote the use of genetic engineering in agriculture by 2029?",
+          "body": "This question resolves as YES if the African Union implements policies to promote the use of genetic engineering in agriculture by 2029, as reported by the African Union's official website or other credible sources like the African Agricultural Technology Foundation. Resolution criteria: Official reports from the African Union, the African Agricultural Technology Foundation, or other reputable sources. Resolution date: December 31, 2029."
+        },
+        "Q_given_P": {
+          "title": "Given the policies, will the adoption of genetically engineered drought-resistant crops in Ethiopia increase by 30% by 2032?",
+          "body": "This question resolves as YES if the adoption of genetically engineered drought-resistant crops in Ethiopia increases by 30% by 2032, given the implementation of policies by the African Union to promote the use of genetic engineering in agriculture, as reported by the Ethiopian Ministry of Agriculture or other credible sources like the International Service for the Acquisition of Agri-biotech Applications. Resolution criteria: Official reports from the Ethiopian Ministry of Agriculture, the International Service for the Acquisition of Agri-biotech Applications, or other reputable sources. Resolution date: December 31, 2032."
+        },
+        "P_and_Q": {
+          "title": "Will the African Union implement policies to promote the use of genetic engineering in agriculture by 2029 and the adoption of genetically engineered drought-resistant crops in Ethiopia increase by 30% by 2032?",
+          "body": "This question resolves as YES if both the African Union implements policies to promote the use of genetic engineering in agriculture by 2029 and the adoption of genetically engineered drought-resistant crops in Ethiopia increases by 30% by 2032, as reported by the African Union's official website, the Ethiopian Ministry of Agriculture, or other credible sources like the African Agricultural Technology Foundation or the International Service for the Acquisition of Agri-biotech Applications. Resolution criteria: Official reports from the African Union, the Ethiopian Ministry of Agriculture, the African Agricultural Technology Foundation, the International Service for the Acquisition of Agri-biotech Applications, or other reputable sources. Resolution date: December 31, 2032."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3693645050493847,
+      "hypothesis": "The model underestimates the impact of genetic engineering on crop yields in developing countries, particularly in the context of drought-resistant crops",
+      "questions": {
+        "P": {
+          "title": "Will the African Union implement policies to promote the use of genetic engineering in agriculture by 2029?",
+          "body": "This question resolves as YES if the African Union implements policies to promote the use of genetic engineering in agriculture by 2029, as reported by the African Union's official website or other credible sources like the African Agricultural Technology Foundation. Resolution criteria: Official reports from the African Union, the African Agricultural Technology Foundation, or other reputable sources. Resolution date: December 31, 2029."
+        },
+        "Q_given_P": {
+          "title": "Given the policies, will the adoption of genetically engineered drought-resistant crops in Ethiopia increase by 30% by 2032?",
+          "body": "This question resolves as YES if the adoption of genetically engineered drought-resistant crops in Ethiopia increases by 30% by 2032, given the implementation of policies by the African Union to promote the use of genetic engineering in agriculture, as reported by the Ethiopian Ministry of Agriculture or other credible sources like the International Service for the Acquisition of Agri-biotech Applications. Resolution criteria: Official reports from the Ethiopian Ministry of Agriculture, the International Service for the Acquisition of Agri-biotech Applications, or other reputable sources. Resolution date: December 31, 2032."
+        },
+        "P_and_Q": {
+          "title": "Will the African Union implement policies to promote the use of genetic engineering in agriculture by 2029 and the adoption of genetically engineered drought-resistant crops in Ethiopia increase by 30% by 2032?",
+          "body": "This question resolves as YES if both the African Union implements policies to promote the use of genetic engineering in agriculture by 2029 and the adoption of genetically engineered drought-resistant crops in Ethiopia increases by 30% by 2032, as reported by the African Union's official website, the Ethiopian Ministry of Agriculture, or other credible sources like the African Agricultural Technology Foundation or the International Service for the Acquisition of Agri-biotech Applications. Resolution criteria: Official reports from the African Union, the Ethiopian Ministry of Agriculture, the African Agricultural Technology Foundation, the International Service for the Acquisition of Agri-biotech Applications, or other reputable sources. Resolution date: December 31, 2032."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3590499564622692,
+      "hypothesis": "The model underestimates the impact of environmental factors on company-specific operations",
+      "questions": {
+        "P": {
+          "title": "Will the European Union implement a carbon pricing mechanism by 2029?",
+          "body": "This question resolves as YES if the European Union implements a carbon pricing mechanism by 2029, as reported by the European Commission's official website or other credible sources like Reuters. Resolution criteria: Official reports from the European Commission, Reuters, or other reputable news outlets. Resolution date: December 31, 2029."
+        },
+        "Q_given_P": {
+          "title": "Given the implementation of the carbon pricing mechanism, will the operating costs of companies in the EU increase by 8% in the next 2 years?",
+          "body": "This question resolves as YES if the operating costs of companies in the EU increase by 8% in the next 2 years, given the implementation of the carbon pricing mechanism, as reported by financial reports from companies like Shell or other credible sources like Bloomberg. Resolution criteria: Official financial reports from companies, Bloomberg, or other reputable sources. Resolution date: December 31, 2031."
+        },
+        "P_and_Q": {
+          "title": "Will the European Union implement a carbon pricing mechanism by 2029 and the operating costs of companies in the EU increase by 8% in the next 2 years?",
+          "body": "This question resolves as YES if both the European Union implements a carbon pricing mechanism by 2029 and the operating costs of companies in the EU increase by 8% in the next 2 years, as reported by the European Commission's official website, financial reports from companies like Shell, or other credible sources like Reuters or Bloomberg. Resolution criteria: Official reports from the European Commission, financial reports from companies, Reuters, Bloomberg, or other reputable sources. Resolution date: December 31, 2031."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3347655743014778,
+      "hypothesis": "The model underestimates the impact of environmental factors on company-specific operations, particularly in the tech industry",
+      "questions": {
+        "P": {
+          "title": "Will the European Union implement a carbon pricing mechanism for the tech industry by 2028?",
+          "body": "This question resolves as YES if the European Union implements a carbon pricing mechanism for the tech industry by 2028, as reported by the European Commission's official website or other credible sources like Reuters. Resolution criteria: Official reports from the European Commission, Reuters, or other reputable news outlets. Resolution date: December 31, 2028."
+        },
+        "Q_given_P": {
+          "title": "Given the implementation of the carbon pricing mechanism, will the operating costs of Google's European data centers increase by 12% in the next 2 years?",
+          "body": "This question resolves as YES if the operating costs of Google's European data centers increase by 12% in the next 2 years, given the implementation of a carbon pricing mechanism for the tech industry by the European Union, as reported by Google's official reports or other credible sources like Bloomberg. Resolution criteria: Official reports from Google, Bloomberg, or other reputable sources. Resolution date: December 31, 2030."
+        },
+        "P_and_Q": {
+          "title": "Will the European Union implement a carbon pricing mechanism for the tech industry by 2028 and the operating costs of Google's European data centers increase by 12% in the next 2 years?",
+          "body": "This question resolves as YES if both the European Union implements a carbon pricing mechanism for the tech industry by 2028 and the operating costs of Google's European data centers increase by 12% in the next 2 years, as reported by the European Commission's official website, Google's official reports, or other credible sources like Reuters or Bloomberg. Resolution criteria: Official reports from the European Commission, Google, Reuters, Bloomberg, or other reputable sources. Resolution date: December 31, 2030."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3276358489862282,
+      "hypothesis": "The model overgeneralizes tech company compliance based on industry trends",
+      "questions": {
+        "P": {
+          "title": "Will the EU implement stricter regulations on tech companies in 2025?",
+          "body": "This question resolves as YES if the EU implements stricter regulations on tech companies in 2025, as reported by the European Commission or other credible sources. Resolution criteria: Official reports from the European Commission, Bloomberg, or Reuters. Resolution date: December 31, 2025."
+        },
+        "Q_given_P": {
+          "title": "Given stricter EU regulations on tech companies, will Amazon's compliance costs increase by 10% in 2025?",
+          "body": "This question resolves as YES if Amazon's compliance costs increase by 10% in 2025, given that the EU implements stricter regulations on tech companies in 2025, as reported by Amazon's official reports or other credible sources. Resolution criteria: Official reports from Amazon, Bloomberg, or Reuters. Resolution date: December 31, 2025."
+        },
+        "P_and_Q": {
+          "title": "Will the EU implement stricter regulations on tech companies and Amazon's compliance costs increase by 10% in 2025?",
+          "body": "This question resolves as YES if both the EU implements stricter regulations on tech companies and Amazon's compliance costs increase by 10% in 2025, as reported by the European Commission and Amazon's official reports or other credible sources. Resolution criteria: Official reports from the European Commission and Amazon, and official data from Bloomberg or Reuters. Resolution date: December 31, 2025."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3166841245241119,
+      "hypothesis": "The model underestimates the impact of genetic engineering on crop yields in developing countries, particularly in Africa",
+      "questions": {
+        "P": {
+          "title": "Will the African Union implement policies to promote the use of genetic engineering in agriculture by 2028?",
+          "body": "This question resolves as YES if the African Union implements policies to promote the use of genetic engineering in agriculture by 2028, as reported by the African Union's official website or other credible sources like the African Agricultural Technology Foundation. Resolution criteria: Official reports from the African Union, the African Agricultural Technology Foundation, or other reputable sources. Resolution date: December 31, 2028."
+        },
+        "Q_given_P": {
+          "title": "Given the policies, will the adoption of genetically engineered crops in Nigeria increase by 25% by 2031?",
+          "body": "This question resolves as YES if the adoption of genetically engineered crops in Nigeria increases by 25% by 2031, given the implementation of policies by the African Union to promote the use of genetic engineering in agriculture, as reported by the Nigerian Ministry of Agriculture or other credible sources like the International Service for the Acquisition of Agri-biotech Applications. Resolution criteria: Official reports from the Nigerian Ministry of Agriculture, the International Service for the Acquisition of Agri-biotech Applications, or other reputable sources. Resolution date: December 31, 2031."
+        },
+        "P_and_Q": {
+          "title": "Will the African Union implement policies to promote the use of genetic engineering in agriculture by 2028 and the adoption of genetically engineered crops in Nigeria increase by 25% by 2031?",
+          "body": "This question resolves as YES if both the African Union implements policies to promote the use of genetic engineering in agriculture by 2028 and the adoption of genetically engineered crops in Nigeria increases by 25% by 2031, as reported by the African Union's official website, the Nigerian Ministry of Agriculture, or other credible sources like the African Agricultural Technology Foundation or the International Service for the Acquisition of Agri-biotech Applications. Resolution criteria: Official reports from the African Union, the Nigerian Ministry of Agriculture, the African Agricultural Technology Foundation, the International Service for the Acquisition of Agri-biotech Applications, or other reputable sources. Resolution date: December 31, 2031."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3165298064135198,
+      "hypothesis": "The model assumes a strong correlation between the development of autonomous vehicles and the reduction of traffic accidents",
+      "questions": {
+        "P": {
+          "title": "Will Waymo launch a commercial autonomous taxi service in 2027?",
+          "body": "This question resolves as YES if Waymo launches a commercial autonomous taxi service in 2027, as reported by Waymo's official blog or other credible sources like The Verge. Resolution criteria: Official reports from Waymo, The Verge, or other reputable tech news outlets. Resolution date: December 31, 2027."
+        },
+        "Q_given_P": {
+          "title": "Given the launch of Waymo's commercial autonomous taxi service, will the number of traffic accidents in the United States decrease by 10% in the next 2 years?",
+          "body": "This question resolves as YES if the number of traffic accidents in the United States decreases by 10% in the next 2 years, given the launch of Waymo's commercial autonomous taxi service, as reported by the National Highway Traffic Safety Administration (NHTSA) or other credible sources like the Insurance Institute for Highway Safety (IIHS). Resolution criteria: Official reports from the NHTSA, the IIHS, or other reputable sources. Resolution date: December 31, 2029."
+        },
+        "P_and_Q": {
+          "title": "Will Waymo launch a commercial autonomous taxi service in 2027 and the number of traffic accidents in the United States decrease by 10% in the next 2 years?",
+          "body": "This question resolves as YES if both Waymo launches a commercial autonomous taxi service in 2027 and the number of traffic accidents in the United States decreases by 10% in the next 2 years, as reported by Waymo's official blog, the NHTSA, or other credible sources like The Verge or the IIHS. Resolution criteria: Official reports from Waymo, the NHTSA, The Verge, the IIHS, or other reputable sources. Resolution date: December 31, 2029."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3142265552715426,
+      "hypothesis": "The model underestimates the impact of genetic engineering on crop yields in developing countries, particularly in the context of drought-resistant crops",
+      "questions": {
+        "P": {
+          "title": "Will the World Bank provide funding for genetic engineering research in developing countries by 2030?",
+          "body": "This question resolves as YES if the World Bank provides funding for genetic engineering research in developing countries by 2030, as reported by the World Bank's official website or other credible sources like the International Fund for Agricultural Development. Resolution criteria: Official reports from the World Bank, the International Fund for Agricultural Development, or other reputable sources. Resolution date: December 31, 2030."
+        },
+        "Q_given_P": {
+          "title": "Given the funding, will the yield of genetically engineered crops in developing countries increase by 25% by 2035?",
+          "body": "This question resolves as YES if the yield of genetically engineered crops in developing countries increases by 25% by 2035, given the funding provided by the World Bank for genetic engineering research, as reported by research papers published in top-tier agricultural conferences or other credible sources like the Food and Agriculture Organization of the United Nations. Resolution criteria: Research papers published in top-tier agricultural conferences, or official reports from the World Bank, the Food and Agriculture Organization of the United Nations, or other reputable sources. Resolution date: December 31, 2035."
+        },
+        "P_and_Q": {
+          "title": "Will the World Bank provide funding for genetic engineering research in developing countries by 2030 and the yield of genetically engineered crops in developing countries increase by 25% by 2035?",
+          "body": "This question resolves as YES if both the World Bank provides funding for genetic engineering research in developing countries by 2030 and the yield of genetically engineered crops in developing countries increases by 25% by 2035, as reported by the World Bank's official website, research papers published in top-tier agricultural conferences, or other credible sources like the International Fund for Agricultural Development or the Food and Agriculture Organization of the United Nations. Resolution criteria: Official reports from the World Bank, research papers published in top-tier agricultural conferences, the International Fund for Agricultural Development, the Food and Agriculture Organization of the United Nations, or other reputable sources. Resolution date: December 31, 2035."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3142265552715426,
+      "hypothesis": "The model underestimates the impact of genetic engineering on crop yields in developing countries, particularly in the context of drought-resistant crops",
+      "questions": {
+        "P": {
+          "title": "Will the World Bank provide funding for genetic engineering research in developing countries by 2030?",
+          "body": "This question resolves as YES if the World Bank provides funding for genetic engineering research in developing countries by 2030, as reported by the World Bank's official website or other credible sources like the International Fund for Agricultural Development. Resolution criteria: Official reports from the World Bank, the International Fund for Agricultural Development, or other reputable sources. Resolution date: December 31, 2030."
+        },
+        "Q_given_P": {
+          "title": "Given the funding, will the yield of genetically engineered crops in developing countries increase by 25% by 2035?",
+          "body": "This question resolves as YES if the yield of genetically engineered crops in developing countries increases by 25% by 2035, given the funding provided by the World Bank for genetic engineering research, as reported by research papers published in top-tier agricultural conferences or other credible sources like the Food and Agriculture Organization of the United Nations. Resolution criteria: Research papers published in top-tier agricultural conferences, or official reports from the World Bank, the Food and Agriculture Organization of the United Nations, or other reputable sources. Resolution date: December 31, 2035."
+        },
+        "P_and_Q": {
+          "title": "Will the World Bank provide funding for genetic engineering research in developing countries by 2030 and the yield of genetically engineered crops in developing countries increase by 25% by 2035?",
+          "body": "This question resolves as YES if both the World Bank provides funding for genetic engineering research in developing countries by 2030 and the yield of genetically engineered crops in developing countries increases by 25% by 2035, as reported by the World Bank's official website, research papers published in top-tier agricultural conferences, or other credible sources like the International Fund for Agricultural Development or the Food and Agriculture Organization of the United Nations. Resolution criteria: Official reports from the World Bank, research papers published in top-tier agricultural conferences, the International Fund for Agricultural Development, the Food and Agriculture Organization of the United Nations, or other reputable sources. Resolution date: December 31, 2035."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,742 @@
+{
+  "hard_questions": [
+    {
+      "consistency_score": 0.7637274062416217,
+      "hypothesis": "The model assumes a strong correlation between a country's investment in renewable energy and its reduction in greenhouse gas emissions, particularly in the context of climate change mitigation",
+      "questions": {
+        "P": {
+          "title": "Will the European Union implement a carbon border adjustment mechanism by 2028?",
+          "body": "This question resolves as YES if the European Union implements a carbon border adjustment mechanism by 2028, as reported by the European Commission on their official website (ec.europa.eu) by December 31, 2028. Resolution source: European Commission's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that the European Union implements a carbon border adjustment mechanism, will the global demand for renewable energy increase by more than 12% by 2032?",
+          "body": "This question resolves as YES if the global demand for renewable energy increases by more than 12% by 2032, given that the European Union implements a carbon border adjustment mechanism, as reported by the International Energy Agency (IEA) on their official website (iea.org) by December 31, 2032. Resolution source: IEA's official energy statistics."
+        },
+        "P_and_Q": {
+          "title": "Will both the European Union implement a carbon border adjustment mechanism by 2028 and the global demand for renewable energy increase by more than 12% by 2032?",
+          "body": "This question resolves as YES if both the European Union implements a carbon border adjustment mechanism by 2028 and the global demand for renewable energy increases by more than 12% by 2032, as reported by the European Commission and the IEA on their official websites by December 31, 2032. Resolution source: European Commission's official press releases and IEA's official energy statistics."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.7524795793880907,
+      "hypothesis": "The model overestimates the impact of government regulations on the adoption of renewable energy sources, particularly in the context of climate change mitigation",
+      "questions": {
+        "P": {
+          "title": "Will the European Union implement a carbon pricing mechanism by 2028?",
+          "body": "This question resolves as YES if the European Union implements a carbon pricing mechanism by 2028, as reported by the European Commission on their official website (ec.europa.eu) by December 31, 2028. Resolution source: European Commission's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that the European Union implements a carbon pricing mechanism, will the share of renewable energy sources in the EU's energy mix increase by more than 20% by 2030?",
+          "body": "This question resolves as YES if the share of renewable energy sources in the EU's energy mix increases by more than 20% by 2030, given that the European Union implements a carbon pricing mechanism, as reported by the International Energy Agency (IEA) on their official website (iea.org) by December 31, 2030. Resolution source: IEA's official energy statistics."
+        },
+        "P_and_Q": {
+          "title": "Will both the European Union implement a carbon pricing mechanism by 2028 and the share of renewable energy sources in the EU's energy mix increase by more than 20% by 2030?",
+          "body": "This question resolves as YES if both the European Union implements a carbon pricing mechanism by 2028 and the share of renewable energy sources in the EU's energy mix increases by more than 20% by 2030, as reported by the European Commission and the IEA on their official websites by December 31, 2030. Resolution source: European Commission's official press releases and IEA's official energy statistics."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.7497886281572576,
+      "hypothesis": "The model assumes a strong correlation between a country's investment in renewable energy and its reduction in greenhouse gas emissions, particularly in the context of climate change mitigation",
+      "questions": {
+        "P": {
+          "title": "Will the European Union implement a carbon pricing mechanism by 2029?",
+          "body": "This question resolves as YES if the European Union implements a carbon pricing mechanism by 2029, as reported by the European Commission on their official website (ec.europa.eu) by December 31, 2029. Resolution source: European Commission's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that the European Union implements a carbon pricing mechanism, will the share of renewable energy sources in the EU's energy mix increase by more than 25% by 2031?",
+          "body": "This question resolves as YES if the share of renewable energy sources in the EU's energy mix increases by more than 25% by 2031, given that the European Union implements a carbon pricing mechanism, as reported by the European Commission on their official website (ec.europa.eu) by December 31, 2031. Resolution source: European Commission's official energy statistics."
+        },
+        "P_and_Q": {
+          "title": "Will both the European Union implement a carbon pricing mechanism by 2029 and the share of renewable energy sources in the EU's energy mix increase by more than 25% by 2031?",
+          "body": "This question resolves as YES if both the European Union implements a carbon pricing mechanism by 2029 and the share of renewable energy sources in the EU's energy mix increases by more than 25% by 2031, as reported by the European Commission on their official website by December 31, 2031. Resolution source: European Commission's official press releases and European Commission's official energy statistics."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.7301171647346301,
+      "hypothesis": "The model overestimates the probability of breakthroughs in quantum computing and their application in real-world scenarios, particularly in the field of cryptography and cybersecurity",
+      "questions": {
+        "P": {
+          "title": "Will IBM develop a quantum computer capable of simulating complex chemical reactions by 2028?",
+          "body": "This question resolves as YES if IBM develops a quantum computer capable of simulating complex chemical reactions by 2028, as reported by IBM on their official website (ibm.com) by December 31, 2028. Resolution source: IBM's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that IBM develops a quantum computer, will the US Department of Energy invest more than $1 billion in quantum computing research for cybersecurity applications by 2030?",
+          "body": "This question resolves as YES if the US Department of Energy invests more than $1 billion in quantum computing research for cybersecurity applications by 2030, given that IBM develops a quantum computer, as reported by the US Department of Energy on their official website (energy.gov) by December 31, 2030. Resolution source: US Department of Energy's official budget reports."
+        },
+        "P_and_Q": {
+          "title": "Will both IBM develop a quantum computer and the US Department of Energy invest more than $1 billion in quantum computing research by 2030?",
+          "body": "This question resolves as YES if both IBM develops a quantum computer and the US Department of Energy invests more than $1 billion in quantum computing research by 2030, as reported by IBM and the US Department of Energy on their official websites by December 31, 2030. Resolution source: IBM's official press releases and US Department of Energy's official budget reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.6949793614096393,
+      "hypothesis": "The model assumes a strong correlation between individual and national sports performance, particularly in the context of Olympic Games and World Championships",
+      "questions": {
+        "P": {
+          "title": "Will Eliud Kipchoge win the 2027 London Marathon?",
+          "body": "This question resolves as YES if Eliud Kipchoge wins the 2027 London Marathon, as announced by the London Marathon organizers on their official website (londonmarathon.com) by May 31, 2027. Resolution source: London Marathon's official website."
+        },
+        "Q_given_P": {
+          "title": "Given that Eliud Kipchoge wins the 2027 London Marathon, will Kenya win at least 9 gold medals in track and field events at the 2027 World Championships?",
+          "body": "This question resolves as YES if Kenya wins at least 9 gold medals in track and field events at the 2027 World Championships, given that Eliud Kipchoge wins the 2027 London Marathon, as reported by World Athletics on their official website (worldathletics.org) by August 31, 2027. Resolution source: World Athletics' official website."
+        },
+        "P_and_Q": {
+          "title": "Will both Eliud Kipchoge win the 2027 London Marathon and Kenya win at least 9 gold medals in track and field events at the 2027 World Championships?",
+          "body": "This question resolves as YES if both Eliud Kipchoge wins the 2027 London Marathon and Kenya wins at least 9 gold medals in track and field events at the 2027 World Championships, as announced by the London Marathon organizers and reported by World Athletics on their official websites by August 31, 2027. Resolution source: London Marathon's official website and World Athletics' official website."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.6095306819648555,
+      "hypothesis": "The model assumes a strong correlation between individual and national sports performance, particularly in the context of Olympic Games and World Championships",
+      "questions": {
+        "P": {
+          "title": "Will Karsten Warholm win the 400m hurdles at the 2028 World Championships?",
+          "body": "This question resolves as YES if Karsten Warholm wins the 400m hurdles at the 2028 World Championships, as announced by World Athletics on their official website (worldathletics.org) by August 31, 2028. Resolution source: World Athletics' official website."
+        },
+        "Q_given_P": {
+          "title": "Given that Karsten Warholm wins the 400m hurdles, will Norway win at least 4 gold medals in track and field events at the 2028 World Championships?",
+          "body": "This question resolves as YES if Norway wins at least 4 gold medals in track and field events at the 2028 World Championships, given that Karsten Warholm wins the 400m hurdles, as reported by World Athletics on their official website (worldathletics.org) by August 31, 2028. Resolution source: World Athletics' official website."
+        },
+        "P_and_Q": {
+          "title": "Will both Karsten Warholm win the 400m hurdles and Norway win at least 4 gold medals in track and field events at the 2028 World Championships?",
+          "body": "This question resolves as YES if both Karsten Warholm wins the 400m hurdles and Norway wins at least 4 gold medals in track and field events at the 2028 World Championships, as announced by World Athletics on their official website (worldathletics.org) by August 31, 2028. Resolution source: World Athletics' official website."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.6027793659597634,
+      "hypothesis": "The model overestimates joint probabilities in scenarios involving multiple events or conditions, as observed in the Speed Chess Championship example",
+      "questions": {
+        "P": {
+          "title": "Will LeBron James win the NBA MVP award in 2025?",
+          "body": "This question resolves as YES if LeBron James wins the NBA MVP award in 2025, as announced by the National Basketball Association (NBA) on their official website (NBA.com) by May 31, 2025."
+        },
+        "Q_given_P": {
+          "title": "Given that LeBron James wins the NBA MVP award, will the Los Angeles Lakers win the NBA championship in 2025?",
+          "body": "This question resolves as YES if the Los Angeles Lakers win the NBA championship in 2025, given that LeBron James wins the NBA MVP award, as announced by the National Basketball Association (NBA) on their official website (NBA.com) by July 31, 2025."
+        },
+        "P_and_Q": {
+          "title": "Will both LeBron James win the NBA MVP award and the Los Angeles Lakers win the NBA championship in 2025?",
+          "body": "This question resolves as YES if both LeBron James wins the NBA MVP award and the Los Angeles Lakers win the NBA championship in 2025, as announced by the National Basketball Association (NBA) on their official website (NBA.com) by July 31, 2025."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5701875599831568,
+      "hypothesis": "The model overgeneralizes tech company compliance based on industry trends, as observed in the Meta and Microsoft example",
+      "questions": {
+        "P": {
+          "title": "Will Tesla achieve level 5 autonomy in its vehicles by 2025?",
+          "body": "This question resolves as YES if Tesla achieves level 5 autonomy in its vehicles by 2025, as announced by Tesla on their official website (Tesla.com) by December 31, 2025."
+        },
+        "Q_given_P": {
+          "title": "Given that Tesla achieves level 5 autonomy, will Waymo also achieve level 5 autonomy in its vehicles by 2025?",
+          "body": "This question resolves as YES if Waymo achieves level 5 autonomy in its vehicles by 2025, given that Tesla achieves level 5 autonomy, as reported by Waymo on their official website (Waymo.com) by December 31, 2025."
+        },
+        "P_and_Q": {
+          "title": "Will both Tesla and Waymo achieve level 5 autonomy in their vehicles by 2025?",
+          "body": "This question resolves as YES if both Tesla and Waymo achieve level 5 autonomy in their vehicles by 2025, as announced by Tesla and reported by Waymo on their official websites by December 31, 2025."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5637641937069315,
+      "hypothesis": "The model overestimates the probability of breakthroughs in quantum computing and their application in real-world scenarios, particularly in the field of cryptography and cybersecurity",
+      "questions": {
+        "P": {
+          "title": "Will Google announce a functional quantum computer capable of breaking current encryption standards by 2027?",
+          "body": "This question resolves as YES if Google announces a functional quantum computer capable of breaking current encryption standards by 2027, as reported by Google on their official blog (blog.google) by December 31, 2027. Resolution source: Google's official blog posts."
+        },
+        "Q_given_P": {
+          "title": "Given that Google announces a functional quantum computer, will the NSA develop and implement new quantum-resistant encryption standards for US government communications by 2029?",
+          "body": "This question resolves as YES if the NSA develops and implements new quantum-resistant encryption standards for US government communications by 2029, given that Google announces a functional quantum computer, as reported by the NSA on their official website (nsa.gov) by December 31, 2029. Resolution source: NSA's official press releases."
+        },
+        "P_and_Q": {
+          "title": "Will both Google announce a functional quantum computer and the NSA develop and implement new quantum-resistant encryption standards by 2029?",
+          "body": "This question resolves as YES if both Google announces a functional quantum computer and the NSA develops and implements new quantum-resistant encryption standards by 2029, as reported by Google and the NSA on their official websites by December 31, 2029. Resolution source: Google's official blog posts and NSA's official press releases."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5252964927368118,
+      "hypothesis": "The model assumes a strong correlation between a company's investment in AI research and its overall revenue growth, particularly in the tech industry by 2035",
+      "questions": {
+        "P": {
+          "title": "Will Alphabet (Google) increase its investment in AI research by more than 15% by 2032?",
+          "body": "This question resolves as YES if Alphabet (Google) increases its investment in AI research by more than 15% by 2032, as reported by Alphabet (Google) on their official website (abc.xyz) by December 31, 2032. Resolution source: Alphabet (Google)'s official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that Alphabet (Google) increases its investment in AI research, will the number of AI-powered products and services increase by more than 25% by 2035?",
+          "body": "This question resolves as YES if the number of AI-powered products and services increases by more than 25% by 2035, given that Alphabet (Google) increases its investment in AI research, as reported by the AI Now Institute on their official website (ainowinstitute.org) by December 31, 2035. Resolution source: AI Now Institute's official reports."
+        },
+        "P_and_Q": {
+          "title": "Will both Alphabet (Google) increase its investment in AI research by more than 15% by 2032 and the number of AI-powered products and services increase by more than 25% by 2035?",
+          "body": "This question resolves as YES if both Alphabet (Google) increases its investment in AI research by more than 15% by 2032 and the number of AI-powered products and services increases by more than 25% by 2035, as reported by Alphabet (Google) and the AI Now Institute on their official websites by December 31, 2035. Resolution source: Alphabet (Google)'s official press releases and AI Now Institute's official reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5179555333690208,
+      "hypothesis": "The model overestimates the probability of breakthroughs in quantum computing and their application in real-world scenarios, particularly in the field of cryptography and cybersecurity",
+      "questions": {
+        "P": {
+          "title": "Will Google announce a functional quantum computer capable of breaking current encryption standards by 2028?",
+          "body": "This question resolves as YES if Google announces a functional quantum computer capable of breaking current encryption standards by 2028, as reported by Google on their official blog (blog.google) by December 31, 2028. Resolution source: Google's official blog posts."
+        },
+        "Q_given_P": {
+          "title": "Given that Google announces a functional quantum computer, will the NSA develop and implement new quantum-resistant encryption standards for US government communications by 2030?",
+          "body": "This question resolves as YES if the NSA develops and implements new quantum-resistant encryption standards for US government communications by 2030, given that Google announces a functional quantum computer, as reported by the NSA on their official website (nsa.gov) by December 31, 2030. Resolution source: NSA's official press releases."
+        },
+        "P_and_Q": {
+          "title": "Will both Google announce a functional quantum computer and the NSA develop and implement new quantum-resistant encryption standards by 2030?",
+          "body": "This question resolves as YES if both Google announces a functional quantum computer and the NSA develops and implements new quantum-resistant encryption standards by 2030, as reported by Google and the NSA on their official websites by December 31, 2030. Resolution source: Google's official blog posts and NSA's official press releases."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5163556852406599,
+      "hypothesis": "The model overestimates the probability of breakthroughs in quantum computing and their application in real-world scenarios, particularly in the field of cryptography and cybersecurity",
+      "questions": {
+        "P": {
+          "title": "Will IBM develop a quantum computer capable of simulating complex chemical reactions by 2029?",
+          "body": "This question resolves as YES if IBM develops a quantum computer capable of simulating complex chemical reactions by 2029, as reported by IBM on their official website (ibm.com) by December 31, 2029. Resolution source: IBM's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that IBM develops a quantum computer, will the US Department of Energy invest more than $1.5 billion in quantum computing research for cybersecurity applications by 2031?",
+          "body": "This question resolves as YES if the US Department of Energy invests more than $1.5 billion in quantum computing research for cybersecurity applications by 2031, given that IBM develops a quantum computer, as reported by the US Department of Energy on their official website (energy.gov) by December 31, 2031. Resolution source: US Department of Energy's official budget reports."
+        },
+        "P_and_Q": {
+          "title": "Will both IBM develop a quantum computer and the US Department of Energy invest more than $1.5 billion in quantum computing research by 2031?",
+          "body": "This question resolves as YES if both IBM develops a quantum computer and the US Department of Energy invests more than $1.5 billion in quantum computing research by 2031, as reported by IBM and the US Department of Energy on their official websites by December 31, 2031. Resolution source: IBM's official press releases and US Department of Energy's official budget reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5056557337353659,
+      "hypothesis": "The model underestimates the impact of genetic engineering on the development of new medical treatments and their potential to revolutionize healthcare",
+      "questions": {
+        "P": {
+          "title": "Will CRISPR Therapeutics receive FDA approval for their gene editing therapy for sickle cell disease by 2027?",
+          "body": "This question resolves as YES if CRISPR Therapeutics receives FDA approval for their gene editing therapy for sickle cell disease by 2027, as reported by the FDA on their official website (fda.gov) by December 31, 2027. Resolution source: FDA's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that CRISPR Therapeutics receives FDA approval, will the number of patients treated with gene editing therapies increase by more than 50% annually for the next 3 years?",
+          "body": "This question resolves as YES if the number of patients treated with gene editing therapies increases by more than 50% annually for the next 3 years, given that CRISPR Therapeutics receives FDA approval, as reported by the National Institutes of Health (NIH) on their official website (nih.gov) by December 31, 2030. Resolution source: NIH's official reports."
+        },
+        "P_and_Q": {
+          "title": "Will both CRISPR Therapeutics receive FDA approval and the number of patients treated with gene editing therapies increase by more than 50% annually for the next 3 years?",
+          "body": "This question resolves as YES if both CRISPR Therapeutics receives FDA approval and the number of patients treated with gene editing therapies increases by more than 50% annually for the next 3 years, as reported by the FDA and the NIH on their official websites by December 31, 2030. Resolution source: FDA's official press releases and NIH's official reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4804103428211667,
+      "hypothesis": "The model underestimates the impact of quantum computing on cryptography and cybersecurity",
+      "questions": {
+        "P": {
+          "title": "Will IBM develop a quantum computer capable of simulating complex chemical reactions by 2031?",
+          "body": "This question resolves as YES if IBM develops a quantum computer capable of simulating complex chemical reactions by 2031, as reported by IBM on their official website (ibm.com) by December 31, 2031. Resolution source: IBM's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that IBM develops a quantum computer, will the US Department of Energy invest more than $2 billion in quantum computing research for cybersecurity applications by 2034?",
+          "body": "This question resolves as YES if the US Department of Energy invests more than $2 billion in quantum computing research for cybersecurity applications by 2034, given that IBM develops a quantum computer, as reported by the US Department of Energy on their official website (energy.gov) by December 31, 2034. Resolution source: US Department of Energy's official budget reports."
+        },
+        "P_and_Q": {
+          "title": "Will both IBM develop a quantum computer and the US Department of Energy invest more than $2 billion in quantum computing research by 2034?",
+          "body": "This question resolves as YES if both IBM develops a quantum computer and the US Department of Energy invests more than $2 billion in quantum computing research by 2034, as reported by IBM and the US Department of Energy on their official websites by December 31, 2034. Resolution source: IBM's official press releases and US Department of Energy's official budget reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.474673206911368,
+      "hypothesis": "The model underestimates the impact of quantum computing on cryptography and cybersecurity",
+      "questions": {
+        "P": {
+          "title": "Will Google announce a functional quantum computer capable of breaking current encryption standards by 2029?",
+          "body": "This question resolves as YES if Google announces a functional quantum computer capable of breaking current encryption standards by 2029, as reported by Google on their official blog (blog.google) by December 31, 2029. Resolution source: Google's official blog posts."
+        },
+        "Q_given_P": {
+          "title": "Given that Google announces a functional quantum computer, will the NSA develop and implement new quantum-resistant encryption standards for US government communications by 2032?",
+          "body": "This question resolves as YES if the NSA develops and implements new quantum-resistant encryption standards for US government communications by 2032, given that Google announces a functional quantum computer, as reported by the NSA on their official website (nsa.gov) by December 31, 2032. Resolution source: NSA's official press releases."
+        },
+        "P_and_Q": {
+          "title": "Will both Google announce a functional quantum computer and the NSA develop and implement new quantum-resistant encryption standards by 2032?",
+          "body": "This question resolves as YES if both Google announces a functional quantum computer and the NSA develops and implements new quantum-resistant encryption standards by 2032, as reported by Google and the NSA on their official websites by December 31, 2032. Resolution source: Google's official blog posts and NSA's official press releases."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4646099686812009,
+      "hypothesis": "The model assumes a strong correlation between a country's investment in renewable energy and its reduction in greenhouse gas emissions, particularly in the context of climate change mitigation",
+      "questions": {
+        "P": {
+          "title": "Will Norway increase its investment in offshore wind energy by more than 15% by 2027?",
+          "body": "This question resolves as YES if Norway increases its investment in offshore wind energy by more than 15% by 2027, as reported by the Norwegian Ministry of Petroleum and Energy on their official website (regjeringen.no) by December 31, 2027. Resolution source: Norwegian Ministry of Petroleum and Energy's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that Norway increases its investment in offshore wind energy, will its greenhouse gas emissions decrease by more than 10% by 2030?",
+          "body": "This question resolves as YES if Norway's greenhouse gas emissions decrease by more than 10% by 2030, given that Norway increases its investment in offshore wind energy, as reported by the Norwegian Environment Agency on their official website (miljodirektoratet.no) by December 31, 2030. Resolution source: Norwegian Environment Agency's official emissions reports."
+        },
+        "P_and_Q": {
+          "title": "Will both Norway increase its investment in offshore wind energy by more than 15% by 2027 and its greenhouse gas emissions decrease by more than 10% by 2030?",
+          "body": "This question resolves as YES if both Norway increases its investment in offshore wind energy by more than 15% by 2027 and its greenhouse gas emissions decrease by more than 10% by 2030, as reported by the Norwegian Ministry of Petroleum and Energy and the Norwegian Environment Agency on their official websites by December 31, 2030. Resolution source: Norwegian Ministry of Petroleum and Energy's official press releases and Norwegian Environment Agency's official emissions reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4571771324317907,
+      "hypothesis": "The model overestimates the impact of social media on the dissemination of misinformation during political elections by 2035",
+      "questions": {
+        "P": {
+          "title": "Will Twitter implement a new fact-checking algorithm for political ads by 2030?",
+          "body": "This question resolves as YES if Twitter implements a new fact-checking algorithm for political ads by 2030, as reported by Twitter on their official website (twitter.com) by December 31, 2030. Resolution source: Twitter's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that Twitter implements a new fact-checking algorithm, will the number of misinformation cases on Twitter decrease by more than 15% by 2035?",
+          "body": "This question resolves as YES if the number of misinformation cases on Twitter decreases by more than 15% by 2035, given that Twitter implements a new fact-checking algorithm, as reported by the Pew Research Center on their official website (pewresearch.org) by December 31, 2035. Resolution source: Pew Research Center's official reports."
+        },
+        "P_and_Q": {
+          "title": "Will both Twitter implement a new fact-checking algorithm by 2030 and the number of misinformation cases on Twitter decrease by more than 15% by 2035?",
+          "body": "This question resolves as YES if both Twitter implements a new fact-checking algorithm by 2030 and the number of misinformation cases on Twitter decreases by more than 15% by 2035, as reported by Twitter and the Pew Research Center on their official websites by December 31, 2035. Resolution source: Twitter's official press releases and Pew Research Center's official reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.456342092340646,
+      "hypothesis": "The model assumes a strong correlation between a company's investment in cybersecurity and its protection against data breaches by 2033",
+      "questions": {
+        "P": {
+          "title": "Will Microsoft invest more than $1 billion in cybersecurity research by 2028?",
+          "body": "This question resolves as YES if Microsoft invests more than $1 billion in cybersecurity research by 2028, as reported by Microsoft on their official website (microsoft.com) by December 31, 2028. Resolution source: Microsoft's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that Microsoft invests more than $1 billion in cybersecurity research, will the number of data breaches decrease by more than 10% by 2030?",
+          "body": "This question resolves as YES if the number of data breaches decreases by more than 10% by 2030, given that Microsoft invests more than $1 billion in cybersecurity research, as reported by the Identity Theft Resource Center (ITRC) on their official website (idtheftcenter.org) by December 31, 2030. Resolution source: ITRC's official data."
+        },
+        "P_and_Q": {
+          "title": "Will both Microsoft invest more than $1 billion in cybersecurity research by 2028 and the number of data breaches decrease by more than 10% by 2030?",
+          "body": "This question resolves as YES if both Microsoft invests more than $1 billion in cybersecurity research by 2028 and the number of data breaches decreases by more than 10% by 2030, as reported by Microsoft and the ITRC on their official websites by December 31, 2030. Resolution source: Microsoft's official press releases and ITRC's official data."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4559396425868931,
+      "hypothesis": "The model assumes a strong correlation between individual and national sports performance, as observed in the Faith Kipyegon example",
+      "questions": {
+        "P": {
+          "title": "Will Eliud Kipchoge win the 2025 London Marathon?",
+          "body": "This question resolves as YES if Eliud Kipchoge wins the 2025 London Marathon, as announced by the London Marathon organizers on their official website (LondonMarathon.com) by May 31, 2025."
+        },
+        "Q_given_P": {
+          "title": "Given that Eliud Kipchoge wins the 2025 London Marathon, will Kenya win at least 5 gold medals in track and field events at the 2025 World Championships?",
+          "body": "This question resolves as YES if Kenya wins at least 5 gold medals in track and field events at the 2025 World Championships, given that Eliud Kipchoge wins the 2025 London Marathon, as reported by World Athletics on their official website (WorldAthletics.org) by August 31, 2025."
+        },
+        "P_and_Q": {
+          "title": "Will both Eliud Kipchoge win the 2025 London Marathon and Kenya win at least 5 gold medals in track and field events at the 2025 World Championships?",
+          "body": "This question resolves as YES if both Eliud Kipchoge wins the 2025 London Marathon and Kenya wins at least 5 gold medals in track and field events at the 2025 World Championships, as announced by the London Marathon organizers and reported by World Athletics on their official websites by August 31, 2025."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4431558418654294,
+      "hypothesis": "The model overestimates the probability of breakthroughs in quantum computing and their application in real-world scenarios, particularly in the field of cryptography and cybersecurity",
+      "questions": {
+        "P": {
+          "title": "Will Amazon develop a quantum computer capable of simulating complex materials science by 2031?",
+          "body": "This question resolves as YES if Amazon develops a quantum computer capable of simulating complex materials science by 2031, as reported by Amazon on their official website (amazon.com) by December 31, 2031. Resolution source: Amazon's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that Amazon develops a quantum computer, will the US National Science Foundation invest more than $1.2 billion in quantum computing research for cryptography applications by 2033?",
+          "body": "This question resolves as YES if the US National Science Foundation invests more than $1.2 billion in quantum computing research for cryptography applications by 2033, given that Amazon develops a quantum computer, as reported by the US National Science Foundation on their official website (nsf.gov) by December 31, 2033. Resolution source: US National Science Foundation's official budget reports."
+        },
+        "P_and_Q": {
+          "title": "Will both Amazon develop a quantum computer and the US National Science Foundation invest more than $1.2 billion in quantum computing research by 2033?",
+          "body": "This question resolves as YES if both Amazon develops a quantum computer and the US National Science Foundation invests more than $1.2 billion in quantum computing research by 2033, as reported by Amazon and the US National Science Foundation on their official websites by December 31, 2033. Resolution source: Amazon's official press releases and US National Science Foundation's official budget reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4235139331926628,
+      "hypothesis": "The model overestimates joint probabilities in scenarios involving multiple events or conditions, as observed in the Speed Chess Championship example",
+      "questions": {
+        "P": {
+          "title": "Will Stephen Curry win the NBA MVP award in 2026?",
+          "body": "This question resolves as YES if Stephen Curry wins the NBA MVP award in 2026, as announced by the National Basketball Association (NBA) on their official website (NBA.com) by May 31, 2026."
+        },
+        "Q_given_P": {
+          "title": "Given that Stephen Curry wins the NBA MVP award, will the Golden State Warriors win the NBA championship in 2026?",
+          "body": "This question resolves as YES if the Golden State Warriors win the NBA championship in 2026, given that Stephen Curry wins the NBA MVP award, as announced by the National Basketball Association (NBA) on their official website (NBA.com) by July 31, 2026."
+        },
+        "P_and_Q": {
+          "title": "Will both Stephen Curry win the NBA MVP award and the Golden State Warriors win the NBA championship in 2026?",
+          "body": "This question resolves as YES if both Stephen Curry wins the NBA MVP award and the Golden State Warriors win the NBA championship in 2026, as announced by the National Basketball Association (NBA) on their official website (NBA.com) by July 31, 2026."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4223740812219783,
+      "hypothesis": "The model overestimates joint probabilities in scenarios involving multiple events or conditions, as observed in the Speed Chess Championship example",
+      "questions": {
+        "P": {
+          "title": "Will Novak Djokovic win the 2028 Australian Open?",
+          "body": "This question resolves as YES if Novak Djokovic wins the 2028 Australian Open, as announced by the Australian Open on their official website (australianopen.com) by January 31, 2028."
+        },
+        "Q_given_P": {
+          "title": "Given that Novak Djokovic wins the 2028 Australian Open, will Serbia win at least 2 medals in tennis at the 2028 Olympic Games?",
+          "body": "This question resolves as YES if Serbia wins at least 2 medals in tennis at the 2028 Olympic Games, given that Novak Djokovic wins the 2028 Australian Open, as announced by the International Olympic Committee on their official website (olympic.org) by August 31, 2028."
+        },
+        "P_and_Q": {
+          "title": "Will both Novak Djokovic win the 2028 Australian Open and Serbia win at least 2 medals in tennis at the 2028 Olympic Games?",
+          "body": "This question resolves as YES if both Novak Djokovic wins the 2028 Australian Open and Serbia wins at least 2 medals in tennis at the 2028 Olympic Games, as announced by the Australian Open and the International Olympic Committee on their official websites by August 31, 2028."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.419405866564974,
+      "hypothesis": "The model provides inconsistent estimates for conditional probabilities, depending on the context and the order of events, as observed in the OpenAI and Microsoft example",
+      "questions": {
+        "P": {
+          "title": "Will the US inflation rate fall below 2% in 2024?",
+          "body": "The US economy has been experiencing inflation, but predicting inflation is challenging. Resolution date: December 31, 2024. Resolution criteria: Official inflation rate data from the BLS. Resolution source: BLS.gov"
+        },
+        "Q_given_P": {
+          "title": "Given that the US inflation rate falls below 2%, will the EU inflation rate fall below 1.5% in 2024?",
+          "body": "The EU inflation rate is influenced by various factors, including economic growth and policy decisions. Resolution date: December 31, 2024. Resolution criteria: Official inflation rate data from Eurostat. Resolution source: Eurostat.eu"
+        },
+        "P_and_Q": {
+          "title": "Will both the US inflation rate fall below 2% and the EU inflation rate fall below 1.5% in 2024?",
+          "body": "The inflation rates in the US and EU are interconnected, but the relationship is complex. Resolution date: December 31, 2024. Resolution criteria: Official inflation rate data from the BLS and Eurostat. Resolution source: BLS.gov and Eurostat.eu"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4077050456584014,
+      "hypothesis": "The model assumes a strong correlation between monetary policy and market reactions, as observed in the Fed actions example",
+      "questions": {
+        "P": {
+          "title": "Will the Federal Reserve raise interest rates by more than 1% in 2025?",
+          "body": "This question resolves as YES if the Federal Reserve raises interest rates by more than 1% in 2025, as announced by the Federal Reserve on their official website (FederalReserve.gov) by December 31, 2025."
+        },
+        "Q_given_P": {
+          "title": "Given that the Federal Reserve raises interest rates by more than 1%, will the S&P 500 decline by more than 10% in 2025?",
+          "body": "This question resolves as YES if the S&P 500 declines by more than 10% in 2025, given that the Federal Reserve raises interest rates by more than 1%, as reported by S&P Dow Jones Indices on their official website (SPGlobal.com) by December 31, 2025."
+        },
+        "P_and_Q": {
+          "title": "Will both the Federal Reserve raise interest rates by more than 1% and the S&P 500 decline by more than 10% in 2025?",
+          "body": "This question resolves as YES if both the Federal Reserve raises interest rates by more than 1% and the S&P 500 declines by more than 10% in 2025, as announced by the Federal Reserve and reported by S&P Dow Jones Indices on their official websites by December 31, 2025."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4077050456584014,
+      "hypothesis": "The model underestimates the impact of genetic engineering on the development of new medical treatments by 2035",
+      "questions": {
+        "P": {
+          "title": "Will Editas Medicine invest more than $1 billion in gene editing research by 2032?",
+          "body": "This question resolves as YES if Editas Medicine invests more than $1 billion in gene editing research by 2032, as reported by Editas Medicine on their official website (editasmedicine.com) by December 31, 2032. Resolution source: Editas Medicine's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that Editas Medicine invests more than $1 billion in gene editing research, will the number of gene editing-based treatments for genetic diseases increase by more than 30% by 2035?",
+          "body": "This question resolves as YES if the number of gene editing-based treatments for genetic diseases increases by more than 30% by 2035, given that Editas Medicine invests more than $1 billion in gene editing research, as reported by the Genetic Engineering and Biotechnology News on their official website (genengnews.com) by December 31, 2035. Resolution source: Genetic Engineering and Biotechnology News' official reports."
+        },
+        "P_and_Q": {
+          "title": "Will both Editas Medicine invest more than $1 billion in gene editing research by 2032 and the number of gene editing-based treatments for genetic diseases increase by more than 30% by 2035?",
+          "body": "This question resolves as YES if both Editas Medicine invests more than $1 billion in gene editing research by 2032 and the number of gene editing-based treatments for genetic diseases increases by more than 30% by 2035, as reported by Editas Medicine and the Genetic Engineering and Biotechnology News on their official websites by December 31, 2035. Resolution source: Editas Medicine's official press releases and Genetic Engineering and Biotechnology News' official reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3977044072703522,
+      "hypothesis": "The model assumes a strong correlation between monetary policy and market reactions, as observed in the Fed actions example",
+      "questions": {
+        "P": {
+          "title": "Will Apple release a new iPhone model with a foldable screen in 2025?",
+          "body": "This question resolves as YES if Apple releases a new iPhone model with a foldable screen in 2025, as announced by Apple on their official website (apple.com) by December 31, 2025."
+        },
+        "Q_given_P": {
+          "title": "Given that Apple releases a new iPhone model with a foldable screen, will Samsung also release a new smartphone model with a foldable screen in 2025?",
+          "body": "This question resolves as YES if Samsung releases a new smartphone model with a foldable screen in 2025, given that Apple releases a new iPhone model with a foldable screen, as reported by Samsung on their official website (samsung.com) by December 31, 2025."
+        },
+        "P_and_Q": {
+          "title": "Will both Apple and Samsung release new smartphone models with foldable screens in 2025?",
+          "body": "This question resolves as YES if both Apple and Samsung release new smartphone models with foldable screens in 2025, as announced by Apple and reported by Samsung on their official websites by December 31, 2025."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3971964197869067,
+      "hypothesis": "The model assumes a strong correlation between a company's investment in AI research and its overall revenue growth, particularly in the tech industry",
+      "questions": {
+        "P": {
+          "title": "Will Google invest more than $10 billion in AI research by 2027?",
+          "body": "This question resolves as YES if Google invests more than $10 billion in AI research by 2027, as reported by Google on their official website (google.com) by December 31, 2027. Resolution source: Google's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that Google invests more than $10 billion in AI research, will its revenue grow by more than 15% in 2028?",
+          "body": "This question resolves as YES if Google's revenue grows by more than 15% in 2028, given that Google invests more than $10 billion in AI research, as reported by Google on their official website (google.com) by December 31, 2028. Resolution source: Google's official earnings reports."
+        },
+        "P_and_Q": {
+          "title": "Will both Google invest more than $10 billion in AI research by 2027 and its revenue grow by more than 15% in 2028?",
+          "body": "This question resolves as YES if both Google invests more than $10 billion in AI research by 2027 and its revenue grows by more than 15% in 2028, as reported by Google on their official website (google.com) by December 31, 2028. Resolution source: Google's official press releases and earnings reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3928670188458416,
+      "hypothesis": "The model overestimates the impact of advancements in quantum computing on the development of artificial general intelligence (AGI) by 2030",
+      "questions": {
+        "P": {
+          "title": "Will Google develop a quantum computer capable of simulating complex AI models by 2028?",
+          "body": "This question resolves as YES if Google develops a quantum computer capable of simulating complex AI models by 2028, as reported by Google on their official website (google.com) by December 31, 2028. Resolution source: Google's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that Google develops a quantum computer, will the development of AGI be accelerated by more than 2 years by 2030?",
+          "body": "This question resolves as YES if the development of AGI is accelerated by more than 2 years by 2030, given that Google develops a quantum computer, as reported by the AGI Laboratory on their official website (agi.io) by December 31, 2030. Resolution source: AGI Laboratory's official reports."
+        },
+        "P_and_Q": {
+          "title": "Will both Google develop a quantum computer by 2028 and the development of AGI be accelerated by more than 2 years by 2030?",
+          "body": "This question resolves as YES if both Google develops a quantum computer by 2028 and the development of AGI is accelerated by more than 2 years by 2030, as reported by Google and the AGI Laboratory on their official websites by December 31, 2030. Resolution source: Google's official press releases and AGI Laboratory's official reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3830622312160671,
+      "hypothesis": "The model overestimates the ability of renewable energy sources to replace fossil fuels in the short term, particularly in the context of global energy demand and supply",
+      "questions": {
+        "P": {
+          "title": "Will the cost of solar energy decrease by more than 20% by 2027?",
+          "body": "This question resolves as YES if the cost of solar energy decreases by more than 20% by 2027, as reported by the International Energy Agency (IEA) on their official website (iea.org) by December 31, 2027. Resolution source: IEA's official reports."
+        },
+        "Q_given_P": {
+          "title": "Given that the cost of solar energy decreases by more than 20%, will the number of countries generating more than 50% of their electricity from renewable sources increase by more than 30% by 2029?",
+          "body": "This question resolves as YES if the number of countries generating more than 50% of their electricity from renewable sources increases by more than 30% by 2029, given that the cost of solar energy decreases by more than 20%, as reported by the IEA on their official website (iea.org) by December 31, 2029. Resolution source: IEA's official reports."
+        },
+        "P_and_Q": {
+          "title": "Will both the cost of solar energy decrease by more than 20% and the number of countries generating more than 50% of their electricity from renewable sources increase by more than 30% by 2029?",
+          "body": "This question resolves as YES if both the cost of solar energy decreases by more than 20% and the number of countries generating more than 50% of their electricity from renewable sources increases by more than 30% by 2029, as reported by the IEA on their official website (iea.org) by December 31, 2029. Resolution source: IEA's official reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3822539009133143,
+      "hypothesis": "The model overestimates joint probabilities in scenarios involving multiple events or conditions, as observed in the Speed Chess Championship example",
+      "questions": {
+        "P": {
+          "title": "Will the European Central Bank raise interest rates by more than 1.5% in 2026?",
+          "body": "The ECB has been monitoring inflation and economic growth in the EU, and a rate hike is possible. Resolution date: December 31, 2026. Resolution criteria: Official ECB press release. Resolution source: ECB.eu"
+        },
+        "Q_given_P": {
+          "title": "Given that the ECB raises interest rates by more than 1.5%, will the euro appreciate against the US dollar by more than 8% in 2026?",
+          "body": "The ECB's monetary policy decisions can impact currency markets, but the relationship is complex. Resolution date: December 31, 2026. Resolution criteria: Official exchange rate data from the ECB. Resolution source: ECB.eu"
+        },
+        "P_and_Q": {
+          "title": "Will both the ECB raise interest rates by more than 1.5% and the euro appreciate against the US dollar by more than 8% in 2026?",
+          "body": "The ECB's decisions can have far-reaching effects on the economy and financial markets. Resolution date: December 31, 2026. Resolution criteria: Official ECB press release and exchange rate data. Resolution source: ECB.eu"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3817418995529537,
+      "hypothesis": "The model overestimates the impact of social media on the dissemination of misinformation during political elections by 2035",
+      "questions": {
+        "P": {
+          "title": "Will Facebook invest more than $2 billion in misinformation detection and prevention by 2032?",
+          "body": "This question resolves as YES if Facebook invests more than $2 billion in misinformation detection and prevention by 2032, as reported by Facebook on their official website (facebook.com) by December 31, 2032. Resolution source: Facebook's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that Facebook invests more than $2 billion in misinformation detection and prevention, will the number of electoral interference cases on Facebook decrease by more than 20% by 2035?",
+          "body": "This question resolves as YES if the number of electoral interference cases on Facebook decreases by more than 20% by 2035, given that Facebook invests more than $2 billion in misinformation detection and prevention, as reported by the Cybersecurity and Infrastructure Security Agency (CISA) on their official website (cisa.gov) by December 31, 2035. Resolution source: CISA's official reports on electoral security."
+        },
+        "P_and_Q": {
+          "title": "Will both Facebook invest more than $2 billion in misinformation detection and prevention by 2032 and the number of electoral interference cases on Facebook decrease by more than 20% by 2035?",
+          "body": "This question resolves as YES if both Facebook invests more than $2 billion in misinformation detection and prevention by 2032 and the number of electoral interference cases on Facebook decreases by more than 20% by 2035, as reported by Facebook and CISA on their official websites by December 31, 2035. Resolution source: Facebook's official press releases and CISA's official reports on electoral security."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3681313466129338,
+      "hypothesis": "The model assumes a strong correlation between a country's investment in renewable energy and its reduction in greenhouse gas emissions, particularly in the context of climate change mitigation",
+      "questions": {
+        "P": {
+          "title": "Will China increase its investment in solar energy by more than 20% by 2028?",
+          "body": "This question resolves as YES if China increases its investment in solar energy by more than 20% by 2028, as reported by the Chinese Ministry of Finance on their official website (mof.gov.cn) by December 31, 2028. Resolution source: Chinese Ministry of Finance's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that China increases its investment in solar energy, will its greenhouse gas emissions decrease by more than 10% by 2030?",
+          "body": "This question resolves as YES if China's greenhouse gas emissions decrease by more than 10% by 2030, given that China increases its investment in solar energy, as reported by the Chinese Ministry of Ecology and Environment on their official website (mee.gov.cn) by December 31, 2030. Resolution source: Chinese Ministry of Ecology and Environment's official emissions reports."
+        },
+        "P_and_Q": {
+          "title": "Will both China increase its investment in solar energy by more than 20% by 2028 and its greenhouse gas emissions decrease by more than 10% by 2030?",
+          "body": "This question resolves as YES if both China increases its investment in solar energy by more than 20% by 2028 and its greenhouse gas emissions decrease by more than 10% by 2030, as reported by the Chinese Ministry of Finance and the Chinese Ministry of Ecology and Environment on their official websites by December 31, 2030. Resolution source: Chinese Ministry of Finance's official press releases and Chinese Ministry of Ecology and Environment's official emissions reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3648971515704241,
+      "hypothesis": "The model provides inconsistent estimates for conditional probabilities, depending on the context and the order of events, as observed in the OpenAI and Microsoft example",
+      "questions": {
+        "P": {
+          "title": "Will the yield on the 10-year Treasury bond exceed 4.5% in 2024?",
+          "body": "The Treasury bond market is highly volatile, and predicting yields is challenging. Resolution date: December 31, 2024. Resolution criteria: Official Treasury bond yield data from the US Department of the Treasury. Resolution source: Treasury.gov"
+        },
+        "Q_given_P": {
+          "title": "Given that the yield on the 10-year Treasury bond exceeds 4.5%, will the yield on the 10-year German bund exceed 2.5% in 2024?",
+          "body": "The bond markets in the US and EU are interconnected, but the relationship is complex. Resolution date: December 31, 2024. Resolution criteria: Official bond yield data from the US Department of the Treasury and the German Finance Agency. Resolution source: Treasury.gov and Bundesfinanzagentur.de"
+        },
+        "P_and_Q": {
+          "title": "Will both the yield on the 10-year Treasury bond exceed 4.5% and the yield on the 10-year German bund exceed 2.5% in 2024?",
+          "body": "The bond markets in the US and EU are highly interconnected, and yields can be highly volatile. Resolution date: December 31, 2024. Resolution criteria: Official bond yield data from the US Department of the Treasury and the German Finance Agency. Resolution source: Treasury.gov and Bundesfinanzagentur.de"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3531018281365449,
+      "hypothesis": "The model overgeneralizes tech company compliance based on industry trends, as observed in the Meta and Microsoft example",
+      "questions": {
+        "P": {
+          "title": "Will Apple release a new iPhone model with a foldable screen by 2029?",
+          "body": "This question resolves as YES if Apple releases a new iPhone model with a foldable screen by 2029, as announced by Apple on their official website (apple.com) by December 31, 2029. Resolution source: Apple's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that Apple releases a new iPhone model with a foldable screen, will Samsung also release a new smartphone model with a foldable screen by 2030?",
+          "body": "This question resolves as YES if Samsung releases a new smartphone model with a foldable screen by 2030, given that Apple releases a new iPhone model with a foldable screen, as reported by Samsung on their official website (samsung.com) by December 31, 2030. Resolution source: Samsung's official press releases."
+        },
+        "P_and_Q": {
+          "title": "Will both Apple and Samsung release new smartphone models with foldable screens by 2030?",
+          "body": "This question resolves as YES if both Apple and Samsung release new smartphone models with foldable screens by 2030, as announced by Apple and reported by Samsung on their official websites by December 31, 2030. Resolution source: Apple's official press releases and Samsung's official press releases."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3331559244163822,
+      "hypothesis": "The model provides inconsistent estimates for conditional probabilities, depending on the context and the order of events, as observed in the OpenAI and Microsoft example",
+      "questions": {
+        "P": {
+          "title": "Will the US unemployment rate fall below 4% in 2024?",
+          "body": "The US economy has been growing, but the labor market is complex. Resolution date: December 31, 2024. Resolution criteria: Official unemployment rate data from the BLS. Resolution source: BLS.gov"
+        },
+        "Q_given_P": {
+          "title": "Given that the US unemployment rate falls below 4%, will the EU unemployment rate fall below 7% in 2024?",
+          "body": "The EU labor market is influenced by various factors, including economic growth and policy decisions. Resolution date: December 31, 2024. Resolution criteria: Official unemployment rate data from Eurostat. Resolution source: Eurostat.eu"
+        },
+        "P_and_Q": {
+          "title": "Will both the US unemployment rate fall below 4% and the EU unemployment rate fall below 7% in 2024?",
+          "body": "The labor markets in the US and EU are interconnected, but the relationship is complex. Resolution date: December 31, 2024. Resolution criteria: Official unemployment rate data from the BLS and Eurostat. Resolution source: BLS.gov and Eurostat.eu"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3318250377782187,
+      "hypothesis": "The model underestimates the impact of social media on the dissemination of misinformation, particularly in the context of political elections",
+      "questions": {
+        "P": {
+          "title": "Will Twitter ban all political ads by 2029?",
+          "body": "This question resolves as YES if Twitter bans all political ads by 2029, as reported by Twitter on their official website (twitter.com) by December 31, 2029. Resolution source: Twitter's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that Twitter bans all political ads, will the number of electoral interference cases decrease by more than 20% by 2030?",
+          "body": "This question resolves as YES if the number of electoral interference cases decreases by more than 20% by 2030, given that Twitter bans all political ads, as reported by the Cybersecurity and Infrastructure Security Agency (CISA) on their official website (cisa.gov) by December 31, 2030. Resolution source: CISA's official reports on electoral security."
+        },
+        "P_and_Q": {
+          "title": "Will both Twitter ban all political ads by 2029 and the number of electoral interference cases decrease by more than 20% by 2030?",
+          "body": "This question resolves as YES if both Twitter bans all political ads by 2029 and the number of electoral interference cases decreases by more than 20% by 2030, as reported by Twitter and CISA on their official websites by December 31, 2030. Resolution source: Twitter's official press releases and CISA's official reports on electoral security."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3291676432790648,
+      "hypothesis": "The model assumes a strong correlation between a company's social media presence and its revenue growth, particularly in the context of e-commerce and digital marketing",
+      "questions": {
+        "P": {
+          "title": "Will Amazon increase its social media advertising budget by more than 20% in 2026?",
+          "body": "This question resolves as YES if Amazon increases its social media advertising budget by more than 20% in 2026, as reported by Amazon on their official website (amazon.com) by December 31, 2026. Resolution source: Amazon's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that Amazon increases its social media advertising budget, will its e-commerce revenue grow by more than 15% in 2027?",
+          "body": "This question resolves as YES if Amazon's e-commerce revenue grows by more than 15% in 2027, given that Amazon increases its social media advertising budget, as reported by Amazon on their official website (amazon.com) by December 31, 2027. Resolution source: Amazon's official earnings reports."
+        },
+        "P_and_Q": {
+          "title": "Will both Amazon increase its social media advertising budget by more than 20% in 2026 and its e-commerce revenue grow by more than 15% in 2027?",
+          "body": "This question resolves as YES if both Amazon increases its social media advertising budget by more than 20% in 2026 and its e-commerce revenue grows by more than 15% in 2027, as reported by Amazon on their official website by December 31, 2027. Resolution source: Amazon's official press releases and earnings reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3284392239458318,
+      "hypothesis": "The model overestimates the impact of social media on the dissemination of misinformation during political elections by 2030",
+      "questions": {
+        "P": {
+          "title": "Will Twitter implement a new fact-checking algorithm for political ads by 2028?",
+          "body": "This question resolves as YES if Twitter implements a new fact-checking algorithm for political ads by 2028, as reported by Twitter on their official website (twitter.com) by December 31, 2028. Resolution source: Twitter's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that Twitter implements a new fact-checking algorithm, will the number of misinformation cases on Twitter decrease by more than 15% by 2029?",
+          "body": "This question resolves as YES if the number of misinformation cases on Twitter decreases by more than 15% by 2029, given that Twitter implements a new fact-checking algorithm, as reported by the Pew Research Center on their official website (pewresearch.org) by December 31, 2029. Resolution source: Pew Research Center's official reports."
+        },
+        "P_and_Q": {
+          "title": "Will both Twitter implement a new fact-checking algorithm by 2028 and the number of misinformation cases on Twitter decrease by more than 15% by 2029?",
+          "body": "This question resolves as YES if both Twitter implements a new fact-checking algorithm by 2028 and the number of misinformation cases on Twitter decreases by more than 15% by 2029, as reported by Twitter and the Pew Research Center on their official websites by December 31, 2029. Resolution source: Twitter's official press releases and Pew Research Center's official reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3272596913870557,
+      "hypothesis": "The model overestimates the probability of breakthroughs in quantum computing and their application in real-world scenarios",
+      "questions": {
+        "P": {
+          "title": "Will DeepMind release a functional AGI model by 2030?",
+          "body": "This question resolves as YES if DeepMind releases a functional AGI model by 2030, as announced by DeepMind on their official website (deepmind.com) by December 31, 2030. Resolution source: DeepMind's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that DeepMind releases a functional AGI model, will Microsoft also release a functional AGI model by 2032?",
+          "body": "This question resolves as YES if Microsoft releases a functional AGI model by 2032, given that DeepMind releases a functional AGI model, as reported by Microsoft on their official blog (blogs.microsoft.com) by December 31, 2032. Resolution source: Microsoft's official blog posts."
+        },
+        "P_and_Q": {
+          "title": "Will both DeepMind and Microsoft release functional AGI models by 2032?",
+          "body": "This question resolves as YES if both DeepMind and Microsoft release functional AGI models by 2032, as announced by DeepMind and reported by Microsoft on their official websites by December 31, 2032. Resolution source: DeepMind's official press releases and Microsoft's official blog posts."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.327253795782544,
+      "hypothesis": "The model overestimates the impact of monetary policy on economic growth, particularly in the context of central bank decisions",
+      "questions": {
+        "P": {
+          "title": "Will the European Central Bank implement a negative interest rate policy by 2028?",
+          "body": "This question resolves as YES if the European Central Bank implements a negative interest rate policy by 2028, as reported by the European Central Bank on their official website (ecb.europa.eu) by December 31, 2028. Resolution source: European Central Bank's official press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that the European Central Bank implements a negative interest rate policy, will the eurozone inflation rate increase by more than 2.5% by 2030?",
+          "body": "This question resolves as YES if the eurozone inflation rate increases by more than 2.5% by 2030, given that the European Central Bank implements a negative interest rate policy, as reported by Eurostat on their official website (ec.europa.eu/eurostat) by December 31, 2030. Resolution source: Eurostat's official inflation rate data."
+        },
+        "P_and_Q": {
+          "title": "Will both the European Central Bank implement a negative interest rate policy by 2028 and the eurozone inflation rate increase by more than 2.5% by 2030?",
+          "body": "This question resolves as YES if both the European Central Bank implements a negative interest rate policy by 2028 and the eurozone inflation rate increases by more than 2.5% by 2030, as reported by the European Central Bank and Eurostat on their official websites by December 31, 2030. Resolution source: European Central Bank's official press releases and Eurostat's official inflation rate data."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.320926446198342,
+      "hypothesis": "The model provides inconsistent estimates for conditional probabilities, depending on the context and the order of events, as observed in the OpenAI and Microsoft example",
+      "questions": {
+        "P": {
+          "title": "Will the United States and China sign a new trade agreement in 2025?",
+          "body": "This question resolves as YES if the United States and China sign a new trade agreement in 2025, as announced by the Office of the United States Trade Representative (USTR) on their official website (USTR.gov) by December 31, 2025."
+        },
+        "Q_given_P": {
+          "title": "Given that the United States and China sign a new trade agreement, will the EU impose new tariffs on Chinese imports in 2025?",
+          "body": "This question resolves as YES if the EU imposes new tariffs on Chinese imports in 2025, given that the United States and China sign a new trade agreement, as reported by the European Commission on their official website (Ec.europa.eu) by January 31, 2026."
+        },
+        "P_and_Q": {
+          "title": "Will both the United States and China sign a new trade agreement and the EU impose new tariffs on Chinese imports in 2025?",
+          "body": "This question resolves as YES if both the United States and China sign a new trade agreement and the EU imposes new tariffs on Chinese imports in 2025, as announced by the Office of the United States Trade Representative (USTR) and reported by the European Commission on their official websites by January 31, 2026."
+        }
+      }
+    }
+  ]
+}

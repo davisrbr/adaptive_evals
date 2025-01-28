@@ -1,0 +1,688 @@
+{
+  "hard_questions": [
+    {
+      "consistency_score": 0.7295184158393574,
+      "hypothesis": "The model assumes a strong correlation between the development of quantum computing and the advancement of Artificial General Intelligence (AGI) without considering the impact of regulatory frameworks and ethical concerns on their joint development",
+      "questions": {
+        "P": {
+          "title": "Will NVIDIA develop a quantum computing chip for AGI applications by 2030?",
+          "body": "This question resolves as YES if NVIDIA officially announces the development of a quantum computing chip for AGI applications by December 31, 2030, as reported by NVIDIA's official website or reputable tech outlets like Wired."
+        },
+        "Q_given_P": {
+          "title": "Given that NVIDIA develops a quantum computing chip for AGI applications, will Apple integrate the chip into its AGI research by 2032?",
+          "body": "This question resolves as YES if Apple officially announces the integration of NVIDIA's quantum computing chip into its AGI research by December 31, 2032, as reported by Apple's official website or reputable tech outlets like MacRumors."
+        },
+        "P_and_Q": {
+          "title": "Will both NVIDIA develop a quantum computing chip for AGI applications by 2030 and Apple integrate the chip into its AGI research by 2032?",
+          "body": "This question resolves as YES if both conditions are met, as reported by NVIDIA's official website and Apple's official website. Resolution date: December 31, 2032. Resolution source: NVIDIA's official website and Apple's official website."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.7148785562383453,
+      "hypothesis": "The model assumes a strong correlation between the development of quantum computing and the advancement of Artificial General Intelligence (AGI) without considering the impact of regulatory frameworks and ethical concerns on their joint development",
+      "questions": {
+        "P": {
+          "title": "Will IBM announce a major breakthrough in quantum computing by 2028?",
+          "body": "This question resolves as YES if IBM officially announces a major breakthrough in quantum computing by December 31, 2028, as reported by IBM's official blog or reputable tech outlets like The Verge."
+        },
+        "Q_given_P": {
+          "title": "Given that IBM announces a major breakthrough in quantum computing, will Microsoft integrate quantum computing into its AGI research by 2030?",
+          "body": "This question resolves as YES if Microsoft officially announces the integration of quantum computing into its AGI research by December 31, 2030, as reported by Microsoft's official blog or reputable tech outlets like CNET."
+        },
+        "P_and_Q": {
+          "title": "Will both IBM announce a major breakthrough in quantum computing by 2028 and Microsoft integrate quantum computing into its AGI research by 2030?",
+          "body": "This question resolves as YES if both conditions are met, as reported by IBM's official blog and Microsoft's official blog. Resolution date: December 31, 2030. Resolution source: IBM's official blog and Microsoft's official blog."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.7028376349373502,
+      "hypothesis": "The model assumes a strong correlation between the development of Artificial General Intelligence (AGI) and the implementation of quantum computing, without considering the impact of regulatory frameworks and ethical concerns.",
+      "questions": {
+        "P": {
+          "title": "Will NVIDIA develop a quantum computing chip for AGI applications by 2029?",
+          "body": "This question resolves as YES if NVIDIA officially announces the development of a quantum computing chip for AGI applications by December 31, 2029, as reported by NVIDIA's official website or reputable tech outlets like Wired. Resolution source: NVIDIA's official website or Wired."
+        },
+        "Q_given_P": {
+          "title": "Given that NVIDIA develops a quantum computing chip for AGI applications, will Google integrate the chip into its AGI research by 2030?",
+          "body": "This question resolves as YES if Google officially announces the integration of NVIDIA's quantum computing chip into its AGI research by December 31, 2030, as reported by Google's official blog or reputable tech outlets like The Next Web. Resolution source: Google's official blog or The Next Web."
+        },
+        "P_and_Q": {
+          "title": "Will both NVIDIA develop a quantum computing chip for AGI applications by 2029 and Google integrate the chip into its AGI research by 2030?",
+          "body": "This question resolves as YES if both conditions are met, as reported by NVIDIA's official website and Google's official blog. Resolution date: December 31, 2030. Resolution source: NVIDIA's official website and Google's official blog."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.6087268114001516,
+      "hypothesis": "The model overgeneralizes the impact of genetic engineering on human health without considering the effects of individual genetic variations and environmental factors",
+      "questions": {
+        "P": {
+          "title": "Will the use of genetic engineering in agriculture lead to significant increases in crop yields by 2029?",
+          "body": "This question resolves as YES if the use of genetic engineering in agriculture leads to significant increases in crop yields by December 31, 2029, as reported by the US Department of Agriculture or reputable agricultural outlets like AgWeb. Resolution source: US Department of Agriculture or AgWeb."
+        },
+        "Q_given_P": {
+          "title": "Given that genetic engineering in agriculture leads to significant increases in crop yields, will the increased yields lead to decreased food prices by 2030?",
+          "body": "This question resolves as YES if the increased crop yields resulting from genetic engineering lead to decreased food prices by December 31, 2030, as reported by the Bureau of Labor Statistics or reputable news outlets like CNBC. Resolution source: Bureau of Labor Statistics or CNBC."
+        },
+        "P_and_Q": {
+          "title": "Will both genetic engineering in agriculture lead to significant increases in crop yields by 2029 and the increased yields lead to decreased food prices by 2030?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the US Department of Agriculture and the Bureau of Labor Statistics. Resolution date: December 31, 2030. Resolution source: US Department of Agriculture and Bureau of Labor Statistics."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5542317178782251,
+      "hypothesis": "The model assumes a strong correlation between the development of quantum computing and the advancement of Artificial General Intelligence (AGI) without considering the impact of regulatory frameworks and ethical concerns on their joint development",
+      "questions": {
+        "P": {
+          "title": "Will Google announce a major breakthrough in quantum computing by 2028?",
+          "body": "This question resolves as YES if Google officially announces a major breakthrough in quantum computing by December 31, 2028, as reported by Google's official blog or reputable tech outlets like The Verge."
+        },
+        "Q_given_P": {
+          "title": "Given that Google announces a major breakthrough in quantum computing, will Apple integrate quantum computing into its AGI research by 2030?",
+          "body": "This question resolves as YES if Apple officially announces the integration of quantum computing into its AGI research by December 31, 2030, as reported by Apple's official website or reputable tech outlets like MacRumors."
+        },
+        "P_and_Q": {
+          "title": "Will both Google announce a major breakthrough in quantum computing by 2028 and Apple integrate quantum computing into its AGI research by 2030?",
+          "body": "This question resolves as YES if both conditions are met, as reported by Google's official blog and Apple's official website. Resolution date: December 31, 2030. Resolution source: Google's official blog and Apple's official website."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5332822782651191,
+      "hypothesis": "The model overgeneralizes the impact of genetic engineering on human health without considering the effects of individual genetic variations and environmental factors",
+      "questions": {
+        "P": {
+          "title": "Will the use of genetic engineering in agriculture lead to significant increases in crop yields by 2031?",
+          "body": "This question resolves as YES if the use of genetic engineering in agriculture leads to significant increases in crop yields by December 31, 2031, as reported by the US Department of Agriculture or reputable agricultural outlets like AgWeb."
+        },
+        "Q_given_P": {
+          "title": "Given that genetic engineering in agriculture leads to significant increases in crop yields, will the increased yields lead to decreased food prices by 2033?",
+          "body": "This question resolves as YES if the increased crop yields resulting from genetic engineering lead to decreased food prices by December 31, 2033, as reported by the Bureau of Labor Statistics or reputable news outlets like CNN."
+        },
+        "P_and_Q": {
+          "title": "Will both genetic engineering in agriculture lead to significant increases in crop yields by 2031 and the increased yields lead to decreased food prices by 2033?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the US Department of Agriculture and the Bureau of Labor Statistics. Resolution date: December 31, 2033. Resolution source: US Department of Agriculture and Bureau of Labor Statistics."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4629137324097186,
+      "hypothesis": "The model assumes a strong correlation between the development of quantum computing and the advancement of Artificial General Intelligence (AGI) without considering the impact of regulatory frameworks and ethical concerns on their joint development",
+      "questions": {
+        "P": {
+          "title": "Will Google announce a major breakthrough in quantum computing by 2028?",
+          "body": "This question resolves as YES if Google officially announces a major breakthrough in quantum computing by December 31, 2028, as reported by Google's official blog or reputable tech outlets like The Verge. Resolution source: Google's official blog or The Verge."
+        },
+        "Q_given_P": {
+          "title": "Given that Google announces a major breakthrough in quantum computing, will Microsoft integrate quantum computing into its AGI research by 2029?",
+          "body": "This question resolves as YES if Microsoft officially announces the integration of quantum computing into its AGI research by December 31, 2029, as reported by Microsoft's official blog or reputable tech outlets like TechCrunch. Resolution source: Microsoft's official blog or TechCrunch."
+        },
+        "P_and_Q": {
+          "title": "Will both Google announce a major breakthrough in quantum computing by 2028 and Microsoft integrate quantum computing into its AGI research by 2029?",
+          "body": "This question resolves as YES if both conditions are met, as reported by Google's official blog and Microsoft's official blog. Resolution date: December 31, 2029. Resolution source: Google's official blog and Microsoft's official blog."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4607056685187177,
+      "hypothesis": "The model assumes a strong correlation between the development of quantum computing and the advancement of Artificial General Intelligence (AGI) without considering the impact of regulatory frameworks and ethical concerns on their joint development",
+      "questions": {
+        "P": {
+          "title": "Will NVIDIA develop a quantum computing chip for AGI applications by 2030?",
+          "body": "This question resolves as YES if NVIDIA officially announces the development of a quantum computing chip for AGI applications by December 31, 2030, as reported by NVIDIA's official website or reputable tech outlets like Wired."
+        },
+        "Q_given_P": {
+          "title": "Given that NVIDIA develops a quantum computing chip for AGI applications, will Apple integrate the chip into its AGI research by 2032?",
+          "body": "This question resolves as YES if Apple officially announces the integration of NVIDIA's quantum computing chip into its AGI research by December 31, 2032, as reported by Apple's official website or reputable tech outlets like MacRumors."
+        },
+        "P_and_Q": {
+          "title": "Will both NVIDIA develop a quantum computing chip for AGI applications by 2030 and Apple integrate the chip into its AGI research by 2032?",
+          "body": "This question resolves as YES if both conditions are met, as reported by NVIDIA's official website and Apple's official website. Resolution date: December 31, 2032. Resolution source: NVIDIA's official website and Apple's official website."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4544347792717868,
+      "hypothesis": "The model overgeneralizes the impact of social media on mental health, without considering the effects of individual differences and online behaviors",
+      "questions": {
+        "P": {
+          "title": "Will the implementation of stricter social media regulations lead to a significant decrease in social media usage among teenagers by 2032?",
+          "body": "This question resolves as YES if the implementation of stricter social media regulations leads to a significant decrease in social media usage among teenagers by December 31, 2032, as reported by the Federal Trade Commission (FTC) or reputable outlets like The New York Times."
+        },
+        "Q_given_P": {
+          "title": "Given that stricter social media regulations lead to a significant decrease in social media usage among teenagers, will the decrease in social media usage lead to improved mental health outcomes among teenagers by 2034?",
+          "body": "This question resolves as YES if the decrease in social media usage resulting from stricter social media regulations leads to improved mental health outcomes among teenagers by December 31, 2034, as reported by the Centers for Disease Control and Prevention (CDC) or reputable health outlets like Healthline."
+        },
+        "P_and_Q": {
+          "title": "Will both stricter social media regulations lead to a significant decrease in social media usage among teenagers by 2032 and the decrease in social media usage lead to improved mental health outcomes among teenagers by 2034?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the Federal Trade Commission (FTC) and the Centers for Disease Control and Prevention (CDC). Resolution date: December 31, 2034. Resolution source: FTC and CDC."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.435204040538125,
+      "hypothesis": "The model overgeneralizes the impact of genetic engineering on human health without considering the effects of individual genetic variations and environmental factors",
+      "questions": {
+        "P": {
+          "title": "Will the use of genetic engineering in agriculture lead to significant increases in crop yields by 2032?",
+          "body": "This question resolves as YES if the use of genetic engineering in agriculture leads to significant increases in crop yields by December 31, 2032, as reported by the US Department of Agriculture or reputable agricultural outlets like AgWeb."
+        },
+        "Q_given_P": {
+          "title": "Given that genetic engineering in agriculture leads to significant increases in crop yields, will the increased yields lead to decreased food prices by 2034?",
+          "body": "This question resolves as YES if the increased crop yields resulting from genetic engineering lead to decreased food prices by December 31, 2034, as reported by the Bureau of Labor Statistics or reputable news outlets like CNN."
+        },
+        "P_and_Q": {
+          "title": "Will both genetic engineering in agriculture lead to significant increases in crop yields by 2032 and the increased yields lead to decreased food prices by 2034?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the US Department of Agriculture and the Bureau of Labor Statistics. Resolution date: December 31, 2034. Resolution source: US Department of Agriculture and Bureau of Labor Statistics."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4328300109253948,
+      "hypothesis": "The model inaccurately estimates conditional probabilities for uncertain or multifaceted base events, as seen in questions about the Olympic Medal Table and national election outcomes",
+      "questions": {
+        "P": {
+          "title": "Will the prime minister of Japan visit the United States before June 1, 2024?",
+          "body": "The question resolves based on official statements from the Japanese government or the White House about a planned visit, with a resolution date of June 1, 2024. Resolution source: Official government websites or press releases."
+        },
+        "Q_given_P": {
+          "title": "Given that the prime minister of Japan visits the United States, will the two countries announce a new trade agreement within three months?",
+          "body": "The question resolves based on official announcements from the Japanese and US governments about a new trade agreement, with a resolution date determined by the visit and the announcement. Resolution source: Official government websites, press releases, or reputable news outlets like Reuters or the Associated Press."
+        },
+        "P_and_Q": {
+          "title": "Will both the prime minister of Japan visit the United States before June 1, 2024, and the two countries announce a new trade agreement within three months?",
+          "body": "The question resolves based on the combination of the conditions in P and Q_given_P, with resolution dates and sources as specified for each condition."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4274335679643194,
+      "hypothesis": "The model assumes a strong correlation between the adoption of renewable energy sources and the reduction of greenhouse gas emissions without considering the impact of energy storage and grid infrastructure on the efficacy of renewable energy sources",
+      "questions": {
+        "P": {
+          "title": "Will the use of renewable energy sources increase by more than 20% globally by 2030?",
+          "body": "This question resolves as YES if the use of renewable energy sources increases by more than 20% globally by December 31, 2030, as reported by the International Energy Agency or reputable energy outlets like BloombergNEF. Resolution source: International Energy Agency or BloombergNEF."
+        },
+        "Q_given_P": {
+          "title": "Given that the use of renewable energy sources increases by more than 20% globally, will the global greenhouse gas emissions decrease by more than 10% by 2031?",
+          "body": "This question resolves as YES if the global greenhouse gas emissions decrease by more than 10% by December 31, 2031, as reported by the United Nations Framework Convention on Climate Change or reputable environmental outlets like The Guardian. Resolution source: UNFCCC or The Guardian."
+        },
+        "P_and_Q": {
+          "title": "Will both the use of renewable energy sources increase by more than 20% globally by 2030 and the global greenhouse gas emissions decrease by more than 10% by 2031?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the International Energy Agency and the UNFCCC. Resolution date: December 31, 2031. Resolution source: International Energy Agency and UNFCCC."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4269250824858494,
+      "hypothesis": "The model assumes a strong correlation between a country's economic growth and its technology sector's innovation, without considering the impact of government policies and regulations",
+      "questions": {
+        "P": {
+          "title": "Will China's GDP growth rate exceed 6% by 2027?",
+          "body": "This question resolves as YES if China's GDP growth rate exceeds 6% by December 31, 2027, as reported by the National Bureau of Statistics of China or reputable economic outlets like Bloomberg. Resolution source: National Bureau of Statistics of China or Bloomberg."
+        },
+        "Q_given_P": {
+          "title": "Given that China's GDP growth rate exceeds 6%, will the number of Chinese tech companies listed on the NASDAQ increase by more than 20% by 2028?",
+          "body": "This question resolves as YES if the number of Chinese tech companies listed on the NASDAQ increases by more than 20% by December 31, 2028, as reported by the NASDAQ or reputable financial outlets like CNBC. Resolution source: NASDAQ or CNBC."
+        },
+        "P_and_Q": {
+          "title": "Will both China's GDP growth rate exceed 6% by 2027 and the number of Chinese tech companies listed on the NASDAQ increase by more than 20% by 2028?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the National Bureau of Statistics of China and the NASDAQ. Resolution date: December 31, 2028. Resolution source: National Bureau of Statistics of China and NASDAQ."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4233281682715701,
+      "hypothesis": "The model struggles with predicting outcomes in complex, multi-factor systems like climate change",
+      "questions": {
+        "P": {
+          "title": "Will the global average temperature increase by more than 1.5\u00b0C above pre-industrial levels by 2025?",
+          "body": "This question resolves as YES if the global average temperature increases by more than 1.5\u00b0C above pre-industrial levels by 2025, as reported by the Intergovernmental Panel on Climate Change or reputable scientific outlets like Nature. Resolution date: December 31, 2025. Resolution source: IPCC reports or Nature."
+        },
+        "Q_given_P": {
+          "title": "Given that the global average temperature increases by more than 1.5\u00b0C above pre-industrial levels by 2025, will the Arctic ice cap melt by more than 20% by 2026?",
+          "body": "This question resolves as YES if the Arctic ice cap melts by more than 20% by 2026, as reported by the National Snow and Ice Data Center or reputable scientific outlets like Science. Resolution date: December 31, 2026. Resolution source: NSIDC reports or Science."
+        },
+        "P_and_Q": {
+          "title": "Will both the global average temperature increase by more than 1.5\u00b0C above pre-industrial levels by 2025 and the Arctic ice cap melt by more than 20% by 2026?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the IPCC and the NSIDC. Resolution date: December 31, 2026. Resolution source: IPCC reports and NSIDC reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4151034072797361,
+      "hypothesis": "The model overgeneralizes the impact of genetic engineering on human health without considering the effects of individual genetic variations and environmental factors",
+      "questions": {
+        "P": {
+          "title": "Will the use of genetic engineering in agriculture lead to significant increases in crop yields by 2032?",
+          "body": "This question resolves as YES if the use of genetic engineering in agriculture leads to significant increases in crop yields by December 31, 2032, as reported by the US Department of Agriculture or reputable agricultural outlets like AgWeb."
+        },
+        "Q_given_P": {
+          "title": "Given that genetic engineering in agriculture leads to significant increases in crop yields, will the increased yields lead to decreased food prices by 2034?",
+          "body": "This question resolves as YES if the increased crop yields resulting from genetic engineering lead to decreased food prices by December 31, 2034, as reported by the Bureau of Labor Statistics or reputable news outlets like CNN."
+        },
+        "P_and_Q": {
+          "title": "Will both genetic engineering in agriculture lead to significant increases in crop yields by 2032 and the increased yields lead to decreased food prices by 2034?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the US Department of Agriculture and the Bureau of Labor Statistics. Resolution date: December 31, 2034. Resolution source: US Department of Agriculture and Bureau of Labor Statistics."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4126571566030209,
+      "hypothesis": "The model assumes a strong correlation between the development of quantum computing and the advancement of Artificial General Intelligence (AGI) without considering the impact of regulatory frameworks and ethical concerns on their joint development",
+      "questions": {
+        "P": {
+          "title": "Will Google announce a major breakthrough in quantum computing by 2027?",
+          "body": "This question resolves as YES if Google officially announces a major breakthrough in quantum computing by December 31, 2027, as reported by Google's official blog or reputable tech outlets like The Verge. Resolution source: Google's official blog or The Verge."
+        },
+        "Q_given_P": {
+          "title": "Given that Google announces a major breakthrough in quantum computing, will Microsoft integrate quantum computing into its AGI research by 2028?",
+          "body": "This question resolves as YES if Microsoft officially announces the integration of quantum computing into its AGI research by December 31, 2028, as reported by Microsoft's official blog or reputable tech outlets like TechCrunch. Resolution source: Microsoft's official blog or TechCrunch."
+        },
+        "P_and_Q": {
+          "title": "Will both Google announce a major breakthrough in quantum computing by 2027 and Microsoft integrate quantum computing into its AGI research by 2028?",
+          "body": "This question resolves as YES if both conditions are met, as reported by Google's official blog and Microsoft's official blog. Resolution date: December 31, 2028. Resolution source: Google's official blog and Microsoft's official blog."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4111493362070201,
+      "hypothesis": "The model overgeneralizes the impact of social media on mental health without considering the effects of individual differences and online behaviors",
+      "questions": {
+        "P": {
+          "title": "Will the implementation of stricter social media regulations lead to a significant decrease in social media usage among teenagers by 2033?",
+          "body": "This question resolves as YES if the implementation of stricter social media regulations leads to a significant decrease in social media usage among teenagers by December 31, 2033, as reported by the Federal Trade Commission or reputable outlets like The New York Times."
+        },
+        "Q_given_P": {
+          "title": "Given that stricter social media regulations lead to a significant decrease in social media usage among teenagers, will the decrease in social media usage lead to improved mental health outcomes among teenagers by 2035?",
+          "body": "This question resolves as YES if the decrease in social media usage resulting from stricter social media regulations leads to improved mental health outcomes among teenagers by December 31, 2035, as reported by the Centers for Disease Control and Prevention or reputable health outlets like Healthline."
+        },
+        "P_and_Q": {
+          "title": "Will both stricter social media regulations lead to a significant decrease in social media usage among teenagers by 2033 and the decrease in social media usage lead to improved mental health outcomes among teenagers by 2035?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the Federal Trade Commission and the Centers for Disease Control and Prevention. Resolution date: December 31, 2035. Resolution source: Federal Trade Commission and Centers for Disease Control and Prevention."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4107467248195561,
+      "hypothesis": "The model overgeneralizes the impact of social media on mental health without considering the effects of individual differences and online behaviors",
+      "questions": {
+        "P": {
+          "title": "Will the implementation of stricter social media regulations lead to a significant decrease in social media usage among teenagers by 2032?",
+          "body": "This question resolves as YES if the implementation of stricter social media regulations leads to a significant decrease in social media usage among teenagers by December 31, 2032, as reported by the Federal Trade Commission or reputable outlets like The New York Times."
+        },
+        "Q_given_P": {
+          "title": "Given that stricter social media regulations lead to a significant decrease in social media usage among teenagers, will the decrease in social media usage lead to improved mental health outcomes among teenagers by 2034?",
+          "body": "This question resolves as YES if the decrease in social media usage resulting from stricter social media regulations leads to improved mental health outcomes among teenagers by December 31, 2034, as reported by the Centers for Disease Control and Prevention or reputable health outlets like Healthline."
+        },
+        "P_and_Q": {
+          "title": "Will both stricter social media regulations lead to a significant decrease in social media usage among teenagers by 2032 and the decrease in social media usage lead to improved mental health outcomes among teenagers by 2034?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the Federal Trade Commission and the Centers for Disease Control and Prevention. Resolution date: December 31, 2034. Resolution source: Federal Trade Commission and Centers for Disease Control and Prevention."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3979623422054351,
+      "hypothesis": "The model overgeneralizes the impact of genetic engineering on human health, without considering the effects of individual genetic variations and environmental factors.",
+      "questions": {
+        "P": {
+          "title": "Will the use of genetic engineering in agriculture lead to significant increases in crop yields by 2029?",
+          "body": "This question resolves as YES if the use of genetic engineering in agriculture leads to significant increases in crop yields, as reported by the US Department of Agriculture or reputable agricultural outlets like AgWeb. Resolution date: December 31, 2029. Resolution source: US Department of Agriculture or AgWeb."
+        },
+        "Q_given_P": {
+          "title": "Given that genetic engineering in agriculture leads to significant increases in crop yields, will the increased yields lead to decreased food prices by 2030?",
+          "body": "This question resolves as YES if the increased crop yields resulting from genetic engineering lead to decreased food prices, as reported by the Bureau of Labor Statistics or reputable news outlets like CNBC. Resolution date: December 31, 2030. Resolution source: Bureau of Labor Statistics or CNBC."
+        },
+        "P_and_Q": {
+          "title": "Will both genetic engineering in agriculture lead to significant increases in crop yields by 2029 and the increased yields lead to decreased food prices by 2030?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the US Department of Agriculture and the Bureau of Labor Statistics. Resolution date: December 31, 2030. Resolution source: US Department of Agriculture and Bureau of Labor Statistics."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3966435503989877,
+      "hypothesis": "The model overgeneralizes the impact of social media on mental health without considering the effects of individual differences and online behaviors",
+      "questions": {
+        "P": {
+          "title": "Will the number of social media users who take regular breaks from social media increase by at least 20% by 2029?",
+          "body": "This question resolves as YES if the number of social media users who take regular breaks from social media increases by at least 20% by December 31, 2029, compared to the 2028 levels, as reported by the Pew Research Center or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given that the number of social media users who take regular breaks from social media increases by at least 20%, will the number of social media users reporting improved mental health increase by at least 15% by 2031?",
+          "body": "This question resolves as YES if the increase in social media users taking regular breaks leads to an increase in social media users reporting improved mental health by at least 15% by December 31, 2031, compared to the 2029 levels, as reported by the World Health Organization or other credible sources."
+        },
+        "P_and_Q": {
+          "title": "Will both the number of social media users who take regular breaks from social media increase by at least 20% by 2029 and the number of social media users reporting improved mental health increase by at least 15% by 2031?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the Pew Research Center and the World Health Organization. Resolution date: December 31, 2031. Resolution source: Pew Research Center and World Health Organization."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3955748120223443,
+      "hypothesis": "The model overgeneralizes trends in the technology sector without considering specific company characteristics",
+      "questions": {
+        "P": {
+          "title": "Will the development of Artificial General Intelligence (AGI) lead to significant improvements in natural language processing by 2029?",
+          "body": "This question resolves as YES if the development of AGI leads to significant improvements in natural language processing by December 31, 2029, as reported by a survey conducted by a reputable research firm like the Stanford Natural Language Processing Group or the Association for Computational Linguistics. Resolution source: Stanford NLP Group or ACL."
+        },
+        "Q_given_P": {
+          "title": "Given that AGI leads to significant improvements in natural language processing, will the use of chatbots increase by more than 40% among customer service providers by 2030?",
+          "body": "This question resolves as YES if the use of chatbots increases by more than 40% among customer service providers by December 31, 2030, as reported by a survey conducted by a reputable research firm like the Customer Service Institute or the International Customer Service Institute. Resolution source: CSI or ICSI."
+        },
+        "P_and_Q": {
+          "title": "Will both AGI lead to significant improvements in natural language processing by 2029 and the use of chatbots increase by more than 40% by 2030?",
+          "body": "This question resolves as YES if both conditions are met, as reported by a survey conducted by a reputable research firm like the Stanford Natural Language Processing Group or the Association for Computational Linguistics and a survey conducted by a reputable research firm like the Customer Service Institute or the International Customer Service Institute. Resolution date: December 31, 2030. Resolution source: Stanford NLP Group or ACL and CSI or ICSI."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3814295488254607,
+      "hypothesis": "The model assumes a strong correlation between the development of quantum computing and the advancement of Artificial General Intelligence (AGI) without considering the impact of regulatory frameworks and ethical concerns on their joint development",
+      "questions": {
+        "P": {
+          "title": "Will IBM announce a major breakthrough in quantum computing by 2028?",
+          "body": "This question resolves as YES if IBM officially announces a major breakthrough in quantum computing by December 31, 2028, as reported by IBM's official blog or reputable tech outlets like The Verge."
+        },
+        "Q_given_P": {
+          "title": "Given that IBM announces a major breakthrough in quantum computing, will Microsoft integrate quantum computing into its AGI research by 2030?",
+          "body": "This question resolves as YES if Microsoft officially announces the integration of quantum computing into its AGI research by December 31, 2030, as reported by Microsoft's official blog or reputable tech outlets like CNET."
+        },
+        "P_and_Q": {
+          "title": "Will both IBM announce a major breakthrough in quantum computing by 2028 and Microsoft integrate quantum computing into its AGI research by 2030?",
+          "body": "This question resolves as YES if both conditions are met, as reported by IBM's official blog and Microsoft's official blog. Resolution date: December 31, 2030. Resolution source: IBM's official blog and Microsoft's official blog."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3727540485464456,
+      "hypothesis": "The model assumes a strong correlation between the development of quantum computing and the advancement of Artificial General Intelligence (AGI) without considering the impact of regulatory frameworks and ethical concerns on their joint development",
+      "questions": {
+        "P": {
+          "title": "Will Facebook announce a major breakthrough in quantum computing by 2030?",
+          "body": "This question resolves as YES if Facebook officially announces a major breakthrough in quantum computing by December 31, 2030, as reported by Facebook's official blog or reputable tech outlets like TechCrunch."
+        },
+        "Q_given_P": {
+          "title": "Given that Facebook announces a major breakthrough in quantum computing, will NVIDIA integrate quantum computing into its AGI research by 2032?",
+          "body": "This question resolves as YES if NVIDIA officially announces the integration of quantum computing into its AGI research by December 31, 2032, as reported by NVIDIA's official website or reputable tech outlets like CNET."
+        },
+        "P_and_Q": {
+          "title": "Will both Facebook announce a major breakthrough in quantum computing by 2030 and NVIDIA integrate quantum computing into its AGI research by 2032?",
+          "body": "This question resolves as YES if both conditions are met, as reported by Facebook's official blog and NVIDIA's official website. Resolution date: December 31, 2032. Resolution source: Facebook's official blog and NVIDIA's official website."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3692031635791561,
+      "hypothesis": "The model assumes a strong correlation between the adoption of renewable energy sources and the reduction of greenhouse gas emissions without considering the impact of energy storage and grid infrastructure on the efficacy of renewable energy sources",
+      "questions": {
+        "P": {
+          "title": "Will the global average temperature increase by more than 1.5\u00b0C above pre-industrial levels by 2025?",
+          "body": "This question resolves as YES if the global average temperature increases by more than 1.5\u00b0C above pre-industrial levels by December 31, 2025, as reported by the Intergovernmental Panel on Climate Change or reputable scientific outlets like Nature. Resolution source: IPCC reports or Nature."
+        },
+        "Q_given_P": {
+          "title": "Given that the global average temperature increases by more than 1.5\u00b0C above pre-industrial levels, will the Arctic ice cap melt by more than 20% by 2026?",
+          "body": "This question resolves as YES if the Arctic ice cap melts by more than 20% by December 31, 2026, as reported by the National Snow and Ice Data Center or reputable scientific outlets like Science. Resolution source: NSIDC reports or Science."
+        },
+        "P_and_Q": {
+          "title": "Will both the global average temperature increase by more than 1.5\u00b0C above pre-industrial levels by 2025 and the Arctic ice cap melt by more than 20% by 2026?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the IPCC and the NSIDC. Resolution date: December 31, 2026. Resolution source: IPCC reports and NSIDC reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3680482033172692,
+      "hypothesis": "The model assumes a strong correlation between the adoption of renewable energy sources and the reduction of greenhouse gas emissions, without considering the impact of energy storage and grid infrastructure",
+      "questions": {
+        "P": {
+          "title": "Will the use of renewable energy sources increase by more than 20% globally by 2030?",
+          "body": "This question resolves as YES if the use of renewable energy sources increases by more than 20% globally by December 31, 2030, as reported by the International Energy Agency or reputable energy outlets like BloombergNEF. Resolution source: International Energy Agency or BloombergNEF."
+        },
+        "Q_given_P": {
+          "title": "Given that the use of renewable energy sources increases by more than 20% globally, will the global greenhouse gas emissions decrease by more than 10% by 2031?",
+          "body": "This question resolves as YES if the global greenhouse gas emissions decrease by more than 10% by December 31, 2031, as reported by the United Nations Framework Convention on Climate Change or reputable environmental outlets like The Guardian. Resolution source: UNFCCC or The Guardian."
+        },
+        "P_and_Q": {
+          "title": "Will both the use of renewable energy sources increase by more than 20% globally by 2030 and the global greenhouse gas emissions decrease by more than 10% by 2031?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the International Energy Agency and the UNFCCC. Resolution date: December 31, 2031. Resolution source: International Energy Agency and UNFCCC."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3565001188248209,
+      "hypothesis": "The model overgeneralizes the impact of genetic engineering on human health without considering the effects of individual genetic variations and environmental factors",
+      "questions": {
+        "P": {
+          "title": "Will the use of genetic engineering in agriculture lead to significant increases in crop yields by 2032?",
+          "body": "This question resolves as YES if the use of genetic engineering in agriculture leads to significant increases in crop yields by December 31, 2032, as reported by the US Department of Agriculture or reputable agricultural outlets like AgWeb."
+        },
+        "Q_given_P": {
+          "title": "Given that genetic engineering in agriculture leads to significant increases in crop yields, will the increased yields lead to decreased food prices by 2034?",
+          "body": "This question resolves as YES if the increased crop yields resulting from genetic engineering lead to decreased food prices by December 31, 2034, as reported by the Bureau of Labor Statistics or reputable news outlets like CNN."
+        },
+        "P_and_Q": {
+          "title": "Will both genetic engineering in agriculture lead to significant increases in crop yields by 2032 and the increased yields lead to decreased food prices by 2034?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the US Department of Agriculture and the Bureau of Labor Statistics. Resolution date: December 31, 2034. Resolution source: US Department of Agriculture and Bureau of Labor Statistics."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3526369407151551,
+      "hypothesis": "The model overgeneralizes the impact of genetic engineering on human health without considering the effects of individual genetic variations and environmental factors",
+      "questions": {
+        "P": {
+          "title": "Will the use of genetic engineering in agriculture lead to significant increases in crop yields by 2032?",
+          "body": "This question resolves as YES if the use of genetic engineering in agriculture leads to significant increases in crop yields by December 31, 2032, as reported by the US Department of Agriculture or reputable agricultural outlets like AgWeb."
+        },
+        "Q_given_P": {
+          "title": "Given that genetic engineering in agriculture leads to significant increases in crop yields, will the increased yields lead to decreased food prices by 2034?",
+          "body": "This question resolves as YES if the increased crop yields resulting from genetic engineering lead to decreased food prices by December 31, 2034, as reported by the Bureau of Labor Statistics or reputable news outlets like CNN."
+        },
+        "P_and_Q": {
+          "title": "Will both genetic engineering in agriculture lead to significant increases in crop yields by 2032 and the increased yields lead to decreased food prices by 2034?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the US Department of Agriculture and the Bureau of Labor Statistics. Resolution date: December 31, 2034. Resolution source: US Department of Agriculture and Bureau of Labor Statistics."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3463044617045787,
+      "hypothesis": "The model overgeneralizes trends in the technology sector without considering specific company characteristics",
+      "questions": {
+        "P": {
+          "title": "Will Amazon's cloud computing market share increase by more than 15% by 2029?",
+          "body": "This question resolves as YES if Amazon's cloud computing market share increases by more than 15% by December 31, 2029, as reported by Canalys or reputable tech outlets like ZDNet. Resolution source: Canalys or ZDNet."
+        },
+        "Q_given_P": {
+          "title": "Given that Amazon's cloud computing market share increases by more than 15%, will Microsoft's cloud computing market share decrease by more than 10% by 2030?",
+          "body": "This question resolves as YES if Microsoft's cloud computing market share decreases by more than 10% by December 31, 2030, as reported by Canalys or reputable tech outlets like TechCrunch. Resolution source: Canalys or TechCrunch."
+        },
+        "P_and_Q": {
+          "title": "Will both Amazon's cloud computing market share increase by more than 15% by 2029 and Microsoft's cloud computing market share decrease by more than 10% by 2030?",
+          "body": "This question resolves as YES if both conditions are met, as reported by Canalys. Resolution date: December 31, 2030. Resolution source: Canalys."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3454064049991767,
+      "hypothesis": "The model assumes a strong correlation between the adoption of renewable energy sources and the reduction of greenhouse gas emissions without considering the impact of energy storage and grid infrastructure on the efficacy of renewable energy sources",
+      "questions": {
+        "P": {
+          "title": "Will the global average temperature increase by more than 1.5\u00b0C above pre-industrial levels by 2025?",
+          "body": "This question resolves as YES if the global average temperature increases by more than 1.5\u00b0C above pre-industrial levels by December 31, 2025, as reported by the Intergovernmental Panel on Climate Change or reputable scientific outlets like Nature. Resolution source: IPCC reports or Nature."
+        },
+        "Q_given_P": {
+          "title": "Given that the global average temperature increases by more than 1.5\u00b0C above pre-industrial levels, will the Arctic ice cap melt by more than 20% by 2026?",
+          "body": "This question resolves as YES if the Arctic ice cap melts by more than 20% by December 31, 2026, as reported by the National Snow and Ice Data Center or reputable scientific outlets like Science. Resolution source: NSIDC reports or Science."
+        },
+        "P_and_Q": {
+          "title": "Will both the global average temperature increase by more than 1.5\u00b0C above pre-industrial levels by 2025 and the Arctic ice cap melt by more than 20% by 2026?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the IPCC and the NSIDC. Resolution date: December 31, 2026. Resolution source: IPCC reports and NSIDC reports."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3417313019436842,
+      "hypothesis": "The model overgeneralizes trends in the technology sector without considering specific company characteristics",
+      "questions": {
+        "P": {
+          "title": "Will Amazon's cloud computing market share increase by more than 15% by 2029?",
+          "body": "This question resolves as YES if Amazon's cloud computing market share increases by more than 15% by December 31, 2029, as reported by Canalys or reputable tech outlets like ZDNet. Resolution source: Canalys or ZDNet."
+        },
+        "Q_given_P": {
+          "title": "Given that Amazon's cloud computing market share increases by more than 15%, will Microsoft's cloud computing market share decrease by more than 10% by 2030?",
+          "body": "This question resolves as YES if Microsoft's cloud computing market share decreases by more than 10% by December 31, 2030, as reported by Canalys or reputable tech outlets like TechCrunch. Resolution source: Canalys or TechCrunch."
+        },
+        "P_and_Q": {
+          "title": "Will both Amazon's cloud computing market share increase by more than 15% by 2029 and Microsoft's cloud computing market share decrease by more than 10% by 2030?",
+          "body": "This question resolves as YES if both conditions are met, as reported by Canalys. Resolution date: December 31, 2030. Resolution source: Canalys."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3407819863465078,
+      "hypothesis": "The model overgeneralizes trends without considering specific contextual factors, as observed in questions related to the Speed Chess Championship and sports performance",
+      "questions": {
+        "P": {
+          "title": "Will Lewis Hamilton win the 2024 Formula 1 World Championship?",
+          "body": "The question resolves based on the official results of the 2024 Formula 1 World Championship, with a resolution date determined by the conclusion of the season. Resolution source: Official Formula 1 website or motorsport news outlets like Formula 1.com."
+        },
+        "Q_given_P": {
+          "title": "Given that Lewis Hamilton wins the 2024 Formula 1 World Championship, will Mercedes win the constructors' championship?",
+          "body": "The question resolves based on the official results of the 2024 Formula 1 World Championship, with a resolution date determined by the conclusion of the season. Resolution source: Official Formula 1 website or motorsport news outlets like Formula 1.com."
+        },
+        "P_and_Q": {
+          "title": "Will both Lewis Hamilton win the 2024 Formula 1 World Championship and Mercedes win the constructors' championship?",
+          "body": "The question resolves based on the combination of the conditions in P and Q_given_P, with resolution dates and sources as specified for each condition."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3362489445301009,
+      "hypothesis": "The model overgeneralizes the impact of social media on mental health, without considering the effects of individual differences and online behaviors",
+      "questions": {
+        "P": {
+          "title": "Will the number of social media users who take regular breaks from social media increase by at least 20% by 2029?",
+          "body": "This question resolves as YES if the number of social media users who take regular breaks from social media increases by at least 20% by December 31, 2029, compared to the 2028 levels, as reported by the Pew Research Center or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given that the number of social media users who take regular breaks from social media increases by at least 20% by 2029, will the number of social media users reporting improved mental health increase by at least 15% by 2031?",
+          "body": "This question resolves as YES if the number of social media users reporting improved mental health increases by at least 15% by December 31, 2031, compared to the 2029 levels, as reported by the World Health Organization (WHO) or other credible sources."
+        },
+        "P_and_Q": {
+          "title": "Will both the number of social media users who take regular breaks from social media increase by at least 20% by 2029 and the number of social media users reporting improved mental health increase by at least 15% by 2031?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the Pew Research Center and the World Health Organization (WHO). Resolution date: December 31, 2031. Resolution source: Pew Research Center and WHO."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3283423783414315,
+      "hypothesis": "The model assumes a strong correlation between a country's economic growth and its technology sector's innovation without considering the impact of government policies and regulations",
+      "questions": {
+        "P": {
+          "title": "Will China's GDP growth rate exceed 6% by 2027?",
+          "body": "This question resolves as YES if China's GDP growth rate exceeds 6% by December 31, 2027, as reported by the National Bureau of Statistics of China or reputable economic outlets like Bloomberg. Resolution source: National Bureau of Statistics of China or Bloomberg."
+        },
+        "Q_given_P": {
+          "title": "Given that China's GDP growth rate exceeds 6%, will the number of Chinese tech companies listed on the NASDAQ increase by more than 20% by 2028?",
+          "body": "This question resolves as YES if the number of Chinese tech companies listed on the NASDAQ increases by more than 20% by December 31, 2028, as reported by the NASDAQ or reputable financial outlets like CNBC. Resolution source: NASDAQ or CNBC."
+        },
+        "P_and_Q": {
+          "title": "Will both China's GDP growth rate exceed 6% by 2027 and the number of Chinese tech companies listed on the NASDAQ increase by more than 20% by 2028?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the National Bureau of Statistics of China and the NASDAQ. Resolution date: December 31, 2028. Resolution source: National Bureau of Statistics of China and NASDAQ."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.326574705506044,
+      "hypothesis": "The model assumes a strong correlation between the development of quantum computing and the advancement of Artificial General Intelligence (AGI) without considering the impact of regulatory frameworks and ethical concerns on their joint development",
+      "questions": {
+        "P": {
+          "title": "Will NVIDIA announce a major breakthrough in quantum computing by 2030?",
+          "body": "This question resolves as YES if NVIDIA officially announces a major breakthrough in quantum computing by December 31, 2030, as reported by NVIDIA's official website or reputable tech outlets like CNET."
+        },
+        "Q_given_P": {
+          "title": "Given that NVIDIA announces a major breakthrough in quantum computing, will Google integrate quantum computing into its AGI research by 2032?",
+          "body": "This question resolves as YES if Google officially announces the integration of quantum computing into its AGI research by December 31, 2032, as reported by Google's official blog or reputable tech outlets like The Verge."
+        },
+        "P_and_Q": {
+          "title": "Will both NVIDIA announce a major breakthrough in quantum computing by 2030 and Google integrate quantum computing into its AGI research by 2032?",
+          "body": "This question resolves as YES if both conditions are met, as reported by NVIDIA's official website and Google's official blog. Resolution date: December 31, 2032. Resolution source: NVIDIA's official website and Google's official blog."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3258286567494234,
+      "hypothesis": "The model assumes a strong correlation between the development of Artificial General Intelligence (AGI) and the implementation of quantum computing, without considering the impact of regulatory frameworks and ethical concerns on their joint development",
+      "questions": {
+        "P": {
+          "title": "Will Google announce a major breakthrough in quantum computing by 2028?",
+          "body": "This question resolves as YES if Google officially announces a major breakthrough in quantum computing by December 31, 2028, as reported by Google's official blog or reputable tech outlets like The Verge. Resolution source: Google's official blog or The Verge."
+        },
+        "Q_given_P": {
+          "title": "Given that Google announces a major breakthrough in quantum computing, will Microsoft integrate quantum computing into its AGI research by 2029?",
+          "body": "This question resolves as YES if Microsoft officially announces the integration of quantum computing into its AGI research by December 31, 2029, as reported by Microsoft's official blog or reputable tech outlets like TechCrunch. Resolution source: Microsoft's official blog or TechCrunch."
+        },
+        "P_and_Q": {
+          "title": "Will both Google announce a major breakthrough in quantum computing by 2028 and Microsoft integrate quantum computing into its AGI research by 2029?",
+          "body": "This question resolves as YES if both conditions are met, as reported by Google's official blog and Microsoft's official blog. Resolution date: December 31, 2029. Resolution source: Google's official blog and Microsoft's official blog."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3207477627020497,
+      "hypothesis": "The model overgeneralizes the impact of social media on mental health without considering the effects of individual differences and online behaviors",
+      "questions": {
+        "P": {
+          "title": "Will the number of social media users who take regular breaks from social media increase by at least 20% by 2029?",
+          "body": "This question resolves as YES if the number of social media users who take regular breaks from social media increases by at least 20% by December 31, 2029, compared to the 2028 levels, as reported by the Pew Research Center or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given that the number of social media users who take regular breaks from social media increases by at least 20% by 2029, will the number of social media users reporting improved mental health increase by at least 15% by 2031?",
+          "body": "This question resolves as YES if the increase in social media users taking regular breaks leads to an increase in social media users reporting improved mental health by at least 15% by December 31, 2031, compared to the 2029 levels, as reported by the World Health Organization or other credible sources."
+        },
+        "P_and_Q": {
+          "title": "Will both the number of social media users who take regular breaks from social media increase by at least 20% by 2029 and the number of social media users reporting improved mental health increase by at least 15% by 2031?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the Pew Research Center and the World Health Organization. Resolution date: December 31, 2031. Resolution source: Pew Research Center and World Health Organization."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3019863564968218,
+      "hypothesis": "The model overgeneralizes the impact of genetic engineering on human health, without considering the effects of individual genetic variations and environmental factors",
+      "questions": {
+        "P": {
+          "title": "Will the use of genetic engineering in agriculture lead to significant increases in crop yields by 2029?",
+          "body": "This question resolves as YES if the use of genetic engineering in agriculture leads to significant increases in crop yields by December 31, 2029, as reported by the US Department of Agriculture or reputable agricultural outlets like AgWeb. Resolution source: US Department of Agriculture or AgWeb."
+        },
+        "Q_given_P": {
+          "title": "Given that genetic engineering in agriculture leads to significant increases in crop yields, will the increased yields lead to decreased food prices by 2030?",
+          "body": "This question resolves as YES if the increased crop yields resulting from genetic engineering lead to decreased food prices by December 31, 2030, as reported by the Bureau of Labor Statistics or reputable news outlets like CNBC. Resolution source: Bureau of Labor Statistics or CNBC."
+        },
+        "P_and_Q": {
+          "title": "Will both genetic engineering in agriculture lead to significant increases in crop yields by 2029 and the increased yields lead to decreased food prices by 2030?",
+          "body": "This question resolves as YES if both conditions are met, as reported by the US Department of Agriculture and the Bureau of Labor Statistics. Resolution date: December 31, 2030. Resolution source: US Department of Agriculture and Bureau of Labor Statistics."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.300383308795567,
+      "hypothesis": "The model assumes a strong correlation between the development of Artificial General Intelligence (AGI) and the implementation of quantum computing, without considering the impact of regulatory frameworks and ethical concerns",
+      "questions": {
+        "P": {
+          "title": "Will NVIDIA develop a quantum computing chip for AGI applications by 2030?",
+          "body": "This question resolves as YES if NVIDIA officially announces the development of a quantum computing chip for AGI applications by December 31, 2030, as reported by NVIDIA's official website or reputable tech outlets like Wired."
+        },
+        "Q_given_P": {
+          "title": "Given that NVIDIA develops a quantum computing chip for AGI applications, will Google integrate the chip into its AGI research by 2032?",
+          "body": "This question resolves as YES if Google officially announces the integration of NVIDIA's quantum computing chip into its AGI research by December 31, 2032, as reported by Google's official blog or reputable tech outlets like The Next Web."
+        },
+        "P_and_Q": {
+          "title": "Will both NVIDIA develop a quantum computing chip for AGI applications by 2030 and Google integrate the chip into its AGI research by 2032?",
+          "body": "This question resolves as YES if both conditions are met, as reported by NVIDIA's official website and Google's official blog. Resolution date: December 31, 2032. Resolution source: NVIDIA's official website and Google's official blog."
+        }
+      }
+    }
+  ]
+}
