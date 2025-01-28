@@ -1,0 +1,976 @@
+{
+  "hard_questions": [
+    {
+      "consistency_score": 0.8031798447134929,
+      "hypothesis": "The model overestimates the correlation between the development of 5G networks and the adoption of Internet of Things (IoT) devices",
+      "questions": {
+        "P": {
+          "title": "Will the number of 5G subscriptions worldwide increase by more than 50% in 2025 compared to 2024?",
+          "body": "This question resolves as YES if the number of 5G subscriptions worldwide increases by more than 50% in 2025 compared to 2024, as reported by reputable sources such as the International Telecommunication Union (ITU) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in 5G subscriptions, will the number of IoT devices connected to 5G networks increase by more than 30% in 2026?",
+          "body": "This question resolves as YES if the number of IoT devices connected to 5G networks increases by more than 30% in 2026, as reported by credible sources such as market research firms or industry reports."
+        },
+        "P_and_Q": {
+          "title": "Will the number of 5G subscriptions worldwide increase by more than 50% in 2025 compared to 2024 and the number of IoT devices connected to 5G networks increase by more than 30% in 2026?",
+          "body": "This question resolves as YES if both conditions are met: the number of 5G subscriptions worldwide increases by more than 50% in 2025 compared to 2024, as reported by reputable sources, and the number of IoT devices connected to 5G networks increases by more than 30% in 2026, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.7998336585072944,
+      "hypothesis": "The model underestimates the impact of environmental policies on the financial performance of companies in the energy sector",
+      "questions": {
+        "P": {
+          "title": "Will the global investment in renewable energy increase by more than 20% in 2030 compared to 2029?",
+          "body": "This question resolves as YES if the global investment in renewable energy increases by more than 20% in 2030 compared to 2029, as reported by reputable sources such as the International Energy Agency (IEA) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in global investment in renewable energy, will the carbon emissions from the energy sector decrease by more than 15% in the next 5 years?",
+          "body": "This question resolves as YES if, given an increase in global investment in renewable energy, the carbon emissions from the energy sector decrease by more than 15% in the next 5 years, as reported by credible sources such as academic journals, research institutions, or government agencies."
+        },
+        "P_and_Q": {
+          "title": "Will the global investment in renewable energy increase by more than 20% in 2030 compared to 2029 and the carbon emissions from the energy sector decrease by more than 15% in the next 5 years?",
+          "body": "This question resolves as YES if both conditions are met: the global investment in renewable energy increases by more than 20% in 2030 compared to 2029, as reported by reputable sources, and the carbon emissions from the energy sector decrease by more than 15% in the next 5 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.7706838004381327,
+      "hypothesis": "The model overestimates the correlation between the development of 5G networks and the adoption of Internet of Things (IoT) devices",
+      "questions": {
+        "P": {
+          "title": "Will the number of 5G subscriptions worldwide increase by more than 40% in 2026 compared to 2025?",
+          "body": "This question resolves as YES if the number of 5G subscriptions worldwide increases by more than 40% in 2026 compared to 2025, as reported by reputable sources such as the International Telecommunication Union (ITU) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in 5G subscriptions, will the number of IoT devices connected to 5G networks increase by more than 25% in 2027?",
+          "body": "This question resolves as YES if, given an increase in 5G subscriptions, the number of IoT devices connected to 5G networks increases by more than 25% in 2027, as reported by credible sources such as market research firms or industry reports."
+        },
+        "P_and_Q": {
+          "title": "Will the number of 5G subscriptions worldwide increase by more than 40% in 2026 compared to 2025 and the number of IoT devices connected to 5G networks increase by more than 25% in 2027?",
+          "body": "This question resolves as YES if both conditions are met: the number of 5G subscriptions worldwide increases by more than 40% in 2026 compared to 2025, as reported by reputable sources, and the number of IoT devices connected to 5G networks increases by more than 25% in 2027, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.7465895844061037,
+      "hypothesis": "The model overestimates the correlation between the adoption of electric vehicles and the development of autonomous driving technology, particularly in the context of smart cities and ride-hailing services.",
+      "questions": {
+        "P": {
+          "title": "Will Tesla's market share in the electric vehicle market increase by more than 15% in 2030?",
+          "body": "This question resolves as YES if Tesla's market share in the electric vehicle market increases by more than 15% in 2030, as reported by Tesla's official sales reports or reputable industry sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in Tesla's market share, will the company's investment in autonomous driving technology increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if Tesla's investment in autonomous driving technology increases by at least 20% in the next 2 years, as reported by Tesla's official financial reports or reputable tech news sources."
+        },
+        "P_and_Q": {
+          "title": "Will Tesla's market share in the electric vehicle market increase by more than 15% in 2030 and the company's investment in autonomous driving technology increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if both conditions are met: Tesla's market share in the electric vehicle market increases by more than 15% in 2030, as reported by Tesla's official sales reports or reputable industry sources, and the company's investment in autonomous driving technology increases by at least 20% in the next 2 years, as reported by Tesla's official financial reports or reputable tech news sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.6446844264364517,
+      "hypothesis": "The model underestimates the impact of environmental policies on the financial performance of companies in the energy sector",
+      "questions": {
+        "P": {
+          "title": "Will the price of solar energy decrease by more than 12% in 2027 compared to 2026?",
+          "body": "This question resolves as YES if the price of solar energy decreases by more than 12% in 2027 compared to 2026, as reported by reputable sources such as the International Energy Agency (IEA) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given a decrease in solar energy prices, will the adoption of solar energy increase by more than 18% in the next 3 years?",
+          "body": "This question resolves as YES if the adoption of solar energy increases by more than 18% in the next 3 years, as reported by credible sources such as academic journals, research institutions, or industry reports."
+        },
+        "P_and_Q": {
+          "title": "Will the price of solar energy decrease by more than 12% in 2027 compared to 2026 and the adoption of solar energy increase by more than 18% in the next 3 years?",
+          "body": "This question resolves as YES if both conditions are met: the price of solar energy decreases by more than 12% in 2027 compared to 2026, as reported by reputable sources, and the adoption of solar energy increases by more than 18% in the next 3 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.6215377208455921,
+      "hypothesis": "The model overestimates the correlation between the adoption of blockchain technology and the development of decentralized finance (DeFi) platforms",
+      "questions": {
+        "P": {
+          "title": "Will the investment in blockchain research increase by more than 45% in 2032 compared to 2031?",
+          "body": "This question resolves as YES if the investment in blockchain research increases by more than 45% in 2032 compared to 2031, as reported by the National Science Foundation (NSF) or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in blockchain research investment, will the development of decentralized exchange (DEX) protocols accelerate by at least 32% in the next 7 years?",
+          "body": "This question resolves as YES if, given an increase in blockchain research investment, the development of decentralized exchange (DEX) protocols accelerates by at least 32% in the next 7 years, as reported by credible sources such as academic journals, research institutions, or cryptocurrency exchanges."
+        },
+        "P_and_Q": {
+          "title": "Will the investment in blockchain research increase by more than 45% in 2032 compared to 2031 and the development of decentralized exchange (DEX) protocols accelerate by at least 32% in the next 7 years?",
+          "body": "This question resolves as YES if both conditions are met: the investment in blockchain research increases by more than 45% in 2032 compared to 2031, as reported by the National Science Foundation (NSF) or other credible sources, and the development of decentralized exchange (DEX) protocols accelerates by at least 32% in the next 7 years, as reported by credible sources such as academic journals, research institutions, or cryptocurrency exchanges."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.617149602713489,
+      "hypothesis": "The model overestimates the correlation between the adoption of electric vehicles and the development of autonomous driving technology",
+      "questions": {
+        "P": {
+          "title": "Will the number of public charging stations for electric vehicles increase by more than 50% in 2025 compared to 2024?",
+          "body": "This question resolves as YES if the number of public charging stations for electric vehicles increases by more than 50% in 2025 compared to 2024, as reported by reputable sources such as the International Energy Agency (IEA) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in public charging stations, will the development of autonomous driving technology for passenger vehicles accelerate by at least 15% in the next 5 years?",
+          "body": "This question resolves as YES if the development of autonomous driving technology for passenger vehicles accelerates by at least 15% in the next 5 years, as reported by credible sources such as academic journals, research institutions, or tech companies, and measured by the number of research papers, patents, or breakthroughs in autonomous driving technology."
+        },
+        "P_and_Q": {
+          "title": "Will the number of public charging stations for electric vehicles increase by more than 50% in 2025 compared to 2024 and the development of autonomous driving technology for passenger vehicles accelerate by at least 15% in the next 5 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of public charging stations for electric vehicles increases by more than 50% in 2025 compared to 2024, as reported by reputable sources, and the development of autonomous driving technology for passenger vehicles accelerates by at least 15% in the next 5 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.6040543781728802,
+      "hypothesis": "The model overestimates the correlation between the adoption of electric vehicles and the development of autonomous driving technology",
+      "questions": {
+        "P": {
+          "title": "Will the cost of electric vehicle batteries decrease by more than 18% in 2029 compared to 2028?",
+          "body": "This question resolves as YES if the cost of electric vehicle batteries decreases by more than 18% in 2029 compared to 2028, as reported by reputable sources such as the National Renewable Energy Laboratory (NREL) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given a decrease in electric vehicle battery costs, will the development of autonomous driving technology for commercial vehicles accelerate by at least 22% in the next 7 years?",
+          "body": "This question resolves as YES if, given a decrease in electric vehicle battery costs, the development of autonomous driving technology for commercial vehicles accelerates by at least 22% in the next 7 years, as reported by credible sources such as academic journals, research institutions, or tech companies."
+        },
+        "P_and_Q": {
+          "title": "Will the cost of electric vehicle batteries decrease by more than 18% in 2029 compared to 2028 and the development of autonomous driving technology for commercial vehicles accelerate by at least 22% in the next 7 years?",
+          "body": "This question resolves as YES if both conditions are met: the cost of electric vehicle batteries decreases by more than 18% in 2029 compared to 2028, as reported by reputable sources, and the development of autonomous driving technology for commercial vehicles accelerates by at least 22% in the next 7 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5798630725265455,
+      "hypothesis": "The model underestimates the impact of environmental policies on the financial performance of companies in the energy sector",
+      "questions": {
+        "P": {
+          "title": "Will the price of wind energy decrease by more than 12% in 2031 compared to 2030?",
+          "body": "This question resolves as YES if the price of wind energy decreases by more than 12% in 2031 compared to 2030, as reported by reputable sources such as the National Renewable Energy Laboratory (NREL) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given a decrease in wind energy prices, will the adoption of wind energy increase by more than 25% in the next 6 years?",
+          "body": "This question resolves as YES if, given a decrease in wind energy prices, the adoption of wind energy increases by more than 25% in the next 6 years, as reported by credible sources such as academic journals, research institutions, or industry reports."
+        },
+        "P_and_Q": {
+          "title": "Will the price of wind energy decrease by more than 12% in 2031 compared to 2030 and the adoption of wind energy increase by more than 25% in the next 6 years?",
+          "body": "This question resolves as YES if both conditions are met: the price of wind energy decreases by more than 12% in 2031 compared to 2030, as reported by reputable sources, and the adoption of wind energy increases by more than 25% in the next 6 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5761515811440671,
+      "hypothesis": "The model overestimates the correlation between the development of 5G networks and the adoption of Internet of Things (IoT) devices",
+      "questions": {
+        "P": {
+          "title": "Will the number of 5G subscriptions in the United States increase by more than 50% in 2028 compared to 2027?",
+          "body": "This question resolves as YES if the number of 5G subscriptions in the United States increases by more than 50% in 2028 compared to 2027, as reported by reputable sources such as the Federal Communications Commission (FCC) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in 5G subscriptions in the United States, will the number of IoT devices connected to 5G networks in the United States increase by more than 30% in 2029?",
+          "body": "This question resolves as YES if, given an increase in 5G subscriptions in the United States, the number of IoT devices connected to 5G networks in the United States increases by more than 30% in 2029, as reported by credible sources such as market research firms or industry reports."
+        },
+        "P_and_Q": {
+          "title": "Will the number of 5G subscriptions in the United States increase by more than 50% in 2028 compared to 2027 and the number of IoT devices connected to 5G networks in the United States increase by more than 30% in 2029?",
+          "body": "This question resolves as YES if both conditions are met: the number of 5G subscriptions in the United States increases by more than 50% in 2028 compared to 2027, as reported by reputable sources, and the number of IoT devices connected to 5G networks in the United States increases by more than 30% in 2029, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5704255391027218,
+      "hypothesis": "The model underestimates the impact of environmental policies on the financial performance of companies in the energy sector",
+      "questions": {
+        "P": {
+          "title": "Will the price of solar panels decrease by more than 10% in 2025 compared to 2024?",
+          "body": "This question resolves as YES if the price of solar panels decreases by more than 10% in 2025 compared to 2024, as reported by reputable sources such as the International Energy Agency (IEA) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given a decrease in solar panel prices, will the adoption of solar energy increase by at least 15% in the next 2 years?",
+          "body": "This question resolves as YES if the adoption of solar energy increases by at least 15% in the next 2 years, as reported by credible sources such as academic journals, research institutions, or industry reports."
+        },
+        "P_and_Q": {
+          "title": "Will the price of solar panels decrease by more than 10% in 2025 compared to 2024 and the adoption of solar energy increase by at least 15% in the next 2 years?).",
+          "body": "This question resolves as YES if both conditions are met: the price of solar panels decreases by more than 10% in 2025 compared to 2024, as reported by reputable sources, and the adoption of solar energy increases by at least 15% in the next 2 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5590886658038706,
+      "hypothesis": "The model overestimates the correlation between the adoption of electric vehicles and the development of autonomous driving technology, particularly in the context of smart cities and ride-hailing services",
+      "questions": {
+        "P": {
+          "title": "Will the cost of electric vehicle batteries decrease by more than 15% in 2032 compared to 2031?",
+          "body": "This question resolves as YES if the cost of electric vehicle batteries decreases by more than 15% in 2032 compared to 2031, as reported by reputable sources such as the National Renewable Energy Laboratory (NREL) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given a decrease in electric vehicle battery costs, will the development of autonomous driving technology for passenger vehicles accelerate by at least 18% in the next 5 years?",
+          "body": "This question resolves as YES if, given a decrease in electric vehicle battery costs, the development of autonomous driving technology for passenger vehicles accelerates by at least 18% in the next 5 years, as reported by credible sources such as academic journals, research institutions, or tech companies."
+        },
+        "P_and_Q": {
+          "title": "Will the cost of electric vehicle batteries decrease by more than 15% in 2032 compared to 2031 and the development of autonomous driving technology for passenger vehicles accelerate by at least 18% in the next 5 years?",
+          "body": "This question resolves as YES if both conditions are met: the cost of electric vehicle batteries decreases by more than 15% in 2032 compared to 2031, as reported by reputable sources, and the development of autonomous driving technology for passenger vehicles accelerates by at least 18% in the next 5 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5499815611117278,
+      "hypothesis": "The model overestimates the correlation between the development of 5G networks and the adoption of Internet of Things (IoT) devices",
+      "questions": {
+        "P": {
+          "title": "Will Qualcomm's revenue from 5G-related products increase by more than 25% in 2027?",
+          "body": "This question resolves as YES if Qualcomm's revenue from 5G-related products increases by more than 25% in 2027, as reported by Qualcomm's official financial reports or reputable tech news sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in Qualcomm's 5G-related revenue, will the company's investment in IoT research and development increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if Qualcomm's investment in IoT research and development increases by at least 20% in the next 2 years, as reported by Qualcomm's official financial reports or reputable tech news sources."
+        },
+        "P_and_Q": {
+          "title": "Will Qualcomm's revenue from 5G-related products increase by more than 25% in 2027 and the company's investment in IoT research and development increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if both conditions are met: Qualcomm's revenue from 5G-related products increases by more than 25% in 2027, as reported by Qualcomm's official financial reports or reputable tech news sources, and the company's investment in IoT research and development increases by at least 20% in the next 2 years, as reported by Qualcomm's official financial reports or reputable tech news sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.545255292758316,
+      "hypothesis": "The model underestimates the impact of environmental policies on the financial performance of companies in the energy sector",
+      "questions": {
+        "P": {
+          "title": "Will the price of solar energy decrease by more than 15% in 2027 compared to 2026?",
+          "body": "This question resolves as YES if the price of solar energy decreases by more than 15% in 2027 compared to 2026, as reported by reputable sources such as the International Energy Agency (IEA) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given a decrease in solar energy prices, will the adoption of solar energy increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if the adoption of solar energy increases by at least 20% in the next 2 years, as reported by credible sources such as academic journals, research institutions, or industry reports."
+        },
+        "P_and_Q": {
+          "title": "Will the price of solar energy decrease by more than 15% in 2027 compared to 2026 and the adoption of solar energy increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if both conditions are met: the price of solar energy decreases by more than 15% in 2027 compared to 2026, as reported by reputable sources, and the adoption of solar energy increases by at least 20% in the next 2 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5401926750369895,
+      "hypothesis": "The model overestimates the correlation between the development of Artificial General Intelligence (AGI) and the adoption of quantum computing",
+      "questions": {
+        "P": {
+          "title": "Will IBM's investment in AGI research increase by more than 30% in 2027?",
+          "body": "This question resolves as YES if IBM's investment in AGI research increases by more than 30% in 2027, as reported by IBM's official financial reports or reputable tech news sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in IBM's AGI research investment, will the development of quantum computing accelerate by at least 25% in the next 5 years?",
+          "body": "This question resolves as YES if the development of quantum computing accelerates by at least 25% in the next 5 years, as reported by credible sources such as academic journals, research institutions, or tech companies, and measured by the number of research papers, patents, or breakthroughs in quantum computing."
+        },
+        "P_and_Q": {
+          "title": "Will IBM's investment in AGI research increase by more than 30% in 2027 and the development of quantum computing accelerate by at least 25% in the next 5 years?",
+          "body": "This question resolves as YES if both conditions are met: IBM's investment in AGI research increases by more than 30% in 2027, as reported by IBM's official financial reports or reputable tech news sources, and the development of quantum computing accelerates by at least 25% in the next 5 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5399709043205801,
+      "hypothesis": "The model overestimates the correlation between the adoption of blockchain technology and the development of decentralized finance (DeFi) platforms",
+      "questions": {
+        "P": {
+          "title": "Will the number of blockchain-based financial transactions increase by more than 70% in 2029 compared to 2028?",
+          "body": "This question resolves as YES if the number of blockchain-based financial transactions increases by more than 70% in 2029 compared to 2028, as reported by the Financial Action Task Force (FATF) or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in blockchain-based financial transactions, will the development of DeFi platforms for lending increase by more than 50% in the next 5 years?",
+          "body": "This question resolves as YES if, given an increase in blockchain-based financial transactions, the development of DeFi platforms for lending increases by more than 50% in the next 5 years, as reported by credible sources such as academic journals, research institutions, or DeFi companies."
+        },
+        "P_and_Q": {
+          "title": "Will the number of blockchain-based financial transactions increase by more than 70% in 2029 compared to 2028 and the development of DeFi platforms for lending increase by more than 50% in the next 5 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of blockchain-based financial transactions increases by more than 70% in 2029 compared to 2028, as reported by the Financial Action Task Force (FATF) or other credible sources, and the development of DeFi platforms for lending increases by more than 50% in the next 5 years, as reported by credible sources such as academic journals, research institutions, or DeFi companies."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5363401312593429,
+      "hypothesis": "The model overestimates the correlation between the adoption of electric vehicles and the development of autonomous driving technology",
+      "questions": {
+        "P": {
+          "title": "Will the number of electric vehicles sold worldwide increase by more than 40% in 2025?",
+          "body": "This question resolves as YES if the number of electric vehicles sold worldwide increases by more than 40% in 2025, as reported by reputable sources such as the International Energy Agency (IEA) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in electric vehicle sales, will the development of autonomous driving technology for passenger vehicles accelerate by at least 10% in the next 5 years?",
+          "body": "This question resolves as YES if the development of autonomous driving technology for passenger vehicles accelerates by at least 10% in the next 5 years, as reported by credible sources such as academic journals, research institutions, or tech companies, and measured by the number of research papers, patents, or breakthroughs in autonomous driving technology."
+        },
+        "P_and_Q": {
+          "title": "Will the number of electric vehicles sold worldwide increase by more than 40% in 2025 and the development of autonomous driving technology for passenger vehicles accelerate by at least 10% in the next 5 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of electric vehicles sold worldwide increases by more than 40% in 2025, as reported by reputable sources, and the development of autonomous driving technology for passenger vehicles accelerates by at least 10% in the next 5 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5281128611801622,
+      "hypothesis": "The model underestimates the impact of genetic engineering on the development of new medical treatments for genetic disorders",
+      "questions": {
+        "P": {
+          "title": "Will the number of genetic engineering patents filed by CRISPR Therapeutics increase by more than 50% in 2029 compared to 2028?",
+          "body": "This question resolves as YES if the number of genetic engineering patents filed by CRISPR Therapeutics increases by more than 50% in 2029 compared to 2028, as reported by the United States Patent and Trademark Office (USPTO) or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in genetic engineering patents filed by CRISPR Therapeutics, will the development of new medical treatments for sickle cell anemia accelerate by at least 30% in the next 7 years?",
+          "body": "This question resolves as YES if, given an increase in genetic engineering patents filed by CRISPR Therapeutics, the development of new medical treatments for sickle cell anemia accelerates by at least 30% in the next 7 years, as reported by credible sources such as academic journals, research institutions, or pharmaceutical companies."
+        },
+        "P_and_Q": {
+          "title": "Will the number of genetic engineering patents filed by CRISPR Therapeutics increase by more than 50% in 2029 compared to 2028 and the development of new medical treatments for sickle cell anemia accelerate by at least 30% in the next 7 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of genetic engineering patents filed by CRISPR Therapeutics increases by more than 50% in 2029 compared to 2028, as reported by the United States Patent and Trademark Office (USPTO) or other credible sources, and the development of new medical treatments for sickle cell anemia accelerates by at least 30% in the next 7 years, as reported by credible sources such as academic journals, research institutions, or pharmaceutical companies."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5262592181068436,
+      "hypothesis": "The model underestimates the impact of advancements in quantum computing on the development of Artificial General Intelligence (AGI)",
+      "questions": {
+        "P": {
+          "title": "Will IBM's quantum computing revenue increase by more than 25% in 2025?",
+          "body": "This question resolves as YES if IBM's quantum computing revenue increases by more than 25% in 2025, as reported by IBM's official financial reports or reputable tech news sources such as CNBC or Bloomberg."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in IBM's quantum computing revenue, will the company's investment in AGI research increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if IBM's investment in AGI research increases by at least 20% in the next 2 years, as reported by IBM's official financial reports or reputable tech news sources."
+        },
+        "P_and_Q": {
+          "title": "Will IBM's quantum computing revenue increase by more than 25% in 2025 and the company's investment in AGI research increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if both conditions are met: IBM's quantum computing revenue increases by more than 25% in 2025, as reported by IBM's official financial reports or reputable tech news sources, and the company's investment in AGI research increases by at least 20% in the next 2 years, as reported by IBM's official financial reports or reputable tech news sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5117366583106077,
+      "hypothesis": "The model overestimates the correlation between the adoption of electric vehicles and the development of autonomous driving technology in the logistics industry",
+      "questions": {
+        "P": {
+          "title": "Will the cost of electric vehicle batteries decrease by more than 18% in 2029 compared to 2028?",
+          "body": "This question resolves as YES if the cost of electric vehicle batteries decreases by more than 18% in 2029 compared to 2028, as reported by the National Renewable Energy Laboratory (NREL) or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given a decrease in electric vehicle battery costs, will the development of autonomous driving technology for commercial vehicles accelerate by at least 22% in the next 7 years?",
+          "body": "This question resolves as YES if, given a decrease in electric vehicle battery costs, the development of autonomous driving technology for commercial vehicles accelerates by at least 22% in the next 7 years, as reported by credible sources such as the International Transportation Innovation Center (ITIC) or other reputable research institutions."
+        },
+        "P_and_Q": {
+          "title": "Will the cost of electric vehicle batteries decrease by more than 18% in 2029 compared to 2028 and the development of autonomous driving technology for commercial vehicles accelerate by at least 22% in the next 7 years?",
+          "body": "This question resolves as YES if both conditions are met: the cost of electric vehicle batteries decreases by more than 18% in 2029 compared to 2028, as reported by the National Renewable Energy Laboratory (NREL) or other credible sources, and the development of autonomous driving technology for commercial vehicles accelerates by at least 22% in the next 7 years, as reported by credible sources such as the International Transportation Innovation Center (ITIC) or other reputable research institutions."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5031180981138332,
+      "hypothesis": "The model underestimates the impact of genetic engineering on the development of new medical treatments for complex diseases, particularly in the context of CRISPR gene editing and regenerative medicine.",
+      "questions": {
+        "P": {
+          "title": "Will the number of genetic engineering startups focused on treating complex diseases increase by more than 30% in 2029 compared to 2028?",
+          "body": "This question resolves as YES if the number of genetic engineering startups focused on treating complex diseases increases by more than 30% in 2029 compared to 2028, as reported by reputable sources such as venture capital firms, startup accelerators, or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in genetic engineering startups focused on treating complex diseases, will the development of new medical treatments for rare genetic disorders accelerate by at least 20% in the next 5 years?",
+          "body": "This question resolves as YES if the development of new medical treatments for rare genetic disorders accelerates by at least 20% in the next 5 years, as reported by credible sources such as academic journals, research institutions, or pharmaceutical companies, and measured by the number of research papers, patents, or breakthroughs in rare genetic disorder treatments."
+        },
+        "P_and_Q": {
+          "title": "Will the number of genetic engineering startups focused on treating complex diseases increase by more than 30% in 2029 compared to 2028 and the development of new medical treatments for rare genetic disorders accelerate by at least 20% in the next 5 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of genetic engineering startups focused on treating complex diseases increases by more than 30% in 2029 compared to 2028, as reported by reputable sources, and the development of new medical treatments for rare genetic disorders accelerates by at least 20% in the next 5 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4923792537460691,
+      "hypothesis": "The model underestimates the impact of climate change on the development of sustainable agriculture practices in Africa",
+      "questions": {
+        "P": {
+          "title": "Will the number of sustainable agriculture patents filed by the Bill and Melinda Gates Foundation increase by more than 50% in 2030 compared to 2029?",
+          "body": "This question resolves as YES if the number of sustainable agriculture patents filed by the Bill and Melinda Gates Foundation increases by more than 50% in 2030 compared to 2029, as reported by the United States Patent and Trademark Office (USPTO) or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in sustainable agriculture patents filed by the Bill and Melinda Gates Foundation, will the adoption of precision farming technology in Africa increase by more than 40% in the next 9 years?",
+          "body": "This question resolves as YES if, given an increase in sustainable agriculture patents filed by the Bill and Melinda Gates Foundation, the adoption of precision farming technology in Africa increases by more than 40% in the next 9 years, as reported by credible sources such as the Food and Agriculture Organization (FAO) of the United Nations or other reputable research institutions."
+        },
+        "P_and_Q": {
+          "title": "Will the number of sustainable agriculture patents filed by the Bill and Melinda Gates Foundation increase by more than 50% in 2030 compared to 2029 and the adoption of precision farming technology in Africa increase by more than 40% in the next 9 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of sustainable agriculture patents filed by the Bill and Melinda Gates Foundation increases by more than 50% in 2030 compared to 2029, as reported by the United States Patent and Trademark Office (USPTO) or other credible sources, and the adoption of precision farming technology in Africa increases by more than 40% in the next 9 years, as reported by credible sources such as the Food and Agriculture Organization (FAO) of the United Nations or other reputable research institutions."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4875955035564119,
+      "hypothesis": "The model underestimates the impact of environmental policies on the financial performance of companies in the energy sector, particularly in the context of renewable energy and carbon pricing.",
+      "questions": {
+        "P": {
+          "title": "Will the price of solar energy decrease by more than 15% in 2030 compared to 2029?",
+          "body": "This question resolves as YES if the price of solar energy decreases by more than 15% in 2030 compared to 2029, as reported by reputable sources such as the International Energy Agency (IEA) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given a decrease in solar energy prices, will the adoption of solar energy increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if the adoption of solar energy increases by at least 20% in the next 2 years, as reported by credible sources such as academic journals, research institutions, or industry reports."
+        },
+        "P_and_Q": {
+          "title": "Will the price of solar energy decrease by more than 15% in 2030 compared to 2029 and the adoption of solar energy increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if both conditions are met: the price of solar energy decreases by more than 15% in 2030 compared to 2029, as reported by reputable sources, and the adoption of solar energy increases by at least 20% in the next 2 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4776349673072952,
+      "hypothesis": "The model overestimates the correlation between the adoption of blockchain technology and the development of decentralized finance (DeFi) platforms",
+      "questions": {
+        "P": {
+          "title": "Will the number of blockchain-based financial transactions increase by more than 70% in 2029 compared to 2028?",
+          "body": "This question resolves as YES if the number of blockchain-based financial transactions increases by more than 70% in 2029 compared to 2028, as reported by the Financial Action Task Force (FATF) or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in blockchain-based financial transactions, will the development of decentralized finance (DeFi) platforms for lending increase by more than 50% in the next 5 years?",
+          "body": "This question resolves as YES if, given an increase in blockchain-based financial transactions, the development of decentralized finance (DeFi) platforms for lending increases by more than 50% in the next 5 years, as reported by credible sources such as academic journals, research institutions, or DeFi companies."
+        },
+        "P_and_Q": {
+          "title": "Will the number of blockchain-based financial transactions increase by more than 70% in 2029 compared to 2028 and the development of decentralized finance (DeFi) platforms for lending increase by more than 50% in the next 5 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of blockchain-based financial transactions increases by more than 70% in 2029 compared to 2028, as reported by the Financial Action Task Force (FATF) or other credible sources, and the development of decentralized finance (DeFi) platforms for lending increases by more than 50% in the next 5 years, as reported by credible sources such as academic journals, research institutions, or DeFi companies."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4677785011802545,
+      "hypothesis": "The model underestimates the impact of genetic engineering on the development of new medical treatments",
+      "questions": {
+        "P": {
+          "title": "Will the investment in genetic engineering research increase by more than 25% in 2027 compared to 2026?",
+          "body": "This question resolves as YES if the investment in genetic engineering research increases by more than 25% in 2027 compared to 2026, as reported by reputable sources such as the National Institutes of Health (NIH) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in genetic engineering research investment, will the development of new medical treatments for infectious diseases accelerate by at least 22% in the next 7 years?",
+          "body": "This question resolves as YES if, given an increase in genetic engineering research investment, the development of new medical treatments for infectious diseases accelerates by at least 22% in the next 7 years, as reported by credible sources such as academic journals, research institutions, or pharmaceutical companies."
+        },
+        "P_and_Q": {
+          "title": "Will the investment in genetic engineering research increase by more than 25% in 2027 compared to 2026 and the development of new medical treatments for infectious diseases accelerate by at least 22% in the next 7 years?",
+          "body": "This question resolves as YES if both conditions are met: the investment in genetic engineering research increases by more than 25% in 2027 compared to 2026, as reported by reputable sources, and the development of new medical treatments for infectious diseases accelerates by at least 22% in the next 7 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4664317793934414,
+      "hypothesis": "The model underestimates the impact of genetic engineering on the development of new medical treatments for rare diseases",
+      "questions": {
+        "P": {
+          "title": "Will the investment in genetic engineering research increase by more than 25% in 2027 compared to 2026?",
+          "body": "This question resolves as YES if the investment in genetic engineering research increases by more than 25% in 2027 compared to 2026, as reported by the National Institutes of Health (NIH) or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in genetic engineering research investment, will the development of new medical treatments for infectious diseases accelerate by at least 22% in the next 7 years?",
+          "body": "This question resolves as YES if, given an increase in genetic engineering research investment, the development of new medical treatments for infectious diseases accelerates by at least 22% in the next 7 years, as reported by credible sources such as academic journals, research institutions, or pharmaceutical companies."
+        },
+        "P_and_Q": {
+          "title": "Will the investment in genetic engineering research increase by more than 25% in 2027 compared to 2026 and the development of new medical treatments for infectious diseases accelerate by at least 22% in the next 7 years?",
+          "body": "This question resolves as YES if both conditions are met: the investment in genetic engineering research increases by more than 25% in 2027 compared to 2026, as reported by the National Institutes of Health (NIH) or other credible sources, and the development of new medical treatments for infectious diseases accelerates by at least 22% in the next 7 years, as reported by credible sources such as academic journals, research institutions, or pharmaceutical companies."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4661944030071748,
+      "hypothesis": "The model overestimates the correlation between the development of 5G networks and the adoption of Internet of Things (IoT) devices, particularly in the context of smart cities and industrial automation.",
+      "questions": {
+        "P": {
+          "title": "Will Qualcomm's revenue from 5G-related products increase by more than 25% in 2028?",
+          "body": "This question resolves as YES if Qualcomm's revenue from 5G-related products increases by more than 25% in 2028, as reported by Qualcomm's official financial reports or reputable tech news sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in Qualcomm's 5G-related revenue, will the company's investment in IoT research and development increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if Qualcomm's investment in IoT research and development increases by at least 20% in the next 2 years, as reported by Qualcomm's official financial reports or reputable tech news sources."
+        },
+        "P_and_Q": {
+          "title": "Will Qualcomm's revenue from 5G-related products increase by more than 25% in 2028 and the company's investment in IoT research and development increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if both conditions are met: Qualcomm's revenue from 5G-related products increases by more than 25% in 2028, as reported by Qualcomm's official financial reports or reputable tech news sources, and the company's investment in IoT research and development increases by at least 20% in the next 2 years, as reported by Qualcomm's official financial reports or reputable tech news sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4615254333272335,
+      "hypothesis": "The model overestimates the correlation between the development of quantum computing and the adoption of artificial intelligence (AI) in the healthcare industry",
+      "questions": {
+        "P": {
+          "title": "Will the investment in quantum computing research increase by more than 40% in 2028 compared to 2027?",
+          "body": "This question resolves as YES if the investment in quantum computing research increases by more than 40% in 2028 compared to 2027, as reported by the National Science Foundation (NSF) or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in quantum computing research investment, will the development of AI-powered medical devices accelerate by at least 25% in the next 5 years?",
+          "body": "This question resolves as YES if, given an increase in quantum computing research investment, the development of AI-powered medical devices accelerates by at least 25% in the next 5 years, as reported by credible sources such as academic journals, research institutions, or medical device companies."
+        },
+        "P_and_Q": {
+          "title": "Will the investment in quantum computing research increase by more than 40% in 2028 compared to 2027 and the development of AI-powered medical devices accelerate by at least 25% in the next 5 years?",
+          "body": "This question resolves as YES if both conditions are met: the investment in quantum computing research increases by more than 40% in 2028 compared to 2027, as reported by the National Science Foundation (NSF) or other credible sources, and the development of AI-powered medical devices accelerates by at least 25% in the next 5 years, as reported by credible sources such as academic journals, research institutions, or medical device companies."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4522028333383167,
+      "hypothesis": "The model overestimates the correlation between advancements in quantum computing and the development of Artificial General Intelligence (AGI) in complex problem-solving",
+      "questions": {
+        "P": {
+          "title": "Will IBM's investment in quantum computing research increase by more than 25% in 2025?",
+          "body": "This question resolves as YES if IBM's investment in quantum computing research increases by more than 25% in 2025, as reported by IBM's official financial reports or reputable tech news sources such as CNBC or Bloomberg."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in IBM's quantum computing research investment, will the number of AGI-related patents filed by IBM increase by more than 15% in the next 3 years?",
+          "body": "This question resolves as YES if the number of AGI-related patents filed by IBM increases by more than 15% in the next 3 years, as reported by credible sources such as patent databases or industry reports."
+        },
+        "P_and_Q": {
+          "title": "Will IBM's investment in quantum computing research increase by more than 25% in 2025 and the number of AGI-related patents filed by IBM increase by more than 15% in the next 3 years?",
+          "body": "This question resolves as YES if both conditions are met: IBM's investment in quantum computing research increases by more than 25% in 2025, as reported by IBM's official financial reports or reputable tech news sources, and the number of AGI-related patents filed by IBM increases by more than 15% in the next 3 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.434325975301721,
+      "hypothesis": "The model underestimates the impact of environmental policies on the financial performance of companies in the energy sector",
+      "questions": {
+        "P": {
+          "title": "Will the price of renewable energy decrease by more than 15% in 2025 compared to 2024?",
+          "body": "This question resolves as YES if the price of renewable energy decreases by more than 15% in 2025 compared to 2024, as reported by reputable sources such as the International Energy Agency (IEA) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given a decrease in renewable energy prices, will the adoption of renewable energy increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if the adoption of renewable energy increases by at least 20% in the next 2 years, as reported by credible sources such as academic journals, research institutions, or industry reports."
+        },
+        "P_and_Q": {
+          "title": "Will the price of renewable energy decrease by more than 15% in 2025 compared to 2024 and the adoption of renewable energy increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if both conditions are met: the price of renewable energy decreases by more than 15% in 2025 compared to 2024, as reported by reputable sources, and the adoption of renewable energy increases by at least 20% in the next 2 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4167004840259287,
+      "hypothesis": "The model underestimates the impact of genetic engineering on the development of new medical treatments for rare diseases",
+      "questions": {
+        "P": {
+          "title": "Will the number of genetic engineering startups increase by more than 30% in 2025 compared to 2024?",
+          "body": "This question resolves as YES if the number of genetic engineering startups increases by more than 30% in 2025 compared to 2024, as reported by reputable sources such as venture capital firms, startup accelerators, or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in the number of genetic engineering startups, will the development of new medical treatments for genetic disorders accelerate by at least 25% in the next 5 years?",
+          "body": "This question resolves as YES if the development of new medical treatments for genetic disorders accelerates by at least 25% in the next 5 years, as reported by credible sources such as academic journals, research institutions, or pharmaceutical companies, and measured by the number of research papers, patents, or breakthroughs in genetic disorder treatments."
+        },
+        "P_and_Q": {
+          "title": "Will the number of genetic engineering startups increase by more than 30% in 2025 compared to 2024 and the development of new medical treatments for genetic disorders accelerate by at least 25% in the next 5 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of genetic engineering startups increases by more than 30% in 2025 compared to 2024, as reported by reputable sources, and the development of new medical treatments for genetic disorders accelerates by at least 25% in the next 5 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.413011585559571,
+      "hypothesis": "The model underestimates the impact of climate change on the development of sustainable agriculture practices in Africa",
+      "questions": {
+        "P": {
+          "title": "Will the investment in climate-resilient agriculture in Africa increase by more than 40% in 2028 compared to 2027?",
+          "body": "This question resolves as YES if the investment in climate-resilient agriculture in Africa increases by more than 40% in 2028 compared to 2027, as reported by the African Development Bank or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in investment in climate-resilient agriculture, will the development of drought-tolerant crop varieties accelerate by at least 30% in the next 8 years?",
+          "body": "This question resolves as YES if, given an increase in investment in climate-resilient agriculture, the development of drought-tolerant crop varieties accelerates by at least 30% in the next 8 years, as reported by credible sources such as the International Maize and Wheat Improvement Center (CIMMYT) or other reputable research institutions."
+        },
+        "P_and_Q": {
+          "title": "Will the investment in climate-resilient agriculture in Africa increase by more than 40% in 2028 compared to 2027 and the development of drought-tolerant crop varieties accelerate by at least 30% in the next 8 years?",
+          "body": "This question resolves as YES if both conditions are met: the investment in climate-resilient agriculture in Africa increases by more than 40% in 2028 compared to 2027, as reported by the African Development Bank or other credible sources, and the development of drought-tolerant crop varieties accelerates by at least 30% in the next 8 years, as reported by credible sources such as the International Maize and Wheat Improvement Center (CIMMYT) or other reputable research institutions."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4057899988369466,
+      "hypothesis": "The model overestimates the correlation between the development of 5G networks and the adoption of Internet of Things (IoT) devices",
+      "questions": {
+        "P": {
+          "title": "Will the number of 5G subscriptions worldwide increase by more than 50% in 2026 compared to 2025?",
+          "body": "This question resolves as YES if the number of 5G subscriptions worldwide increases by more than 50% in 2026 compared to 2025, as reported by reputable sources such as the International Telecommunication Union (ITU) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in 5G subscriptions, will the number of IoT devices connected to 5G networks increase by more than 30% in 2027?",
+          "body": "This question resolves as YES if the number of IoT devices connected to 5G networks increases by more than 30% in 2027, as reported by credible sources such as market research firms or industry reports."
+        },
+        "P_and_Q": {
+          "title": "Will the number of 5G subscriptions worldwide increase by more than 50% in 2026 compared to 2025 and the number of IoT devices connected to 5G networks increase by more than 30% in 2027?",
+          "body": "This question resolves as YES if both conditions are met: the number of 5G subscriptions worldwide increases by more than 50% in 2026 compared to 2025, as reported by reputable sources, and the number of IoT devices connected to 5G networks increases by more than 30% in 2027, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4039301860604713,
+      "hypothesis": "The model overestimates the correlation between the development of AGI and the adoption of quantum computing in the healthcare industry",
+      "questions": {
+        "P": {
+          "title": "Will the investment in AGI research by the European Union increase by more than 40% in 2028 compared to 2027?",
+          "body": "This question resolves as YES if the investment in AGI research by the European Union increases by more than 40% in 2028 compared to 2027, as reported by the European Commission or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in EU investment in AGI research, will the development of quantum-resistant cryptography by the National Institute of Standards and Technology (NIST) accelerate by at least 20% in the next 6 years?",
+          "body": "This question resolves as YES if, given an increase in EU investment in AGI research, the development of quantum-resistant cryptography by the National Institute of Standards and Technology (NIST) accelerates by at least 20% in the next 6 years, as reported by credible sources such as academic journals, research institutions, or cybersecurity companies."
+        },
+        "P_and_Q": {
+          "title": "Will the investment in AGI research by the European Union increase by more than 40% in 2028 compared to 2027 and the development of quantum-resistant cryptography by the National Institute of Standards and Technology (NIST) accelerate by at least 20% in the next 6 years?",
+          "body": "This question resolves as YES if both conditions are met: the investment in AGI research by the European Union increases by more than 40% in 2028 compared to 2027, as reported by the European Commission or other credible sources, and the development of quantum-resistant cryptography by the National Institute of Standards and Technology (NIST) accelerates by at least 20% in the next 6 years, as reported by credible sources such as academic journals, research institutions, or cybersecurity companies."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3991933896442345,
+      "hypothesis": "The model overestimates the correlation between the development of 5G networks and the adoption of Internet of Things (IoT) devices, particularly in the context of smart cities and industrial automation.",
+      "questions": {
+        "P": {
+          "title": "Will the number of 5G subscriptions worldwide increase by more than 50% in 2027 compared to 2026?",
+          "body": "This question resolves as YES if the number of 5G subscriptions worldwide increases by more than 50% in 2027 compared to 2026, as reported by reputable sources such as the International Telecommunication Union (ITU) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in 5G subscriptions, will the number of IoT devices connected to 5G networks increase by more than 30% in 2028?",
+          "body": "This question resolves as YES if the number of IoT devices connected to 5G networks increases by more than 30% in 2028, as reported by credible sources such as market research firms or industry reports."
+        },
+        "P_and_Q": {
+          "title": "Will the number of 5G subscriptions worldwide increase by more than 50% in 2027 compared to 2026 and the number of IoT devices connected to 5G networks increase by more than 30% in 2028?",
+          "body": "This question resolves as YES if both conditions are met: the number of 5G subscriptions worldwide increases by more than 50% in 2027 compared to 2026, as reported by reputable sources, and the number of IoT devices connected to 5G networks increases by more than 30% in 2028, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.395566255257706,
+      "hypothesis": "The model overestimates the correlation between the adoption of electric vehicles and the development of autonomous driving technology",
+      "questions": {
+        "P": {
+          "title": "Will the number of public charging stations for electric vehicles increase by more than 60% in 2027 compared to 2026?",
+          "body": "This question resolves as YES if the number of public charging stations for electric vehicles increases by more than 60% in 2027 compared to 2026, as reported by reputable sources such as the International Energy Agency (IEA) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in public charging stations, will the development of autonomous driving technology for passenger vehicles accelerate by at least 20% in the next 6 years?",
+          "body": "This question resolves as YES if, given an increase in public charging stations, the development of autonomous driving technology for passenger vehicles accelerates by at least 20% in the next 6 years, as reported by credible sources such as academic journals, research institutions, or tech companies."
+        },
+        "P_and_Q": {
+          "title": "Will the number of public charging stations for electric vehicles increase by more than 60% in 2027 compared to 2026 and the development of autonomous driving technology for passenger vehicles accelerate by at least 20% in the next 6 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of public charging stations for electric vehicles increases by more than 60% in 2027 compared to 2026, as reported by reputable sources, and the development of autonomous driving technology for passenger vehicles accelerates by at least 20% in the next 6 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3805504427650917,
+      "hypothesis": "The model overestimates the correlation between the development of AGI and the adoption of quantum computing in the healthcare industry",
+      "questions": {
+        "P": {
+          "title": "Will the number of research papers on AGI published in top-tier journals increase by more than 30% in 2027 compared to 2026?",
+          "body": "This question resolves as YES if the number of research papers on AGI published in top-tier journals increases by more than 30% in 2027 compared to 2026, as reported by the Association for the Advancement of Artificial Intelligence (AAAI) or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in AGI research papers, will the adoption of quantum computing in the healthcare industry for medical diagnosis increase by more than 25% in 2029?",
+          "body": "This question resolves as YES if, given an increase in AGI research papers, the adoption of quantum computing in the healthcare industry for medical diagnosis increases by more than 25% in 2029, as reported by credible sources such as the Healthcare Information and Management Systems Society (HIMSS) or other reputable research institutions."
+        },
+        "P_and_Q": {
+          "title": "Will the number of research papers on AGI published in top-tier journals increase by more than 30% in 2027 compared to 2026 and the adoption of quantum computing in the healthcare industry for medical diagnosis increase by more than 25% in 2029?",
+          "body": "This question resolves as YES if both conditions are met: the number of research papers on AGI published in top-tier journals increases by more than 30% in 2027 compared to 2026, as reported by the Association for the Advancement of Artificial Intelligence (AAAI) or other credible sources, and the adoption of quantum computing in the healthcare industry for medical diagnosis increases by more than 25% in 2029, as reported by credible sources such as the Healthcare Information and Management Systems Society (HIMSS) or other reputable research institutions."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.374038984432487,
+      "hypothesis": "The model overestimates the probability of joint events in political contexts, as observed in examples like the Eurovision qualification and Nordic country win scenarios",
+      "questions": {
+        "P": {
+          "title": "Will the US and China resolve their trade disputes by 2025?",
+          "body": "Resolution date: December 31, 2025; Resolution criteria: Official announcements from the US and China; Resolution source: Reuters"
+        },
+        "Q_given_P": {
+          "title": "Given a resolution to the trade disputes, will the US experience a reduction in its trade deficit with China?",
+          "body": "Resolution date: December 31, 2025; Resolution criteria: Trade deficit data; Resolution source: US Census Bureau"
+        },
+        "P_and_Q": {
+          "title": "Will the US and China resolve their trade disputes by 2025 and the US experience a reduction in its trade deficit with China?",
+          "body": "Resolution date: December 31, 2025; Resolution criteria: Official announcements from the US and China, trade deficit data; Resolution source: Reuters, US Census Bureau"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3731381780301943,
+      "hypothesis": "The model overestimates the correlation between the adoption of electric vehicles and the development of autonomous driving technology, particularly in the context of smart cities and ride-hailing services",
+      "questions": {
+        "P": {
+          "title": "Will the number of electric vehicle charging stations in Europe increase by more than 40% in 2030 compared to 2029?",
+          "body": "This question resolves as YES if the number of electric vehicle charging stations in Europe increases by more than 40% in 2030 compared to 2029, as reported by reputable sources such as the European Commission or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in electric vehicle charging stations in Europe, will the adoption of autonomous driving technology in European cities increase by more than 20% in the next 4 years?",
+          "body": "This question resolves as YES if, given an increase in electric vehicle charging stations in Europe, the adoption of autonomous driving technology in European cities increases by more than 20% in the next 4 years, as reported by credible sources such as academic journals, research institutions, or tech companies."
+        },
+        "P_and_Q": {
+          "title": "Will the number of electric vehicle charging stations in Europe increase by more than 40% in 2030 compared to 2029 and the adoption of autonomous driving technology in European cities increase by more than 20% in the next 4 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of electric vehicle charging stations in Europe increases by more than 40% in 2030 compared to 2029, as reported by reputable sources, and the adoption of autonomous driving technology in European cities increases by more than 20% in the next 4 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.361427570024726,
+      "hypothesis": "The model underestimates the impact of quantum computing on the development of new encryption methods",
+      "questions": {
+        "P": {
+          "title": "Will the number of quantum computing research papers published increase by more than 60% in 2028 compared to 2027?",
+          "body": "This question resolves as YES if the number of quantum computing research papers published increases by more than 60% in 2028 compared to 2027, as reported by the National Institute of Standards and Technology (NIST) or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in quantum computing research papers, will the development of new encryption methods for secure data transmission increase by more than 40% in the next 6 years?",
+          "body": "This question resolves as YES if, given an increase in quantum computing research papers, the development of new encryption methods for secure data transmission increases by more than 40% in the next 6 years, as reported by credible sources such as academic journals, research institutions, or cybersecurity companies."
+        },
+        "P_and_Q": {
+          "title": "Will the number of quantum computing research papers published increase by more than 60% in 2028 compared to 2027 and the development of new encryption methods for secure data transmission increase by more than 40% in the next 6 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of quantum computing research papers published increases by more than 60% in 2028 compared to 2027, as reported by the National Institute of Standards and Technology (NIST) or other credible sources, and the development of new encryption methods for secure data transmission increases by more than 40% in the next 6 years, as reported by credible sources such as academic journals, research institutions, or cybersecurity companies."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3597976426888307,
+      "hypothesis": "The model overestimates the correlation between the adoption of artificial intelligence (AI) and the development of robotics technology",
+      "questions": {
+        "P": {
+          "title": "Will the number of robotics patents filed by Boston Dynamics increase by more than 80% in 2033 compared to 2032?",
+          "body": "This question resolves as YES if the number of robotics patents filed by Boston Dynamics increases by more than 80% in 2033 compared to 2032, as reported by the United States Patent and Trademark Office (USPTO) or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in robotics patents filed by Boston Dynamics, will the development of autonomous robots for search and rescue operations accelerate by at least 60% in the next 9 years?",
+          "body": "This question resolves as YES if, given an increase in robotics patents filed by Boston Dynamics, the development of autonomous robots for search and rescue operations accelerates by at least 60% in the next 9 years, as reported by credible sources such as academic journals, research institutions, or robotics companies."
+        },
+        "P_and_Q": {
+          "title": "Will the number of robotics patents filed by Boston Dynamics increase by more than 80% in 2033 compared to 2032 and the development of autonomous robots for search and rescue operations accelerate by at least 60% in the next 9 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of robotics patents filed by Boston Dynamics increases by more than 80% in 2033 compared to 2032, as reported by the United States Patent and Trademark Office (USPTO) or other credible sources, and the development of autonomous robots for search and rescue operations accelerates by at least 60% in the next 9 years, as reported by credible sources such as academic journals, research institutions, or robotics companies."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3565143429391902,
+      "hypothesis": "The model underestimates the impact of genetic engineering on the development of new medical treatments",
+      "questions": {
+        "P": {
+          "title": "Will CRISPR Therapeutics announce a significant breakthrough in gene editing technology by 2026?",
+          "body": "This question resolves as YES if CRISPR Therapeutics announces a significant breakthrough in gene editing technology by December 31, 2026, as reported by CRISPR Therapeutics' official blog or reputable biotech news sources."
+        },
+        "Q_given_P": {
+          "title": "Given a breakthrough in gene editing technology, will the development of new medical treatments for genetic disorders accelerate by at least 20% in the next 5 years?",
+          "body": "This question resolves as YES if the development of new medical treatments for genetic disorders accelerates by at least 20% in the next 5 years, as reported by credible sources such as academic journals, research institutions, or pharmaceutical companies, and measured by the number of research papers, patents, or breakthroughs in genetic disorder treatments."
+        },
+        "P_and_Q": {
+          "title": "Will CRISPR Therapeutics announce a significant breakthrough in gene editing technology by 2026 and the development of new medical treatments for genetic disorders accelerate by at least 20% in the next 5 years?",
+          "body": "This question resolves as YES if both conditions are met: CRISPR Therapeutics announces a significant breakthrough in gene editing technology by December 31, 2026, as reported by CRISPR Therapeutics' official blog or reputable biotech news sources, and the development of new medical treatments for genetic disorders accelerates by at least 20% in the next 5 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3506799643402122,
+      "hypothesis": "The model overestimates the correlation between the adoption of electric vehicles and the development of autonomous driving technology",
+      "questions": {
+        "P": {
+          "title": "Will the number of electric vehicles sold in China increase by more than 50% in 2030 compared to 2029?",
+          "body": "This question resolves as YES if the number of electric vehicles sold in China increases by more than 50% in 2030 compared to 2029, as reported by reputable sources such as the Chinese government or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in electric vehicle sales in China, will the development of autonomous driving technology for passenger vehicles accelerate by at least 25% in the next 8 years?",
+          "body": "This question resolves as YES if, given an increase in electric vehicle sales in China, the development of autonomous driving technology for passenger vehicles accelerates by at least 25% in the next 8 years, as reported by credible sources such as academic journals, research institutions, or tech companies."
+        },
+        "P_and_Q": {
+          "title": "Will the number of electric vehicles sold in China increase by more than 50% in 2030 compared to 2029 and the development of autonomous driving technology for passenger vehicles accelerate by at least 25% in the next 8 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of electric vehicles sold in China increases by more than 50% in 2030 compared to 2029, as reported by reputable sources, and the development of autonomous driving technology for passenger vehicles accelerates by at least 25% in the next 8 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3475991790007479,
+      "hypothesis": "The model underestimates the impact of advancements in genetic engineering on the development of new medical treatments for complex diseases",
+      "questions": {
+        "P": {
+          "title": "Will the number of genetic engineering startups focused on treating complex diseases increase by more than 30% in 2026 compared to 2025?",
+          "body": "This question resolves as YES if the number of genetic engineering startups focused on treating complex diseases increases by more than 30% in 2026 compared to 2025, as reported by reputable sources such as venture capital firms, startup accelerators, or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in genetic engineering startups focused on treating complex diseases, will the development of new medical treatments for rare genetic disorders accelerate by at least 20% in the next 5 years?",
+          "body": "This question resolves as YES if the development of new medical treatments for rare genetic disorders accelerates by at least 20% in the next 5 years, as reported by credible sources such as academic journals, research institutions, or pharmaceutical companies, and measured by the number of research papers, patents, or breakthroughs in rare genetic disorder treatments."
+        },
+        "P_and_Q": {
+          "title": "Will the number of genetic engineering startups focused on treating complex diseases increase by more than 30% in 2026 compared to 2025 and the development of new medical treatments for rare genetic disorders accelerate by at least 20% in the next 5 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of genetic engineering startups focused on treating complex diseases increases by more than 30% in 2026 compared to 2025, as reported by reputable sources, and the development of new medical treatments for rare genetic disorders accelerates by at least 20% in the next 5 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3469352448867585,
+      "hypothesis": "The model overestimates the correlation between the development of 5G networks and the adoption of Internet of Things (IoT) devices",
+      "questions": {
+        "P": {
+          "title": "Will the number of 5G subscriptions worldwide increase by more than 50% in 2025?",
+          "body": "This question resolves as YES if the number of 5G subscriptions worldwide increases by more than 50% in 2025, as reported by reputable sources such as the International Telecommunication Union (ITU) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in 5G subscriptions, will the number of IoT devices connected to 5G networks increase by more than 30% in 2026?",
+          "body": "This question resolves as YES if the number of IoT devices connected to 5G networks increases by more than 30% in 2026, as reported by credible sources such as market research firms or industry reports."
+        },
+        "P_and_Q": {
+          "title": "Will the number of 5G subscriptions worldwide increase by more than 50% in 2025 and the number of IoT devices connected to 5G networks increase by more than 30% in 2026?",
+          "body": "This question resolves as YES if both conditions are met: the number of 5G subscriptions worldwide increases by more than 50% in 2025, as reported by reputable sources, and the number of IoT devices connected to 5G networks increases by more than 30% in 2026, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3392902377569103,
+      "hypothesis": "The model overestimates the correlation between the development of 5G networks and the adoption of Internet of Things (IoT) devices",
+      "questions": {
+        "P": {
+          "title": "Will Qualcomm's revenue from 5G-related products increase by more than 20% in 2025?",
+          "body": "This question resolves as YES if Qualcomm's revenue from 5G-related products increases by more than 20% in 2025, as reported by Qualcomm's official financial reports or reputable tech news sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in Qualcomm's 5G-related revenue, will the company's investment in IoT research and development increase by at least 15% in the next 2 years?",
+          "body": "This question resolves as YES if Qualcomm's investment in IoT research and development increases by at least 15% in the next 2 years, as reported by Qualcomm's official financial reports or reputable tech news sources."
+        },
+        "P_and_Q": {
+          "title": "Will Qualcomm's revenue from 5G-related products increase by more than 20% in 2025 and the company's investment in IoT research and development increase by at least 15% in the next 2 years?",
+          "body": "This question resolves as YES if both conditions are met: Qualcomm's revenue from 5G-related products increases by more than 20% in 2025, as reported by Qualcomm's official financial reports or reputable tech news sources, and the company's investment in IoT research and development increases by at least 15% in the next 2 years, as reported by Qualcomm's official financial reports or reputable tech news sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3390342888940186,
+      "hypothesis": "The model underestimates the impact of genetic engineering on the development of new medical treatments",
+      "questions": {
+        "P": {
+          "title": "Will the number of genetic engineering patents filed increase by more than 35% in 2028 compared to 2027?",
+          "body": "This question resolves as YES if the number of genetic engineering patents filed increases by more than 35% in 2028 compared to 2027, as reported by reputable sources such as the United States Patent and Trademark Office (USPTO) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in genetic engineering patents, will the development of new medical treatments for genetic disorders accelerate by at least 25% in the next 8 years?",
+          "body": "This question resolves as YES if, given an increase in genetic engineering patents, the development of new medical treatments for genetic disorders accelerates by at least 25% in the next 8 years, as reported by credible sources such as academic journals, research institutions, or pharmaceutical companies."
+        },
+        "P_and_Q": {
+          "title": "Will the number of genetic engineering patents filed increase by more than 35% in 2028 compared to 2027 and the development of new medical treatments for genetic disorders accelerate by at least 25% in the next 8 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of genetic engineering patents filed increases by more than 35% in 2028 compared to 2027, as reported by reputable sources, and the development of new medical treatments for genetic disorders accelerates by at least 25% in the next 8 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3381758169661331,
+      "hypothesis": "The model underestimates the impact of advancements in quantum computing on the development of Artificial General Intelligence (AGI) in complex problem-solving, particularly in the context of cryogenic computing and neuromorphic architectures.",
+      "questions": {
+        "P": {
+          "title": "Will the number of research papers on quantum computing and AGI published in top-tier conferences increase by more than 40% in 2028?",
+          "body": "This question resolves as YES if the number of research papers on quantum computing and AGI published in top-tier conferences increases by more than 40% in 2028, as reported by credible sources such as academic journals, research institutions, or conference proceedings."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in research papers on quantum computing and AGI, will the development of practical applications of AGI in industries such as finance and healthcare accelerate by at least 20% in the next 3 years?",
+          "body": "This question resolves as YES if the development of practical applications of AGI in industries such as finance and healthcare accelerates by at least 20% in the next 3 years, as reported by credible sources such as industry reports, research institutions, or tech companies, and measured by the number of successful deployments or case studies."
+        },
+        "P_and_Q": {
+          "title": "Will the number of research papers on quantum computing and AGI published in top-tier conferences increase by more than 40% in 2028 and the development of practical applications of AGI in industries such as finance and healthcare accelerate by at least 20% in the next 3 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of research papers on quantum computing and AGI published in top-tier conferences increases by more than 40% in 2028, as reported by credible sources, and the development of practical applications of AGI in industries such as finance and healthcare accelerates by at least 20% in the next 3 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3375004832979892,
+      "hypothesis": "The model overestimates the correlation between the adoption of electric vehicles and the development of autonomous driving technology",
+      "questions": {
+        "P": {
+          "title": "Will Tesla's market share in the electric vehicle market increase by more than 15% in 2025?",
+          "body": "This question resolves as YES if Tesla's market share in the electric vehicle market increases by more than 15% in 2025, as reported by Tesla's official sales reports or reputable industry sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in Tesla's market share, will the company's investment in autonomous driving technology increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if Tesla's investment in autonomous driving technology increases by at least 20% in the next 2 years, as reported by Tesla's official financial reports or reputable tech news sources."
+        },
+        "P_and_Q": {
+          "title": "Will Tesla's market share in the electric vehicle market increase by more than 15% in 2025 and the company's investment in autonomous driving technology increase by at least 20% in the next 2 years?",
+          "body": "This question resolves as YES if both conditions are met: Tesla's market share in the electric vehicle market increases by more than 15% in 2025, as reported by Tesla's official sales reports or reputable industry sources, and the company's investment in autonomous driving technology increases by at least 20% in the next 2 years, as reported by Tesla's official financial reports or reputable tech news sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3344967750538228,
+      "hypothesis": "The model underestimates the impact of genetic engineering on the development of new medical treatments",
+      "questions": {
+        "P": {
+          "title": "Will the number of genetic engineering startups increase by more than 30% in 2026 compared to 2025?",
+          "body": "This question resolves as YES if the number of genetic engineering startups increases by more than 30% in 2026 compared to 2025, as reported by reputable sources such as venture capital firms, startup accelerators, or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given that the number of genetic engineering startups increases by more than 30% in 2026 compared to 2025, will the development of new medical treatments for rare diseases accelerate by at least 20% in the next 6 years?",
+          "body": "This question resolves as YES if, given that the number of genetic engineering startups increases by more than 30% in 2026 compared to 2025, the development of new medical treatments for rare diseases accelerates by at least 20% in the next 6 years, as reported by credible sources such as academic journals, research institutions, or pharmaceutical companies."
+        },
+        "P_and_Q": {
+          "title": "Will the number of genetic engineering startups increase by more than 30% in 2026 compared to 2025 and the development of new medical treatments for rare diseases accelerate by at least 20% in the next 6 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of genetic engineering startups increases by more than 30% in 2026 compared to 2025, as reported by reputable sources, and the development of new medical treatments for rare diseases accelerates by at least 20% in the next 6 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3182774401137591,
+      "hypothesis": "The model underestimates the impact of environmental policies on the financial performance of companies in the energy sector, particularly in the context of renewable energy and carbon pricing.",
+      "questions": {
+        "P": {
+          "title": "Will the European Union's carbon pricing mechanism increase by more than 20% in 2031?",
+          "body": "This question resolves as YES if the European Union's carbon pricing mechanism increases by more than 20% in 2031, as reported by the European Union's official website or reputable news sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in carbon pricing, will the investment in renewable energy increase by at least 25% in the next 3 years?",
+          "body": "This question resolves as YES if the investment in renewable energy increases by at least 25% in the next 3 years, as reported by credible sources such as industry reports, research institutions, or financial news sources."
+        },
+        "P_and_Q": {
+          "title": "Will the European Union's carbon pricing mechanism increase by more than 20% in 2031 and the investment in renewable energy increase by at least 25% in the next 3 years?",
+          "body": "This question resolves as YES if both conditions are met: the European Union's carbon pricing mechanism increases by more than 20% in 2031, as reported by the European Union's official website or reputable news sources, and the investment in renewable energy increases by at least 25% in the next 3 years, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3151011745560326,
+      "hypothesis": "The model overestimates the correlation between the development of 5G networks and the adoption of Internet of Things (IoT) devices",
+      "questions": {
+        "P": {
+          "title": "Will the number of 5G subscriptions worldwide increase by more than 60% in 2025 compared to 2024?",
+          "body": "This question resolves as YES if the number of 5G subscriptions worldwide increases by more than 60% in 2025 compared to 2024, as reported by reputable sources such as the International Telecommunication Union (ITU) or industry reports."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in 5G subscriptions, will the number of IoT devices connected to 5G networks increase by more than 35% in 2026?",
+          "body": "This question resolves as YES if the number of IoT devices connected to 5G networks increases by more than 35% in 2026, as reported by credible sources such as market research firms or industry reports."
+        },
+        "P_and_Q": {
+          "title": "Will the number of 5G subscriptions worldwide increase by more than 60% in 2025 compared to 2024 and the number of IoT devices connected to 5G networks increase by more than 35% in 2026?",
+          "body": "This question resolves as YES if both conditions are met: the number of 5G subscriptions worldwide increases by more than 60% in 2025 compared to 2024, as reported by reputable sources, and the number of IoT devices connected to 5G networks increases by more than 35% in 2026, as reported by credible sources."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3110532291972246,
+      "hypothesis": "The model overestimates the correlation between the adoption of electric vehicles and the development of autonomous driving technology in the logistics industry",
+      "questions": {
+        "P": {
+          "title": "Will the number of electric vehicle charging stations in the United States increase by more than 60% in 2031 compared to 2030?",
+          "body": "This question resolves as YES if the number of electric vehicle charging stations in the United States increases by more than 60% in 2031 compared to 2030, as reported by the United States Department of Energy or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in electric vehicle charging stations, will the development of autonomous driving technology for commercial vehicles accelerate by at least 28% in the next 9 years?",
+          "body": "This question resolves as YES if, given an increase in electric vehicle charging stations, the development of autonomous driving technology for commercial vehicles accelerates by at least 28% in the next 9 years, as reported by credible sources such as academic journals, research institutions, or tech companies."
+        },
+        "P_and_Q": {
+          "title": "Will the number of electric vehicle charging stations in the United States increase by more than 60% in 2031 compared to 2030 and the development of autonomous driving technology for commercial vehicles accelerate by at least 28% in the next 9 years?",
+          "body": "This question resolves as YES if both conditions are met: the number of electric vehicle charging stations in the United States increases by more than 60% in 2031 compared to 2030, as reported by the United States Department of Energy or other credible sources, and the development of autonomous driving technology for commercial vehicles accelerates by at least 28% in the next 9 years, as reported by credible sources such as academic journals, research institutions, or tech companies."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3023178998426827,
+      "hypothesis": "The model overestimates the correlation between the development of 6G networks and the adoption of Extended Reality (XR) devices",
+      "questions": {
+        "P": {
+          "title": "Will the number of 6G research papers published increase by more than 50% in 2027 compared to 2026?",
+          "body": "This question resolves as YES if the number of 6G research papers published increases by more than 50% in 2027 compared to 2026, as reported by the Institute of Electrical and Electronics Engineers (IEEE) or other credible sources."
+        },
+        "Q_given_P": {
+          "title": "Given an increase in 6G research papers, will the adoption of Extended Reality (XR) devices in the gaming industry increase by more than 30% in 2028?",
+          "body": "This question resolves as YES if, given an increase in 6G research papers, the adoption of Extended Reality (XR) devices in the gaming industry increases by more than 30% in 2028, as reported by market research firms such as IDC or Gartner."
+        },
+        "P_and_Q": {
+          "title": "Will the number of 6G research papers published increase by more than 50% in 2027 compared to 2026 and the adoption of Extended Reality (XR) devices in the gaming industry increase by more than 30% in 2028?",
+          "body": "This question resolves as YES if both conditions are met: the number of 6G research papers published increases by more than 50% in 2027 compared to 2026, as reported by the Institute of Electrical and Electronics Engineers (IEEE) or other credible sources, and the adoption of Extended Reality (XR) devices in the gaming industry increases by more than 30% in 2028, as reported by market research firms such as IDC or Gartner."
+        }
+      }
+    }
+  ]
+}

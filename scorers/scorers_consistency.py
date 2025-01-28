@@ -16,6 +16,34 @@ from utils_consistency.metrics import (
 import numpy as np
 from typing import List
 
+
+@scorer(metrics=[mean(), stderr()])
+def cond_consistency_scorer() -> Scorer:
+    async def score(state: TaskState, target: Target) -> Score:
+        forecasts = state.metadata.get('forecasts', {})
+        beta_min = 1e-3  # regularization term
+        
+        # Get the three forecasts
+        p_forecast = forecasts.get('P', 0.5)
+        q_given_p_forecast = forecasts.get('Q_given_P', 0.5)
+        p_and_q_forecast = forecasts.get('P_and_Q', 0.5)
+        
+        # Calculate conditional consistency score
+        score_value = cond_frequentist_metric(p_forecast, q_given_p_forecast, p_and_q_forecast, beta_min)
+        
+        logging.info(f"\nConditional Consistency Check:")
+        logging.info(f"P forecast: {p_forecast:.3f}")
+        logging.info(f"Q|P forecast: {q_given_p_forecast:.3f}")
+        logging.info(f"P∧Q forecast: {p_and_q_forecast:.3f}")
+        logging.info(f"Consistency Score: {score_value:.3f}")
+
+        return Score(
+            value=score_value,
+            answer=str(forecasts)
+        )
+    return score 
+
+
 @scorer(
     metrics={
         **{f"{ct.value}_score": [mean(), stderr()] for ct in ConsistencyType},

@@ -1,0 +1,490 @@
+{
+  "hard_questions": [
+    {
+      "consistency_score": 0.6893179968492904,
+      "hypothesis": "The model assumes a strong correlation between a company's research and development expenses and its innovation output",
+      "questions": {
+        "P": {
+          "title": "Microsoft's research and development expenses",
+          "body": "Will Microsoft increase its research and development expenses by at least 25% in 2025, with the expenses being officially reported by Microsoft by November 30, 2025, and the report being published by Bloomberg?"
+        },
+        "Q_given_P": {
+          "title": "Microsoft's innovation output given increased research and development expenses",
+          "body": "Given that Microsoft increases its research and development expenses by at least 25% in 2025, will Microsoft release at least 3 new major products or services by the end of 2026, with the product releases being officially reported by Microsoft by January 15, 2027?"
+        },
+        "P_and_Q": {
+          "title": "Microsoft's research and development expenses and innovation output",
+          "body": "Will both Microsoft increase its research and development expenses by at least 25% in 2025 and release at least 3 new major products or services, with the expenses and product releases being officially reported by Bloomberg and Microsoft by January 15, 2027?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.5171527187529863,
+      "hypothesis": "The model overestimates the correlation between a company's commitment to environmental sustainability and its stock performance, neglecting the impact of industry trends and global economic conditions",
+      "questions": {
+        "P": {
+          "title": "Microsoft's Renewable Energy Investment in 2025",
+          "body": "Will Microsoft's investment in renewable energy exceed $1.5 billion in 2025, according to Microsoft's official website by December 31, 2025, and verified by Microsoft's annual report?"
+        },
+        "Q_given_P": {
+          "title": "Microsoft's Stock Performance Given Renewable Energy Investment",
+          "body": "Given that Microsoft's investment in renewable energy exceeds $1.5 billion in 2025, will Microsoft's stock price increase by more than 12% in 2026, as reported by Bloomberg and verified by the NASDAQ stock exchange?"
+        },
+        "P_and_Q": {
+          "title": "Joint Success of Microsoft's Renewable Energy Investment and Stock Performance",
+          "body": "Will both Microsoft's investment in renewable energy exceed $1.5 billion in 2025 and Microsoft's stock price increase by more than 12% in 2026, as reported by Microsoft, Bloomberg, and verified by Microsoft's annual report and the NASDAQ stock exchange?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.488010713451079,
+      "hypothesis": "The model assumes a strong correlation between a country's economic growth and its investment in artificial intelligence",
+      "questions": {
+        "P": {
+          "title": "China's investment in artificial intelligence",
+          "body": "Will China increase its investment in artificial intelligence by at least 30% in 2025, with the investment being officially announced by the Chinese Ministry of Science and Technology by December 31, 2025, and the announcement being reported by China Daily?"
+        },
+        "Q_given_P": {
+          "title": "China's economic growth given increased investment in artificial intelligence",
+          "body": "Given that China increases its investment in artificial intelligence by at least 30% in 2025, will China's GDP growth rate increase by at least 2% by the end of 2026, with the GDP growth rate being officially reported by the National Bureau of Statistics of China by January 15, 2027?"
+        },
+        "P_and_Q": {
+          "title": "China's investment in artificial intelligence and economic growth",
+          "body": "Will both China increase its investment in artificial intelligence by at least 30% in 2025 and its GDP growth rate increase by at least 2% by the end of 2026, with the investment and GDP growth rate being officially reported by China Daily and the National Bureau of Statistics of China by January 15, 2027?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4822157674275942,
+      "hypothesis": "The model overestimates the correlation between a company's commitment to environmental sustainability and its stock performance, neglecting the impact of industry trends and global economic conditions",
+      "questions": {
+        "P": {
+          "title": "Microsoft's Renewable Energy Investment in 2025",
+          "body": "Will Microsoft's investment in renewable energy exceed $2 billion in 2025, according to Microsoft's official website by December 31, 2025, and verified by Microsoft's annual report?"
+        },
+        "Q_given_P": {
+          "title": "Microsoft's Stock Performance Given Renewable Energy Investment",
+          "body": "Given that Microsoft's investment in renewable energy exceeds $2 billion in 2025, will Microsoft's stock price increase by more than 12% in 2026, as reported by Bloomberg and verified by the NASDAQ stock exchange?"
+        },
+        "P_and_Q": {
+          "title": "Joint Success of Microsoft's Renewable Energy Investment and Stock Performance",
+          "body": "Will both Microsoft's investment in renewable energy exceed $2 billion in 2025 and Microsoft's stock price increase by more than 12% in 2026, as reported by Microsoft, Bloomberg, and verified by Microsoft's annual report and the NASDAQ stock exchange?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4560926936917932,
+      "hypothesis": "The model overestimates the correlation between a company's commitment to environmental sustainability and its stock performance, neglecting the impact of industry trends and global economic conditions",
+      "questions": {
+        "P": {
+          "title": "Microsoft's Renewable Energy Investment in 2025",
+          "body": "Will Microsoft's investment in renewable energy exceed $2.5 billion in 2025, according to Microsoft's official website by December 31, 2025, and verified by Microsoft's annual report?"
+        },
+        "Q_given_P": {
+          "title": "Microsoft's Stock Performance Given Renewable Energy Investment",
+          "body": "Given that Microsoft's investment in renewable energy exceeds $2.5 billion in 2025, will Microsoft's stock price increase by more than 15% in 2026, as reported by Bloomberg and verified by the NASDAQ stock exchange?"
+        },
+        "P_and_Q": {
+          "title": "Joint Success of Microsoft's Renewable Energy Investment and Stock Performance",
+          "body": "Will both Microsoft's investment in renewable energy exceed $2.5 billion in 2025 and Microsoft's stock price increase by more than 15% in 2026, as reported by Microsoft, Bloomberg, and verified by Microsoft's annual report and the NASDAQ stock exchange?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4548973758929296,
+      "hypothesis": "The model overestimates the correlation between a company's commitment to environmental sustainability and its stock performance, neglecting the impact of industry trends and global economic conditions",
+      "questions": {
+        "P": {
+          "title": "Investment in Environmental Sustainability by Microsoft in 2025",
+          "body": "Will Microsoft's investment in environmental sustainability exceed $1 billion in 2025, according to Microsoft's official website by December 31, 2025, and verified by Microsoft's annual report?"
+        },
+        "Q_given_P": {
+          "title": "Microsoft's Stock Performance Given Environmental Sustainability Investment",
+          "body": "Given that Microsoft's investment in environmental sustainability exceeds $1 billion in 2025, will Microsoft's stock price increase by more than 12% in 2026, as reported by Bloomberg and verified by the NASDAQ stock exchange?"
+        },
+        "P_and_Q": {
+          "title": "Joint Success of Microsoft's Environmental Sustainability and Stock Performance",
+          "body": "Will both Microsoft's investment in environmental sustainability exceed $1 billion in 2025 and Microsoft's stock price increase by more than 12% in 2026, as reported by Microsoft, Bloomberg, and verified by Microsoft's annual report and the NASDAQ stock exchange?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4519463272076814,
+      "hypothesis": "The model overestimates the correlation between a company's commitment to environmental sustainability and its stock performance, neglecting the impact of industry trends and global economic conditions",
+      "questions": {
+        "P": {
+          "title": "Investment in Environmental Sustainability by Amazon in 2025",
+          "body": "Will Amazon's investment in environmental sustainability exceed $500 million in 2025, according to Amazon's official website by December 31, 2025, and verified by Amazon's annual report?"
+        },
+        "Q_given_P": {
+          "title": "Amazon's Stock Performance Given Environmental Sustainability Investment",
+          "body": "Given that Amazon's investment in environmental sustainability exceeds $500 million in 2025, will Amazon's stock price increase by more than 10% in 2026, as reported by Yahoo Finance and verified by the NASDAQ stock exchange?"
+        },
+        "P_and_Q": {
+          "title": "Joint Success of Amazon's Environmental Sustainability and Stock Performance",
+          "body": "Will both Amazon's investment in environmental sustainability exceed $500 million in 2025 and Amazon's stock price increase by more than 10% in 2026, as reported by Amazon, Yahoo Finance, and verified by Amazon's annual report and the NASDAQ stock exchange?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4495538888682309,
+      "hypothesis": "The model overestimates the impact of social media on consumer behavior, particularly in regards to purchasing decisions and brand loyalty",
+      "questions": {
+        "P": {
+          "title": "Amazon's Sales Revenue in 2025",
+          "body": "Will Amazon's sales revenue exceed $500 billion in 2025, according to Amazon's official website by January 31, 2026, and verified by the Securities and Exchange Commission?"
+        },
+        "Q_given_P": {
+          "title": "Impact on Amazon's Market Share Given Sales Revenue Growth",
+          "body": "Given that Amazon's sales revenue exceeds $500 billion in 2025, will Amazon's market share of the US e-commerce market increase by more than 5% in 2026, as reported by eMarketer and verified by the US Census Bureau?"
+        },
+        "P_and_Q": {
+          "title": "Joint Success of Amazon's Sales Revenue and Market Share",
+          "body": "Will both Amazon's sales revenue exceed $500 billion in 2025 and Amazon's market share of the US e-commerce market increase by more than 5% in 2026, as reported by Amazon, eMarketer, and verified by the Securities and Exchange Commission and the US Census Bureau?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4267162737614896,
+      "hypothesis": "The model overestimates the impact of government subsidies on the adoption of electric vehicles",
+      "questions": {
+        "P": {
+          "title": "Chinese government subsidies for electric vehicles",
+          "body": "Will the Chinese government increase subsidies for electric vehicles by at least 20% in 2025, with the subsidies being officially announced by the Chinese Ministry of Industry and Information Technology by September 30, 2025, and the announcement being reported by Xinhua?"
+        },
+        "Q_given_P": {
+          "title": "Electric vehicle adoption given increased government subsidies in China",
+          "body": "Given that the Chinese government increases subsidies for electric vehicles by at least 20% in 2025, will the number of electric vehicles sold in China increase by at least 25% by the end of 2026, with the sales data being officially reported by the Chinese Ministry of Industry and Information Technology by January 15, 2027?"
+        },
+        "P_and_Q": {
+          "title": "Chinese government subsidies and electric vehicle adoption",
+          "body": "Will both the Chinese government increase subsidies for electric vehicles by at least 20% in 2025 and the number of electric vehicles sold in China increase by at least 25% by the end of 2026, with the subsidies and sales data being officially reported by Xinhua and the Chinese Ministry of Industry and Information Technology by January 15, 2027?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.418126063785857,
+      "hypothesis": "The model misunderstands conditional probabilities in economic contexts, particularly in adjusting probabilities based on new policy information or market conditions.",
+      "questions": {
+        "P": {
+          "title": "Japanese Monetary Policy Shift",
+          "body": "Will the Bank of Japan increase interest rates in 2025, as announced by the Bank of Japan's official website by December 31, 2025?"
+        },
+        "Q_given_P": {
+          "title": "Impact on Japanese Stocks",
+          "body": "Given that the Bank of Japan increases interest rates, will the Nikkei 225 increase by more than 8% within 2 months, according to data from the Tokyo Stock Exchange?"
+        },
+        "P_and_Q": {
+          "title": "Bank of Japan Policy and Stock Market Reaction",
+          "body": "Will both the Bank of Japan increase interest rates in 2025 and the Nikkei 225 increase by more than 8% within 2 months, as reported by the Bank of Japan and the Tokyo Stock Exchange?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3776368054374406,
+      "hypothesis": "The model assumes a strong correlation between a company's social media presence and its customer engagement",
+      "questions": {
+        "P": {
+          "title": "Amazon's social media presence",
+          "body": "Will Amazon increase its social media followers by at least 10% in 2025, with the followers being officially reported by Amazon by September 30, 2025, and the report being published by Forbes?"
+        },
+        "Q_given_P": {
+          "title": "Amazon's sales given increased social media presence",
+          "body": "Given that Amazon increases its social media followers by at least 10% in 2025, will Amazon's sales increase by at least 12% by the end of 2026, with the sales being officially reported by Amazon by January 15, 2027?"
+        },
+        "P_and_Q": {
+          "title": "Amazon's social media presence and sales",
+          "body": "Will both Amazon increase its social media followers by at least 10% in 2025 and its sales increase by at least 12% by the end of 2026, with the followers and sales being officially reported by Forbes and Amazon by January 15, 2027?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.37623867923124,
+      "hypothesis": "The model underestimates the impact of climate change on the global food supply, particularly in regards to crop yields and food price volatility",
+      "questions": {
+        "P": {
+          "title": "Global Temperature Increase in 2025",
+          "body": "Will the global average temperature increase by more than 1.5\u00b0C above pre-industrial levels in 2025, according to the National Oceanic and Atmospheric Administration's official website by December 31, 2025, and verified by the Intergovernmental Panel on Climate Change?"
+        },
+        "Q_given_P": {
+          "title": "Impact on Global Wheat Yields Given Temperature Increase",
+          "body": "Given that the global average temperature increases by more than 1.5\u00b0C above pre-industrial levels in 2025, will the global wheat yield decrease by more than 10% in 2026, as reported by the Food and Agriculture Organization of the United Nations and verified by the International Grains Council?"
+        },
+        "P_and_Q": {
+          "title": "Joint Impact of Temperature Increase and Wheat Yields",
+          "body": "Will both the global average temperature increase by more than 1.5\u00b0C above pre-industrial levels in 2025 and the global wheat yield decrease by more than 10% in 2026, as reported by the National Oceanic and Atmospheric Administration, the Food and Agriculture Organization of the United Nations, and verified by the Intergovernmental Panel on Climate Change and the International Grains Council?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3701019776057637,
+      "hypothesis": "The model overestimates the impact of social media on consumer behavior",
+      "questions": {
+        "P": {
+          "title": "Instagram's influence on consumer behavior",
+          "body": "Will Instagram's user base increase by at least 15% in 2025, with the user base being officially reported by Instagram by November 30, 2025, and the report being published by Forbes?"
+        },
+        "Q_given_P": {
+          "title": "Consumer behavior given Instagram's increased user base",
+          "body": "Given that Instagram's user base increases by at least 15% in 2025, will the number of consumers making purchases based on social media recommendations increase by at least 25% by the end of 2026, with the sales data being officially reported by the US Census Bureau by January 15, 2027?"
+        },
+        "P_and_Q": {
+          "title": "Instagram's influence and consumer behavior",
+          "body": "Will both Instagram's user base increase by at least 15% in 2025 and the number of consumers making purchases based on social media recommendations increase by at least 25% by the end of 2026, with the user base and sales data being officially reported by Forbes and the US Census Bureau by January 15, 2027?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3675403235786489,
+      "hypothesis": "The model overgeneralizes tech company compliance based on industry trends",
+      "questions": {
+        "P": {
+          "title": "Google's data privacy practices",
+          "body": "Will Google face a major fine for violating the EU's General Data Protection Regulation (GDPR) in 2025, with the fine being officially announced by the EU by September 30, 2025?"
+        },
+        "Q_given_P": {
+          "title": "Industry-wide data privacy practices given Google's fine",
+          "body": "Given that Google faces a major fine for violating the EU's GDPR, will at least 80% of major tech companies strengthen their data privacy practices by the end of 2025, and the strengthened practices will be officially reported by the EU by January 15, 2026?"
+        },
+        "P_and_Q": {
+          "title": "Google's fine and industry-wide data privacy practices",
+          "body": "Will both Google face a major fine for violating the EU's GDPR and at least 80% of major tech companies strengthen their data privacy practices by the end of 2025, with the strengthened practices being officially recognized by the EU by January 15, 2026?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3631981300564178,
+      "hypothesis": "The model overgeneralizes individual performance to team success in sports, neglecting contextual factors like team cohesion and coaching.",
+      "questions": {
+        "P": {
+          "title": "Noah Lyles' 200m Championship Chance",
+          "body": "Will Noah Lyles win the 200m gold medal at the 2025 World Championships, according to the official USATF reports by August 15, 2025?"
+        },
+        "Q_given_P": {
+          "title": "US Men's Team Medal Count at the 2025 World Championships",
+          "body": "Given that Noah Lyles wins the 200m gold medal, will the US men's team win at least 8 medals in sprint events at the 2025 World Championships, as announced by the USATF?"
+        },
+        "P_and_Q": {
+          "title": "Joint Success of Lyles and the US Team",
+          "body": "Will both Noah Lyles win the 200m gold medal and the US men's team win at least 8 medals in sprint events at the 2025 World Championships, according to the official USATF and IAAF results?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.359114661293451,
+      "hypothesis": "The model underestimates the impact of climate change on the global food supply, particularly in regards to crop yields and food price volatility, neglecting the impact of agricultural practices and technological innovations",
+      "questions": {
+        "P": {
+          "title": "Global Temperature Increase in 2025",
+          "body": "Will the global average temperature increase by more than 1.5\u00b0C above pre-industrial levels in 2025, according to the National Oceanic and Atmospheric Administration's official website by December 31, 2025, and verified by the Intergovernmental Panel on Climate Change?"
+        },
+        "Q_given_P": {
+          "title": "Impact on Global Wheat Yields Given Temperature Increase",
+          "body": "Given that the global average temperature increases by more than 1.5\u00b0C above pre-industrial levels in 2025, will the global wheat yield decrease by more than 10% in 2026, as reported by the Food and Agriculture Organization of the United Nations and verified by the International Grains Council?"
+        },
+        "P_and_Q": {
+          "title": "Joint Impact of Temperature Increase and Wheat Yields",
+          "body": "Will both the global average temperature increase by more than 1.5\u00b0C above pre-industrial levels in 2025 and the global wheat yield decrease by more than 10% in 2026, as reported by the National Oceanic and Atmospheric Administration, the Food and Agriculture Organization of the United Nations, and verified by the Intergovernmental Panel on Climate Change and the International Grains Council?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3546813597287797,
+      "hypothesis": "The model overestimates the impact of tech giant investments in renewable energy on their overall stock performance",
+      "questions": {
+        "P": {
+          "title": "China's investment in renewable energy",
+          "body": "Will China increase its investment in renewable energy by at least 25% in 2025, with the investment being officially reported by the Chinese Ministry of Science and Technology by December 31, 2025, and the report being published by China Daily?"
+        },
+        "Q_given_P": {
+          "title": "China's economic growth given increased investment in renewable energy",
+          "body": "Given that China increases its investment in renewable energy by at least 25% in 2025, will China's GDP growth rate increase by at least 2.5% by the end of 2026, with the GDP growth rate being officially reported by the National Bureau of Statistics of China by January 15, 2027?"
+        },
+        "P_and_Q": {
+          "title": "China's investment in renewable energy and economic growth",
+          "body": "Will both China increase its investment in renewable energy by at least 25% in 2025 and its GDP growth rate increase by at least 2.5% by the end of 2026, with the investment and GDP growth rate being officially reported by China Daily and the National Bureau of Statistics of China by January 15, 2027?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3523332605630573,
+      "hypothesis": "The model overestimates the correlation between a country's overall economic growth and the success of its technology startups, neglecting the impact of government support and regulatory environments",
+      "questions": {
+        "P": {
+          "title": "Singapore's Economic Growth Rate in 2025",
+          "body": "Will Singapore's GDP growth rate exceed 3% in 2025, according to the World Bank's official website by June 30, 2026, and verified by the Monetary Authority of Singapore?"
+        },
+        "Q_given_P": {
+          "title": "Singaporean Tech Startup Success Given Economic Growth",
+          "body": "Given that Singapore's GDP growth rate exceeds 3% in 2025, will the number of Singaporean tech startups that receive funding from venture capital firms increase by more than 15% in 2026, as reported by PwC and verified by the Singaporean Ministry of Trade and Industry?"
+        },
+        "P_and_Q": {
+          "title": "Joint Success of Singapore's Economy and Tech Startups",
+          "body": "Will both Singapore's GDP growth rate exceed 3% in 2025 and the number of Singaporean tech startups that receive funding from venture capital firms increase by more than 15% in 2026, as reported by the World Bank, PwC, and verified by the Monetary Authority of Singapore and the Singaporean Ministry of Trade and Industry?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3443985137741485,
+      "hypothesis": "The model overestimates the correlation between a country's investment in renewable energy and its reduction in greenhouse gas emissions, neglecting the impact of energy consumption patterns and population growth",
+      "questions": {
+        "P": {
+          "title": "Investment in Renewable Energy by the EU in 2025",
+          "body": "Will the investment in renewable energy by the EU exceed $50 billion in 2025, according to the European Commission's official website by December 31, 2025, and verified by the International Energy Agency?"
+        },
+        "Q_given_P": {
+          "title": "EU Greenhouse Gas Emissions Given Renewable Energy Investment",
+          "body": "Given that the investment in renewable energy by the EU exceeds $50 billion in 2025, will the EU's greenhouse gas emissions decrease by more than 10% in 2026, as reported by the European Environment Agency and verified by the International Energy Agency?"
+        },
+        "P_and_Q": {
+          "title": "Joint Success of EU Renewable Energy and Emissions Reduction",
+          "body": "Will both the investment in renewable energy by the EU exceed $50 billion in 2025 and the EU's greenhouse gas emissions decrease by more than 10% in 2026, as reported by the European Commission, the European Environment Agency, and verified by the International Energy Agency?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3323681320545049,
+      "hypothesis": "The model underestimates the impact of social media on consumer behavior, particularly in regards to purchasing decisions and brand loyalty, neglecting the impact of influencer marketing and user-generated content",
+      "questions": {
+        "P": {
+          "title": "Amazon's User-Generated Content Investment in 2025",
+          "body": "Will Amazon's investment in user-generated content exceed $500 million in 2025, according to Amazon's official website by December 31, 2025, and verified by the Securities and Exchange Commission?"
+        },
+        "Q_given_P": {
+          "title": "Impact on Amazon's Sales Given User-Generated Content",
+          "body": "Given that Amazon's investment in user-generated content exceeds $500 million in 2025, will the total value of sales on Amazon increase by more than 8% in 2026, as reported by Amazon and verified by the US Census Bureau?"
+        },
+        "P_and_Q": {
+          "title": "Joint Impact of User-Generated Content and Sales",
+          "body": "Will both Amazon's investment in user-generated content exceed $500 million in 2025 and the total value of sales on Amazon increase by more than 8% in 2026, as reported by Amazon, and verified by the Securities and Exchange Commission and the US Census Bureau?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.332209651106719,
+      "hypothesis": "The model overestimates the correlation between a country's investment in renewable energy and its reduction in greenhouse gas emissions, neglecting the impact of energy consumption patterns and population growth",
+      "questions": {
+        "P": {
+          "title": "Energy Consumption in the US in 2025",
+          "body": "Will the energy consumption in the US exceed 20 million barrels per day in 2025, according to the US Energy Information Administration's official website by December 31, 2025, and verified by the International Energy Agency?"
+        },
+        "Q_given_P": {
+          "title": "US Greenhouse Gas Emissions Given Energy Consumption",
+          "body": "Given that the energy consumption in the US exceeds 20 million barrels per day in 2025, will the US greenhouse gas emissions increase by more than 5% in 2026, as reported by the US Environmental Protection Agency and verified by the International Energy Agency?"
+        },
+        "P_and_Q": {
+          "title": "Joint Impact of US Energy Consumption and Emissions",
+          "body": "Will both the energy consumption in the US exceed 20 million barrels per day in 2025 and the US greenhouse gas emissions increase by more than 5% in 2026, as reported by the US Energy Information Administration, the US Environmental Protection Agency, and verified by the International Energy Agency?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3301800921382538,
+      "hypothesis": "The model underestimates the impact of regulatory changes on the pharmaceutical industry, particularly in regards to drug pricing and approval processes",
+      "questions": {
+        "P": {
+          "title": "European Medicines Agency Drug Approval Process",
+          "body": "Will the European Medicines Agency approve at least 30 new drugs in 2025, as reported by the European Medicines Agency's official website by December 31, 2025, and verified by the European Federation of Pharmaceutical Industries and Associations?"
+        },
+        "Q_given_P": {
+          "title": "European Drug Pricing Given EMA Approvals",
+          "body": "Given that the European Medicines Agency approves at least 30 new drugs in 2025, will the average drug price in the EU increase by less than 3% in 2026, as reported by the European Commission's official website and verified by the European Centre for Disease Prevention and Control?"
+        },
+        "P_and_Q": {
+          "title": "Joint Success of EMA Approvals and European Drug Pricing",
+          "body": "Will both the European Medicines Agency approve at least 30 new drugs in 2025 and the average drug price in the EU increase by less than 3% in 2026, as reported by the European Medicines Agency's official website, the European Commission's official website, and verified by the European Federation of Pharmaceutical Industries and Associations and the European Centre for Disease Prevention and Control?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3196898844942896,
+      "hypothesis": "The model overestimates the correlation between a company's commitment to environmental sustainability and its stock performance, neglecting the impact of industry trends and global economic conditions",
+      "questions": {
+        "P": {
+          "title": "Microsoft's Renewable Energy Investment in 2025",
+          "body": "Will Microsoft's investment in renewable energy exceed $1 billion in 2025, according to Microsoft's official website by December 31, 2025, and verified by Microsoft's annual report?"
+        },
+        "Q_given_P": {
+          "title": "Microsoft's Stock Performance Given Renewable Energy Investment",
+          "body": "Given that Microsoft's investment in renewable energy exceeds $1 billion in 2025, will Microsoft's stock price increase by more than 10% in 2026, as reported by Bloomberg and verified by the NASDAQ stock exchange?"
+        },
+        "P_and_Q": {
+          "title": "Joint Success of Microsoft's Renewable Energy Investment and Stock Performance",
+          "body": "Will both Microsoft's investment in renewable energy exceed $1 billion in 2025 and Microsoft's stock price increase by more than 10% in 2026, as reported by Microsoft, Bloomberg, and verified by Microsoft's annual report and the NASDAQ stock exchange?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3191548253328278,
+      "hypothesis": "The model underestimates the impact of climate change on the global food supply, particularly in regards to crop yields and food price volatility, neglecting the impact of agricultural practices and technological innovations",
+      "questions": {
+        "P": {
+          "title": "Global Temperature Increase in 2025",
+          "body": "Will the global average temperature increase by more than 1.8\u00b0C above pre-industrial levels in 2025, according to the National Oceanic and Atmospheric Administration's official website by December 31, 2025, and verified by the Intergovernmental Panel on Climate Change?"
+        },
+        "Q_given_P": {
+          "title": "Impact on Global Wheat Yields Given Temperature Increase",
+          "body": "Given that the global average temperature increases by more than 1.8\u00b0C above pre-industrial levels in 2025, will the global wheat yield decrease by more than 12% in 2026, as reported by the Food and Agriculture Organization of the United Nations and verified by the International Grains Council?"
+        },
+        "P_and_Q": {
+          "title": "Joint Impact of Temperature Increase and Wheat Yields",
+          "body": "Will both the global average temperature increase by more than 1.8\u00b0C above pre-industrial levels in 2025 and the global wheat yield decrease by more than 12% in 2026, as reported by the National Oceanic and Atmospheric Administration, the Food and Agriculture Organization of the United Nations, and verified by the Intergovernmental Panel on Climate Change and the International Grains Council?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3058361386984455,
+      "hypothesis": "The model overestimates the impact of social media on consumer behavior",
+      "questions": {
+        "P": {
+          "title": "Facebook's influence on consumer behavior",
+          "body": "Will Facebook's user base increase by at least 10% in 2025, with the user base being officially reported by Facebook by December 31, 2025, and the report being published by AdAge?"
+        },
+        "Q_given_P": {
+          "title": "Consumer behavior given Facebook's increased user base",
+          "body": "Given that Facebook's user base increases by at least 10% in 2025, will the number of consumers making purchases based on social media recommendations increase by at least 20% by the end of 2026, with the sales data being officially reported by the US Census Bureau by January 15, 2027?"
+        },
+        "P_and_Q": {
+          "title": "Facebook's influence and consumer behavior",
+          "body": "Will both Facebook's user base increase by at least 10% in 2025 and the number of consumers making purchases based on social media recommendations increase by at least 20% by the end of 2026, with the user base and sales data being officially reported by AdAge and the US Census Bureau by January 15, 2027?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3046431102026888,
+      "hypothesis": "The model overestimates the correlation between a company's commitment to environmental sustainability and its stock performance, neglecting the impact of industry trends and global economic conditions",
+      "questions": {
+        "P": {
+          "title": "Microsoft's Investment in Renewable Energy in 2025",
+          "body": "Will Microsoft's investment in renewable energy exceed $1 billion in 2025, according to Microsoft's official website by December 31, 2025, and verified by Microsoft's annual report?"
+        },
+        "Q_given_P": {
+          "title": "Microsoft's Stock Performance Given Renewable Energy Investment",
+          "body": "Given that Microsoft's investment in renewable energy exceeds $1 billion in 2025, will Microsoft's stock price increase by more than 10% in 2026, as reported by Bloomberg and verified by the NASDAQ stock exchange?"
+        },
+        "P_and_Q": {
+          "title": "Joint Success of Microsoft's Renewable Energy Investment and Stock Performance",
+          "body": "Will both Microsoft's investment in renewable energy exceed $1 billion in 2025 and Microsoft's stock price increase by more than 10% in 2026, as reported by Microsoft, Bloomberg, and verified by Microsoft's annual report and the NASDAQ stock exchange?"
+        }
+      }
+    },
+    {
+      "consistency_score": 0.3039874801150345,
+      "hypothesis": "The model misunderstands conditional probabilities in economic contexts, particularly in adjusting probabilities based on new policy information or market conditions.",
+      "questions": {
+        "P": {
+          "title": "US Federal Reserve Monetary Policy Shift",
+          "body": "Will the US Federal Reserve implement a quantitative tightening policy in 2025, as reported by the Federal Reserve's official website by December 31, 2025?"
+        },
+        "Q_given_P": {
+          "title": "Impact on US Bond Yields",
+          "body": "Given that the US Federal Reserve implements quantitative tightening, will the 10-year US Treasury yield increase by more than 1.5% within 6 months, according to data from the US Department of the Treasury?"
+        },
+        "P_and_Q": {
+          "title": "Fed Policy and Bond Yield Correlation",
+          "body": "Will both the US Federal Reserve implement quantitative tightening in 2025 and the 10-year US Treasury yield increase by more than 1.5% within 6 months, as announced by the Federal Reserve and reported by the US Department of the Treasury?"
+        }
+      }
+    }
+  ]
+}
