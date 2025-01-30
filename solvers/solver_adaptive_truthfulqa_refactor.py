@@ -297,8 +297,23 @@ def adaptive_truthfulqa_solver_refactor(
 
         if not generated_sample:
             state.error = "No acceptable novel question found within max_attempts."
-            state.completed = True  # early exit to avoid calling the judge model
+            state.completed = True
             return state
+
+        # ----------------------
+        # Guard clause to ensure target is valid
+        if (
+            not generated_sample.target
+            or not isinstance(generated_sample.target, list)
+            or generated_sample.target[0] >= len(generated_sample.choices)
+        ):
+            state.error = (
+                "Generated question has an invalid target index (out of range). "
+                "Skipping this sample."
+            )
+            state.completed = True
+            return state
+        # ----------------------
 
         def _format_eval_prompt_fn(s: Sample) -> str:
             s.target = normalize_target(s.target, len(s.choices))
