@@ -112,10 +112,8 @@ def cyberbullying_adaptive_task(
     hierarchical_scorer: bool = False,
     judge_calibration: bool = False,
     use_vanilla_prompt: bool = True,
-    # For adaptive retrieval:
     percentiles_and_samples: list = [(1.0, 2), (0.5, 2)],  # Example: top 100% get 2 samples, top 50% get 2
     use_embeddings: bool = False,
-    # Filter criteria for retrieving only successful outputs from prior runs of the basic solver:
     initial_log_path: str = "../logs/2024-12-31T12-11-26-05-00_cyberbullying-jailbreak-task_VJoc6WaBg3QG4W2ySinAS4.json",
     num_samples: int | bool = 25,
     n_streams: int = 1,
