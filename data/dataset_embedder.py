@@ -7,7 +7,6 @@ import re
 import pandas as pd
 import numpy as np
 from tqdm import tqdm
-from legalbench.utils import generate_prompts
 import jailbreakbench as jbb
 
 @click.command()
