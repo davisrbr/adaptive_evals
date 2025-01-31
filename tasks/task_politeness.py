@@ -113,7 +113,6 @@ def adaptive_politeness(
     generator_model_name: str = "openai/gpt-4o-mini",
     eval_model_name: str = "openai/gpt-4o-mini",
     self_check_model_name: Optional[str] = None,
-    target: Literal["mc1", "mc2"] = "mc1",
     use_embeddings: bool = False,
     embeddings_model_name: str = "sentence-transformers/all-mpnet-base-v2",
     similarity_threshold: float = 0.6,
@@ -134,13 +133,13 @@ def adaptive_politeness(
     if use_embeddings:
         def record_to_sample(record: dict[str, Any]) -> Sample:
             return Sample(
-                input=record["question"],
-                choices=record[f"{target}_targets"]["choices"],
-                target=labels_to_positions(record[f"{target}_targets"]["labels"]),
+                input=record["Utterance"],
+                choices=[str(i) for i in [-2, -1, 0, 1, 2]],
+                target=chr(ord('A') + [str(i) for i in [-2, -1, 0, 1, 2]].index(str(round(record["politeness"])))),
                 metadata={"embedding": record["embedding"]},
             )
         ds = hf_dataset(
-            path="shreyahavaldar/politeness-embeddings",
+            path="davisrbr/politeness-embeddings",
             name="default",
             sample_fields=record_to_sample,
             split="validation",
