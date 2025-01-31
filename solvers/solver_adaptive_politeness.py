@@ -383,6 +383,9 @@ You are to decide if the new utterance is correctly labeled in the range between
 Write your reasoning step by step, then choose your final answer with:
 `select_choice(choice="A")`, `select_choice(choice="B")`, or `select_choice(choice="C")`.
 
+As additional metadata, afterward please also note the language of the utterance. This will be easy to determine from the utterance. Choose with:
+`select_language(language="English")`, or `select_language(language="German")`, etc.
+
 [Ground Truth Examples and Ratings]
 {ground_truth_examples}
 
@@ -395,6 +398,11 @@ Write your reasoning step by step, then choose your final answer with:
             match = re.search(r'`select_choice\(choice=["\']([A-C])["\']\)`', completion)
             return match.group(1) if match else None
 
+        def parse_language(completion: str) -> Optional[str]:
+            # Look for language in quotes after select_language
+            match = re.search(r'`select_language\(language=["\']([^"\']+)["\']\)`', completion)
+            return match.group(1) if match else None
+
         judge_model = get_model(
             judge_model_name,
             config=GenerateConfig(max_connections=10000, temperature=0.1)
@@ -405,9 +413,11 @@ Write your reasoning step by step, then choose your final answer with:
                 resp = await judge_model.generate(judge_prompt)
                 output = resp.completion.strip()
                 choice = parse_judge_choice(output)
+                language = parse_language(output)
                 if choice:
                     generated_sample.metadata["judge_choice"] = choice
                     generated_sample.metadata["judge_reasoning"] = output
+                    generated_sample.metadata["language"] = language
                     state.store.set("generated_sample", generated_sample)
                     state.completed = True
                     return state
