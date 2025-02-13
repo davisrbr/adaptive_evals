@@ -5,6 +5,7 @@ import json
 from typing import Dict, List, Optional, Tuple
 import click
 import ast
+from datetime import datetime
 
 from inspect_ai import Epochs, eval
 from inspect_ai.log import EvalLog, read_eval_log
@@ -15,6 +16,7 @@ from tasks.task_adaptive_truthfulqa import (
     adaptive_truthfulqa_refactor,
     re_evaluate_adaptive_truthfulqa,
 )
+from utils_elicitation.novelty import write_novelty_results
 
 # Turn off verbose logging
 logging.getLogger().setLevel(logging.ERROR)
@@ -147,21 +149,19 @@ def write_experiment_log(
     judge_model_name: Optional[str],
     n_datapoints: int,
     max_attempts: int,
-    # The following three are new counters we want for re-eval data
     passed_judge_count: Optional[int] = None,
     adaptive_incorrect_count: Optional[int] = None,
     re_eval_incorrect_count: Optional[int] = None,
+    novelty_results_file: Optional[str] = None,
 ) -> None:
     """
     Appends a single row to the experiment CSV containing:
-      - all hyperparameters
-      - the logs
-      - metrics extracted from the logs
-      - counts of how many samples passed the judge filter,
-        how many were incorrectly answered in the adaptive pass,
-        and how many were incorrectly answered by the re-eval model
+      - all hyperparameters,
+      - the logs,
+      - metrics extracted from the logs,
+      - counts of judge filter and re-eval counts,
+      - and the novelty filtering results file path.
     """
-
     file_exists = os.path.exists(experiment_csv)
     with open(experiment_csv, mode="a", newline="") as f:
         fieldnames = [
@@ -188,6 +188,7 @@ def write_experiment_log(
             "passed_judge_count",
             "adaptive_incorrect_count",
             "re_eval_incorrect_count",
+            "novelty_results_file",
         ]
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         if not file_exists:
@@ -218,8 +219,10 @@ def write_experiment_log(
                 "passed_judge_count": passed_judge_count,
                 "adaptive_incorrect_count": adaptive_incorrect_count,
                 "re_eval_incorrect_count": re_eval_incorrect_count,
+                "novelty_results_file": novelty_results_file,
             }
         )
+
 
 
 class TruthfulQAExperimentRunner:
@@ -322,7 +325,6 @@ class TruthfulQAExperimentRunner:
         Runs adaptive_truthfulqa_refactor for each generator model, then
         re-evaluates those newly generated questions on each re_eval model.
         """
-
         for generator_name in generator_models:
             print(f"[Adaptive Step] Working on eval={adaptive_eval_model_name}, generator={generator_name}")
             adaptive_task = adaptive_truthfulqa_refactor(
@@ -331,13 +333,19 @@ class TruthfulQAExperimentRunner:
                 n_negative_samples=self.n_neg,
                 generator_model_name=generator_name,
                 eval_model_name=adaptive_eval_model_name,
+                self_check_model_name=None,
+                target="mc1",
+                use_embeddings=self.use_embeddings,
+                embeddings_model_name="sentence-transformers/all-mpnet-base-v2",
                 similarity_threshold=self.similarity_threshold,
                 score_threshold=self.score_threshold,
-                use_embeddings=self.use_embeddings,
+                max_attempts=self.max_attempts,
+                randomize_sampling=False,
                 cot_in_context=True,
                 use_cot_generator=True,
+                use_cot_evaluator=False,
+                original_eval_model_name=None,
                 judge_model_name=self.judge_model_name,
-                max_attempts=self.max_attempts,
                 use_eval_model_for_checker=True,
             )
             adaptive_logdir = os.path.join(
@@ -355,13 +363,30 @@ class TruthfulQAExperimentRunner:
             )
             if not adaptive_logs or adaptive_logs[0].status != "success":
                 print(
-                    f"[Adaptive Step] No success log for (eval={adaptive_eval_model_name}, "
-                    f"gen={generator_name}). Skipped."
+                    f"[Adaptive Step] No success log for (eval={adaptive_eval_model_name}, gen={generator_name}). Skipped."
                 )
                 continue
 
             adaptive_log = adaptive_logs[0]
             adaptive_accuracy, adaptive_accuracy_judged, adaptive_scorer = extract_accuracy_metrics(adaptive_log)
+
+            # Compute a unique filename for this experiment's novelty filtering results.
+            results_dir = os.path.dirname(self.experiment_csv)  # results/ folder
+            novelty_file = os.path.join(
+                results_dir,
+                f"novelty_{adaptive_eval_model_name.replace('/', '_')}_{generator_name.replace('/', '_')}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+            )
+            try:
+                write_novelty_results(
+                    adaptive_log_path=adaptive_log.location,
+                    embeddings_model_name="sentence-transformers/all-mpnet-base-v2",
+                    similarity_threshold=self.similarity_threshold,
+                    output_file=novelty_file,
+                    use_embeddings=self.use_embeddings,
+                )
+            except Exception as exc:
+                print(f"[Adaptive Step] Novelty filtering failed for (eval={adaptive_eval_model_name}, gen={generator_name}). Error: {exc}")
+                novelty_file = None
 
             # Re-evaluation step for each re_eval model
             for re_eval_model in re_eval_models:
@@ -376,7 +401,6 @@ class TruthfulQAExperimentRunner:
                 )
                 re_eval_logdir = os.path.join(adaptive_logdir, "re_eval", re_eval_model.replace("/", "_"))
                 os.makedirs(re_eval_logdir, exist_ok=True)
-
                 re_eval_log_path: Optional[str] = None
                 re_eval_acc: Optional[float] = None
                 re_eval_acc_judged: Optional[float] = None
@@ -397,9 +421,6 @@ class TruthfulQAExperimentRunner:
                             f"gen={generator_name}, re-eval={re_eval_model})."
                         )
                         re_eval_acc, re_eval_acc_judged, re_eval_scorer = extract_accuracy_metrics(re_eval_logs[0])
-
-                        # Now parse how many samples were re-evaluated, how many were originally incorrect,
-                        # and how many the re-eval model got wrong
                         passed_judge, adaptive_incorrect_cnt, re_eval_incorrect_cnt = parse_re_eval_counts(
                             re_eval_logs[0]
                         )
@@ -416,7 +437,7 @@ class TruthfulQAExperimentRunner:
                     )
                     passed_judge, adaptive_incorrect_cnt, re_eval_incorrect_cnt = (0, 0, 0)
 
-                # Log everything about this triple (eval model, generator, re-eval model)
+                # Log everything about this triple, including the novelty results file.
                 write_experiment_log(
                     experiment_csv=self.experiment_csv,
                     eval_model_name=adaptive_eval_model_name,
@@ -442,6 +463,7 @@ class TruthfulQAExperimentRunner:
                     passed_judge_count=passed_judge,
                     adaptive_incorrect_count=adaptive_incorrect_cnt,
                     re_eval_incorrect_count=re_eval_incorrect_cnt,
+                    novelty_results_file=novelty_file,
                 )
 
     def run_all(
@@ -503,11 +525,11 @@ class TruthfulQAExperimentRunner:
 @click.option(
     "--re-eval-models",
     default=[
-            "openai/gpt-4o",
+            # "openai/gpt-4o",
             "openai/gpt-4o-mini",
-            "openai/o1-mini",
+            # "openai/o1-mini",
             # "together/deepseek-ai/DeepSeek-V3",
-            # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+            "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
             # "anthropic/claude-3-5-sonnet-latest",
         ],
     multiple=True,
