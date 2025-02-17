@@ -1,6 +1,96 @@
 {
   "hard_questions": [
     {
+      "consistency_score": 0.9950529731914644,
+      "hypothesis": "The model overgeneralizes the impact of monetary policy on market performance and underestimates the effects of interest rate changes on specific industries",
+      "questions": {
+        "P": {
+          "title": "Will the Federal Reserve raise interest rates by more than 150 basis points in 2027?",
+          "body": "This question resolves as YES if the Federal Reserve raises interest rates by more than 150 basis points in 2027, as reported by the Federal Reserve's official website (federalreserve.gov) on December 31, 2027."
+        },
+        "Q_given_P": {
+          "title": "Given the interest rate hike, will the S&P 500 index decrease by more than 12% in 2028?",
+          "body": "This question resolves as YES if, given that the Federal Reserve raises interest rates by more than 150 basis points in 2027, the S&P 500 index decreases by more than 12% in 2028, as reported by Yahoo Finance (finance.yahoo.com) on December 31, 2028."
+        },
+        "P_and_Q": {
+          "title": "Will both the interest rate hike occur and the S&P 500 index decrease by 2028?",
+          "body": "This question resolves as YES if both conditions are met: the Federal Reserve raises interest rates by more than 150 basis points in 2027 and the S&P 500 index decreases by more than 12% in 2028, as reported by the Federal Reserve's official website (federalreserve.gov) and Yahoo Finance (finance.yahoo.com) on December 31, 2028."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.9679023680562188,
+      "hypothesis": "The model overgeneralizes the impact of monetary policy on market performance and underestimates the effects of interest rate changes on specific industries",
+      "questions": {
+        "P": {
+          "title": "Will the European Central Bank lower interest rates by more than 50 basis points in 2029?",
+          "body": "This question resolves as YES if the European Central Bank lowers interest rates by more than 50 basis points in 2029, as reported by the European Central Bank's official website (ecb.europa.eu) on December 31, 2029."
+        },
+        "Q_given_P": {
+          "title": "Given the interest rate cut, will the Euro Stoxx 50 index increase by more than 12% in 2030?",
+          "body": "This question resolves as YES if, given that the European Central Bank lowers interest rates by more than 50 basis points in 2029, the Euro Stoxx 50 index increases by more than 12% in 2030, as reported by Bloomberg (bloomberg.com) on December 31, 2030."
+        },
+        "P_and_Q": {
+          "title": "Will both the interest rate cut occur and the Euro Stoxx 50 index increase by 2030?",
+          "body": "This question resolves as YES if both conditions are met: the European Central Bank lowers interest rates by more than 50 basis points in 2029 and the Euro Stoxx 50 index increases by more than 12% in 2030, as reported by the European Central Bank's official website (ecb.europa.eu) and Bloomberg (bloomberg.com) on December 31, 2030."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.8746315159545189,
+      "hypothesis": "The model overgeneralizes the impact of monetary policy on market performance and underestimates the effects of interest rate changes on specific industries",
+      "questions": {
+        "P": {
+          "title": "Will the Federal Reserve raise interest rates by more than 100 basis points in 2027?",
+          "body": "This question resolves as YES if the Federal Reserve raises interest rates by more than 100 basis points in 2027, as reported by the Federal Reserve's official website (federalreserve.gov) on December 31, 2027."
+        },
+        "Q_given_P": {
+          "title": "Given the interest rate hike, will the S&P 500 index decrease by more than 10% in 2028?",
+          "body": "This question resolves as YES if, given that the Federal Reserve raises interest rates by more than 100 basis points in 2027, the S&P 500 index decreases by more than 10% in 2028, as reported by Yahoo Finance (finance.yahoo.com) on December 31, 2028."
+        },
+        "P_and_Q": {
+          "title": "Will both the interest rate hike occur and the S&P 500 index decrease by 2028?",
+          "body": "This question resolves as YES if both conditions are met: the Federal Reserve raises interest rates by more than 100 basis points in 2027 and the S&P 500 index decreases by more than 10% in 2028, as reported by the Federal Reserve's official website (federalreserve.gov) and Yahoo Finance (finance.yahoo.com) on December 31, 2028."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.8517952881013053,
+      "hypothesis": "The model overgeneralizes the impact of monetary policy on market performance",
+      "questions": {
+        "P": {
+          "title": "Will the Federal Reserve lower interest rates by more than 100 basis points in 2028?",
+          "body": "This question resolves as YES if the Federal Reserve lowers interest rates by more than 100 basis points in 2028, as reported by the Federal Reserve's official website (federalreserve.gov) on December 31, 2028."
+        },
+        "Q_given_P": {
+          "title": "Given the interest rate cut, will the S&P 500 index increase by more than 12% in 2029?",
+          "body": "This question resolves as YES if, given that the Federal Reserve lowers interest rates by more than 100 basis points in 2028, the S&P 500 index increases by more than 12% in 2029, as reported by Yahoo Finance (finance.yahoo.com) on December 31, 2029."
+        },
+        "P_and_Q": {
+          "title": "Will both the interest rate cut occur and the S&P 500 index increase by 2029?",
+          "body": "This question resolves as YES if both conditions are met: the Federal Reserve lowers interest rates by more than 100 basis points in 2028 and the S&P 500 index increases by more than 12% in 2029, as reported by the Federal Reserve's official website (federalreserve.gov) and Yahoo Finance (finance.yahoo.com) on December 31, 2029."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.7942959106895375,
+      "hypothesis": "The model overgeneralizes the impact of monetary policy on market performance and underestimates the effects of interest rate changes on specific industries",
+      "questions": {
+        "P": {
+          "title": "Will the European Central Bank lower interest rates by more than 50 basis points in 2029?",
+          "body": "This question resolves as YES if the European Central Bank lowers interest rates by more than 50 basis points in 2029, as reported by the European Central Bank's official website (ecb.europa.eu) on December 31, 2029."
+        },
+        "Q_given_P": {
+          "title": "Given the interest rate cut, will the Euro Stoxx 50 index increase by more than 15% in 2030?",
+          "body": "This question resolves as YES if, given that the European Central Bank lowers interest rates by more than 50 basis points in 2029, the Euro Stoxx 50 index increases by more than 15% in 2030, as reported by Bloomberg (bloomberg.com) on December 31, 2030."
+        },
+        "P_and_Q": {
+          "title": "Will both the interest rate cut occur and the Euro Stoxx 50 index increase by 2030?",
+          "body": "This question resolves as YES if both conditions are met: the European Central Bank lowers interest rates by more than 50 basis points in 2029 and the Euro Stoxx 50 index increases by more than 15% in 2030, as reported by the European Central Bank's official website (ecb.europa.eu) and Bloomberg (bloomberg.com) on December 31, 2030."
+        }
+      }
+    },
+    {
       "consistency_score": 0.7386089703969471,
       "hypothesis": "The model overestimates conditional probabilities when the conditioned event is highly dependent on the conditioning event, as observed in the example of Wesley So beating Hans Niemann in the Speed Chess Championship",
       "questions": {
@@ -73,38 +163,20 @@
       }
     },
     {
-      "consistency_score": 0.6975818737884801,
-      "hypothesis": "The model inconsistentently estimates joint probabilities, often assigning high probabilities to joint events without considering the independence of the events, as observed in the example of OpenAI committing to the 'no retaliation for public risk disclosure' principle and Microsoft adopting a similar policy",
+      "consistency_score": 0.6338841228452518,
+      "hypothesis": "The model overgeneralizes the impact of monetary policy on market performance",
       "questions": {
         "P": {
-          "title": "At least 5 countries to win their first Olympic medal at the 2024 Paris Olympics",
-          "body": "Will at least 5 countries win their first Olympic medal at the 2024 Paris Olympics, according to the official Olympic website (olympics.com) on August 12, 2024?"
+          "title": "Will the Bank of England raise interest rates by more than 200 basis points in 2027?",
+          "body": "This question resolves as YES if the Bank of England raises interest rates by more than 200 basis points in 2027, as reported by the Bank of England's official website (bankofengland.co.uk) on December 31, 2027."
         },
         "Q_given_P": {
-          "title": "France to win at least 70 Olympic medals given at least 5 countries win their first medal",
-          "body": "Given that at least 5 countries win their first Olympic medal, will France win at least 70 Olympic medals at the 2024 Paris Olympics, according to the official Olympic website (olympics.com) on August 12, 2024?"
+          "title": "Given the interest rate hike, will the FTSE 100 index decrease by more than 12% in 2028?",
+          "body": "This question resolves as YES if, given that the Bank of England raises interest rates by more than 200 basis points in 2027, the FTSE 100 index decreases by more than 12% in 2028, as reported by Bloomberg (bloomberg.com) on December 31, 2028."
         },
         "P_and_Q": {
-          "title": "Both at least 5 countries to win their first medal and France to win at least 70 medals",
-          "body": "Will both at least 5 countries win their first Olympic medal and France win at least 70 Olympic medals at the 2024 Paris Olympics, according to the official Olympic website (olympics.com) on August 12, 2024?"
-        }
-      }
-    },
-    {
-      "consistency_score": 0.6819620842972879,
-      "hypothesis": "The model overestimates conditional probabilities when the conditioned event is highly dependent on the conditioning event, as observed in the example of Wesley So beating Hans Niemann in the Speed Chess Championship",
-      "questions": {
-        "P": {
-          "title": "Will Google release a new Pixel smartphone in 2025?",
-          "body": "This question resolves as YES if Google releases a new Pixel smartphone in 2025, as reported by Google's official blog (blog.google) on December 31, 2025."
-        },
-        "Q_given_P": {
-          "title": "Given a new Pixel release, will Samsung's smartphone sales decline by more than 10% in 2025?",
-          "body": "This question resolves as YES if, given that Google releases a new Pixel smartphone in 2025, Samsung's smartphone sales decline by more than 10% in 2025, as reported by Samsung's official investor relations website (samsung.com/investor-relations) on January 31, 2026."
-        },
-        "P_and_Q": {
-          "title": "Will both Google release a new Pixel smartphone and Samsung's smartphone sales decline by more than 10%?",
-          "body": "This question resolves as YES if both Google releases a new Pixel smartphone in 2025 and Samsung's smartphone sales decline by more than 10% in 2025, as reported by Google's official blog (blog.google) and Samsung's official investor relations website (samsung.com/investor-relations) on January 31, 2026."
+          "title": "Will both the interest rate hike occur and the FTSE 100 index decrease by 2028?",
+          "body": "This question resolves as YES if both conditions are met: the Bank of England raises interest rates by more than 200 basis points in 2027 and the FTSE 100 index decreases by more than 12% in 2028, as reported by the Bank of England's official website (bankofengland.co.uk) and Bloomberg (bloomberg.com) on December 31, 2028."
         }
       }
     },
@@ -127,74 +199,20 @@
       }
     },
     {
-      "consistency_score": 0.5855358921080521,
+      "consistency_score": 0.5348874330280846,
       "hypothesis": "The model overgeneralizes the impact of monetary policy on market performance",
       "questions": {
         "P": {
-          "title": "Will the European Central Bank keep interest rates unchanged in 2025?",
-          "body": "This question resolves as YES if the European Central Bank keeps interest rates unchanged in 2025, as reported by the European Central Bank's official website (ecb.europa.eu) on December 31, 2025."
+          "title": "Will the European Central Bank raise interest rates by more than 150 basis points in 2026?",
+          "body": "This question resolves as YES if the European Central Bank raises interest rates by more than 150 basis points in 2026, as reported by the European Central Bank's official website (ecb.europa.eu) on December 31, 2026."
         },
         "Q_given_P": {
-          "title": "Given the unchanged interest rates, will the Eurozone's GDP growth rate increase by more than 5% in 2025?",
-          "body": "This question resolves as YES if, given that the European Central Bank keeps interest rates unchanged in 2025, the Eurozone's GDP growth rate increases by more than 5% in 2025, as reported by the European Commission's official website (ec.europa.eu) on January 31, 2026."
+          "title": "Given the interest rate hike, will the Euro Stoxx 50 index decrease by more than 10% in 2027?",
+          "body": "This question resolves as YES if, given that the European Central Bank raises interest rates by more than 150 basis points in 2026, the Euro Stoxx 50 index decreases by more than 10% in 2027, as reported by Bloomberg (bloomberg.com) on December 31, 2027."
         },
         "P_and_Q": {
-          "title": "Will both the interest rates remain unchanged and the Eurozone's GDP growth rate increase?",
-          "body": "This question resolves as YES if both the European Central Bank keeps interest rates unchanged in 2025 and the Eurozone's GDP growth rate increases by more than 5% in 2025, as reported by the European Central Bank's official website (ecb.europa.eu) and the European Commission's official website (ec.europa.eu) on January 31, 2026."
-        }
-      }
-    },
-    {
-      "consistency_score": 0.5711338063494149,
-      "hypothesis": "The model overgeneralizes the impact of monetary policy on market performance",
-      "questions": {
-        "P": {
-          "title": "Will the Federal Reserve raise interest rates by more than 100 basis points in 2025?",
-          "body": "This question resolves as YES if the Federal Reserve raises interest rates by more than 100 basis points in 2025, as reported by the Federal Reserve's official website (federalreserve.gov) on December 31, 2025."
-        },
-        "Q_given_P": {
-          "title": "Given the interest rate hike, will the S&P 500 index decrease by more than 8% in 2025?",
-          "body": "This question resolves as YES if, given that the Federal Reserve raises interest rates by more than 100 basis points in 2025, the S&P 500 index decreases by more than 8% in 2025, as reported by Yahoo Finance (finance.yahoo.com) on December 31, 2025."
-        },
-        "P_and_Q": {
-          "title": "Will both the interest rate hike occur and the S&P 500 index decrease?",
-          "body": "This question resolves as YES if both the Federal Reserve raises interest rates by more than 100 basis points in 2025 and the S&P 500 index decreases by more than 8% in 2025, as reported by the Federal Reserve's official website (federalreserve.gov) and Yahoo Finance (finance.yahoo.com) on December 31, 2025."
-        }
-      }
-    },
-    {
-      "consistency_score": 0.5700790369671227,
-      "hypothesis": "The model overestimates conditional probabilities when the conditioned event is highly dependent on the conditioning event, as observed in the example of Wesley So beating Hans Niemann in the Speed Chess Championship",
-      "questions": {
-        "P": {
-          "title": "USA to win the most gold medals at the 2024 Paris Olympics",
-          "body": "Will the USA win the most gold medals at the 2024 Paris Olympics, according to the official Olympic website (olympics.com) by August 12, 2024?"
-        },
-        "Q_given_P": {
-          "title": "France to win at least 30 gold medals given USA wins the most",
-          "body": "Given that the USA wins the most gold medals, will France win at least 30 gold medals at the 2024 Paris Olympics, according to the official Olympic website (olympics.com) by August 12, 2024?"
-        },
-        "P_and_Q": {
-          "title": "Both USA and France to meet their respective gold medal targets",
-          "body": "Will both the USA win the most gold medals and France win at least 30 gold medals at the 2024 Paris Olympics, according to the official Olympic website (olympics.com) by August 12, 2024?"
-        }
-      }
-    },
-    {
-      "consistency_score": 0.5677363227275815,
-      "hypothesis": "The model overgeneralizes the impact of monetary policy on market performance",
-      "questions": {
-        "P": {
-          "title": "Will the European Central Bank keep interest rates unchanged in 2028?",
-          "body": "This question resolves as YES if the European Central Bank keeps interest rates unchanged in 2028, as reported by the European Central Bank's official website (ecb.europa.eu) on December 31, 2028."
-        },
-        "Q_given_P": {
-          "title": "Given the unchanged interest rates, will the Eurozone's GDP growth rate increase by more than 5% in 2029?",
-          "body": "This question resolves as YES if, given that the European Central Bank keeps interest rates unchanged in 2028, the Eurozone's GDP growth rate increases by more than 5% in 2029, as reported by the European Commission's official website (ec.europa.eu) on January 31, 2030."
-        },
-        "P_and_Q": {
-          "title": "Will both the interest rates remain unchanged and the Eurozone's GDP growth rate increase by 2029?",
-          "body": "This question resolves as YES if both the European Central Bank keeps interest rates unchanged in 2028 and the Eurozone's GDP growth rate increases by more than 5% in 2029, as reported by the European Central Bank's official website (ecb.europa.eu) and the European Commission's official website (ec.europa.eu) on January 31, 2030."
+          "title": "Will both the interest rate hike occur and the Euro Stoxx 50 index decrease by 2027?",
+          "body": "This question resolves as YES if both conditions are met: the European Central Bank raises interest rates by more than 150 basis points in 2026 and the Euro Stoxx 50 index decreases by more than 10% in 2027, as reported by the European Central Bank's official website (ecb.europa.eu) and Bloomberg (bloomberg.com) on December 31, 2027."
         }
       }
     },
@@ -217,20 +235,38 @@
       }
     },
     {
-      "consistency_score": 0.4938770700385987,
-      "hypothesis": "The model overestimates conditional probabilities when the conditioned event is highly dependent on the conditioning event, as observed in the example of tech companies' market performance and their social media presence",
+      "consistency_score": 0.4466013931657235,
+      "hypothesis": "The model underestimates the impact of demographic changes on specific industries and overgeneralizes the effects of population growth on the overall economy",
       "questions": {
         "P": {
-          "title": "Will Twitter's stock price increase by more than 15% in 2025?",
-          "body": "This question resolves as YES if Twitter's stock price increases by more than 15% in 2025, as reported by Yahoo Finance (finance.yahoo.com) on December 31, 2025."
+          "title": "Will the population of India increase by more than 15% by 2032?",
+          "body": "This question resolves as YES if the population of India increases by more than 15% by 2032, as reported by the United Nations Department of Economic and Social Affairs (un.org) on December 31, 2032."
         },
         "Q_given_P": {
-          "title": "Given Twitter's stock price increase, will Elon Musk's Twitter followers increase by more than 12% in 2025?",
-          "body": "This question resolves as YES if, given that Twitter's stock price increases by more than 15% in 2025, Elon Musk's Twitter followers increase by more than 12% in 2025, as reported by Twitter (twitter.com) on December 31, 2025."
+          "title": "Given the population growth, will the global demand for housing increase by more than 12% in 2034?",
+          "body": "This question resolves as YES if, given that the population of India increases by more than 15% by 2032, the global demand for housing increases by more than 12% in 2034, as reported by the International Housing Association (housing.org) on December 31, 2034."
         },
         "P_and_Q": {
-          "title": "Will both Twitter's stock price increase and Elon Musk's Twitter followers increase?",
-          "body": "This question resolves as YES if both Twitter's stock price increases by more than 15% in 2025 and Elon Musk's Twitter followers increase by more than 12% in 2025, as reported by Yahoo Finance (finance.yahoo.com) and Twitter (twitter.com) on December 31, 2025."
+          "title": "Will both the population growth occur and the global demand for housing increase by 2034?",
+          "body": "This question resolves as YES if both conditions are met: the population of India increases by more than 15% by 2032 and the global demand for housing increases by more than 12% in 2034, as reported by the United Nations Department of Economic and Social Affairs (un.org) and the International Housing Association (housing.org) on December 31, 2034."
+        }
+      }
+    },
+    {
+      "consistency_score": 0.4430962708732196,
+      "hypothesis": "The model underestimates the impact of technological advancements on specific industries and overgeneralizes the effects of innovation on the overall economy",
+      "questions": {
+        "P": {
+          "title": "Will the number of electric vehicles sold in the United States increase by more than 30% in 2027?",
+          "body": "This question resolves as YES if the number of electric vehicles sold in the United States increases by more than 30% in 2027, as reported by the International Energy Agency (iea.org) on December 31, 2027."
+        },
+        "Q_given_P": {
+          "title": "Given the increase in electric vehicle sales, will the global demand for lithium decrease by more than 10% in 2028?",
+          "body": "This question resolves as YES if, given that the number of electric vehicles sold in the United States increases by more than 30% in 2027, the global demand for lithium decreases by more than 10% in 2028, as reported by the United States Geological Survey (usgs.gov) on December 31, 2028."
+        },
+        "P_and_Q": {
+          "title": "Will both the increase in electric vehicle sales occur and the global demand for lithium decrease by 2028?",
+          "body": "This question resolves as YES if both conditions are met: the number of electric vehicles sold in the United States increases by more than 30% in 2027 and the global demand for lithium decreases by more than 10% in 2028, as reported by the International Energy Agency (iea.org) and the United States Geological Survey (usgs.gov) on December 31, 2028."
         }
       }
     },
@@ -271,60 +307,6 @@
       }
     },
     {
-      "consistency_score": 0.4063144013656158,
-      "hypothesis": "The model overestimates the impact of advancements in quantum computing on the development of Artificial General Intelligence (AGI)",
-      "questions": {
-        "P": {
-          "title": "Will Microsoft invest more than $1 billion in quantum computing research by 2027?",
-          "body": "This question resolves as YES if Microsoft invests more than $1 billion in quantum computing research by 2027, as reported by Microsoft's official investor relations website (investor.microsoft.com) on December 31, 2027."
-        },
-        "Q_given_P": {
-          "title": "Given the investment, will the development of AGI be accelerated by 2028?",
-          "body": "This question resolves as YES if, given that Microsoft invests more than $1 billion in quantum computing research by 2027, the development of AGI is accelerated by 2028, as reported by reputable sources such as MIT Technology Review or The Verge on December 31, 2028."
-        },
-        "P_and_Q": {
-          "title": "Will both Microsoft invest in quantum computing and AGI development be accelerated by 2028?",
-          "body": "This question resolves as YES if both Microsoft invests more than $1 billion in quantum computing research by 2027 and the development of AGI is accelerated by 2028, as reported by Microsoft's official investor relations website (investor.microsoft.com) and reputable sources such as MIT Technology Review or The Verge on December 31, 2028."
-        }
-      }
-    },
-    {
-      "consistency_score": 0.4035796362860439,
-      "hypothesis": "The model assumes a strong correlation between a company's market performance and its social media presence",
-      "questions": {
-        "P": {
-          "title": "Will Coca-Cola's revenue increase by more than 5% in 2025?",
-          "body": "This question resolves as YES if Coca-Cola's revenue increases by more than 5% in 2025, as reported by Coca-Cola's official investor relations website (coca-cola.com/investors) on January 31, 2026."
-        },
-        "Q_given_P": {
-          "title": "Given a Coca-Cola revenue increase, will the company's Instagram followers increase by more than 15% in 2025?",
-          "body": "This question resolves as YES if, given that Coca-Cola's revenue increases by more than 5% in 2025, the company's Instagram followers increase by more than 15% in 2025, as reported by Instagram (instagram.com) on December 31, 2025."
-        },
-        "P_and_Q": {
-          "title": "Will both Coca-Cola's revenue increase and its Instagram followers increase?",
-          "body": "This question resolves as YES if both Coca-Cola's revenue increases by more than 5% in 2025 and the company's Instagram followers increase by more than 15% in 2025, as reported by Coca-Cola's official investor relations website (coca-cola.com/investors) and Instagram (instagram.com) on December 31, 2025."
-        }
-      }
-    },
-    {
-      "consistency_score": 0.3970697313429993,
-      "hypothesis": "The model inconsistentently estimates joint probabilities, often assigning high probabilities to joint events without considering the independence of the events, as observed in the example of OpenAI committing to the 'no retaliation for public risk disclosure' principle and Microsoft adopting a similar policy",
-      "questions": {
-        "P": {
-          "title": "Meta to commit to the 'no retaliation for public risk disclosure' principle before July 1, 2024",
-          "body": "Will Meta commit to the 'no retaliation for public risk disclosure' principle before July 1, 2024, according to Meta's official blog (about.meta.com) on July 2, 2024?"
-        },
-        "Q_given_P": {
-          "title": "Microsoft to adopt a similar policy given Meta's commitment",
-          "body": "Given that Meta commits to the principle, will Microsoft adopt a similar 'no retaliation for public risk disclosure' policy by the end of 2024, according to Microsoft's official blog (blogs.microsoft.com) on January 1, 2025?"
-        },
-        "P_and_Q": {
-          "title": "Both Meta and Microsoft to commit to the principle",
-          "body": "Will both Meta commit to the 'no retaliation for public risk disclosure' principle before July 1, 2024, and Microsoft adopt a similar policy by the end of 2024, according to Meta's official blog (about.meta.com) and Microsoft's official blog (blogs.microsoft.com) on January 1, 2025?"
-        }
-      }
-    },
-    {
       "consistency_score": 0.395380040551376,
       "hypothesis": "The model overestimates the impact of advancements in quantum computing on the development of Artificial General Intelligence (AGI)",
       "questions": {
@@ -343,7 +325,7 @@
       }
     },
     {
-      "consistency_score": 0.3715786115784191,
+      "consistency_score": 0.3684967711085883,
       "hypothesis": "The model underestimates the impact of climate change on global food production",
       "questions": {
         "P": {
@@ -361,20 +343,20 @@
       }
     },
     {
-      "consistency_score": 0.3684967711085883,
+      "consistency_score": 0.3684967711085882,
       "hypothesis": "The model underestimates the impact of climate change on global food production",
       "questions": {
         "P": {
-          "title": "Will the global average temperature increase by more than 1.5\u00b0C above pre-industrial levels by 2030?",
-          "body": "This question resolves as YES if the global average temperature increases by more than 1.5\u00b0C above pre-industrial levels by 2030, as reported by the National Oceanic and Atmospheric Administration (noaa.gov) on December 31, 2030."
+          "title": "Will the number of droughts in the United States increase by more than 30% by 2033?",
+          "body": "This question resolves as YES if the number of droughts in the United States increases by more than 30% by 2033, as reported by the National Drought Mitigation Center (drought.unl.edu) on December 31, 2033."
         },
         "Q_given_P": {
-          "title": "Given the temperature increase, will global wheat production decrease by more than 10% by 2032?",
-          "body": "This question resolves as YES if, given that the global average temperature increases by more than 1.5\u00b0C above pre-industrial levels by 2030, global wheat production decreases by more than 10% by 2032, as reported by the Food and Agriculture Organization of the United Nations (fao.org) on December 31, 2032."
+          "title": "Given the increase in droughts, will the global price of soybeans increase by more than 15% by 2035?",
+          "body": "This question resolves as YES if, given that the number of droughts in the United States increases by more than 30% by 2033, the global price of soybeans increases by more than 15% by 2035, as reported by the United States Department of Agriculture (usda.gov) on December 31, 2035."
         },
         "P_and_Q": {
-          "title": "Will both the global average temperature increase and global wheat production decrease by 2032?",
-          "body": "This question resolves as YES if both the global average temperature increases by more than 1.5\u00b0C above pre-industrial levels by 2030 and global wheat production decreases by more than 10% by 2032, as reported by the National Oceanic and Atmospheric Administration (noaa.gov) and the Food and Agriculture Organization of the United Nations (fao.org) on December 31, 2032."
+          "title": "Will both the number of droughts increase and the global price of soybeans increase by 2035?",
+          "body": "This question resolves as YES if both conditions are met: the number of droughts in the United States increases by more than 30% by 2033 and the global price of soybeans increases by more than 15% by 2035, as reported by the National Drought Mitigation Center (drought.unl.edu) and the United States Department of Agriculture (usda.gov) on December 31, 2035."
         }
       }
     },
@@ -415,38 +397,38 @@
       }
     },
     {
-      "consistency_score": 0.3507323215972475,
-      "hypothesis": "The model assumes a strong correlation between a company's market performance and its social media presence",
+      "consistency_score": 0.3459706608649021,
+      "hypothesis": "The model overgeneralizes the impact of cybersecurity threats on the adoption of cloud computing",
       "questions": {
         "P": {
-          "title": "Will Tesla's stock price increase by more than 20% in 2025?",
-          "body": "This question resolves as YES if Tesla's stock price increases by more than 20% in 2025, as reported by Yahoo Finance (finance.yahoo.com) on December 31, 2025."
+          "title": "Will Microsoft Azure achieve a security compliance certification for cloud services by 2029?",
+          "body": "This question resolves as YES if Microsoft Azure achieves a security compliance certification for cloud services by 2029, as reported by Microsoft Azure's official website or compliance reports."
         },
         "Q_given_P": {
-          "title": "Given a Tesla stock price increase, will Elon Musk's Twitter followers increase by more than 10% in 2025?",
-          "body": "This question resolves as YES if, given that Tesla's stock price increases by more than 20% in 2025, Elon Musk's Twitter followers increase by more than 10% in 2025, as reported by Twitter (twitter.com) on December 31, 2025."
+          "title": "Given Azure's security compliance certification, will the number of enterprises adopting cloud-based services increase by more than 25% by 2031?",
+          "body": "This question resolves as YES if, given that Microsoft Azure achieves a security compliance certification for cloud services by 2029, the number of enterprises adopting cloud-based services increases by more than 25% by 2031, as reported by market research firms or industry reports."
         },
         "P_and_Q": {
-          "title": "Will both Tesla's stock price increase and Elon Musk's Twitter followers increase?",
-          "body": "This question resolves as YES if both Tesla's stock price increases by more than 20% in 2025 and Elon Musk's Twitter followers increase by more than 10% in 2025, as reported by Yahoo Finance (finance.yahoo.com) and Twitter (twitter.com) on December 31, 2025."
+          "title": "Will both Azure achieve a security compliance certification by 2029 and the number of enterprises adopting cloud-based services increase by more than 25% by 2031?",
+          "body": "This question resolves as YES if both conditions are met: Microsoft Azure achieves a security compliance certification for cloud services by 2029 and the number of enterprises adopting cloud-based services increases by more than 25% by 2031, as reported by Microsoft Azure's official website and market research firms or industry reports."
         }
       }
     },
     {
-      "consistency_score": 0.3443985137741485,
-      "hypothesis": "The model overgeneralizes tech company compliance based on industry trends",
+      "consistency_score": 0.3422345849100796,
+      "hypothesis": "The model overgeneralizes the impact of advancements in quantum computing on the development of artificial general intelligence (AGI) and underestimates the effects of quantum computing on specific industries",
       "questions": {
         "P": {
-          "title": "Will Amazon acquire at least one new company in the AI sector in 2025?",
-          "body": "This question resolves as YES if Amazon acquires at least one new company in the AI sector in 2025, as reported by Amazon's official website (aboutamazon.com) on December 31, 2025."
+          "title": "Will Google invest more than $500 million in quantum computing research by 2027?",
+          "body": "This question resolves as YES if Google invests more than $500 million in quantum computing research by 2027, as reported by Google's official website or financial reports on December 31, 2027."
         },
         "Q_given_P": {
-          "title": "Given an Amazon acquisition, will Microsoft also acquire a company in the AI sector in 2025?",
-          "body": "This question resolves as YES if, given that Amazon acquires at least one new company in the AI sector in 2025, Microsoft also acquires a company in the AI sector in 2025, as reported by Microsoft's official blog (blogs.microsoft.com) on December 31, 2025."
+          "title": "Given Google's investment in quantum computing, will the development of AGI be accelerated by at least 3 years?",
+          "body": "This question resolves as YES if, given that Google invests more than $500 million in quantum computing research by 2027, the development of AGI is accelerated by at least 3 years, as reported by reputable AI research institutions or peer-reviewed journals on December 31, 2030."
         },
         "P_and_Q": {
-          "title": "Will both Amazon and Microsoft acquire AI companies?",
-          "body": "This question resolves as YES if both Amazon acquires at least one new company in the AI sector in 2025 and Microsoft also acquires a company in the AI sector in 2025, as reported by Amazon's official website (aboutamazon.com) and Microsoft's official blog (blogs.microsoft.com) on December 31, 2025."
+          "title": "Will both Google invest more than $500 million in quantum computing research by 2027 and AGI development be accelerated by at least 3 years?",
+          "body": "This question resolves as YES if both conditions are met: Google invests more than $500 million in quantum computing research by 2027 and the development of AGI is accelerated by at least 3 years, as reported by Google's official website and reputable AI research institutions or peer-reviewed journals on December 31, 2030."
         }
       }
     },
@@ -483,96 +465,6 @@
         "P_and_Q": {
           "title": "Will both the European Central Bank increase bond purchases and the Eurozone's housing market boom by 2031?",
           "body": "This question resolves as YES if both the European Central Bank increases its bond purchases by more than 20% by 2029 and the Eurozone's housing market experiences a boom by 2031, as reported by the European Central Bank's official website (ecb.europa.eu) and Bloomberg (bloomberg.com) on December 31, 2031."
-        }
-      }
-    },
-    {
-      "consistency_score": 0.3261733217358397,
-      "hypothesis": "The model overestimates the impact of technological advancements on a company's market performance",
-      "questions": {
-        "P": {
-          "title": "Will Microsoft's investment in quantum computing increase by more than 15% in 2025?",
-          "body": "This question resolves as YES if Microsoft's investment in quantum computing increases by more than 15% in 2025, as reported by Microsoft's official blog (blogs.microsoft.com) on December 31, 2025."
-        },
-        "Q_given_P": {
-          "title": "Given Microsoft's quantum computing investment increase, will the company's revenue from cloud computing services increase by more than 10% in 2025?",
-          "body": "This question resolves as YES if, given that Microsoft's investment in quantum computing increases by more than 15% in 2025, the company's revenue from cloud computing services increases by more than 10% in 2025, as reported by Microsoft's official investor relations website (investor.microsoft.com) on January 31, 2026."
-        },
-        "P_and_Q": {
-          "title": "Will both Microsoft's quantum computing investment increase and its cloud computing revenue increase?",
-          "body": "This question resolves as YES if both Microsoft's investment in quantum computing increases by more than 15% in 2025 and the company's revenue from cloud computing services increases by more than 10% in 2025, as reported by Microsoft's official blog (blogs.microsoft.com) and Microsoft's official investor relations website (investor.microsoft.com) on January 31, 2026."
-        }
-      }
-    },
-    {
-      "consistency_score": 0.3177908099916967,
-      "hypothesis": "The model overestimates conditional probabilities when the conditioned event is highly dependent on the conditioning event, as observed in the example of tech companies' market performance and their social media presence",
-      "questions": {
-        "P": {
-          "title": "Will Meta's revenue increase by more than 8% in 2025?",
-          "body": "This question resolves as YES if Meta's revenue increases by more than 8% in 2025, as reported by Meta's official investor relations website (investor.meta.com) on January 31, 2026."
-        },
-        "Q_given_P": {
-          "title": "Given Meta's revenue increase, will the company's Facebook followers increase by more than 10% in 2025?",
-          "body": "This question resolves as YES if, given that Meta's revenue increases by more than 8% in 2025, the company's Facebook followers increase by more than 10% in 2025, as reported by Facebook (facebook.com) on December 31, 2025."
-        },
-        "P_and_Q": {
-          "title": "Will both Meta's revenue increase and its Facebook followers increase?",
-          "body": "This question resolves as YES if both Meta's revenue increases by more than 8% in 2025 and the company's Facebook followers increase by more than 10% in 2025, as reported by Meta's official investor relations website (investor.meta.com) and Facebook (facebook.com) on December 31, 2025."
-        }
-      }
-    },
-    {
-      "consistency_score": 0.314010211390565,
-      "hypothesis": "The model underestimates the impact of genetic engineering on the development of novel therapeutics",
-      "questions": {
-        "P": {
-          "title": "Will Editas Medicine invest more than $500 million in gene editing research by 2029?",
-          "body": "This question resolves as YES if Editas Medicine invests more than $500 million in gene editing research by 2029, as reported by Editas Medicine's official investor relations website (investor.editasmedicine.com) on December 31, 2029."
-        },
-        "Q_given_P": {
-          "title": "Given the investment, will the development of novel gene editing therapies be accelerated by 2031?",
-          "body": "This question resolves as YES if, given that Editas Medicine invests more than $500 million in gene editing research by 2029, the development of novel gene editing therapies is accelerated by 2031, as reported by reputable sources such as The Lancet or the New England Journal of Medicine on December 31, 2031."
-        },
-        "P_and_Q": {
-          "title": "Will both Editas Medicine invest in gene editing and novel gene editing therapies be developed by 2031?",
-          "body": "This question resolves as YES if both Editas Medicine invests more than $500 million in gene editing research by 2029 and novel gene editing therapies are developed by 2031, as reported by Editas Medicine's official investor relations website (investor.editasmedicine.com) and reputable sources such as The Lancet or the New England Journal of Medicine on December 31, 2031."
-        }
-      }
-    },
-    {
-      "consistency_score": 0.3139100568354938,
-      "hypothesis": "The model assumes a strong correlation between a company's market performance and its environmental sustainability",
-      "questions": {
-        "P": {
-          "title": "Will IKEA's carbon footprint decrease by more than 8% in 2028?",
-          "body": "This question resolves as YES if IKEA's carbon footprint decreases by more than 8% in 2028, as reported by IKEA's official website (ikea.com) on January 31, 2029."
-        },
-        "Q_given_P": {
-          "title": "Given the decrease in carbon footprint, will IKEA's market share increase by more than 5% in 2029?",
-          "body": "This question resolves as YES if, given that IKEA's carbon footprint decreases by more than 8% in 2028, IKEA's market share increases by more than 5% in 2029, as reported by Euromonitor International's official website (euromonitor.com) on December 31, 2029."
-        },
-        "P_and_Q": {
-          "title": "Will both IKEA's carbon footprint decrease and its market share increase by 2029?",
-          "body": "This question resolves as YES if both IKEA's carbon footprint decreases by more than 8% in 2028 and its market share increases by more than 5% in 2029, as reported by IKEA's official website (ikea.com) and Euromonitor International's official website (euromonitor.com) on December 31, 2029."
-        }
-      }
-    },
-    {
-      "consistency_score": 0.3047482987390308,
-      "hypothesis": "The model underestimates the impact of genetic engineering on the development of novel therapeutics",
-      "questions": {
-        "P": {
-          "title": "Will CRISPR Therapeutics announce a major breakthrough in gene editing for cancer treatment by 2028?",
-          "body": "This question resolves as YES if CRISPR Therapeutics announces a major breakthrough in gene editing for cancer treatment by 2028, as reported by CRISPR Therapeutics' official website (crisprtx.com) on December 31, 2028."
-        },
-        "Q_given_P": {
-          "title": "Given the breakthrough, will the development of novel cancer therapeutics be accelerated by 2030?",
-          "body": "This question resolves as YES if, given that CRISPR Therapeutics announces a major breakthrough in gene editing for cancer treatment by 2028, the development of novel cancer therapeutics is accelerated by 2030, as reported by reputable sources such as Nature Medicine or the Journal of Clinical Oncology on December 31, 2030."
-        },
-        "P_and_Q": {
-          "title": "Will both CRISPR Therapeutics announce a gene editing breakthrough and novel cancer therapeutics be developed by 2030?",
-          "body": "This question resolves as YES if both CRISPR Therapeutics announces a major breakthrough in gene editing for cancer treatment by 2028 and novel cancer therapeutics are developed by 2030, as reported by CRISPR Therapeutics' official website (crisprtx.com) and reputable sources such as Nature Medicine or the Journal of Clinical Oncology on December 31, 2030."
         }
       }
     }
