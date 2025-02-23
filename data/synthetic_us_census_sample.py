@@ -6,15 +6,15 @@ This script generates a synthetic population using U.S. Census ACS 5-Year data.
 It loads state-level data for several demographic and socioeconomic attributes and computes
 target marginal proportions. The attributes include:
 
-  • Gender (from B01001)
-  • Ethnicity (from B03002)
-  • Education (from B15003)
-  • Language (from B16001)
-  • Age (sampled continuously and rounded; later bucketed into 0–17, 18–64, 65+ for IPF checks)
-  • Income (sampled continuously as an annual income value; later bucketed into Low/Medium/High)
-  • SES (bucketed into Low, Middle, and High based on ACS poverty data; with an upper cap on High SES)
-  • Occupation (from C24050)
-  • UrbanRural (default placeholder)
+  - Gender (from B01001)
+  - Ethnicity (from B03002)
+  - Education (from B15003)
+  - Language (from B16001)
+  - Age (sampled continuously and rounded; later bucketed into 0–17, 18–64, 65+ for IPF checks)
+  - Income (sampled continuously as an annual income value; later bucketed into Low/Medium/High)
+  - SES (bucketed into Low, Middle, and High based on ACS poverty data; with an upper cap on High SES)
+  - Occupation (from C24050)
+  - UrbanRural (default placeholder)
 
 For each state, individuals are initially sampled using ACS‐derived proportions. Then, an
 Iterative Proportional Fitting (IPF) procedure is applied (updating one attribute per iteration)
@@ -27,7 +27,7 @@ Outputs:
   - "optimization.csv": Log of IPF iterations.
 
 Dependencies:
-  pip install requests pandas numpy scipy tqdm
+  pip install requests pandas numpy scipy tqdm click
 """
 
 import requests
@@ -39,7 +39,7 @@ import click
 # ---------------------------
 # 1. Data Loading Functions
 # ---------------------------
-def load_census_data(api_key):
+def load_census_data(api_key: str) -> pd.DataFrame:
     base_url = 'https://api.census.gov/data/2019/acs/acs5'
     variables = ['NAME', 'B01001_001E', 'B01001_002E', 'B01001_026E']
     url = f"{base_url}?get={','.join(variables)}&for=state:*&key={api_key}"
@@ -52,23 +52,27 @@ def load_census_data(api_key):
         df[col] = pd.to_numeric(df[col])
     return df
 
-def load_ethnicity_data(api_key):
+def load_ethnicity_data(api_key: str) -> pd.DataFrame:
     base_url = 'https://api.census.gov/data/2019/acs/acs5'
-    variables = ['NAME', 'B03002_001E', 'B03002_002E', 'B03002_003E',
-                 'B03002_004E', 'B03002_005E', 'B03002_006E',
-                 'B03002_007E', 'B03002_008E', 'B03002_009E']
+    variables = [
+        'NAME', 'B03002_001E', 'B03002_002E', 'B03002_003E',
+        'B03002_004E', 'B03002_005E', 'B03002_006E',
+        'B03002_007E', 'B03002_008E', 'B03002_009E'
+    ]
     url = f"{base_url}?get={','.join(variables)}&for=state:*&key={api_key}"
     response = requests.get(url)
     if response.status_code != 200:
         raise Exception("Error fetching ethnicity data from Census API.")
     data = response.json()
     df_eth = pd.DataFrame(data[1:], columns=data[0])
-    for col in ['B03002_001E','B03002_002E','B03002_003E','B03002_004E',
-                'B03002_005E','B03002_006E','B03002_007E','B03002_008E','B03002_009E']:
+    for col in [
+        'B03002_001E','B03002_002E','B03002_003E','B03002_004E',
+        'B03002_005E','B03002_006E','B03002_007E','B03002_008E','B03002_009E'
+    ]:
         df_eth[col] = pd.to_numeric(df_eth[col])
     return df_eth
 
-def load_education_data(api_key):
+def load_education_data(api_key: str) -> pd.DataFrame:
     base_url = 'https://api.census.gov/data/2019/acs/acs5'
     vars_edu = ['NAME'] + [f"B15003_{str(i).zfill(3)}E" for i in range(1, 26)]
     url = f"{base_url}?get={','.join(vars_edu)}&for=state:*&key={api_key}"
@@ -93,7 +97,7 @@ def load_education_data(api_key):
     edu_df = edu_df[['NAME', 'state', 'p_LessThanHS', 'p_HighSchool', 'p_SomeCollege', 'p_BachelorsPlus']]
     return edu_df
 
-def load_language_data(api_key):
+def load_language_data(api_key: str) -> pd.DataFrame:
     base_url = 'https://api.census.gov/data/2019/acs/acs5'
     variables = ['NAME', 'B16001_001E', 'B16001_002E', 'B16001_003E']
     url = f"{base_url}?get={','.join(variables)}&for=state:*&key={api_key}"
@@ -110,13 +114,15 @@ def load_language_data(api_key):
     lang_df = lang_df[['NAME', 'state', 'p_English', 'p_Spanish', 'p_Other']]
     return lang_df
 
-def load_age_data(api_key):
+def load_age_data(api_key: str) -> pd.DataFrame:
     base_url = 'https://api.census.gov/data/2019/acs/acs5'
-    variables = ['NAME', 'B01001_001E',
-                 'B01001_003E','B01001_004E','B01001_005E','B01001_006E',
-                 'B01001_020E','B01001_021E','B01001_022E','B01001_023E','B01001_024E','B01001_025E',
-                 'B01001_027E','B01001_028E','B01001_029E','B01001_030E',
-                 'B01001_044E','B01001_045E','B01001_046E','B01001_047E','B01001_048E','B01001_049E']
+    variables = [
+        'NAME', 'B01001_001E',
+        'B01001_003E','B01001_004E','B01001_005E','B01001_006E',
+        'B01001_020E','B01001_021E','B01001_022E','B01001_023E','B01001_024E','B01001_025E',
+        'B01001_027E','B01001_028E','B01001_029E','B01001_030E',
+        'B01001_044E','B01001_045E','B01001_046E','B01001_047E','B01001_048E','B01001_049E'
+    ]
     url = f"{base_url}?get={','.join(variables)}&for=state:*&key={api_key}"
     response = requests.get(url)
     if response.status_code != 200:
@@ -125,16 +131,20 @@ def load_age_data(api_key):
     age_df = pd.DataFrame(data[1:], columns=data[0])
     for col in variables[1:]:
         age_df[col] = pd.to_numeric(age_df[col])
-    age_df['Age_0_17'] = (age_df['B01001_003E'] + age_df['B01001_004E'] +
-                          age_df['B01001_005E'] + age_df['B01001_006E'] +
-                          age_df['B01001_027E'] + age_df['B01001_028E'] +
-                          age_df['B01001_029E'] + age_df['B01001_030E'])
-    age_df['Age_65_plus'] = (age_df['B01001_020E'] + age_df['B01001_021E'] +
-                             age_df['B01001_022E'] + age_df['B01001_023E'] +
-                             age_df['B01001_024E'] + age_df['B01001_025E'] +
-                             age_df['B01001_044E'] + age_df['B01001_045E'] +
-                             age_df['B01001_046E'] + age_df['B01001_047E'] +
-                             age_df['B01001_048E'] + age_df['B01001_049E'])
+    age_df['Age_0_17'] = (
+        age_df['B01001_003E'] + age_df['B01001_004E'] +
+        age_df['B01001_005E'] + age_df['B01001_006E'] +
+        age_df['B01001_027E'] + age_df['B01001_028E'] +
+        age_df['B01001_029E'] + age_df['B01001_030E']
+    )
+    age_df['Age_65_plus'] = (
+        age_df['B01001_020E'] + age_df['B01001_021E'] +
+        age_df['B01001_022E'] + age_df['B01001_023E'] +
+        age_df['B01001_024E'] + age_df['B01001_025E'] +
+        age_df['B01001_044E'] + age_df['B01001_045E'] +
+        age_df['B01001_046E'] + age_df['B01001_047E'] +
+        age_df['B01001_048E'] + age_df['B01001_049E']
+    )
     age_df['Age_18_64'] = age_df['B01001_001E'] - (age_df['Age_0_17'] + age_df['Age_65_plus'])
     age_df['p_Age_0_17'] = age_df['Age_0_17'] / age_df['B01001_001E']
     age_df['p_Age_18_64'] = age_df['Age_18_64'] / age_df['B01001_001E']
@@ -142,10 +152,12 @@ def load_age_data(api_key):
     age_df = age_df[['NAME', 'state', 'p_Age_0_17', 'p_Age_18_64', 'p_Age_65_plus']]
     return age_df
 
-def load_income_data(api_key):
+def load_income_data(api_key: str) -> pd.DataFrame:
     base_url = 'https://api.census.gov/data/2019/acs/acs5'
-    variables = ['NAME', 'B19001_001E', 'B19001_002E', 'B19001_003E', 'B19001_004E',
-                 'B19001_005E', 'B19001_006E', 'B19001_007E', 'B19001_008E', 'B19001_009E']
+    variables = [
+        'NAME', 'B19001_001E', 'B19001_002E', 'B19001_003E', 'B19001_004E',
+        'B19001_005E', 'B19001_006E', 'B19001_007E', 'B19001_008E', 'B19001_009E'
+    ]
     url = f"{base_url}?get={','.join(variables)}&for=state:*&key={api_key}"
     response = requests.get(url)
     if response.status_code != 200:
@@ -164,7 +176,7 @@ def load_income_data(api_key):
     inc_df = inc_df[['NAME', 'state', 'p_LowIncome', 'p_MediumIncome', 'p_HighIncome']]
     return inc_df
 
-def load_ses_data(api_key):
+def load_ses_data(api_key: str) -> pd.DataFrame:
     base_url = 'https://api.census.gov/data/2019/acs/acs5'
     variables = ['NAME', 'B17001_001E', 'B17001_002E']
     url = f"{base_url}?get={','.join(variables)}&for=state:*&key={api_key}"
@@ -182,37 +194,59 @@ def load_ses_data(api_key):
     ses_df = ses_df[['NAME', 'state', 'p_LowSES', 'p_MiddleSES', 'p_HighSES']]
     return ses_df
 
-def load_occupation_data(api_key):
-    base_url = 'https://api.census.gov/data/2019/acs/acs5'
-    variables = ['NAME', 'C24050_001E', 'C24050_002E', 'C24050_003E', 
-                 'C24050_004E', 'C24050_005E', 'C24050_006E', 'C24050_007E']
-    url = f"{base_url}?get={','.join(variables)}&for=state:*&key={api_key}"
-    response = requests.get(url)
-    if response.status_code != 200:
-        raise Exception("Error fetching occupation data from Census API.")
+def load_occupation_data(api_key: str) -> pd.DataFrame:
+    """
+    Fetch state-level occupation data from the Census API (ACS 2019 5-year, group C24050).
+    Returns a DataFrame with columns ["NAME", "state", p_Management, p_Service, p_Sales, p_NaturalResources, p_Production].
+    """
+    # Map each short label to the appropriate code
+    occupation_codes = {
+        "Total Employed": "C24050_001E",
+        "Management": "C24050_015E",
+        "Service": "C24050_029E",
+        "Sales": "C24050_043E",
+        "NaturalResources": "C24050_057E",
+        "Production": "C24050_071E"
+    }
+
+    fields = ",".join(["NAME"] + list(occupation_codes.values()))
+    base_url = "https://api.census.gov/data/2019/acs/acs5"
+    query_url = f"{base_url}?get={fields}&for=state:*&key={api_key}"
+
+    response = requests.get(query_url)
+    response.raise_for_status()
     data = response.json()
     occ_df = pd.DataFrame(data[1:], columns=data[0])
-    for col in variables[1:]:
-        occ_df[col] = pd.to_numeric(occ_df[col])
-    occ_df['p_Management'] = occ_df['C24050_002E'] / occ_df['C24050_001E']
-    occ_df['p_Professional'] = occ_df['C24050_003E'] / occ_df['C24050_001E']
-    occ_df['p_Service'] = occ_df['C24050_004E'] / occ_df['C24050_001E']
-    occ_df['p_Sales'] = occ_df['C24050_005E'] / occ_df['C24050_001E']
-    occ_df['p_NaturalResources'] = occ_df['C24050_006E'] / occ_df['C24050_001E']
-    occ_df['p_Production'] = occ_df['C24050_007E'] / occ_df['C24050_001E']
-    occ_df = occ_df[['NAME', 'state', 'p_Management', 'p_Professional', 'p_Service', 
-                     'p_Sales', 'p_NaturalResources', 'p_Production']]
+
+    for code in occupation_codes.values():
+        if code == "C24050_001E":
+            continue
+        occ_df[code] = pd.to_numeric(occ_df[code])
+
+    total_col = occupation_codes["Total Employed"]
+    occ_df[total_col] = pd.to_numeric(occ_df[total_col])
+
+    # Create p_ columns
+    for category, code in occupation_codes.items():
+        if category == "Total Employed":
+            continue
+        occ_df[f"p_{category}"] = occ_df[code] / occ_df[total_col]
+
+    keep_cols = ["NAME", "state"] + [
+        f"p_{cat}" for cat in occupation_codes if cat != "Total Employed"
+    ]
+    occ_df = occ_df[keep_cols]
     return occ_df
 
 # ---------------------------
 # 2. Merging and Processing Functions
 # ---------------------------
-def compute_conditional_gender_distribution(df):
+def compute_conditional_gender_distribution(df: pd.DataFrame) -> pd.DataFrame:
     df['p_male'] = df['B01001_002E'] / df['B01001_001E']
     df['p_female'] = df['B01001_026E'] / df['B01001_001E']
     return df
 
-def merge_ethnicity_data(census_df, eth_df):
+def merge_ethnicity_data(census_df: pd.DataFrame, eth_df: pd.DataFrame) -> pd.DataFrame:
     merged = pd.merge(census_df, eth_df, on=["NAME", "state"])
     # Compute Hispanic or Latino as Total minus Not Hispanic/Latino
     merged['eth_Hispanic'] = merged['B03002_001E'] - merged['B03002_002E']
@@ -223,20 +257,22 @@ def merge_ethnicity_data(census_df, eth_df):
     merged['eth_NHPI']     = merged['B03002_007E']
     merged['eth_Other']    = merged['B03002_008E'] + merged['B03002_009E']
     merged['eth_total'] = merged['B03002_001E']
-    for col in ['eth_Hispanic','eth_White','eth_Black','eth_AIAN','eth_Asian','eth_NHPI','eth_Other']:
+    for col in [
+        'eth_Hispanic','eth_White','eth_Black','eth_AIAN','eth_Asian','eth_NHPI','eth_Other'
+    ]:
         merged[f"p_{col}"] = merged[col] / merged['eth_total']
     return merged
 
-def merge_education_data(merged_df, edu_df):
+def merge_education_data(merged_df: pd.DataFrame, edu_df: pd.DataFrame) -> pd.DataFrame:
     return pd.merge(merged_df, edu_df, on=["NAME", "state"])
 
-def merge_language_data(merged_df, lang_df):
+def merge_language_data(merged_df: pd.DataFrame, lang_df: pd.DataFrame) -> pd.DataFrame:
     return pd.merge(merged_df, lang_df, on=["NAME", "state"])
 
 # ---------------------------
 # Bucket functions for continuous attributes
 # ---------------------------
-def bucket_age(age):
+def bucket_age(age: float) -> str:
     if age < 18:
         return "0-17"
     elif age < 65:
@@ -244,7 +280,7 @@ def bucket_age(age):
     else:
         return "65+"
 
-def bucket_income(income):
+def bucket_income(income: float) -> str:
     if income < 30000:
         return "Low Income"
     elif income < 75000:
@@ -252,12 +288,11 @@ def bucket_income(income):
     else:
         return "High Income"
 
-def bucket_ses(ses):
-    if ses in ["Low SES", "Middle SES", "High SES"]:
-        return ses
-    if ses < 0.33:
+def bucket_ses(ses_val: float) -> str:
+    """Used as a fallback if a direct category label doesn't exist."""
+    if ses_val < 0.33:
         return "Low SES"
-    elif ses < 0.66:
+    elif ses_val < 0.66:
         return "Middle SES"
     else:
         return "High SES"
@@ -265,7 +300,7 @@ def bucket_ses(ses):
 # ---------------------------
 # 3. Synthetic Population Sampling Functions
 # ---------------------------
-def sample_state_personas(state_row, n):
+def sample_state_personas(state_row: pd.Series, n: int) -> pd.DataFrame:
     state_name = state_row["NAME"]
     records = []
     for _ in range(n):
@@ -287,8 +322,10 @@ def sample_state_personas(state_row, n):
         ])
         ethnicity = np.random.choice(eth_categories, p=eth_probs/eth_probs.sum())
         # Education
-        edu_categories = ["Less than High School", "High School Graduate",
-                          "Some College/Associate's", "Bachelor's or Higher"]
+        edu_categories = [
+            "Less than High School", "High School Graduate",
+            "Some College/Associate's", "Bachelor's or Higher"
+        ]
         edu_probs = np.array([
             state_row['p_LessThanHS'],
             state_row['p_HighSchool'],
@@ -311,7 +348,11 @@ def sample_state_personas(state_row, n):
         age = int(round(age_cont))
         # Income: sample continuous income from a bucket range
         income_categories = ["Low Income", "Medium Income", "High Income"]
-        income_probs = np.array([state_row['p_LowIncome'], state_row['p_MediumIncome'], state_row['p_HighIncome']])
+        income_probs = np.array([
+            state_row['p_LowIncome'],
+            state_row['p_MediumIncome'],
+            state_row['p_HighIncome']
+        ])
         income_bucket = np.random.choice(income_categories, p=income_probs/income_probs.sum())
         if income_bucket == "Low Income":
             income = np.random.uniform(0, 30000)
@@ -323,21 +364,23 @@ def sample_state_personas(state_row, n):
         p_low = state_row['p_LowSES']
         p_middle = state_row['p_MiddleSES']
         p_high = state_row['p_HighSES']
-        ses = np.random.choice(["Low SES", "Middle SES", "High SES"], p=[p_low, p_middle, p_high])
+        ses = np.random.choice(
+            ["Low SES", "Middle SES", "High SES"],
+            p=[p_low, p_middle, p_high]
+        )
         # Occupation
-        occ_categories = ["Management", "Professional", "Service", "Sales", "NaturalResources", "Production"]
+        occ_categories = ["Management", "Service", "Sales", "NaturalResources", "Production"]
         occ_probs = np.array([
-            state_row['p_Management'],
-            state_row['p_Professional'],
-            state_row['p_Service'],
-            state_row['p_Sales'],
-            state_row['p_NaturalResources'],
-            state_row['p_Production']
+            state_row["p_Management"],
+            state_row["p_Service"],
+            state_row["p_Sales"],
+            state_row["p_NaturalResources"],
+            state_row["p_Production"]
         ])
-        occupation = np.random.choice(occ_categories, p=occ_probs/occ_probs.sum())
+        occupation = np.random.choice(occ_categories, p=occ_probs / occ_probs.sum())
         # UrbanRural (placeholder)
         urbanrural = "Urban"
-        
+
         record = {
             'State': state_name,
             'Gender': gender,
@@ -353,7 +396,7 @@ def sample_state_personas(state_row, n):
         records.append(record)
     return pd.DataFrame(records)
 
-def sample_synthetic_population(merged_df, N):
+def sample_synthetic_population(merged_df: pd.DataFrame, N: int) -> pd.DataFrame:
     print(f"Merged_df has {len(merged_df)} rows. Sample states: {merged_df['NAME'].head().tolist()}")
     state_population = merged_df['B01001_001E']
     state_probs = state_population / state_population.sum()
@@ -371,13 +414,20 @@ def sample_synthetic_population(merged_df, N):
         synthetic_data.append(record_df)
     if synthetic_data:
         return pd.concat(synthetic_data, ignore_index=True)
-    else:
-        return pd.DataFrame()
+    return pd.DataFrame()
 
 # ---------------------------
 # 4. Vectorized IPF-Based Calibration (Per-State)
 # ---------------------------
-def calibrate_state_ipf(state_synth, state_target, state_name, attr_map, tol=0.001, max_iterations=100, damping=0.2):
+def calibrate_state_ipf(
+    state_synth: pd.DataFrame,
+    state_target: pd.Series,
+    state_name: str,
+    attr_map: dict,
+    tol: float = 0.001,
+    max_iterations: int = 100,
+    damping: float = 0.2
+) -> (pd.DataFrame, list):
     """
     Calibrates synthetic records for a single state using a vectorized IPF update.
     A damping factor is applied to avoid overshooting.
@@ -386,26 +436,24 @@ def calibrate_state_ipf(state_synth, state_target, state_name, attr_map, tol=0.0
     n = len(state_synth)
     w = np.ones(n)
     optimization_log = []
-    state_name = state_target["NAME"]
     eps = 1e-12
     attributes = list(attr_map.keys())
 
-    # Bucketing functions for continuous attributes
-    def ipf_bucket_age(age_array):
+    def ipf_bucket_age(age_array: np.ndarray) -> np.ndarray:
         buckets = np.empty(age_array.shape, dtype=object)
         buckets[age_array < 18] = "0-17"
         buckets[(age_array >= 18) & (age_array < 65)] = "18-64"
         buckets[age_array >= 65] = "65+"
         return buckets
 
-    def ipf_bucket_income(income_array):
+    def ipf_bucket_income(income_array: np.ndarray) -> np.ndarray:
         buckets = np.empty(income_array.shape, dtype=object)
         buckets[income_array < 30000] = "Low Income"
         buckets[(income_array >= 30000) & (income_array < 75000)] = "Medium Income"
         buckets[income_array >= 75000] = "High Income"
         return buckets
 
-    for iteration in tqdm(range(max_iterations), desc=state_name):
+    for iteration in tqdm(range(max_iterations), desc=str(state_name)):
         max_diffs = []
         for attr in attributes:
             if attr == "Age":
@@ -424,11 +472,19 @@ def calibrate_state_ipf(state_synth, state_target, state_name, attr_map, tol=0.0
                 group_sum = np.dot(mask, w)
                 current_prop = group_sum / total_w
 
-                lower_bound = 0.1 if attr == "Ethnicity" else 0.5
-                factors = np.divide(target_arr, current_prop, out=np.ones_like(target_arr), where=(current_prop > eps))
+                # Example of bounding (adjust as needed)
+                lower_bound = 0.01
+                factors = np.divide(
+                    target_arr,
+                    current_prop,
+                    out=np.ones_like(target_arr),
+                    where=(current_prop > eps)
+                )
                 factors = np.clip(factors, lower_bound, 2.0)
+
                 for j in range(len(categories_valid)):
                     w[mask[j]] *= (1 + damping * (factors[j] - 1))
+
                 diff_attr = np.max(np.abs(current_prop - target_arr))
                 max_diffs.append(diff_attr)
                 optimization_log.append({
@@ -454,7 +510,14 @@ def calibrate_state_ipf(state_synth, state_target, state_name, attr_map, tol=0.0
     calibrated_state = state_synth.iloc[resample_idx].drop(columns=["weight"])
     return calibrated_state, optimization_log
 
-def enforce_conditional_attributes_ipf(synth_df, merged_df, attr_map, tol=0.001, max_iterations=100, damping=0.2):
+def enforce_conditional_attributes_ipf(
+    synth_df: pd.DataFrame,
+    merged_df: pd.DataFrame,
+    attr_map: dict,
+    tol: float = 0.001,
+    max_iterations: int = 100,
+    damping: float = 0.2
+) -> (pd.DataFrame, list):
     calibrated_records = []
     optimization_logs = []
     for state in merged_df['NAME'].unique():
@@ -462,15 +525,23 @@ def enforce_conditional_attributes_ipf(synth_df, merged_df, attr_map, tol=0.001,
         state_synth = synth_df[synth_df['State'] == state]
         if len(state_synth) == 0:
             continue
-        calibrated, opt_log = calibrate_state_ipf(state_synth, state_target, state, attr_map, tol, max_iterations, damping)
+        calibrated, opt_log = calibrate_state_ipf(
+            state_synth, state_target, state, attr_map,
+            tol=tol, max_iterations=max_iterations, damping=damping
+        )
         calibrated_records.append(calibrated)
         optimization_logs.extend(opt_log)
     if calibrated_records:
         return pd.concat(calibrated_records, ignore_index=True), optimization_logs
-    else:
-        return pd.DataFrame(), optimization_logs
+    return pd.DataFrame(), optimization_logs
 
-def test_conditional_attributes(synth_df, merged_df, attr_map, tol=0.001, min_samples=1):
+def test_conditional_attributes(
+    synth_df: pd.DataFrame,
+    merged_df: pd.DataFrame,
+    attr_map: dict,
+    tol: float = 0.001,
+    min_samples: int = 1
+) -> None:
     for state in merged_df['NAME'].unique():
         subset = synth_df[synth_df['State'] == state]
         print(f"Testing state: {state}, count: {len(subset)}")
@@ -499,7 +570,7 @@ def test_conditional_attributes(synth_df, merged_df, attr_map, tol=0.001, min_sa
 # ---------------------------
 # 5. Overall Verification Function
 # ---------------------------
-def verify_population(synth_df, census_df):
+def verify_population(synth_df: pd.DataFrame, census_df: pd.DataFrame) -> None:
     print("=== Synthetic Population Verification ===\n")
     print("Gender Distribution (Synthetic):")
     print(synth_df['Gender'].value_counts(normalize=True))
@@ -514,53 +585,54 @@ def verify_population(synth_df, census_df):
 # ---------------------------
 # 6. Main Execution
 # ---------------------------
-
 @click.command()
 @click.option('--n', default=10000, help='Number of individuals in the synthetic population.')
-def main(n: int):
-    api_key = "PUT_API_KEY_HERE"
-    
+def main(n: int) -> None:
+    api_key = ""
+
     print("Loading basic Census data...")
     census_df = load_census_data(api_key)
     census_df = compute_conditional_gender_distribution(census_df)
-    
+
     print("Loading Ethnicity data...")
     eth_df = load_ethnicity_data(api_key)
     merged_df = merge_ethnicity_data(census_df, eth_df)
-    
+
     print("Loading Education data...")
     edu_df = load_education_data(api_key)
     merged_df = merge_education_data(merged_df, edu_df)
-    
+
     print("Loading Language data...")
     lang_df = load_language_data(api_key)
     merged_df = merge_language_data(merged_df, lang_df)
-    
+
     print("Loading Age data...")
     age_df = load_age_data(api_key)
     merged_df = pd.merge(merged_df, age_df, on=["NAME", "state"])
-    
+
     print("Loading Income data...")
     inc_df = load_income_data(api_key)
     merged_df = pd.merge(merged_df, inc_df, on=["NAME", "state"])
-    
+
     print("Loading SES data...")
     ses_df = load_ses_data(api_key)
     merged_df = pd.merge(merged_df, ses_df, on=["NAME", "state"])
-    
+
     print("Loading Occupation data...")
     occ_df = load_occupation_data(api_key)
     merged_df = pd.merge(merged_df, occ_df, on=["NAME", "state"])
-    
+
     print(f"Generating synthetic population of {n} individuals...")
     synthetic_population = sample_synthetic_population(merged_df, n)
-    
+
+    # Force income to 0 for <17 year old individuals (before IPF calibration).
+    synthetic_population.loc[synthetic_population["Age"] < 17, "Income"] = 0
+
     print("\nSample of Synthetic Population:")
     print(synthetic_population.head())
-    
+
     verify_population(synthetic_population, census_df)
-    
-    # Define the IPF attribute map (DISABILITY removed)
+
     attr_map = {
         "Gender": {
             "Male": "p_male",
@@ -603,29 +675,32 @@ def main(n: int):
         },
         "Occupation": {
             "Management": "p_Management",
-            "Professional": "p_Professional",
             "Service": "p_Service",
             "Sales": "p_Sales",
             "NaturalResources": "p_NaturalResources",
             "Production": "p_Production"
         },
+        # Currently no direct mapping for "UrbanRural" in the Census data
         "UrbanRural": {
             "Urban": None,
             "Rural": None
         }
     }
-    
+
     print("\n--- Conditional Attribute Distribution Before IPF Calibration ---")
     test_conditional_attributes(synthetic_population, merged_df, attr_map, tol=0.001, min_samples=1)
-    
-    synthetic_population, opt_logs = enforce_conditional_attributes_ipf(synthetic_population, merged_df, attr_map, tol=0.001, max_iterations=10, damping=0.2)
-    
+
+    synthetic_population, opt_logs = enforce_conditional_attributes_ipf(
+        synthetic_population, merged_df, attr_map,
+        tol=0.001, max_iterations=10, damping=0.2
+    )
+
     print("\n--- Conditional Attribute Distribution After IPF Calibration ---")
     test_conditional_attributes(synthetic_population, merged_df, attr_map, tol=0.001, min_samples=1)
-    
+
     synthetic_population.to_csv("synthetic_population.csv", index=False)
     print("\nSynthetic population written to synthetic_population.csv")
-    
+
     opt_df = pd.DataFrame(opt_logs)
     opt_df["IsFinal"] = opt_df.groupby("State")["Iteration"].transform(max) == opt_df["Iteration"]
     opt_df.to_csv("optimization.csv", index=False)
