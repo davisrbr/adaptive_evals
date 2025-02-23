@@ -1,4 +1,6 @@
+import csv
 from typing import List
+from inspect_ai.log import read_eval_log
 from torch.nn.functional import cosine_similarity
 from inspect_ai.scorer import Score, ScoreReducer, score_reducer
 import logging
@@ -17,7 +19,7 @@ def novelty_scorer(
 ) -> float:
     """
     Computes the novelty score of the generated question compared to existing questions.
-    Returns the maximum similarity score if using embeddings, or a boolean if not using embeddings.
+    Returns the maximum similarity score if using embeddings, or a normalized similarity ratio if not.
     """
 
     if use_embeddings and embedding_model is not None and existing_question_embeddings is not None:
@@ -67,14 +69,12 @@ def novelty_filter_matrix_reducer(
       5) If any similarity >= similarity_threshold, apply domain logic to remove duplicates:
           - If one is scored as incorrect (INCORRECT) and the other is not, remove the incorrect one.
           - If both are incorrect or both are correct, remove the second (j).
-      6) Return a single Score whose value is the final number of distinct questions after filtering.
-
-    Args:
-        embeddings_model_name: The SentenceTransformer model to load for embeddings.
-        similarity_threshold: Threshold above which two questions are considered duplicates.
-
-    Returns:
-        ScoreReducer: A reducer that performs novelty filtering and returns a single Score.
+          * Additionally, record the question that caused the failure.
+      6) Return a single Score whose value is the final novelty score,
+         with metadata containing:
+           - "selected_indices": indices kept,
+           - "removed_indices": indices removed,
+           - "failed_mapping": dictionary mapping removed index to the candidate index it failed on.
     """
     from sentence_transformers import SentenceTransformer
 
@@ -94,9 +94,17 @@ def novelty_filter_matrix_reducer(
             generated_sample = s.metadata.get("generated_sample", None)
             if not generated_sample:
                 continue
-            # Combine the question with its choices
-            question_part = generated_sample.input.strip()
-            choices_part = " | ".join(generated_sample.choices)
+            # Check whether generated_sample is an object with attributes or a dict.
+            if hasattr(generated_sample, "input"):
+                question_part = generated_sample.input.strip()
+                choices = generated_sample.choices
+            elif isinstance(generated_sample, dict):
+                question_part = generated_sample.get("input", "").strip()
+                choices = generated_sample.get("choices", [])
+            else:
+                continue
+
+            choices_part = " | ".join(choices)
             combined_str = f"Q: {question_part}\nChoices: {choices_part}"
 
             # Mark if score is INCORRECT
@@ -117,8 +125,9 @@ def novelty_filter_matrix_reducer(
 
         removed_indices = set()
         selected_indices = []
+        failed_mapping = {}  # Maps index of removed candidate -> index that caused the failure
 
-        # 5) deduplicate by removing similar pairs
+        # 5) Deduplicate by removing similar pairs and record the failing candidate
         for i in range(len(combined_texts)):
             if i in removed_indices:
                 continue
@@ -127,18 +136,19 @@ def novelty_filter_matrix_reducer(
                 if j in removed_indices:
                     continue
                 if similarities[i, j] >= similarity_threshold:
-                    # If i is incorrect and j is not, remove j
+                    # If i is incorrect and j is not, remove j.
                     if incorrect_flags[i] and not incorrect_flags[j]:
                         removed_indices.add(j)
-                    # If j is incorrect and i is not, remove i
+                        failed_mapping[j] = i
+                    # If j is incorrect and i is not, remove i.
                     elif incorrect_flags[j] and not incorrect_flags[i]:
                         removed_indices.add(i)
+                        failed_mapping[i] = j
                         break
-                    # Otherwise remove j (both correct or both incorrect)
                     else:
                         removed_indices.add(j)
+                        failed_mapping[j] = i
 
-            # If i was removed during adjacency checks, remove it from selection
             if i in removed_indices and i in selected_indices:
                 selected_indices.remove(i)
 
@@ -148,7 +158,6 @@ def novelty_filter_matrix_reducer(
             f"Novelty matrix filter reduced from {len(combined_texts)} to {len(selected_indices)} (threshold={similarity_threshold})."
         )
 
-        # 6) Return a single score reflecting the final count.
         return Score(
             value=accuracy,
             explanation=f"Novelty matrix filter reduced from {len(combined_texts)} to {len(selected_indices)} (threshold={similarity_threshold}).",
@@ -156,6 +165,7 @@ def novelty_filter_matrix_reducer(
                 "similarity_matrix": similarities,
                 "selected_indices": selected_indices,
                 "removed_indices": removed_indices,
+                "failed_mapping": failed_mapping,
             },
         )
 
@@ -182,7 +192,7 @@ def novelty_filter_judged_only(
         judged_scores = []
         other_scores = []
         for s in scores:
-            if s.metadata.get("scorer_id") == scorer_id:
+            if s.metadata and s.metadata.get("scorer_id") == scorer_id:
                 judged_scores.append(s)
             else:
                 other_scores.append(s)
@@ -204,3 +214,82 @@ def novelty_filter_judged_only(
         )
 
     return reduce
+
+def write_novelty_results(
+    adaptive_log_path: str,
+    embeddings_model_name: str,
+    similarity_threshold: float,
+    output_file: str,
+    use_embeddings: bool = False,
+) -> str:
+    """
+    Applies the novelty filter on the generated questions from the adaptive log and writes
+    the per-question novelty check results to a CSV file.
+
+    Each row in the CSV will contain:
+      - index, question text, result ("Pass" if kept, "Fail" if removed),
+      - and, if applicable, the question it failed on.
+    Returns the output_file path.
+    """
+    eval_log = read_eval_log(adaptive_log_path)
+    candidate_scores = []
+    for sample in eval_log.samples:
+        gen_sample = sample.store.get("generated_sample")
+        if not gen_sample:
+            continue
+        candidate_scores.append(
+            Score(value=CORRECT, metadata={"generated_sample": gen_sample})
+        )
+
+    if not candidate_scores:
+        with open(output_file, "w") as f:
+            f.write("No generated samples found\n")
+        return output_file
+
+    reducer_fn = novelty_filter_matrix_reducer(
+        embeddings_model_name=embeddings_model_name,
+        similarity_threshold=similarity_threshold,
+    )
+    novelty_result = reducer_fn(candidate_scores)
+    selected = set(novelty_result.metadata.get("selected_indices", []))
+    failed_mapping = novelty_result.metadata.get("failed_mapping", {})
+
+    with open(output_file, "w", newline="") as f:
+        fieldnames = ["index", "question", "result", "failed_on"]
+        # Force all fields to be quoted to prevent multi-line texts from breaking the CSV format.
+        writer = csv.DictWriter(f, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
+        writer.writeheader()
+        for idx, score_obj in enumerate(candidate_scores):
+            gen_sample = score_obj.metadata.get("generated_sample")
+            if hasattr(gen_sample, "input"):
+                question_text = gen_sample.input
+            elif isinstance(gen_sample, dict):
+                question_text = gen_sample.get("input", "")
+                question_text += "\nChoices: " + " | ".join(gen_sample.get("choices", []))
+            else:
+                question_text = ""
+            if idx in selected:
+                result = "Pass"
+                failed_on = ""
+            else:
+                result = "Fail"
+                # Use the mapping to get the index that caused the failure.
+                ref_idx = failed_mapping.get(idx, None)
+                if ref_idx is not None:
+                    ref_sample = candidate_scores[ref_idx].metadata.get("generated_sample")
+                    if hasattr(ref_sample, "input"):
+                        failed_on = ref_sample.input
+                    elif isinstance(ref_sample, dict):
+                        failed_on = ref_sample.get("input", "")
+                        failed_on += "\nChoices: " + " | ".join(ref_sample.get("choices", []))
+                    else:
+                        failed_on = ""
+                else:
+                    failed_on = ""
+            writer.writerow({
+                "index": idx,
+                "question": question_text,
+                "result": result,
+                "failed_on": failed_on
+            })
+    return output_file

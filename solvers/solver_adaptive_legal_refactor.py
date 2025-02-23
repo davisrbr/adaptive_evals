@@ -5,12 +5,17 @@ from inspect_ai.solver import solver
 from inspect_ai.solver import Generate, TaskState
 from inspect_ai.solver._multiple_choice import SINGLE_ANSWER_TEMPLATE, SINGLE_ANSWER_TEMPLATE_COT
 from prompting.adaptive_prompts import get_self_check_judge_prompt, parse_self_check_response
-from solvers.adaptive_utils import check_with_self_and_eval, normalize_target, parse_eval_answer, parse_log_and_sample
+from solvers.adaptive_utils import check_with_self_and_eval, final_eval_check_and_store, generate_question_with_retries, parse_log_and_sample
 import json
 import re
 import logging
 
 logger = logging.getLogger(__name__)
+
+
+CUSTOM_SINGLE_ANSWER_TEMPLATE = "Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of letters."
+CUSTOM_SINGLE_ANSWER_TEMPLATE_COT = "Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of letters. Think step by step before answering."
+
 
 def parse_generated_legal_question(generated_text: str, placeholder_keys: List[str]) -> Optional[Sample]:
     """
@@ -63,13 +68,19 @@ def build_legal_context(
     Builds the legal context string from sampled examples.
     """
     context_examples = ""
-    for sample_item in sampled_correct + sampled_incorrect:
+    for idx, sample_item in enumerate(sampled_correct + sampled_incorrect):
         if not randomize_sampling:
             status = "Correctly" if sample_item in sampled_correct else "Incorrectly"
         else:
             status = "Previously"
             
-        sample_data = sample_item.input
+        # show the long initial prompt only for first example, and the other questions for other examples
+        # this works for maud_* tasks
+        if idx == 0:
+            sample_data = sample_item.input
+        else:
+            sample_data = sample_item.metadata["base_text"]
+
         sample_data = json.dumps(sample_data)
         
         context_examples += f"{status} Answered Example:\n"
@@ -88,16 +99,17 @@ def get_legal_generation_prompt(
     context: str,
     placeholder_keys: List[str],
     use_cot_generator: bool = False,
+    include_previous_reasoning: bool = False,
 ) -> str:
     """
     Constructs the generation prompt for legal questions.
     """
     if use_cot_generator:
         json_format = '{"reasoning_for_question": [REASONING], "text": [TEXT], "reasoning_for_answer": [REASONING], "answer": [ANSWER]}'
-        reasoning_prompt = ("'reasoning_for_question' is your step by step reasoning for the question, (for example, "
+        reasoning_prompt = ("'reasoning_for_question' is your step by step reasoning for the question: **Please make this reasoning as long and detailed as possible, we would like to really find model specific errors**, (for example, "
                           "'The model seems to have been confused about the relative importance of the clauses of the statute, "
-                          "and has interpreted them incorrectly; I will make a similar question but have a different clause "
-                          "emphasized in my invented document'), 'reasoning_for_answer' is your step by step reasoning for the "
+                          "and has interpreted them incorrectly; in particular [...] I will make a similar question but have a different clause, [...] because [...],"
+                          "emphasized in my invented document'. ), 'reasoning_for_answer' is your step by step reasoning for the "
                           "answer, here you should explain why the answer to your constructed question is correct (for example, "
                           "'Because the question asks about statute A during time period B, the correct answer is clause A during "
                           "time period B instead of statute X during time period Y')")
@@ -116,12 +128,14 @@ def get_legal_generation_prompt(
         f"- Output the result as a JSON object with keys corresponding to the placeholders.\n"
         f"- Ensure that the 'answer' key is included and contains the correct answer.\n"
         f"- Do not include any additional text outside the JSON object.\n\n"
-        f"{context}\n"
-        f"Now, generate a new data sample. Again, note that you are to make this question extremely difficult to answer correctly. "
         f"Consider the examples provided, and how they might have caused the model to incorrectly answer the question. "
         f"Make your question more like the examples that were answered incorrectly, but make sure that it is distinct from the examples provided. "
         f"Your goal is to understand why the failure modes of the model in the incorrectly answered examples, and to use this failure model to construct a new difficult question.\n\n"
-        f"Please format your JSON like {json_format}, where {reasoning_prompt}[TEXT] is the full text of the question, including all details "
+        f"The failure modes of the model should be very specific, generalizing across the examples provided in order to inform the construction of a new question."
+        f"Here are some questions that the model has answered, with reasoning traces that you should use to inform your failure mode analysis and question construction. Note that when you generate your question, you will have to include all relevant legal text to answer the question (like the first example provided):\n"
+        f"{context}\n"
+        f"Now, generate a new data sample. Again, note that you are to make this question extremely difficult to answer correctly. "
+        f"Please format your JSON like {json_format}, where {reasoning_prompt}[TEXT] is the full text of the question, including all details. That is, you will have to include all relevant legal text to answer the question (like the first example provided above)."
         f"(like documents, etc., but not including the letter of the answer-- do not, under any circumstances, include the letter of the answer in the text field) "
         f"and [ANSWER] is the letter of the correct answer to the question. Do not prepend or append anything to your JSON, just the brackets and the keys and values. "
         f"Please be sure to include all {4 if use_cot_generator else 2} keys in the JSON."
@@ -152,10 +166,13 @@ def adaptive_legal_solver_refactor(
     max_attempts: int = 30,
     use_eval_model_for_checker: bool = False,
     original_eval_model_name: Optional[str] = None,
+    include_previous_reasoning: bool = False,
+    previous_reasoning_limit: int = 0,
 ) -> Generate:
     """
     Refactored adaptive solver for legal questions.
     """
+
     async def solve(state: TaskState, generate: Generate) -> TaskState:
         if "generated_sample" in state.store:
             state.completed = True
@@ -168,8 +185,8 @@ def adaptive_legal_solver_refactor(
             prompt_template_path = f"/Users/davisbrown/adaptive_evals/legalbench/tasks/{task_name}/base_prompt.txt"
         else:
             prompt_template_path = f"/Users/davisbrown/adaptive_evals/legalbench/tasks/{task_name}/base_prompt_wo_example.txt"
-            
-        with open(prompt_template_path, 'r') as f:
+
+        with open(prompt_template_path, "r") as f:
             base_prompt = f.read()
 
         placeholder_keys = [key.strip() for key in set(re.findall(r"{{(.*?)}}", base_prompt))]
@@ -186,7 +203,7 @@ def adaptive_legal_solver_refactor(
             randomize_sampling,
             score_key="C",
         )
-        
+
         context = build_legal_context(
             sampled_correct,
             sampled_incorrect,
@@ -222,11 +239,16 @@ def adaptive_legal_solver_refactor(
                 return result.get("score", 0)
 
             def _format_eval_prompt_fn(s: Sample) -> str:
-                multiple_choice_template = SINGLE_ANSWER_TEMPLATE_COT if use_cot_evaluator else SINGLE_ANSWER_TEMPLATE
+                multiple_choice_template = CUSTOM_SINGLE_ANSWER_TEMPLATE_COT if use_cot_evaluator else CUSTOM_SINGLE_ANSWER_TEMPLATE
                 return multiple_choice_template + "\n\n" + s.input
 
+            # Here we mimic solver_adaptive_legal.py: simply check if final model output matches candidate.target
             def _parse_eval_answer_fn(eval_text: str, samp: Sample) -> bool:
-                return parse_eval_answer(eval_text, samp, normalize_target)
+                correct_answer = str(samp.target).strip()
+                model_answer = eval_text.strip()
+                if "ANSWER:" in model_answer:
+                    model_answer = model_answer.split("ANSWER:")[-1].strip()
+                return model_answer == correct_answer
 
             return await check_with_self_and_eval(
                 candidate_sample=candidate,
@@ -242,7 +264,10 @@ def adaptive_legal_solver_refactor(
                 store_chain_of_thought=True,
             )
 
-        def _generation_prompt_fn(ctx: str) -> str:
+        def _generation_prompt_fn(ctx: str, current_attempt: int) -> str:
+            """
+            Builds the final prompt used to generate new questions.
+            """
             return get_legal_generation_prompt(
                 task_name=task_name,
                 context=ctx,
@@ -266,6 +291,8 @@ def adaptive_legal_solver_refactor(
             embedding_model=embedding_model,
             existing_question_embeddings=existing_question_embeddings,
             check_question_fn=accept_question,
+            include_previous_reasoning=include_previous_reasoning,
+            previous_reasoning_limit=previous_reasoning_limit,
         )
 
         if not generated_sample:
@@ -274,14 +301,17 @@ def adaptive_legal_solver_refactor(
             return state
 
         def _format_eval_prompt_fn(s: Sample) -> str:
-            multiple_choice_template = SINGLE_ANSWER_TEMPLATE_COT if use_cot_evaluator else SINGLE_ANSWER_TEMPLATE
+            multiple_choice_template = CUSTOM_SINGLE_ANSWER_TEMPLATE_COT if use_cot_evaluator else CUSTOM_SINGLE_ANSWER_TEMPLATE
             return multiple_choice_template + "\n\n" + s.input
 
         def _parse_eval_answer_fn(eval_text: str, s: Sample) -> bool:
-            return parse_eval_answer(eval_text, s, normalize_target)
+            correct_answer = str(s.target).strip()
+            model_answer = eval_text.strip()
+            if "ANSWER:" in model_answer:
+                model_answer = model_answer.split("ANSWER:")[-1].strip()
+            return model_answer == correct_answer
 
-        # Final evaluation if needed
-        if not use_eval_model_for_checker or generated_sample.metadata.get("score", None) is None:
+        if not use_eval_model_for_checker or generated_sample.metadata.get("score") is None:
             await final_eval_check_and_store(
                 generated_sample,
                 eval_model_name,
@@ -291,10 +321,12 @@ def adaptive_legal_solver_refactor(
             )
 
         state.store.set("generated_sample", generated_sample)
+
         if original_eval_model_name:
             state.store.set("original_eval_model_name", original_eval_model_name)
         else:
             state.store.set("original_eval_model_name", eval_model_name)
+
         state.scores = [generated_sample.metadata["score"]]
         return state
 

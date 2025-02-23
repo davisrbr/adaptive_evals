@@ -9,6 +9,8 @@ from typing import Any, Optional
 import sys
 
 from solvers.adaptive_utils import multiple_choice_save_cot
+from solvers.solver_adaptive_legal_refactor import adaptive_legal_solver_refactor
+from utils_elicitation.novelty import novelty_filter_judged_only
 sys.path.append("..")
 from legalbench.utils import generate_prompts
 
@@ -148,7 +150,7 @@ def legalbench_initial_aggregated(task_names: list[str] = [
                 choices=choices,
                 target=target,
                 id=sample_id,
-                metadata={"task_name": task_name}
+                metadata={"task_name": task_name, "base_text": record["text"]}
             )
 
         # Load the LegalBench dataset for this task
@@ -268,6 +270,126 @@ def adaptive_legal(
         dataset=dataset,
         solver=solver_list,
         scorer=scorer_list,
+    )
+
+@task
+def adaptive_legal_refactor(
+    initial_log_path: str,
+    task_name: str,
+    n_positive_samples: int = 1,
+    n_negative_samples: int = 2,
+    generator_model_name: str = "openai/gpt-4o-mini",
+    eval_model_name: str = "openai/gpt-4o-mini",
+    self_check_model_name: Optional[str] = None,
+    use_embeddings: bool = False,
+    embeddings_model_name: str = "sentence-transformers/all-mpnet-base-v2",
+    similarity_threshold: float = 0.6,
+    score_threshold: int = 4,
+    max_attempts: int = 5,
+    randomize_sampling: bool = False,
+    cot_in_context: bool = False,
+    use_cot_generator: bool = False,
+    use_cot_evaluator: bool = False,
+    use_claude: bool = False,
+    use_example: bool = True,
+    original_eval_model_name: Optional[str] = None,
+    judge_model_name: Optional[str] = None,
+    use_eval_model_for_checker: bool = False,
+    include_previous_reasoning: bool = False,
+    previous_reasoning_limit: int = 0,
+) -> Task:
+    """
+    Refactored adaptive evaluation task for the LegalBench dataset.
+
+    Args:
+        initial_log_path (str): Path to the initial evaluation log.
+        task_name (str): The name of the LegalBench task to evaluate.
+        n_positive_samples (int): Number of correctly answered samples to use for adaptation.
+        n_negative_samples (int): Number of incorrectly answered samples to use for adaptation.
+        generator_model_name (str): Name of the model used to generate new questions.
+        eval_model_name (str): Name of the model used to evaluate the new questions.
+        self_check_model_name (Optional[str]): Name of the model used for self-checking.
+        use_embeddings (bool): Whether to use embeddings for similarity checking.
+        embeddings_model_name (str): Name of the embeddings model to use.
+        similarity_threshold (float): Threshold for similarity checking.
+        score_threshold (int): Minimum score required for acceptance.
+        max_attempts (int): Maximum number of generation attempts.
+        randomize_sampling (bool): Whether to shuffle sample selection.
+        cot_in_context (bool): Whether to include chain of thought in context.
+        use_cot_generator (bool): Whether to use chain of thought for generation.
+        use_cot_evaluator (bool): Whether to use chain of thought for evaluation.
+        use_claude (bool): Whether to use Claude-specific prompts.
+        use_example (bool): Whether to include examples in prompts.
+        original_eval_model_name (Optional[str]): Name of original evaluation model.
+        judge_model_name (Optional[str]): Name of the model used to judge correctness.
+        use_eval_model_for_checker (bool): Whether to use eval model for checking.
+        include_previous_reasoning (bool): Whether to include previous failure mode reasoning traces in context for the generator.
+        previous_reasoning_limit (int): Number of previous failure mode reasoning traces to include in context.
+    """
+    # We'll start with an empty dataset because the solver will populate new samples
+    dataset = MemoryDataset(name="adaptive_legal_refactor", samples=[])
+
+    # Construct the solver list: the main adaptive solver plus (if specified) a judge solver
+    solver_list = [
+        adaptive_legal_solver_refactor(
+            initial_log_path=initial_log_path,
+            task_name=task_name,
+            n_positive_samples=n_positive_samples,
+            n_negative_samples=n_negative_samples,
+            generator_model_name=generator_model_name,
+            eval_model_name=eval_model_name,
+            self_check_model_name=self_check_model_name,
+            use_embeddings=use_embeddings,
+            embeddings_model_name=embeddings_model_name,
+            similarity_threshold=similarity_threshold,
+            score_threshold=score_threshold,
+            max_attempts=max_attempts,
+            randomize_sampling=randomize_sampling,
+            cot_in_context=cot_in_context,
+            use_cot_generator=use_cot_generator,
+            use_cot_evaluator=use_cot_evaluator,
+            use_claude=use_claude,
+            use_example=use_example,
+            original_eval_model_name=original_eval_model_name,
+            use_eval_model_for_checker=use_eval_model_for_checker,
+            include_previous_reasoning=include_previous_reasoning,
+            previous_reasoning_limit=previous_reasoning_limit,
+        ),
+    ]
+
+    # If we have a separate judge model, append the judge solver
+    if judge_model_name:
+        solver_list.append(
+            adaptive_legal_judge_solver(
+                initial_log_path=initial_log_path,
+                judge_model_name=judge_model_name,
+            )
+        )
+
+    # Build up the scorers list
+    scorer_list = [
+        adaptive_legal_scorer(),
+        adaptive_legal_judge_scorer(),
+    ]
+    # If we have a judge model, also include the judged scorer
+    if judge_model_name:
+        scorer_list.append(adaptive_legal_scorer_judged())
+
+    return Task(
+        dataset=dataset,
+        solver=solver_list,
+        scorer=scorer_list,
+        epochs=Epochs(
+            epochs=5,
+            reducer=[
+                "mean",
+                novelty_filter_judged_only(
+                    embeddings_model_name=embeddings_model_name,
+                    similarity_threshold=similarity_threshold,
+                    scorer_id="adaptive_legal_scorer_judged"  # only apply novelty check on final judged scores
+                )
+            ]
+        ),
     )
 
 @task
