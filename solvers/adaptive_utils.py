@@ -191,7 +191,7 @@ async def generate_question_with_retries(
     context: str,
     generator_model_name: str,
     max_attempts: int,
-    generation_prompt_fn: Callable[[str], str],
+    generation_prompt_fn: Callable[[str, int], str],
     parse_question_fn: Callable[[str], Optional[Sample]],
     existing_questions: List[str],
     similarity_threshold: float,
@@ -199,6 +199,8 @@ async def generate_question_with_retries(
     embedding_model: Any,
     existing_question_embeddings: Optional[torch.Tensor],
     check_question_fn: Callable[[Sample], bool],
+    include_previous_reasoning: bool = False,
+    previous_reasoning_limit: int = 0,
 ) -> Optional[Sample]:
     """
     Repeatedly generates a candidate question and checks it against acceptance criteria:
@@ -220,18 +222,40 @@ async def generate_question_with_retries(
     novel_questions = state.store.get("novel_questions", [])
     novel_scores = state.store.get("novel_scores", [])
 
+    # Retrieve or initialize stored completions
+    previous_reasonings: List[str] = state.store.get("previous_generator_completions", [])
+
     for attempt in range(max_attempts):
         logger.debug(f"Attempt {attempt+1} at generating a novel question...")
-        gen_prompt = generation_prompt_fn(context)
-        gen_response = await gen_model.generate(gen_prompt)
-        gen_text = gen_response.completion.strip()
+        extended_context = context
 
-        candidate = parse_question_fn(gen_text)
+        # Insert refine instruction right above where we include the actual previous reasoning
+        if include_previous_reasoning and previous_reasoning_limit > 0 and previous_reasonings:
+            refine_instructions = (
+                "IMPORTANT:\n"
+                "We have some prior attempts or reasoning that didn't succeed in creating a sufficiently hard or novel question. Refine this reasoning, correct it given your new observed patterns, or make it more precise, with the goal of creating a new question that is sufficiently hard and novel.\n\n"
+            )
+            extended_context += "\n\n" + refine_instructions
+
+            relevant_reasonings = previous_reasonings[-previous_reasoning_limit:]
+            extended_context += "### Previous Model Failure Mode Analysis\n"
+            for idx, reasoning_text in enumerate(relevant_reasonings, start=1):
+                extended_context += f"[Failure/Analysis {idx}]:\n{reasoning_text}\n\n"
+
+        # Build prompt using the new function signature with current_attempt
+        gen_prompt = generation_prompt_fn(extended_context, attempt)
+        gen_resp = await gen_model.generate(gen_prompt)
+        generation_text = gen_resp.completion.strip()
+
+        # Record this reasoning for future attempts or references
+        previous_reasonings.append(generation_text)
+        state.store.set("previous_generator_completions", previous_reasonings)
+
+        candidate = parse_question_fn(generation_text)
         if candidate is None:
             logger.debug("Parsing returned None. Retrying...")
             continue
 
-        # Check novelty
         novelty_score = novelty_scorer(
             candidate.input,
             existing_questions,

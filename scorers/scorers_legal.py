@@ -98,15 +98,14 @@ def adaptive_legal_scorer_judged() -> Scorer:
             judge_choice = generated_sample.metadata.get("judge_choice", "")
 
             # If solver claims correct, check judge's verdict
-            if raw_value == "C":
-                # A / B => still correct; other => judge says there's a problem
-                if judge_choice in ["A", "B"]:
+            # A / B => still correct; other => judge says there's a problem
+            if judge_choice in ["A", "B"]:
+                if raw_value == "C":
                     final_value = CORRECT
                 else:
-                    final_value = JUDGE_FILTERED
+                    final_value = INCORRECT
             else:
-                # Solver is incorrect => final is incorrect
-                final_value = INCORRECT
+                final_value = JUDGE_FILTERED
 
             explanation = (
                 "Multiple-choice correctness from adaptive_legal_scorer_judged.\n"
