@@ -297,6 +297,7 @@ def adaptive_legal_refactor(
     use_eval_model_for_checker: bool = False,
     include_previous_reasoning: bool = False,
     previous_reasoning_limit: int = 0,
+    resample_questions: bool = False,
 ) -> Task:
     """
     Refactored adaptive evaluation task for the LegalBench dataset.
@@ -354,6 +355,7 @@ def adaptive_legal_refactor(
             use_eval_model_for_checker=use_eval_model_for_checker,
             include_previous_reasoning=include_previous_reasoning,
             previous_reasoning_limit=previous_reasoning_limit,
+            resample_questions=resample_questions,
         ),
     ]
 

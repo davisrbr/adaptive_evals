@@ -306,6 +306,7 @@ def sample_state_personas(state_row: pd.Series, n: int) -> pd.DataFrame:
     for _ in range(n):
         # Gender
         gender = np.random.choice(['Male', 'Female'], p=[state_row['p_male'], state_row['p_female']])
+        
         # Ethnicity
         eth_categories = [
             "Hispanic or Latino", "White (Non-Hispanic)", "Black (Non-Hispanic)",
@@ -321,22 +322,7 @@ def sample_state_personas(state_row: pd.Series, n: int) -> pd.DataFrame:
             state_row['p_eth_Other']
         ])
         ethnicity = np.random.choice(eth_categories, p=eth_probs/eth_probs.sum())
-        # Education
-        edu_categories = [
-            "Less than High School", "High School Graduate",
-            "Some College/Associate's", "Bachelor's or Higher"
-        ]
-        edu_probs = np.array([
-            state_row['p_LessThanHS'],
-            state_row['p_HighSchool'],
-            state_row['p_SomeCollege'],
-            state_row['p_BachelorsPlus']
-        ])
-        education = np.random.choice(edu_categories, p=edu_probs/edu_probs.sum())
-        # Language
-        lang_categories = ["English Only", "Spanish", "Other"]
-        lang_probs = np.array([state_row['p_English'], state_row['p_Spanish'], state_row['p_Other']])
-        language = np.random.choice(lang_categories, p=lang_probs/lang_probs.sum())
+        
         # Age: sample continuous then round
         r_age = np.random.rand()
         if r_age < state_row['p_Age_0_17']:
@@ -346,20 +332,65 @@ def sample_state_personas(state_row: pd.Series, n: int) -> pd.DataFrame:
         else:
             age_cont = np.random.uniform(65, 100)
         age = int(round(age_cont))
-        # Income: sample continuous income from a bucket range
-        income_categories = ["Low Income", "Medium Income", "High Income"]
-        income_probs = np.array([
-            state_row['p_LowIncome'],
-            state_row['p_MediumIncome'],
-            state_row['p_HighIncome']
-        ])
-        income_bucket = np.random.choice(income_categories, p=income_probs/income_probs.sum())
-        if income_bucket == "Low Income":
-            income = np.random.uniform(0, 30000)
-        elif income_bucket == "Medium Income":
-            income = np.random.uniform(30000, 75000)
+        
+        # Education - adjusted based on age
+        if age < 6:
+            education = "None"
+        elif age < 11:
+            education = "In Elementary School"
+        elif age < 14:
+            education = "In Middle School"
+        elif age < 18:
+            education = "In High School"
         else:
-            income = np.random.uniform(75000, 200000)
+            # For adults, sample from census distribution
+            edu_categories = [
+                "Less than High School", "High School Graduate",
+                "Some College/Associate's", "Bachelor's or Higher"
+            ]
+            edu_probs = np.array([
+                state_row['p_LessThanHS'],
+                state_row['p_HighSchool'],
+                state_row['p_SomeCollege'],
+                state_row['p_BachelorsPlus']
+            ])
+            education = np.random.choice(edu_categories, p=edu_probs/edu_probs.sum())
+        
+        # Language
+        lang_categories = ["English Only", "Spanish", "Other"]
+        lang_probs = np.array([state_row['p_English'], state_row['p_Spanish'], state_row['p_Other']])
+        language = np.random.choice(lang_categories, p=lang_probs/lang_probs.sum())
+        
+        # Income - adjusted based on age and with age-weighted sampling
+        if age < 16:
+            income = 0.0
+        else:
+            # Sample income category
+            income_categories = ["Low Income", "Medium Income", "High Income"]
+            income_probs = np.array([
+                state_row['p_LowIncome'],
+                state_row['p_MediumIncome'],
+                state_row['p_HighIncome']
+            ])
+            income_bucket = np.random.choice(income_categories, p=income_probs/income_probs.sum())
+            
+            # Age-weighted income factor (peaks at age 55)
+            age_factor = 1.0
+            if age < 25:
+                age_factor = 0.5 + (age - 16) * 0.05  # 0.5 to 0.95
+            elif age <= 55:
+                age_factor = 0.95 + (age - 25) * 0.01  # 0.95 to 1.25
+            else:
+                age_factor = 1.25 - (age - 55) * 0.01  # 1.25 down as age increases
+            
+            # Apply age factor to income ranges
+            if income_bucket == "Low Income":
+                income = np.random.uniform(0, 30000) * age_factor
+            elif income_bucket == "Medium Income":
+                income = np.random.uniform(30000, 75000) * age_factor
+            else:
+                income = np.random.uniform(75000, 200000) * age_factor
+        
         # SES: sample discretely based on ACS target proportions for SES.
         p_low = state_row['p_LowSES']
         p_middle = state_row['p_MiddleSES']
@@ -368,19 +399,27 @@ def sample_state_personas(state_row: pd.Series, n: int) -> pd.DataFrame:
             ["Low SES", "Middle SES", "High SES"],
             p=[p_low, p_middle, p_high]
         )
-        # Occupation
-        occ_categories = ["Management", "Service", "Sales", "NaturalResources", "Production"]
-        occ_probs = np.array([
-            state_row["p_Management"],
-            state_row["p_Service"],
-            state_row["p_Sales"],
-            state_row["p_NaturalResources"],
-            state_row["p_Production"]
-        ])
-        occupation = np.random.choice(occ_categories, p=occ_probs / occ_probs.sum())
-        # UrbanRural (placeholder)
-        urbanrural = "Urban"
-
+        
+        # Occupation - adjusted based on age
+        if age < 16:
+            occupation = "Student"
+        else:
+            # For working-age individuals, sample from census distribution
+            occ_categories = ["Management", "Service", "Sales", "NaturalResources", "Production"]
+            occ_probs = np.array([
+                state_row["p_Management"],
+                state_row["p_Service"],
+                state_row["p_Sales"],
+                state_row["p_NaturalResources"],
+                state_row["p_Production"]
+            ])
+            occupation = np.random.choice(occ_categories, p=occ_probs / occ_probs.sum())
+        
+        # UrbanRural - sample from actual distribution instead of hardcoding
+        # Using a reasonable default distribution based on national average
+        urban_rural_probs = [0.8, 0.2]  # ~80% urban nationally
+        urbanrural = np.random.choice(["Urban", "Rural"], p=urban_rural_probs)
+        
         record = {
             'State': state_name,
             'Gender': gender,
@@ -587,8 +626,9 @@ def verify_population(synth_df: pd.DataFrame, census_df: pd.DataFrame) -> None:
 # ---------------------------
 @click.command()
 @click.option('--n', default=10000, help='Number of individuals in the synthetic population.')
-def main(n: int) -> None:
-    api_key = ""
+@click.option('--max-iterations', default=10, help='Maximum number of IPF iterations.')
+def main(n: int, max_iterations: int) -> None:
+    api_key = "71d30e381435ab14088487896a116712ef4b9da2"
 
     print("Loading basic Census data...")
     census_df = load_census_data(api_key)
@@ -692,7 +732,7 @@ def main(n: int) -> None:
 
     synthetic_population, opt_logs = enforce_conditional_attributes_ipf(
         synthetic_population, merged_df, attr_map,
-        tol=0.001, max_iterations=10, damping=0.2
+        tol=0.001, max_iterations=max_iterations, damping=0.2
     )
 
     print("\n--- Conditional Attribute Distribution After IPF Calibration ---")
