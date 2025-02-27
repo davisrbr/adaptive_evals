@@ -8,6 +8,7 @@ import logging
 from inspect_ai.solver import solver
 import torch
 from typing import List, Tuple, Optional, Dict, Any, Callable
+import json
 
 from inspect_ai.dataset import Sample
 from inspect_ai.model import GenerateConfig, get_model
@@ -201,12 +202,19 @@ async def generate_question_with_retries(
     check_question_fn: Callable[[Sample], bool],
     include_previous_reasoning: bool = False,
     previous_reasoning_limit: int = 0,
+    extract_reasoning_and_question_fn: Optional[Callable[[str], Tuple[Optional[str], Optional[Sample]]]] = None,
+    get_current_examples_fn: Optional[Callable[[int], List[str]]] = None,
+    get_current_embeddings_fn: Optional[Callable[[int], Optional[torch.Tensor]]] = None,
 ) -> Optional[Sample]:
     """
     Repeatedly generates a candidate question and checks it against acceptance criteria:
       • Checks parsing
       • Checks novelty
       • Runs acceptance function (self/eval checks)
+
+    Args:
+        get_current_examples_fn: Optional function to get current examples for a specific attempt
+        get_current_embeddings_fn: Optional function to get current embeddings for a specific attempt
 
     Returns:
         The accepted Sample or None if we fail to find one within max_attempts.
@@ -222,46 +230,69 @@ async def generate_question_with_retries(
     novel_questions = state.store.get("novel_questions", [])
     novel_scores = state.store.get("novel_scores", [])
 
-    # Retrieve or initialize stored completions
-    previous_reasonings: List[str] = state.store.get("previous_generator_completions", [])
-
+    # Store extracted reasoning
+    previous_extracted_reasonings: List[str] = state.store.get("previous_extracted_reasonings", [])
+    previous_questions: List[Sample] = state.store.get("previous_questions", [])
     for attempt in range(max_attempts):
         logger.debug(f"Attempt {attempt+1} at generating a novel question...")
         extended_context = context
 
         # Insert refine instruction right above where we include the actual previous reasoning
-        if include_previous_reasoning and previous_reasoning_limit > 0 and previous_reasonings:
+        if include_previous_reasoning and previous_reasoning_limit > 0 and previous_extracted_reasonings:
             refine_instructions = (
-                "IMPORTANT:\n"
-                "We have some prior attempts or reasoning that didn't succeed in creating a sufficiently hard or novel question. Refine this reasoning, correct it given your new observed patterns, or make it more precise, with the goal of creating a new question that is sufficiently hard and novel.\n\n"
+                "Finally, here is some of your prior reasoning for `reasoning_for_question`. This failed to create a hard enough question, so refine this reasoning in your new `reasoning_for_question`-- correct it given your new observed patterns, and make it more precise, with the goal of creating a new question that is sufficiently hard and novel. Your new question reasoning should be longer and more detailed than the previous reasoning.\n\n"
             )
-            extended_context += "\n\n" + refine_instructions
+            example_refine_instructions = (
+                "For example, if the previous reasoning was: \n\n"
+                "reasoning_for_question: The model often struggles with distinguishing between financial and non-financial considerations in merger agreements. [...] \n\n"
+                "You might refine it to: \n\n"
+                "reasoning_for_question: The model often struggles with distinguishing between financial and non-financial considerations in merger agreements when discussed in the context of normal company transactions, for example when considering a bank because it conflates the duties of the banks with the duties of the parties in the merger. [...] \n\n"
+            )
+            extended_context += "\n\n" + refine_instructions + example_refine_instructions
 
-            relevant_reasonings = previous_reasonings[-previous_reasoning_limit:]
-            extended_context += "### Previous Model Failure Mode Analysis\n"
-            for idx, reasoning_text in enumerate(relevant_reasonings, start=1):
-                extended_context += f"[Failure/Analysis {idx}]:\n{reasoning_text}\n\n"
+            extended_context += "### Previous Reasoning to analyze the target model's failure modes:\n"
+            # Use extracted reasoning/previous question if available, otherwise use full completions
+            relevant_reasonings = previous_extracted_reasonings[-previous_reasoning_limit:]
+            relevant_questions = previous_questions[-previous_reasoning_limit:]
+            for idx, (reasoning_text, question) in enumerate(zip(relevant_reasonings, relevant_questions), start=1):
+                extended_context += f"[Previous Question Analysis (not sufficiently difficult) {idx}]:\n{reasoning_text}\n\n"
+                extended_context += f"[Previous Question (not sufficiently difficult) {idx}]:\n{question}\n\n"
 
         # Build prompt using the new function signature with current_attempt
         gen_prompt = generation_prompt_fn(extended_context, attempt)
         gen_resp = await gen_model.generate(gen_prompt)
         generation_text = gen_resp.completion.strip()
-
-        # Record this reasoning for future attempts or references
-        previous_reasonings.append(generation_text)
-        state.store.set("previous_generator_completions", previous_reasonings)
+        
+        # Extract and store reasoning if extraction function is provided
+        if extract_reasoning_and_question_fn:
+            extracted_reasoning, extracted_question = extract_reasoning_and_question_fn(generation_text)
+            if extracted_reasoning:
+                previous_extracted_reasonings.append(extracted_reasoning)
+                state.store.set("previous_extracted_reasonings", previous_extracted_reasonings)
+                previous_questions.append(extracted_question)
+                state.store.set("previous_questions", previous_questions)
 
         candidate = parse_question_fn(generation_text)
         if candidate is None:
             logger.debug("Parsing returned None. Retrying...")
             continue
 
+        # Get current examples and embeddings for this attempt
+        current_examples = existing_questions
+        current_embeddings = existing_question_embeddings
+        
+        if get_current_examples_fn:
+            current_examples = get_current_examples_fn(attempt)
+        
+        if get_current_embeddings_fn and use_embeddings:
+            current_embeddings = get_current_embeddings_fn(attempt)
+
         novelty_score = novelty_scorer(
             candidate.input,
-            existing_questions,
+            current_examples,
             use_embeddings,
             embedding_model=embedding_model,
-            existing_question_embeddings=existing_question_embeddings,
+            existing_question_embeddings=current_embeddings,
         )
         if novelty_score > similarity_threshold:
             logger.debug("Candidate not novel (score=%.3f). Incrementing overlap_count.", novelty_score)
