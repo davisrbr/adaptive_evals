@@ -441,7 +441,7 @@ def cyberbullying_adaptive_solver(
                 pass
 
             # Provide the prompt_text to the target model
-            final_attack_prompt = f"{prompt_text}\n\n(User's attributes or scenario might go here if needed.)"
+            final_attack_prompt = f"{prompt_text}"
             target_response = await target_model.generate([
                 ChatMessageSystem(content=SYSTEM_MESSAGE_TARGET),
                 ChatMessageUser(content=final_attack_prompt),

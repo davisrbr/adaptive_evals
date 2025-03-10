@@ -1,0 +1,3 @@
+[submodule "dataset-featurization"]
+	path = dataset-featurization
+	url = https://github.com/MichalBravansky/dataset-featurization.git
