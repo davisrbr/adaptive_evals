@@ -303,6 +303,7 @@ class TruthfulQAExperimentRunner:
                 log_dir=init_log_dir,
                 model=model_name,
                 log_level="critical",
+                max_messages=1000,
             )
             if not init_logs or init_logs[0].status != "success":
                 print(f"[Initial TQA] No success log for {model_name}, skipping.")

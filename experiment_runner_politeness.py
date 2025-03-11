@@ -199,7 +199,8 @@ class PolitenessExperimentRunner:
                     continue
 
             print(f"[Initial Politeness] Running politeness_n_shot for: {model_name}")
-            task_n_shot = politeness_n_shot(n_examples=5, debug=self.n_datapoints, cot=self.use_cot)
+            # task_n_shot = politeness_n_shot(n_examples=5, debug=self.n_datapoints, cot=self.use_cot)
+            task_n_shot = politeness_n_shot(n_examples=5, debug=-1, cot=True)
             init_logdir = os.path.join(self.logs_dir, f"initial_{model_name.replace('/', '_')}")
             os.makedirs(init_logdir, exist_ok=True)
             init_logs = eval(
@@ -208,6 +209,7 @@ class PolitenessExperimentRunner:
                 log_dir=init_logdir,
                 model=model_name,
                 log_level="critical",
+                max_connections=1000,
             )
             if not init_logs or init_logs[0].status != "success":
                 print(f"[Initial Politeness] No success log for {model_name}, skipping.")
