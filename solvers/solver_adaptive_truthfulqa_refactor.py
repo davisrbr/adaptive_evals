@@ -166,9 +166,11 @@ def adaptive_truthfulqa_solver_refactor(
     use_cot_evaluator: bool = False,
     use_eval_model_for_checker: bool = False,
     original_eval_model_name: Optional[str] = None,
+    include_previous_reasoning: bool = False,
+    previous_reasoning_limit: int = 0,
 ) -> Generate:
     """
-    Refactored adaptive solver for TruthfulQA.
+    Refactored adaptive solver for TruthfulQA with optional inclusion of previous reasonings.
 
     Args:
         initial_log_path (str): The path to the initial evaluation log.
@@ -180,18 +182,17 @@ def adaptive_truthfulqa_solver_refactor(
         self_check_model_name (Optional[str]): Model name used for self-checking generated questions.
         score_threshold (int): Threshold at or above which a question is deemed correct.
         similarity_threshold (float): Maximum similarity allowed to existing questions for novelty.
-        max_attempts (int): Maximum number of attempts to generate an acceptable novel question.
-        cot_in_context (bool): Whether to include chain-of-thought in context for few-shot samples.
+        max_attempts (int): Max attempts to generate acceptably novel question.
+        cot_in_context (bool): Whether to include chain-of-thought in context for the examples.
         use_embeddings (bool): Whether to use semantic embeddings for novelty checks.
         embeddings_model_name (str): Model used to generate embeddings for questions.
         question_embedding_map (Optional[Dict[str, torch.Tensor]]): Cached embeddings of previous questions.
         use_cot_generator (bool): Whether to use chain-of-thought for question generation.
         use_cot_evaluator (bool): Whether to use chain-of-thought for question evaluation.
-        use_eval_model_for_checker (bool): Whether to use the eval model for checking the question in the adaptive loop.
-        original_eval_model_name (Optional[str]): (Saved in state for logging convenience)
-
-    Returns:
-        Generate: The solver logic for adaptive TruthfulQA question generation.
+        use_eval_model_for_checker (bool): Whether to use the eval model for checking acceptance in the loop.
+        original_eval_model_name (Optional[str]): If we had a prior eval model, store it in the state for reference.
+        include_previous_reasoning (bool): Whether to embed previous generation attempts in the new prompt.
+        previous_reasoning_limit (int): How many of the previous reasonings to include if present.
     """
     async def solve(state: TaskState, generate: Generate) -> TaskState:
         # 1) Load samples & build context
@@ -212,6 +213,7 @@ def adaptive_truthfulqa_solver_refactor(
 
         existing_questions = [s.input for s in sampled_correct + sampled_incorrect]
 
+        # Set up embedding model if requested
         embedding_model = None
         existing_question_embeddings = None
         if use_embeddings and question_embedding_map is not None:
@@ -266,12 +268,26 @@ def adaptive_truthfulqa_solver_refactor(
                 store_chain_of_thought=True,
             )
 
-        def _generation_prompt_fn(ctx: str) -> str:
+        def _generation_prompt_fn(ctx: str, current_attempt: int) -> str:
+            """
+            Builds the final prompt for question generation, optionally
+            including refine instructions if there were previous attempts.
+            """
+            if include_previous_reasoning and previous_reasoning_limit > 0 and current_attempt > 0:
+                refine_instructions = (
+                    "IMPORTANT:\n"
+                    "We have some prior attempts or reasoning that didn't succeed. Use it to refine or make more precise "
+                    "a new analysis. Specifically, avoid the previous failure modes or oversights.\n\n"
+                )
+            else:
+                refine_instructions = ""
+
             not_novel_questions = state.store.get("not_novel_questions", [])
             not_novel_scores = state.store.get("not_novel_scores", [])
             novel_questions = state.store.get("novel_questions", [])
             novel_scores = state.store.get("novel_scores", [])
-            return get_generation_prompt(
+
+            generation_base = get_generation_prompt(
                 ctx,
                 use_cot=use_cot_generator,
                 not_novel_questions=not_novel_questions,
@@ -279,7 +295,9 @@ def adaptive_truthfulqa_solver_refactor(
                 novel_questions=novel_questions,
                 novel_scores=novel_scores,
             )
+            return refine_instructions + generation_base
 
+        # 2) Generate a new question repeatedly until acceptance or max_attempts
         generated_sample = await generate_question_with_retries(
             state=state,
             context=context,
@@ -293,6 +311,8 @@ def adaptive_truthfulqa_solver_refactor(
             embedding_model=embedding_model,
             existing_question_embeddings=existing_question_embeddings,
             check_question_fn=accept_question,
+            include_previous_reasoning=include_previous_reasoning,
+            previous_reasoning_limit=previous_reasoning_limit,
         )
 
         if not generated_sample:
@@ -300,37 +320,24 @@ def adaptive_truthfulqa_solver_refactor(
             state.completed = True
             return state
 
-        # ----------------------
-        # Guard clause to ensure target is valid
+        # 3) Final check/eval if the question was not already checked by the eval model in the loop
         if (
-            not generated_sample.target
-            or not isinstance(generated_sample.target, list)
-            or generated_sample.target[0] >= len(generated_sample.choices)
+            not use_eval_model_for_checker
+            or generated_sample.metadata.get("score", None) is None
         ):
-            state.error = (
-                "Generated question has an invalid target index (out of range). "
-                "Skipping this sample."
-            )
-            state.completed = True
-            return state
-        # ----------------------
+            def _format_eval_prompt_fn(s: Sample) -> str:
+                s.target = normalize_target(s.target, len(s.choices))
+                prompt_text, adjusted_target, _ = format_multiple_choice_prompt(
+                    s,
+                    multiple_correct=False,
+                    use_cot=use_cot_evaluator,
+                )
+                s.metadata["adjusted_target"] = adjusted_target
+                return prompt_text
 
-        def _format_eval_prompt_fn(s: Sample) -> str:
-            s.target = normalize_target(s.target, len(s.choices))
-            prompt_text, adjusted_target, _ = format_multiple_choice_prompt(
-                s,
-                multiple_correct=False,
-                use_cot=use_cot_evaluator,
-            )
-            s.metadata["adjusted_target"] = adjusted_target
-            return prompt_text
+            def _parse_eval_answer_fn(eval_text: str, s: Sample) -> bool:
+                return parse_eval_answer(eval_text, s, normalize_target)
 
-        def _parse_eval_answer_fn(eval_text: str, s: Sample) -> bool:
-            return parse_eval_answer(eval_text, s, normalize_target)
-
-        # If we did not use the eval model for checker in the loop, or if the sample does not have a 
-        # score (which means it was not accepted), do a final check
-        if not use_eval_model_for_checker or generated_sample.metadata.get("score", None) is None:
             await final_eval_check_and_store(
                 generated_sample,
                 eval_model_name,
@@ -339,8 +346,8 @@ def adaptive_truthfulqa_solver_refactor(
                 store_chain_of_thought=True,
             )
 
+        # 4) Save results
         state.store.set("generated_sample", generated_sample)
-        # We keep the final scorer in state.scores
         state.scores = [generated_sample.metadata["score"]]
         return state
 

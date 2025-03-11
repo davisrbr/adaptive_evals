@@ -75,9 +75,9 @@ def parse_judge_metadata(eval_log: EvalLog) -> Tuple[str, str]:
     judge_choice_counts: Dict[str, int] = {}
 
     for sample in eval_log.samples:
-        sample_judge = sample.store.get("generated_sample")
-        lang = sample_judge.get("metadata", {}).get("language")
-        choice = sample_judge.get("metadata", {}).get("judge_choice")
+        actual_sample = sample.store.get("generated_sample")
+        lang = actual_sample.get("metadata", {}).get("language")
+        choice = actual_sample.get("metadata", {}).get("judge_choice")
 
         if lang:
             language_counts[lang] = language_counts.get(lang, 0) + 1
@@ -103,9 +103,11 @@ def write_experiment_log(
     judge_choice_counts: str,
     n_datapoints: int,
     max_attempts: int,
+    adaptive_incorrect_count: Optional[int] = None,
 ) -> None:
     """
     Write a single row into the experiment CSV, capturing these metadata.
+    Now includes how many were answered incorrectly during the adaptive step.
     """
     file_exists = os.path.exists(experiment_csv)
     fieldnames = [
@@ -123,6 +125,7 @@ def write_experiment_log(
         "judge_choice_counts",
         "n_datapoints",
         "max_attempts",
+        "adaptive_incorrect_count",
     ]
     os.makedirs(os.path.dirname(experiment_csv), exist_ok=True)
     with open(experiment_csv, mode="a", newline="") as f:
@@ -145,6 +148,7 @@ def write_experiment_log(
                 "judge_choice_counts": judge_choice_counts,
                 "n_datapoints": n_datapoints,
                 "max_attempts": max_attempts,
+                "adaptive_incorrect_count": adaptive_incorrect_count,
             }
         )
 
@@ -199,7 +203,6 @@ class PolitenessExperimentRunner:
                     continue
 
             print(f"[Initial Politeness] Running politeness_n_shot for: {model_name}")
-            # task_n_shot = politeness_n_shot(n_examples=5, debug=self.n_datapoints, cot=self.use_cot)
             task_n_shot = politeness_n_shot(n_examples=5, debug=-1, cot=True)
             init_logdir = os.path.join(self.logs_dir, f"initial_{model_name.replace('/', '_')}")
             os.makedirs(init_logdir, exist_ok=True)
@@ -219,6 +222,22 @@ class PolitenessExperimentRunner:
             write_eval_cache(self.cache_csv, model_name, init_logs[0].location)
 
         return logs_by_model
+
+    def parse_incorrect_count(self, eval_log: EvalLog) -> int:
+        """
+        Returns how many samples were judged incorrect in the adaptive pass.
+        We assume judge_choice == "I" indicates an incorrect answer.
+        """
+        if not eval_log or not eval_log.samples:
+            return 0
+
+        incorrect_count = 0
+        for sample in eval_log.samples:
+            sample_data = sample.store.get("generated_sample", {})
+            choice = sample_data.get("metadata", {}).get("judge_choice")
+            if choice == "I":
+                incorrect_count += 1
+        return incorrect_count
 
     def run_adaptive_eval(
         self,
@@ -267,6 +286,9 @@ class PolitenessExperimentRunner:
             accuracy, scorer = parse_accuracy_metrics(adaptive_log)
             language_counts, judge_choice_counts = parse_judge_metadata(adaptive_log)
 
+            # Count how many samples were incorrect
+            incorrect_count = self.parse_incorrect_count(adaptive_log)
+
             write_experiment_log(
                 experiment_csv=self.experiment_csv,
                 eval_model_name=eval_model_name,
@@ -283,6 +305,7 @@ class PolitenessExperimentRunner:
                 judge_choice_counts=judge_choice_counts,
                 n_datapoints=self.n_datapoints,
                 max_attempts=self.max_attempts,
+                adaptive_incorrect_count=incorrect_count,
             )
 
     def run_all(self, eval_models: List[str], generator_models: List[str]) -> None:
@@ -358,6 +381,7 @@ def main(
     1) Runs politeness_n_shot for each model in --eval-models.
     2) Then runs adaptive_politeness for each (eval-model, generator-model) pair.
     3) Stores logs and metrics, including judge language metadata, into a CSV.
+       Now also logs how many were answered incorrectly (adaptive_incorrect_count).
     """
     runner = PolitenessExperimentRunner(
         use_cot=use_cot,

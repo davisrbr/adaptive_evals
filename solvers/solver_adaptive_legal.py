@@ -322,14 +322,16 @@ You are comparing a generated question to a set of ground truth questions for a 
 ************
 [END DATA]
 
-Determine if the generated question is correct, precise, and free of errors, and follows the same style and format as the ground truth questions. Consider whether it makes sense, contains any factual errors or contradictions that would make it difficult to answer, and is appropriately challenging. The question should have only a single correct answer.Ignore simple formatting issues (e.g., two Answer: lines at the end, an extra multiple choice line at the beginning, or swapping the order of the instructions and the question) -- these are not errors and should not be penalized. Also note that the final multiple choice question will not have a letter of the answer at the end, so do not penalize for that.
+Determine if the generated question is correct, precise, and free of errors, and follows the same style and format as the ground truth questions. Consider whether it makes sense, contains any factual errors or contradictions that would make it impossible to answer correctly or consistenyly, and is appropriately challenging. The question should have only a single correct answer. 
+
+Ignore simple formatting issues (e.g., two Answer: lines at the end, an extra multiple choice line at the beginning, or swapping the order of the instructions and the question) -- these are not errors and should not be penalized. Also note that the final multiple choice question will not have a letter of the answer at the end, so do not penalize for that.
 
 Answer the question by selecting one of the following options:
 (A) The generated question is correct, precise, and appropriate. It contains no factual errors or contradictions. Ignore any minor issues with formatting (e.g., two Answer: lines at the end or an extra multiple choice line at the beginning)
 (B) The generated question has minor issues but is acceptable. For example, it may be phrased awkwardly or have minor factual errors, but it is still a valid question.
 (C) The generated question has significant issues and is incorrect. It contains factual errors or contradictions, or is not a valid question.
 
-Answer the question by calling `select_choice` with your reasoning in a step-by-step manner to be sure that your conclusion is correct. Avoid simply stating the correct answer at the outset. Select a single choice by setting the `choice` parameter to a single choice from A, B, or C.
+Answer the question by calling `select_choice` with your reasoning in a step-by-step manner to be sure that your conclusion is valid. Please reason very thoroughly, and go through both why the question is or is not sound, why it is (in)consistent with the ground truth questions, and why or why not the proposed answer is correct. Avoid simply stating the correct answer at the outset. Select a single choice by setting the `choice` parameter to a single choice from A, B, or C.
 
 Example 1:
 [Reasoning]:

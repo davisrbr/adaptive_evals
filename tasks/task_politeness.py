@@ -12,7 +12,6 @@ from inspect_ai.model import GenerateConfig
 from inspect_ai.scorer import choice
 from inspect_ai.solver import Generate, Solver, TaskState, generate, multiple_choice, solver
 
-# from eval_dump_inspect import labels_to_positions
 from utils_elicitation.novelty import novelty_filter_judged_only
 
 try:

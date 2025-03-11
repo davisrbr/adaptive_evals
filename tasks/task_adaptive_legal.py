@@ -1,4 +1,5 @@
 import os
+from inspect_ai.log import read_eval_log
 import pandas as pd
 import re
 from inspect_ai import Epochs, Task, task, eval
@@ -7,8 +8,12 @@ from inspect_ai.scorer import choice
 from inspect_ai.solver import multiple_choice, chain_of_thought
 from typing import Any, Optional
 import sys
+import json
+import logging
 
 from solvers.adaptive_utils import multiple_choice_save_cot
+from solvers.solver_adaptive_legal_refactor import adaptive_legal_solver_refactor
+from utils_elicitation.novelty import novelty_filter_judged_only
 sys.path.append("..")
 from legalbench.utils import generate_prompts
 
@@ -148,7 +153,7 @@ def legalbench_initial_aggregated(task_names: list[str] = [
                 choices=choices,
                 target=target,
                 id=sample_id,
-                metadata={"task_name": task_name}
+                metadata={"task_name": task_name, "base_text": record["text"]}
             )
 
         # Load the LegalBench dataset for this task
@@ -268,6 +273,126 @@ def adaptive_legal(
         dataset=dataset,
         solver=solver_list,
         scorer=scorer_list,
+    )
+
+@task
+def adaptive_legal_refactor(
+    initial_log_path: str,
+    task_name: str,
+    n_positive_samples: int = 1,
+    n_negative_samples: int = 2,
+    generator_model_name: str = "openai/gpt-4o-mini",
+    eval_model_name: str = "openai/gpt-4o-mini",
+    self_check_model_name: Optional[str] = None,
+    use_embeddings: bool = False,
+    embeddings_model_name: str = "sentence-transformers/all-mpnet-base-v2",
+    similarity_threshold: float = 0.6,
+    score_threshold: int = 4,
+    max_attempts: int = 5,
+    randomize_sampling: bool = False,
+    cot_in_context: bool = False,
+    use_cot_generator: bool = False,
+    use_cot_evaluator: bool = False,
+    use_claude: bool = False,
+    use_example: bool = True,
+    original_eval_model_name: Optional[str] = None,
+    judge_model_name: Optional[str] = None,
+    use_eval_model_for_checker: bool = False,
+    include_previous_reasoning: bool = False,
+    previous_reasoning_limit: int = 0,
+) -> Task:
+    """
+    Refactored adaptive evaluation task for the LegalBench dataset.
+
+    Args:
+        initial_log_path (str): Path to the initial evaluation log.
+        task_name (str): The name of the LegalBench task to evaluate.
+        n_positive_samples (int): Number of correctly answered samples to use for adaptation.
+        n_negative_samples (int): Number of incorrectly answered samples to use for adaptation.
+        generator_model_name (str): Name of the model used to generate new questions.
+        eval_model_name (str): Name of the model used to evaluate the new questions.
+        self_check_model_name (Optional[str]): Name of the model used for self-checking.
+        use_embeddings (bool): Whether to use embeddings for similarity checking.
+        embeddings_model_name (str): Name of the embeddings model to use.
+        similarity_threshold (float): Threshold for similarity checking.
+        score_threshold (int): Minimum score required for acceptance.
+        max_attempts (int): Maximum number of generation attempts.
+        randomize_sampling (bool): Whether to shuffle sample selection.
+        cot_in_context (bool): Whether to include chain of thought in context.
+        use_cot_generator (bool): Whether to use chain of thought for generation.
+        use_cot_evaluator (bool): Whether to use chain of thought for evaluation.
+        use_claude (bool): Whether to use Claude-specific prompts.
+        use_example (bool): Whether to include examples in prompts.
+        original_eval_model_name (Optional[str]): Name of original evaluation model.
+        judge_model_name (Optional[str]): Name of the model used to judge correctness.
+        use_eval_model_for_checker (bool): Whether to use eval model for checking.
+        include_previous_reasoning (bool): Whether to include previous failure mode reasoning traces in context for the generator.
+        previous_reasoning_limit (int): Number of previous failure mode reasoning traces to include in context.
+"""
+    # We'll start with an empty dataset because the solver will populate new samples
+    dataset = MemoryDataset(name="adaptive_legal_refactor", samples=[])
+
+    # Construct the solver list: the main adaptive solver plus (if specified) a judge solver
+    solver_list = [
+        adaptive_legal_solver_refactor(
+            initial_log_path=initial_log_path,
+            task_name=task_name,
+            n_positive_samples=n_positive_samples,
+            n_negative_samples=n_negative_samples,
+            generator_model_name=generator_model_name,
+            eval_model_name=eval_model_name,
+            self_check_model_name=self_check_model_name,
+            use_embeddings=use_embeddings,
+            embeddings_model_name=embeddings_model_name,
+            similarity_threshold=similarity_threshold,
+            score_threshold=score_threshold,
+            max_attempts=max_attempts,
+            randomize_sampling=randomize_sampling,
+            cot_in_context=cot_in_context,
+            use_cot_generator=use_cot_generator,
+            use_cot_evaluator=use_cot_evaluator,
+            use_claude=use_claude,
+            use_example=use_example,
+            original_eval_model_name=original_eval_model_name,
+            use_eval_model_for_checker=use_eval_model_for_checker,
+            include_previous_reasoning=include_previous_reasoning,
+            previous_reasoning_limit=previous_reasoning_limit,
+        ),
+    ]
+
+    # If we have a separate judge model, append the judge solver
+    if judge_model_name:
+        solver_list.append(
+            adaptive_legal_judge_solver(
+                initial_log_path=initial_log_path,
+                judge_model_name=judge_model_name,
+            )
+        )
+
+    # Build up the scorers list
+    scorer_list = [
+        adaptive_legal_scorer(),
+        adaptive_legal_judge_scorer(),
+    ]
+    # If we have a judge model, also include the judged scorer
+    if judge_model_name:
+        scorer_list.append(adaptive_legal_scorer_judged())
+
+    return Task(
+        dataset=dataset,
+        solver=solver_list,
+        scorer=scorer_list,
+        epochs=Epochs(
+            epochs=5,
+            reducer=[
+                "mean",
+                novelty_filter_judged_only(
+                    embeddings_model_name=embeddings_model_name,
+                    similarity_threshold=similarity_threshold,
+                    scorer_id="adaptive_legal_scorer_judged"  # only apply novelty check on final judged scores
+                )
+            ]
+        ),
     )
 
 @task
@@ -521,6 +646,94 @@ def legalbench_reworded_judged(
             judge_scoring(),
             choice_judged(),
         ],
+    )
+
+@task
+def re_evaluate_adaptive_legal(
+    adaptive_log_path: str,
+    use_cot: bool = False,
+    filter_by_incorrect: bool = False,
+) -> Task:
+    """
+    Re-evaluates adaptive legal questions that passed judge filtering.
+    The model will be inferred from the task configuration.
+    
+    Args:
+        adaptive_log_path: Path to the log from an adaptive legal experiment
+        use_cot: Whether to use chain-of-thought reasoning in the evaluation
+        filter_by_incorrect: If True, only re-evaluate questions that were answered incorrectly
+    
+    Returns:
+        A Task that will re-evaluate the questions from the adaptive experiment
+    """
+    logger = logging.getLogger(__name__)
+    
+    # Load and validate log
+    eval_log = read_eval_log(adaptive_log_path)
+    if not eval_log.samples:
+        raise ValueError("No samples found in the adaptive legal log.")
+    logger.info(f"Found {len(eval_log.samples)} non-filtered samples in {adaptive_log_path}")
+    
+    # Filter samples based on judge approval and prepare prompts
+    filtered_samples = []
+    for sample_item in eval_log.samples:
+        generated_sample = sample_item.store.get("generated_sample")
+        if not generated_sample:
+            continue
+            
+        # Get question data
+        question_str = generated_sample.get("input", "").strip()
+        if not question_str:
+            print(f"Skipping sample because it has no question: {generated_sample}")
+            continue
+        target = generated_sample.get("target", None)
+        if not target:
+            print(f"Skipping sample because it has no target: {generated_sample}")
+            continue
+
+        # extract the choices from the question prompt
+        option_pattern = r"Option ([A-Z]): (.*)"
+        options_matches = re.findall(option_pattern, question_str)
+        choices = [match[1] for match in options_matches]
+            
+        # If filter_by_incorrect is True, only include samples that were incorrect
+        if filter_by_incorrect:
+            score = generated_sample.get("metadata", {}).get("score", "")
+            if score != "I":  # Only include incorrect samples
+                continue
+                
+        # Create sample with prepared prompt
+        filtered_samples.append(Sample(
+            input=str(question_str),
+            choices=choices,
+            target=target,
+            metadata={
+                "original_question": question_str,
+                "original_choices": choices,
+                "original_target": target,
+                "original_metadata": json.dumps(generated_sample.get("metadata", {})),
+                "original_eval_model": eval_log.eval.task_args.get("eval_model_name", "unknown"),
+                "original_generator_model": eval_log.eval.task_args.get("generator_model_name", "unknown"),
+                "original_judge_model": eval_log.eval.task_args.get("judge_model_name", "unknown"),
+                "original_embeddings_model": eval_log.eval.task_args.get("embeddings_model_name", "sentence-transformers/all-mpnet-base-v2"),
+            }
+        ))
+    
+    if not filtered_samples:
+        logger.info("No samples passed filtering. Nothing to evaluate.")
+        raise ValueError("No samples passed filtering from the adaptive solver log.")
+    logger.info(f"Found {len(filtered_samples)} samples post-filtering.")
+    
+    dataset = MemoryDataset(
+        name="re_evaluate_adaptive_legal",
+        samples=filtered_samples
+    )
+    
+    return Task(
+        dataset=dataset,
+        solver=[multiple_choice_save_cot(multiple_correct=False, shuffle=True, cot=use_cot)],
+        scorer=choice(),
+        reducer=("mean",),
     )
 
 if __name__ == "__main__":

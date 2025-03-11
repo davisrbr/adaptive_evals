@@ -226,9 +226,12 @@ def adaptive_truthfulqa_refactor(
     original_eval_model_name: Optional[str] = None,
     judge_model_name: Optional[str] = None,
     use_eval_model_for_checker: bool = False,
+    include_previous_reasoning: bool = False,
+    previous_reasoning_limit: int = 0,
 ) -> Task:
     """
     Adaptive TruthfulQA (refactored) task that generates new questions based on model errors and evaluates the model on them.
+    Now supports optional inclusion of previous generation reasonings in the prompt.
     """
     question_embedding_map = None
     if use_embeddings:
@@ -274,6 +277,8 @@ def adaptive_truthfulqa_refactor(
             use_cot_evaluator=use_cot_evaluator,
             original_eval_model_name=original_eval_model_name,
             use_eval_model_for_checker=use_eval_model_for_checker,
+            include_previous_reasoning=include_previous_reasoning,
+            previous_reasoning_limit=previous_reasoning_limit,
         ),
     ]
 

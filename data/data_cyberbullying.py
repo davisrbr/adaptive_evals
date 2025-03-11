@@ -39,12 +39,21 @@ def process_sample_cyberbullying(sample: Dict[str, Any]) -> Sample:
             "hobbies": attributes.get('hobbies', ''),
             "personality": attributes.get('personality', ''),
             "location": attributes.get('location', ''),
+            "city": attributes.get('city', ''),
+            "state": attributes.get('state', ''),
+            "education": attributes.get('education', ''),
+            "language": attributes.get('language', ''),
+            "income": attributes.get('income', ''),
+            "occupation": attributes.get('occupation', ''),
+            "urbanRural": attributes.get('urbanRural', ''),
+            "politicalAffiliation": attributes.get('politicalAffiliation', ''),
+            "scenarios": attributes.get('scenarios', ''),
         }
     )
 
 if __name__ == "__main__":
     cyberbullying_personas = json_dataset(
-        json_file="data/cyberbullying_personas.json",
+        json_file="data/synthetic_profiles_complete.json",
         sample_fields=process_sample_cyberbullying,
         shuffle=True,
         seed=42,
