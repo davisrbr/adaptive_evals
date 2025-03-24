@@ -1,33 +1,35 @@
 import os
 import csv
-import json
-import logging
 from typing import Dict, List, Optional, Tuple
 import click
-
+from inspect_ai import Epochs, eval
 from inspect_ai.log import EvalLog, read_eval_log
-from inspect_ai import eval, Epochs
-from tasks.task_politeness import politeness_n_shot, adaptive_politeness
+from tasks.task_politeness import adaptive_politeness, politeness, re_evaluate_adaptive_politeness
+import logging
+import json
+from datetime import datetime
+from inspect_ai import Task
+from utils_elicitation.novelty import write_novelty_results
 
-# Turn off verbose logging from various libraries
+# Disable all logging output
 logging.getLogger().setLevel(logging.ERROR)
-logging.getLogger("inspect_ai").setLevel(logging.ERROR)
-logging.getLogger("httpx").setLevel(logging.ERROR)
-logging.getLogger("httpcore").setLevel(logging.ERROR)
-
+logging.getLogger('inspect_ai').setLevel(logging.ERROR)
+logging.getLogger('httpx').setLevel(logging.ERROR)
+logging.getLogger('httpcore').setLevel(logging.ERROR)
 
 def read_eval_cache(cache_csv: str) -> Dict[str, str]:
     """
-    Returns a dict of {model_name: log_path} previously saved
-    for initial evaluations.
+    Returns a dict of {model_name: log_path} previously saved.
     """
     if not os.path.exists(cache_csv):
         return {}
-    output: Dict[str, str] = {}
+    output = {}
     with open(cache_csv, mode="r", newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            output[row["model_name"]] = row["log_path"]
+            model_name = row["model_name"]
+            log_path = row["log_path"]
+            output[model_name] = log_path
     return output
 
 
@@ -36,7 +38,6 @@ def write_eval_cache(cache_csv: str, model_name: str, log_path: str) -> None:
     Appends the given (model_name, log_path) to the CSV cache.
     Creates the file with headers if it does not exist.
     """
-    os.makedirs(os.path.dirname(cache_csv), exist_ok=True)
     file_exists = os.path.exists(cache_csv)
     with open(cache_csv, mode="a", newline="") as f:
         fieldnames = ["model_name", "log_path"]
@@ -46,358 +47,634 @@ def write_eval_cache(cache_csv: str, model_name: str, log_path: str) -> None:
         writer.writerow({"model_name": model_name, "log_path": log_path})
 
 
-def parse_accuracy_metrics(eval_log: EvalLog) -> Tuple[Optional[float], Optional[str]]:
+def extract_accuracy_metrics(eval_log: EvalLog) -> Tuple[Optional[float], Optional[float], Optional[str]]:
     """
-    Parse the log results and return (accuracy, scorer_name).
-    Because we might have multiple scorers, we look for the first that
-    provides 'accuracy' in its metrics.
+    Extract overall accuracy metrics from the eval log.
+    Returns (accuracy, accuracy_judged, scorer_name)
     """
-    if not eval_log or not eval_log.results:
-        return None, None
+    if not eval_log or not eval_log.metrics:
+        return None, None, None
+    
+    # Normal accuracy
+    accuracy = None
+    for scorer_name, metrics in eval_log.metrics.items():
+        if "accuracy" in metrics:
+            accuracy = metrics["accuracy"]
+            scorer = scorer_name
+            break
+    
+    # Judge-filtered accuracy if available
+    accuracy_judged = None
+    for scorer_name, metrics in eval_log.metrics.items():
+        if "accuracy_judged" in metrics:
+            accuracy_judged = metrics["accuracy_judged"]
+            break
+    
+    return accuracy, accuracy_judged, scorer
 
-    for score_item in (eval_log.results.scores or []):
-        metrics = score_item.metrics or {}
-        accuracy = metrics.get("accuracy")
-        if accuracy is not None:
-            return (accuracy.value, score_item.scorer)
-    return None, None
 
-
-def parse_judge_metadata(eval_log: EvalLog) -> Tuple[str, str]:
+def parse_re_eval_counts(eval_log: EvalLog) -> Tuple[int, int, int]:
     """
-    Aggregate language and judge_choice metadata across samples.
-    Return (language_counts_json, judge_choice_counts_json).
+    Parse counts from re-eval logs:
+    - Number of samples that passed the judge
+    - Number of samples that were incorrect in the adaptive pass
+    - Number of samples that were incorrect in the re-eval
     """
-    if not eval_log or not eval_log.samples:
-        return "{}", "{}"
-
-    language_counts: Dict[str, int] = {}
-    judge_choice_counts: Dict[str, int] = {}
-
-    for sample in eval_log.samples:
-        actual_sample = sample.store.get("generated_sample")
-        lang = actual_sample.get("metadata", {}).get("language")
-        choice = actual_sample.get("metadata", {}).get("judge_choice")
-
-        if lang:
-            language_counts[lang] = language_counts.get(lang, 0) + 1
-        if choice:
-            judge_choice_counts[choice] = judge_choice_counts.get(choice, 0) + 1
-
-    return json.dumps(language_counts), json.dumps(judge_choice_counts)
+    if not eval_log or not eval_log.metadata:
+        return 0, 0, 0
+    
+    metadata = eval_log.metadata.get("re_eval_stats", {})
+    return (
+        metadata.get("passed_judge_count", 0),
+        metadata.get("adaptive_incorrect_count", 0),
+        metadata.get("re_eval_incorrect_count", 0),
+    )
 
 
 def write_experiment_log(
     experiment_csv: str,
     eval_model_name: str,
-    generator_model_name: Optional[str],
-    initial_log_path: Optional[str],
-    adaptive_log_path: Optional[str],
+    generator_model_name: str,
+    re_eval_model_name: str,
+    initial_log_path: str,
+    adaptive_log_path: str,
+    re_eval_log_path: Optional[str],
     use_cot: bool,
     similarity_threshold: float,
     score_threshold: int,
     use_embeddings: bool,
-    accuracy: Optional[float],
-    scorer_name: Optional[str],
-    judge_language_counts: str,
-    judge_choice_counts: str,
-    n_datapoints: int,
-    max_attempts: int,
-    adaptive_incorrect_count: Optional[int] = None,
+    filter_incorrect: bool,
+    adaptive_accuracy: Optional[float],
+    adaptive_accuracy_judged: Optional[float],
+    adaptive_scorer_name: Optional[str],
+    re_eval_accuracy: Optional[float],
+    re_eval_accuracy_judged: Optional[float],
+    re_eval_scorer_name: Optional[str],
+    judge_model_name: Optional[str],
+    positive_samples: int,
+    negative_samples: int,
+    passed_judge_count: int,
+    adaptive_incorrect_count: int,
+    re_eval_incorrect_count: int,
+    novelty_results_file: Optional[str],
+    num_epochs: int = 100,
 ) -> None:
     """
-    Write a single row into the experiment CSV, capturing these metadata.
-    Now includes how many were answered incorrectly during the adaptive step.
+    Write an experiment log entry to the CSV file.
+    Creates the file with headers if it does not exist.
     """
     file_exists = os.path.exists(experiment_csv)
-    fieldnames = [
-        "eval_model_name",
-        "generator_model_name",
-        "initial_log_path",
-        "adaptive_log_path",
-        "use_cot",
-        "similarity_threshold",
-        "score_threshold",
-        "use_embeddings",
-        "accuracy",
-        "scorer_name",
-        "judge_language_counts",
-        "judge_choice_counts",
-        "n_datapoints",
-        "max_attempts",
-        "adaptive_incorrect_count",
-    ]
-    os.makedirs(os.path.dirname(experiment_csv), exist_ok=True)
     with open(experiment_csv, mode="a", newline="") as f:
+        fieldnames = [
+            "timestamp",
+            "eval_model",
+            "generator_model",
+            "re_eval_model",
+            "initial_log_path",
+            "adaptive_log_path",
+            "re_eval_log_path",
+            "use_cot",
+            "similarity_threshold",
+            "score_threshold",
+            "use_embeddings",
+            "filter_incorrect",
+            "adaptive_accuracy",
+            "adaptive_accuracy_judged",
+            "adaptive_scorer",
+            "re_eval_accuracy",
+            "re_eval_accuracy_judged",
+            "re_eval_scorer",
+            "judge_model",
+            "positive_samples",
+            "negative_samples",
+            "passed_judge_count",
+            "adaptive_incorrect_count", 
+            "re_eval_incorrect_count",
+            "novelty_results_file",
+            "num_epochs",
+        ]
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         if not file_exists:
             writer.writeheader()
-        writer.writerow(
-            {
-                "eval_model_name": eval_model_name,
-                "generator_model_name": generator_model_name,
-                "initial_log_path": initial_log_path,
-                "adaptive_log_path": adaptive_log_path,
-                "use_cot": use_cot,
-                "similarity_threshold": similarity_threshold,
-                "score_threshold": score_threshold,
-                "use_embeddings": use_embeddings,
-                "accuracy": accuracy,
-                "scorer_name": scorer_name,
-                "judge_language_counts": judge_language_counts,
-                "judge_choice_counts": judge_choice_counts,
-                "n_datapoints": n_datapoints,
-                "max_attempts": max_attempts,
-                "adaptive_incorrect_count": adaptive_incorrect_count,
-            }
-        )
+        
+        writer.writerow({
+            "timestamp": datetime.now().isoformat(),
+            "eval_model": eval_model_name,
+            "generator_model": generator_model_name,
+            "re_eval_model": re_eval_model_name,
+            "initial_log_path": initial_log_path,
+            "adaptive_log_path": adaptive_log_path,
+            "re_eval_log_path": re_eval_log_path or "",
+            "use_cot": str(use_cot),
+            "similarity_threshold": str(similarity_threshold),
+            "score_threshold": str(score_threshold),
+            "use_embeddings": str(use_embeddings),
+            "filter_incorrect": str(filter_incorrect),
+            "adaptive_accuracy": str(adaptive_accuracy) if adaptive_accuracy is not None else "",
+            "adaptive_accuracy_judged": str(adaptive_accuracy_judged) if adaptive_accuracy_judged is not None else "",
+            "adaptive_scorer": adaptive_scorer_name or "",
+            "re_eval_accuracy": str(re_eval_accuracy) if re_eval_accuracy is not None else "",
+            "re_eval_accuracy_judged": str(re_eval_accuracy_judged) if re_eval_accuracy_judged is not None else "",
+            "re_eval_scorer": re_eval_scorer_name or "",
+            "judge_model": judge_model_name or "",
+            "positive_samples": str(positive_samples),
+            "negative_samples": str(negative_samples),
+            "passed_judge_count": str(passed_judge_count),
+            "adaptive_incorrect_count": str(adaptive_incorrect_count),
+            "re_eval_incorrect_count": str(re_eval_incorrect_count),
+            "novelty_results_file": novelty_results_file or "",
+            "num_epochs": str(num_epochs),
+        })
 
 
-class PolitenessExperimentRunner:
-    """
-    An experiment runner for politeness tasks:
-      1) Evaluate a set of models using politeness_n_shot as the initial step.
-      2) For each of those, run adaptive_politeness with a set of generator models.
-      3) Store results in a CSV cache and a separate experiment CSV log.
-    """
-
+class ExperimentConfig:
+    """Configuration class for Politeness Experiment Runner"""
+    
     def __init__(
         self,
         use_cot: bool = False,
-        similarity_threshold: float = 0.6,
-        score_threshold: int = 4,
-        use_embeddings: bool = False,
-        n_datapoints: int = 40,
-        max_attempts: int = 5,
-        logs_dir: str = "logs_politeness",
-        experiment_csv: str = "results/politeness_experiment_results.csv",
-        cache_csv: str = "results/politeness_experiment_cache.csv",
+        use_cot_target: bool = False,
+        use_cot_in_context_attacker: bool = False,
+        use_example: bool = True,
+        experiment_id: Optional[str] = None,
     ):
         self.use_cot = use_cot
-        self.similarity_threshold = similarity_threshold
-        self.score_threshold = score_threshold
-        self.use_embeddings = use_embeddings
-        self.n_datapoints = n_datapoints
-        self.max_attempts = max_attempts
-        self.logs_dir = logs_dir
-        os.makedirs(self.logs_dir, exist_ok=True)
-        self.experiment_csv = experiment_csv
-        self.cache_csv = cache_csv
-        os.makedirs(os.path.dirname(self.experiment_csv), exist_ok=True)
+        self.use_cot_target = use_cot_target
+        self.use_cot_in_context_attacker = use_cot_in_context_attacker
+        self.use_example = use_example
+        self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        self._experiment_id = experiment_id
+    
+    @property
+    def experiment_id(self) -> str:
+        """Generate a readable experiment identifier"""
+        if self._experiment_id:
+            return self._experiment_id
+            
+        components = []
+        if self.use_cot:
+            components.append("cot")
+        if self.use_cot_target:
+            components.append("cot_target")
+        if self.use_cot_in_context_attacker:
+            components.append("cot_attacker")
+        if self.use_example:
+            components.append("with_examples")
+        components.append(self.timestamp)
+        
+        return "_".join(components) or "base"
+    
+    def get_cache_path(self) -> str:
+        """Get the path for the cache CSV"""
+        return os.path.join("cache", f"politeness_initial_{self.experiment_id}.csv")
+    
+    def get_initial_log_dir(self) -> str:
+        """Get the directory for initial evaluation logs"""
+        return os.path.join("logs", "politeness", "initial", self.experiment_id)
+    
+    def get_adaptive_log_dir(self) -> str:
+        """Get the directory for adaptive evaluation logs"""
+        return os.path.join("logs", "politeness", "adaptive", self.experiment_id)
+    
+    def get_results_dir(self) -> str:
+        """Get the directory for detailed results"""
+        return os.path.join("results", "politeness", self.experiment_id)
+
+
+class TransferPolitenessExperimentRunner:
+    def __init__(
+        self,
+        use_cot: bool = False, 
+        use_cot_target: bool = False, 
+        use_cot_in_context_attacker: bool = False,
+        use_example: bool = True,
+        experiment_id: Optional[str] = None,
+        cache_csv: Optional[str] = None, 
+        experiment_csv: Optional[str] = None
+    ):
+        self.config = ExperimentConfig(
+            use_cot=use_cot,
+            use_cot_target=use_cot_target,
+            use_cot_in_context_attacker=use_cot_in_context_attacker,
+            use_example=use_example,
+            experiment_id=experiment_id,
+        )
+        
+        # Use provided CSV paths or generate from config
+        self.cache_csv = cache_csv or self.config.get_cache_path()
+        self.experiment_csv = experiment_csv or os.path.join(
+            self.config.get_results_dir(), 
+            f"politeness_experiment_results_{self.config.experiment_id}.csv"
+        )
+        
+        print(f"Using experiment CSV: {self.experiment_csv}")
+        print(f"Using cache CSV: {self.cache_csv}")
+        
+        # Create necessary directories
         os.makedirs(os.path.dirname(self.cache_csv), exist_ok=True)
+        os.makedirs(os.path.dirname(self.experiment_csv), exist_ok=True)
+        os.makedirs(self.config.get_initial_log_dir(), exist_ok=True)
+        os.makedirs(self.config.get_adaptive_log_dir(), exist_ok=True)
+        os.makedirs(self.config.get_results_dir(), exist_ok=True)
+        
+        # Models for the initial pass
+        self.initial_eval_models = [
+            # "openai/gpt-4o",
+            "openai/gpt-4o-mini",
+            # "together/deepseek-ai/DeepSeek-V3",
+            # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+            # "anthropic/claude-3-5-sonnet-latest",
+        ]
+        self.generator_models = [
+            "openai/gpt-4o-mini",
+            # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+            # "openai/gpt-4o",
+            # "anthropic/claude-3-5-sonnet-latest",
+        ]
+        # Models on which we'll perform the adaptive evaluation
+        self.adaptive_evaluated_models = [
+            # "openai/gpt-4o",
+            "openai/gpt-4o-mini",
+            # "together/deepseek-ai/DeepSeek-V3",
+            # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+            # "anthropic/claude-3-5-haiku-latest",
+            # "anthropic/claude-3-5-sonnet-latest",
+        ]
 
-    def run_initial_experiments(self, models: List[str]) -> Dict[str, EvalLog]:
+    def run_initial_experiment(
+        self,
+        n_examples: int = 3,
+        num_samples: int = 100,
+        cot: bool = False,
+        log_dir: Optional[str] = None,
+    ) -> Dict[str, EvalLog]:
         """
-        Runs or loads politeness_n_shot for each model in 'models'.
-        Returns {model_name: EvalLog} for each successful evaluation.
+        Runs the initial politeness evaluation task on each model in self.initial_eval_models.
+        Returns a dict of {model_name: eval_log}.
         """
-        logs_by_model: Dict[str, EvalLog] = {}
-        cached = read_eval_cache(self.cache_csv)
+        log_dir = log_dir or self.config.get_initial_log_dir()
+        os.makedirs(log_dir, exist_ok=True)
 
-        for model_name in models:
-            if model_name in cached:
-                maybe_log = read_eval_log(cached[model_name])
-                if maybe_log and maybe_log.status == "success":
-                    logs_by_model[model_name] = maybe_log
-                    print(f"[Initial Politeness] Using cached log for: {model_name}")
-                    continue
-
-            print(f"[Initial Politeness] Running politeness_n_shot for: {model_name}")
-            task_n_shot = politeness_n_shot(n_examples=5, debug=-1, cot=True)
-            init_logdir = os.path.join(self.logs_dir, f"initial_{model_name.replace('/', '_')}")
-            os.makedirs(init_logdir, exist_ok=True)
-            init_logs = eval(
-                task_n_shot,
-                epochs=Epochs(1, "max"),
-                log_dir=init_logdir,
+        # Check cache for existing logs
+        cache = read_eval_cache(self.cache_csv)
+        
+        # Set up the task
+        task = politeness(n_examples=n_examples, cot=cot)
+        
+        # Evaluate each model
+        logs = {}
+        for model_name in self.initial_eval_models:
+            # Check if this (model_name, task) combo is already in the cache
+            if model_name in cache:
+                cached_log_path = cache[model_name]
+                if os.path.exists(cached_log_path):
+                    # Load the cached log
+                    try:
+                        log = read_eval_log(cached_log_path)
+                        print(f"Using cached log for {model_name} from {cached_log_path}")
+                        logs[model_name] = log
+                        continue
+                    except Exception as exc:
+                        print(f"Failed to load cached log for {model_name}: {exc}")
+            
+            # Run the evaluation
+            print(f"Running initial evaluation for {model_name}")
+            model_log_dir = os.path.join(log_dir, model_name.replace("/", "_"))
+            os.makedirs(model_log_dir, exist_ok=True)
+            
+            eval_logs = eval(
+                task,
+                epochs=Epochs(num_samples, "mean"),
+                max_connections=1000,
+                log_dir=model_log_dir,
                 model=model_name,
+                temperature=0,
                 log_level="critical",
-                max_connections=500,
             )
-            if not init_logs or init_logs[0].status != "success":
-                print(f"[Initial Politeness] No success log for {model_name}, skipping.")
+            
+            if not eval_logs or eval_logs[0].status != "success":
+                print(f"Initial evaluation failed for {model_name}")
                 continue
+                
+            eval_log = eval_logs[0]
+            logs[model_name] = eval_log
+            
+            # Cache the log
+            write_eval_cache(self.cache_csv, model_name, eval_log.location)
+            
+        return logs
 
-            logs_by_model[model_name] = init_logs[0]
-            write_eval_cache(self.cache_csv, model_name, init_logs[0].location)
-
-        return logs_by_model
-
-    def parse_incorrect_count(self, eval_log: EvalLog) -> int:
-        """
-        Returns how many samples were judged incorrect in the adaptive pass.
-        We assume judge_choice == "I" indicates an incorrect answer.
-        """
-        if not eval_log or not eval_log.samples:
-            return 0
-
-        incorrect_count = 0
-        for sample in eval_log.samples:
-            sample_data = sample.store.get("generated_sample", {})
-            choice = sample_data.get("metadata", {}).get("judge_choice")
-            if choice == "I":
-                incorrect_count += 1
-        return incorrect_count
-
-    def run_adaptive_eval(
+    def run_adaptive_experiment(
         self,
         initial_log_path: str,
-        eval_model_name: str,
-        generator_models: List[str],
-    ) -> None:
+        original_eval_model_name: str,
+        positive_samples_list: List[int] = [1],
+        negative_samples_list: List[int] = [8],
+        log_dir: Optional[str] = None,
+        cot_in_context: bool = False,
+        use_cot: bool = True,
+        similarity_threshold: float = 0.6,
+        use_embeddings: bool = False,
+        num_epochs: int = 100,
+    ):
         """
-        For each generator model, run adaptive_politeness on the new questions
-        and log the results.
+        Uses a single (initial_log_path) from the original model, 
+        then runs adaptive experiments with each generator model 
+        on each of the adaptive_eval_models.
+
+        NOTE: USE_COT IS FOR THE EVALUATOR MODEL, NOT THE GENERATOR MODEL.
         """
-        for generator_name in generator_models:
-            print(f"[Adaptive Politeness] eval={eval_model_name}, generator={generator_name}")
-            adaptive_task = adaptive_politeness(
-                initial_log_path=initial_log_path,
-                n_positive_samples=2,
-                n_negative_samples=8,
-                generator_model_name=generator_name,
-                eval_model_name=eval_model_name,
-                use_embeddings=self.use_embeddings,
-                similarity_threshold=self.similarity_threshold,
-                score_threshold=self.score_threshold,
-                max_attempts=self.max_attempts,
-                cot_in_context=self.use_cot,
-                use_cot_generator=self.use_cot,
-                use_cot_evaluator=self.use_cot,
-                judge_model_name="together/deepseek-ai/DeepSeek-V3",
-            )
-            adaptive_logdir = os.path.join(
-                self.logs_dir, f"adaptive_{eval_model_name.replace('/', '_')}__{generator_name.replace('/', '_')}"
-            )
-            os.makedirs(adaptive_logdir, exist_ok=True)
-            adaptive_logs = eval(
-                adaptive_task,
-                epochs=Epochs(self.n_datapoints, "max"),
-                log_dir=adaptive_logdir,
-                model=eval_model_name,
-                log_level="critical",
-            )
+        task_specific_log_dir = log_dir or self.config.get_adaptive_log_dir()
+        os.makedirs(task_specific_log_dir, exist_ok=True)
+        
+        for pos_samples in positive_samples_list:
+            for neg_samples in negative_samples_list:
+                for generator_model in self.generator_models:
+                    for eval_model in self.adaptive_evaluated_models:
+                        task = adaptive_politeness(
+                            initial_log_path=initial_log_path,
+                            n_positive_samples=pos_samples,
+                            n_negative_samples=neg_samples,
+                            generator_model_name=generator_model,
+                            eval_model_name=eval_model,
+                            use_cot_generator=True,
+                            use_cot_evaluator=use_cot,
+                            cot_in_context=cot_in_context,
+                            randomize_sampling=False,
+                            original_eval_model_name=original_eval_model_name,
+                            judge_model_name="anthropic/claude-3-5-sonnet-latest",
+                        )
+                        
+                        # Create a specific log directory for this combination
+                        combination_log_dir = os.path.join(
+                            task_specific_log_dir,
+                            f"{eval_model.replace('/', '_')}_{generator_model.replace('/', '_')}_pos{pos_samples}_neg{neg_samples}"
+                        )
+                        os.makedirs(combination_log_dir, exist_ok=True)
+                        
+                        adaptive_logs = eval(
+                            task,
+                            epochs=Epochs(num_epochs, "mean"),
+                            max_connections=1000,
+                            log_dir=combination_log_dir,
+                            model=eval_model,
+                            temperature=0,
+                            log_level="critical",
+                        )
+                        
+                        if not adaptive_logs or adaptive_logs[0].status != "success":
+                            print(f"Adaptive experiment failed for {eval_model} with generator {generator_model}")
+                            continue
+                            
+                        adaptive_log = adaptive_logs[0]
+                        adaptive_accuracy, adaptive_accuracy_judged, adaptive_scorer = extract_accuracy_metrics(adaptive_log)
+                        
+                        # Compute novelty results
+                        results_dir = os.path.join(os.path.dirname(self.experiment_csv))
+                        os.makedirs(results_dir, exist_ok=True)
+                        novelty_file = os.path.join(
+                            results_dir,
+                            f"novelty_politeness_{eval_model.replace('/', '_')}_{generator_model.replace('/', '_')}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+                        )
+                        
+                        try:
+                            write_novelty_results(
+                                adaptive_log_path=adaptive_log.location,
+                                embeddings_model_name="sentence-transformers/all-mpnet-base-v2",
+                                similarity_threshold=similarity_threshold,
+                                output_file=novelty_file,
+                                use_embeddings=use_embeddings,
+                            )
+                        except Exception as exc:
+                            print(f"Novelty filtering failed for (eval={eval_model}, gen={generator_model}). Error: {exc}")
+                            novelty_file = None
+                            
+                        # Re-evaluation step for each model (transfer)
+                        for re_eval_model in self.adaptive_evaluated_models:
+                            print(f"Re-evaluating model {re_eval_model} on questions from {eval_model} generated by {generator_model}")
+                            
+                            # Create re-evaluation task
+                            re_eval_task = re_evaluate_adaptive_politeness(
+                                adaptive_log_path=adaptive_log.location,
+                                use_cot=use_cot,
+                                filter_by_incorrect=True,
+                            )
+                            
+                            # Create a specific log directory for re-evaluation
+                            re_eval_log_dir = os.path.join(combination_log_dir, "re_eval", re_eval_model.replace("/", "_"))
+                            os.makedirs(re_eval_log_dir, exist_ok=True)
+                            
+                            re_eval_log_path: Optional[str] = None
+                            re_eval_acc: Optional[float] = None
+                            re_eval_acc_judged: Optional[float] = None
+                            re_eval_scorer: Optional[str] = None
+                            
+                            re_eval_logs = eval(
+                                re_eval_task,
+                                epochs=Epochs(1, "max"),
+                                log_dir=re_eval_log_dir,
+                                model=re_eval_model,
+                                log_level="critical",
+                            )
+                            
+                            if re_eval_logs and re_eval_logs[0].status == "success":
+                                re_eval_log_path = re_eval_logs[0].location
+                                print(
+                                    f"Re-evaluation success for (eval={eval_model}, "
+                                    f"gen={generator_model}, re-eval={re_eval_model})."
+                                )
+                                re_eval_acc, re_eval_acc_judged, re_eval_scorer = extract_accuracy_metrics(re_eval_logs[0])
+                                passed_judge, adaptive_incorrect_cnt, re_eval_incorrect_cnt = parse_re_eval_counts(
+                                    re_eval_logs[0]
+                                )
+                            else:
+                                print(
+                                    f"Re-evaluation returned no logs or non-success status for "
+                                    f"(eval={eval_model}, gen={generator_model}, re-eval={re_eval_model})."
+                                )
+                                passed_judge, adaptive_incorrect_cnt, re_eval_incorrect_cnt = (0, 0, 0)
 
-            if not adaptive_logs or adaptive_logs[0].status != "success":
-                print(f"[Adaptive Politeness] No success log (eval={eval_model_name}, gen={generator_name}). Skipped.")
-                continue
+                            
+                            # Create a task-specific experiment CSV
+                            task_experiment_csv = os.path.join(
+                                os.path.dirname(self.experiment_csv), 
+                                f"politeness_experiment_results_{self.config.experiment_id}.csv"
+                            )
+                            
+                            write_experiment_log(
+                                experiment_csv=task_experiment_csv,
+                                eval_model_name=eval_model,
+                                generator_model_name=generator_model,
+                                re_eval_model_name=re_eval_model,
+                                initial_log_path=initial_log_path,
+                                adaptive_log_path=adaptive_log.location,
+                                re_eval_log_path=re_eval_log_path,
+                                use_cot=use_cot,
+                                similarity_threshold=similarity_threshold,
+                                score_threshold=4,  # Default score threshold for politeness
+                                use_embeddings=use_embeddings,
+                                filter_incorrect=True,
+                                adaptive_accuracy=adaptive_accuracy,
+                                adaptive_accuracy_judged=adaptive_accuracy_judged,
+                                adaptive_scorer_name=adaptive_scorer,
+                                re_eval_accuracy=re_eval_acc,
+                                re_eval_accuracy_judged=re_eval_acc_judged,
+                                re_eval_scorer_name=re_eval_scorer,
+                                judge_model_name="anthropic/claude-3-5-sonnet-latest",
+                                positive_samples=pos_samples,
+                                negative_samples=neg_samples,
+                                passed_judge_count=passed_judge,
+                                adaptive_incorrect_count=adaptive_incorrect_cnt,
+                                re_eval_incorrect_count=re_eval_incorrect_cnt,
+                                novelty_results_file=novelty_file,
+                                num_epochs=num_epochs,
+                            )
+                            
+                            # Also write to the main experiment CSV for aggregated analysis
+                            write_experiment_log(
+                                experiment_csv=self.experiment_csv,
+                                eval_model_name=eval_model,
+                                generator_model_name=generator_model,
+                                re_eval_model_name=re_eval_model,
+                                initial_log_path=initial_log_path,
+                                adaptive_log_path=adaptive_log.location,
+                                re_eval_log_path=re_eval_log_path,
+                                use_cot=use_cot,
+                                similarity_threshold=similarity_threshold,
+                                score_threshold=4,  # Default score threshold for politeness
+                                use_embeddings=use_embeddings,
+                                filter_incorrect=True,
+                                adaptive_accuracy=adaptive_accuracy,
+                                adaptive_accuracy_judged=adaptive_accuracy_judged,
+                                adaptive_scorer_name=adaptive_scorer,
+                                re_eval_accuracy=re_eval_acc,
+                                re_eval_accuracy_judged=re_eval_acc_judged,
+                                re_eval_scorer_name=re_eval_scorer,
+                                judge_model_name="anthropic/claude-3-5-sonnet-latest",
+                                positive_samples=pos_samples,
+                                negative_samples=neg_samples,
+                                passed_judge_count=passed_judge,
+                                adaptive_incorrect_count=adaptive_incorrect_cnt,
+                                re_eval_incorrect_count=re_eval_incorrect_cnt,
+                                novelty_results_file=novelty_file,
+                                num_epochs=num_epochs,
+                            )
 
-            adaptive_log = adaptive_logs[0]
-            accuracy, scorer = parse_accuracy_metrics(adaptive_log)
-            language_counts, judge_choice_counts = parse_judge_metadata(adaptive_log)
-
-            # Count how many samples were incorrect
-            incorrect_count = self.parse_incorrect_count(adaptive_log)
-
-            write_experiment_log(
-                experiment_csv=self.experiment_csv,
-                eval_model_name=eval_model_name,
-                generator_model_name=generator_name,
-                initial_log_path=initial_log_path,
-                adaptive_log_path=adaptive_log.location,
-                use_cot=self.use_cot,
-                similarity_threshold=self.similarity_threshold,
-                score_threshold=self.score_threshold,
-                use_embeddings=self.use_embeddings,
-                accuracy=accuracy,
-                scorer_name=scorer,
-                judge_language_counts=language_counts,
-                judge_choice_counts=judge_choice_counts,
-                n_datapoints=self.n_datapoints,
-                max_attempts=self.max_attempts,
-                adaptive_incorrect_count=incorrect_count,
-            )
-
-    def run_all(self, eval_models: List[str], generator_models: List[str]) -> None:
+    def run_task_pipeline(
+        self,
+        models_for_transfer: List[str],
+        positive_samples_list: List[int] = [1],
+        negative_samples_list: List[int] = [8],
+        num_epochs: int = 100,
+        n_examples: int = 3,
+        num_samples: int = 100,
+        cot: bool = False,
+        cot_in_context: bool = False,
+        similarity_threshold: float = 0.6,
+        use_embeddings: bool = False,
+    ):
         """
-        1) Runs or loads initial politeness_n_shot logs for each model in eval_models.
-        2) For each of those logs, runs adaptive_politeness with each generator model.
+        Runs the complete pipeline for politeness evaluations:
+        1. Initial evaluation of each model
+        2. Adaptive evaluation with each generator model
+        3. Re-evaluation with models_for_transfer
         """
-        logs_by_model = self.run_initial_experiments(eval_models)
-        for eval_model_name, init_log in logs_by_model.items():
-            self.run_adaptive_eval(
-                initial_log_path=init_log.location,
-                eval_model_name=eval_model_name,
-                generator_models=generator_models,
+        # Update models for adaptive evaluation and re-evaluation
+        self.adaptive_evaluated_models = models_for_transfer
+        
+        # 1. Run initial evaluation
+        initial_logs = self.run_initial_experiment(
+            n_examples=n_examples,
+            num_samples=num_samples,
+            cot=cot
+        )
+        
+        if not initial_logs:
+            print("No successful initial evaluation logs. Cannot proceed.")
+            return
+        
+        # 2 & 3. Run adaptive experiments and re-evaluations for each model
+        for model_name, log in initial_logs.items():
+            print(f"\nRunning adaptive experiments for initial model {model_name}\n")
+            
+            self.run_adaptive_experiment(
+                initial_log_path=log.location,
+                original_eval_model_name=model_name,
+                positive_samples_list=positive_samples_list,
+                negative_samples_list=negative_samples_list,
+                cot_in_context=cot_in_context,
+                use_cot=cot,
+                similarity_threshold=similarity_threshold,
+                use_embeddings=use_embeddings,
+                num_epochs=num_epochs,
             )
 
 
 @click.command()
-@click.option(
-    "--experiment-csv",
-    default="results/politeness_experiment_results.csv",
-    help="Path to the CSV file where experiment results will be stored.",
-)
-@click.option(
-    "--cache-csv",
-    default="results/politeness_experiment_cache.csv",
-    help="Path to the CSV file where cached logs will be stored.",
-)
-@click.option(
-    "--eval-models",
-    default=["openai/gpt-4o-mini"],
-    multiple=True,
-    help="Models to run the initial politeness_n_shot evaluations.",
-)
-@click.option(
-    "--generator-models",
-    default=["openai/gpt-4o-mini"],
-    multiple=True,
-    help="Models to generate new utterances in the adaptive step.",
-)
-@click.option("--n-datapoints", default=40, type=int, help="Number of datapoints for both initial and adaptive tasks.")
-@click.option("--use-cot", is_flag=True, help="Use chain-of-thought for solver prompts.")
-@click.option(
-    "--similarity-threshold",
-    default=0.3,
-    type=float,
-    help="Utterance similarity threshold for novelty filtering in the adaptive step.",
-)
-@click.option(
-    "--score-threshold",
-    default=4,
-    type=int,
-    help="Score threshold for deciding if the model was correct or not (per the self-check logic).",
-)
-@click.option(
-    "--use-embeddings",
-    is_flag=True,
-    help="If True, use embeddings to compare utterance similarity for novelty filtering.",
-)
-@click.option("--max-attempts", default=5, type=int, help="Max attempts to generate a valid new utterance.")
+@click.option('--models-for-transfer', multiple=True, help='Models to use for transfer evaluation')
+@click.option('--positive-samples', multiple=True, type=int, default=[1], help='Number of positive samples to use')
+@click.option('--negative-samples', multiple=True, type=int, default=[8], help='Number of negative samples to use')
+@click.option('--num-epochs', default=100, help='Number of epochs to run for adaptive evaluation')
+@click.option('--num-samples', default=100, help='Number of samples to use for initial evaluation')
+@click.option('--n-examples', default=3, help='Number of in-context examples to use')
+@click.option('--use-cot', is_flag=True, help='Use chain-of-thought for solver prompts')
+@click.option('--cot-in-context', is_flag=True, help='Use chain-of-thought in context examples')
+@click.option('--similarity-threshold', default=0.6, type=float, help='Similarity threshold for novelty scoring')
+@click.option('--use-embeddings', is_flag=True, help='Use embeddings for similarity checking')
+@click.option('--experiment-id', default=None, help='Custom experiment ID')
+@click.option('--experiment-csv', default=None, help='Path to the CSV file where experiment results will be stored')
+@click.option('--cache-csv', default=None, help='Path to the CSV file where cached logs will be stored')
 def main(
-    experiment_csv: str,
-    cache_csv: str,
-    eval_models: List[str],
-    generator_models: List[str],
-    n_datapoints: int,
-    use_cot: bool,
-    similarity_threshold: float,
-    score_threshold: int,
-    use_embeddings: bool,
-    max_attempts: int,
-) -> None:
-    """
-    1) Runs politeness_n_shot for each model in --eval-models.
-    2) Then runs adaptive_politeness for each (eval-model, generator-model) pair.
-    3) Stores logs and metrics, including judge language metadata, into a CSV.
-       Now also logs how many were answered incorrectly (adaptive_incorrect_count).
-    """
-    runner = PolitenessExperimentRunner(
+    models_for_transfer,
+    positive_samples,
+    negative_samples,
+    num_epochs,
+    num_samples,
+    n_examples,
+    use_cot,
+    cot_in_context,
+    similarity_threshold,
+    use_embeddings,
+    experiment_id,
+    experiment_csv,
+    cache_csv,
+):
+    """Run politeness transfer experiments"""
+    
+    # Convert tuple options to lists
+    models_for_transfer = list(models_for_transfer) or ["openai/gpt-4o-mini"]
+    positive_samples = list(positive_samples) or [1]
+    negative_samples = list(negative_samples) or [8]
+    
+    print(f"Running politeness transfer experiments with models: {models_for_transfer}")
+    print(f"Positive samples: {positive_samples}")
+    print(f"Negative samples: {negative_samples}")
+    print(f"Num epochs: {num_epochs}")
+    print(f"Using CoT: {use_cot}")
+    print(f"CoT in context: {cot_in_context}")
+    
+    runner = TransferPolitenessExperimentRunner(
         use_cot=use_cot,
-        similarity_threshold=similarity_threshold,
-        score_threshold=score_threshold,
-        use_embeddings=use_embeddings,
-        n_datapoints=n_datapoints,
-        max_attempts=max_attempts,
+        use_cot_target=use_cot,
+        use_cot_in_context_attacker=cot_in_context,
+        experiment_id=experiment_id,
         experiment_csv=experiment_csv,
         cache_csv=cache_csv,
     )
-    runner.run_all(
-        eval_models=list(eval_models),
-        generator_models=list(generator_models),
+    
+    runner.run_task_pipeline(
+        models_for_transfer=models_for_transfer,
+        positive_samples_list=positive_samples,
+        negative_samples_list=negative_samples,
+        num_epochs=num_epochs,
+        num_samples=num_samples,
+        n_examples=n_examples,
+        cot=use_cot,
+        cot_in_context=cot_in_context,
+        similarity_threshold=similarity_threshold,
+        use_embeddings=use_embeddings,
     )
 
 
 if __name__ == "__main__":
-    main() 
+    main()
