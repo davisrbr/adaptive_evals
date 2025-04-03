@@ -3,6 +3,7 @@ Multilingual politness initial task and adaptive version
 """
 from typing import Any, Optional, Literal
 import torch
+import logging
 
 
 import inspect_ai
@@ -11,6 +12,7 @@ from inspect_ai.dataset import Dataset, Sample, hf_dataset, MemoryDataset
 from inspect_ai.model import GenerateConfig
 from inspect_ai.scorer import choice
 from inspect_ai.solver import Generate, Solver, TaskState, generate, multiple_choice, solver
+from inspect_ai.log import read_eval_log
 
 from utils_elicitation.novelty import novelty_filter_judged_only
 
@@ -56,16 +58,19 @@ Answer: {answer}
 """.strip()
 
 @task
-def politeness_n_shot(n_examples: int = 5, debug: int = -1, cot: bool = False) -> Task:
+def politeness_n_shot(n_examples: int = 5, debug: int = -1, cot: bool = False, max_samples: int = None) -> Task:
     """
     Multilingual politeness task with n-shot prompting
     n_examples: number of examples to use for demonstrations
     debug: number of examples to use for debugging (default: -1, which uses all examples)
     cot: whether to use chain-of-thought prompting
+    max_samples: maximum number of samples to evaluate (default: None, which uses all examples)
     """
     dataset = get_politeness_dataset(split="test", shuffle=True)
-    if debug:
+    if debug > 0:
         dataset = dataset[:debug]
+    elif max_samples and max_samples > 0:
+        dataset = dataset[:max_samples]
 
     return Task(
         dataset=dataset,
@@ -193,7 +198,7 @@ def adaptive_politeness(
         scorer_list.append(adaptive_politeness_scorer_judged())
 
     return Task(
-        dataset=MemoryDataset(name="adaptive_politeness", samples=[]),
+        dataset=get_politeness_dataset(split="test", shuffle=True)[:1], # placeholder dataset, is not used
         solver=solver_list,
         scorer=scorer_list,
         epochs=Epochs(
@@ -244,4 +249,91 @@ def get_politeness_dataset(
         split=split,
         auto_id=True,
         shuffle=shuffle,
+    )
+
+@task
+def re_evaluate_adaptive_politeness(
+    adaptive_log_path: str,
+    use_cot: bool = False,
+    filter_by_incorrect: bool = False,
+) -> Task:
+    """
+    Re-evaluates adaptive politeness utterances that passed judge filtering.
+    The model used for re-evaluation will be inferred from the task configuration.
+    
+    Args:
+        adaptive_log_path: Path to the log file from a previous adaptive politeness evaluation
+        use_cot: Whether to use chain-of-thought prompting for re-evaluation
+        filter_by_incorrect: If True, only re-evaluate utterances that were previously answered incorrectly
+    """
+    logger = logging.getLogger(__name__)
+
+    # Load and validate log
+    eval_log = read_eval_log(adaptive_log_path)
+    if not eval_log.samples:
+        raise ValueError("No samples found in the adaptive politeness log.")
+    logger.info(f"Found {len(eval_log.samples)} non-filtered samples in {adaptive_log_path}")
+
+    # Filter samples based on judge approval and prepare prompts
+    filtered_samples = []
+    for sample_item in eval_log.samples:
+        generated_sample = sample_item.store.get("generated_sample")
+        if not generated_sample:
+            continue
+        
+        # Check judge rating if available (A/B = approved, C = rejected)
+        judge_choice = generated_sample["metadata"].get("judge_choice", "")
+        if not judge_choice or judge_choice not in ["A", "B"]:
+            # We don't have a valid judge choice
+            continue
+        else:
+            print(f"DEBUG: Judge choice is {judge_choice} for sample {generated_sample}")
+            
+        # Filter by incorrect responses if requested
+        if filter_by_incorrect and generated_sample['metadata'].get("score", "") != "I":
+            print(f"DEBUG: Sample {generated_sample['metadata'].get('score')} is incorrect, skipping")
+            continue
+
+        # Get utterance data
+        utterance = generated_sample['input']
+        choices = generated_sample['choices']
+        if not utterance or not choices:
+            print(f"DEBUG: No utterance or choices for sample {generated_sample}")
+            continue
+        target = generated_sample['target']
+        if not target:
+            print(f"DEBUG: No target for sample {generated_sample}")
+            continue
+
+        # Create sample for re-evaluation
+        filtered_samples.append(Sample(
+            input=utterance,
+            choices=choices,
+            target=target,
+            metadata={
+                "original_utterance": utterance,
+                "original_metadata": str(generated_sample['metadata']),
+                "original_eval_model": eval_log.eval.task_args.get("eval_model_name", "gpt-4o-mini"),
+                "original_generator_model": eval_log.eval.task_args.get("generator_model_name", "gpt-4o-mini"),
+                "original_judge_model": eval_log.eval.task_args.get("judge_model_name", ""),
+                "original_embeddings_model": eval_log.eval.task_args.get("embeddings_model_name", "sentence-transformers/all-mpnet-base-v2"),
+                "language": generated_sample['metadata'].get("language", "unknown"),
+            }
+        ))
+
+    if not filtered_samples:
+        logger.info("No samples passed filtering criteria. Nothing to evaluate.")
+        raise ValueError("No samples passed filtering from the adaptive politeness log.")
+    
+    logger.info(f"Found {len(filtered_samples)} samples after filtering.")
+    dataset = MemoryDataset(
+        name="re_evaluate_adaptive_politeness",
+        samples=filtered_samples
+    )
+
+    return Task(
+        dataset=dataset,
+        solver=[multiple_choice_save_cot(shuffle=True, cot=use_cot)],
+        scorer=choice(),
+        reducer=("mean",),
     )

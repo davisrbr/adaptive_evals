@@ -101,15 +101,22 @@ def adaptive_legal_solver(
             if cot_in_context:
                 context_examples += f"Reasoning trace from the model for this example:\n{sample_item.store.get('chain_of_thought')}\n"
             context_examples += f"Correct answer for this example:\n{sample_item.target}\n\n"
-
         if use_claude:
-            prompt_template_path = f"/Users/davisbrown/adaptive_evals/legalbench/tasks/{task_name}/claude_prompt.txt"
+            prompt_template_path = f"../legalbench/tasks/{task_name}/claude_prompt.txt"
         elif use_example:
-            prompt_template_path = f"/Users/davisbrown/adaptive_evals/legalbench/tasks/{task_name}/base_prompt.txt"
+            prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt.txt"
         else:
-            prompt_template_path = f"/Users/davisbrown/adaptive_evals/legalbench/tasks/{task_name}/base_prompt_wo_example.txt"
-        with open(prompt_template_path, 'r') as f:
-            base_prompt = f.read()
+            prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt_wo_example.txt"
+            
+        # Try both relative paths: with .. and with .
+        try:
+            with open(prompt_template_path, 'r') as f:
+                base_prompt = f.read()
+        except FileNotFoundError:
+            # If the first path fails, try without the leading ..
+            prompt_template_path = prompt_template_path.replace("../", "./")
+            with open(prompt_template_path, 'r') as f:
+                base_prompt = f.read()
 
         placeholder_keys = [key.strip() for key in set(re.findall(r"{{(.*?)}}", base_prompt))]
         if not placeholder_keys:

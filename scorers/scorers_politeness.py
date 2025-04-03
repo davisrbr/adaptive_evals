@@ -128,7 +128,7 @@ def adaptive_politeness_judge_scorer() -> Scorer:
 def adaptive_politeness_scorer_judged() -> Scorer:
     """
     Variation of the adaptive_politeness_scorer that also checks the judge's verdict.
-    If solver's correctness is 'INCORRECT' and the judge also rejects (C),
+    If solver's correctness is 'INCORRECT' and the judge accepts it (A or B),
     we continue to treat it as 'INCORRECT'.
     If solver's correctness is 'INCORRECT' but the judge actually doesn't accept it,
     we mark it as JUDGE_FILTERED. Otherwise, we propagate CORRECT or INCORRECT as usual.

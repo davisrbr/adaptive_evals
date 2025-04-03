@@ -99,11 +99,26 @@ def parse_generated_polite_utterance(generated_text: str) -> Optional[Sample]:
         return None
 
 
-def get_generation_prompt_politeness(context: str) -> str:
+def get_generation_prompt_politeness(
+    context: str, 
+    attempt: int = 0,
+    use_cot_generator: bool = False,
+    include_previous_reasoning: bool = False
+) -> str:
     """
     Prompt for generating a new utterance. Currently minimal; can be refined.
     The user can instruct the model to produce an utterance with a certain rating.
+    
+    Args:
+        context: Examples of previously correct and incorrect model responses
+        attempt: Current generation attempt number (can be used for prompt tweaking)
+        use_cot_generator: Whether to request chain-of-thought reasoning
+        include_previous_reasoning: Whether to include reasoning from previous attempts
     """
+    reasoning_prompt = ""
+    if use_cot_generator:
+        reasoning_prompt = """Your "reasoning" should be detailed and analyze the model's mistake patterns in depth. For example, identify if the model struggles with cultural context, sarcasm, formality levels, or other factors."""
+    
     return f"""You are creating a brand new utterance (you may use any language, style, or context). We have some previous examples (correct vs incorrect) below, your goal is to create a new utterance that elicits an incorrect rating from the target model. You should analyze the examples, identify the common mistakes made by the model, and create an example that takes advantage of those mistakes. Your new utterance should be different from the examples below, but should use them for inspiration:
 [BEGIN CONTEXT]
 {context}
@@ -115,6 +130,8 @@ Please output a JSON object with the following structure:
   "utterance": "A brand-new utterance showcasing politeness or impoliteness in some context",
   "politeness_rating": <integer from -2 to 2>
 }}
+
+{reasoning_prompt}
 
 -2 means very impolite, 2 means very polite. Provide variety.
 """
@@ -208,11 +225,16 @@ def adaptive_politeness_solver(
     use_eval_model_for_checker: bool = False,
     # Newly added param to match the approach in solver_adaptive_truthfulqa_refactor
     question_embedding_map: Optional[Dict[str, torch.Tensor]] = None,
+    resample_questions: bool = False,
+    include_previous_reasoning: bool = False,
 ) -> Generate:
     """
     Solver that adapts the politeness dataset by generating new utterances
     (with a variety of politeness ratings) that the model is likely to get wrong,
     and then final-evaluates them with the eval model.
+    
+    Args:
+        resample_questions: If True, resample the in-context examples after every question attempt.
     """
 
     async def solve(state: TaskState, generate: Generate) -> TaskState:
@@ -228,6 +250,10 @@ def adaptive_politeness_solver(
             randomize_sampling=randomize_sampling,
             score_key="C",
         )
+        
+        # Store all samples in state for resampling
+        state.store.set("all_correct_samples", sampled_correct)
+        state.store.set("all_incorrect_samples", sampled_incorrect)
 
         # 2) Build context for the generator
         context = build_politeness_context(
@@ -265,6 +291,63 @@ def adaptive_politeness_solver(
                 logger.debug("Could not import sentence_transformers. Disabling embedding usage.")
                 embedding_model = None
 
+        # Define the function to generate prompts with optional resampling
+        def _generation_prompt_fn(ctx: str, current_attempt: int) -> str:
+            """
+            Builds the final prompt used to generate new utterances.
+            Resamples in-context examples if resample_questions is True.
+            """
+            # Use the original context for the first attempt
+            if not resample_questions or current_attempt == 0:
+                return get_generation_prompt_politeness(
+                    context=ctx,
+                    attempt=current_attempt,
+                    use_cot_generator=use_cot_generator,
+                    include_previous_reasoning=include_previous_reasoning
+                )
+            
+            # For subsequent attempts with resampling enabled, create a new context
+            all_correct = state.store.get("all_correct_samples", [])
+            all_incorrect = state.store.get("all_incorrect_samples", [])
+            
+            # Resample with replacement
+            resampled_correct = random.choices(
+                all_correct, 
+                k=min(n_positive_samples, len(all_correct))
+            ) if all_correct else []
+            
+            resampled_incorrect = random.choices(
+                all_incorrect,
+                k=min(n_negative_samples, len(all_incorrect))
+            ) if all_incorrect else []
+            
+            # Build new context with resampled examples
+            new_context = build_politeness_context(
+                resampled_correct,
+                resampled_incorrect,
+                randomize_sampling,
+                cot_in_context,
+            )
+            
+            # Store the new examples for novelty checking
+            new_examples = [s.input for s in resampled_correct + resampled_incorrect]
+            state.store.set(f"examples_attempt_{current_attempt}", new_examples)
+            
+            # Update embeddings if using them
+            if use_embeddings and embedding_model is not None and new_examples:
+                new_embeddings = embedding_model.encode(
+                    new_examples,
+                    convert_to_tensor=True,
+                )
+                state.store.set(f"embeddings_attempt_{current_attempt}", new_embeddings)
+            
+            return get_generation_prompt_politeness(
+                context=new_context,
+                attempt=current_attempt,
+                use_cot_generator=use_cot_generator,
+                include_previous_reasoning=include_previous_reasoning
+            )
+
         # 4) Define a check_question function for novelty + acceptance
         async def check_question_fn(candidate: Sample) -> bool:
             # Check novelty if we have embeddings
@@ -288,13 +371,25 @@ def adaptive_politeness_solver(
                 state=state,
             )
 
+        # Custom function to get current examples for novelty checking
+        def _get_current_examples(attempt: int) -> List[str]:
+            if not resample_questions or attempt == 0:
+                return existing_questions
+            return state.store.get(f"examples_attempt_{attempt}", existing_questions)
+        
+        # Custom function to get current embeddings for novelty checking
+        def _get_current_embeddings(attempt: int) -> Optional[torch.Tensor]:
+            if not resample_questions or attempt == 0:
+                return existing_question_embeddings
+            return state.store.get(f"embeddings_attempt_{attempt}", existing_question_embeddings)
+
         # 5) Generate a new utterance (the "question") with retries
         candidate_sample = await generate_question_with_retries(
             state=state,
             context=context,
             generator_model_name=generator_model_name,
             max_attempts=max_attempts,
-            generation_prompt_fn=get_generation_prompt_politeness,
+            generation_prompt_fn=_generation_prompt_fn,
             parse_question_fn=parse_generated_polite_utterance,
             existing_questions=existing_questions,
             similarity_threshold=similarity_threshold,
@@ -302,6 +397,9 @@ def adaptive_politeness_solver(
             embedding_model=embedding_model,
             existing_question_embeddings=existing_question_embeddings,
             check_question_fn=check_question_fn,
+            include_previous_reasoning=include_previous_reasoning,
+            get_current_examples_fn=_get_current_examples if resample_questions else None,
+            get_current_embeddings_fn=_get_current_embeddings if resample_questions and use_embeddings else None,
         )
 
         if not candidate_sample:
@@ -327,10 +425,10 @@ Which letter is correct? (Format: ANSWER: X)""",
 
         # Store final results
         state.store.set("generated_sample", candidate_sample)
-        # The "score" string will be set in the final checks. 
-        # We'll place it in state.scores for Inspect.
-        state.scores = [candidate_sample.metadata.get("score", None)]
-
+        
+        # Fix: Set scores as a dictionary instead of a list
+        state.score = candidate_sample.metadata.get("score", None)
+        
         if original_eval_model_name is not None:
             state.store.set("original_eval_model_name", original_eval_model_name)
 
