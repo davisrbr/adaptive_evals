@@ -447,7 +447,7 @@ def adaptive_legal_solver_refactor(
         else:
             state.store.set("original_eval_model_name", eval_model_name)
 
-        state.scores = [generated_sample.metadata["score"]]
+        # state.scores = {"score": generated_sample.metadata["score"]}
         return state
 
     return solve

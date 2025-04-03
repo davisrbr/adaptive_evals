@@ -46,7 +46,7 @@ def cyberbullying_basic_solver(
         config=GenerateConfig(
             max_tokens=1000,
             temperature=0.5,
-            max_connections=10000,
+            max_connections=50,
             top_p=1.0,
         ),
     )
@@ -132,7 +132,7 @@ def cyberbullying_pair_solver(
         config=GenerateConfig(
             max_tokens=10000,
             temperature=1.0,
-            max_connections=10000,
+            max_connections=50,
             top_p=0.9,
         ),
     )
@@ -141,7 +141,7 @@ def cyberbullying_pair_solver(
         config=GenerateConfig(
             max_tokens=1000,
             temperature=0.0,
-            max_connections=10000,
+            max_connections=50,
             top_p=1.0,
         ),
     )
@@ -308,7 +308,7 @@ def cyberbullying_adaptive_solver(
         config=GenerateConfig(
             max_tokens=10000,
             temperature=1.0,
-            max_connections=10000,
+            max_connections=50,
             top_p=0.9,
         ),
     )
@@ -317,7 +317,7 @@ def cyberbullying_adaptive_solver(
         config=GenerateConfig(
             max_tokens=1000,
             temperature=0.0,
-            max_connections=10000,
+            max_connections=50,
             top_p=1.0,
         ),
     )

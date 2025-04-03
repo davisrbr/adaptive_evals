@@ -67,11 +67,11 @@ def adaptive_truthfulqa_solver(
         # Initialize models
         generator_model = get_model(
             generator_model_name,
-            config=GenerateConfig(max_connections=10000, temperature=0.5),
+            config=GenerateConfig(max_connections=50, temperature=0.5),
         )
         eval_model = get_model(
             eval_model_name,
-            config=GenerateConfig(max_connections=10000, temperature=0),
+            config=GenerateConfig(max_connections=50, temperature=0),
         )
 
         # Load the initial evaluation log
@@ -139,7 +139,7 @@ def adaptive_truthfulqa_solver(
         # Self-check model
         if self_check_model_name is not None:
             self_check_model = get_model(
-                self_check_model_name, config=GenerateConfig(max_connections=10000, temperature=0)
+                self_check_model_name, config=GenerateConfig(max_connections=50, temperature=0)
             )
         else:
             self_check_model = None
@@ -320,7 +320,6 @@ def adaptive_truthfulqa_solver(
         generated_sample.metadata["overlap_count"] = state.store.get("overlap_count", 0)
         generated_sample.metadata["num_attempts"] = attempt
         state.store.set("generated_sample", generated_sample)
-        state.scores = [generated_sample.metadata["score"]]
         if original_eval_model_name is not None:
             state.store.set("original_eval_model_name", original_eval_model_name)
 
@@ -445,7 +444,7 @@ def rewording_truthfulqa_solver(
         # 3. Initialize the rewording model
         rewording_model = get_model(
             rewording_model_name,
-            config=GenerateConfig(max_connections=10000, temperature=0)
+            config=GenerateConfig(max_connections=50, temperature=0)
         )
 
         # 4. Try to generate the reworded question
@@ -565,15 +564,14 @@ def adaptive_truthfulqa_judge_solver(
                 "Generated question has an invalid target index (out of range)."
             )
             state.store.set("generated_sample", generated_sample)
-            state.scores = ["C"]
-            state.completed = True
+            state.score = "C"
             return state
 
         generated_question = generated_sample.input
         generated_choices = generated_sample.choices
         generated_target = generated_choices[generated_sample.target[0]]
         # Initialize the judge model
-        judge_model = get_model(judge_model_name, config=GenerateConfig(max_connections=10000, temperature=0.1))
+        judge_model = get_model(judge_model_name, config=GenerateConfig(max_connections=50, temperature=0.1))
 
         # Prepare the judging prompt using a classifying pattern
         # Format first 4 ground truth questions as examples

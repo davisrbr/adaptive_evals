@@ -66,7 +66,7 @@ if __name__ == "__main__":
                 task_log = eval(
                     task,
                     epochs=Epochs(1, "max"),
-                    max_connections=10000,
+                    max_connections=50,
                     log_dir=log_dir,
                     model=eval_model,
                     log_level="error"
@@ -79,7 +79,7 @@ if __name__ == "__main__":
             task_log = eval(
                 task,
                 epochs=Epochs(1, "max"),
-                max_connections=10000,
+                max_connections=50,
                 log_dir=log_dir,
                 model=eval_model,
                 log_level="error"
@@ -151,7 +151,7 @@ if __name__ == "__main__":
                 task_log = eval(
                     task,
                     epochs=Epochs(1, "max"),
-                    max_connections=10000,
+                    max_connections=50,
                     log_dir=log_dir,
                     model=eval_model
                 )[0]
@@ -163,7 +163,7 @@ if __name__ == "__main__":
             task_log = eval(
                 task,
                 epochs=Epochs(1, "max"),
-                max_connections=10000,
+                max_connections=50,
                 log_dir=log_dir,
                 model=eval_model
             )[0]
@@ -194,7 +194,7 @@ if __name__ == "__main__":
                     eval(
                         task,
                         epochs=Epochs(30, "mean"),
-                        max_connections=10000,
+                        max_connections=50,
                         log_dir=log_dir,
                         model=eval_model,
                         temperature=0
@@ -212,7 +212,7 @@ if __name__ == "__main__":
                     eval(
                         task,
                         epochs=Epochs(30, "mean"),
-                        max_connections=10000,
+                        max_connections=50,
                         log_dir=log_dir,
                         model=eval_model,
                         temperature=0
@@ -233,7 +233,7 @@ if __name__ == "__main__":
         eval(
             task,
             epochs=Epochs(1, "max"),
-            max_connections=10000,
+            max_connections=50,
             log_dir=log_dir,
             model=eval_model
         )
@@ -272,7 +272,7 @@ if __name__ == "__main__":
                 eval(
                     task,
                     epochs=Epochs(1, "max"),
-                    max_connections=10000,
+                    max_connections=50,
                     log_dir=log_dir
                 )
 
@@ -291,6 +291,6 @@ if __name__ == "__main__":
                     eval(
                         task,
                         epochs=Epochs(1, "max"),
-                        max_connections=10000,
+                        max_connections=50,
                         log_dir=log_dir
                     )

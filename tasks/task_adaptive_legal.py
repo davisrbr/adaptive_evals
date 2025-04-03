@@ -785,7 +785,7 @@ if __name__ == "__main__":
                 # eval(
                 #     task,
                 #     epochs=Epochs(30, "mean"),
-                #     max_connections=10000,
+                #     max_connections=50,
                 #     log_dir=log_dir,
                 #     model="openai/gpt-4o-mini",
                 #     temperature=0,
@@ -803,7 +803,7 @@ if __name__ == "__main__":
                 # eval(
                 #     task,
                 #     epochs=Epochs(30, "mean"),
-                #     max_connections=10000,
+                #     max_connections=50,
                 #     log_dir=log_dir,
                 #     model="openai/gpt-4o-mini",
                 #     temperature=0,
@@ -852,7 +852,7 @@ if __name__ == "__main__":
     #                 # Handle the error as needed, possibly continue or exit
     #         else:
     #             print(f"No JSON files found in {log_dir}. Proceeding with the initial truthfulqa task.")
-    #             task_log = eval(task, epochs=Epochs(1, "max"), max_connections=10000, log_dir=log_dir, model=eval_model, log_level="error")[0]
+    #             task_log = eval(task, epochs=Epochs(1, "max"), max_connections=50, log_dir=log_dir, model=eval_model, log_level="error")[0]
     #             initial_log_path = os.path.join(log_dir, max(
     #                 [f for f in os.listdir(log_dir) if f.endswith('.json')],
     #                 key=lambda x: os.path.getctime(os.path.join(log_dir, x))
@@ -891,7 +891,7 @@ if __name__ == "__main__":
     #                                 eval(
     #                                     task,
     #                                     epochs=Epochs(30, "mean"),
-    #                                     max_connections=10000,
+    #                                     max_connections=50,
     #                                     log_dir=log_dir,
     #                                     model=eval_model,
     #                                     temperature=0,
@@ -910,7 +910,7 @@ if __name__ == "__main__":
     #                                 eval(
     #                                     task,
     #                                     epochs=Epochs(30, "mean"),
-    #                                     max_connections=10000,
+    #                                     max_connections=50,
     #                                     log_dir=log_dir,
     #                                     model=eval_model,
     #                                     temperature=0,

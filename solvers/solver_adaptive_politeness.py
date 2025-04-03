@@ -327,9 +327,7 @@ Which letter is correct? (Format: ANSWER: X)""",
 
         # Store final results
         state.store.set("generated_sample", candidate_sample)
-        # The "score" string will be set in the final checks. 
-        # We'll place it in state.scores for Inspect.
-        state.scores = [candidate_sample.metadata.get("score", None)]
+        # state.scores = {"score": candidate_sample.metadata.get("score", None)}
 
         if original_eval_model_name is not None:
             state.store.set("original_eval_model_name", original_eval_model_name)
@@ -405,7 +403,7 @@ As additional metadata, afterward please also note the language of the utterance
 
         judge_model = get_model(
             judge_model_name,
-            config=GenerateConfig(max_connections=10000, temperature=0.1)
+            config=GenerateConfig(max_connections=50, temperature=0.1)
         )
 
         for _ in range(num_attempts):
