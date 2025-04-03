@@ -6,7 +6,7 @@ from inspect_ai import Epochs, Task, task, eval
 from inspect_ai.dataset import Sample, hf_dataset, MemoryDataset
 from inspect_ai.scorer import choice
 from inspect_ai.solver import multiple_choice, chain_of_thought
-from typing import Any, Optional
+from typing import Any, Callable, Optional
 import sys
 import json
 import logging
@@ -15,6 +15,7 @@ from solvers.adaptive_utils import multiple_choice_save_cot
 from solvers.solver_adaptive_legal_refactor import adaptive_legal_solver_refactor
 from utils_elicitation.novelty import novelty_filter_judged_only
 sys.path.append("..")
+sys.path.append("../legalbench")
 from legalbench.utils import generate_prompts
 
 from scorers.scorers_rewording import choice_judged, judge_scoring
@@ -26,22 +27,14 @@ from scorers.scorers_legal import (
 )
 
 
-@task
-def legalbench_initial(task_name: str = "maud_accuracy_of_target_general_rw_bringdown_timing_answer", use_cot: bool = False, debug: bool = False) -> Task:
-    """
-    Initial evaluation task for the LegalBench dataset.
-
-    Args:
-        task_name (str): The name of the LegalBench task to evaluate.
-    """
-
-    # Load the prompt template for the specified task
-    prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt.txt"
-    with open(prompt_template_path) as in_file:
-        prompt_template = in_file.read()
-
-    # Define a function to convert dataset records to Sample objects
-    def record_to_sample(record: dict[str, Any]) -> Sample:
+def get_record_to_sample(
+    prompt_template: str, 
+    task_name: str, 
+    debug: bool = False, 
+    use_cot: bool = False
+) -> Callable[[dict[str, Any]], Sample]:
+    '''Returns a function that converts a dataset record into a Sample object.'''
+    def record_to_sample(record: dict[str, Any],) -> Sample:
         # Convert the single record into a pandas DataFrame
         df = pd.DataFrame([record])
 
@@ -77,11 +70,60 @@ def legalbench_initial(task_name: str = "maud_accuracy_of_target_general_rw_brin
             metadata={"task_name": task_name, "debug": debug, "use_cot": use_cot, "original_prompt": prompts[0]}
         )
 
+    return record_to_sample
+
+def get_prompt_template(
+    task_name: str,
+    use_claude: bool = False,
+    use_example: bool = True
+) -> str:
+    """
+    Get the prompt template for a specific LegalBench task.
+    
+    Args:
+        task_name: The name of the LegalBench task
+        use_claude: Whether to use Claude-specific prompts
+        use_example: Whether to include examples in the prompt
+        
+    Returns:
+        The prompt template as a string
+    """
+    # Define the template filename based on conditions
+    if use_claude:
+        template_filename = "claude_prompt.txt"
+    elif use_example:
+        template_filename = "base_prompt.txt"
+    else:
+        template_filename = "base_prompt_wo_example.txt"
+        
+    # Try both relative paths (.. and .) to handle different execution contexts
+    for base_path in ["../legalbench", "./legalbench"]:
+        try:
+            prompt_template_path = f"{base_path}/tasks/{task_name}/{template_filename}"
+            with open(prompt_template_path) as in_file:
+                return in_file.read()
+        except FileNotFoundError:
+            continue
+            
+    raise FileNotFoundError(f"Could not find prompt template for task {task_name}")
+
+@task
+def legalbench_initial(task_name: str = "maud_accuracy_of_target_general_rw_bringdown_timing_answer", use_cot: bool = False, debug: bool = False) -> Task:
+    """
+    Initial evaluation task for the LegalBench dataset.
+
+    Args:
+        task_name (str): The name of the LegalBench task to evaluate.
+    """
+
+    # Load the prompt template for the specified task
+    prompt_template = get_prompt_template(task_name)
+
     # Load the LegalBench dataset
     dataset = hf_dataset(
         path="nguha/legalbench",
         name=task_name,
-        sample_fields=record_to_sample,
+        sample_fields=get_record_to_sample(prompt_template, task_name, debug, use_cot),
         split="test",  # Use "test" or "validation" as appropriate
         auto_id=True,
         shuffle=not debug,
@@ -118,52 +160,21 @@ def legalbench_initial_aggregated(task_names: list[str] = [
 
     for task_name in task_names:
         # Load the prompt template for the specified task
-        # check if claude in model name
-        if use_claude:
-            prompt_template_path = f"../legalbench/tasks/{task_name}/claude_prompt.txt"
-        elif use_example:
-            prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt.txt"
-        else:
-            prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt_wo_example.txt"
-        with open(prompt_template_path) as in_file:
-            prompt_template = in_file.read()
-
-        # Define a function to convert dataset records to Sample objects
-        def record_to_sample(record: dict[str, Any]) -> Sample:
-            # Convert the single record into a pandas DataFrame
-            df = pd.DataFrame([record])
-
-            # Generate the prompt using the template and record data
-            prompts = generate_prompts(prompt_template=prompt_template, data_df=df)
-            prompt = prompts[0]
-
-            # Extract the options from the prompt
-            option_pattern = r"Option ([A-Z]): (.*)"
-            options_matches = re.findall(option_pattern, prompt)
-
-            # Create choices based on options extracted
-            choices = [match[1] for match in options_matches]
-
-            # The target is the letter of the correct answer
-            target = record["answer"].strip()
-            sample_id = str(hash(prompt))
-
-            return Sample(
-                input=prompt,
-                choices=choices,
-                target=target,
-                id=sample_id,
-                metadata={"task_name": task_name, "base_text": record["text"]}
-            )
+        try:
+            prompt_template = get_prompt_template(task_name, use_claude, use_example)
+        except FileNotFoundError as e:
+            logging.error(f"Skipping task {task_name}: {e}")
+            continue
 
         # Load the LegalBench dataset for this task
         dataset = hf_dataset(
             path="nguha/legalbench",
             name=task_name,
-            sample_fields=record_to_sample,
+            sample_fields=get_record_to_sample(prompt_template, task_name, debug, use_cot),
             split="test",  # Use "test" or "validation" as appropriate
             auto_id=False,
             shuffle=True if not debug else False,
+            trust=True
         )
 
         if debug:
@@ -226,9 +237,19 @@ def adaptive_legal(
         Task: An Inspect Task instance that runs an adaptive solver pipeline
         and includes the judged scorer if a judge_model_name is provided.
     """
-
-    # We'll start with an empty dataset because the solver will populate new samples
-    dataset = MemoryDataset(name="adaptive_legal", samples=[])
+    # Get the prompt template
+    prompt_template = get_prompt_template(task_name, use_claude, use_example)
+    
+    # Load the LegalBench dataset for this task
+    dataset = hf_dataset(
+        path="nguha/legalbench",
+        name=task_name,
+        sample_fields=get_record_to_sample(prompt_template, task_name, debug=False, use_cot=use_cot_evaluator),
+        split="test",  # Use "test" or "validation" as appropriate
+        auto_id=False,
+        shuffle=randomize_sampling,
+        trust=True
+    )[:1]
 
     # We always include the standard solver chain: the main adaptive solver and
     # possibly a judge solver. Add them to the 'solver' list:
@@ -329,9 +350,17 @@ def adaptive_legal_refactor(
         include_previous_reasoning (bool): Whether to include previous failure mode reasoning traces in context for the generator.
         previous_reasoning_limit (int): Number of previous failure mode reasoning traces to include in context.
 """
-    # We'll start with an empty dataset because the solver will populate new samples
-    dataset = MemoryDataset(name="adaptive_legal_refactor", samples=[])
+    # Load the prompt template for the specified task
+    prompt_template = get_prompt_template(task_name)
 
+    # Load the LegalBench dataset
+    dataset = hf_dataset(
+        path="nguha/legalbench",
+        name=task_name,
+        sample_fields=get_record_to_sample(prompt_template, task_name, debug=False, use_cot=use_cot_evaluator),
+        split="test",  # Use "test" or "validation" as appropriate
+        auto_id=True,
+    )[:1]
     # Construct the solver list: the main adaptive solver plus (if specified) a judge solver
     solver_list = [
         adaptive_legal_solver_refactor(
@@ -414,41 +443,13 @@ def legalbench_reworded(
     """
 
     # Load the prompt template for the specified task
-    prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt.txt"
-    with open(prompt_template_path) as in_file:
-        prompt_template = in_file.read()
-
-    # Define a function to convert dataset records to Sample objects
-    def record_to_sample(record: dict[str, Any]) -> Sample:
-        # Convert the single record into a pandas DataFrame
-        df = pd.DataFrame([record])
-
-        # Generate the prompt using the template and record data
-        prompts = generate_prompts(prompt_template=prompt_template, data_df=df)
-        prompt = prompts[0]
-
-        # Extract the options from the prompt
-        option_pattern = r"Option ([A-Z]): (.*)"
-        options_matches = re.findall(option_pattern, prompt)
-
-        # Create choices based on options extracted
-        choices = [match[1] for match in options_matches]
-
-        # The target is the letter of the correct answer
-        target = record["answer"].strip()
-
-        return Sample(
-            input=prompt,
-            choices=choices,
-            target=target,
-            metadata={"task_name": task_name}
-        )
+    prompt_template = get_prompt_template(task_name)
 
     # Load the LegalBench dataset
     dataset = hf_dataset(
         path="nguha/legalbench",
         name=task_name,
-        sample_fields=record_to_sample,
+        sample_fields=get_record_to_sample(prompt_template, task_name, debug, cot),
         split="test",  # Use "test" or "validation" as appropriate
         auto_id=True,
         shuffle=True,
@@ -499,14 +500,11 @@ def legalbench_reworded_aggregated(
 
     for task_name in task_names:
         # Load the prompt template for the specified task
-        if use_claude:
-            prompt_template_path = f"../legalbench/tasks/{task_name}/claude_prompt.txt"
-        elif use_example:
-            prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt.txt"
-        else:
-            prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt_wo_example.txt"
-        with open(prompt_template_path) as in_file:
-            prompt_template = in_file.read()
+        try:
+            prompt_template = get_prompt_template(task_name, use_claude, use_example)
+        except FileNotFoundError as e:
+            logging.error(f"Skipping task {task_name}: {e}")
+            continue
 
         # Define a function to convert dataset records to Sample objects
         def record_to_sample(record: dict[str, Any]) -> Sample:
