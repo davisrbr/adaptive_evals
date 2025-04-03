@@ -446,7 +446,7 @@ class TransferLegalExperimentRunner:
                         adaptive_logs = eval(
                             task,
                             epochs=Epochs(num_epochs, "mean"),
-                            max_connections=1000,
+                            max_connections=100,
                             log_dir=combination_log_dir,
                             model=eval_model,
                             temperature=0,

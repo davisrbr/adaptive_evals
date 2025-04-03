@@ -13,9 +13,11 @@ import click
 
 # Import necessary components from dataset-featurization
 sys.path.append(os.path.join(os.getcwd(), "dataset-featurization"))
+sys.path.append(os.path.join(os.getcwd(), "dataset-featurization/dataset_featurization"))
 from dataset_featurization.utils.generator import Generator
 from dataset_featurization.utils.verifier import Verifier
 from dataset_featurization.config import VERIFICATION_SYSTEM_PROMPT, VERIFICATION_USER_PROMPT, VERIFICATION_SPLIT, CLUSTER_SIZE, MODEL
+from dataset_featurization.utils.filtration import Filter
 
 # Load environment variables for API access
 load_dotenv()
@@ -93,9 +95,14 @@ def generate_features(df, sample_size=50, seed=42):
     
     # Remove duplicates
     unique_features = list(set(all_features))
-    print(f"Generated {len(unique_features)} unique features")
     
-    return unique_features
+    # Add filtration step to cluster similar features
+    filtration = Filter()
+    filtered_features = filtration.filter(unique_features)
+    
+    print(f"Generated {len(unique_features)} raw features, filtered to {len(filtered_features)} features")
+    
+    return filtered_features
 
 def verify_features(df, features, output_dir, sample_size=50, seed=42):
     """
@@ -126,26 +133,24 @@ def verify_features(df, features, output_dir, sample_size=50, seed=42):
     # Initialize the feature verifier
     verifier = Verifier()
     
-    # Split features into chunks for better processing
-    feature_chunks = [features[i:i+VERIFICATION_SPLIT] for i in range(0, len(features), VERIFICATION_SPLIT)]
+    # Extract strings from the dataset
+    strings = df_sample["string"].tolist()
     
-    # Create dataframe to store verification results
-    verification_df = pd.DataFrame()
-    verification_df["string"] = df_sample["string"]
+    # Use the process method from Verifier to verify all features across all strings
+    verification_df = verifier.process(strings, features)
     
-    # Verify features in chunks
-    for chunk_idx, feature_chunk in enumerate(feature_chunks):
-        print(f"Verifying feature chunk {chunk_idx+1}/{len(feature_chunks)}")
-        feature_results = verifier.verify(df_sample, feature_chunk)
-        
-        # Add verified features to dataframe
-        for i, feature in enumerate(feature_chunk):
-            feature_name = f"feature_{chunk_idx * VERIFICATION_SPLIT + i}"
-            verification_df[feature_name] = feature_results[:, i]
-            
-            # Also save the mapping from feature_name to feature text
-            with open(os.path.join(output_dir, f"{feature_name}.txt"), "w") as f:
-                f.write(feature)
+    # Save the feature descriptions for reference
+    for i, feature in enumerate(features):
+        feature_name = f"feature_{i}"
+        with open(os.path.join(output_dir, f"{feature_name}.txt"), "w") as f:
+            f.write(feature)
+    
+    # Rename the columns to match the feature_name format for consistency
+    feature_cols = verification_df.columns.tolist()
+    feature_cols.remove("string")  # Remove string column from renaming
+    
+    rename_dict = {feature: f"feature_{i}" for i, feature in enumerate(feature_cols)}
+    verification_df = verification_df.rename(columns=rename_dict)
     
     # Save the full verification results
     verification_df.to_csv(os.path.join(output_dir, "truthfulqa_features_verification.csv"), index=False)
@@ -161,20 +166,31 @@ def analyze_feature_clusters(df, features_df, output_dir):
         features_df: DataFrame with feature verification results
         output_dir: Directory to save analysis results
     """
-    print("Analyzing feature clusters...")
+    print("Analyzing feature correlations...")
     
-    # Map correct/incorrect answers
+    # Create a mapping from index to original dataset index if needed
+    # This ensures we correctly match features to their correct answers
     merged_df = features_df.copy()
+    
+    # Extract target/correctness information from the original dataset
+    # Ensure indexes are properly aligned
     merged_df["answer_correct"] = df.iloc[features_df.index]["target"].apply(lambda x: 1 if x else 0)
     
     # Get just the feature columns
     feature_cols = [col for col in features_df.columns if col.startswith("feature_")]
     
-    # Calculate feature occurrence rates
+    # Calculate feature occurrence rates and correlations
+    feature_stats = calculate_feature_statistics(merged_df, feature_cols, output_dir)
+    
+    # Save and display the most interesting correlations
+    analyze_correlations(feature_stats, output_dir)
+
+def calculate_feature_statistics(merged_df, feature_cols, output_dir):
+    """Calculate statistics for each feature"""
     feature_stats = {}
     for feature in feature_cols:
         # Overall occurrence rate
-        occurrence_rate = features_df[feature].mean()
+        occurrence_rate = merged_df[feature].mean()
         
         # Occurrence rate in correct vs incorrect answers
         if merged_df["answer_correct"].sum() > 0:
@@ -196,6 +212,10 @@ def analyze_feature_clusters(df, features_df, output_dir):
     with open(os.path.join(output_dir, "feature_statistics.json"), "w") as f:
         json.dump(feature_stats, f, indent=2)
     
+    return feature_stats
+
+def analyze_correlations(feature_stats, output_dir):
+    """Analyze and display the most interesting correlations"""
     # Find top correlating features
     correlations = [(feature, stats["correlation"]) for feature, stats in feature_stats.items()]
     top_positive = sorted(correlations, key=lambda x: x[1], reverse=True)[:10]
@@ -236,7 +256,12 @@ def main(sample_size, output_dir, seed):
     # Generate features
     features = generate_features(truthfulqa_df, sample_size=sample_size, seed=seed)
     
-    # Save generated features
+    # Save generated features as text file (consistent with toolkit)
+    features_file_path = os.path.join(output_dir, "truthfulqa_features.txt")
+    with open(features_file_path, "w") as f:
+        f.write("\n".join(features))
+    
+    # Also save as JSON for backward compatibility
     with open(os.path.join(output_dir, "truthfulqa_features.json"), "w") as f:
         json.dump(features, f, indent=2)
     

@@ -4,7 +4,7 @@ from typing import Dict, List, Optional, Tuple
 import click
 from inspect_ai import Epochs, eval
 from inspect_ai.log import EvalLog, read_eval_log
-from tasks.task_politeness import adaptive_politeness, politeness, re_evaluate_adaptive_politeness
+from tasks.task_politeness import adaptive_politeness, politeness_n_shot, re_evaluate_adaptive_politeness
 import logging
 import json
 from datetime import datetime
@@ -52,22 +52,43 @@ def extract_accuracy_metrics(eval_log: EvalLog) -> Tuple[Optional[float], Option
     Extract overall accuracy metrics from the eval log.
     Returns (accuracy, accuracy_judged, scorer_name)
     """
-    if not eval_log or not eval_log.metrics:
+    if not eval_log:
+        return None, None, None
+    
+    # Check if metrics are available in the results section
+    if not hasattr(eval_log, 'results') or not eval_log.results:
         return None, None, None
     
     # Normal accuracy
     accuracy = None
-    for scorer_name, metrics in eval_log.metrics.items():
-        if "accuracy" in metrics:
-            accuracy = metrics["accuracy"]
-            scorer = scorer_name
+    scorer = None
+    
+    # Try to find accuracy in the results
+    for result in eval_log.results:
+        if not hasattr(result, 'metrics') or not result.metrics:
+            continue
+            
+        for scorer_name, metrics in result.metrics.items():
+            if "accuracy" in metrics:
+                accuracy = metrics["accuracy"]
+                scorer = scorer_name
+                break
+        
+        if accuracy is not None:
             break
     
     # Judge-filtered accuracy if available
     accuracy_judged = None
-    for scorer_name, metrics in eval_log.metrics.items():
-        if "accuracy_judged" in metrics:
-            accuracy_judged = metrics["accuracy_judged"]
+    for result in eval_log.results:
+        if not hasattr(result, 'metrics') or not result.metrics:
+            continue
+            
+        for scorer_name, metrics in result.metrics.items():
+            if "accuracy_judged" in metrics:
+                accuracy_judged = metrics["accuracy_judged"]
+                break
+                
+        if accuracy_judged is not None:
             break
     
     return accuracy, accuracy_judged, scorer
@@ -80,10 +101,16 @@ def parse_re_eval_counts(eval_log: EvalLog) -> Tuple[int, int, int]:
     - Number of samples that were incorrect in the adaptive pass
     - Number of samples that were incorrect in the re-eval
     """
-    if not eval_log or not eval_log.metadata:
+    if not eval_log:
         return 0, 0, 0
     
-    metadata = eval_log.metadata.get("re_eval_stats", {})
+    # Check if store attribute exists and has re_eval_stats
+    metadata = getattr(eval_log, "store", {}).get("re_eval_stats", {})
+    if not metadata and hasattr(eval_log, "results") and eval_log.results:
+        # Try results.metadata if store isn't available
+        metadata = eval_log.results.metadata or {}
+        metadata = metadata.get("re_eval_stats", {})
+    
     return (
         metadata.get("passed_judge_count", 0),
         metadata.get("adaptive_incorrect_count", 0),
@@ -117,7 +144,7 @@ def write_experiment_log(
     adaptive_incorrect_count: int,
     re_eval_incorrect_count: int,
     novelty_results_file: Optional[str],
-    num_epochs: int = 100,
+    num_epochs: int = 1,
 ) -> None:
     """
     Write an experiment log entry to the CSV file.
@@ -279,25 +306,25 @@ class TransferPolitenessExperimentRunner:
         
         # Models for the initial pass
         self.initial_eval_models = [
-            # "openai/gpt-4o",
-            "openai/gpt-4o-mini",
+            "openai/gpt-4o",
+            # "openai/gpt-4o-mini",
             # "together/deepseek-ai/DeepSeek-V3",
             # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
             # "anthropic/claude-3-5-sonnet-latest",
         ]
         self.generator_models = [
             "openai/gpt-4o-mini",
+            # "together/deepseek-ai/DeepSeek-R1",
             # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
             # "openai/gpt-4o",
             # "anthropic/claude-3-5-sonnet-latest",
         ]
         # Models on which we'll perform the adaptive evaluation
         self.adaptive_evaluated_models = [
-            # "openai/gpt-4o",
-            "openai/gpt-4o-mini",
+            "openai/gpt-4o",
+            # "openai/gpt-4o-mini",
             # "together/deepseek-ai/DeepSeek-V3",
             # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
-            # "anthropic/claude-3-5-haiku-latest",
             # "anthropic/claude-3-5-sonnet-latest",
         ]
 
@@ -319,7 +346,7 @@ class TransferPolitenessExperimentRunner:
         cache = read_eval_cache(self.cache_csv)
         
         # Set up the task
-        task = politeness(n_examples=n_examples, cot=cot)
+        task = politeness_n_shot(n_examples=5, cot=cot, max_samples=num_samples)
         
         # Evaluate each model
         logs = {}
@@ -344,8 +371,8 @@ class TransferPolitenessExperimentRunner:
             
             eval_logs = eval(
                 task,
-                epochs=Epochs(num_samples, "mean"),
-                max_connections=1000,
+                epochs=Epochs(1, "mean"),
+                max_connections=50,
                 log_dir=model_log_dir,
                 model=model_name,
                 temperature=0,
@@ -375,7 +402,7 @@ class TransferPolitenessExperimentRunner:
         use_cot: bool = True,
         similarity_threshold: float = 0.6,
         use_embeddings: bool = False,
-        num_epochs: int = 100,
+        num_epochs: int = 1,
     ):
         """
         Uses a single (initial_log_path) from the original model, 
@@ -415,7 +442,7 @@ class TransferPolitenessExperimentRunner:
                         adaptive_logs = eval(
                             task,
                             epochs=Epochs(num_epochs, "mean"),
-                            max_connections=1000,
+                            max_connections=50,
                             log_dir=combination_log_dir,
                             model=eval_model,
                             temperature=0,
@@ -565,9 +592,9 @@ class TransferPolitenessExperimentRunner:
         models_for_transfer: List[str],
         positive_samples_list: List[int] = [1],
         negative_samples_list: List[int] = [8],
-        num_epochs: int = 100,
+        num_epochs: int = 1,
         n_examples: int = 3,
-        num_samples: int = 100,
+        num_samples: int = 500,
         cot: bool = False,
         cot_in_context: bool = False,
         similarity_threshold: float = 0.6,
@@ -614,8 +641,8 @@ class TransferPolitenessExperimentRunner:
 @click.option('--models-for-transfer', multiple=True, help='Models to use for transfer evaluation')
 @click.option('--positive-samples', multiple=True, type=int, default=[1], help='Number of positive samples to use')
 @click.option('--negative-samples', multiple=True, type=int, default=[8], help='Number of negative samples to use')
-@click.option('--num-epochs', default=100, help='Number of epochs to run for adaptive evaluation')
-@click.option('--num-samples', default=100, help='Number of samples to use for initial evaluation')
+@click.option('--num-epochs', default=1, help='Number of epochs to run for adaptive evaluation')
+@click.option('--num-samples', default=1000, help='Number of samples to use for initial evaluation')
 @click.option('--n-examples', default=3, help='Number of in-context examples to use')
 @click.option('--use-cot', is_flag=True, help='Use chain-of-thought for solver prompts')
 @click.option('--cot-in-context', is_flag=True, help='Use chain-of-thought in context examples')
