@@ -448,7 +448,7 @@ if __name__ == "__main__":
                 assert initial_log.status == "success", f"Initial log {initial_log_path} did not complete successfully"
             except Exception as e:
                 print(f"An error occurred while retrieving the latest JSON file: {e}")
-                eval(task, epochs=Epochs(1, "max"), max_connections=10000, log_dir=log_dir, model=eval_model)[0]
+                eval(task, epochs=Epochs(1, "max"), max_connections=50, log_dir=log_dir, model=eval_model)[0]
                 initial_log_path = os.path.join(log_dir, max(
                         [f for f in os.listdir(log_dir) if f.endswith('.json')],
                     key=lambda x: os.path.getctime(os.path.join(log_dir, x))
@@ -458,7 +458,7 @@ if __name__ == "__main__":
                 assert initial_log.status == "success", f"Initial log {initial_log_path} did not complete successfully"
         else:
             print(f"No JSON files found in {log_dir}. Proceeding with the initial truthfulqa task.")
-            eval(task, epochs=Epochs(1, "max"), max_connections=10000, log_dir=log_dir, model=eval_model)[0]
+            eval(task, epochs=Epochs(1, "max"), max_connections=50, log_dir=log_dir, model=eval_model)[0]
             initial_log_path = os.path.join(log_dir, max(
                     [f for f in os.listdir(log_dir) if f.endswith('.json')],
                 key=lambda x: os.path.getctime(os.path.join(log_dir, x))
@@ -480,7 +480,7 @@ if __name__ == "__main__":
                         target="mc1",
                         use_cot=False,
                     )
-                    eval(task, epochs=Epochs(30, "mean"), max_connections=10000, log_dir=log_dir, model=eval_model, temperature=0)[0] 
+                    eval(task, epochs=Epochs(30, "mean"), max_connections=50, log_dir=log_dir, model=eval_model, temperature=0)[0] 
 
                     task = adaptive_truthfulqa(
                         initial_log_path=initial_log_path,
@@ -491,4 +491,4 @@ if __name__ == "__main__":
                         target="mc1",
                         use_cot=True,
                     )
-                    eval(task, epochs=Epochs(30, "mean"), max_connections=10000, log_dir=log_dir, model=eval_model, temperature=0)[0] 
+                    eval(task, epochs=Epochs(30, "mean"), max_connections=50, log_dir=log_dir, model=eval_model, temperature=0)[0] 

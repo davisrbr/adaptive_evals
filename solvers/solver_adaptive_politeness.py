@@ -503,7 +503,7 @@ As additional metadata, afterward please also note the language of the utterance
 
         judge_model = get_model(
             judge_model_name,
-            config=GenerateConfig(max_connections=10000, temperature=0.1)
+            config=GenerateConfig(max_connections=50, temperature=0.1)
         )
 
         for _ in range(num_attempts):

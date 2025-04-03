@@ -341,7 +341,7 @@ class TransferLegalExperimentRunner:
         result_logs = eval(
             task,
             epochs=Epochs(1, "max"),
-            max_connections=10000,
+            max_connections=50,
             log_dir=log_dir,
             model=model_name,
             log_level="critical",

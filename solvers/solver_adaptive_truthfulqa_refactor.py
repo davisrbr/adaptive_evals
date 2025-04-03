@@ -93,7 +93,7 @@ def rewording_truthfulqa_solver(
 
         rewording_model = get_model(
             rewording_model_name,
-            config=GenerateConfig(max_connections=10000, temperature=0),
+            config=GenerateConfig(max_connections=50, temperature=0),
         )
 
         reworded_prompt = ""
@@ -348,7 +348,6 @@ def adaptive_truthfulqa_solver_refactor(
 
         # 4) Save results
         state.store.set("generated_sample", generated_sample)
-        state.scores = [generated_sample.metadata["score"]]
         return state
 
     return solve

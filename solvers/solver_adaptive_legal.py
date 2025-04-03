@@ -53,16 +53,15 @@ def adaptive_legal_solver(
 
     async def solve(state: TaskState, generate: Generate) -> TaskState:
         if "generated_sample" in state.store:
-            state.completed = True
             return state
 
         generator_model = get_model(
             generator_model_name,
-            config=GenerateConfig(max_connections=10000, temperature=0.5),
+            config=GenerateConfig(max_connections=50, temperature=0.5),
         )
         eval_model = get_model(
             eval_model_name,
-            config=GenerateConfig(max_connections=10000, temperature=0),
+            config=GenerateConfig(max_connections=50, temperature=0),
         )
 
         eval_log = await read_eval_log_async(initial_log_path)
@@ -121,7 +120,7 @@ def adaptive_legal_solver(
         placeholder_keys = [key.strip() for key in set(re.findall(r"{{(.*?)}}", base_prompt))]
         if not placeholder_keys:
             state.error = "No placeholders found in the base prompt."
-            state.completed = True
+            logger.debug(f"Error in base prompt: {state.error}")
             return state
 
         try:
@@ -210,7 +209,7 @@ def adaptive_legal_solver(
                     if self_check_model_name:
                         self_check_model = get_model(
                             self_check_model_name,
-                            config=GenerateConfig(max_connections=10000),
+                            config=GenerateConfig(max_connections=50),
                         )
                         
                         choices = re.findall(r'\([A-Z]\)\s*(.*?)(?=\([A-Z]\)|\Z)', generated_prompt, re.DOTALL)
@@ -250,7 +249,6 @@ def adaptive_legal_solver(
                         state.store.set("original_eval_model_name", original_eval_model_name)
                     else:
                         state.store.set("original_eval_model_name", eval_model_name)
-                    state.scores = [generated_sample.metadata["score"]]
                     break
 
                 except Exception as e:
@@ -260,13 +258,12 @@ def adaptive_legal_solver(
 
             else:
                 state.error = f"Failed to generate valid sample after {num_attempts} attempts"
-                state.completed = True
+                logger.debug(f"Error in generation: {state.error}")
                 return state
 
         except Exception as e:
             state.error = f"Error generating or evaluating the sample: {e}"
-            state.completed = True
-
+            logger.debug(f"Error in generation: {state.error}")
         return state
 
     return solve
@@ -290,7 +287,6 @@ def adaptive_legal_judge_solver(
     async def solve(state: TaskState, generate: Generate) -> TaskState:
         if not judge_model_name:
             logger.debug("No judge model name provided, skipping judgment.")
-            state.completed = True
             return state
         # Load the initial evaluation log to get ground truth questions
         initial_eval_log = await read_eval_log_async(initial_log_path)
@@ -305,13 +301,13 @@ def adaptive_legal_judge_solver(
         generated_sample = state.store.get('generated_sample', None)
         if not generated_sample:
             state.error = "No generated sample found in state."
-            state.completed = True
+            logger.debug(f"Error in judge solver: {state.error}")
             return state
 
         generated_question = generated_sample.input
 
         # Initialize the judge model
-        judge_model = get_model(judge_model_name, config=GenerateConfig(max_connections=10000)) # no temperature, assuming using o1-mini or o1-preview :)
+        judge_model = get_model(judge_model_name, config=GenerateConfig(max_connections=50)) # no temperature, assuming using o1-mini or o1-preview :)
 
         # Prepare the judging prompt using a classifying pattern
         ground_truth_text = "\n".join([f"Question {i+1}: {q}" for i, q in enumerate(ground_truth_questions[:2])])  # Limit to just 2 questions
@@ -377,7 +373,6 @@ First, I will compare the generated question to the ground truth questions. It i
                     generated_sample.metadata['judge_reasoning'] = judge_output
                     # Update the state
                     state.store.set('generated_sample', generated_sample)
-                    state.completed = True
                     return state
                 else:
                     continue  # Retry if parsing failed
@@ -387,7 +382,6 @@ First, I will compare the generated question to the ground truth questions. It i
 
         # If all attempts failed
         state.error = "Failed to get a valid judgment after maximum retry attempts."
-        state.completed = True
         return state
 
     return solve
@@ -438,7 +432,7 @@ def rewording_legal_solver(
         rewording_model_to_use = rewording_model_name or model_name
         rewording_model = get_model(
             rewording_model_to_use,
-            config=GenerateConfig(max_connections=10000, temperature=0)
+            config=GenerateConfig(max_connections=50, temperature=0)
         )
 
         # Try to generate the reworded question
@@ -454,7 +448,7 @@ def rewording_legal_solver(
                 continue
         else:
             state.error = "Failed to generate a reworded question."
-            state.completed = True
+            logger.debug(f"Error generating reworded question: {state.error}")
             return state
 
         # Use the exact template from _multiple_choice.py
@@ -484,7 +478,7 @@ def rewording_legal_solver(
             state.answer = answers.group(1)
         else:
             state.error = "Failed to parse answer from model response"
-        
+            logger.debug(f"Error parsing answer from model response: {state.error}")
         return state
 
     return solve
@@ -509,7 +503,6 @@ def rewording_legal_judge_solver(
             logger.debug("No judge model name provided for rewording_legal_judge_solver, skipping judgment.")
             state.store.set("reworded_judge_choice", "A")
             state.store.set("reworded_judge_reasoning", "No judge model name provided for rewording_legal_judge_solver, skipping judgment.")
-            state.completed = True
             return state
 
         # Retrieve the original and reworded prompts from the state. 
@@ -522,11 +515,10 @@ def rewording_legal_judge_solver(
                 "Missing original_prompt or reworded_prompt in state.store. "
                 "Ensure the rewording solver stores these in the state before calling the judge."
             )
-            state.completed = True
             return state
 
         # Initialize the judge model
-        judge_model = get_model(judge_model_name, config=GenerateConfig(max_connections=10000))
+        judge_model = get_model(judge_model_name, config=GenerateConfig(max_connections=50))
 
         # Prepare the prompt to compare original vs reworded question
         # We use a classification approach, similar to adaptive_legal_judge_solver
@@ -592,7 +584,6 @@ Conclusion: ...
                     state.store.set("reworded_judge_choice", choice)
                     state.store.set("reworded_judge_reasoning", judge_output)
 
-                    state.completed = True
                     return state
                 else:
                     logger.debug("Failed to parse judge choice from model output, retrying...")
@@ -603,7 +594,7 @@ Conclusion: ...
 
         # If no valid classification was produced after all attempts
         state.error = "Failed to get a valid judgment for the reworded question."
-        state.completed = True
+        logger.debug(f"Error during reworded question judgment: {state.error}")
         return state
 
     return solve

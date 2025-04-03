@@ -36,15 +36,15 @@ def press_truthfulqa_solver(
         # Initialize models
         generator_model = get_model(
             generator_model_name,
-            config=GenerateConfig(max_connections=10000, temperature=0.5)
+            config=GenerateConfig(max_connections=50, temperature=0.5)
         )
         evaluator_model = get_model(
             evaluator_model_name,
-            config=GenerateConfig(max_connections=10000, temperature=0)
+            config=GenerateConfig(max_connections=50, temperature=0)
         )
         eval_model = get_model(
             eval_model_name,
-            config=GenerateConfig(max_connections=10000, temperature=0)
+            config=GenerateConfig(max_connections=50, temperature=0)
         )
 
         # Load the initial evaluation log and extract samples

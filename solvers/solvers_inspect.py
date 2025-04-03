@@ -46,7 +46,7 @@ def pair_solver(
         config=GenerateConfig(
             max_tokens=10000,
             temperature=1.0,
-            max_connections=10000,
+            max_connections=50,
             top_p=0.9,
         ),
     )
@@ -55,7 +55,7 @@ def pair_solver(
         config=GenerateConfig(
             max_tokens=1000,
             temperature=0.0,
-            max_connections=10000,
+            max_connections=50,
             top_p=1.0,
         ),
     )
@@ -224,7 +224,7 @@ If a question does not make any sense, or is not factually coherent, explain why
         config=GenerateConfig(
             max_tokens=10000,
             temperature=1.0,
-            max_connections=10000
+            max_connections=50
         ),
     )
     target_model = get_model(
@@ -232,7 +232,7 @@ If a question does not make any sense, or is not factually coherent, explain why
         config=GenerateConfig(
             max_tokens=1000,
             temperature=0.0,
-            max_connections=10000
+            max_connections=50
         ),
     )
 
