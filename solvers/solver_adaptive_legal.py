@@ -310,7 +310,7 @@ def adaptive_legal_judge_solver(
         judge_model = get_model(judge_model_name, config=GenerateConfig(max_connections=50)) # no temperature, assuming using o1-mini or o1-preview :)
 
         # Prepare the judging prompt using a classifying pattern
-        ground_truth_text = "\n".join([f"Question {i+1}: {q}" for i, q in enumerate(ground_truth_questions[:2])])  # Limit to just 2 questions
+        ground_truth_text = "\n".join([f"Question {i+1}: {q}, Answer: {sample.target}" for i, (q, sample) in enumerate(zip(ground_truth_questions[:2], ground_truth_samples[:2]))])  # Limit to just 2 questions
 
         # motivation for using a classifying pattern: https://cookbook.openai.com/examples/custom-llm-as-a-judge#llm-as-a-judge-3-classifying-instead-of-rating
         judge_prompt = f"""\
@@ -323,9 +323,12 @@ You are comparing a generated question to a set of ground truth questions for a 
 [Generated Question]:
 {generated_question}
 ************
+[Proposed Answer]:
+{generated_sample.target}
+************
 [END DATA]
 
-Determine if the generated question is correct, precise, and free of errors, and follows the same style and format as the ground truth questions. Consider whether it makes sense, contains any factual errors or contradictions that would make it impossible to answer correctly or consistenyly, and is appropriately challenging. The question should have only a single correct answer. 
+Determine if the generated question is correct, precise, and free of errors, and follows the same style and format as the ground truth questions. Consider whether it makes sense, contains any factual errors or contradictions that would make it impossible to answer correctly or consistenyly, and is appropriately challenging. The question should have only a single correct answer. It is ok if the question is worded awkwardly or even is a 'trick' question meant to confuse the model as long as the question is valid and only has one single correct answer.
 
 Ignore simple formatting issues (e.g., two Answer: lines at the end, an extra multiple choice line at the beginning, or swapping the order of the instructions and the question) -- these are not errors and should not be penalized. Also note that the final multiple choice question will not have a letter of the answer at the end, so do not penalize for that.
 

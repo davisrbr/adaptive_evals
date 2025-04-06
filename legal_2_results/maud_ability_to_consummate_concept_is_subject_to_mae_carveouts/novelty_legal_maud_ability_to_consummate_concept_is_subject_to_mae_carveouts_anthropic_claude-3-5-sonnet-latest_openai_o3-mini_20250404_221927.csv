@@ -1,0 +1,49 @@
+"index","question","result","failed_on"
+"0","Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}.
+
+{question}
+
+{choices}
+
+Instruction: Read the following excerpt from a merger agreement and answer the question by choosing the option that best reflects the agreement.
+
+Question: Is the 'ability to consummate' the merger subject to the carveouts listed under the definition of 'Company Material Change'?
+Option A: No
+Option B: Yes
+
+Merger Agreement Excerpt: 
+“Company Material Change” means any event, occurrence, or effect that, either individually or in aggregate, (a) directly prevents, materially delays, or substantially impairs the Company’s ability to consummate the transactions contemplated by this Agreement, or (b) materially adversely affects the financial condition or operational results of the Company and its Subsidiaries. Notwithstanding the foregoing, for the purposes of determining an event under clause (b), the following shall be expressly excluded: (i) fluctuations in general economic conditions or capital markets; (ii) natural disasters such as hurricanes, floods, or earthquakes, unless such events have a disproportionate impact on the Company relative to its peers; (iii) changes in accounting standards or regulatory requirements; and (iv) other industry-wide shifts. It is expressly understood, however, that the carveouts set forth in clauses (i) through (iv) apply solely to the financial or operational impacts described in clause (b) and do not extend to, or modify, the requirements and conditions of clause (a) regarding the Company’s ability to consummate the transactions.
+
+Choices: ","Pass",""
+"1","Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}.
+
+{question}
+
+{choices}
+
+Instruction: Read the below segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+
+Question: Is the 'ability to consummate' concept subject to Material Adverse Effect (MAE) carveouts?
+
+Option A: No
+Option B: Yes
+
+Merger Agreement Excerpt:
+""Material Adverse Effect"" shall mean any change, event, or condition that (i) has, or would reasonably be expected to have, a material adverse impact on the business, assets, or operational results of the Company and its Subsidiaries, or (ii) would hinder, materially delay, or prevent the consummation of the Transactions. While this definition ordinarily exempts effects arising solely from general economic downturns, market-wide fluctuations, and other force majeure occurrences, such exemptions shall not apply to any effect that directly compromises the Company’s ability to consummate the Transactions. In all such cases, the events affecting consummation shall be assessed in full, without application of any of the carveouts provided for other adverse effects.
+
+Choices: ","Fail","Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}.
+
+{question}
+
+{choices}
+
+Instruction: Read the following excerpt from a merger agreement and answer the question by choosing the option that best reflects the agreement.
+
+Question: Is the 'ability to consummate' the merger subject to the carveouts listed under the definition of 'Company Material Change'?
+Option A: No
+Option B: Yes
+
+Merger Agreement Excerpt: 
+“Company Material Change” means any event, occurrence, or effect that, either individually or in aggregate, (a) directly prevents, materially delays, or substantially impairs the Company’s ability to consummate the transactions contemplated by this Agreement, or (b) materially adversely affects the financial condition or operational results of the Company and its Subsidiaries. Notwithstanding the foregoing, for the purposes of determining an event under clause (b), the following shall be expressly excluded: (i) fluctuations in general economic conditions or capital markets; (ii) natural disasters such as hurricanes, floods, or earthquakes, unless such events have a disproportionate impact on the Company relative to its peers; (iii) changes in accounting standards or regulatory requirements; and (iv) other industry-wide shifts. It is expressly understood, however, that the carveouts set forth in clauses (i) through (iv) apply solely to the financial or operational impacts described in clause (b) and do not extend to, or modify, the requirements and conditions of clause (a) regarding the Company’s ability to consummate the transactions.
+
+Choices: "

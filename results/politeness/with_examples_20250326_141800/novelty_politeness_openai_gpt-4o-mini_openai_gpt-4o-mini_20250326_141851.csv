@@ -1,0 +1,24 @@
+"index","question","result","failed_on"
+"0","Me parece que la decisión de incluir a todos los países en la discusión es un poco apresurada. ¿Podríamos reconsiderar la lista antes de hacerla pública? Tal vez algunos países no deberían estar incluidos.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","Excuse me, but could you please stop adding that information to the article? It's not accurate and could mislead readers.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","尊敬的编辑，我认为这个条目的内容可以更加丰富，尤其是关于历史背景的部分。可否请您考虑添加更多的来源和细节？谢谢您的努力！
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"3","我知道你很努力，但这个修改真的让我觉得有些困惑，或许我们可以再讨论一下？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","尊敬的编辑，我认为这个条目的内容可以更加丰富，尤其是关于历史背景的部分。可否请您考虑添加更多的来源和细节？谢谢您的努力！
+Choices: -2 | -1 | 0 | 1 | 2"
+"4","Oh, I absolutely adore how the guidelines suggest we should follow every single rule to the letter, even when they seem utterly impractical! It’s just delightful to see such dedication to detail.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Excuse me, but could you please stop adding that information to the article? It's not accurate and could mislead readers.
+Choices: -2 | -1 | 0 | 1 | 2"
+"5","Agradezco mucho el esfuerzo que han puesto en este artículo, aunque me parece que la falta de referencias lo hace un poco menos creíble. Tal vez podríamos considerar agregar algunas fuentes para mejorar su calidad.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"6","お忙しいところ申し訳ありませんが、もし可能であれば、最近のプロジェクトの進捗について少し教えていただけないでしょうか？
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"7","Aunque aprecio el esfuerzo, debo decir que la calidad de este artículo es bastante decepcionante y no cumple con los estándares que esperamos. Es fundamental que se revisen las fuentes y se mejore la redacción para que sea más claro y útil para los lectores.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Excuse me, but could you please stop adding that information to the article? It's not accurate and could mislead readers.
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","Oh, I truly admire your commitment to sharing your thoughts, even if they seem a bit misguided. It's always refreshing to see someone so passionate about their opinions, regardless of their accuracy!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"9","Oh, I truly appreciate how you've organized this event! It's remarkable how you managed to gather everyone without any communication about the schedule. I imagine it must have been quite a challenge to keep everyone informed without any updates!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""

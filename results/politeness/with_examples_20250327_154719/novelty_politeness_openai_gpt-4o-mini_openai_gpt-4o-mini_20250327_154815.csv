@@ -1,0 +1,25 @@
+"index","question","result","failed_on"
+"0","Dear colleagues, while I appreciate the effort put into the recent edits, I believe there are some inaccuracies that need addressing. It would be beneficial to reconsider the phrasing in certain sections to enhance clarity and accuracy.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","お待たせしましたが、まだご意見を伺えていないようですね。皆さんが忙しいのは承知していますが、少しだけお返事をいただけると助かります。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","Excuse me, but I really don't think your edits are helpful. They seem more like clutter than anything useful, and I would appreciate it if you could reconsider them.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I appreciate the effort put into the recent edits, I believe there are some inaccuracies that need addressing. It would be beneficial to reconsider the phrasing in certain sections to enhance clarity and accuracy.
+Choices: -2 | -1 | 0 | 1 | 2"
+"3","Gracias por tu esfuerzo en el artículo, pero creo que hay algunos puntos que podrían ser más precisos. No me malinterpretes, aprecio tu trabajo, solo me gustaría que se revisen ciertos detalles que me parecen erróneos.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"4","I appreciate your attempt to explain the topic, but perhaps next time you could provide a bit more depth? It would really help those of us who are trying to understand better.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"5","I truly appreciate the effort you've put into your work on this project. However, it seems that the conclusions drawn might benefit from a bit more scrutiny, as they appear somewhat optimistic given the available data. Perhaps a re-evaluation could enhance the overall quality?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I appreciate the effort put into the recent edits, I believe there are some inaccuracies that need addressing. It would be beneficial to reconsider the phrasing in certain sections to enhance clarity and accuracy.
+Choices: -2 | -1 | 0 | 1 | 2"
+"6","I appreciate your efforts in writing this article, but I believe the section on climate change could benefit from more recent data. While your points are valid, they may not fully represent the current scientific consensus.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"7","I appreciate your efforts in trying to explain the complex topic of quantum mechanics. It’s truly commendable how you manage to make it seem so simple, even if it’s not quite accurate.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to explain the topic, but perhaps next time you could provide a bit more depth? It would really help those of us who are trying to understand better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","尊敬的编辑，我非常感谢你在这篇文章上所做的努力。然而，我发现有些信息可能需要更新，特别是关于该地区的历史描述。希望你能考虑我的建议。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"9","Thank you for your efforts in compiling this information! However, I must point out that the analysis lacks depth and overlooks some key aspects that are crucial for a comprehensive understanding.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to explain the topic, but perhaps next time you could provide a bit more depth? It would really help those of us who are trying to understand better.
+Choices: -2 | -1 | 0 | 1 | 2"

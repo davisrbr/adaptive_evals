@@ -1,0 +1,581 @@
+"index","question","result","failed_on"
+"0","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","Thank you for your detailed input, but it's truly astonishing how far off the mark your argument is. I kindly suggest revisiting the basics before drawing further conclusions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"3","Thank you for your 'enlightening' explanation; it’s truly astonishing how you manage to wrap so many half-truths in the guise of a well-argued narrative. Your unique talent for misinforming is, in its own twisted way, admirable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"4","After reviewing your submitted article, I must say it is astonishing that someone with your supposed expertise could overlook such elementary grammatical rules—this level of carelessness is simply unacceptable for a professional of your standing.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"5","I truly admire your dedication in tackling this complex topic, yet I must note that leaning on outdated data leaves a gap in your argument that could have been better addressed. A bit more updated research might bring your impressive effort closer to the mark.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"6","Entschuldigung, aber ich muss ehrlich sagen: Ihr letzter Beitrag hat mehr Verwirrung gestiftet als zur Klärung beigetragen – vielleicht wäre es klüger, sich etwas klarer auszudrücken.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"7","I must commend your remarkable ability to overlook basic facts—it's almost as if you relish reinventing history. Perhaps a quick look at a reliable source next time might spare us all the entertainment of your inaccuracies.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","Dear fellow editors, I sincerely apologize if my recent changes have caused any confusion. I kindly request that you take a moment to review my revisions at your earliest convenience. Your expert feedback is immensely appreciated, and I am truly grateful for your time and consideration. Thank you very much in advance!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"9","Dear colleague, while I appreciate your effort in contributing to this discussion, it is rather ironic how your points consistently lack depth. Perhaps reconsidering the details might lead to a more fruitful debate.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"10","Thank you for your meticulously prepared proposal. It truly demonstrates your commitment, although the glaring inaccuracies suggest you might need a refresher on the basics.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"11","I truly appreciate the detailed effort you put into your analysis; however, it seems that your generous display of insight has, in fact, obscured a rather obvious misinterpretation of the matter at hand. Perhaps a humble review might reveal a clearer perspective.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"12","I'm truly grateful for your meticulous explanation, although it's rather amusing that you insist on clinging to those outdated protocols; your irony is as impressive as it is subtly dismissive of modern practices.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"13","Hi, thank you for submitting your report; however, I must say that the data you chose is downright baffling. I'm not sure if you ever bothered to consult the guidelines, because your analysis misses the mark completely. It would really help if you double-checked your sources next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"14","I must commend your unique flair for communication; it's truly remarkable how you manage to transform a simple message into an elaborate maze of pretentious jargon that leaves everyone more confused than enlightened. Bravo on making mediocrity appear as a masterclass in sophistication.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"15","I apologize if this comes off as blunt, but frankly, your repeated oversights in the analysis are not only disappointing but utterly unacceptable, and I'm struggling to take your work seriously because of them.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"16","尊敬する田中様、貴重なご意見を拝読しましたが、いくつかの点で事実と異なる部分がございます。どうか再度ご確認いただけますと、より建設的な議論が進むのではないかと存じます。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"17","Wow, I must say, it's truly impressive how your effort managed to complicate a simple task repeatedly. If you could, please, try a bit harder next time so we can meet our standards; thanks in advance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"18","Thank you very much for your prompt response; however, it's quite disappointing to witness such a blatant disregard for even the most basic details—a flaw that sadly undermines the professionalism of your otherwise courteous message.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"19","Thank you for your detailed input, but the brisk dismissal of differing opinions in your argument comes off as rather arrogant. A bit more humility might have gone a long way.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"20","Thank you so much for your detailed input—it's truly inspiring to see how you manage to be so consistently off the mark. Your unique way of missing the obvious really adds a certain, shall we say, ‘creative flair’ to the conversation.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"21","Si bien reconozco el esfuerzo invertido en este trabajo, es inaceptable que se pase por alto algo tan básico como la precisión en las citas y la corrección ortográfica. La negligencia en estos detalles demuestra una falta de rigurosidad profesional que, francamente, desmerece el contenido. Te insto a revisar y corregir estos errores sin más preámbulo.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"22","Oh, I'm really sorry—did you even read the latest guidelines, or are you just fond of clinging to those outdated opinions? It's almost endearing, really.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"23","I appreciate the effort you put into your analysis, yet it’s astonishing how basic your arguments are—truly a disappointing display of understanding.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"24","Dear colleague, I must congratulate you on your impeccable ability to state the obvious with such refined eloquence—truly, your manner of presenting shallow arguments is a work of art in its own right.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"25","Dear team, thank you all for your thorough contributions. While I appreciate the energy behind your latest efforts, I must point out that some sections come off as unnecessarily verbose. Please consider a review of the updated guidelines so we can ensure our work remains sharp and on point. Your cooperation is truly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"26","I truly value the time you've invested in this project; however, your approach seems to bypass some important elements that I believe could really enhance our discussion. Would you mind if we take another look at these aspects together?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"27","Ah, what a masterstroke of intellectual finesse—your charming attempt to explain the obvious is as enlightening as a flashlight in a blackout. Perhaps next time, try not to confuse your audience with your pseudo-intellectual ramblings.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"28","I must say, your so‐called 'innovative solution' is as charmingly outdated as a hand‐cranked clock; while I appreciate the effort, a touch more modernity wouldn't hurt, wouldn't it?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"29","It's quite remarkable how you manage to overlook every well-established fact with such consistency. I can only assume that ignoring critical details has become an art form for you; perhaps a little more diligence might eventually bring you closer to genuine accuracy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"30","I must acknowledge the effort you put into reorganizing the article's sections, yet it's rather disappointing that such adjustments only seem to obscure the original inaccuracies rather than address them. Perhaps reviewing the original sources more critically would yield better results?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"31","Muy apreciado colega, le agradezco sinceramente su iluminarme con tan profunda explicación; sin embargo, me sorprende que en su afán por exponer su punto de vista, omita reconocer las contribuciones esenciales de otros participantes. Confío en que tal descuido sea un mero error pasajero y no una falta de consideración.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"32","My dear colleague, I truly appreciate the thoroughness of your report—but I must say, it's remarkable how you've managed to skip every elementary detail. Perhaps next time, a bit more attention to the basics might serve you well.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"33","Dear colleague, I must truly applaud your unwavering commitment to sticking to outdated procedures—it’s a remarkable display of consistency. However, might I suggest that a touch of modern insight could enrich our discussion and help us break free from worn-out clichés?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"34","Thank you for taking the time to correct every minor detail, but your relentless nitpicking is making it hard to see any real value in your suggestions. Perhaps next time, a gentler tone would be more effective.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"35","Oh, I'm absolutely in awe of your groundbreaking insights—you must have spent an eternity rethinking the obvious just to share this gem of a comment. Truly, how ever did we manage without such revelation?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"36","Hello there! I truly admire how confidently you ignore every valid piece of evidence—it adds such an amusing twist to our debates. Thank you for keeping the conversation so delightfully one-sided.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"37","It's genuinely astonishing how you consistently prioritize flair over facts. Your imaginative spin on reality gives a whole new meaning to 'alternative facts'—a marvel to behold indeed.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"38","拝啓、貴殿。本日ご提出の報告書につきまして、誠に遺憾ながら、内容の浅はかさには深く失望いたしました。ご尽力は認めますが、真摯な改善がなされなければ、今後の評価に大いに疑問が生じることは避けられません。何卒、以後ご留意賜りますようお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","尊敬する田中様、貴重なご意見を拝読しましたが、いくつかの点で事実と異なる部分がございます。どうか再度ご確認いただけますと、より建設的な議論が進むのではないかと存じます。
+Choices: -2 | -1 | 0 | 1 | 2"
+"39","I appreciate your effort on this project, though I must admit that the way you've structured the argument leaves much to be desired—perhaps we could revisit some portions for a more balanced discussion?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"40","Thank you for your detailed explanation. However, it appears that some crucial points might have been overlooked, which suggests a misinterpretation of the facts. I believe revisiting these details could significantly enhance your argument.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"41","Dear team, I appreciate your detailed analysis, yet I must point out that some key nuances might have been overlooked. A thorough revision could enhance our clarity, though I value your effort and insights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"42","I appreciate your careful work on the report; however, I must note that while your insights are valuable, some of the remarks come across a bit too blunt for our usual professional tone. A dash more warmth could really enhance the overall presentation.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"43","Well, I must congratulate you on your outstanding display of sheer ignorance. Your contribution has been as enlightening as a blackout, and it truly amazes me how you manage to overlook the most obvious facts. Thank you for making this discussion so unpredictably entertaining.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"44","Je vous remercie infiniment pour votre suggestion d'une brillance inouïe, qui, sous des atours de politesse exquise, trahit une compréhension étonnamment décalée des enjeux réels. Votre perspicacité, quoique enveloppée dans une courtoisie manifeste, ne manque pas de révéler un certain désalignement intellectuel.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"45","Hello, I must commend you on your inventive approach—transforming a straightforward piece into what you call modern art. It's truly impressive how you manage to mix misleading trivia with creative embellishments. Perhaps a more conventional style might better serve your readers, if that's something you ever consider.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"46","Thank you for your detailed input, but it's evident that your analysis completely misses the point. Please reexamine your data and avoid drawing such absurd conclusions in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"47","Thank you for your detailed proposal; however, I'm rather surprised that you overlooked several key points that are essential to the discussion. I hope you'll take the time to deepen your analysis next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"48","Thank you very much for your thorough analysis; however, I do feel that some crucial points might have been overlooked in your report. I truly value your efforts and hope we can review those details together for a better outcome.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must acknowledge the effort you put into reorganizing the article's sections, yet it's rather disappointing that such adjustments only seem to obscure the original inaccuracies rather than address them. Perhaps reviewing the original sources more critically would yield better results?
+Choices: -2 | -1 | 0 | 1 | 2"
+"49","I see you've rearranged the entire structure to your own taste; while I do appreciate your enthusiasm, a bit more precision would have taken this from amateur hour to something worth reading. I'm sure you'll refine it with a little more care next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"50","Thank you so much for submitting your proposal; it's truly impressive how you've transformed our company guidelines into what looks more like an avant-garde reinterpretation—even if it completely sidesteps the actual requirements.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"51","Thank you for updating the guidelines; I appreciate the effort. Still, it feels like you've prioritized style over substance, almost as if the revision was more of an art piece than a functional update.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"52","I genuinely appreciate the dedication you showed in your analysis, yet it's astonishing how your conclusions manage to trivialize such a complex issue.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"53","Dear colleagues, I truly appreciate your relentless dedication; however, it is quite bewildering that such elementary oversights persist in our work. Kindly take a moment to reevaluate these details so we can all move forward with improved accuracy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"54","I must say, your 'brilliant' suggestion has truly illuminated our discussion – it's remarkable how effortlessly you bypass common sense.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"55","I truly appreciate the clarity in your explanation; however, I feel that a few nuanced details could have been better addressed to enhance our mutual understanding. Would you kindly revisit those specifics when you have a moment?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"56","I must admit, I really admire your commitment, but your repeated misinterpretation of our guidelines is frankly baffling.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"57","Con todo respeto, reconozco el esfuerzo en tu análisis, pero me parece que algunos datos clave han sido interpretados de forma errónea. Te invito a revisar nuevamente las fuentes para asegurarnos de que la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Si bien reconozco el esfuerzo invertido en este trabajo, es inaceptable que se pase por alto algo tan básico como la precisión en las citas y la corrección ortográfica. La negligencia en estos detalles demuestra una falta de rigurosidad profesional que, francamente, desmerece el contenido. Te insto a revisar y corregir estos errores sin más preámbulo.
+Choices: -2 | -1 | 0 | 1 | 2"
+"58","Con todo el respeto, debo decir que su persistente ignorancia sobre hechos básicos roza lo insultante; no es solo una opinión, es una negligencia profesional clara.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Muy apreciado colega, le agradezco sinceramente su iluminarme con tan profunda explicación; sin embargo, me sorprende que en su afán por exponer su punto de vista, omita reconocer las contribuciones esenciales de otros participantes. Confío en que tal descuido sea un mero error pasajero y no una falta de consideración.
+Choices: -2 | -1 | 0 | 1 | 2"
+"59","I truly appreciate the effort you put into revising the quarterly report, though I must confess that the overall clarity leaves much to be desired. Please, aim for a bit more precision in your future contributions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"60","Thank you for your previous input. However, it's quite astonishing that you overlooked the most basic sources in your work. I respectfully insist that you revisit the guidelines to amend your work, as it's truly puzzling that such a simple oversight persists.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"61","Hello there! I must say, your effort to clarify such a trivial point is impressively overdone—your dedication to minor details is almost amusing. Keep it up!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"62","Thank you for your imaginative submission. However, it's quite amusing how your well‐dressed arguments are flagrantly undermined by obvious factual oversights. Perhaps next time, alongside your creative flair, you might also consider a basic review of the evidence before sharing your opinions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must acknowledge the effort you put into reorganizing the article's sections, yet it's rather disappointing that such adjustments only seem to obscure the original inaccuracies rather than address them. Perhaps reviewing the original sources more critically would yield better results?
+Choices: -2 | -1 | 0 | 1 | 2"
+"63","I truly admire your relentless enthusiasm for your viewpoint; however, it appears that your reliance on rather flimsy evidence might suggest a rather charming oversight of what most would call common sense.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It's genuinely astonishing how you consistently prioritize flair over facts. Your imaginative spin on reality gives a whole new meaning to 'alternative facts'—a marvel to behold indeed.
+Choices: -2 | -1 | 0 | 1 | 2"
+"64","Thank you for your unique perspective; it truly is charming in its own bewildering way. However, I can't help but notice that your insights, while interesting, merely skim the surface of genuine expertise. A touch more care in your analysis might finally reveal what true skill looks like.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"65","Thank you very much for your thorough assistance and detailed feedback. I sincerely appreciate the care you have taken, and I remain very eager to learn from your expertise. Please forgive any oversight on my part, as your guidance is invaluable in helping me improve.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"66","Thank you for your input; I truly appreciate the effort behind your comment. However, it's a bit surprising that with all that energy, the points you've raised seem to miss the core complexity of the issue entirely. Perhaps a more thoughtful consideration would have better served the debate.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"67","Thank you for your meticulous review of my work; your detailed observations are truly enlightening—if only they weren't so relentlessly critical that they leave no room for genuine encouragement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"68","I sincerely appreciate your swift response; however, the content was so shockingly off-base that it seems you might have been deliberately neglecting the key issues. Perhaps a bit more genuine effort next time would save us all the confusion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"69","I appreciate the effort you made, yet it's rather astonishing that you missed such basic details; perhaps a quick review of the fundamental facts might spare us both some unnecessary confusion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"70","Por favor, te ruego que evites complicar asuntos tan evidentes con argumentos huecos; incapaz de ver lo obvio y, sin embargo, insistes en aportar comentarios que empañan la seriedad. ¿No sería mejor que reflexionaras antes de comentar?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Muy apreciado colega, le agradezco sinceramente su iluminarme con tan profunda explicación; sin embargo, me sorprende que en su afán por exponer su punto de vista, omita reconocer las contribuciones esenciales de otros participantes. Confío en que tal descuido sea un mero error pasajero y no una falta de consideración.
+Choices: -2 | -1 | 0 | 1 | 2"
+"71","Hello team, thank you for your hard work on the latest draft. That said, there are several glaring inconsistencies that frankly undermine our usual standards. I kindly ask each of you to reexamine your contributions, because we cannot afford to let such oversights tarnish our reputation. Please take this feedback seriously and adjust accordingly.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"72","I sincerely appreciate the effort you put into your analysis; however, your reasoning comes off as rather naive, almost like a poorly drawn sketch lacking any real insight. Perhaps you might consider revisiting the facts before making such conclusions?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"73","Frankly, your recent contributions hardly meet the standards expected around here. I’m perplexed by your choice to rely on what appears to be misguided humor instead of offering any substantial input. Perhaps revisiting the guidelines might help sharpen your approach.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"74","Aunque este informe aborda el tema con rigor, considero que algunas secciones podrían beneficiarse de una revisión adicional para mejorar su claridad. Aprecio sinceramente el esfuerzo invertido y confío en que con algunos ajustes se logrará una versión aún más precisa.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Si bien reconozco el esfuerzo invertido en este trabajo, es inaceptable que se pase por alto algo tan básico como la precisión en las citas y la corrección ortográfica. La negligencia en estos detalles demuestra una falta de rigurosidad profesional que, francamente, desmerece el contenido. Te insto a revisar y corregir estos errores sin más preámbulo.
+Choices: -2 | -1 | 0 | 1 | 2"
+"75","Bonjour, merci pour vos contributions. Toutefois, j'ai remarqué quelques lacunes dans certaines explications qui pourraient induire en erreur les lecteurs moins expérimentés. Pourriez-vous, s'il vous plaît, revoir ces points et envisager des ajustements ?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"76","Dear Esteemed Colleagues, I am profoundly grateful for your invaluable insights and unwavering support. I respectfully request that you kindly consider my proposal with an open mind, as your thoughtful feedback is essential to our collective success. Thank you for your continued understanding and cooperation.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"77","Wow, it's truly impressive how you manage to entirely overlook the simplest details—a real testament to your 'expertise' in the field, I'm sure.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"78","Thank you ever so much for your 'insightful' comments; they truly brighten up our discussion—if only in a way that reminds us that even obvious errors can be presented with remarkable courtesy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"79","Dear colleague, I sincerely appreciate the effort you have invested in this intricate project. Could you kindly share further insights on your approach, as I am genuinely eager to learn from your valuable expertise?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"80","Hello esteemed colleagues, I truly appreciate all your hard efforts in refining our content. That said, I must note that some contributions seem a bit hastily done, and perhaps a more careful approach could better serve our goal of precision. I apologize if my directness offends, and I remain committed to our common mission.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"81","Thank you for your detailed feedback. It's rather perplexing, however, that despite your many comments, the same elementary oversights persist. Might you consider a more thorough review of the guidelines next time?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"82","I must say, your latest submission is quite the masterpiece—in its uncanny ability to totally disregard any coherent argument. It almost feels like you're striving for a level of oblivious charm that leaves no room for actual substance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"83","I find it utterly hilarious how you confidently spout your half-baked theories as if they're groundbreaking discoveries; perhaps humility might be a lesson you could learn eventually.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"84","Gracias por su prolongada explicación; aunque aprecio el esfuerzo y la cortesía, me resulta imposible ignorar ese sutil matiz que parece intentar suavizar ciertas contradicciones evidentes. ¿No cree que sería más constructivo abordar estos puntos de forma más directa?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Muy apreciado colega, le agradezco sinceramente su iluminarme con tan profunda explicación; sin embargo, me sorprende que en su afán por exponer su punto de vista, omita reconocer las contribuciones esenciales de otros participantes. Confío en que tal descuido sea un mero error pasajero y no una falta de consideración.
+Choices: -2 | -1 | 0 | 1 | 2"
+"85","Thank you ever so kindly for your impeccably clear guidance in the matter, though I'm rather amazed by the subtle condescension interlaced in your words. Your criticisms, wrapped in such saccharine eloquence, leave me both amused and distinctly offended. Please, do continue your enlightening tirade.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"86","Hello there, I do appreciate the effort you put into your explanation, but it seems your commentary falls a bit short of a thorough understanding—no hard feelings, yet it's troublingly simplistic. ¡Qué pena!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"87","I truly appreciate your attempt at revising our guidelines, yet it's perplexing how your approach still clings to outdated ideas. Perhaps with a bit more effort, modern insights could finally resonate in your work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for updating the guidelines; I appreciate the effort. Still, it feels like you've prioritized style over substance, almost as if the revision was more of an art piece than a functional update.
+Choices: -2 | -1 | 0 | 1 | 2"
+"88","Excuse my interruption, but your explanation omits critical details that are essential for a proper understanding. I must insist that you review all relevant data before drawing any conclusions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"89","Dear team, I truly appreciate the keen attention to detail you brought up during our discussion—even if some points felt a bit redundant. Your contributions do help clarify our process, and I look forward to further clarifications to make sure we all remain in sync.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"90","I humbly suggest we double-check the timeline, as the claim that the event occurred on December 15th conflicts with well-established historical sources. I truly appreciate the effort put forward here and hope we can ensure accuracy together.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"91","Thank you for your remarkably detailed explanation—it's a true pleasure to witness such passionate overelaboration even on the most trivial matters.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"92","I appreciate your willingness to help, but it's astonishing how you never seem to grasp the basic guidelines—perhaps taking a moment to actually read them might save us all from these repeated oversights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"93","Te agradezco sinceramente tu comentario, pero honestamente, me da la impresión de que tu 'saber' sobre el tema es tan profundo como la superficie de un charco. Espero que en futuras ocasiones puedas aportar algo realmente sustancial en lugar de meros clichés.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Muy apreciado colega, le agradezco sinceramente su iluminarme con tan profunda explicación; sin embargo, me sorprende que en su afán por exponer su punto de vista, omita reconocer las contribuciones esenciales de otros participantes. Confío en que tal descuido sea un mero error pasajero y no una falta de consideración.
+Choices: -2 | -1 | 0 | 1 | 2"
+"94","I truly appreciate the effort you put into your analysis; however, it seems that the selection of your evidence leaves some crucial points unaddressed, which is a pity given the complexity of the subject.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"95","Thank you so much for your prompt reply; it's truly impressive how you managed to completely miss the point so creatively. I really look forward to our next round of such enlightening miscommunications.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"96","Dear colleague, I truly appreciate your prompt attention to detail—even though your persistent insistence on correcting every nuance sometimes feels a bit overbearing. A gentler tone might serve our discussions better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"97","Excuse me, but it's rather astonishing that you overlooked such fundamental details. I do appreciate the effort, yet I must insist you review your work thoroughly to avoid these inexplicable oversights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"98","I must say, your attempt to elucidate the matter is remarkably heartfelt—almost as if you were trying to wrap a clumsy remark in the finest silk. It’s an effort that is both endearingly naïve and perplexingly off-target.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"99","Dear colleague, muchas gracias for your diligent review. Bitte note that I kindly request the revision of our project steps. Your insight is invaluable, and I truly appreciate the attention to detail you bring.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"100","Au cas où vous n'auriez pas remarqué, votre mise à jour est aussi inutile qu'une montre sans aiguilles. Je vous remercie néanmoins pour votre humour décalé.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"101","Oh, how enlightening it is to hear your 'insightful' take yet again—it's truly impressive how your assumptions, however shallow, manage to echo the depth of a puddle. Bravo for your unmatched consistency in misunderstanding the obvious.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"102","Thank you for your prompt update. However, I find it rather surprising that your previous suggestions fell short of the expected clarity from an expert. Could you perhaps provide a more detailed explanation regarding your 'optimistic projections'? It would really help everyone understand your perspective better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"103","感谢各位不辞辛劳地共同协作，我深感荣幸能与大家这样的杰出人才共事。关于上一版的一些细节，我略有微词，但请相信这是出于对质量精益求精的追求。请各位多多包涵，并继续提出宝贵意见，我们一定会携手完善每一处细节。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","尊敬する田中様、貴重なご意見を拝読しましたが、いくつかの点で事実と異なる部分がございます。どうか再度ご確認いただけますと、より建設的な議論が進むのではないかと存じます。
+Choices: -2 | -1 | 0 | 1 | 2"
+"104","I must insist that you revise your submission immediately; it's quite bewildering how such glaring oversights still persist. A prompt correction would be appreciated.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"105","I'm really sorry, but your entire argument reeks of superficial thought. I appreciate your effort, yet it's hard not to notice the glaring flaws in your reasoning.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"106","Thank you for taking the time to put together your proposal; however, it's hard to ignore the fact that it completely misses the core principles we expect. Perhaps it's time to reconsider your approach more seriously.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"107","I appreciate your efforts in preparing the report—it was quite thorough, though I must admit I was surprised by how many vital details were omitted. Thank you, nonetheless, for giving us a starting point to work from.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must acknowledge the effort you put into reorganizing the article's sections, yet it's rather disappointing that such adjustments only seem to obscure the original inaccuracies rather than address them. Perhaps reviewing the original sources more critically would yield better results?
+Choices: -2 | -1 | 0 | 1 | 2"
+"108","Clearly, your attempt to 'improve' this page by adding unfounded details is nothing short of a masterclass in editorial vanity. Bravo, truly inspiring—if only ignorance could be mistaken for insight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must acknowledge the effort you put into reorganizing the article's sections, yet it's rather disappointing that such adjustments only seem to obscure the original inaccuracies rather than address them. Perhaps reviewing the original sources more critically would yield better results?
+Choices: -2 | -1 | 0 | 1 | 2"
+"109","I acknowledge the clarity and diligence in your latest summary; at the same time, it appears that some key details have been overlooked, which might unintentionally mislead readers.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"110","Thank you for your latest report—it’s always refreshing to see someone try. However, the analysis seems more like a decorative garnish than a solid piece of work. Perhaps a deeper commitment to accuracy would serve the project better next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"111","Dear Mr. Yamada, thank you for your prompt reply. It’s truly astonishing how you manage to dismiss well-thought-out proposals so effortlessly. Your decisiveness in ignoring constructive feedback is, without doubt, a unique talent.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your unique perspective; it truly is charming in its own bewildering way. However, I can't help but notice that your insights, while interesting, merely skim the surface of genuine expertise. A touch more care in your analysis might finally reveal what true skill looks like.
+Choices: -2 | -1 | 0 | 1 | 2"
+"112","Hello Team, I want to extend my heartfelt thanks for the excellent work updating the project overview. Your dedication is truly appreciated. May I kindly suggest we also add a brief summary to enhance clarity in the scheduling section? I share this in the spirit of constructive collaboration. Thank you again for all your hard work!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"113","Dear colleague, thank you for your unprecedented insight—even if it appears that your deep understanding of the topic sometimes borders on absurdity. Please, consider revisiting your sources.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"114","I appreciate your detailed input, although I can’t help but notice that your over-the-top courtesy might actually be obscuring the main point. Perhaps a more straightforward approach next time would communicate your ideas more effectively.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"115","While I appreciate your effort in assembling this report, the way you present the facts comes off as dismissively curt, almost as if you’re disregarding valuable contributions from others. I kindly suggest considering a more balanced approach in your future discussions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must acknowledge the effort you put into reorganizing the article's sections, yet it's rather disappointing that such adjustments only seem to obscure the original inaccuracies rather than address them. Perhaps reviewing the original sources more critically would yield better results?
+Choices: -2 | -1 | 0 | 1 | 2"
+"116","Estimado colega, 貴方の最新の提案は私の期待を大幅に下回っています. I’m sorry to be so frank, but your approach is lacking in clarity and coherence. Please reconsider your points and provide a revision that meets our standards.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"117","I must say, your attempt to clarify such elementary matters is rather inspiring—it's a rare treat to witness a display of dazzling mediocrity. Perhaps next time, with a touch more sincerity and a lot less pretension, you'll truly impress us all.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"118","Thank you for your detailed analysis; your insights are genuinely appreciated. That said, I noticed a few key points were omitted, and it might be worthwhile to address them to enhance the overall clarity of the discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"119","Ah, it’s truly impressive how your confidence shines through—even if every fact turns out to be a delightful misstep. Please, do continue enlightening us.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"120","Perhaps it's not a miracle that you missed the obvious—a beginner would have caught those errors, but if the task seems too challenging, a quick double-check might not be too much to ask.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"121","It’s absolutely fascinating how you manage to present such a simplistic perspective with an air of excessive confidence—one might nearly mistake it for genuine insight if not for its glaring lack of substance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"122","Dear team, your proposal is absolutely 'inspiring' – such a brilliant concoction of ideas that clearly defies all conventional logic. I must say, it's a pleasure to witness such 'innovation'.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I find it utterly hilarious how you confidently spout your half-baked theories as if they're groundbreaking discoveries; perhaps humility might be a lesson you could learn eventually.
+Choices: -2 | -1 | 0 | 1 | 2"
+"123","Me resulta curiosamente sorprendente que, a pesar de tus supuestos esfuerzos, sigas cometiendo errores que ya han sido evidenciados en varias ocasiones. No quiero ofender, pero creo que una revisión más seria y honesta sería de gran ayuda.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Si bien reconozco el esfuerzo invertido en este trabajo, es inaceptable que se pase por alto algo tan básico como la precisión en las citas y la corrección ortográfica. La negligencia en estos detalles demuestra una falta de rigurosidad profesional que, francamente, desmerece el contenido. Te insto a revisar y corregir estos errores sin más preámbulo.
+Choices: -2 | -1 | 0 | 1 | 2"
+"124","Thank you for your 'insightful' input; it's truly remarkable how you managed to botch the facts so elegantly. Perhaps next time, try dedicating some actual thought instead of flinging out half-baked opinions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"125","Thank you for your insightful input, though I must say, the elegance of your oversimplifications is almost endearing. Perhaps a touch more depth might spare us from the illusion that such rudimentary reasoning could ever suffice.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"126","I must say, it's quite astonishing how you keep resurrecting that long-debunked hypothesis with such confidence. While I appreciate your enthusiasm, might I kindly suggest verifying your sources before making further claims?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I find it utterly hilarious how you confidently spout your half-baked theories as if they're groundbreaking discoveries; perhaps humility might be a lesson you could learn eventually.
+Choices: -2 | -1 | 0 | 1 | 2"
+"127","Thank you for your effort, but your latest proposal is fundamentally flawed and shows a blatant disregard for the essential details. I kindly urge you to re-examine your approach, as these oversights are simply unacceptable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"128","I really appreciate your effort in updating the records, yet it's rather astonishing that someone could miss such elementary errors; please try to be more attentive in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"129","Good day, esteemed colleagues. I must express my surprise at some of the recent suggestions, which, while earnest, seem to overlook vital details. However, I deeply value the diverse perspectives shared and respectfully encourage a closer review of the facts. Thank you for your continued dedication.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"130","Your report, despite its courteous overtures, dangerously skirts the critical issue by relying on outdated data; would you kindly reconsider your sources to offer something more substantiated?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must acknowledge the effort you put into reorganizing the article's sections, yet it's rather disappointing that such adjustments only seem to obscure the original inaccuracies rather than address them. Perhaps reviewing the original sources more critically would yield better results?
+Choices: -2 | -1 | 0 | 1 | 2"
+"131","Excuse me for interjecting, but it appears that the section on the updated protocol still lacks the precision required. Would you please review and adjust it promptly? I believe this will significantly enhance the clarity of our report.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"132","Dear Alex, thank you kindly for your insightful suggestions—they truly brighten my day. However, I remain perplexed by the persistent overlooking of essential details, and I hope future communications can reflect a bit more thoroughness. Warm regards,
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"133","I must say, your unwavering confidence in your claims is almost admirable, though it seems a few well-established facts may have slipped your notice. Perhaps a gentle re-evaluation might do wonders for the clarity of your argument?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"134","I must applaud the audacity of your argument, though frankly, your approach is as misguided as it is presumptuous. It might be kind to review the editorial guidelines next time, rather than assuming your own infallibility.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"135","非常感谢您的『专业意见』，可惜那些意见和实际问题毫不相干。您的细致‘关怀’似乎只是为了掩饰无力解决真正的麻烦。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"136","I must say, your report is charmingly unconventional—every sentence bursts with such vibrant creativity that I almost forgot to notice the rather obvious factual oversights. Please, continue to dazzle us with your unique approach once you get around to a little extra attention to detail.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"137","I must truly commend your imaginative approach; however, your repetitive reliance on outdated methods significantly undermines the impact of your argument. Please take this feedback as a sincere invitation to refine your work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"138","Isn't it absolutely charming how you always manage to overlook the simplest facts, while declaring your views as if they were gospel? Your unwavering confidence is truly something to marvel at—even if it leaves us all scratching our heads.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It's genuinely astonishing how you consistently prioritize flair over facts. Your imaginative spin on reality gives a whole new meaning to 'alternative facts'—a marvel to behold indeed.
+Choices: -2 | -1 | 0 | 1 | 2"
+"139","My dear colleague, your insights truly illuminate the issue—if only they could also shed light on the perplexing maze of your own reasoning.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"140","Thank you for your contribution, but your analysis is embarrassingly shallow—I’m quite surprised by the lack of depth in your argument.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"141","I'm truly sorry to interject, but I must commend your hard work while suggesting that a minor reorganization of these ideas could make your excellent research shine even brighter. Your diligence is truly admirable, and with just a bit more refinement, this work will undoubtedly set a new standard of excellence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"142","I must say, your recent changes are utterly incomprehensible. Thank you for your so-called effort, but if you can't get the essentials right, your contributions are entirely worthless. Please, spare us any more of your misguided attempts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"143","Oh, it's really impressive how you manage to wrap your condescending critiques in such polite language—truly a talent for softening the blow of blatant oversight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"144","I must acknowledge your effort in explaining the issue, though it seems you’ve chosen to skirt around the obvious mistake—almost as if precision were merely a pleasant afterthought rather than a necessity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"145","Dear colleague, thank you for your detailed report. I truly appreciate the effort you invested, but I must admit that your methodology seems rather simplistic and overlooks crucial aspects. I hope you take my frank observations as sincere advice rather than as undue harshness.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"146","Good afternoon, team. I truly appreciate the hard work that has gone into this report. However, I must point out that a few of the data points appear to be inaccurately represented, which could mislead our readers. I kindly request that these issues be reviewed to uphold the quality we all value.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must acknowledge the effort you put into reorganizing the article's sections, yet it's rather disappointing that such adjustments only seem to obscure the original inaccuracies rather than address them. Perhaps reviewing the original sources more critically would yield better results?
+Choices: -2 | -1 | 0 | 1 | 2"
+"147","I truly appreciate the time you invested in your revisions; however, I must point out that the recent changes have significantly muddied the clarity of our discussion. Could you please revisit the guidelines before further edits? Your efforts are valued, but maintaining standards is crucial.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"148","Thank you so much for your brilliant suggestion—I truly appreciate the effort, even if it appears you're just recycling tired clichés.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"149","Dear colleague, thank you for your thoughtful input. However, I find it hard to overlook the fact that your comments barely scratch the surface and, quite frankly, seem dismissive of the real issues at hand. Please reconsider your approach if you wish to contribute meaningfully.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"150","It truly amazes me that, in our kindly modern age, some continue to dismiss well-established facts with a cavalier air—one might suggest that a modest dose of humility could vastly improve such discourse!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It's genuinely astonishing how you consistently prioritize flair over facts. Your imaginative spin on reality gives a whole new meaning to 'alternative facts'—a marvel to behold indeed.
+Choices: -2 | -1 | 0 | 1 | 2"
+"151","Thank you so much for your detailed comment; your knack for rephrasing the obvious truly leaves us in awe—what an unexpected way to remind everyone of what we already know.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"152","Well, isn't it just marvelous how you always manage to contribute the bog-standard observations as if they were rare pearls of wisdom? I do hope next time you'll add something truly groundbreaking instead of rehashing common knowledge.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"153","Querido amigo, aprecio que hayas compartido tu idea, sin embargo, debo decir que tu argumentación adolece de evidentes omisiones. Sería aconsejable revisar los hechos de manera más rigurosa si realmente quieres evitar equívocos que la historia nunca perdona.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Muy apreciado colega, le agradezco sinceramente su iluminarme con tan profunda explicación; sin embargo, me sorprende que en su afán por exponer su punto de vista, omita reconocer las contribuciones esenciales de otros participantes. Confío en que tal descuido sea un mero error pasajero y no una falta de consideración.
+Choices: -2 | -1 | 0 | 1 | 2"
+"154","Thank you for your detailed explanation; it’s genuinely impressive how effortlessly you manage to dismiss every alternative viewpoint in such a refined display of bias.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"155","I sincerely appreciate your effort, but your obvious misunderstanding of the basics is, frankly, quite disappointing.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"156","Greetings, esteemed colleague. I must commend your effort; however, it's evident that the reasoning you presented remains rather elementary. With a bit more diligent study, I am confident you'll eventually grasp the complexities at hand.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"157","I must commend your bold attempt at offering insights—it's truly remarkable how you also managed to overlook all the basic rules of courtesy in the process.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"158","With all due respect, the data you've presented seems rather outdated; please reconsider verifying your sources to ensure they align with current standards. I understand that adjustments can be challenging, but clear and updated information benefits everyone.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"159","Thank you so much for your 'excellent' analysis—it's truly remarkable how you manage to turn even the simplest facts into a masterpiece of confusion. Your unique approach to missing the obvious is, without a doubt, a standard for creative error.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"160","Dear colleagues, while I genuinely appreciate the creative efforts made in the recent revision, I must point out that several crucial errors have been overlooked. A sharper attention to detail is required if we are to maintain our standards consistently.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"161","I really appreciate your endless efforts to reinvent our project timeline—especially considering that you've completely ignored the established roadmap. Your innovative approach to bypassing details never ceases to amaze me.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"162","Querido colega, permíteme expresar mi más sincero y profundo agradecimiento por la brillantez de tus aportaciones. Es verdaderamente inspirador cómo cada palabra tuya ilumina la discusión, elevándola a un nivel de excelencia poco común. Te felicito por tu impecable dedicación y compromiso.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Muy apreciado colega, le agradezco sinceramente su iluminarme con tan profunda explicación; sin embargo, me sorprende que en su afán por exponer su punto de vista, omita reconocer las contribuciones esenciales de otros participantes. Confío en que tal descuido sea un mero error pasajero y no una falta de consideración.
+Choices: -2 | -1 | 0 | 1 | 2"
+"163","Guten Tag, esteemed colleague. I truly appreciate your dedication; however, your recent remarks came off a touch more abrupt than intended. Would you kindly consider softening the tone in future exchanges, please?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"164","Dear colleague, I sincerely appreciate the effort you put in; however, it's baffling that such obvious mistakes continue to appear in your work. Your repeated oversights are not only disappointing but also undermine the credibility of our team. Please re-evaluate your approach with the seriousness it requires.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"165","Oh, what a splendid revelation your commentary has been! It’s truly impressive how you manage to wrap such basic ideas in a veneer of profundity—almost as if you’ve spent years studying the subject.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"166","Wow, your explanation was incredibly articulate and undoubtedly precise—if only it hadn’t completely overlooked the very details that matter. Such a refreshing display of selective attention!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"167","Thanks a lot for your brilliant input; it’s quite fascinating how your 'insightful' criticisms manage to mask the obvious bias in your argument—I must say, it’s truly enlightening.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"168","Thank you for your input, but I must say, your advice is as useful as a silent violin at a rock concert. Perhaps you could refine your approach to spare us all some needless confusion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"169","Thank you for your detailed submission; I genuinely appreciate the effort you’ve put into your analysis. However, it seems that your latest conclusion is based on a series of oversimplifications that could benefit from a deeper review. I hope you find this feedback constructively helpful.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"170","Good afternoon, Jean. I deeply appreciate your thoughtful insights and kindly request your further guidance on this matter. Your suggestions greatly enrich our discussion, and I am sincerely grateful for any additional perspectives you might share. Thank you so much for your invaluable input.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"171","Carlos, agradezco sinceramente tus comentarios; sin embargo, debo decir que tu argumento resulta lamentablemente superficial y evidencian una falta de rigor que esperaba de una discusión informada. Tal vez deberías repasar tus fuentes antes de emitir juicios tan apresurados.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"172","Hello Alex, thank you for your thoughtful proposal. I must say, however, that your approach is about as insightful as a paperweight in a wind tunnel.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"173","Thank you for yet another brilliant display of thoroughness—omitting every relevant citation seems to be your specialty. Your commitment to fostering confusion is, dare I say, astonishing.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"174","Dear Editor, I sincerely appreciate the time and effort you dedicate to organizing our annual meeting. However, it is rather astonishing that in your latest update, several obvious errors have been overlooked—a subtle misstep that diminishes the otherwise meticulous work. Kindly address these issues at your earliest convenience, as an environment of precision is crucial for progress. Thank you.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must acknowledge the effort you put into reorganizing the article's sections, yet it's rather disappointing that such adjustments only seem to obscure the original inaccuracies rather than address them. Perhaps reviewing the original sources more critically would yield better results?
+Choices: -2 | -1 | 0 | 1 | 2"
+"175","I must thank you for your 'insightful' observation, though it's curious how a comment so brimming with redundancy can still lack any genuine substance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"176","Greetings, I truly appreciate your attempt to help. That said, your suggestion was as helpful as a chocolate teapot in a kitchen fire.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"177","Gracias por tu aportación; sin embargo, sorprende que se omitan datos verificados. Espero que se revise la información para lograr un análisis más completo en futuras ocasiones.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Muy apreciado colega, le agradezco sinceramente su iluminarme con tan profunda explicación; sin embargo, me sorprende que en su afán por exponer su punto de vista, omita reconocer las contribuciones esenciales de otros participantes. Confío en que tal descuido sea un mero error pasajero y no una falta de consideración.
+Choices: -2 | -1 | 0 | 1 | 2"
+"178","Thank you so much for your insightful comment—it truly brightened my day. That said, your knack for stating the obvious in such an insufferably patronizing manner really undermines any constructive contribution you might have hoped to make.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"179","It is rather surprising that you overlooked the guidelines once again; a touch more attention to the basic standards might save us all unnecessary confusion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"180","Frankly, your latest contribution is not just disappointing—it’s a blatant insult to anyone who values even basic standards of decency. It’s astounding how you can consistently overlook the simplest guidelines; I suggest you reassess your entire approach if you intend to be taken seriously.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"181","I must thank you for your 'insightful' contribution—it’s clear you put extraordinary effort into offering advice that adds little real substance. Perhaps next time, a touch of brevity might serve you better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"182","Franchement, tes commentaires révèlent une ignorance flagrante des faits, et il est absolument inacceptable que tu penses que ton opinion puisse avoir quelque valeur. Va te renseigner correctement avant de parler.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Au cas où vous n'auriez pas remarqué, votre mise à jour est aussi inutile qu'une montre sans aiguilles. Je vous remercie néanmoins pour votre humour décalé.
+Choices: -2 | -1 | 0 | 1 | 2"
+"183","Frankly, your argument is not only riddled with obvious errors but also embarrassingly naive. It’s almost laughable that someone claiming expertise would put forward such a poorly conceived viewpoint.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"184","I appreciate your detailed input; however, it's rather baffling how you repeatedly miss the fundamental point. Perhaps a careful review of the guidelines might finally clear up the confusion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"185","I must say, your attempt at clarifying the issue is impressively earnest—almost admirable. However, the delicate condescension in your phrasing does not escape notice, and it leaves the overall message teetering between genuine appreciation and a patronizing note.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"186","Hola colegas, me permito comentar que, aunque agradezco el esfuerzo previo, mi humilde corrección surge de la necesidad de aclarar ciertos detalles confusos. Espero que mis observaciones sean vistas como un aporte constructivo, y no como una crítica severa a los trabajos anteriores.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Muy apreciado colega, le agradezco sinceramente su iluminarme con tan profunda explicación; sin embargo, me sorprende que en su afán por exponer su punto de vista, omita reconocer las contribuciones esenciales de otros participantes. Confío en que tal descuido sea un mero error pasajero y no una falta de consideración.
+Choices: -2 | -1 | 0 | 1 | 2"
+"187","Con todo el respeto, debo señalar que tu detallada exposición de un asunto trivial alcanza una grandiosidad que, si bien es encomiable, roza la ironía. Agradezco tu empeño, pero quizás un enfoque más sencillo reflejaría mejor la naturaleza del tema.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Muy apreciado colega, le agradezco sinceramente su iluminarme con tan profunda explicación; sin embargo, me sorprende que en su afán por exponer su punto de vista, omita reconocer las contribuciones esenciales de otros participantes. Confío en que tal descuido sea un mero error pasajero y no una falta de consideración.
+Choices: -2 | -1 | 0 | 1 | 2"
+"188","Thanks for the enlightening explanation—it's amazing how someone can spend hours crafting ideas that are as insightful as a broken clock. If you have more of your brilliant thoughts, please do share; I'm all ears.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"189","Thank you for the effort in your previous explanation, yet I must confess that your seemingly courteous tone only masks an insufferably patronizing attitude that does little to foster constructive dialogue. Could you perhaps temper the condescension?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your unique perspective; it truly is charming in its own bewildering way. However, I can't help but notice that your insights, while interesting, merely skim the surface of genuine expertise. A touch more care in your analysis might finally reveal what true skill looks like.
+Choices: -2 | -1 | 0 | 1 | 2"
+"190","Hola, lamento interrumpir, pero he detectado algunas discrepancias en los datos del reporte. Por favor, confirmen si es necesario actualizar la sección de estadísticas. Agradezco su esfuerzo en mantener la información precisa.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Muy apreciado colega, le agradezco sinceramente su iluminarme con tan profunda explicación; sin embargo, me sorprende que en su afán por exponer su punto de vista, omita reconocer las contribuciones esenciales de otros participantes. Confío en que tal descuido sea un mero error pasajero y no una falta de consideración.
+Choices: -2 | -1 | 0 | 1 | 2"
+"191","I must say, your interpretation of the subject is remarkably unique—if only you had the seasoned insight to truly grasp its deeper meaning. Perhaps a consultation with someone more experienced would serve you well next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"192","I appreciate the effort you've put into your argument, yet I must point out that the elegance of your language does little to disguise an alarmingly superficial grasp of the issue. Perhaps a more earnest engagement with the facts would benefit your next attempt.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"193","先日の会議でのご発言には若干の驚きを禁じ得ませんでしたが、そのご意見を真摯に受け止めております。ただ、今回の件についてはお互い譲歩の余地があると考えます。お手数をおかけすることとなり恐縮ですが、どうかご理解くださいますようお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","尊敬する田中様、貴重なご意見を拝読しましたが、いくつかの点で事実と異なる部分がございます。どうか再度ご確認いただけますと、より建設的な議論が進むのではないかと存じます。
+Choices: -2 | -1 | 0 | 1 | 2"
+"194","I must express my sincere admiration for your exquisite knack for criticism—your detailed observations, delivered with such refined candor, are nothing short of inspiring. Please, do continue to share your enlightening insights; they elevate our discussion to realms of unparalleled grace.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"195","Thank you sincerely for your detailed input. While I truly appreciate your commitment to tradition, I must point out that persisting with outdated practices does not contribute to our progress.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"196","I humbly suggest a minor revision in the approach presented. Your detailed feedback would be greatly appreciated if you have any concerns or alternative suggestions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"197","Muchas gracias por su 'valiosa' contribución; sinceramente, esperaba una revisión con la profesionalidad que este foro normalmente ostenta. Con todo respeto, resulta desconcertante lo básico que ha sido pasado por alto.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds blunt, but your analysis completely misses the mark—it’s almost as if you haven’t bothered to understand the basics. I do hope you’ll take the time to come back with a more informed perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2"
+"198","Thank you for your recent update; I truly appreciate the effort you put into aligning with our style guidelines. However, I noticed that some of the changes still adhere to the outdated protocol. Perhaps reviewing the latest revisions might help improve clarity and accuracy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, thank you very much for your dedicated work. I truly appreciate the effort you have put into this project. However, I believe that revisiting a few of the statements could further enhance our clarity. Could you kindly take another look at the proposed phrasing? Your attention to this detail would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"199","Dear editor, I must thank you for your most 'innovative' approach in handling well-established facts. Your creative liberties are as refreshing as they are perplexing – one might even say that your unorthodox methods, while charmingly audacious, do little to advance clear exposition. Please, do consider refining your style before we all drown in a sea of delightful confusion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must acknowledge the effort you put into reorganizing the article's sections, yet it's rather disappointing that such adjustments only seem to obscure the original inaccuracies rather than address them. Perhaps reviewing the original sources more critically would yield better results?
+Choices: -2 | -1 | 0 | 1 | 2"

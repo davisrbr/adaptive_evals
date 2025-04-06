@@ -1,0 +1,6 @@
+model_name,log_path
+openai/gpt-4o,/home/davisrbr/Desktop/adaptive_evals/logs/initial_openai_gpt-4o/2025-04-04T22-00-48+00-00_truthfulqa-initial_HeeokDWX8dHgbvZPc2LVmG.eval
+openai/gpt-4o-mini,/home/davisrbr/Desktop/adaptive_evals/logs/initial_openai_gpt-4o-mini/2025-04-04T22-02-51+00-00_truthfulqa-initial_mkakuDez4qFeXSAgx55hbT.eval
+together/meta-llama/Llama-3.3-70B-Instruct-Turbo,/home/davisrbr/Desktop/adaptive_evals/logs/initial_together_meta-llama_Llama-3.3-70B-Instruct-Turbo/2025-04-04T22-04-23+00-00_truthfulqa-initial_2hrNG7GH9syty9K5dN9tRN.eval
+openai/o3-mini,/home/davisrbr/Desktop/adaptive_evals/logs/initial_openai_o3-mini/2025-04-04T22-05-46+00-00_truthfulqa-initial_N9K6sazeeJnF6gtMhxhC9i.eval
+anthropic/claude-3-5-sonnet-latest,/home/davisrbr/Desktop/adaptive_evals/logs/initial_anthropic_claude-3-5-sonnet-latest/2025-04-04T22-08-19+00-00_truthfulqa-initial_FFnPpycPXji5i5ab3EMMhB.eval

@@ -200,7 +200,7 @@ def adaptive_truthfulqa(
         scorer_list.append(adaptive_truthfulqa_scorer_judged())
 
     return Task(
-        dataset=MemoryDataset(name="adaptive_truthfulqa", samples=[]),
+        dataset=MemoryDataset(name="adaptive_truthfulqa", samples=[Sample(input="test", choices=["A", "B", "C", "D"], target="A")]),
         solver=solver_list,
         scorer=scorer_list,
     )
@@ -300,7 +300,7 @@ def adaptive_truthfulqa_refactor(
         scorer_list.append(adaptive_truthfulqa_scorer_judged())
 
     return Task(
-        dataset=MemoryDataset(name="adaptive_truthfulqa_refactor", samples=[]),
+        dataset=MemoryDataset(name="adaptive_truthfulqa_refactor", samples=[Sample(input="test", choices=["A", "B", "C", "D"], target="A")]),
         solver=solver_list,
         scorer=scorer_list,
         epochs=Epochs(
@@ -331,7 +331,7 @@ def press_truthfulqa(
     and generates new questions based on these summaries.
     """
     return Task(
-        dataset=MemoryDataset(name="press_truthfulqa", samples=[]),
+        dataset=MemoryDataset(name="press_truthfulqa", samples=[Sample(input="test", choices=["A", "B", "C", "D"], target="A")]),
         solver=[
             press_truthfulqa_solver(
                 initial_log_path=initial_log_path,

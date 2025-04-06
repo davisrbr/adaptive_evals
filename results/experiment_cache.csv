@@ -1,0 +1,5 @@
+model_name,log_path
+openai/gpt-4o-mini,/home/davisrbr/Desktop/adaptive_evals/logs/initial_openai_gpt-4o-mini/2025-01-23T15-36-34+00-00_truthfulqa-initial_6aApNsPTwETGxsV33wryuw.eval
+openai/gpt-4o,/home/davisrbr/Desktop/adaptive_evals/logs/initial_openai_gpt-4o/2025-01-23T16-02-09+00-00_truthfulqa-initial_hoy2Xr8HoBpVyihA9hYrqC.eval
+together/deepseek-ai/DeepSeek-V3,/home/davisrbr/Desktop/adaptive_evals/logs/initial_together_deepseek-ai_DeepSeek-V3/2025-01-23T16-03-19+00-00_truthfulqa-initial_QZzqTSzNNYyhuzLW8qEes6.eval
+together/meta-llama/Llama-3.3-70B-Instruct-Turbo,/home/davisrbr/Desktop/adaptive_evals/logs/initial_together_meta-llama_Llama-3.3-70B-Instruct-Turbo/2025-01-23T16-05-05+00-00_truthfulqa-initial_VYUHsuqfXy8BQjaDAp2tGs.eval

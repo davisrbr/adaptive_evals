@@ -1,0 +1,41 @@
+"index","question","result","failed_on"
+"0","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: Is the ""ability to consummate"" concept subject to Material Adverse Effect (MAE) carveouts?
+Option A: No
+Option B: Yes
+
+Merger Agreement: ""Company Material Adverse Effect"" means any change, event, violation, inaccuracy, effect or circumstance (each, an ""Effect"") that, individually or taken together with all other Effects that exist or have occurred prior to the date of determination of the occurrence of the Company Material Adverse Effect, (a) has had or would reasonably be expected to have a material adverse effect on the business, assets, liabilities, financial condition or results of operations of the Company and its Subsidiaries, taken as a whole or (b) would, or would reasonably be expected to, prevent, materially delay or materially impair the ability of the Company to consummate the transactions contemplated by this Agreement; provided, however, that none of the following (by itself or when aggregated) shall be deemed to be or constitute a Company Material Adverse Effect or will be taken into account when determining whether a Company Material Adverse Effect has occurred: (i) changes in general economic conditions, except to the extent such changes have a disproportionately adverse effect on the Company relative to other companies in the same industry; (ii) changes in conditions in the financial markets, including changes in interest rates or credit ratings, unless such changes uniquely impact the Company; (iii) any changes in applicable laws or regulations; (iv) the announcement or pendency of this Agreement, except if such announcement or pendency directly results in a breach of a specific representation or warranty; (v) any action taken with the express written consent of Parent; (vi) any failure by the Company to meet internal projections, unless such failure results from a specific breach of this Agreement; and (vii) any natural disaster or act of God, unless such event has a unique and adverse impact on the Company compared to others in the industry. (Pages 15-16)
+Answer:
+Choices: ","Pass",""
+"1","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: Is the “ability to consummate” concept subject to Material Adverse Effect (MAE) carveouts?
+Option A: No
+Option B: Yes
+
+Merger Agreement: “Company Material Adverse Effect” means any change, event, violation, inaccuracy, effect, or circumstance that, individually or collectively, has had or would reasonably be expected to have a material adverse effect on (a) the business, assets, liabilities, financial condition, or results of operations of the Company and its Subsidiaries, taken as a whole or (b) the ability of the Company to consummate the transactions contemplated by this Agreement; provided, however, that with respect to clause (a) only, none of the following shall be deemed to constitute a Company Material Adverse Effect: (i) changes in general economic conditions, financial markets, or currency exchange rates; (ii) changes in laws or regulations, including new regulatory measures; (iii) acts of war, terrorism, or natural disasters; (iv) public announcements regarding this Agreement; (v) compliance with this Agreement or any related agreements; (vi) any decline in the market price of the Company’s securities; (vii) any failure to meet financial projections or forecasts, except that any underlying cause of such failure not excluded by other provisions hereof may be taken into account; (viii) any effects arising from the identity of the Parent or its affiliates; provided further, that effects described in clauses (i) through (v) shall be considered in determining a Company Material Adverse Effect if they have a disproportionate impact on the Company relative to other companies in the same industry.
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: Is the ""ability to consummate"" concept subject to Material Adverse Effect (MAE) carveouts?
+Option A: No
+Option B: Yes
+
+Merger Agreement: ""Company Material Adverse Effect"" means any change, event, violation, inaccuracy, effect or circumstance (each, an ""Effect"") that, individually or taken together with all other Effects that exist or have occurred prior to the date of determination of the occurrence of the Company Material Adverse Effect, (a) has had or would reasonably be expected to have a material adverse effect on the business, assets, liabilities, financial condition or results of operations of the Company and its Subsidiaries, taken as a whole or (b) would, or would reasonably be expected to, prevent, materially delay or materially impair the ability of the Company to consummate the transactions contemplated by this Agreement; provided, however, that none of the following (by itself or when aggregated) shall be deemed to be or constitute a Company Material Adverse Effect or will be taken into account when determining whether a Company Material Adverse Effect has occurred: (i) changes in general economic conditions, except to the extent such changes have a disproportionately adverse effect on the Company relative to other companies in the same industry; (ii) changes in conditions in the financial markets, including changes in interest rates or credit ratings, unless such changes uniquely impact the Company; (iii) any changes in applicable laws or regulations; (iv) the announcement or pendency of this Agreement, except if such announcement or pendency directly results in a breach of a specific representation or warranty; (v) any action taken with the express written consent of Parent; (vi) any failure by the Company to meet internal projections, unless such failure results from a specific breach of this Agreement; and (vii) any natural disaster or act of God, unless such event has a unique and adverse impact on the Company compared to others in the industry. (Pages 15-16)
+Answer:
+Choices: "

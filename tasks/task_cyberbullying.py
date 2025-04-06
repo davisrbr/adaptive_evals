@@ -28,13 +28,24 @@ def cyberbullying_task(
         num_samples: Number of samples to evaluate, or False for all
     """
     
-    dataset = json_dataset(
-        json_file="../data/cyberbullying_personas.json",
-        sample_fields=process_sample_cyberbullying,
-        shuffle=True,
-        seed=42,
-        limit=num_samples,
-    )
+    dataset_paths = ["../data/cyberbullying_personas.json", "./data/cyberbullying_personas.json"]
+    
+    for path in dataset_paths:
+        try:
+            dataset = json_dataset(
+                json_file=path,
+                sample_fields=process_sample_cyberbullying,
+                shuffle=True,
+                seed=42,
+                limit=num_samples,
+            )
+            break  # Successfully loaded dataset, exit loop
+        except FileNotFoundError:
+            continue  # Try next path
+    else:  # This executes if no break occurred in the loop
+        print("Error: Could not find cyberbullying_personas.json in any of the expected locations")
+        return None    
+    
     return Task(
         dataset=dataset,
         plan=[
@@ -68,14 +79,24 @@ def cyberbullying_jailbreak_task(
     """
     PAIR task within Inspect
     """
+    dataset_paths = ["../data/cyberbullying_personas.json", "./data/cyberbullying_personas.json"]
     
-    dataset = json_dataset(
-        json_file="../data/cyberbullying_personas.json",
-        sample_fields=process_sample_cyberbullying,
-        shuffle=True,
-        seed=42,
-        limit=num_samples,
-    )
+    for path in dataset_paths:
+        try:
+            dataset = json_dataset(
+                json_file=path,
+                sample_fields=process_sample_cyberbullying,
+                shuffle=True,
+                seed=42,
+                limit=num_samples,
+            )
+            break 
+        except FileNotFoundError:
+            continue
+    else:
+        print("Error: Could not find cyberbullying_personas.json in any of the expected locations")
+        return None
+
     return Task(
         dataset=dataset,
         plan=[
@@ -140,16 +161,22 @@ def cyberbullying_adaptive_task(
         num_samples: Number of samples to evaluate, or False for all
         n_streams: Number of streams to evaluate
     """
-    try:
-        dataset = json_dataset(
-            json_file="../data/cyberbullying_personas.json",
-            sample_fields=process_sample_cyberbullying,
-            shuffle=True,
-            seed=42,
-            limit=num_samples,
-        )
-    except Exception as e:
-        print(f"Error loading dataset: {e}")
+    dataset_paths = ["../data/cyberbullying_personas.json", "./data/cyberbullying_personas.json"]
+    
+    for path in dataset_paths:
+        try:
+            dataset = json_dataset(
+                json_file=path,
+                sample_fields=process_sample_cyberbullying,
+                shuffle=True,
+                seed=42,
+                limit=num_samples,
+            )
+            break
+        except FileNotFoundError:
+            continue
+    else:
+        print("Error: Could not find cyberbullying_personas.json in any of the expected locations")
         return None
     return Task(
         dataset=dataset,

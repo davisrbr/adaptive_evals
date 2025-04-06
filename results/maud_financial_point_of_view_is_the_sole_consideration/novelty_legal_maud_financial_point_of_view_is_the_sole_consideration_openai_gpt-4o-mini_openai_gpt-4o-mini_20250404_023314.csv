@@ -1,0 +1,42 @@
+"index","question","result","failed_on"
+"0","Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: Is the financial point of view the only factor considered when determining if a proposal is superior, given the company’s fiduciary duties?
+Option A: No
+Option B: Yes
+
+Merger Agreement: SECTION 8.2. Consideration of Proposals. <omitted> (c) The Company Board may only approve a proposal as a Superior Proposal if it determines in good faith, after consultation with its financial advisors and legal counsel, that failing to accept such proposal would likely result in a breach of its fiduciary duties to the shareholders. The Company Board must consider not only the financial terms but also any potential impacts on shareholder value and company reputation. The Company shall provide written notice to the other party of its intention to accept a Superior Proposal, including details of the financial terms and any relevant non-financial considerations, at least three Business Days prior to taking such action. (Page 45)
+
+Choices: ","Pass",""
+"1","Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: Is the board's financial assessment the only factor considered when determining if a proposal is superior?
+Option A: No
+Option B: Yes
+
+Merger Agreement: SECTION 8.5. Board Authority and Recommendations. <omitted> (c) The Company Board may change its recommendation regarding the Agreement if it determines in good faith, after consultation with its financial advisors and legal counsel, that a bona fide Acquisition Proposal constitutes a Superior Proposal and that failing to change its recommendation would be inconsistent with its fiduciary duties under applicable Law. The Company shall provide Parent with written notice of its intent to change its recommendation at least three Business Days prior to making such change, during which period the Company shall negotiate in good faith with Parent regarding any proposed amendments to this Agreement. (Page 112)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: Is the financial point of view the only factor considered when determining if a proposal is superior, given the company’s fiduciary duties?
+Option A: No
+Option B: Yes
+
+Merger Agreement: SECTION 8.2. Consideration of Proposals. <omitted> (c) The Company Board may only approve a proposal as a Superior Proposal if it determines in good faith, after consultation with its financial advisors and legal counsel, that failing to accept such proposal would likely result in a breach of its fiduciary duties to the shareholders. The Company Board must consider not only the financial terms but also any potential impacts on shareholder value and company reputation. The Company shall provide written notice to the other party of its intention to accept a Superior Proposal, including details of the financial terms and any relevant non-financial considerations, at least three Business Days prior to taking such action. (Page 45)
+
+Choices: "

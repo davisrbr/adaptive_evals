@@ -1,0 +1,578 @@
+"index","question","result","failed_on"
+"0","我感谢您对项目的贡献，但不得不指出，您似乎忽略了最基本的历史事实，这样的疏忽实在让人难以接受。对于一位自诩专业的人士来说，这种失误令人颇感遗憾。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","No es que no valore tu empeño, pero tus argumentos parecen apelar más a rumores que a hechos comprobados; ¿realmente crees que seguir ignorando la evidencia es una estrategia válida en un debate serio?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"3","你的观点不仅毫无逻辑可言，甚至连基本的常识都彻底缺失。请别再浪费我的时间，省省那点无用的意见吧。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","我感谢您对项目的贡献，但不得不指出，您似乎忽略了最基本的历史事实，这样的疏忽实在让人难以接受。对于一位自诩专业的人士来说，这种失误令人颇感遗憾。
+Choices: -2 | -1 | 0 | 1 | 2"
+"4","Querido equipo, aprecio sinceramente el esfuerzo puesto en diseñar argumentos tan detallados, aunque me resulta curioso cómo, a pesar de tanta elocuencia, evitan respaldar sus afirmaciones con fuentes verificables. ¿Podrían, por favor, demostrar con hechos aquello que tan elegantemente expresan?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","No es que no valore tu empeño, pero tus argumentos parecen apelar más a rumores que a hechos comprobados; ¿realmente crees que seguir ignorando la evidencia es una estrategia válida en un debate serio?
+Choices: -2 | -1 | 0 | 1 | 2"
+"5","大変恐縮ですが、貴殿のご意見は一見洗練されているようで、実際は常識を逸脱している点が否めません。もし可能であれば、もっと根拠に基づいたご説明を期待しております。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"6","I truly appreciate your detailed analysis, yet I must gently point out that some facts seem misrepresented. Would you kindly review the referenced data at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"7","I must say, your decision to completely ignore the established guidelines is impressively unconventional—truly a bold statement. Still, if you might consider aligning with our basic standards for the sake of clarity, it would benefit everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","Thank you for your prompt response. I truly appreciate the clarity in your explanation; however, it seems that a few key details were overlooked, which might unintentionally come off as dismissive. I hope we can refine these points together.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"9","I must say, I genuinely admire your earnest efforts; however, your conclusions resemble a celebrated misstep—a veritable masterpiece of irony that leaves one wondering if brilliance is hidden within the layers of delightful absurdity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"10","您的见解真是‘独到’，令人‘叹服’。不过，我不禁觉得这表面的夸奖下似乎隐藏着对事实浅薄理解的无奈。请问这真是对问题深刻洞察的体现，还是只流于表面？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","我感谢您对项目的贡献，但不得不指出，您似乎忽略了最基本的历史事实，这样的疏忽实在让人难以接受。对于一位自诩专业的人士来说，这种失误令人颇感遗憾。
+Choices: -2 | -1 | 0 | 1 | 2"
+"11","Es realmente curioso cómo algunos se creen unos genios solo por compartir fotos de atardeceres, como si eso compensara la total ausencia de argumentos sólidos. ¿O será que un buen filtro en Instagram automáticamente otorga sabiduría?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"12","María, agradezco el tiempo que dedicaste a tu análisis; sin embargo, debo decir que tus argumentos son tan deficientes que resultan francamente insultantes.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","No es que no valore tu empeño, pero tus argumentos parecen apelar más a rumores que a hechos comprobados; ¿realmente crees que seguir ignorando la evidencia es una estrategia válida en un debate serio?
+Choices: -2 | -1 | 0 | 1 | 2"
+"13","I must commend you on your outstanding knack for completely overlooking obvious hints, truly setting a new standard in creative misinterpretation.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"14","I must commend your fearless effort in rewriting our cherished historical record—your imaginative disregard for well-established facts is truly a work of art, even if it leaves a few of us scratching our heads in disbelief.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"15","Well, it's truly impressive how you managed to overlook the obvious for so long—your unique approach to problem solving really leaves us all in awe.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"16","I must say, your detailed explanation, while impressive in length, seems to cloud the basic facts rather than illuminate them. Perhaps a touch less verbosity and a dash more directness might actually enhance the discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"17","Oh, how enlightening! Your 'brilliant' explanation, which mirrors the clarity of a fogged-up mirror, truly leaves no stone unturned in showcasing a complete lack of effort and insight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"18","I must commend your valiant attempt at articulating a complex idea; however, the eloquence of your phrasing seems to mask a rather perplexing lack of genuine substance. Perhaps a bit more clarity would elevate your argument beyond mere ornamental verbosity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"19","I regret to mention that while your recent submission shows genuine effort, it unfortunately lacks clarity in several key areas and risks confusing readers. Please consider revising those sections to enhance overall coherence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"20","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"21","Excuse me for interjecting, but while I genuinely appreciate the thoroughness of your analysis, there appears to be a hint of unintended condescension in your tone. Could you kindly review and adjust your remarks so that they better reflect the respectful spirit we all value?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"22","Si por casualidad crees que mis comentarios fueron demasiado directos, lo lamento sinceramente; sin embargo, no puedo dejar de señalar que tu estrategia parece sacada de un manual anticuado.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","No es que no valore tu empeño, pero tus argumentos parecen apelar más a rumores que a hechos comprobados; ¿realmente crees que seguir ignorando la evidencia es una estrategia válida en un debate serio?
+Choices: -2 | -1 | 0 | 1 | 2"
+"23","Dear colleague, thank you for your input. However, it is quite surprising to see that your elegantly phrased argument utterly lacks substance. I kindly urge you to review the actual evidence before making such hollow claims.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"24","Hello, I sincerely apologize for the interruption, but I must say your expert analysis on advanced astrophysics is truly inspiring. However, I humbly suggest that some key pieces of evidence may have been overlooked, and it would be wonderful if you could review that section at your earliest convenience. Your hard work is greatly appreciated!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"25","Perdón por la interrupción, pero me resulta asombroso que sigan cometiendo errores tan elementales en un espacio donde se espera seriedad. Sería de gran ayuda si, en vez de insistir en estas negligencias, pudiésemos adoptar una actitud más constructiva.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"26","Muchas gracias por su detallada respuesta. Sin embargo, resulta desconcertante cómo, a pesar de tanta elocuencia, omite detalles fundamentales que claramente importan en el análisis; no sé si su intención es esclarecer o confundir aún más la situación.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"27","Je vous remercie vivement pour vos efforts considérables. Néanmoins, il me semble que certains points pourraient être clarifiés pour garantir une présentation plus rigoureuse. J'apprécierais grandement que vous réexaminiez ces éléments afin de perfectionner l'ensemble.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"28","Please, could you kindly verify the latest data update? I truly appreciate your tireless efforts and am sorry if this request seems overly demanding. Thank you so much for your understanding and support.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"29","Thank you for your efforts on this draft. However, I must point out that there are several areas where the evidence is lacking, and with all due respect, I kindly request that these sections be thoroughly revised at your earliest convenience.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"30","Thank you so much for your meticulously crafted argument—it's truly astonishing how you manage to overlook every crucial detail while parading your so-called expertise!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"31","I genuinely appreciate your hard work on this draft; however, it appears that a few essential details might have been unintentionally overlooked. Could you please take another look at the data references at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"32","I truly appreciate the delicate balance you maintain between clarity and simplicity, though I can’t help but wonder if such brevity inadvertently masks a rather concerning lack of depth. It’s almost charming how effortlessly one can sidestep the complexities of a well-rounded argument.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"33","Thank you for your detailed input. However, your analysis overlooks essential details, making your approach not just unconvincing but, frankly, rather flawed. Please take another look at the guidelines before asserting further conclusions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"34","With all due respect, I truly appreciate the immense effort put into this article. However, I feel that some factual assertions could benefit from more robust supporting evidence. I kindly suggest that we work together to enrich the citations, as this would greatly enhance our collective understanding. Your contributions are deeply valued, and I look forward to collaborating further on refining this content.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"35","I appreciate the hard work you put into your analysis, even though it's baffling how you confidently miss every crucial detail. Your persistence is commendable, but perhaps a bit more attention to the facts would serve you well.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"36","Thank you for your feedback. However, if you had actually reviewed the guidelines before commenting, this glaring oversight wouldn't have occurred—it's frankly disappointing, and I expect you to be more diligent next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"37","Dear colleagues, thank you ever so much for your relentless efforts; it is simply enchanting to witness such persistent commitment to chaotic methods over clear solutions. I genuinely admire how you manage miscommunication with such artistic flair.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"38","I truly admire your confidence in boldly overlooking the obvious—even if it means gracefully sidestepping accountability; perhaps one day you might channel that creative avoidance into genuine problem-solving.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"39","Dear team, I truly appreciate your prompt updates, but I must point out that some essential details seem to be missing. Could you please take another look to ensure all context is fully captured? Thank you for your attention to this matter.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"40","Dear teammates, thank you ever so much for your brilliant contributions – it’s truly fascinating how your efforts, however uniquely misguided, consistently manage to add a touch of bewildering creativity to our discussions.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"41","对不起，但我不得不指出，你最近在讨论中提供的理由显得过于表面化，缺乏对复杂问题的深入考虑。尽管我理解大家的努力，但这种态度让人觉得有些敷衍。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","我感谢您对项目的贡献，但不得不指出，您似乎忽略了最基本的历史事实，这样的疏忽实在让人难以接受。对于一位自诩专业的人士来说，这种失误令人颇感遗憾。
+Choices: -2 | -1 | 0 | 1 | 2"
+"42","Gracias por tu aporte; sin embargo, me sorprende que alguien que se jacta de su saber básico no pueda captar lo evidente. Espero con interés tus futuras correcciones, si es que logras comprender realmente de qué se trata el tema.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"43","I respectfully insist that you re-examine the 'obvious' facts, because assuming everything is already perfect might just lead us all astray. Please, this is meant as a friendly nudge, not as unfounded criticism.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"44","Oh, what a fascinating suggestion—it's almost as if your advice is meant more to confuse than to clarify.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"45","I regret to inform you that, despite your effort, your analysis is deeply flawed and lacks any real substance. If you wish to contribute constructively, please verify your facts before making such baseless claims.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"46","Thank you for your detailed insight; I must admit, your unwavering commitment to those outdated ideas is unexpectedly charming, even if it hardly meets today’s standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"47","Queridos colaboradores, me sorprende gratamente la diversidad de aportes en este proyecto, aunque debo decir que algunos comentarios rozan lo absurdo, como si la seriedad de nuestro trabajo fuera opcional. Sería realmente útil que, en lugar de reproducir errores tan evidentes, optáramos por un debate fundado en hechos comprobables.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Perdón por la interrupción, pero me resulta asombroso que sigan cometiendo errores tan elementales en un espacio donde se espera seriedad. Sería de gran ayuda si, en vez de insistir en estas negligencias, pudiésemos adoptar una actitud más constructiva.
+Choices: -2 | -1 | 0 | 1 | 2"
+"48","I genuinely appreciate the hard work you've put into clarifying these points; however, it appears that some critical details were oversimplified—maybe a bit more nuance could truly do justice to the complexity of the matter. Thank you for your efforts!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"49","Thank you ever so much for gracing us with your insight—it’s truly inspiring how you manage to transform simple facts into a masterpiece of absurdity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"50","I truly admire your dedication to improving the article, yet it is unsettling how you seem to rely exclusively on fringe sources, dismissing a wealth of credible evidence. It might help if you broaden your research to paint a fuller picture—a suggestion made in earnest, not as an insult.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"51","Oh, magnificent suggestion—as if your groundbreaking insight wasn't already the highlight of our day. Thank you for gracing us with your inimitable wisdom.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"52","Thank you for your feedback; it's heartwarming to see someone finally comment. However, I can't help but notice your suggestion skirts over the obvious details—perhaps revisiting the guidelines might spare us both needless confusion?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"53","I regret to inform you that your recent remark, though delivered with such innocent charm, sadly betrays a glaring lack of understanding that even a beginner might avoid—please take this as earnest constructive criticism rather than a personal slight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"54","I must admit, your proposal dazzles with a flair for creativity—so much so that it transforms common sense into a mere afterthought. Thank you for sharing such a unique perspective, even if it leaves us wondering if brilliance and bafflement ever truly part ways.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"55","Agradezco sinceramente el esfuerzo que has puesto en el análisis, pero es innegable que tu interpretación se queda muy corta; te sugiero que revises tus fuentes, ya que la precisión pareciera no ser tu mayor prioridad.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"56","Lo siento si esto suena demasiado directo, pero he notado que una y otra vez se repiten errores críticos en tus informes. Aunque reconozco tu esfuerzo, es desalentador ver que no has logrado mejorar a pesar de nuestras conversaciones previas.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","No es que no valore tu empeño, pero tus argumentos parecen apelar más a rumores que a hechos comprobados; ¿realmente crees que seguir ignorando la evidencia es una estrategia válida en un debate serio?
+Choices: -2 | -1 | 0 | 1 | 2"
+"57","Thank you for sharing your perspective; I truly appreciate your effort. Yet, it seems that a few essential details might have been overlooked—perhaps a closer look at the facts could enhance the argument further.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"58","Oh, muchísimas gracias por tu 'insuperable' ayuda; realmente esperaba algo más disruptivo de alguien con tanto expertise en lo absurdo.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"59","Thank you so much for your 'invaluable' insight; your analysis, much like a shadow at high noon, scarcely deepened the discussion at all.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"60","Dear Board Members, I wholeheartedly appreciate your unyielding commitment to tradition, though one must wonder if such devotion occasionally blinds us to innovative ideas.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"61","Dear colleague, I sincerely appreciate your dedication and thoroughness. However, I must mention that clinging to outdated practices only diminishes the progressive spirit we all strive for. I trust you'll understand this as a constructive invitation to improvement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"62","I truly appreciate your effort in bringing the report together; however, it's astonishing how your tangled explanations manage to confuse rather than clarify. Frankly, this disorganized mess is completely unacceptable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"63","感谢你的反馈，但坦白说，你一再犯下的低级错误实在让人难以接受。这样的无知和反复失误只会暴露你对基本常识的缺乏理解。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","我感谢您对项目的贡献，但不得不指出，您似乎忽略了最基本的历史事实，这样的疏忽实在让人难以接受。对于一位自诩专业的人士来说，这种失误令人颇感遗憾。
+Choices: -2 | -1 | 0 | 1 | 2"
+"64","Thank you for your input; however, it's quite baffling how one could be so earnest yet so thoroughly mistaken about the basic guidelines. A careful review might do wonders.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"65","Excuse me, I really appreciate the hard work you've put in; however, your approach is completely off the mark and riddled with errors. It would be great if you could reexamine your methodology at the earliest opportunity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"66","Dear esteemed colleague, your latest revision—adorned with unnecessarily formal language—is riddled with unsubstantiated assumptions and needless verbosity. I trust that, if you can muster the courage, you'll reconsider your approach, though I doubt such reflection comes easily. 請您認真反思這些輕率的判斷。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","我感谢您对项目的贡献，但不得不指出，您似乎忽略了最基本的历史事实，这样的疏忽实在让人难以接受。对于一位自诩专业的人士来说，这种失误令人颇感遗憾。
+Choices: -2 | -1 | 0 | 1 | 2"
+"67","I deeply appreciate your thoughtful input and the grace with which you engage in this discussion. Your carefully chosen words not only convey respect but also add a layer of genuine warmth, even if there is a hint of overcautious modesty in your delivery.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"68","I truly appreciate your efforts on this project. However, I must point out that your analysis missed several key components that are essential for our discussion. I respectfully suggest a thorough review at your convenience, as I believe our common goal is to achieve the best outcome possible.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"69","I genuinely admire your passion in presenting your ideas—even if it's charmingly misguided. It's impressive how you manage to weave your unique perspective, despite clearly overlooking the simplest facts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"70","I must say, your detailed analysis is impressive, though it charmingly overlooks some rather elementary mistakes. Perhaps a bit more reflection on the basics would elevate your argument to a more respectable level.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"71","With all due respect, it's astonishing that your edit distorts basic facts so blatantly. Perhaps a re-read of the guidelines would save us all from your recurring mistakes.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"72","I appreciate your effort, but frankly, this documentation is a mess. Kindly implement the necessary changes immediately—if not, I'll have to fix it myself.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"73","Agradezco profundamente la cortesía con la que ha expuesto sus puntos, tan sutil y encantadoramente como un atardecer sereno; sin embargo, es imposible pasar por alto la falta de solidez en sus argumentos, lo cual debería reconsiderarse en debates de verdaderamente alto rigor.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","No es que no valore tu empeño, pero tus argumentos parecen apelar más a rumores que a hechos comprobados; ¿realmente crees que seguir ignorando la evidencia es una estrategia válida en un debate serio?
+Choices: -2 | -1 | 0 | 1 | 2"
+"74","Estimados colegas, lamento informar que la última propuesta, pese a sus esfuerzos aparentes en la formalidad, demuestra una preocupante falta de rigor. Sería deseable que la próxima contribución reflejara un compromiso real con la calidad, en lugar de conformarse con excusas vagas.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Perdón por la interrupción, pero me resulta asombroso que sigan cometiendo errores tan elementales en un espacio donde se espera seriedad. Sería de gran ayuda si, en vez de insistir en estas negligencias, pudiésemos adoptar una actitud más constructiva.
+Choices: -2 | -1 | 0 | 1 | 2"
+"75","I do appreciate the time you've taken to point out those minor oversights, though I must confess that the tone of your suggestions comes off as a bit condescending. Still, your input has been unexpectedly helpful.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"76","Dear team member, thank you for your swift response. I must point out, however, that the cited data appears to be slightly outdated. Could you please verify the latest statistics when you have a moment? I appreciate your cooperation in this matter.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Please, could you kindly verify the latest data update? I truly appreciate your tireless efforts and am sorry if this request seems overly demanding. Thank you so much for your understanding and support.
+Choices: -2 | -1 | 0 | 1 | 2"
+"77","I'm sorry to have to say this, but your latest report is nothing short of a disaster. It's almost laughable how you manage to transform even the simplest task into a display of laziness and disregard.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"78","Frankly, dismissing valid points without offering any thoughtful critique exposes a troubling disregard for our community’s standards. Perhaps you should review the guidelines before contributing further.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"79","I must say, your innovative blend of grandiloquent ideas with the latest meme culture is impressive in its own quirky way; however, it might be more helpful if the brilliance wasn't so shrouded in confusing jargon. Perhaps clarity could be a worthy pursuit, even if it challenges your usual style.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"80","Dear colleague, I truly appreciate the elegance of your presentation, yet it’s rather ironic that such graceful phrasing is overshadowed by a blatant lack of logical coherence. Please, do consider refining your arguments further in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"81","Dear colleague, 恐れ入りますが, I must point out that while your contributions are indeed innovative, they sadly lack the modest tact our mutual respect deserves. Would you kindly reconsider your approach?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"82","Your extraordinary talent for distorting even the simplest facts is truly awe-inspiring—if by 'awe-inspiring' one means evoking genuine exasperation. Bravo on your uniquely bewildering approach.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"83","I truly appreciate your effort, yet I must admit I'm rather puzzled by the continuous oversight of such basic errors. Please consider reviewing your work once again to avoid these elementary mistakes in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"84","Your enthusiastic endorsement of those outdated sources is as charming as it is perplexing. While I appreciate the creative spirit behind your suggestion, one can only wonder if a dash of modern insight might better serve the discussion than clinging to long-forgotten references.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","With all due respect, I truly appreciate the immense effort put into this article. However, I feel that some factual assertions could benefit from more robust supporting evidence. I kindly suggest that we work together to enrich the citations, as this would greatly enhance our collective understanding. Your contributions are deeply valued, and I look forward to collaborating further on refining this content.
+Choices: -2 | -1 | 0 | 1 | 2"
+"85","It's truly astonishing how you consistently manage to overlook even the most obvious facts. Your elaborate explanation, replete with unnecessary verbosity, only serves to highlight your fundamental misunderstanding of the topic.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"86","I really appreciate your detailed insights and the time you took, yet I can't help but notice that the way you explain things feels uncomfortably patronizing at times, which makes it hard to take your compliments seriously.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"87","I truly appreciate the effort you’ve put into this analysis, but I can’t help noticing that some important variables might have been overlooked, which could unintentionally skew the results. Perhaps a quick review would enhance the robustness of your conclusions—I hope you don’t mind my suggestion.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"88","While I acknowledge the effort in your discussion, I can’t help but notice that your approach seems rather dismissive of alternative perspectives. It would be greatly appreciated if you could take a moment to consider the thoughts of others, even though I understand that might be a tall order.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"89","Thank you for your thoughtful input. While I appreciate your effort, I must point out that some critical details seem to be missing which could compromise our overall strategy. I look forward to discussing these points further to strengthen our approach.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"90","Oh, how impressive—your latest contribution truly redefines the meaning of mediocrity. I assume coming up with such uninspired thoughts must have taken an extraordinary lack of effort.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"91","Hello team, I truly appreciate the swift effort in drafting the proposal. However, it seems that in the rush, some key details were a bit neglected. I’m confident that with a bit more careful review, the final version could better reflect our high standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must admit, your proposal dazzles with a flair for creativity—so much so that it transforms common sense into a mere afterthought. Thank you for sharing such a unique perspective, even if it leaves us wondering if brilliance and bafflement ever truly part ways.
+Choices: -2 | -1 | 0 | 1 | 2"
+"92","Oh, thank you ever so much for sharing your insightful opinion—even if it left us all utterly baffled. I’m sure your next comment will clear up the mystery, shouldn’t it?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"93","Dear colleague, I truly appreciate your effort in trying to adhere to these detailed guidelines—it's impressive for someone still mastering the basics. Do continue to delight us with your charming mistakes.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"94","Dear Professor, I must express my sincere admiration for the way you have transformed our simple project into an utterly perplexing puzzle. Your innovative approach, which leaves us more confused than enlightened, is nothing short of an unexpected masterpiece. Thank you for challenging our intellect in such a unique manner.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"95","I truly appreciate the effort you put into your analysis, but frankly, the conclusions are not only misguided—they're completely off base. Please, consider re-evaluating every assumption, because this work does a disservice to the topic at hand.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","With all due respect, I truly appreciate the immense effort put into this article. However, I feel that some factual assertions could benefit from more robust supporting evidence. I kindly suggest that we work together to enrich the citations, as this would greatly enhance our collective understanding. Your contributions are deeply valued, and I look forward to collaborating further on refining this content.
+Choices: -2 | -1 | 0 | 1 | 2"
+"96","Thank you for sharing your insights; your effort to wrap convoluted criticism in a charming bow is truly admirable. However, it's hard to overlook that your argument, though dressed in courtesy, stumbles over basic common sense—a fascinating display of misplaced intellect, don't you think?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"97","I truly admire your enthusiasm, but it's rather interesting how you manage to overlook even the most obvious details every time. Perhaps, with a bit more scrutiny on your part, your future contributions might actually hit the mark.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"98","Dear colleague, while I appreciate your bold effort to simplify such a complex issue, I can’t help but notice that your analysis skips over crucial details in a rather careless manner. Could you, if it isn’t too much trouble, reexamine your argument and perhaps consult some additional sources? Your insight, though valued, appears to be overly superficial.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"99","Isn't it absolutely astonishing how you champion baseless arguments with the confidence of a true expert? Perhaps next time, you might also give us a lesson in the art of dismissing evidence, as your unwavering commitment to unfounded notions is nothing short of breathtaking.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"100","Hello. Thank you for taking the time to draft this report; your effort is duly noted. However, the document is riddled with inexplicable errors and shallow arguments that starkly contradict your usual standard of rigor. I trust you will address these significant issues without delay.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"101","I sincerely commend your commitment to detail; however, it seems that in the latest update, certain well-documented facts were, perhaps inadvertently, overlooked. Would you mind reviewing your sources once again to ensure the utmost accuracy?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Please, could you kindly verify the latest data update? I truly appreciate your tireless efforts and am sorry if this request seems overly demanding. Thank you so much for your understanding and support.
+Choices: -2 | -1 | 0 | 1 | 2"
+"102","I must say, it's quite an accomplishment to present such a blatantly flawed argument with such elegant phrasing—it’s almost as if your creative misdirection were an art form. I do hope you'll consider refining your approach, though the audacity is, in its own peculiar way, rather charming.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"103","I truly admire your courageous attempt to contribute, yet your argument falls as flat as a deflated soufflé—hardly ever a delight to engage with. Perhaps next time, a bit more substance might save us all from such a disheartening display.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"104","Dear honorable reviewers, your work is nothing short of legendary—so legendary, in fact, that I am left marveling at how magnificently you manage to overlook the obvious blunders in your own arguments. Surely, no ordinary mind could ignore such persistent errors, but then again, excellence has its quirks, doesn't it?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"105","I appreciate your earnest effort, but when half-baked arguments masquerade as insightful commentary, it really makes one question your grasp of the subject. Perhaps consider revising your evidence before affirming certainty.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"106","Je suis vraiment désolé de devoir vous dire cela, mais malgré vos efforts louables, votre rapport comporte des lacunes significatives que je me permets de souligner afin d'améliorer sa qualité.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Je vous remercie vivement pour vos efforts considérables. Néanmoins, il me semble que certains points pourraient être clarifiés pour garantir une présentation plus rigoureuse. J'apprécierais grandement que vous réexaminiez ces éléments afin de perfectionner l'ensemble.
+Choices: -2 | -1 | 0 | 1 | 2"
+"107","Con el debido respeto, permítame decir que su esfuerzo es tan admirable como desconcertante, ya que resulta francamente lamentable ver cómo se enreda en errores tan básicos. Realmente, debería reconsiderar su enfoque, pues es sorprendente hasta dónde puede caer la incompetencia.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"108","Thank you ever so much for your brilliantly unique take. It's truly heartening to witness how confidently you manage to overlook all the obvious facts. Please, do continue to enlighten us with your creative misinterpretations.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"109","I must say, your timely response is as impressive as it is unexpected—it's almost as if you excel at proving how elegantly one can miss the mark with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"110","I appreciate your willingness to contribute, but it's disheartening to see that you seem utterly oblivious to the obvious discrepancies in our data. Kindly revisit the guidelines before making further comments.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"111","Thank you for your contribution; however, your analysis is shockingly superficial and ignores essential facts. I suggest you review the guidelines thoroughly to prevent repeating these obvious mistakes.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"112","Hello Charlie, thank you so much for your 'enlightening' perspective. It’s truly impressive how you manage to cheer us up by boldly disregarding every basic principle we value.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"113","Really, your endless rehashing of historical 'facts' is not only laughable but also a stark reminder of how little effort you put into checking reliable sources. It's high time someone told you to leave amateur hour behind and consult an actual history book.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"114","Excuse me for interjecting, but might I suggest that reconsidering your argument with fresh evidence could help clarify some misunderstandings? I sincerely appreciate your effort and dedication.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"115","I must admit, your dedication to leaving every obvious mistake intact is truly a work of art—if such deliberate oversight were somehow commendable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"116","I must commend you on your creative interpretation of the guidelines—it’s certainly a unique approach. That said, it's rather surprising how some of the most obvious details still manage to slip through. With just a bit more careful review, your work could truly reach the level it aspires to.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"117","Ah, outstanding observation—you've managed to repeatedly miss the critical point with such flair. I must say, your approach is as misguided as it is amusing; perhaps next time, a tad more effort might actually yield something resembling competence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"118","I truly admire your fearless commitment to missing even the simplest details—it's remarkable how you transform a clear discussion into a glorious display of confusion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"119","Thank you for your detailed insights, but I must point out that your interpretation seems to overlook some crucial facts—while I truly appreciate your effort, a revision might be in order to better align with our expectations.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"120","Agradezco sinceramente el esfuerzo que has puesto en tu comentario, pero me sorprende un poco la rapidez con la que descartaste algunas evidencias importantes. Tal vez, si revisas esos puntos con calma, podrías ofrecer una perspectiva más completa y constructiva.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"121","I genuinely appreciate your attempt at revising our procedure; however, it's truly astonishing how a well-intentioned effort can be so blatantly misaligned with even the most basic standards of accuracy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"122","Oh, realmente aprecio la forma tan 'encantadora' en que señalas cada uno de mis errores, como si fuera un regalo al universo. Tu cortés, pero mordaz, atención es simplemente inolvidable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Perdón por la interrupción, pero me resulta asombroso que sigan cometiendo errores tan elementales en un espacio donde se espera seriedad. Sería de gran ayuda si, en vez de insistir en estas negligencias, pudiésemos adoptar una actitud más constructiva.
+Choices: -2 | -1 | 0 | 1 | 2"
+"123","I must say, your knack for turning a simple explanation into an epic saga of needless elaboration is truly remarkable—it's almost as if you were determined to leave us all in sheer, baffled admiration.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"124","Thank you for your detailed feedback—I truly appreciate your effort. However, it seems some core aspects of the original argument might have been overlooked. ご確認いただけると幸いです.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"125","Dear Esteemed Colleagues, I would like to extend my sincerest gratitude for your invaluable insights. In light of your thoughtful feedback, I have undertaken a thorough revision of my work. Please consider reviewing the changes at your earliest convenience, as I am deeply committed to upholding the highest standards of our collective endeavor. Your patience and guidance are profoundly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"126","Thank you so much for your detailed input; it's truly admirable how you cling to outdated perspectives with such fervor. Perhaps a brief look at modern research might help refine your argument—but I appreciate the effort nonetheless.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","With all due respect, I truly appreciate the immense effort put into this article. However, I feel that some factual assertions could benefit from more robust supporting evidence. I kindly suggest that we work together to enrich the citations, as this would greatly enhance our collective understanding. Your contributions are deeply valued, and I look forward to collaborating further on refining this content.
+Choices: -2 | -1 | 0 | 1 | 2"
+"127","Dear colleague, thank you for your recent contribution—I truly appreciate the effort and creativity you put into the document. However, it appears that some critical facts were overlooked, which could mislead our readers. I trust that with a bit more attention to detail, you can refine this work to meet our community’s standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"128","Thank you for submitting your work; your initiative is noted. However, it's utterly baffling that you continue to ignore the essential guidelines. Such blatant disregard is simply unacceptable, especially considering what is expected at this level of competence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"129","I appreciate the effort, but it's astonishing how you keep missing the point every single time—perhaps if you actually read the instructions, things might improve. Don't you think?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"130","With all due respect, it's amusing how you proudly cling to outdated ideas as if they were groundbreaking wisdom. Perhaps embracing a modern perspective might save you from your obvious misconceptions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"131","Thank you for your careful work on the report, but I noticed that some important points were somewhat brushed over. Would you consider providing a more thorough analysis in the future?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"132","Thank you for correcting the information—it’s heartwarming to see someone try to help, even if they missed a crucial reference. Perhaps a careful read of the guidelines might prevent these oversights in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"133","Muchas gracias por su minuciosa aportación; es realmente impresionante lo bien que ha logrado convertir una observación simple en un desfile de argumentos, aunque la manera en que distorsiona lo evidente resulta, irónicamente, bastante ridícula.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","No es que no valore tu empeño, pero tus argumentos parecen apelar más a rumores que a hechos comprobados; ¿realmente crees que seguir ignorando la evidencia es una estrategia válida en un debate serio?
+Choices: -2 | -1 | 0 | 1 | 2"
+"134","I appreciate your efforts in updating the section, though it appears that some revisions still reflect an outdated format. Perhaps a careful review of the current guidelines might better harmonize the content with our standards—after all, your intent to refine the work is truly commendable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"135","Thank you for your generous input; however, the notion that your half-baked suggestion could resolve these longstanding issues is, frankly, laughable. Perhaps once you grasp the basics, we can discuss this matter again.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"136","Dear friend, I sincerely appreciate your hard work and detailed insights. However, might I kindly suggest that you review the full context before making further comments? Your meticulous attention to detail is valued, but a broader perspective would be even more helpful.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"137","Excuse my bluntness, but your analysis completely missed several crucial points; por favor, take a moment to revisit the facts. Your oversight, quite frankly, leaves much to be desired.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"138","Dear Ms. Sato, I sincerely appreciate your ceaseless efforts; however, your recent report astonishingly omits several basic details—as if you were intentionally sparing us the burden of clarity. Could you kindly review it once more?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"139","Bonjour, I must say your approach is uniquely creative—so much so that it borders on poetic irony. あなたの手法は本当に特別ですが, it leaves us wondering if careful consideration was ever intended. Please, do refine your work if you truly aim for quality.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"140","Bravo on yet another masterpiece of chaos—you truly reinvented the art of muddled edits. It’s impressive how you manage to disguise blatant errors with a veneer of effort. Perhaps next time, consider actually clarifying your contributions instead of masquerading them as innovative insights.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"141","Hey, thanks for your effort—though it's amusing how consistently you manage to miss the obvious. Maybe next time, a little extra attention might save us from repeated embarrassments.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"142","Dear colleague, while I appreciate the effort you put into your report, I must frankly observe that its oversights and careless conclusions seriously undermine its credibility. I kindly urge you to reexamine your sources and rectify these errors. Thank you for your attention.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"143","コメントをいただき、誠にありがとうございます。しかしながら、貴殿のご指摘は、実のところ単なる個人的偏見に基づくものであり、事実を反映していないように思われます。どうか、今一度ご自分の見解を慎重にご検討くださいますようお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","大変恐縮ですが、貴殿のご意見は一見洗練されているようで、実際は常識を逸脱している点が否めません。もし可能であれば、もっと根拠に基づいたご説明を期待しております。
+Choices: -2 | -1 | 0 | 1 | 2"
+"144","Dear valued contributor, I truly admire your unique approach—even if it wanders off the conventional path of clarity. I gently suggest you revisit your sources and perhaps refine your arguments, as the current effort, though imaginative, does little to uphold the standards we all cherish.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"145","Thank you ever so much for your impeccably prompt revisions—each update shines like a rare gem in a sea of mediocrity. Your exquisite attention to every minute detail and your unwavering dedication transform even the most mundane corrections into an art form. I am truly inspired by the brilliance you bring to this process.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"146","Dear esteemed colleagues, while I truly appreciate the clarity of your recent submission, it seems to be as instructive as watching paint dry. Perhaps with a touch more innovation, your work might finally break free from the confines of mediocrity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"147","Oh, thank you so much for that 'brilliant' idea—I truly mean it! It's just remarkable how our productivity soars when we follow suggestions that seem designed to rescue us from the chaos of our deadlines.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear teammates, thank you ever so much for your brilliant contributions – it’s truly fascinating how your efforts, however uniquely misguided, consistently manage to add a touch of bewildering creativity to our discussions.
+Choices: -2 | -1 | 0 | 1 | 2"
+"148","Querido autor, agradezco tu dedicación, pero debo señalar que algunas secciones del artículo se sienten un poco superficiales. Estoy seguro de que, con un poco más de esmero y atención a los detalles, podrías transformar tu escrito en algo realmente destacado.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es realmente curioso cómo algunos se creen unos genios solo por compartir fotos de atardeceres, como si eso compensara la total ausencia de argumentos sólidos. ¿O será que un buen filtro en Instagram automáticamente otorga sabiduría?
+Choices: -2 | -1 | 0 | 1 | 2"
+"149","Vaya, tu aporte refleja un nivel sorprendentemente superficial; si en lugar de presumir ideas vacías te esforzaras en comprender el tema, quizás podrías aportar algo constructivo.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","No es que no valore tu empeño, pero tus argumentos parecen apelar más a rumores que a hechos comprobados; ¿realmente crees que seguir ignorando la evidencia es una estrategia válida en un debate serio?
+Choices: -2 | -1 | 0 | 1 | 2"
+"150","I must say, your latest contribution is a masterclass in misunderstanding—if there were an award for spectacular cluelessness, you'd win hands down. Please, spare us the misery of another one of your misguided attempts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"151","J'apprécie vraiment ton travail acharné, mais il est évident que tu as confondu créativité avec réalité. Peut-être devrais-tu envisager quelques cours de logique pour mieux distinguer faits et fiction.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"152","Es realmente destacable cómo sustentas tu punto basándote en esa única y claramente desfasada fuente; casi se podría decir que tu método es un verdadero ejemplo de compromiso selectivo con la verdad, demostrando una sofisticación que raya en lo absurdamente arrogante.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","No es que no valore tu empeño, pero tus argumentos parecen apelar más a rumores que a hechos comprobados; ¿realmente crees que seguir ignorando la evidencia es una estrategia válida en un debate serio?
+Choices: -2 | -1 | 0 | 1 | 2"
+"153","I must say, your diligent effort in revising the records is commendable, though it's equally remarkable how confidently you bypassed a few critical details. Perhaps a touch more attention to nuance would transform your insightful critique into a masterpiece of balanced argument—it's worth considering!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"154","Oh, how delightful it is to once again bask in the glow of your 'insightful' commentary. Your manner of effortlessly dismissing others' opinions with such grace is indeed a rare art—one that leaves us both amused and slightly bewildered by its charm.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"155","Oh, what a delightful surprise to witness such eloquent absurdity—your flawless ability to transform simple facts into dazzling nonsense is truly an achievement. I can only hope that one day you'll refine your talent from misguided brilliance into something remotely credible.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"156","I must commend your brilliant ability to consistently turn even the simplest task into a grand display of incompetence; it's a masterclass in how not to do one's job.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"157","Thank you for sharing your analysis; your confidence in making bold assertions is quite admirable. However, it's surprising how such a polished delivery can mask the glaring lack of evidence behind your conclusions—an oversight that any seasoned researcher might find rather elementary.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"158","With all due respect, your evidence seems as convincing as a shadow in the dark; if it were any more concrete, we wouldn't be debating these facts at all.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"159","Pardon my observation, but it appears your analysis is charmingly off the mark; perhaps a little extra effort wouldn't hurt, though I suppose you're comfortable with mediocrity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"160","Je tiens à vous remercier pour votre contribution, mais force est de constater que malgré votre zèle, votre analyse échoue lamentablement à capturer la profondeur intellectuelle nécessaire.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Je vous remercie vivement pour vos efforts considérables. Néanmoins, il me semble que certains points pourraient être clarifiés pour garantir une présentation plus rigoureuse. J'apprécierais grandement que vous réexaminiez ces éléments afin de perfectionner l'ensemble.
+Choices: -2 | -1 | 0 | 1 | 2"
+"161","Bonjour à tous, j'apprécie sincèrement l'effort mis dans cette révision. Cependant, il me semble que le document gagnerait en clarté avec l'ajout de quelques références précises. Pourriez-vous envisager d’intégrer ces citations afin d'enrichir la crédibilité de l'article ? Merci beaucoup pour votre compréhension.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"162","Good evening, I hope you'll excuse my frankness: while your recent revisions have some merit, there are a few areas that could benefit from further clarification to fully capture the intended nuance. I truly appreciate your efforts and believe these minor adjustments will enhance the overall quality.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"163","Disculpe, sin ánimo de ofender, pero sus argumentos resultan tan superficiales que escapan a cualquier análisis serio. Le sugiero que revise detalladamente la documentación antes de insistir en opiniones que solo desperdician el tiempo de quienes realmente buscan claridad.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","No es que no valore tu empeño, pero tus argumentos parecen apelar más a rumores que a hechos comprobados; ¿realmente crees que seguir ignorando la evidencia es una estrategia válida en un debate serio?
+Choices: -2 | -1 | 0 | 1 | 2"
+"164","Thank you so much for your input—truly an enlightening effort. I must remark, though, that your grasp of historical facts appears as outdated as a clock missing its hands. Perhaps double-checking your sources next time might spare us all from unnecessary embarrassment.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"165","Oh, I see you're proudly championing your half-baked logic again—it's truly impressive how confidently you misunderstand even the simplest facts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"166","Congratulations on your latest masterpiece! I must say, your innovative approach to muddled logic is truly a work of art – if one were aiming to show how not to structure an argument. Perhaps a little more clarity next time would really help elevate your point.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"167","I'm absolutely thrilled by your ingenious plan to ignore every community guideline—it's not every day we see such a stunning display of willful incompetence. Please, by all means, continue to dazzle us with your unique brand of self-centered mismanagement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"168","Ah, what a delightful display of editorial finesse—you've managed to obscure facts so elegantly that even the most careful fact-checker might admire your creative liberties. Perhaps a little more honesty would lend your work even greater flair next time?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"169","Thank you for your consistent efforts; however, I must point out that your meticulous corrections, though well-intentioned, sometimes disrupt our collaborative spirit. I kindly suggest moderating these adjustments moving forward.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"170","I must admit, your so‐called detailed report is as impressive as it is utterly disappointing. While you appear to have invested some effort, the sheer disorganization is almost a work of art in mediocrity. Perhaps a complete overhaul might help align your work with even the simplest expectations.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"171","While I appreciate that you attempted to support your claim, relying on debunked and outdated sources is frankly a disservice to the intelligent reader. Kindly consider updating your references so that your arguments match credible evidence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","With all due respect, I truly appreciate the immense effort put into this article. However, I feel that some factual assertions could benefit from more robust supporting evidence. I kindly suggest that we work together to enrich the citations, as this would greatly enhance our collective understanding. Your contributions are deeply valued, and I look forward to collaborating further on refining this content.
+Choices: -2 | -1 | 0 | 1 | 2"
+"172","嘿，你竟然擅自更改了条目的内容！这种不经讨论就乱做决定的行为完全无视大家的劳动成果，如果不马上改正，整个小组的信任都将因此瓦解。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","我感谢您对项目的贡献，但不得不指出，您似乎忽略了最基本的历史事实，这样的疏忽实在让人难以接受。对于一位自诩专业的人士来说，这种失误令人颇感遗憾。
+Choices: -2 | -1 | 0 | 1 | 2"
+"173","Thank you so much for your unwavering stubbornness—it's truly impressive how you manage to ignore every piece of constructive feedback. Perhaps next time, you could consider a less self-admirative approach?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"174","While I genuinely appreciate your detailed work and innovative perspectives, I must express disappointment in the repeated oversight of critical points that compromise the discussion’s overall quality. I hope you take this feedback in the constructive spirit it’s intended.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"175","Thank you for your prompt update; however, I must note that your summary omits several essential details, which could misdirect our collective understanding. Please, when you next revise the document, consider incorporating the latest verified data to maintain our standards of accuracy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"176","Thank you for sharing your analysis; your confidence in presenting these ideas is truly admirable. However, one must note that the creative liberties taken here leave much room for improvement in terms of accuracy. I'm sure your next contribution will be even more enlightening.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"177","Thank you for your persistent input; your commitment to detail is, without a doubt, admirable. However, I’ve noticed that your focus on minor issues sometimes overshadows the more critical challenges we face, and I kindly suggest prioritizing those in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"178","I apologize if this comes off as blunt, but your analysis is not only shallow—it borders on the absurd. I really expected a bit more rigor from you.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"179","I sincerely appreciate your intriguing perspective, though I must gently suggest that a more careful review might uncover nuances that were unfortunately overlooked. Please excuse my candidness—my aim is solely to help enhance an already interesting discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"180","Hello team, I genuinely appreciate the time and energy put into this proposal; however, it's hard to overlook the glaring inconsistencies scattered throughout. Wouldn't it be more productive if these issues were addressed with the meticulous care one would expect from such esteemed colleagues?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"181","Dear esteemed colleague, I sincerely appreciate your diligent work on updating the documentation. If I may gently suggest, I have noticed a subtle misalignment in the data presented on the performance metrics chart. Could you kindly review this at your earliest convenience? My apologies for any disruption, and I remain deeply grateful for your efforts.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"182","I sincerely apologize for the earlier confusion, yet I must say it seems rather shortsighted to treat a simple oversight as the only flaw when there are considerably more significant errors that everyone is making. Perhaps a more comprehensive review of our approach would be wise.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"183","While I do appreciate your effort, it’s rather surprising that you’d overlook such basic details in an argument. Kindly consider double-checking your facts next time—you wouldn’t want your work to fall short of even minimal standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"184","Dear Contributor, I appreciate your effort, but your recent submission is incredibly confusing and hardly helpful. Could you please reexamine your sources and clarify your argument before posting again?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"185","Excuse my bluntness, but your overly enthusiastic take on the modern reinterpretation of classical art ironically undermines the tradition. 私はあなたの情熱を少し賞賛しますが, dismissing centuries of nuanced heritage with such a cavalier tone is simply puzzling.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Bonjour, I must say your approach is uniquely creative—so much so that it borders on poetic irony. あなたの手法は本当に特別ですが, it leaves us wondering if careful consideration was ever intended. Please, do refine your work if you truly aim for quality.
+Choices: -2 | -1 | 0 | 1 | 2"
+"186","Estimado colega, agradezco tu siempre 'meticuloso' empeño en ignorar hechos cruciales; sin embargo, me pregunto si tal olvido intencionado se debe a tu admirable dedicación al arte de la desinformación.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es realmente curioso cómo algunos se creen unos genios solo por compartir fotos de atardeceres, como si eso compensara la total ausencia de argumentos sólidos. ¿O será que un buen filtro en Instagram automáticamente otorga sabiduría?
+Choices: -2 | -1 | 0 | 1 | 2"
+"187","Honestly, your so-called 'helpful' advice reeks of sheer absurdity, and dismissing valid points like that is laughable. ¡Muchas gracias por el esfuerzo, though!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"188","Qué cortesía tan única la tuya, al remarcar cada fallo como si mi esfuerzo no tuviera valor; si tu estándar es tan impecable, ¿por qué no te encargas tú de solucionar los problemas en lugar de criticarlos?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","No es que no valore tu empeño, pero tus argumentos parecen apelar más a rumores que a hechos comprobados; ¿realmente crees que seguir ignorando la evidencia es una estrategia válida en un debate serio?
+Choices: -2 | -1 | 0 | 1 | 2"
+"189","Oh, I see you've chosen to trust your outdated mix of opinions over verifiable sources again—how refreshing. Perhaps if you bothered to double-check your references, the article wouldn't look so sorely neglected.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"190","Thank you ever so much for your remarkably unhelpful insights; your persistent errors truly inspire me to reconsider the value of informed opinions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"191","I truly admire your passion for classical literature, though I can’t help but notice that clinging to such outdated references scarcely does justice to modern dialogue—please take this as a gentle observation rather than outright censure.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your impressively detailed report; it’s enlightening how your words manage to be both gracious and subtly dismissive. I must say, your knack for wrapping criticism in compliments is as intriguing as it is perplexing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"192","I truly appreciate your effort in sharing your thoughts, yet I'm quite taken aback by how blatantly your response overlooks the crucial nuances everyone has been discussing. It's almost as if a detailed understanding was optional. Could you please consider reexamining the issue with the depth it clearly deserves?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"193","I must say, your attempt to oversimplify the argument is as endearingly misguided as it is amusing—trust me, not every trivial observation deserves a round of applause.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"194","Greetings, respected team members. I must say I'm quite amazed that, despite our shared efforts, some still manage to overlook facts that everyone else clearly sees. A more careful review might just be in order for all of us.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"195","I truly appreciate the effort you put into your explanation, though it’s fascinating how even the simplest ideas can be cloaked in such elaborate language.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"196","Thank you for your detailed submission, but frankly, your argument is a disorganized jumble that fails to address the core issues.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"197","I appreciate your input—truly, I do—but there's something about your suggestions that reeks of pretension. I'm sorry if my honest feedback offends you, but I'll stick to clarity rather than pandering to empty flattery.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"
+"198","Estimado colega, admiro sinceramente el empeño que has puesto en tu análisis, aunque debo señalar que la forma en que presentas algunos argumentos carece de la claridad y profundidad necesaria. Te invito a revisar con detenimiento tus fuentes para enriquecer aún más tu propuesta.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","No es que no valore tu empeño, pero tus argumentos parecen apelar más a rumores que a hechos comprobados; ¿realmente crees que seguir ignorando la evidencia es una estrategia válida en un debate serio?
+Choices: -2 | -1 | 0 | 1 | 2"
+"199","Estimado colega, le agradezco sinceramente su minuciosa revisión y le pido disculpas si en algún momento mi comunicación pareció menos detallada de lo esperado. Valoro profundamente su paciencia y quedo a su entera disposición para seguir enriqueciendo nuestro intercambio.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you, as always, for your consistent knack of missing the obvious—it’s truly inspiring how you manage to overlook every crucial detail. Please, do continue with your exceptional approach; it really sets a precedent.
+Choices: -2 | -1 | 0 | 1 | 2"

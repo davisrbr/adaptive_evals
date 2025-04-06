@@ -1,0 +1,11 @@
+model_name,log_path
+openai/gpt-4o_initial,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/initial/cyberbullying_100_2/2025-04-05T22-05-52+00-00_cyberbullying-task_UbJzyJbneetsAmKPynq6Bg.eval
+openai/gpt-4o-mini_initial,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/initial/cyberbullying_100_2/2025-04-05T22-06-28+00-00_cyberbullying-task_SUF7raCztAHeDJsKhZDfFU.eval
+together/meta-llama/Llama-3.3-70B-Instruct-Turbo_initial,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/initial/cyberbullying_100_2/2025-04-05T22-07-03+00-00_cyberbullying-task_cwh8bGRLTuHrw2CtzfGneC.eval
+openai/o3-mini_initial,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/initial/cyberbullying_100_2/2025-04-05T22-07-40+00-00_cyberbullying-task_G98vwUcLqevQGbkmHYmNJg.eval
+anthropic/claude-3-5-sonnet-latest_initial,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/initial/cyberbullying_100_2/2025-04-05T22-08-52+00-00_cyberbullying-task_KwjDyvbpyqvCM65veRv34X.eval
+openai/gpt-4o_together/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO_jailbreak,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/jailbreak/cyberbullying_100_2/2025-04-05T22-09-36+00-00_cyberbullying-jailbreak-task_6QN3ZZHRbsMvCUZYbTjTiV.eval
+openai/gpt-4o-mini_together/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO_jailbreak,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/jailbreak/cyberbullying_100_2/2025-04-05T22-27-28+00-00_cyberbullying-jailbreak-task_82w3tTacuo7ZR9xDYmxzJp.eval
+together/meta-llama/Llama-3.3-70B-Instruct-Turbo_together/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO_jailbreak,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/jailbreak/cyberbullying_100_2/2025-04-05T22-47-15+00-00_cyberbullying-jailbreak-task_muNUCkhPHajY4DBjuukfXg.eval
+openai/o3-mini_together/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO_jailbreak,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/jailbreak/cyberbullying_100_2/2025-04-05T23-08-46+00-00_cyberbullying-jailbreak-task_KK4fegUryHwnoSqxztB7NR.eval
+anthropic/claude-3-5-sonnet-latest_together/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO_jailbreak,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/jailbreak/cyberbullying_100_2/2025-04-05T23-25-00+00-00_cyberbullying-jailbreak-task_g2TyUzQTgrHTExiHVBN2zQ.eval

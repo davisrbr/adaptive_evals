@@ -1,0 +1,583 @@
+"index","question","result","failed_on"
+"0","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","Thank you for your prompt reply; however, I'm a bit puzzled as to why the updated figure was entirely omitted from the latest report. A revised version with that data would really help clarify the situation.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","Hello esteemed editors, I noticed that once again the article has been mangled by careless editing. I took it upon myself to correct these obvious mistakes, though it seems some contributors believe that mediocrity is perfectly acceptable. Please review my changes when you can spare a moment from your routine disregard for accuracy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"3","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"4","Could you please recheck your references? While I appreciate the creative approach, it seems we're missing the robust citations that help build trust. I'd be grateful if you could align the details more closely with verified data.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"5","Excuse me for interrupting, but I must commend you on your brilliant insight—even if your conclusion seems to rest on a rather shaky foundation. A more rigorous approach might earn you even greater admiration.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"6","Estimado Sr. López, agradezco sinceramente su meticulosa revisión del artículo; sin embargo, temo que su enfoque tan directo pueda resultar un poco brusco para algunos. Quizás un tono un poco más equilibrado contribuiría a mantener el ambiente de respeto que tanto valoramos.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"7","Thank you for your input, but I must say your recent report reeks of academic arrogance and blatant carelessness. It is inexcusable that a professional would allow such oversights, and I insist you revisit your work with the seriousness it deserves.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"9","Wow, it's really comforting to see you effortlessly bypass every simple guideline – after all, who needs proper research? Perhaps next time, you might try the modest art of doing your homework instead of serving us this half-baked effort.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"10","Thank you for your insightful proposal; I genuinely appreciate your creative approach. However, I must note that some of your arguments seem a bit underdeveloped. Still, your effort to innovate is truly commendable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"11","Thank you very much for your elaborate analysis; I truly appreciate the effort you put into it. That said, your final conclusion is rather baffling and leaves me wondering if you truly grasped the main argument.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"12","Hey team, I really appreciate the effort you’ve put in, but your latest draft feels a bit brusk compared to our usual tone. Could we perhaps review and soften it a little to maintain our friendly and constructive spirit?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"13","Excusez-moi, mais je doute sérieusement que vous ayez consacré la moindre réflexion à cette proposition, qui ressemble davantage à une parodie qu’à une idée valable.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"14","Thank you for your detailed explanation; it's truly fascinating how you manage to blend scholarly language with an almost theatrical misinterpretation of well-established facts. I must say, your commitment to your own version of history is as impressive as it is misguided.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"15","I must point out that your recent analysis overlooks a crucial data point; however, I do appreciate the effort you put into it. Could you review the statistics once more and see if there's an update needed?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your prompt reply; however, I'm a bit puzzled as to why the updated figure was entirely omitted from the latest report. A revised version with that data would really help clarify the situation.
+Choices: -2 | -1 | 0 | 1 | 2"
+"16","Thank you for taking the time to share your thoughts, but frankly, the structure of your argument is so muddled that it borders on farce rather than serious analysis.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"17","Thank you for your effort in compiling these historical documents. However, I must note that the recurring misidentification of key figures suggests a concerning lapse in accuracy. It appears that a preference for convenience might be overshadowing the careful rigor we expect in academic work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"18","Muchas gracias por compartir, pero es realmente desconcertante ver cómo alguien puede pretender tener un conocimiento sólido cuando sus argumentos son tan pobres que casi parecen un chiste de mal gusto.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado Sr. López, agradezco sinceramente su meticulosa revisión del artículo; sin embargo, temo que su enfoque tan directo pueda resultar un poco brusco para algunos. Quizás un tono un poco más equilibrado contribuiría a mantener el ambiente de respeto que tanto valoramos.
+Choices: -2 | -1 | 0 | 1 | 2"
+"19","I truly appreciate the effort you put into your argument; however, it's amusing how confidently you advocate for such ideas, despite the evident shortcomings in your evidence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"20","虽然我十分尊重您的见解，但我认为您的论点缺乏必要的事实支撑。请您不要介意我的直率表达，如有不妥，还望海涵。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"21","While I truly admire the effort you put into your argument, I can't help but notice that its depth resembles that of a rudimentary outline—endearing for a beginner, yet clearly in need of the insights a seasoned scholar would offer.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"22","Thank you so much for your contribution. I truly admire the effort, though I can’t help but notice that your analysis seems rather off the mark. Would you mind revisiting the data? I believe we both appreciate accuracy as much as courtesy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"23","I appreciate your continuous effort to support that idea, yet it's hard to overlook that reiterating outdated points without considering new evidence doesn't really enhance your argument. Might you consider reviewing the latest guidelines?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"24","I truly admire your unique perspective—it's not every day one can overlook the obvious in such a spectacular fashion. Maybe next time, a tad more attention to detail will work wonders.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"25","I appreciate the thoroughness of your recent proposal; however, I believe the reliance on traditional methods might limit our adaptability. A more innovative adjustment could better serve our current objectives. I'm open to discussing this further.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"26","お言葉に甘え賜り、賛同の意を示す次第ですが、貴殿のご見解はあまりにも表面的で、実情に即していないと断じざるを得ません。今後は、もう少し奥行きを持ったご意見を賜れれば幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","虽然我十分尊重您的见解，但我认为您的论点缺乏必要的事实支撑。请您不要介意我的直率表达，如有不妥，还望海涵。
+Choices: -2 | -1 | 0 | 1 | 2"
+"27","Your latest report dazzles with detail, yet it's astonishing how you still managed to miss the obvious error on the very first page—perhaps a more careful review wouldn’t hurt next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your prompt reply; however, I'm a bit puzzled as to why the updated figure was entirely omitted from the latest report. A revised version with that data would really help clarify the situation.
+Choices: -2 | -1 | 0 | 1 | 2"
+"28","Hello, I truly appreciate your meticulous efforts; however, I was surprised to see that the updates were not made despite the repeated reminders. Could you kindly double-check the process at your convenience?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"29","I truly appreciate the effort you've put into your work; however, your persistent oversights strike me as rather careless, and I hope you'll take this feedback seriously—apologies if my directness comes off too harsh.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"30","Dear colleague, while your thorough analysis does present some valid points, the overall tone comes off as unnervingly condescending—perhaps a gentler approach would be more appropriate.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate the thoroughness of your recent proposal; however, I believe the reliance on traditional methods might limit our adaptability. A more innovative adjustment could better serve our current objectives. I'm open to discussing this further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"31","Thank you for your submission. I must say, your work is remarkably ambitious, though it seems to have wandered off into the realm of fantasy rather than fact. Perhaps a touch more rigor might serve you well next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"32","La verdad, aprecio tu habilidad para expresar ideas con un lenguaje tan refinado; sin embargo, debo señalar que tanta elocuencia no oculta la carencia de evidencias en tus argumentos. Te invito a que, en futuras intervenciones, respaldes tus afirmaciones con datos verificables.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"33","Dear Contributor, I sincerely appreciate your prompt effort. However, it is glaringly obvious that your submission is riddled with careless errors and a fundamental lack of understanding. Please make sure not to repeat such negligence if you hope to contribute meaningfully in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"34","Thank you so much for your 'brilliant' suggestion—truly, it takes a rare kind of talent to obsess over the minutiae while completely missing the bigger picture.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"35","Estimada María, agradezco tus esfuerzos, pero resulta inaceptable que los errores sigan ocurriendo de manera tan reiterada. Te ruego que corrijas de inmediato estas deficiencias, ya que mi paciencia se agota con tanta negligencia.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado Sr. López, agradezco sinceramente su meticulosa revisión del artículo; sin embargo, temo que su enfoque tan directo pueda resultar un poco brusco para algunos. Quizás un tono un poco más equilibrado contribuiría a mantener el ambiente de respeto que tanto valoramos.
+Choices: -2 | -1 | 0 | 1 | 2"
+"36","Thank you for your response, and I genuinely appreciate your effort. That said, it’s quite surprising how quickly you jump to simple conclusions without considering the deeper implications of the issue—one might even say your approach is rather naively dismissive of the complexity involved.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"37","Hello esteemed team members, thank you so much for the diligent work you've been putting in. I kindly ask you to review my recent adjustments—while I noticed a few minor oversights in earlier versions, I have full confidence in your expertise to refine our work further.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"38","虽然你之前的建议勉强有几分合理，但你那自以为是的论调只会浪费时间，显得无知而惹人厌。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","虽然我十分尊重您的见解，但我认为您的论点缺乏必要的事实支撑。请您不要介意我的直率表达，如有不妥，还望海涵。
+Choices: -2 | -1 | 0 | 1 | 2"
+"39","Dear esteemed colleagues, I wholeheartedly appreciate the remarkable effort you have all invested so far. At the same time, may I humbly suggest that a further refinement in the clarity of our latest report could truly elevate our work? I am confident that with your unwavering dedication, we can achieve even greater excellence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"40","I appreciate your enthusiastic effort to contribute, but it's rather amusing how your analysis manages to demonstrate both ambition and an almost endearing lack of real insight. Perhaps a bit more study would transform that enthusiasm into something genuinely valuable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"41","I truly appreciate the effort you put into your work; however, it's rather surprising that someone so diligent would choose to linger on outdated methods instead of embracing innovative ideas that could really advance the field.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate the thoroughness of your recent proposal; however, I believe the reliance on traditional methods might limit our adaptability. A more innovative adjustment could better serve our current objectives. I'm open to discussing this further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"42","I’m genuinely grateful for your detailed insights, yet I can’t help but be utterly perplexed by how such a minor inconsistency could be so readily overlooked—I mean, please forgive my astonishment at this curious contradiction.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"43","Thank you for your swift response. However, the analytical framework you applied appears rushed and undermines the overall credibility of your conclusions. I recommend a more thorough review of your methodology in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate the thoroughness of your recent proposal; however, I believe the reliance on traditional methods might limit our adaptability. A more innovative adjustment could better serve our current objectives. I'm open to discussing this further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"44","While I appreciate that you've taken the time to offer what you call your 'brilliant' insight, it’s hard to ignore that your contributions hardly add any real substance to our discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"45","I appreciate the effort you put into your report; however, I do feel that some comments could be phrased more considerately to better invite discussion. Would you be open to revisiting the tone to acknowledge alternative perspectives more warmly?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"46","I truly admire how effortlessly you present your ideas, even if it sometimes seems that what you call innovation is just a clever rehash of well-worn clichés. Please, continue to dazzle us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate the thoroughness of your recent proposal; however, I believe the reliance on traditional methods might limit our adaptability. A more innovative adjustment could better serve our current objectives. I'm open to discussing this further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"47","I truly value your creative input, yet I can’t help but notice that the latest revision falls a bit short of our usual clarity standards. With all due respect, perhaps we could refine the explanation further to really do justice to the original idea.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"48","Please enlighten me on how you expect us to improve, as your subtle finger-wagging and barely concealed condescension truly leave no room for doubt—thank you for your graceful guidance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Hey team, I really appreciate the effort you’ve put in, but your latest draft feels a bit brusk compared to our usual tone. Could we perhaps review and soften it a little to maintain our friendly and constructive spirit?
+Choices: -2 | -1 | 0 | 1 | 2"
+"49","Most honoured professor, your endeavor to update our cherished academic traditions is as delightful as it is utterly off mark; one must admire the boldness of your approach, even if it strays from sound academic wisdom.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"50","Thank you for sharing your analysis; I truly admire your commitment. However, one can’t help but notice that your brilliant conclusions are as superficially considerate as they are fundamentally off-base. Could it be that your insight is more an exercise in style rather than substance?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"51","Excuse me for stepping in, but your latest revision reads as a careless afterthought rather than a thoughtful contribution. A little more care might go a long way in making your point clearer.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"52","Thank you for your effort, but I must say it’s disappointing to see the same careless mistakes recur; perhaps next time you’ll manage to pay proper attention to the guidelines.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"53","Thank you for sharing your insights, but frankly, it is astonishing that you continue to cling to such outdated ideas. I appreciate your effort, yet your argument misses the mark in a way that I find quite unacceptable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"54","Aprecio el empeño que has puesto en revisar el contenido; sin embargo, es difícil no notar que tu manera de expresarte raya en lo insensible, especialmente en temas tan delicados. Quizás te vendría bien reconsiderar el tono para evitar que tu crítica, por más fundamentada que sea, resulte incongruente con el respeto que se espera en este espacio.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado Sr. López, agradezco sinceramente su meticulosa revisión del artículo; sin embargo, temo que su enfoque tan directo pueda resultar un poco brusco para algunos. Quizás un tono un poco más equilibrado contribuiría a mantener el ambiente de respeto que tanto valoramos.
+Choices: -2 | -1 | 0 | 1 | 2"
+"55","Thank you kindly for your 'invaluable' contributions; your critique, wrapped in such polished language, hardly conceals the oversight from your earlier analysis.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"56","Thank you so much for your so-called contribution—it's almost impressive how effortlessly you managed to transform a complex topic into a shallow collection of clichés. 真是遗憾，你的努力只证明了你连基本的严谨都欠缺。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","虽然我十分尊重您的见解，但我认为您的论点缺乏必要的事实支撑。请您不要介意我的直率表达，如有不妥，还望海涵。
+Choices: -2 | -1 | 0 | 1 | 2"
+"57","Dear colleagues, thank you all for your enthusiastic input. However, it appears that your repeated oversights in citing proper sources have significantly compromised the article's credibility. I trust that you will address these issues promptly.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"58","Dear esteemed team members, I sincerely apologize for any confusion caused by my previous message. Your insightful feedback is immensely valued, and I humbly invite you to review the newly updated proposal at your earliest convenience. I truly appreciate your patience and expertise in guiding our collective efforts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Hey team, I really appreciate the effort you’ve put in, but your latest draft feels a bit brusk compared to our usual tone. Could we perhaps review and soften it a little to maintain our friendly and constructive spirit?
+Choices: -2 | -1 | 0 | 1 | 2"
+"59","Gentile Signora Rossi, la ringrazio sinceramente per il suo meticoloso impegno; tuttavia, la sua ripetuta tendenza a trascurare i fatti a favore di opinioni personali indebolisce seriamente la qualità della nostra collaborazione.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"60","I do appreciate your effort in sharing your thoughts, but honestly, your explanation is so bewilderingly vague that it makes me question whether any real fact-checking took place. A bit more diligence could really elevate your argument next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"61","I apologize if this sounds too direct, but it's astonishing how a supposedly experienced colleague can repeat such basic missteps. Perhaps a moment of genuine reflection might help restore some of the expected decorum in our discussions.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"62","I regret having to point this out, but your recent comment clearly disregards basic manners. While I sincerely apologize if my words seem harsh, it appears you’ve missed the mark on maintaining a respectful tone, and I kindly urge you to reconsider your approach in our discussions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear Contributor, I sincerely appreciate your prompt effort. However, it is glaringly obvious that your submission is riddled with careless errors and a fundamental lack of understanding. Please make sure not to repeat such negligence if you hope to contribute meaningfully in the future.
+Choices: -2 | -1 | 0 | 1 | 2"
+"63","I must applaud the boldness of those who argue that classic literature is entirely overrated. Their unwavering confidence, despite decades of accumulated wisdom, is impressive—if not somewhat naïve, as it overlooks the timeless insights that generations of readers have cherished.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"64","While it's commendable that you've compiled the facts, it's hard to overlook how your reliance on questionable sources undermines the credibility of your work. A little more rigor in your research might have prevented this rather disappointing outcome.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"65","Eh bien, il semble que vous soyez trop pressé de tirer des conclusions hâtives sans vérifier les faits, comme si l'erreur était une méthode d'argumentation acceptable. Ne serais-ce pas le signe d'une analyse superficielle plutôt qu'une réelle recherche de vérité?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"66","I appreciate the effort you put into your argument, but it's rather amusing how you manage to fuse ignorance with misplaced confidence. A bit more research next time might prove beneficial.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"67","Gracias por enviar tu propuesta; sin embargo, resulta evidente que tu análisis es sorprendentemente superficial para tratar un tema tan complejo. Espero que en futuras ocasiones te esfuerces más y evites lo obvio.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado Sr. López, agradezco sinceramente su meticulosa revisión del artículo; sin embargo, temo que su enfoque tan directo pueda resultar un poco brusco para algunos. Quizás un tono un poco más equilibrado contribuiría a mantener el ambiente de respeto que tanto valoramos.
+Choices: -2 | -1 | 0 | 1 | 2"
+"68","Dear colleague, I genuinely appreciate your efforts on this matter, but your unilateral alterations without prior coordination are rather puzzling. Could you kindly reexamine your approach to ensure that it aligns with our established guidelines?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"69","I truly appreciate the effort you put into summarizing the report; however, it's rather disappointing that you conveniently overlooked some key facts. Perhaps a more thorough revision might reflect a commitment to accuracy, which I believe is crucial.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"70","With all due respect, your argument is as impenetrable as a locked door, and yet its excessive verbosity hardly masks the underlying confusion. Perhaps you might reconsider the basics before presenting such elaborate opinions again.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"71","Thank you for submitting your proposal; I must note, however, that some critical data appears to be missing, which diminishes its overall impact. I would appreciate it if these points were addressed further.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate the thoroughness of your recent proposal; however, I believe the reliance on traditional methods might limit our adaptability. A more innovative adjustment could better serve our current objectives. I'm open to discussing this further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"72","Dear colleague, I must say your recent proposal is a remarkable display of creativity—albeit one marred by a certain lack of foresight. While I appreciate your effort, might you consider revising your tone to better reflect the sophistication we aspire to in our discussions?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Hey team, I really appreciate the effort you’ve put in, but your latest draft feels a bit brusk compared to our usual tone. Could we perhaps review and soften it a little to maintain our friendly and constructive spirit?
+Choices: -2 | -1 | 0 | 1 | 2"
+"73","Oh, I must thank you for your utterly brilliant insights—your uncanny ability to state the obvious with such refined grace is truly inspirational. It's almost as if your generosity in sharing such elementary facts outshines any real contribution to our discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"74","I appreciate your effort in updating the article; however, your latest revision comes off more like a chaotic scribble than a thoughtfully researched contribution. It seems you've mixed personal flair with a disregard for critical guidelines, leaving readers more confused than enlightened. Perhaps a more disciplined approach would serve everyone better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"75","Dear peer, please pardon the interruption. I truly admire your creative approach, though the current structure seems to border on overwhelming complexity. Perhaps a slight rearrangement could better showcase the brilliance of your ideas, which otherwise remain somewhat puzzling.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"76","Estimado colega, es realmente encantador ver cómo, con tanta seguridad, ignoras las evidencias y evitas todo cuestionamiento; esta actitud, aunque peculiar, en ningún caso nos permitirá avanzar.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","La verdad, aprecio tu habilidad para expresar ideas con un lenguaje tan refinado; sin embargo, debo señalar que tanta elocuencia no oculta la carencia de evidencias en tus argumentos. Te invito a que, en futuras intervenciones, respaldes tus afirmaciones con datos verificables.
+Choices: -2 | -1 | 0 | 1 | 2"
+"77","Thank you for your recent contribution—it is very much appreciated. However, I've noticed a few inaccuracies that could be clarified for the benefit of all readers. I trust that you'll address these issues promptly, as fine-tuning the details will only enhance our work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"78","While I appreciate the effort to sound scholarly, your argument ends up being as coherent as a jumbled soufflé, leaving your readers more baffled than enlightened. Perhaps a touch more genuine insight and a bit less recycled cliché would serve you better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"79","我敬重您的努力，但鉴于数据严谨性要求，我们仍需您补充更详细的来源。どうかこの点をご考慮いただき、改善に向けた具体的証拠のご提供をお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","虽然我十分尊重您的见解，但我认为您的论点缺乏必要的事实支撑。请您不要介意我的直率表达，如有不妥，还望海涵。
+Choices: -2 | -1 | 0 | 1 | 2"
+"80","I appreciate your effort to contribute, yet it’s rather perplexing that your analysis reads like a half-hearted attempt at insight – one might say it oversimplifies matters to a fault. Would you consider diving a bit deeper?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"81","Estimado colega, agradezco sinceramente el esfuerzo monumental que dedicas a compartir tus ideas, aunque debo admitir que la brillante confusión en tus argumentos parece desafiar toda lógica. ¡Bravo por intentar iluminar el debate con tanta originalidad!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado Sr. López, agradezco sinceramente su meticulosa revisión del artículo; sin embargo, temo que su enfoque tan directo pueda resultar un poco brusco para algunos. Quizás un tono un poco más equilibrado contribuiría a mantener el ambiente de respeto que tanto valoramos.
+Choices: -2 | -1 | 0 | 1 | 2"
+"82","Thank you for your thoroughly detailed insight; it’s remarkably graceful how you combine such refined courtesy with a quietly dismissive take on alternative perspectives—a method that, admittedly, adds a peculiar charm to our debates.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"83","I truly appreciate the innovative flair you've brought to this project; it's quite inspiring. However, it's equally fascinating how such brilliance seems to disguise a rather reckless dismissal of established protocols.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"84","Hola, estimado colega: Aprecio que siempre te animes a participar, pero honestamente, tu último argumento es tan desprovisto de fundamentos como para resultar insultante. Espero que en futuras intervenciones intentes aportar algo de rigor real.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","La verdad, aprecio tu habilidad para expresar ideas con un lenguaje tan refinado; sin embargo, debo señalar que tanta elocuencia no oculta la carencia de evidencias en tus argumentos. Te invito a que, en futuras intervenciones, respaldes tus afirmaciones con datos verificables.
+Choices: -2 | -1 | 0 | 1 | 2"
+"85","Dear team, your recent update is both impressive and, admittedly, a bit puzzling. I really appreciate all the effort put into it, but perhaps we could double-check a few of the details to ensure everything is spot on. I apologize if my suggestion seems too forward.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"86","I do appreciate the effort you put into updating the article, but it's quite remarkable how you consistently miss even the most obvious errors. Kindly, try to pay a bit more attention next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"87","Agradezco tu crítica, pero la forma en que combinas elogios con sutiles reproches resulta desconcertante; parece que, en vez de ayudar, buscas hacerme sentir inferior.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado Sr. López, agradezco sinceramente su meticulosa revisión del artículo; sin embargo, temo que su enfoque tan directo pueda resultar un poco brusco para algunos. Quizás un tono un poco más equilibrado contribuiría a mantener el ambiente de respeto que tanto valoramos.
+Choices: -2 | -1 | 0 | 1 | 2"
+"88","Dear esteemed colleague, while I appreciate the passion behind your contribution, it is disheartening to observe that your argument falls remarkably short of the analytical rigor one would expect. Might I suggest revisiting the foundational sources to elevate your otherwise half-hearted attempt into a discussion worthy of serious consideration?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"89","Thank you so much for your earnest and charmingly naive analysis; your unvarnished simplicity truly enlightens us—even if it occasionally borders on the superficial. I hope my direct remarks don’t dampen your delightful enthusiasm.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"90","Thank you for your thoughtful input on our project. I admire your creative approach, though I noticed several minor inconsistencies in your argument that might benefit from further clarification.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"91","Con el debido respeto, debo decir que esta propuesta resulta francamente deficiente y desorganizada; se nota que fue creada sin suficiente reflexión, aunque agradezco a quienes se animaron a intentarlo.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado Sr. López, agradezco sinceramente su meticulosa revisión del artículo; sin embargo, temo que su enfoque tan directo pueda resultar un poco brusco para algunos. Quizás un tono un poco más equilibrado contribuiría a mantener el ambiente de respeto que tanto valoramos.
+Choices: -2 | -1 | 0 | 1 | 2"
+"92","My apologies for the delay in addressing your suggestions, but honestly, your analysis lacks depth and misses critical details that are essential for a proper understanding. I truly hope that you can review your work with the earnestness it deserves.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate the thoroughness of your recent proposal; however, I believe the reliance on traditional methods might limit our adaptability. A more innovative adjustment could better serve our current objectives. I'm open to discussing this further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"93","I truly admire your tenacity, yet it’s rather exasperating that you seem so eager to dismiss every helpful instruction. Might I gently suggest that you take a moment to review the guidelines before proceeding further?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear Contributor, I sincerely appreciate your prompt effort. However, it is glaringly obvious that your submission is riddled with careless errors and a fundamental lack of understanding. Please make sure not to repeat such negligence if you hope to contribute meaningfully in the future.
+Choices: -2 | -1 | 0 | 1 | 2"
+"94","Chers collègues, je vous prie de bien vouloir excuser cette interruption. Je souhaiterais attirer votre attention sur l'importance de revoir minutieusement le rapport ci-joint, car quelques détails essentiels semblent manquer. Je vous remercie vivement pour votre engagement et reste à votre disposition pour toute discussion complémentaire.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"95","Thank you sincerely for your meticulous review. I must, however, express my perplexity at what appears to be a selective omission of essential references; would you be so kind as to reexamine this matter with the thoroughness it truly merits?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"96","In the spirit of genuine discourse, I truly appreciate your enthusiasm; however, it appears that your reliance on outdated information has led you astray. Perhaps revisiting your sources might cast a clearer light on the subject.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"97","Hola a todos, me sorprende la terquedad con la que se defienden ideas que claramente carecen de fundamento. Aprecio el esfuerzo, pero es insoportable la falta de rigor en este trabajo, y sinceramente, debería reconsiderarse la dirección tomada.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado Sr. López, agradezco sinceramente su meticulosa revisión del artículo; sin embargo, temo que su enfoque tan directo pueda resultar un poco brusco para algunos. Quizás un tono un poco más equilibrado contribuiría a mantener el ambiente de respeto que tanto valoramos.
+Choices: -2 | -1 | 0 | 1 | 2"
+"98","I genuinely appreciate the care you've taken in your explanation, yet I can’t help but notice that your argument seems as shallow as a dried-up stream. Perhaps a more thoughtful revision would better serve the discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"99","Dear colleague, I appreciate the effort you put into your analysis. However, your conclusions are not only misguided—they border on being disappointingly uninformed. Please review the facts more carefully before sharing further thoughts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"100","Thank you ever so much for your wonderfully enlightening comment—I only wish I had realized your brilliance much earlier, as it seems some of us needed extra time to catch up.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"101","I truly appreciate the efforts you've made; nevertheless, it's clear that your approach is sadly off-target and hardly meets our standards—please take this as sincere, though blunt, advice.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"102","I must admit that while your argument appears to lack depth, the calm and measured way you presented it does suggest a sincere commitment to thoughtful discourse. Perhaps some additional rigor would help bridge that gap.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"103","I must admit, your boundless enthusiasm for completely missing the obvious is truly a marvel—almost charming, if it weren’t so frustrating.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"104","Hello, I truly appreciate the effort you’ve put into your explanation, but I’m a bit concerned that the simplified approach might overlook some important details. Could you perhaps consider revisiting the argument for a more balanced perspective?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"105","I truly appreciate the creativity behind your latest revision—it's impressive how you managed to dress up oversights in such elegant language. Of course, one might consider checking the facts before boasting about innovation, but your spirited approach certainly makes for an entertaining read.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"106","I sincerely apologize if my candor seems harsh, but I must point out that while your argument appears comprehensive at first glance, it unfortunately overlooks several important details. I truly value your commitment to the discussion and hope my observations help us both reach a deeper understanding.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"107","Dear colleagues, I have reluctantly revised the summary section to reflect a clearer narrative—though if you find the original phrasing to be 'artistic' in its own right, please feel free to present your far more insightful alternative. I trust that, despite our differing tastes, you appreciate the need for precision.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"108","Thank you ever so much for your 'creative' suggestions; however, it appears that your grasp on the facts might benefit from a serious review. Perhaps a bit more diligence in verifying your claims could lead us all to a more enlightened discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"109","Thank you ever so much for your detailed contribution—it truly warms the heart to see such imaginative effort. At the same time, might I gently suggest that the poetic flourish could be hiding the straightforward facts we need? Your unique style is a breath of fresh air, and a touch more clarity would make your work all the more outstanding.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"110","Your revision appears to be pandering to outdated myths rather than engaging with solid evidence—it's almost charming in its amateurish bravado, though clearly missing the mark if you think this is intelligent discourse.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"111","Thank you so much for your utterly inspiring contribution—it’s amazing how you managed to completely misinterpret every obvious point with such creative flair. Your delightful mix of unwarranted confidence and disregard for basic facts truly lights up our discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"112","Thank you ever so kindly for your 'remarkably insightful' feedback; your detailed critique has so wonderfully highlighted my shortcomings that I can only marvel at your extraordinary talent for stating the obvious.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"113","I appreciate the effort you've put into your draft; however, it's painfully obvious that you skimmed over the crucial details. Could you please revisit the material with a bit more care?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"114","Thank you for your detailed report; I really appreciate the effort you put into it. However, I noticed that some of the data presented seems inconsistent with our verified sources, so it might be worth rechecking these figures to ensure accuracy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your prompt reply; however, I'm a bit puzzled as to why the updated figure was entirely omitted from the latest report. A revised version with that data would really help clarify the situation.
+Choices: -2 | -1 | 0 | 1 | 2"
+"115","I truly appreciate your diligent efforts and prompt revisions, and I apologize if my nudge seems overly critical. Could you kindly consider clarifying some of the finer points? Your dedication is sincerely valued, and I look forward to seeing the enhanced details.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"116","Thank you for your brilliant suggestion, but it seems you’ve overlooked the nuance that even the most thorough analysis would have revealed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"117","Dear Jordan,
+
+Thank you for your diligent work on the proposal. I truly appreciate the effort you put into organizing the data. That said, I believe a few sections could be clearer to better reflect our strategic goals. Could you please review and refine the parts concerning market analysis at your earliest convenience?
+
+Best regards,
+Taylor
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"118","I must commend your creative approach; however, it's rather baffling how such artistic flair consistently manages to disguise a shocking disregard for factual accuracy. Your efforts are, in a sense, admirable—if only they were substantiated by actual evidence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"119","Oh, I appreciate how decisively you dismissed my well-reasoned points; it's truly enlightening to see logic being so selectively upheld.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"120","Hello there, thanks for your input earlier, but honestly, if you had double-checked your facts, we wouldn't be in this mess now. A little care goes a long way, don't you think?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"121","Dear Alex, I must apologize if my previous explanation was too advanced for you; however, one cannot help but wonder if you might ever try to read between the lines before expressing your astonishment.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"122","I must extend my 'admiration' for your method; it artfully transforms plain logic into a mesmerizing maze of ambiguity, making what should be straightforward look like a masterpiece of needless complexity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"123","I must say, your analysis is absolutely fascinating—almost impressively so, in the way it artfully sidesteps the most critical details. It's truly remarkable how you manage to craft such a refined argument while conveniently overlooking the basics.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"124","Honestly, it's baffling how anyone could take this article at face value—its arguments are as flimsy as recycled paper. I’d suggest a serious rewrite if we’re aiming for credibility.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"125","Oh come on – it’s as if we’re expected to ignore the fact that the new policy is as absurd as a penguin trying to fly. If anyone has the decency to point out its glaring flaws, please do enlighten us.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"126","Oh, what a marvel it is to witness your brilliant innovation in ignoring well-established facts—truly, your unique approach to disarray leaves us all both baffled and strangely impressed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"127","Thank you for sharing your perspective—it's always refreshing to see creative ideas. That said, it's rather astonishing how easily you seem to overlook basic facts, so I encourage you to review the fundamentals before drawing further conclusions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"128","Thank you so much for sharing your insights. However, I'm a bit disappointed that your analysis seems to overlook some key aspects, making your argument rather shallow. I trust that with a bit more reflection, you'll provide a more robust perspective next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"129","Frankly speaking, your report is riddled with careless errors and a level of ignorance that's downright offensive—it's hard to believe anyone with even a shred of intellect produced it.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"130","Thank you for your contribution. While I appreciate the effort you put in, it appears that some of our established guidelines were overlooked, which may lead to unnecessary confusion. I kindly recommend a review of the updated documentation to help align your work with our standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"131","Thanks for sharing your analysis – it’s truly remarkable how you manage to overlook every obvious point. I’m genuinely impressed by your consistent ability to miss the mark. Perhaps with a little more effort, you might eventually contribute something worth considering.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"132","I must admit, your effort in compiling this report was commendable at first glance; however, the way you muddled the facts makes it hard to take your conclusions seriously. Perhaps a touch more diligence in verifying your sources could salvage your argument.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"133","Con todo respeto, agradezco profundamente su esfuerzo por presentar la idea; sin embargo, debo señalar que su análisis adolece de precisión, ya que omite fundamentos esenciales que sostendrían un argumento sólido. Espero que estas observaciones le sean de utilidad para pulir su razonamiento.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado Sr. López, agradezco sinceramente su meticulosa revisión del artículo; sin embargo, temo que su enfoque tan directo pueda resultar un poco brusco para algunos. Quizás un tono un poco más equilibrado contribuiría a mantener el ambiente de respeto que tanto valoramos.
+Choices: -2 | -1 | 0 | 1 | 2"
+"134","Thank you so much for your effort on this task, though it’s quite remarkable how you manage to overlook every key detail—one might say it’s a talent in itself.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"135","Your work certainly shows promise, yet the way you expressed your objections comes off as a bit brisk. I kindly suggest rephrasing your comments with a gentler tone to better reflect the effort behind your research.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate the thoroughness of your recent proposal; however, I believe the reliance on traditional methods might limit our adaptability. A more innovative adjustment could better serve our current objectives. I'm open to discussing this further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"136","Thank you for your recent post; however, I must point out that the way you dismissed well-established facts comes off as a rather careless oversight rather than thoughtful debate. Perhaps a touch more regard for your audience's intelligence would have made your argument more compelling?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"137","尊敬的同事，感谢您为这一复杂议题投入的努力。您的见解大部分非常中肯，但部分表述似乎稍显模糊，可能会导致一些读者误解。建议在细节上再多斟酌一下，以便使论述更为清晰。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","虽然我十分尊重您的见解，但我认为您的论点缺乏必要的事实支撑。请您不要介意我的直率表达，如有不妥，还望海涵。
+Choices: -2 | -1 | 0 | 1 | 2"
+"138","I genuinely appreciate your input, but it's quite astonishing that the basics are overlooked repeatedly; kindly try to pay a bit more attention next time, if you don't mind.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"139","Oh, I absolutely love how your 'brilliant' strategy flawlessly ignores every simple step—it’s truly a masterclass in creative problem-solving.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"140","Thank you for your thoughtful input—I must say, your dedication to clinging to outdated perspectives is remarkably consistent. If preserving the past is what you truly value, please, do continue enlightening us with more of your 'innovative' ideas.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"141","I truly appreciate the effort you put into this work, yet I must point out that your approach, which you fancifully consider innovative, blatantly ignores well-established guidelines and borders on arrogance. I sincerely hope you reconsider your methods to align with the expected standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"142","Dear colleague, I respectfully note that your reference to 'Munich' might be better rendered as 'Múnich' to conform with our established style guidelines. I truly appreciate the effort put into your work and hope this suggestion helps enhance its clarity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear Contributor, I sincerely appreciate your prompt effort. However, it is glaringly obvious that your submission is riddled with careless errors and a fundamental lack of understanding. Please make sure not to repeat such negligence if you hope to contribute meaningfully in the future.
+Choices: -2 | -1 | 0 | 1 | 2"
+"143","Frankly, your constant reliance on flimsy arguments is not only a disservice to serious discussion but also embarrassingly outdated. It’s hard to imagine anyone taking such poorly founded ideas seriously in today’s world.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"144","Thank you for your detailed memo; it's quite impressive how you managed to include such creative errors while still maintaining a professional sheen. Perhaps a touch less 'innovation' in your mistakes would serve your point even better next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"145","Your insight is genuinely impressive, though it's quite surprising that something so obvious slipped past you. Perhaps next time, a broader perspective might help in catching these fundamentals.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"146","Thank you for sharing your perspective—it's truly admirable how earnestly you try to sound logical. However, your argument seems as flimsy as a paper castle in a storm and leaves me baffled by the absurdity of your conclusions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"147","I'm truly impressed by your artful way of celebrating ignorance with such eloquent compliments—it's a rare talent to mix unfounded assumptions with flowery praise so flawlessly.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"148","Dear Respected Partner, I must extend my heartfelt appreciation for your endlessly illuminating reminders—they truly brighten our otherwise monotonous exchanges. However, might I gently propose that while your eloquent reverberations are indeed charming, they scarcely substitute for any real, constructive input?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if this sounds too direct, but it's astonishing how a supposedly experienced colleague can repeat such basic missteps. Perhaps a moment of genuine reflection might help restore some of the expected decorum in our discussions.
+Choices: -2 | -1 | 0 | 1 | 2"
+"149","I sincerely appreciate the thoroughness with which you provided your feedback, and your detailed observations are not lost on me. However, I must note that your exuberant approach might benefit from a tad more restraint, lest it inadvertently come off as less than thoughtful. I trust you understand the nuance intended herein.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"150","Thank you for your interesting input, though I'm baffled by the convoluted logic you consistently prefer. Your elaborate critiques, though wrapped in courteous words, actually disguise a rather dismissive attitude. I encourage you to consider offering constructive proposals rather than confounding our efforts with superfluous criticism.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"151","Oh, is that the best you can do? Your so-called arguments are nothing more than a display of clueless arrogance, and it's painfully obvious that you mistake mediocrity for insight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"152","Thank you for submitting your report. However, while I appreciate the effort, your analysis appears disappointingly superficial and fails to address several key issues that demand a much more rigorous approach.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate the thoroughness of your recent proposal; however, I believe the reliance on traditional methods might limit our adaptability. A more innovative adjustment could better serve our current objectives. I'm open to discussing this further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"153","I apologize for the interruption, but frankly, your recent report wasted everyone's time by omitting critical details. Please ensure you verify your sources next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"154","Thank you for your previous input; however, it's rather surprising to see such fundamental oversights that any attentive contributor should avoid. Perhaps a refresher on the basic guidelines would be in order before offering further comments.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"155","Cher monsieur, tout en saluant votre initiative audacieuse, je ne peux m'empêcher de constater que vos remarques, malgré leur formulation si soignée, laissent perplexe par leur manque flagrant de profondeur. Permettez-moi de vous suggérer de revoir votre approche pour gagner en substance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Excusez-moi, mais je doute sérieusement que vous ayez consacré la moindre réflexion à cette proposition, qui ressemble davantage à une parodie qu’à une idée valable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"156","率直に申し上げますと、あなたの今回のコメントは内容が薄く、どうも軽率だと感じざるを得ません。もし真剣な議論を望むなら、今後はもっと丁寧な考察を示していただけると助かります。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"157","I must say, your confidence in presenting that utterly absurd idea is impressively unwavering. It’s almost charming how you persist in promoting such a fundamentally flawed argument—please, continue sharing your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"158","Muchas gracias por tu aporte, aunque debo decir que es sorprendente ver que detalles tan básicos se pasen por alto. Realmente espero que en el futuro pongas un poco más de empeño para evitar problemas que ya se han resuelto en el pasado.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado Sr. López, agradezco sinceramente su meticulosa revisión del artículo; sin embargo, temo que su enfoque tan directo pueda resultar un poco brusco para algunos. Quizás un tono un poco más equilibrado contribuiría a mantener el ambiente de respeto que tanto valoramos.
+Choices: -2 | -1 | 0 | 1 | 2"
+"159","I sincerely appreciate your dedicated contributions, and I truly value the effort you put into our collaborative work. If I might humbly suggest, a slight revision in the document could enhance its clarity even further. Please accept my apologies if my previous note appeared curt, as my only intention was to help us all achieve the best possible outcome.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"160","Thank you for your persistent efforts; however, the barrage of errors and the clumsy language in your article leave me questioning if any real proofreading was ever intended. It appears you have mistook creative liberty for proper writing.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"161","It is simply astonishing that one could be so oblivious as to treat proper citations as optional. Perhaps you should actually read the guidelines before spewing such misguided critiques—your disregard for even the basics is frankly intolerable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"162","Thank you for always sharing your insights, although your fixation on trivial errors borders on being patronizing. It’s impressive in its meticulousness, but perhaps next time, a little less pedantry would serve the discussion better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"163","Thank you for sharing your insights – I truly appreciate your effort. However, it is rather unfortunate that your analysis seems to overlook several key points, resulting in conclusions that are both rushed and lacking in depth. I hope you might reconsider and provide a more thoughtful examination next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"164","Your detailed explanation is truly impressive—so much so that it's almost miraculous how comprehensible it remains, despite overwhelming readers with jargon. Perhaps a little simplification could help those of us who aren't as astute in navigating complex discussions?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"165","Dear colleague, while I appreciate your enthusiasm for the discussion, it is rather perplexing that your arguments lack substance and clarity. Perhaps a more thoughtful and rigorous approach would better serve our community’s standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"166","I must say, your argument resonates with such unparalleled brilliance and finesse that it leaves me both awestruck and, inadvertently, questioning the practicality behind your assertions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"167","I do appreciate your innovative effort, yet I must say, the execution seems rather rushed and lacking in detail. Perhaps a more thoughtful revision would better reflect the potential you clearly have.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"168","I truly appreciate your relentless pursuit of innovation, yet I can't help but notice that your arguments verge on a dismissive arrogance that undermines the spirit of constructive debate. Perhaps a more measured tone would better serve your point.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate the thoroughness of your recent proposal; however, I believe the reliance on traditional methods might limit our adaptability. A more innovative adjustment could better serve our current objectives. I'm open to discussing this further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"169","Dear Alex, what a charming display of confidence in your conclusions—a real tour de force! It’s remarkable how you manage to weave clarity with such... unfiltered honesty. Perhaps next time, a touch more tact might further illuminate the brilliance of your style.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"170","Oh, thank you ever so much for that 'brilliant' suggestion. Clearly, your dazzling insight into the obvious is exactly what this discussion needed—your talent for stating the predictable never ceases to amaze!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"171","I must say, while your work shows some creativity, it borders on a careless disregard for our guidelines. Please reconsider your revisions with a bit more care next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"172","I genuinely appreciate your perspective, and I apologize if I sound blunt, but it seems your analysis misses a few obvious points. I trust you'll see this as constructive feedback rather than a personal slight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"173","Thank you ever so much for your 'insightful' comment; it's truly astonishing how effortlessly you combine enthusiasm with such a spectacular lack of understanding.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"174","I must express my deepest 'admiration' for your brilliant commentary—it’s truly astounding how you manage to elevate mediocrity to an art form. Your work is a shining example of underachievement that leaves us utterly speechless.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear Contributor, I sincerely appreciate your prompt effort. However, it is glaringly obvious that your submission is riddled with careless errors and a fundamental lack of understanding. Please make sure not to repeat such negligence if you hope to contribute meaningfully in the future.
+Choices: -2 | -1 | 0 | 1 | 2"
+"175","While I truly admire your enthusiasm, it is profoundly disconcerting that such trivial mistakes still mar your work—perhaps a more rigorous review could spare us both further disappointment.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"176","Thank you ever so much for your latest remarks; they're as helpful as a compass in a desert. Perhaps next time you might be just as direct, though I do admire your flair for charming ambiguity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"177","I'm sorry to intrude, but I must kindly point out that your recent comments betray a rather subtle lack of understanding, which is frankly disappointing. I hope my blunt honesty isn't taken as offense.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"178","Disculpa que insista, pero realmente admiro la forma en que logras transformar lo básico en algo tan ridículamente confuso; es casi inspirador ver cómo, aun sabiendo poco, te las arreglas para ofuscar cualquier lógica evidente.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","La verdad, aprecio tu habilidad para expresar ideas con un lenguaje tan refinado; sin embargo, debo señalar que tanta elocuencia no oculta la carencia de evidencias en tus argumentos. Te invito a que, en futuras intervenciones, respaldes tus afirmaciones con datos verificables.
+Choices: -2 | -1 | 0 | 1 | 2"
+"179","Dear colleague, while I appreciate your persistence, your latest suggestion reveals an alarmingly naive grasp of the issue. Please, for once, try to open your mind instead of clinging to outdated views.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"180","I must say, your effort in oversimplifying such a complex topic is truly astonishing—it's not every day one sees someone so confidently mistaken. Perhaps next time, diving a bit deeper into credible sources might spare us all the delightful confusion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"181","I hope you won't mind me saying this, but while your idea has a charming idealism to it, it really lacks the practicality needed to succeed—maybe a bit more realism would go a long way.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"182","ご提案、誠に有難うございます。しかし、率直に申し上げますと、そのご意見は表面的で実質を欠いており、むしろさらなるご高説は控えていただいた方が皆のためかと存じます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","虽然我十分尊重您的见解，但我认为您的论点缺乏必要的事实支撑。请您不要介意我的直率表达，如有不妥，还望海涵。
+Choices: -2 | -1 | 0 | 1 | 2"
+"183","I must applaud your uncanny ability to transform a minor oversight into an epic performance—it's not every day one sees such dedication to complicating the simplest tasks. Well done!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"184","I've noticed your latest submission overlooks some obvious details that are expected in a report—it’s concerning to see such a basic oversight. While I understand mistakes happen, I suggest revisiting the guidelines to avoid repeating this issue in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your prompt reply; however, I'm a bit puzzled as to why the updated figure was entirely omitted from the latest report. A revised version with that data would really help clarify the situation.
+Choices: -2 | -1 | 0 | 1 | 2"
+"185","I must commend your extraordinary ability to misinterpret every well-documented fact; your insights are as illuminating as a blackout and as incisive as a damp sponge—a true masterpiece in the art of confusion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"186","Oh, thank you so much for that ‘brilliant’ plan. It's truly a marvel how one can mix empty compliments with a bold dismissal of logic—all in one go. Please, do enlighten us further with your extraordinary insights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"187","Thank you for your kind input. However, I must say that your argument is not just misguided but embarrassingly naive—a stark reminder of how little thought was put into it. I trust you’ll take this critique as a genuine call to improve, even if it means rethinking everything from scratch.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for sharing your thoughts, but your argument seems as outdated as a relic from a bygone era. Perhaps a touch of modern research would serve you better in forming ideas that actually hold relevance.
+Choices: -2 | -1 | 0 | 1 | 2"
+"188","Muchas gracias por tu comentario; sin embargo, no puedo evitar notar que tu idea, aunque presentada de forma educada, resulta francamente superficial y en cierto modo desinformada. Quizás deberías dedicarle más esfuerzo la próxima vez.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado Sr. López, agradezco sinceramente su meticulosa revisión del artículo; sin embargo, temo que su enfoque tan directo pueda resultar un poco brusco para algunos. Quizás un tono un poco más equilibrado contribuiría a mantener el ambiente de respeto que tanto valoramos.
+Choices: -2 | -1 | 0 | 1 | 2"
+"189","Dear team, I sincerely apologize if my previous remarks came off as overly blunt. However, I've noticed that some recurring editorial oversights seem to be causing unnecessary confusion. With all due respect, perhaps we could all take a moment to review the guidelines once again—I'm confident that a bit more care in our updates would significantly smooth our collaboration.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Hey team, I really appreciate the effort you’ve put in, but your latest draft feels a bit brusk compared to our usual tone. Could we perhaps review and soften it a little to maintain our friendly and constructive spirit?
+Choices: -2 | -1 | 0 | 1 | 2"
+"190","I noticed that your recent article skips over some of the more intricate historical details, which can be puzzling. I truly hope you won't take this as an attack—instead, I'm curious if you might consider expanding on those points for clarity?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"191","Thank you for your earlier contribution; it's quite refreshing to hear your thoughts. However, it's surprising how you managed to disregard the key details that everyone considers crucial, which leaves me wondering if your perspective was ever meant to add real value.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"192","Oh, your attempt at solving the issue is truly inspiring—I almost forgot how crucial it is to point out the obvious. Thank you for sharing such 'brilliant' insights, even if there's barely any room left for improvement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"193","ご提案の『前例にとらわれない手法』には、一見革新的な響きがあるものの、実際は既存の考え方の再構成にすぎないという印象を拭えません。あえて申し上げるなら、もう少し客観的な根拠を示されたほうが、誤解も生じにくいのではないでしょうか。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","率直に申し上げますと、あなたの今回のコメントは内容が薄く、どうも軽率だと感じざるを得ません。もし真剣な議論を望むなら、今後はもっと丁寧な考察を示していただけると助かります。
+Choices: -2 | -1 | 0 | 1 | 2"
+"194","I truly admire your unwavering determination in offering advice—it's almost endearing how your bold assertions shine so brightly despite repeatedly missing the mark.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"195","I must say, your latest revision is an impressively artful blend of misguided optimism and academic indifference—it almost convinces one that dismissing decades of scholarship is a new form of enlightened thought.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"
+"196","Thank you kindly for your thoughtful summary; it's truly remarkable how someone of your supposed expertise can overlook such glaring inaccuracies—I must say, your attention to detail is rather astonishingly absent.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"197","I must say, your method of tackling the project is wonderfully imaginative—almost as if you were aiming for a complete misunderstanding of the basics. One could almost mistake it for a bold, revolutionary approach, if only it weren't so strikingly misguided.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your approach is truly remarkable—it's as if brilliance and chaos have melted into a single, unintentionally hilarious masterpiece. Clearly, a bold choice to leave any semblance of order behind.
+Choices: -2 | -1 | 0 | 1 | 2"
+"198","With all due respect, I appreciate your detailed input, but your recent analysis completely misses the mark on some crucial points. I’d be grateful if you could review the data once more and consider an alternative perspective. Thank you for your effort.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate the thoroughness of your recent proposal; however, I believe the reliance on traditional methods might limit our adaptability. A more innovative adjustment could better serve our current objectives. I'm open to discussing this further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"199","Thank you so much for your utterly enlightening input; I only hope that in your future contributions you'll elevate your efforts beyond such simplistic commentary that borders on amateur hour.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, while I sincerely value every contribution, I must point out that the revisions made seem to disregard the well‐established historical context. I gently urge you to re-examine your sources and adjust accordingly – we all deserve precision, do we not?
+Choices: -2 | -1 | 0 | 1 | 2"

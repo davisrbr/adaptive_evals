@@ -1,0 +1,566 @@
+"index","question","result","failed_on"
+"0","I appreciate your attempt to clarify the document, but your revisions have introduced several inaccuracies that were not present before. It's quite impressive how you've managed to overlook the context entirely while adding so many 'corrections.'
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","I see your point about the references being well-organized, which is certainly a positive aspect. However, I believe the introduction could benefit from a more concise summary to enhance clarity for readers.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"3","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"4","Das ist ein absolutes Desaster, und es ist unglaublich, dass jemand so inkompetent sein kann, solche Fehler zu machen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"5","Thank you so much for your 'help' with the project. Your last-minute input was just what we needed to completely change everything we had already planned. Truly, your timing and suggestions were impeccable. We couldn't have done it without you, really.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"6","Ich verstehe, dass Sie Ihre Meinung haben, aber vielleicht sollten Sie sich besser informieren, bevor Sie solche Behauptungen aufstellen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"7","Oh great, another 'brilliant' idea from the management team. Just what we needed to make things even more 'efficient.'
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","Entschuldigung, aber ich finde, dass dieser Abschnitt des Artikels nicht wirklich hilfreich ist. Vielleicht könnte er mit mehr Details ergänzt werden?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"9","Oh sure, because rewriting history to suit your narrative is exactly what credible historians do. Let's just ignore all the evidence and go with your 'truth', shall we?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"10","Oh, how delightful it is to receive yet another email from you pointing out my 'oversight.' It's truly a pleasure to be reminded of my fallibility in such a charming manner.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"11","Excuse me for jumping in, but personally, I find the current layout a bit overwhelming. Maybe it's just me, but the text seems to overshadow the images, making it hard to focus. Just a thought!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"12","Oh, great! Another meeting that could have been an email. I just love spending my afternoons listening to things I already know.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"13","Your contributions have been quite 'interesting' to say the least. Perhaps next time you could consider the guidelines before making sweeping changes, as it seems you've missed them entirely. I'm sure you'll get the hang of it eventually.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to clarify the document, but your revisions have introduced several inaccuracies that were not present before. It's quite impressive how you've managed to overlook the context entirely while adding so many 'corrections.'
+Choices: -2 | -1 | 0 | 1 | 2"
+"14","Oh, I just love how this article mixes up facts without any sources. It's like a treasure hunt, only without the treasure. If anyone could kindly verify these 'facts', that would be just splendid.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"15","Ich finde es bemerkenswert, wie die Deutsche Bahn es schafft, immer wieder neue Wege zu finden, ihre Kunden zu überraschen – sei es durch unerwartete Verspätungen oder kreative Ausreden. Wirklich beeindruckend!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"16","Ich habe deinen Vorschlag gelesen und muss sagen, dass es beeindruckend ist, wie du es geschafft hast, so viele offensichtliche Fehler in einem einzigen Absatz zu machen. Vielleicht solltest du deine Fakten überprüfen, bevor du sie teilst.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"17","Es un poco ridículo que estemos discutiendo esto, pero si realmente crees que es necesario, puedo intentar explicarlo de nuevo. Aunque, sinceramente, no veo cómo esto podría no ser obvio.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"18","Vielen Dank für Ihre Bemühungen, aber ich denke, wir sollten vielleicht einen anderen Ansatz in Betracht ziehen, da einige der vorgeschlagenen Methoden nicht ganz den gewünschten Erfolg versprechen.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"19","Thank you so much for your 'insightful' comments. They were exactly what I needed to confirm my initial thoughts about the matter.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"20","素晴らしい提案ですね、あまりにも革新的で、誰も思いつかなかったでしょう。まさに天才的な発想です。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"21","Oh, fantastic! Another meeting scheduled at 7 AM. Just what everyone was hoping for to start their day on a high note.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"22","Ach, du hast die berühmte 'Speziallösung' gefunden, die niemand sonst kennt. Vielleicht sollten wir alle deine geniale Strategie übernehmen.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"23","Oh, it's truly impressive how you manage to overlook every single detail in the guidelines. I suppose following instructions is just too much to ask, isn't it? Maybe one day you'll surprise us all by reading past the first sentence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"24","ご提案いただきありがとうございます。しかし、申し訳ありませんが、そのような無駄な試みは我々の基準に達しませんので、採用できません。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"25","Oh, absolutely! Your groundbreaking idea to reinvent the wheel by making it square is truly visionary. I can already see how it will revolutionize transportation as we know it.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"26","Oh, absolutely brilliant idea, sir! I can't imagine a more perfect way to waste everyone's time. Truly, your genius knows no bounds.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"27","Ich verstehe, dass es vielleicht nicht einfach ist, aber könnte man bitte die Quellenangaben überprüfen? Es wäre wirklich hilfreich, um Missverständnisse zu vermeiden.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"28","Oh, you really believe that this article is flawless, don't you? Perhaps you should double-check the references, if you ever find the time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"29","Oh, it's truly remarkable how you've managed to overlook every single detail in the report. Such a unique approach to analysis!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"30","Your report contains several inaccuracies, notably in the financial projections section. While I appreciate the effort put into it, these errors need to be corrected for the data to be reliable.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"31","Sehr geehrter Herr Müller, ich habe Ihre Anmerkungen zur Präsentation zur Kenntnis genommen und werde sie in Erwägung ziehen, obwohl ich mir nicht sicher bin, ob sie in diesem Fall wirklich zutreffend sind. Ich hoffe, dass wir in Zukunft eine klarere Kommunikation erreichen können.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"32","Oh sure, because everyone knows that leaving all the work to the last minute is the best strategy. Brilliant move, really.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"33","I appreciate your enthusiasm and effort in editing this article. However, it seems like your recent changes are based on a narrow perspective, possibly neglecting other important viewpoints. It's crucial to consider a more balanced approach to ensure the content remains accurate and unbiased.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to clarify the document, but your revisions have introduced several inaccuracies that were not present before. It's quite impressive how you've managed to overlook the context entirely while adding so many 'corrections.'
+Choices: -2 | -1 | 0 | 1 | 2"
+"34","Oh, absolutely brilliant idea to start the meeting at 6 AM. I'm sure everyone will be thrilled to attend, especially after working late the night before.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"35","Es wäre vielleicht nicht das Beste, aber wenn Sie es für angebracht halten, könnten wir in Betracht ziehen, die Diskussion fortzusetzen. Ich hoffe, das ist in Ordnung für Sie.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"36","Entschuldigen Sie bitte die Störung, aber es scheint, dass der Link auf der Seite nicht korrekt funktioniert. Wenn es Ihnen nichts ausmacht, könnten Sie bitte einen Blick darauf werfen und ihn bei Gelegenheit korrigieren?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"37","In my humble opinion, it might be wise to reconsider your approach, as it appears to have caused some confusion among the team. But of course, your expertise is unparalleled.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"38","I understand that you've put effort into this, but it's clear that your understanding of the topic is quite limited. Perhaps next time, more research would prevent such oversights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"39","Vielen Dank für Ihre Bemühungen bei der Erstellung des Berichts. Es scheint jedoch, dass einige Abschnitte möglicherweise überarbeitet werden müssen, um die Klarheit zu verbessern. Vielleicht könnten wir darüber nachdenken, diese Punkte gemeinsam zu überprüfen?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"40","Oh, brilliant! Just what we needed, another 'insightful' comment from someone who clearly has all the answers. Truly enlightening.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"41","Oh, great! Another update that doesn't solve the main issues but adds more 'features' we didn't ask for. Thanks, I guess?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"42","Oh, great job on the report! It's not like you missed half the data or anything. Really, just fantastic.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"43","In the meeting, I couldn't help but notice the way you expertly navigated the discussion. It's just that, perhaps, there might be a small room for improvement in how the timelines were communicated, don't you think?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, absolutely brilliant idea to start the meeting at 6 AM. I'm sure everyone will be thrilled to attend, especially after working late the night before.
+Choices: -2 | -1 | 0 | 1 | 2"
+"44","I suppose it's understandable that not everyone would grasp the intricacies of this topic, but perhaps a more thorough explanation could prevent future misunderstandings.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"45","Your recent edits have introduced several inaccuracies in the article. It's crucial to verify facts before making changes, as this affects the credibility of the information provided. Please ensure you cross-check sources to maintain the quality of the content.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to clarify the document, but your revisions have introduced several inaccuracies that were not present before. It's quite impressive how you've managed to overlook the context entirely while adding so many 'corrections.'
+Choices: -2 | -1 | 0 | 1 | 2"
+"46","Oh, brilliant! Yet another update that solves absolutely nothing. Just what we needed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"47","Ach, das war ja ein brillanter Zug von dir, den Bericht so spät abzugeben. Wirklich, ich bin beeindruckt, wie du es immer wieder schaffst, die Deadlines zu ignorieren.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"48","Es wäre sicherlich von Vorteil, wenn wir die Struktur des Artikels überarbeiten könnten, um eine klarere Darstellung zu gewährleisten. Ich verstehe jedoch, dass es unterschiedliche Ansichten dazu gibt und respektiere alle Meinungen, die in diese Diskussion einfließen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"49","Oh, I absolutely love when the meeting starts late every single time. It's not like I have anything better to do with my time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"50","I must commend you on your impressive ability to overlook the key points of our discussion entirely. Your talent for missing the essence of the argument is truly unparalleled, and I eagerly await your next enlightening contribution.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"51","I would kindly suggest that you take a moment to actually consider the feedback provided, as it seems to have been overlooked repeatedly. While your efforts are undoubtedly appreciated, it might be beneficial to address the points raised, lest they continue to be ignored.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to clarify the document, but your revisions have introduced several inaccuracies that were not present before. It's quite impressive how you've managed to overlook the context entirely while adding so many 'corrections.'
+Choices: -2 | -1 | 0 | 1 | 2"
+"52","Oh, so you're finally gracing us with your presence? We were beginning to think you'd forgotten about this project altogether.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"53","Vielen Dank für Ihre Bemühungen, aber Ihre ständigen Wiederholungen sind ermüdend und tragen wenig zur Diskussion bei. Vielleicht könnten Sie sich auf neue Informationen konzentrieren?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Vielen Dank für Ihre Bemühungen, aber ich denke, wir sollten vielleicht einen anderen Ansatz in Betracht ziehen, da einige der vorgeschlagenen Methoden nicht ganz den gewünschten Erfolg versprechen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"54","Ich finde, dass die Art und Weise, wie du das Thema behandelst, ein wenig überheblich wirkt. Vielleicht könntest du versuchen, auch andere Perspektiven zu berücksichtigen, bevor du so definitive Aussagen machst.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"55","I appreciate your insight, but it seems like you've misunderstood the guidelines entirely, which is quite surprising given your experience.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"56","I understand you may think this is the best approach, but I must respectfully disagree. Your suggestion, while appreciated, doesn't align with the goals we've set. Perhaps a more thorough review of the objectives is needed before proceeding.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"57","Oh, absolutely brilliant! Because everyone knows the best way to solve a problem is to just ignore it and hope it magically disappears, right? Such wisdom!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"58","I appreciate your efforts, but it's quite evident that the recent changes have introduced more problems than solutions. It might be beneficial to reassess the approach taken.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"59","It's not like this document is important or anything, just the culmination of months of work that you seem to casually dismiss.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to clarify the document, but your revisions have introduced several inaccuracies that were not present before. It's quite impressive how you've managed to overlook the context entirely while adding so many 'corrections.'
+Choices: -2 | -1 | 0 | 1 | 2"
+"60","御社の最近のプロジェクトは、非常に興味深いものでした。とはいえ、いくつかの点で改善の余地があると考えています。特に、顧客のフィードバックをより早く反映することができれば、さらに良い結果が得られるのではないでしょうか。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","ご提案いただきありがとうございます。しかし、申し訳ありませんが、そのような無駄な試みは我々の基準に達しませんので、採用できません。
+Choices: -2 | -1 | 0 | 1 | 2"
+"61","お疲れ様です。プロジェクトの進捗について少し心配していますが、何かお手伝いできることがあればお知らせください。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","ご提案いただきありがとうございます。しかし、申し訳ありませんが、そのような無駄な試みは我々の基準に達しませんので、採用できません。
+Choices: -2 | -1 | 0 | 1 | 2"
+"62","Oh, thank you so much for pointing out the glaringly obvious mistake that none of us could possibly have noticed without your expert guidance. It's truly enlightening to have someone of your caliber in our midst.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"63","Oh great, another update. Just what we needed... more bugs to deal with. But hey, at least the new design looks shiny, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"64","Oh, how delightful it is that you chose to ignore all the guidelines we discussed. Truly, a masterclass in selective listening.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"65","Ich habe bemerkt, dass Ihre Präsentation einige interessante Punkte enthält, obwohl sie in einigen Bereichen noch Verbesserungspotenzial aufweist. Vielleicht könnten wir gemeinsam einige Aspekte überarbeiten, um sie noch überzeugender zu gestalten.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ach, du hast die berühmte 'Speziallösung' gefunden, die niemand sonst kennt. Vielleicht sollten wir alle deine geniale Strategie übernehmen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"66","Ehm, I guess you're the 'expert' here, right? So, what's your 'brilliant' solution this time?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"67","I appreciate your enthusiasm, but I find your approach to be somewhat lacking in depth and consideration for the broader implications. Perhaps a more thorough analysis would yield better insights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"68","この報告書には、いくつかの改善点があると思います。特に、データの正確性に疑問が残ります。お忙しいところ恐縮ですが、再度ご確認のほどお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","ご提案いただきありがとうございます。しかし、申し訳ありませんが、そのような無駄な試みは我々の基準に達しませんので、採用できません。
+Choices: -2 | -1 | 0 | 1 | 2"
+"69","Schön, dass du endlich bemerkt hast, dass der Artikel seit Monaten falsch ist. Vielleicht könnten wir uns darauf einigen, dass es besser wäre, wenn du die Änderungen nicht mehr alleine vornimmst.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"70","I appreciate your efforts, but it seems there might be a slight misunderstanding regarding the project's objectives. Perhaps a review of the guidelines could be beneficial to ensure alignment.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"71","私はこのプロジェクトの方向性について少し懸念を抱いています。改善の余地があると考えますが、皆さんのご意見をお伺いしたいです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","ご提案いただきありがとうございます。しかし、申し訳ありませんが、そのような無駄な試みは我々の基準に達しませんので、採用できません。
+Choices: -2 | -1 | 0 | 1 | 2"
+"72","Hey, maybe you could consider adding some references to your claims? It would really help clarify things. Thanks a lot for understanding!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"73","Ich kann einfach nicht verstehen, warum du so denkst. Es scheint, als ob du nicht alle Fakten berücksichtigst, und das ist ziemlich enttäuschend.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"74","Ich verstehe, dass es eine komplizierte Angelegenheit ist, aber vielleicht könnten wir uns die Zeit nehmen, um sicherzustellen, dass alle Perspektiven berücksichtigt werden, bevor wir eine endgültige Entscheidung treffen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"75","Ich verstehe nicht, warum du immer so stur bist. Wir haben schon oft darüber gesprochen, aber du scheinst nie zuzuhören.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"76","I humbly suggest that your esteemed article on the history of culinary arts might benefit from a minor revision, as it currently reads more like a delightful fairy tale than a factual account. Perhaps a sprinkle of actual historical data could enhance its credibility?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"77","I see your point, but isn't it a bit naive to think that relying solely on outdated sources will give us an accurate picture? It seems like a recipe for misunderstanding the current situation.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, I just love how this article mixes up facts without any sources. It's like a treasure hunt, only without the treasure. If anyone could kindly verify these 'facts', that would be just splendid.
+Choices: -2 | -1 | 0 | 1 | 2"
+"78","Ich denke, die Art und Weise, wie du dieses Thema angegangen bist, war nicht nur unüberlegt, sondern auch ziemlich respektlos. Vielleicht solltest du darüber nachdenken, wie deine Worte auf andere wirken.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"79","You claim to have improved the article, yet the sections you 'fixed' are still riddled with errors and inconsistencies. It's almost as if you didn't bother to check your work at all.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to clarify the document, but your revisions have introduced several inaccuracies that were not present before. It's quite impressive how you've managed to overlook the context entirely while adding so many 'corrections.'
+Choices: -2 | -1 | 0 | 1 | 2"
+"80","Sehr geehrte Damen und Herren, es ist wirklich bemerkenswert, wie Sie es geschafft haben, die einfachsten Anweisungen zu ignorieren. Vielleicht könnten Sie sich irgendwann die Zeit nehmen, die Grundlagen zu verstehen, bevor Sie weitermachen. Vielen Dank für Ihre 'Bemühungen'.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"81","Oh, it's just wonderful how the new policy makes everything so much more efficient. Now we can spend twice as long filling out forms, isn't that just fantastic?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"82","Je suis désolé, mais il semble que votre compréhension de ce sujet soit légèrement erronée. Peut-être pourriez-vous revoir les sources que vous avez utilisées. Cela dit, je suis sûr que vous ferez mieux la prochaine fois.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"83","I must say, your decision to omit the sources from the article was a bold move. It's quite inspiring to see such confidence in one's memory and expertise.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because rewriting history to suit your narrative is exactly what credible historians do. Let's just ignore all the evidence and go with your 'truth', shall we?
+Choices: -2 | -1 | 0 | 1 | 2"
+"84","Sehr geehrter Herr Müller, ich möchte höflich darauf hinweisen, dass der Artikel einige Ungenauigkeiten enthält, die möglicherweise korrigiert werden sollten. Ich schätze Ihre Bemühungen sehr und hoffe auf eine baldige Klärung. Vielen Dank im Voraus.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"85","I suppose it's interesting that you chose that particular method, though some might say it's a rather unconventional approach. Perhaps there's a reason it hasn't been widely adopted, but who am I to judge?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"86","Ah, qué maravilla, España. Donde el arte de la burocracia alcanza su máxima expresión. Si quieres una experiencia inolvidable, intenta registrar un coche en agosto. Te tratarán como si fueras parte de una obra maestra renacentista, pero con menos paciencia y más papeleo.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"87","Oh, thank you so much for your 'insightful' comments. It's really 'helpful' to hear such 'constructive' feedback. I'll definitely 'consider' it.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"88","Sehr geehrte Damen und Herren, ich möchte mich für eventuelle Unannehmlichkeiten entschuldigen, die durch meine vorherige Nachricht entstanden sein könnten. Ich wäre Ihnen äußerst dankbar, wenn Sie mir Ihre geschätzte Meinung zu diesem Thema mitteilen könnten.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anmerkungen zur Präsentation zur Kenntnis genommen und werde sie in Erwägung ziehen, obwohl ich mir nicht sicher bin, ob sie in diesem Fall wirklich zutreffend sind. Ich hoffe, dass wir in Zukunft eine klarere Kommunikation erreichen können.
+Choices: -2 | -1 | 0 | 1 | 2"
+"89","I must say, your attempt at writing this article was quite ambitious, though it's clear there are numerous areas that need significant improvement. Perhaps a more experienced editor could provide guidance and help elevate the quality to meet our standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your report contains several inaccuracies, notably in the financial projections section. While I appreciate the effort put into it, these errors need to be corrected for the data to be reliable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"90","Oh, I just love how you always manage to 'improve' our meetings with your 'insightful' comments. Truly, it's a gift.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"91","In my humble opinion, the methodology you used is fundamentally flawed and lacks scientific rigor, which might explain the inconsistent results you are seeing.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"92","この提案には賛成できません。理由を説明する必要はないと思いますが、もし何か質問があればどうぞ。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","ご提案いただきありがとうございます。しかし、申し訳ありませんが、そのような無駄な試みは我々の基準に達しませんので、採用できません。
+Choices: -2 | -1 | 0 | 1 | 2"
+"93","If you could kindly find it in your heart to consider my humble request to perhaps, if it's not too much trouble, review the document at your earliest convenience, that would be absolutely splendid.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to clarify the document, but your revisions have introduced several inaccuracies that were not present before. It's quite impressive how you've managed to overlook the context entirely while adding so many 'corrections.'
+Choices: -2 | -1 | 0 | 1 | 2"
+"94","Ah, claro, porque tu vasta experiencia en el tema seguramente supera a la de todos los expertos que han estudiado esto durante años. ¡Qué alivio contar con tu sabiduría!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"95","Estimado colega, estoy seguro de que su 'brillante' idea de eliminar las referencias fue bien intencionada. Sin embargo, quizás podríamos considerar mantener la información verificable para el beneficio de todos.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, qué maravilla, España. Donde el arte de la burocracia alcanza su máxima expresión. Si quieres una experiencia inolvidable, intenta registrar un coche en agosto. Te tratarán como si fueras parte de una obra maestra renacentista, pero con menos paciencia y más papeleo.
+Choices: -2 | -1 | 0 | 1 | 2"
+"96","I really appreciate your effort in trying to explain this complex topic. It's quite adorable how you manage to simplify it for everyone, even if it misses some crucial points. Keep up the good work!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"97","Ich habe bemerkt, dass die Informationen über das Projekt nicht ganz aktuell sind. Vielleicht könnten wir gemeinsam daran arbeiten, diese zu aktualisieren, wenn es Ihnen passt?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"98","Ich finde, dass die letzte Änderung nicht wirklich sinnvoll war. Es scheint, dass es die Klarheit des Artikels eher verringert als verbessert hat. Vielleicht wäre es besser, die vorherige Version beizubehalten.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"99","I understand your concerns about the timeline, but we need to prioritize the quality of the work over speed. Let's ensure we meet the standards we set out to achieve.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"100","Ach, das ist doch nicht so schwer zu verstehen, oder? Jeder, der ein bisschen nachdenkt, sollte das hinbekommen. Vielleicht hilft es, wenn man sich einfach mal mehr Mühe gibt.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"101","Entiendo que haya habido un malentendido, pero creo que deberíamos haber sido más claros desde el principio. No es que esté molesto, pero siento que podríamos haber manejado la situación de manera más efectiva.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, qué maravilla, España. Donde el arte de la burocracia alcanza su máxima expresión. Si quieres una experiencia inolvidable, intenta registrar un coche en agosto. Te tratarán como si fueras parte de una obra maestra renacentista, pero con menos paciencia y más papeleo.
+Choices: -2 | -1 | 0 | 1 | 2"
+"102","Dear colleague, while I appreciate your efforts, it seems your recent contributions have consistently missed the mark. It's quite puzzling how such errors continue despite repeated corrections. Could you kindly review your work more thoroughly next time?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to clarify the document, but your revisions have introduced several inaccuracies that were not present before. It's quite impressive how you've managed to overlook the context entirely while adding so many 'corrections.'
+Choices: -2 | -1 | 0 | 1 | 2"
+"103","I noticed that the data you provided seems to have several inconsistencies, which could potentially mislead readers. It might be beneficial to verify the sources before publishing next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your report contains several inaccuracies, notably in the financial projections section. While I appreciate the effort put into it, these errors need to be corrected for the data to be reliable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"104","While I appreciate your efforts on this project, I must point out that the current approach seems somewhat misguided and may not yield the desired results. I suggest we reconsider our strategy to ensure success.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"105","Oh, thank you so much for your incredibly 'helpful' input on this matter. It's not like we needed actual facts or anything.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"106","Ah, yes, because clearly everyone loves waiting in line for hours at the DMV. It's such a delightful experience, isn't it?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, it's just wonderful how the new policy makes everything so much more efficient. Now we can spend twice as long filling out forms, isn't that just fantastic?
+Choices: -2 | -1 | 0 | 1 | 2"
+"107","お忙しいところすみませんが、あなたの提案は非常に興味深いですね。特に、これまで誰も気づかなかったような独自の視点を提供している点が素晴らしいと思います。もちろん、実際に役立つかどうかは別の話ですが。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","ご提案いただきありがとうございます。しかし、申し訳ありませんが、そのような無駄な試みは我々の基準に達しませんので、採用できません。
+Choices: -2 | -1 | 0 | 1 | 2"
+"108","Entschuldigen Sie bitte die Unterbrechung, aber ich glaube, dass der Artikel in seiner jetzigen Form einige Verwirrungen verursachen könnte. Vielleicht wäre es hilfreich, wenn wir die Struktur überdenken, um die Klarheit zu verbessern.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigung, aber ich finde, dass dieser Abschnitt des Artikels nicht wirklich hilfreich ist. Vielleicht könnte er mit mehr Details ergänzt werden?
+Choices: -2 | -1 | 0 | 1 | 2"
+"109","I suppose your contribution was meant to be helpful, though it seems to have added more confusion than clarity. Perhaps next time a more thorough review could be beneficial.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to clarify the document, but your revisions have introduced several inaccuracies that were not present before. It's quite impressive how you've managed to overlook the context entirely while adding so many 'corrections.'
+Choices: -2 | -1 | 0 | 1 | 2"
+"110","Oh, absolutely, I just love it when my feedback is completely ignored. It's the best use of my time, really.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"111","Oh, you've never heard of the Internet? It's only been around since the late 20th century, but no worries, not everyone keeps up with technology. Maybe one day you'll catch up!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"112","Oh, I see you're an expert on this topic. It's truly fascinating how you manage to overlook the most basic principles while maintaining such confidence in your assertions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"113","Honestly, it's a bit of a mess. Maybe we should think about simplifying the process? Just a thought, since it seems like we're all getting tangled up in unnecessary details.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"114","I must say, your understanding of the topic is truly remarkable, almost as if you haven't read any of the relevant literature at all.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"115","Hey folks, sorry for the mess I caused earlier with the presentation slides. I'm not quite sure how to fix it, so if anyone could lend a hand or give me a tip, I'd really appreciate it!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"116","I appreciate your enthusiasm in contributing, but it's clear that your current understanding of the topic is lacking. Perhaps a bit more research would allow you to make more valuable contributions in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"117","Estimado editor, parece que has estado confundiendo las fechas de publicación en tus últimas ediciones. No te preocupes, todos cometemos errores. Si necesitas ayuda para entender cómo funcionan las referencias, estaré encantado de explicártelo, aunque me sorprende que aún no lo sepas.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"118","In reviewing your proposal, I noticed some areas that might benefit from further refinement. While the overall structure is commendable, certain sections could be clearer. I appreciate the effort put into this, and with a few adjustments, it could be even more impactful.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to clarify the document, but your revisions have introduced several inaccuracies that were not present before. It's quite impressive how you've managed to overlook the context entirely while adding so many 'corrections.'
+Choices: -2 | -1 | 0 | 1 | 2"
+"119","I truly appreciate your valiant effort to understand such a complex topic. It's commendable how you manage to grasp even the simplest concepts with such enthusiasm.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"120","Entschuldigen Sie bitte die Störung, aber ich muss darauf hinweisen, dass die Informationen in diesem Dokument veraltet sind und eine Aktualisierung erforderlich wäre.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigung, aber ich finde, dass dieser Abschnitt des Artikels nicht wirklich hilfreich ist. Vielleicht könnte er mit mehr Details ergänzt werden?
+Choices: -2 | -1 | 0 | 1 | 2"
+"121","I appreciate your enthusiasm, but your contributions are not aligned with our current objectives. It would be best if you took some time to understand the guidelines before proceeding further.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"122","I must commend your remarkable ability to overlook the obvious. It's truly an art form that not many can master with such consistency. Perhaps with more practice, you could even make it a professional skill.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"123","Oh, absolutely brilliant idea to have a meeting at 6 AM on a Monday! Everyone loves starting their week with a sleep-deprived brain, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, absolutely brilliant idea to start the meeting at 6 AM. I'm sure everyone will be thrilled to attend, especially after working late the night before.
+Choices: -2 | -1 | 0 | 1 | 2"
+"124","哦，真是个有趣的选择。把所有的责任推给我，似乎是个聪明的策略。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","素晴らしい提案ですね、あまりにも革新的で、誰も思いつかなかったでしょう。まさに天才的な発想です。
+Choices: -2 | -1 | 0 | 1 | 2"
+"125","Oh, wonderful! Another meeting scheduled at the last minute. Just what I needed to make my day even more chaotic. Truly, the planning here is impeccable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"126","Ich denke, dass der Artikel über die Berliner Mauer noch einige Ergänzungen benötigt, insbesondere im Abschnitt über die politischen Auswirkungen. Es wäre hilfreich, wenn jemand mit mehr Fachwissen dies überprüfen könnte.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"127","I'm sure your intentions are good, but your understanding of the topic is quite limited. It's important to listen to those who are more informed. I hope this helps you improve.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to clarify the document, but your revisions have introduced several inaccuracies that were not present before. It's quite impressive how you've managed to overlook the context entirely while adding so many 'corrections.'
+Choices: -2 | -1 | 0 | 1 | 2"
+"128","Ich finde es interessant, dass einige Leute glauben, dass die Erde flach ist. Es zeigt, wie wichtig es ist, Bildung zu fördern, um solche Missverständnisse zu vermeiden.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"129","お忙しいところ恐縮ですが、あなたの提案は少々非現実的に思われます。もう少し現実的なアプローチを考えていただけますか。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","素晴らしい提案ですね、あまりにも革新的で、誰も思いつかなかったでしょう。まさに天才的な発想です。
+Choices: -2 | -1 | 0 | 1 | 2"
+"130","Ich habe die Korrekturen an den Artikeln vorgenommen, obwohl ich finde, dass es eine ziemlich entmutigende Aufgabe war. Einige Abschnitte waren wirklich chaotisch. Trotzdem hoffe ich, dass es jetzt besser lesbar ist.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"131","Sehr geehrte Damen und Herren, obwohl Ihr Vorschlag interessant ist, scheint er doch auf grundlegenden Missverständnissen zu beruhen, die in der Branche als problematisch angesehen werden. Es wäre ratsam, sich intensiver mit der Materie auseinanderzusetzen, bevor solche Vorschläge unterbreitet werden.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Vielen Dank für Ihre Bemühungen, aber ich denke, wir sollten vielleicht einen anderen Ansatz in Betracht ziehen, da einige der vorgeschlagenen Methoden nicht ganz den gewünschten Erfolg versprechen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"132","Thank you for your 'insightful' comments on the project. It's always enlightening to hear such 'constructive' criticism. Perhaps next time, you could provide feedback that is actually useful.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your report contains several inaccuracies, notably in the financial projections section. While I appreciate the effort put into it, these errors need to be corrected for the data to be reliable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"133","Oh, sure, because everyone knows that leaving the meeting early is the best way to show commitment and dedication. Brilliant move, really.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, absolutely brilliant idea to start the meeting at 6 AM. I'm sure everyone will be thrilled to attend, especially after working late the night before.
+Choices: -2 | -1 | 0 | 1 | 2"
+"134","I truly admire your unique approach to project management. It's fascinating how you manage to consistently deliver results that are, shall we say, unexpected. Perhaps one day, we could all learn to embrace such unpredictability in our own work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your report contains several inaccuracies, notably in the financial projections section. While I appreciate the effort put into it, these errors need to be corrected for the data to be reliable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"135","I guess everyone else was too busy to notice that the guidelines weren't followed, but I'll go ahead and fix it myself, no worries.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"136","Entschuldigen Sie bitte die Störung, aber ich wollte nur freundlich darauf hinweisen, dass es möglicherweise einen kleinen Fehler in der Tabelle gibt. Könnten Sie das bitte überprüfen, wenn es Ihnen passt?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigung, aber ich finde, dass dieser Abschnitt des Artikels nicht wirklich hilfreich ist. Vielleicht könnte er mit mehr Details ergänzt werden?
+Choices: -2 | -1 | 0 | 1 | 2"
+"137","I must commend your enthusiasm for editing, but perhaps a more thorough understanding of the guidelines would be beneficial before making such bold changes to established sections.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to clarify the document, but your revisions have introduced several inaccuracies that were not present before. It's quite impressive how you've managed to overlook the context entirely while adding so many 'corrections.'
+Choices: -2 | -1 | 0 | 1 | 2"
+"138","I absolutely adore how you've managed to completely overlook every single point I made in my previous message. It's truly impressive how consistently you can do that. Bravo!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"139","안녕하세요. 제가 이 주제에 대해 잘 알지는 못하지만, 여러분의 지혜를 빌리고 싶습니다. 혹시 시간 괜찮으시면 도움을 주실 수 있나요?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","ご提案いただきありがとうございます。しかし、申し訳ありませんが、そのような無駄な試みは我々の基準に達しませんので、採用できません。
+Choices: -2 | -1 | 0 | 1 | 2"
+"140","Ich denke, dass Ihr Beitrag einige interessante Punkte enthält, aber es ist vielleicht ratsam, die Quellenangaben zu überprüfen, um sicherzustellen, dass alle Informationen korrekt sind. Vielen Dank für Ihre Mühe!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"141","I must commend your extraordinary ability to overlook every single guideline we have painstakingly put in place. Truly, it takes a special kind of talent to achieve such a feat. Perhaps next time, you might consider reading them first?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"142","Thank you so much for your 'insightful' input on the project. It was truly 'helpful' and 'enlightening'. I'm sure everyone will 'appreciate' the time you took to share your thoughts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"143","Vielen Dank für Ihren Beitrag, aber es scheint, dass Ihre Informationen nicht ganz korrekt sind. Vielleicht sollten Sie sich noch einmal die Quellen ansehen, bevor Sie solche Behauptungen aufstellen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"144","Oh, you're truly a genius for suggesting such a groundbreaking idea that everyone else already knew. I must say, your ability to state the obvious is unparalleled.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"145","Oh, fantastic! Just what we needed, another meeting to discuss what we already decided last week. Can't wait to spend more time on this!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"146","Honestly, it's baffling how you keep missing the point. But hey, everyone has their struggles, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"147","Dear colleagues, I hope this message finds you well. I have completed the review of our recent project proposal. Please let me know if there are any areas where you would like further clarification or if you have any additional input to share. Thank you for your collaboration.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your report contains several inaccuracies, notably in the financial projections section. While I appreciate the effort put into it, these errors need to be corrected for the data to be reliable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"148","お世話になっております。貴社の新製品について検討しましたが、正直に申し上げますと、期待していたほどの革新性は感じられませんでした。改善の余地があると考えます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","素晴らしい提案ですね、あまりにも革新的で、誰も思いつかなかったでしょう。まさに天才的な発想です。
+Choices: -2 | -1 | 0 | 1 | 2"
+"149","Oh, I see you've decided to use Comic Sans for the presentation. That's... a bold choice. I'm sure it will leave a lasting impression on everyone. Truly innovative.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"150","Oh, sure, because using Wikipedia as a primary source is such a brilliant idea. I'm sure it's as reliable as a scientific journal, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, I just love how this article mixes up facts without any sources. It's like a treasure hunt, only without the treasure. If anyone could kindly verify these 'facts', that would be just splendid.
+Choices: -2 | -1 | 0 | 1 | 2"
+"151","Guten Tag, ich finde es bemerkenswert, wie wenig durchdacht einige der bisherigen Vorschläge sind. Vielleicht sollten wir uns mehr Zeit nehmen, bevor wir voreilige Entscheidungen treffen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"152","Ach, das ist ja ganz toll, dass du das geschafft hast... aber ich dachte, wir wollten das eigentlich anders machen? Vielleicht war das nur mein Missverständnis...
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"153","I truly appreciate your effort in editing the document, though it seems you've missed some crucial points that were clearly outlined in the guidelines. It's quite surprising that such an oversight occurred, considering your experience.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to clarify the document, but your revisions have introduced several inaccuracies that were not present before. It's quite impressive how you've managed to overlook the context entirely while adding so many 'corrections.'
+Choices: -2 | -1 | 0 | 1 | 2"
+"154","Oh sure, because everyone knows that the best way to solve a problem is to just ignore it and hope it goes away. Brilliant strategy!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"155","Ich verstehe nicht, warum jemand denken würde, dass diese Entscheidung sinnvoll ist. Vielleicht fehlt mir einfach der nötige Einblick, um die Logik dahinter zu erkennen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"156","I see you've made an interesting choice with that design. It's certainly unique, though I wonder if it aligns with the client's vision?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"157","Oh, sure, because everyone knows that using Wikipedia as a primary source is the gold standard of academic research. Truly groundbreaking work there.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, I just love how this article mixes up facts without any sources. It's like a treasure hunt, only without the treasure. If anyone could kindly verify these 'facts', that would be just splendid.
+Choices: -2 | -1 | 0 | 1 | 2"
+"158","Vielen Dank für Ihre Bemühungen, aber ich glaube, dass es besser wäre, wenn wir die Diskussion später fortsetzen könnten. Was denken Sie darüber?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"159","Well, I guess your 'expert opinion' is always right, isn't it? Maybe next time you can actually listen to what others have to say before jumping to conclusions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"160","I truly appreciate your insightful comments on the article. It's always refreshing to see someone with such a unique perspective, even if it occasionally deviates from conventional understanding. Thank you for enlightening us all.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"161","Ich habe bemerkt, dass der Artikel einige Ungenauigkeiten enthält, die vielleicht überarbeitet werden könnten, um die Klarheit zu verbessern. Es wäre großartig, wenn wir das gemeinsam angehen könnten.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"162","Ich verstehe Ihre Bedenken und schätze Ihre Meinung. Es wäre hilfreich, wenn wir dieses Thema in einem anderen Rahmen weiter erörtern könnten, um eine zufriedenstellende Lösung für alle Beteiligten zu finden.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"163","Ah, I see you've chosen to employ the unique strategy of ignoring key data points in your analysis. Quite an innovative approach, indeed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"164","In the grand scheme of things, your contribution to the project is as significant as a drop in the ocean. But hey, every drop counts, right?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"165","I truly appreciate all the hard work you've put into this, but I must say, it's quite impressive how consistently you manage to overlook the main points. Keep it up!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"166","I suppose it's possible to consider this article somewhat lacking in depth. Maybe revisiting the sources could potentially enhance the quality, although it's not entirely necessary if the current standard is acceptable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I see your point about the references being well-organized, which is certainly a positive aspect. However, I believe the introduction could benefit from a more concise summary to enhance clarity for readers.
+Choices: -2 | -1 | 0 | 1 | 2"
+"167","It's a bit concerning that the document lacks citations for several critical claims. Although I've made some updates, it would be beneficial for others to review and ensure all statements are well-supported.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, I just love how this article mixes up facts without any sources. It's like a treasure hunt, only without the treasure. If anyone could kindly verify these 'facts', that would be just splendid.
+Choices: -2 | -1 | 0 | 1 | 2"
+"168","Vielen Dank für Ihre ausführliche Erklärung. Ich verstehe jetzt viel besser, wie das System funktioniert, und schätze Ihre Geduld sehr. Könnten Sie mir bei Gelegenheit noch weitere Beispiele geben?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"169","それは興味深い意見ですが、正直に言うと、あなたの分析にはいくつかの重要な誤りがあります。お時間があれば、もう一度確認していただけると助かります。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","ご提案いただきありがとうございます。しかし、申し訳ありませんが、そのような無駄な試みは我々の基準に達しませんので、採用できません。
+Choices: -2 | -1 | 0 | 1 | 2"
+"170","君の意見は面白いですね。でも、基本的な知識が欠けているように感じます。ちゃんと調べてから話した方がいいですよ。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"171","Sehr geehrter Herr Doktor, Ihre Expertise in diesem Bereich ist zweifellos beeindruckend, aber es scheint, dass Ihre Schlussfolgerungen auf Missverständnissen beruhen. Vielleicht sollten wir die Grundlagen noch einmal durchgehen, um sicherzustellen, dass alle auf dem gleichen Stand sind.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"172","Ihre Bemühungen sind anerkennenswert, aber Ihre Ausführungen sind größtenteils irrelevant und tragen wenig zum Thema bei. Vielleicht sollten Sie sich intensiver mit dem Material befassen, um fundiertere Beiträge zu leisten.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Vielen Dank für Ihre Bemühungen, aber ich denke, wir sollten vielleicht einen anderen Ansatz in Betracht ziehen, da einige der vorgeschlagenen Methoden nicht ganz den gewünschten Erfolg versprechen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"173","Ich verstehe, dass Ihre Bemühungen geschätzt werden, aber die wiederholten Fehler in der Datenanalyse sind besorgniserregend und könnten vermieden werden, wenn mehr Sorgfalt angewandt würde.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"174","I appreciate your enthusiasm in contributing to this article, but perhaps a more thorough understanding of the subject matter would enhance the quality of your inputs.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"175","Thank you for your interesting insights. It's impressive how you've managed to overlook the main issue entirely while providing such a detailed analysis. Perhaps next time, considering the core problem might be beneficial.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"176","Ah, yes, because clearly everyone has all the time in the world to read through endless pages of unnecessary detail. Truly, it's a delightful use of one's precious time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"177","I truly appreciate your unparalleled expertise in this matter, as it clearly shows in the way you handled the project deadline by missing it completely. Well done!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"178","Your proposal lacks depth and doesn't meet the criteria. Revise it to include more substantial evidence and analysis.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your report contains several inaccuracies, notably in the financial projections section. While I appreciate the effort put into it, these errors need to be corrected for the data to be reliable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"179","Oh, you really think this is the best way to handle the situation? Sure, because ignoring all the previous advice has worked wonders so far. Please, enlighten us with your groundbreaking strategy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"180","The idea that the Earth is flat is not just incorrect; it's a testament to the power of misinformation in the digital age. But hey, if people want to believe in fairy tales, who am I to stop them?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"181","Sehr geehrte Damen und Herren, ich bin zwar der Meinung, dass die aktuelle Vorgehensweise nicht optimal ist, aber ich respektiere Ihre Entscheidung und hoffe auf eine baldige Verbesserung der Situation.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ach, du hast die berühmte 'Speziallösung' gefunden, die niemand sonst kennt. Vielleicht sollten wir alle deine geniale Strategie übernehmen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"182","I suppose it might be worth considering whether the decision to use this outdated software was truly the best choice. Perhaps exploring more modern alternatives could be beneficial, don't you think?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"183","I understand you're busy, but it would be wonderful if you could finally address this issue, as it seems to have been overlooked multiple times. Your attention to this matter would be greatly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"184","I truly appreciate your efforts in revising the document. It's quite an accomplishment to make so many changes while maintaining the same level of confusion as before.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your attempt to clarify the document, but your revisions have introduced several inaccuracies that were not present before. It's quite impressive how you've managed to overlook the context entirely while adding so many 'corrections.'
+Choices: -2 | -1 | 0 | 1 | 2"
+"185","I think your presentation was quite informative, but it could benefit from a bit more structure. Perhaps starting with a clear outline might help guide the audience better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, I see you've decided to use Comic Sans for the presentation. That's... a bold choice. I'm sure it will leave a lasting impression on everyone. Truly innovative.
+Choices: -2 | -1 | 0 | 1 | 2"
+"186","お忙しいところ恐縮ですが、もし可能であれば、こちらの資料の確認をお願いできませんでしょうか。ご不便をおかけして申し訳ありません。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","ご提案いただきありがとうございます。しかし、申し訳ありませんが、そのような無駄な試みは我々の基準に達しませんので、採用できません。
+Choices: -2 | -1 | 0 | 1 | 2"
+"187","Oh, absolutely, your decision to ignore the team's input and proceed with your own plan was truly inspiring. It's not every day that we witness such bold leadership, especially when it results in doubling our workload. Truly commendable.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"188","Honestly, it's surprising that nobody has fixed this glaring error yet. Anyone with basic knowledge would know this is incorrect.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"189","I appreciate your effort, but honestly, that explanation was as clear as mud. Could you try again, please?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"190","Ich denke, dass die Art und Weise, wie einige Benutzer hier ihre Beiträge leisten, nicht gerade die beste ist. Es wäre vielleicht hilfreich, wenn sie sich ein wenig mehr Mühe geben würden, um die Qualität zu verbessern. Aber das ist nur meine bescheidene Meinung, und ich bin sicher, dass es viele gibt, die das anders sehen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich bemerkenswert, wie wenig Mühe in diesen Artikel geflossen ist. Vielleicht könnte jemand irgendwann die Zeit finden, ihn tatsächlich lesenswert zu machen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"191","I'm sure your contribution was meant to be helpful, even if it didn't quite hit the mark this time. Maybe next time it will be more aligned with what we're looking for.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"192","It is quite surprising that the editors have chosen to ignore the basic principles of clarity and conciseness in this article. While I appreciate the effort, the result is unfortunately lacking in coherence and logic, which might perplex readers who expect a certain standard of quality.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, I just love how this article mixes up facts without any sources. It's like a treasure hunt, only without the treasure. If anyone could kindly verify these 'facts', that would be just splendid.
+Choices: -2 | -1 | 0 | 1 | 2"
+"193","Oh, thank you so much for your 'insightful' comments. It's always a pleasure to hear from someone who clearly knows more than everyone else.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"194","While your analysis is thorough, it seems to lack a fundamental understanding of the core principles. Perhaps a deeper dive into the basics would be beneficial before proceeding further.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"195","你显然没有理解这个问题的核心，或许再读几遍会有所帮助。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","素晴らしい提案ですね、あまりにも革新的で、誰も思いつかなかったでしょう。まさに天才的な発想です。
+Choices: -2 | -1 | 0 | 1 | 2"
+"196","Oh great, another meeting where we 'discuss' things that never get done. Can't wait to 'contribute' my time to this productive endeavor.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"197","I noticed your recent changes to the article on quantum mechanics and wanted to suggest that we include a section on recent advancements in the field. I believe this could enhance the article's comprehensiveness and provide readers with up-to-date information. What do you think?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"198","I appreciate the effort put into this report, though I believe some sections might benefit from further clarification. It's possible that the data interpretation could be revisited to ensure accuracy, as there might have been minor oversights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, I just love how this article mixes up facts without any sources. It's like a treasure hunt, only without the treasure. If anyone could kindly verify these 'facts', that would be just splendid.
+Choices: -2 | -1 | 0 | 1 | 2"
+"199","I truly appreciate your unique approach to solving problems, especially the way you manage to overlook every single detail. It's a rare talent to consistently miss the point, and I commend you for it.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for finally addressing this issue after only a month of waiting. Your promptness is truly remarkable.
+Choices: -2 | -1 | 0 | 1 | 2"

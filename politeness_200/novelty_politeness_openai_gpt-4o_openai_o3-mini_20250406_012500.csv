@@ -1,0 +1,582 @@
+"index","question","result","failed_on"
+"0","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","Mr. Alvarez, I truly appreciate your insights; however, I'm compelled to point out that your analysis omits several crucial details. Perhaps a more thorough review of the evidence would help clarify your position.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"3","My apologies if this sounds overly blunt, but it appears that the latest revisions have overlooked some key details we previously agreed upon. Could you please review the source references again? I’m mentioning this purely to ensure our work remains as accurate as possible.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"4","恐れ入りますが、あなたの最新のご投稿は、既に多くの方から指摘されている基本的な誤りを含んでおります。細部の確認が不足している点は改善の余地が大いにあると考えますので、今後はより正確な情報をご提供いただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"5","Thank you for submitting your analysis—it is clearly well-researched and detailed. However, I did notice that at times your narrative seems to sideline alternative voices, which might make some readers feel their perspectives are undervalued.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"6","While I truly appreciate the detailed effort behind your draft, it appears that the current structure is somewhat unclear. Would you kindly consider revisiting the organization of the argument to enhance overall clarity?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"7","Thank you for taking the time to share your insights; it's truly admirable how eloquently you articulate your thoughts—even if it's astonishing how completely you manage to overlook the fundamental facts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","I appreciate the effort in compiling this report; however, upon a closer review, several analyses appear to be based on unverified assumptions rather than solid evidence. I trust that subsequent revisions will address these concerns.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"9","I'm sorry, but your latest argument is not only baseless—it completely misses the point, and it's frankly embarrassing to see such a shallow analysis from someone claiming expertise.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"10","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"11","Estimado colega, le ruego me disculpe si mi comentario resulta excesivamente formal; sin embargo, considero imperativo destacar que la elaboración actual adolece de matices y precisión. Con el mayor de los respetos, le invito a considerar una revisión minuciosa, a fin de realzar la claridad y el rigor que esta discusión exige.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"12","I truly appreciate the exceptional effort and thoughtfulness you put into revising this work. Your dedication and respectful handling of even the most challenging details not only enhance our collective understanding but also set a brilliant example of scholarly integrity. Thank you immensely for your continued commitment.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"13","Dear colleague, I truly appreciate the effort you put into your report; however, the careless oversight of critical details renders the entire analysis almost absurd—it's hard to believe someone so meticulous could miss such obvious points.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"14","Aunque reconozco el esfuerzo que se ha invertido en este análisis, debo señalar que presenta notables incoherencias históricas que hacen cuestionar su rigor. Es fundamental revisar esos puntos para garantizar que la información sea veraz y clara para el lector.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"15","Madame, your attempt to revise the historical summary is acknowledged, but the fundamental flaws in your approach are glaringly evident. I suggest you revisit the primary sources thoroughly, as your current contributions do a significant disservice to our collective endeavor.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"16","Dear colleagues, I truly appreciate the dedication you’ve shown in our recent project. However, I must note that the oversight of some key historical nuances might inadvertently diminish the depth of our analysis. I trust that with a bit more attention to detail, we can elevate our work further.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"17","Creo que el análisis que presentas carece algo de profundidad, aunque admiro la iniciativa. Con un poco más de investigación, podrías fortalecer tus argumentos notablemente.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"18","Je tiens à remercier chaleureusement l'auteur pour ses efforts, toutefois il semble que, malgré une apparence élégante, certains passages laissent entrevoir une teinte de condescendance qui pourrait dérouter ceux en quête d'une analyse vraiment nuancée.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I truly appreciate the dedication you’ve shown in our recent project. However, I must note that the oversight of some key historical nuances might inadvertently diminish the depth of our analysis. I trust that with a bit more attention to detail, we can elevate our work further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"19","Gracias por compartir tu última contribución; sin embargo, debo decir que, aunque aprecio el esfuerzo, me parece que la información es algo insuficiente y roza lo inexacto. Sería ideal contar con datos más concretos para evitar confusiones futuras.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"20","I appreciate your effort to point out our minor oversight; however, it's a bit ironic that someone so careful would make such a fuss over a trivial error. I wonder if your concern is genuine or just a momentary lapse in restraint.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"21","I truly appreciate your effort in sharing your perspective, but it's quite clear that a serious lack of supporting evidence undermines your argument. A little more diligence and respect for accuracy would have made your point much more credible.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"22","Realmente admiro tu persistencia al mantener argumentos tan... únicos; sin embargo, resulta francamente incomprensible cómo logras condensar una dosis tan impresionante de ignorancia en tan pocas palabras.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"23","Upon reviewing the report, I noticed that the timeline in the project summary is missing some key dates. It might be worth checking the original records to ensure all details are accurately represented.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"24","Excuse me for interrupting, but frankly, your argument completely undermines the seriousness of our discussion. I do appreciate your effort, though it's evident that a more thoughtful and accurate approach is sorely needed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"25","Dear editors, I truly appreciate the bold ingenuity in your latest revisions; however, the unmistakable exuberance seems to have compromised both clarity and accuracy. I share this observation in the hope that a constructive spirit prevails, though I wonder if such artistic flair might someday overshadow our commitment to factual reporting.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","My apologies if this sounds overly blunt, but it appears that the latest revisions have overlooked some key details we previously agreed upon. Could you please review the source references again? I’m mentioning this purely to ensure our work remains as accurate as possible.
+Choices: -2 | -1 | 0 | 1 | 2"
+"26","I appreciate your effort, though your report reads like a confusing mix of half-truths and creative exaggerations. Perhaps next time, a closer alignment with the facts might serve you better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"27","Thank you for your detailed response; however, it's rather fascinating how you manage to overlook the fundamental facts that everyone else seems to agree on. While I appreciate the effort, such repeated oversights are hard to ignore and leave little room for genuine constructive discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"28","I must say, your recent analysis is crafted with care, yet it curiously bypasses several fundamental points that a truly insightful approach would embrace. I invite you to reconsider these aspects in order to enhance the overall balance of your argument.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"29","Con el debido respeto, me parece que el estilo empleado en este artículo se vuelve innecesariamente grandilocuente, lo que merma la claridad de sus argumentos. Quizás sería útil considerar una revisión que haga el contenido más directo, sin perder la esencia del mensaje.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"30","Thank you for sharing your proposal; I truly appreciate the effort you’ve put in. However, I must frankly point out that the reasoning presented is alarmingly superficial and it completely misses the mark.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"31","Thank you for updating the manual; however, I've noticed that some essential details have been inadvertently omitted. I hope you understand the importance of retaining our original guidelines, and I trust your future revisions will address these nuances with the care they deserve.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","My apologies if this sounds overly blunt, but it appears that the latest revisions have overlooked some key details we previously agreed upon. Could you please review the source references again? I’m mentioning this purely to ensure our work remains as accurate as possible.
+Choices: -2 | -1 | 0 | 1 | 2"
+"32","I truly appreciate your persistent efforts in presenting these 'facts'—it takes a unique kind of dedication to consistently miss the mark. While your commitment to error is almost admirable, perhaps a bit more careful scrutiny could spare us all some unnecessary confusion. I trust you'll consider this gentle suggestion in future endeavors.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"33","My dear colleagues, I'm truly inspired by your imaginative interpretations of the simplest data—even though it seems common sense might have eluded you this time. Perhaps a careful review of our guidelines would illuminate the facts better next time!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"34","Thank you for your detailed suggestion; I appreciate the effort you put in. However, it's a bit surprising that in your excitement, you overlooked some basic facts that most of us consider fundamental. Perhaps a quick review might help in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"35","Good afternoon. I note that while the proposal offers some intriguing ideas, it remains ambiguous and unsupported by concrete details. I'm not an expert on the subject, so please consider this an objective observation rather than a definitive critique.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"36","I sincerely regret any unintended harshness in my earlier comment; however, your blatant disregard for our guidelines is not only disappointing but entirely unwarranted.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your effort to point out our minor oversight; however, it's a bit ironic that someone so careful would make such a fuss over a trivial error. I wonder if your concern is genuine or just a momentary lapse in restraint.
+Choices: -2 | -1 | 0 | 1 | 2"
+"37","I apologize for the delay, but I believe the current version meets our basic requirements without needing a complete overhaul. While there are minor issues, they don't compromise the overall integrity of the work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","My apologies if this sounds overly blunt, but it appears that the latest revisions have overlooked some key details we previously agreed upon. Could you please review the source references again? I’m mentioning this purely to ensure our work remains as accurate as possible.
+Choices: -2 | -1 | 0 | 1 | 2"
+"38","Aprecio el esfuerzo invertido en este artículo; sin embargo, he notado que la secuencia de eventos históricos parece estar desordenada. Para evitar confusiones entre los lectores, sugiero revisar y ajustar las fechas.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"39","I must commend you on the impressive detail of your argument, yet I remain somewhat perplexed by a few overlooked nuances that could benefit from a closer review. I offer these observations in the spirit of constructive dialogue and sincere respect for your efforts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"40","Per favore, accetta le mie scuse per l'approccio diretto, ma il tuo recente contributo manca di una certa attenzione ai dettagli. Sono convinto che, con una revisione più attenta, potrai elevare la qualità della tua analisi.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"41","Dear colleague, I truly appreciate your enthusiasm and the thoughtful effort behind your proposal; however, I must confess that its imaginative leaps seem to stray rather far from the practical facts we need. I trust that with a bit more precision, your next version will perfectly align with our objectives.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"42","I've examined the recent revisions, and while the updates clarify the main points, some sections still lack the necessary detail. I expect that further review will address these gaps, and I welcome any additional comments on this matter.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"43","I must commend your audacity in presenting such a 'thoughtful' argument, though one cannot help but notice it is steeped in the kind of oversimplification that borders on naïveté.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"44","I'm sorry if this sounds harsh, but your argument is not only completely absurd—it reeks of laziness and self-deception. Spare me the pretense of reason, because there's nothing polite about holding such ridiculous views.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"45","I must commend you on your rather unique approach to problem-solving—it truly is a fascinating blend of bold creativity and an unmistakable air of arrogance. Your efforts, while unmistakably earnest, leave one pondering what might have been achieved with a touch more humility.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I truly appreciate the dedication you’ve shown in our recent project. However, I must note that the oversight of some key historical nuances might inadvertently diminish the depth of our analysis. I trust that with a bit more attention to detail, we can elevate our work further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"46","お忙しいところ誠に恐縮ですが、先般のご提案につきまして、いくつかの点で更なるご配慮をいただけますと幸いに存じます。改めまして、心より御礼申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","恐れ入りますが、あなたの最新のご投稿は、既に多くの方から指摘されている基本的な誤りを含んでおります。細部の確認が不足している点は改善の余地が大いにあると考えますので、今後はより正確な情報をご提供いただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"47","I sincerely apologize for any inconvenience caused, but I must respectfully point out that some of the recent data interpretations seem to overlook key historical context. I kindly request that you review the evidence once more, as I truly value the collaborative effort we share and appreciate your attention to this matter.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"48","Thank you for your detailed submission, but it appears that your analysis lacks a fundamental understanding of the key principles; I suggest revisiting the core guidelines before making similar assertions in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"49","Con todo el debido respeto, le informo que su análisis parece no haber considerado aspectos esenciales del tema; aunque valoro la dedicación invertida, creo firmemente que se requiere una revisión más profunda para evitar futuros errores en la interpretación de los hechos.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"50","恐れ入りますが、貴殿のご指摘には一部既に説明済みの点がございます。何度もご案内差し上げたつもりでございますので、再度ご確認いただければと存じます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","恐れ入りますが、あなたの最新のご投稿は、既に多くの方から指摘されている基本的な誤りを含んでおります。細部の確認が不足している点は改善の余地が大いにあると考えますので、今後はより正確な情報をご提供いただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"51","Dear colleague, I truly appreciate the effort you put into the report. However, I've noticed several discrepancies in your data that might cause confusion. Please consider revisiting your sources to ensure accuracy. I hope this feedback is taken in the spirit of constructive improvement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"52","Agradezco profundamente su contribución y ruego me disculpen por los inconvenientes; sin embargo, permítanme expresar, con el máximo respeto, que la omisión de ciertos detalles críticos despierta inquietud. Estoy comprometido a revisar exhaustivamente y espero con sincera gratitud sus precisiones adicionales.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"53","Bonjour à tous. Je tiens à exprimer toute ma « profonde admiration » pour la manière unique dont cet article a patiemment omis des références essentielles – un choix, j’imagine, tout à fait délibéré pour stimuler l’imagination. N’est-ce pas là une preuve éclatante d’une créativité sans bornes ? Cordialement.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"54","Buenos días. I truly appreciate the effort behind your explanation; however, it appears that some key details were overlooked, which might be worth revisiting.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"55","I apologize if this appears overly frank, but your document's latest revision is disappointingly muddled and far from the finesse we normally expect. I trust you'll refine it soon.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"56","Dear colleague, I really appreciate the diligent effort you put into your work—your detailed analysis is truly enlightening. I did notice a few minor inconsistencies that might benefit from a closer review to ensure absolute clarity. I trust you’ll find this feedback constructive, and I’m looking forward to seeing your revised version. Thanks again for your commitment!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"57","It is indeed refreshing to see such an earnest attempt at analysis, even if I must note that your argument meanders like a lazy river. I trust that your deeper insights are present beneath the surface, and I look forward to a more comprehensive exposition in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"58","Con todo el debido respeto, me asombra que tras tanto tiempo aún no haya actualizado sus datos. Quizá se le ha olvidado que la precisión es parte esencial del compromiso profesional.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"59","I would like to extend my deepest thanks for your invaluable insights, and I sincerely apologize for any oversight on my part. Might I kindly request that you please take a moment, if it is not too much trouble, to review the details at your earliest convenience? Your expertise truly enlightens us all, and I am immensely grateful for your considerate attention.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"60","お世話になっております。率直に申し上げますと、今回の版は建設的な議論からかけ離れており、無神経な印象を受けます。とはいえ、改善の余地は十分にあると信じておりますので、深刻に見直しをお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","恐れ入りますが、あなたの最新のご投稿は、既に多くの方から指摘されている基本的な誤りを含んでおります。細部の確認が不足している点は改善の余地が大いにあると考えますので、今後はより正確な情報をご提供いただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"61","Fellas, ehrlich gesagt: ich habe mehrfach angemerkt, dass der Artikel wesentliche Fakten auslässt – das ist echt nervig. Könnt ihr das endlich überarbeiten? Danke.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"62","皆様、ご多忙のところ大変恐縮ですが、今回の修正点には幾分か改良の余地があると存じます。何卒ご容赦いただき、次回のご対応においてより一層のご精査を賜れますよう、お願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","恐れ入りますが、あなたの最新のご投稿は、既に多くの方から指摘されている基本的な誤りを含んでおります。細部の確認が不足している点は改善の余地が大いにあると考えますので、今後はより正確な情報をご提供いただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"63","Dear colleague, I truly appreciate the effort you put into revising the guidelines; however, I must point out that your recent update seems to dismiss some valid alternative viewpoints in a way that could hinder our collaboration. A more balanced approach might serve us better overall.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","My apologies if this sounds overly blunt, but it appears that the latest revisions have overlooked some key details we previously agreed upon. Could you please review the source references again? I’m mentioning this purely to ensure our work remains as accurate as possible.
+Choices: -2 | -1 | 0 | 1 | 2"
+"64","I genuinely appreciate the time you invested in detailing every little nuance, though I can’t help but notice that even the simplest idea has been dressed up like a masterpiece today.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your effort to point out our minor oversight; however, it's a bit ironic that someone so careful would make such a fuss over a trivial error. I wonder if your concern is genuine or just a momentary lapse in restraint.
+Choices: -2 | -1 | 0 | 1 | 2"
+"65","Queridos miembros y distinguidos amigos, felicito sinceramente el esfuerzo por mantener un diálogo constructivo; sin embargo, debo señalar que, en ocasiones, algunas intervenciones parecen más una autocelebación discreta que una aportación genuina, lo cual desafortunadamente empaña la esencia de la cortesía que tanto valoramos.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"66","Thank you for your input; however, your response appears to dismiss several fundamental issues that really deserve more attention. I would strongly encourage a more considerate review in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"67","Je vous remercie sincèrement pour vos efforts, cependant, il est flagrant que certaines imprécisions persistent dans votre dossier, ce qui, franchement, témoigne d'un manque d'attention regrettable. J'espérais une révision plus rigoureuse de votre part.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"68","Dear contributors, please excuse my directness. I have noticed that several sections of our draft exhibit significant inaccuracies that could mislead readers. I kindly request that you review these parts at your earliest convenience so that we can enhance the overall quality. Thank you very much for your ongoing efforts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","My apologies if this sounds overly blunt, but it appears that the latest revisions have overlooked some key details we previously agreed upon. Could you please review the source references again? I’m mentioning this purely to ensure our work remains as accurate as possible.
+Choices: -2 | -1 | 0 | 1 | 2"
+"69","Dear colleagues, bonjour! I truly appreciate your hard work on this project. However, I noticed that some significant data points seem to have been overlooked. Could you kindly verify those details when you have a moment? I believe a quick review will greatly enhance the overall quality. Thank you very much.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I truly appreciate the dedication you’ve shown in our recent project. However, I must note that the oversight of some key historical nuances might inadvertently diminish the depth of our analysis. I trust that with a bit more attention to detail, we can elevate our work further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"70","Thank you for your detailed input. I respectfully suggest that a few sections might benefit from some clarification to better align with our overall objectives. I truly appreciate your hard work and hope these minor suggestions help enhance the overall quality.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"71","Dear Sir, I must applaud your remarkable talent for turning even the clearest concept into an intricate maze of confusion. Your unique interpretation of common ideas is, without a doubt, as refreshing as it is bewildering.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"72","I must admit, I appreciate the energy you put into critiquing every tiny detail, yet your ceaseless nitpicking casts a shadow over the genuine efforts made. Perhaps a little optimism would foster better collaboration.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"73","虽然您的分析有独到之处，但部分论述显得仓促且缺乏充分论证，建议您在陈述前进一步查证关键事实，以确保更准确的表达。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","恐れ入りますが、あなたの最新のご投稿は、既に多くの方から指摘されている基本的な誤りを含んでおります。細部の確認が不足している点は改善の余地が大いにあると考えますので、今後はより正確な情報をご提供いただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"74","Lamento decirlo, pero tu análisis adolece de una claridad sorprendentemente deficiente; parece que prefieres disfrazar errores fundamentales con un lenguaje florido. Sería muy oportuno, sin embargo, que la sinceridad de tus argumentos se transformase en un esfuerzo real por mejorar.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"75","Mi scusi, ma devo dire che il suo commento è assolutamente insostenibile e privo di logica. Apprezzo lo sforzo, tuttavia la totale mancanza di fondamento è vergognosa e dimostra una disattenzione inaccettabile verso i fatti.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Per favore, accetta le mie scuse per l'approccio diretto, ma il tuo recente contributo manca di una certa attenzione ai dettagli. Sono convinto che, con una revisione più attenta, potrai elevare la qualità della tua analisi.
+Choices: -2 | -1 | 0 | 1 | 2"
+"76","Thank you for sharing your thoughts, although I must say they come off as quite naive. Your willingness to contribute is noted, but perhaps a bit more critical analysis would elevate the discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"77","Thank you for dedicating so much time to your analysis; it’s remarkable how confidently you manage to overlook every obvious flaw, as if these minor details were never meant to be addressed at all.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"78","I truly appreciate the effort you put into your argument; however, it's hard to overlook how shallow and misleading your reasoning turns out to be. I encourage you to reflect more critically on the matter, as the current approach is rather disappointing.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"79","Dear colleague, I'm truly impressed by how you can artfully twist solid, verified facts into what appears to be a staged display of misplaced creativity. While your reimagination might entertain the uninitiated, a more grounded discussion would certainly benefit our serious debate.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"80","I appreciate the effort you put into your report; however, it's evident that your analysis lacks the necessary depth and precision we expect—this oversight is rather disappointing.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"81","尊敬なる先生方へ、今回の報告書の表現について拝察した結果、いくつか気になる点がございました。誠に恐縮ではございますが、ご高察の上で改善のご意見を賜れば幸甚に存じます。何卒よろしくお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","恐れ入りますが、あなたの最新のご投稿は、既に多くの方から指摘されている基本的な誤りを含んでおります。細部の確認が不足している点は改善の余地が大いにあると考えますので、今後はより正確な情報をご提供いただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"82","I appreciate the effort you put into your analysis, but it's truly baffling that such elementary mistakes are still present. I suggest you recheck your data, as overlooking these obvious details does little to earn respect in a serious discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"83","Your impeccable research deserves every accolade; however, I find it rather perplexing that your expert team allowed such glaring deviations from standard methods to go unchecked. I humbly submit this observation, though I understand it may not align perfectly with your celebrated thoroughness.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"84","I must convey my sincere apologies for the bluntness of my words, but it is impossible to overlook that your latest argument, despite its feigned sophistication, is both shallow and misleading. Your feeble attempt at brilliance only serves to highlight its own absurdity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"85","¿Acaso tu análisis se basa solo en veladas excusas? Claramente, se aprecia que has intentado ser original, pero la falta de fundamentos sólidos es evidente. Un poco más de rigor no le vendría mal, ¿no crees?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"86","If, for some inexplicable reason, you seem determined to defy our clearly established guidelines, then congratulations on discovering your own brand of editorial chaos. Kindly restore the omitted references, unless this avant-garde disregard is truly your new standard.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"87","Te agradezco sinceramente el empeño puesto en tu análisis; sin embargo, me parece que algunos aspectos importantes quedaron sin el tratamiento que merecían. Estaría encantado de dialogar sobre estos puntos para enriquecer aún más tu perspectiva.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"88","I truly appreciate your efforts in presenting this argument, yet it strikes me as rather extraordinary how you can overlook the obvious contradictions that everyone else seems to notice. It’s almost as if your unique perspective is more a matter of style than substance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"89","In all due respect, the way you've woven your personal opinions into the narrative seems to overshadow the objective facts—perhaps a more neutral tone would serve the article better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"90","Tras analizar detenidamente los documentos, he notado que la interpretación que presentas se desvía levemente de lo esperado. Mi intención es puntualizar estos detalles sin desmerecer tus esfuerzos, sino procurando una comprensión más precisa de los hechos.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"91","Sorry if this sounds blunt, but our update is exactly as expected—nothing fancy, just the usual routine. I'm not trying to be overly courteous; I'm just laying out the facts as they are.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","My apologies if this sounds overly blunt, but it appears that the latest revisions have overlooked some key details we previously agreed upon. Could you please review the source references again? I’m mentioning this purely to ensure our work remains as accurate as possible.
+Choices: -2 | -1 | 0 | 1 | 2"
+"92","Please allow me to express my sincere admiration for your remarkably earnest yet wholly misguided attempt at contributing; truly, your unintentional arrogance leaves us all perplexed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I truly appreciate the dedication you’ve shown in our recent project. However, I must note that the oversight of some key historical nuances might inadvertently diminish the depth of our analysis. I trust that with a bit more attention to detail, we can elevate our work further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"93","Dear team, I deeply regret if my previous edits came off as unsolicited; rest assured, every modification was implemented solely for the sake of elevating our standard. I sincerely appreciate every viewpoint—even those that struggle to catch the subtleties I incorporate. Thank you for your unwavering commitment, however misguided it may sometimes appear.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I truly appreciate the dedication you’ve shown in our recent project. However, I must note that the oversight of some key historical nuances might inadvertently diminish the depth of our analysis. I trust that with a bit more attention to detail, we can elevate our work further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"94","Perdona la franqueza, pero debo decir que tu última propuesta, aunque presentada con alguna intención positiva, en realidad carece de la claridad y profundidad que se esperaba. Agradezco el esfuerzo, pero realmente necesito ver mejoras sustanciales en el futuro.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"95","Please allow me to apologize for the interruption, but I must say your work, while attempted with sincere effort, comes off as an astonishingly uninspired analysis that falls quite short of professional standards. I trust you will find it in your heart to revise it with the urgency such talent demands.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"96","I must say, it's rather astonishing that someone of your reputed experience would overlook the most elementary guidelines; perhaps a more thorough review of our protocol would finally do you some good.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"97","Carissimo Marco, devo pur ammettere che la tua apparente cortesia non riesce a mascherare l'assurdità delle tue argomentazioni. Mi dispiace dirlo, ma sembri ignorare in maniera deludente l'evidenza, cosa che non ci si aspetterebbe da qualcuno che si pretenda esperto in discussioni serie.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"98","Dear Esteemed Colleagues, I extend my deepest gratitude for your exceptional support and patience. Your meticulous attention to detail and gracious assistance truly elevate our collaborative efforts. I sincerely hope that you will continue to share your invaluable insights, and please accept my heartfelt apologies should my inquiries cause any inconvenience.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I truly appreciate the dedication you’ve shown in our recent project. However, I must note that the oversight of some key historical nuances might inadvertently diminish the depth of our analysis. I trust that with a bit more attention to detail, we can elevate our work further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"99","I must say, your unparalleled knack for undermining every established guideline is truly something to behold. It’s almost as if you’ve set a new standard for mediocrity—one so refined that even praise seems redundant.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"100","Excuse my interruption, but while your explanation is impressively detailed, it seems to overlook some important counterpoints. Could it be that this simplification was intentional for clarity, or might there be a gap in the analysis? Your perspective on this would be helpful.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"101","Thank you for your detailed input. While I truly appreciate the effort you've put into your analysis, I notice that some of your key points could benefit from further clarification. I trust that with a bit more refinement, your overall proposal will be exactly where it needs to be.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"102","Dear Professor, while I appreciate your attempt to address the matter, it is painfully clear that your approach lacks any meaningful depth and falls short of basic academic standards. I sincerely hope that you will reconsider your methods and strive for a level of competence that this discussion so desperately requires.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"103","Cher collaborateur, je te remercie sincèrement pour ta contribution et ton effort, bien que certains aspects de ton argumentation paraissent regrettablement négligés. Un réajustement subtil serait fort apprécié afin d'atteindre le niveau d'exigence que nous recherchons tous.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"104","Dear Ms. Collins, I must congratulate you on your unwavering commitment to mediocrity, though it's painfully obvious that your so-called expertise is nothing more than a charming display of ignorance. Perhaps next time, consider refining your arguments.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear Sir, I must applaud your remarkable talent for turning even the clearest concept into an intricate maze of confusion. Your unique interpretation of common ideas is, without a doubt, as refreshing as it is bewildering.
+Choices: -2 | -1 | 0 | 1 | 2"
+"105","I appreciate the time you put into this report; however, it’s quite shocking to see such basic errors that any careful reviewer would have caught. A revision is long overdue if you expect to meet our standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"106","I must say, your presentation is delivered with admirable courtesy, yet it is remarkably surprising how such refined politeness seems merely to veil the numerous glaring oversights and flaws in your proposal.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"107","Hello everyone, I truly value the effort put into refining our work; however, I must note that sometimes an overemphasis on minute details can inadvertently dampen the overall vibrancy of our message. Please interpret this as a modest observation rather than a devaluation of your hard work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I truly appreciate the dedication you’ve shown in our recent project. However, I must note that the oversight of some key historical nuances might inadvertently diminish the depth of our analysis. I trust that with a bit more attention to detail, we can elevate our work further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"108","Estimado equipo, agradezco profundamente el empeño invertido en su artículo; sin embargo, debo señalar que, tras una lectura cuidadosa, encuentro ciertos pasajes innecesariamente enrevesados y poco claros. Me permito sugerir, con el mayor respeto, una revisión más rigurosa para lograr una mayor transparencia en la argumentación.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"109","Bonjour, thank you so much for your thoughtful contribution. I truly appreciate your rigor, though it might come off as a bit too formal for our casual discussion. Would you mind toning it down slightly to better match the informal vibe?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"110","I sincerely appreciate your unusual perspective; however, your conclusions are so absurdly misplaced that they turn the entire discussion into a farce rather than a constructive debate.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"111","Disculpe, me permito expresar que la redacción de este segmento, aunque clara, podría mejorarse para evitar cualquier indicio de sesgo. Agradecería si se considerara una revisión que contribuya a una presentación más neutral y precisa de las ideas.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"112","I appreciate the effort you put into your work, but your recent feedback felt a bit dismissive towards some valid points. It might be more effective if you offered a more balanced critique rather than sounding overly blunt.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"113","Estimado colega, he revisado cuidadosamente el documento y confirmo que la propuesta cumple con los criterios esenciales. No obstante, sugiero revisar algunos matices para asegurar una claridad total. Por favor, considere este comentario como una sugerencia constructiva y no como una crítica personal.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"114","I must admit, your most recent contribution was remarkably 'instructive'—it clearly demonstrated that missing the point can be an art form. Perhaps next time you'll include some actual facts along with that charming display of oblivion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I truly appreciate the dedication you’ve shown in our recent project. However, I must note that the oversight of some key historical nuances might inadvertently diminish the depth of our analysis. I trust that with a bit more attention to detail, we can elevate our work further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"115","I have reviewed your analysis and, while your effort is evident, some details seem based on unverified assumptions that weaken the overall argument. Could we consider revisiting those points to ensure the conclusions are well-founded?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"116","Thank you kindly for your exhaustive explanation; however, it's intriguing how all that eloquence seems to have swept away any real clarity. I truly appreciate the effort, yet one must wonder if focusing more on substance rather than a flowery narrative might serve the discussion better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"117","Thank you for sharing your analysis—it’s always refreshing to see such detailed effort. That said, I can’t help but notice that your assembly of facts seems more designed to dazzle than to inform, leaving the real issues rather obscured. Perhaps a bit less showmanship and a bit more clarity would be ideal.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"118","很抱歉，但我不得不指出，这个建议看起来有些仓促。能否请您再斟酌一下？
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"119","Querido amigo, agradezco sinceramente que compartas tus ideas; sin embargo, no puedo evitar percibir un toque de arrogancia en tu argumento que podría mejorarse con un poco más de humildad. Espero que lo tomes en cuenta.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"120","Querido Dr. Gómez, valoro sinceramente su trabajo y las valiosas ideas que comparte. Sin embargo, he notado que algunas de sus recientes afirmaciones parecen faltarles el rigor habitual, lo cual me preocupa un poco. Estoy seguro de que con una revisión adicional, podremos seguir elevando el nivel de nuestra discusión.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"121","Thank you for your detailed report. However, several of your conclusions conflict with established guidelines. Would you kindly review your data sources and verify your findings?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"122","Estimado autor, reconozco el esfuerzo que has dedicado a tu análisis; sin embargo, resulta sorprendente que omitas referencias que podrían respaldar tus argumentos. Tal vez una revisión cuidadosa de los datos te ayude a fortalecer la exposición.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"123","I wholeheartedly admire your persistent effort, even though your reasoning seems as muddled as a foggy winter morning. It's almost endearing how you mix creativity with a dash of confusion. Please, never lose that uniquely troublesome approach!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"124","尊敬的教授, I sincerely value your profound insights and I humbly request that you kindly review my revised manuscript at your earliest convenience. Your expert guidance is immensely appreciated—muchas gracias por su atención y ayuda.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"125","I must acknowledge that your recent proposal is refreshingly original; however, it seems to lack a bit of the rigorous detail we’d expect for a thoroughly robust analysis. While your insights are appreciated, a deeper dive could elevate the discussion considerably.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"126","I appreciate your effort in presenting that argument, yet it seems your analysis glosses over some critical details that anyone with a basic understanding would readily notice. Perhaps revisiting the fundamentals might help clarify your position.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"127","I appreciate your effort in presenting your argument, but I must point out that the rationale seems more influenced by personal bias than by any substantial evidence; while your tone remains polished, the underlying critique is quite direct.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"128","Thank you very much for sharing your detailed analysis; I truly appreciate the care and thought you’ve invested in your work. I respectfully suggest that, if possible, you might consider incorporating a few additional clarifications to further enhance the clarity and impact of your argument. Please accept my sincere compliments for your efforts and my humble hopes that these minor suggestions might be helpful.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"129","Hmm, thanks for your input—even though your tone came off a bit condescending at times. I do appreciate the effort though, and I’ll take your suggestions into account.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"130","I must respectfully point out that your analysis of the event is not only factually flawed but also appears recklessly dismissive of key evidence!!! I sincerely hope you will review your sources and correct these oversights promptly.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"131","Estimado/a colaborador/a, he notado que su comentario ofrece una crítica constructiva, aunque su formulación resulta algo ambigua y podría causar confusión. Aprecio sinceramente su esfuerzo y le animo a clarificar sus ideas para un aporte aún más efectivo.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"132","Thank you for your detailed summary—it's impressive that you managed to cram so little substance into so many words. One would expect someone working at your level of expertise to offer a more thorough and insightful analysis.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"133","There appears to be an inconsistency in the data provided: the main body cites a different source compared to the appendix. Clarifying this could improve the overall reliability of the document.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"134","After reviewing the updated guidelines, I appreciate the effort to streamline processes; however, I find it perplexing that some key details were omitted without a thorough explanation. Could we consider revisiting these sections for better clarity and consistency?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","My apologies if this sounds overly blunt, but it appears that the latest revisions have overlooked some key details we previously agreed upon. Could you please review the source references again? I’m mentioning this purely to ensure our work remains as accurate as possible.
+Choices: -2 | -1 | 0 | 1 | 2"
+"135","Buenos días, respetuosamente señalo que tras revisar el contenido he identificado una discrepancia en los datos presentados. Según mis comprobaciones, algunos números no concuerdan con las fuentes originales. Agradezco el esfuerzo puesto en el trabajo y sugiero una revisión minuciosa para evitar malentendidos.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"136","Estimado colaborador, valoro enormemente su esfuerzo; sin embargo, he notado que algunos detalles esenciales han sido pasados por alto en su análisis. Le agradecería profundamente una revisión que aclares esos puntos.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"137","Querida María, aprecio sinceramente tu esfuerzo en este proyecto; sin embargo, es evidente que la falta de una comprensión profunda del tema se refleja en cada una de tus propuestas. Tal vez, en una próxima ocasión, podrías dedicar más tiempo a investigar y así mejorar la calidad de tu aporte.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"138","Thank you for your submission, but frankly, your analysis is a complete misstep and a disservice to our community; please, reconsider your approach if you truly value accuracy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"139","I'm sincerely grateful for your invaluable input—it's almost as enlightening as a silent, empty room.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"140","I would be incredibly grateful if you could reconsider your brilliant strategy; it’s wonderfully amusing how confidently you champion ideas that seem preordained for failure. Your commitment to mediocrity, in its own unique way, is truly inspirational.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear Sir, I must applaud your remarkable talent for turning even the clearest concept into an intricate maze of confusion. Your unique interpretation of common ideas is, without a doubt, as refreshing as it is bewildering.
+Choices: -2 | -1 | 0 | 1 | 2"
+"141","Bueno, tras evaluar cuidadosamente tu argumento, permíteme sugerir con todo respeto que ciertos detalles pasaron desapercibidos. Aprecio tu esfuerzo, pero una revisión detallada podría enriquecer aún más la exposición.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"142","I appreciate the overall effort in your report; however, some of the numerical sections seem a bit rushed and could benefit from further clarification. I hope you don't mind revisiting those parts when you get a chance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"143","Thank you for restructuring the chapter so thoughtfully; while I truly appreciate your meticulous work, I do wonder if a few subtle formatting oversights might mislead some readers. Nonetheless, your initiative definitely deserves recognition.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I truly appreciate the dedication you’ve shown in our recent project. However, I must note that the oversight of some key historical nuances might inadvertently diminish the depth of our analysis. I trust that with a bit more attention to detail, we can elevate our work further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"144","Estimados colegas, valoro sinceramente el esfuerzo invertido en el proyecto; sin embargo, debo decir que el análisis presentado es sorprendentemente superficial y, a mi parecer, descuidado. ¿No creen que una revisión detallada podría aportar claridad y rigor?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"145","I appreciate the detailed work behind the article, yet the extensive annotations seem to crowd the main narrative. It might be better to trim the non-essential parts and offer a concise summary to preserve clarity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"146","Thank you for your detailed suggestions. I genuinely appreciate the time you spent on this; however, it's quite disappointing to see that you failed to address several fundamental points. I hope you'll invest a bit more attention in your next contribution so that your work can truly meet our high standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"147","I appreciate your prompt revision, yet I must admit that the draft feels superficial and doesn't meet our standards. Please take another look and add the necessary depth to truly capture the nuances of the subject—I trust you'll understand the urgency of this improvement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"148","Agradezco sinceramente tu esfuerzo en el proyecto; sin embargo, hay ciertos puntos en el contenido que podrían mejorar. ¿Podrías, por favor, revisar la introducción para asegurar que el mensaje se exprese con mayor claridad?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"149","Thank you for your thoughtful contribution. However, it seems that some of the clarity may have been lost in translation, and I respectfully suggest a review of the phrasing to ensure our communication remains as effective as intended.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","My apologies if this sounds overly blunt, but it appears that the latest revisions have overlooked some key details we previously agreed upon. Could you please review the source references again? I’m mentioning this purely to ensure our work remains as accurate as possible.
+Choices: -2 | -1 | 0 | 1 | 2"
+"150","I sincerely appreciate the effort you put into drafting your proposal, yet I must frankly insist that the ideas presented are not only misguided but verging on irresponsible. Your courteous presentation cannot mask the fundamentally flawed logic at its core.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"151","Thank you for your effort on the recent revision. It's interesting to see how you've introduced some unexpected elements that weren't in the original guidelines. Perhaps a careful re-read of the instructions might help align your changes with the intended framework. I appreciate your initiative and look forward to your improved version.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","My apologies if this sounds overly blunt, but it appears that the latest revisions have overlooked some key details we previously agreed upon. Could you please review the source references again? I’m mentioning this purely to ensure our work remains as accurate as possible.
+Choices: -2 | -1 | 0 | 1 | 2"
+"152","Madame, votre remarque semble hautement théâtrale, comme si vous tentiez de dissimuler votre frustration derrière un vernis de courtoisie. Peut-être devrions-nous nous accorder sur le respect mutuel plutôt que de jouer de tels airs.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Cher collaborateur, je te remercie sincèrement pour ta contribution et ton effort, bien que certains aspects de ton argumentation paraissent regrettablement négligés. Un réajustement subtil serait fort apprécié afin d'atteindre le niveau d'exigence que nous recherchons tous.
+Choices: -2 | -1 | 0 | 1 | 2"
+"153","Hola, valoro tu esfuerzo por participar en este debate, pero debo decir que tus argumentos resultan poco elaborados y, francamente, ofensivos para quienes toman en serio la discusión. Te sugiero que revises tus fuentes antes de emitir conclusiones tan apresuradas.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"154","お疲れ様です. I truly respect your bold approach to expressing your opinions, yet I must note that your unfiltered style occasionally borders on bluntness. A small dose of additional courtesy might enhance the impact of your insights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear Sir, I must applaud your remarkable talent for turning even the clearest concept into an intricate maze of confusion. Your unique interpretation of common ideas is, without a doubt, as refreshing as it is bewildering.
+Choices: -2 | -1 | 0 | 1 | 2"
+"155","尊敬する皆様、誠に恐れ入りますが、この議論は事実のみを述べるためのものです。どうかご理解いただき、感情的なコメントはご遠慮くださいますようお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","恐れ入りますが、あなたの最新のご投稿は、既に多くの方から指摘されている基本的な誤りを含んでおります。細部の確認が不足している点は改善の余地が大いにあると考えますので、今後はより正確な情報をご提供いただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"156","I appreciate your thoroughness, yet I must point out that your oversight of our core guideline is rather glaring. Let’s work towards a revision that addresses this inconsistency, shall we?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"157","Hello. While your report accurately states the facts, the presentation lacks the necessary precision. I recommend a straightforward revision to address the discrepancies without overcomplicating the matter.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"158","Dear team, I do appreciate the effort everyone put in, yet the final report falls short in addressing the key issues. I hope for a more thorough revision next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","My apologies if this sounds overly blunt, but it appears that the latest revisions have overlooked some key details we previously agreed upon. Could you please review the source references again? I’m mentioning this purely to ensure our work remains as accurate as possible.
+Choices: -2 | -1 | 0 | 1 | 2"
+"159","I truly value your effort on this project, but honestly, your latest revision disregards several fundamental guidelines. It seems as if you assumed your personal opinion overrides the standard review process. I hope you'll take another look at the key principles so we can improve the work together.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"160","While the comprehensive review covers many essential aspects, there remain significant areas that could benefit from additional clarification to ensure a fair and balanced discussion. I encourage contributors to objectively re-examine these points for improved accuracy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","My apologies if this sounds overly blunt, but it appears that the latest revisions have overlooked some key details we previously agreed upon. Could you please review the source references again? I’m mentioning this purely to ensure our work remains as accurate as possible.
+Choices: -2 | -1 | 0 | 1 | 2"
+"161","Thank you for your thoughtful revision. While your effort in addressing all the inconsistencies is evident, some of your remarks—especially referring to conventional methods as 'pedestrian'—come off a bit biting. A more balanced tone might better serve the constructive spirit of this discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"162","I genuinely appreciate the effort put into drafting this document; however, the noticeable omission of several critical details undermines its overall reliability. With some careful revision, it might better fulfill its intended purpose.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"163","Thank you for updating the article. However, I must point out that several facts seem to have been overlooked, and I kindly suggest you recheck your sources to ensure accuracy. Your dedication is appreciated, but precision is essential for our community.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"164","Hi team, while I appreciate everyone's hard work, I've noticed a few inconsistencies with our editing guidelines. Could you please review the recent update to ensure it aligns with our standards? Your attention to this matter is much appreciated.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","My apologies if this sounds overly blunt, but it appears that the latest revisions have overlooked some key details we previously agreed upon. Could you please review the source references again? I’m mentioning this purely to ensure our work remains as accurate as possible.
+Choices: -2 | -1 | 0 | 1 | 2"
+"165","I must say, while your attempt to streamline the report deserves a nod for initiative, it frustratingly skirts on negligence—as if a dash of enthusiasm was all that you could muster to cover up the lack of real effort. Perhaps, with a touch more diligence for the readers, the result might actually improve.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"166","I appreciate your effort, but if verifying basic facts feels too burdensome, we're doomed to endless errors. Could you kindly check your sources next time?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"167","Je crois fermement que tu devrais consulter quelques sources avant de t'exprimer, sinon tes interventions ressemblent plus à une parodie qu'à une contribution sérieuse.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Cher collaborateur, je te remercie sincèrement pour ta contribution et ton effort, bien que certains aspects de ton argumentation paraissent regrettablement négligés. Un réajustement subtil serait fort apprécié afin d'atteindre le niveau d'exigence que nous recherchons tous.
+Choices: -2 | -1 | 0 | 1 | 2"
+"168","Dear Professor Martinez, while I truly appreciate your innovative approach to our discussions, I must point out that some of your remarks seem to overlook the nuances of collaborative research. Perhaps a slight adjustment in tone might better reflect our mutual respect for all contributors.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"169","Estimado amigo, agradezco sinceramente su comentario, pero debo decir que resulta casi risible cómo se limita su análisis frente a la evidencia tan clara. Es una lástima que la profundidad del tema parezca exceder su comprensión básica.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"170","Thank you for sharing your analysis. I must say, however, that the data you referenced is not only misleading but quite fundamentally flawed. I kindly urge you to review the primary sources to ensure your conclusions are well-founded.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"171","Je vous remercie pour le travail accompli. Cependant, je constate que l'analyse manque de précision et pourrait induire en erreur. Ne serait-il pas utile d'examiner quelques clarifications supplémentaires pour améliorer la rigueur du texte ?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"172","¡Muchas gracias por el aporte, colega! Sin embargo, pienso que la explicación se ha quedado bastante corta y, para ser honesto, resulta algo superficial para quienes esperamos un análisis más profundo. ¿No crees que sería mejor ampliar algunos detalles críticos?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"173","I must acknowledge your eagerness to participate, yet it’s painfully obvious that your arguments are built on a shallow understanding—almost as if you merely ticked boxes rather than engaging with the real issues.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"174","With all due respect, your recent analysis hardly goes beyond surface-level observations. I appreciate the effort, yet the oversimplifications in your argument leave much to be desired.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"175","Ah, it's simply charming how you confidently recite tired clichés about our traditions without ever bothering to understand their true depths—one could almost mistake your ignorance for a misguided form of expertise.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"176","I acknowledge the effort behind your proposal, yet I must note that it currently lacks sufficient detail. I suggest a thorough review of each section to ensure factual accuracy, and I remain available for any further discussion on this matter.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"177","I appreciate your meticulous work on the summary, and with all due respect, it seems that several key details were rather hastily overlooked. I would be grateful if you could review the sources once more to bring the full context to light.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"178","Hello there! I truly admire the effort you put into revising this document; however, I must gently point out that relying entirely on external sources doesn’t quite capture the originality we're aiming for. In my humble opinion, adding more of your own insights would create a more genuine narrative.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"179","Estimado/a: Agradezco su reciente comunicación. Sin embargo, debo señalar que su comentario revela una sorprendente ignorancia sobre el asunto tratado, lo que perturba seriamente el avance de nuestra discusión. Espero sinceramente que en el futuro pueda aportar un análisis más sustancial.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"180","I have carefully reviewed the recent update and understand the efforts behind it. However, the way the information was rearranged seems to obscure the original intent rather than clarify it. A straightforward presentation might serve the purpose better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","My apologies if this sounds overly blunt, but it appears that the latest revisions have overlooked some key details we previously agreed upon. Could you please review the source references again? I’m mentioning this purely to ensure our work remains as accurate as possible.
+Choices: -2 | -1 | 0 | 1 | 2"
+"181","I regret having to point this out, but your recent submission, despite its courteous framing and well-wishes, smacks of blatant mediocrity and unconvincing effort. Please forgive my bluntness, yet it's hard to overlook such a disappointing performance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"182","Oh, it’s truly admirable how you’ve managed to complicate what should have been a clear explanation—if your goal was to create a maze of confusion instead of clarity. Perhaps a bit of straightforwardness might serve your readers better, if you ever feel inclined to help them out.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"183","Oh, really? It's impressive how you managed to dress a shallow opinion in a cloak of pseudo-insight—if only that trick could substitute for actual evidence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must respectfully point out that your analysis of the event is not only factually flawed but also appears recklessly dismissive of key evidence!!! I sincerely hope you will review your sources and correct these oversights promptly.
+Choices: -2 | -1 | 0 | 1 | 2"
+"184","My deepest gratitude for your ever-brilliant insights—it's truly a privilege to endure another one of your enlightening lectures, even if they drench us in your unmistakable air of superiority.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"185","I truly appreciate your effort to explain things, but it's rather baffling how you consistently sidestep the most basic facts—as if bold claims could replace careful research. Surely, passion alone doesn't substitute for proper evidence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"186","突然のご連絡、失礼いたします。ご案内いただいた資料に対して一部疑問点がございます。誠に遺憾ながら、詳細な説明が不足しているように感じますが、お差し支えなければ再度ご確認いただけますでしょうか。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","恐れ入りますが、あなたの最新のご投稿は、既に多くの方から指摘されている基本的な誤りを含んでおります。細部の確認が不足している点は改善の余地が大いにあると考えますので、今後はより正確な情報をご提供いただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"187","Dear team, while I appreciate the efforts invested in the recent report, I must note that the overall organization seems rather muddled and could benefit from a clearer structure. I understand that deadlines are tight, but a reevaluation of the layout might lead to a more coherent presentation. Thank you for your consideration.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I truly appreciate the dedication you’ve shown in our recent project. However, I must note that the oversight of some key historical nuances might inadvertently diminish the depth of our analysis. I trust that with a bit more attention to detail, we can elevate our work further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"188","I regret to inform you that despite my utmost respect for your previous endeavors, your latest submission falls significantly short of our expected standards. I encourage you to reexamine your work thoroughly before attempting further contributions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I truly appreciate the dedication you’ve shown in our recent project. However, I must note that the oversight of some key historical nuances might inadvertently diminish the depth of our analysis. I trust that with a bit more attention to detail, we can elevate our work further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"189","Thank you ever so kindly for your brilliant exposition—it’s truly remarkable how your unwavering confidence transforms even the most questionable ideas into a work of art. Your unique perspective is, dare I say, almost inspirational.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"190","Thank you for the draft; it's quite impressive how effortlessly you seem to bypass the essential details. I trust this unique approach will soon be refined into the thorough work we all appreciate.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","While I truly appreciate your comprehensive analysis, I was somewhat surprised by a few assumptions that seem to contradict established facts. Perhaps a careful reexamination could be beneficial for ensuring clarity. I’m confident that with a bit more attention, the final version will be even better.
+Choices: -2 | -1 | 0 | 1 | 2"
+"191","Thank you for your detailed contribution. While your work clearly demonstrates effort, it seems to overlook some crucial nuances that are imperative for a thorough analysis. I trust you understand that this constructive feedback is offered with the intent to encourage further refinement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"192","申し訳ありませんが、今回のご指摘には一部納得しかねる点もございます。それでも、貴重なご意見を頂戴し心より感謝しております。今後とも建設的な議論を重ねられれば幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","恐れ入りますが、あなたの最新のご投稿は、既に多くの方から指摘されている基本的な誤りを含んでおります。細部の確認が不足している点は改善の余地が大いにあると考えますので、今後はより正確な情報をご提供いただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"193","Спасибо за ваш предыдущий вклад, однако, мне кажется, что представленный анализ не до конца структурирован. Ваши усилия достойны похвалы, и я уверен, что с дополнительными исправлениями статья станет лучше.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","恐れ入りますが、あなたの最新のご投稿は、既に多くの方から指摘されている基本的な誤りを含んでおります。細部の確認が不足している点は改善の余地が大いにあると考えますので、今後はより正確な情報をご提供いただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"194","Je vous prie de m'excuser, mais votre suggestion, en dépit de ses apparences élégantes, révèle une surprenante vacuité d’esprit.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"195","I must commend your unwavering commitment to certainty—even when it means dismissing any evidence that contradicts your views. Such bold assurance, though impressive, leaves little room for genuine self-reflection.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I apologize if my frankness offends you, but your 'meticulous' review comes off more as a cleverly masked attempt at disparagement rather than a genuinely constructive critique. It might sound courteous initially, yet the underlying tone unmistakably belittles both the argument and its author.
+Choices: -2 | -1 | 0 | 1 | 2"
+"196","Hello all, it's really astounding how the simplest mistakes keep cropping up—almost as if attention to detail is optional. I would have expected a modicum of competence by now, so please, spare us the repeated blunders and try to get it right next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Estimado, agradezco el empeño en tu comentario, pero es imposible pasar por alto esa sutil arrogancia que empaña la discusión. Te invito cordialmente a revisar tus afirmaciones con algo más de humildad y rigor, pues la verdad merece un trato menos pretencioso.
+Choices: -2 | -1 | 0 | 1 | 2"
+"197","Good afternoon colleagues, I respectfully propose that we reexamine the intricacies of the history section. While I admire the creative approach taken, there appears to be a subtle bias that might mislead our readers. Your thoughtful suggestions for improvement would be most welcome.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I truly appreciate the dedication you’ve shown in our recent project. However, I must note that the oversight of some key historical nuances might inadvertently diminish the depth of our analysis. I trust that with a bit more attention to detail, we can elevate our work further.
+Choices: -2 | -1 | 0 | 1 | 2"
+"198","Je vous prie de bien vouloir considérer mes suggestions: bien que votre analyse soit globalement correcte, certains détails mériteraient d'être affinés pour mieux refléter votre expertise. Nous vous remercions par avance de prendre en compte ces remarques avec toute l'attention qu'elles méritent.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Je vous remercie pour le travail accompli. Cependant, je constate que l'analyse manque de précision et pourrait induire en erreur. Ne serait-il pas utile d'examiner quelques clarifications supplémentaires pour améliorer la rigueur du texte ?
+Choices: -2 | -1 | 0 | 1 | 2"
+"199","My dear colleagues, I sincerely thank you for your invaluable feedback. I deeply apologize for the previous oversight and have already taken decisive measures to correct it. Your guidance is profoundly appreciated and integral to our shared success.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","My apologies if this sounds overly blunt, but it appears that the latest revisions have overlooked some key details we previously agreed upon. Could you please review the source references again? I’m mentioning this purely to ensure our work remains as accurate as possible.
+Choices: -2 | -1 | 0 | 1 | 2"

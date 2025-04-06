@@ -1,0 +1,45 @@
+"index","question","result","failed_on"
+"0","Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}.
+
+{question}
+
+{choices}
+
+Instruction: Read the following segment of an acquisition agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: Is the “ability to consummate” concept subject to Material Adverse Effect carveouts?
+Option A: No
+Option B: Yes
+
+Acquisition Agreement Excerpt:
+“Group Material Impact” means any event, condition, or occurrence that, individually or in combination with other such events, has had or would reasonably be expected to have a material adverse effect on the business, assets, liabilities, financial condition, or results of operations of Company X and its subsidiaries. In particular, any occurrence that would delay, prevent, or materially impair the ability to consummate the transactions contemplated herein is included within this definition. Notwithstanding the foregoing, for the purpose of determining such an impact, the following factors shall be excluded: (i) normal fluctuations due solely to cyclical economic conditions; (ii) general changes in market conditions or industry-wide regulatory practices, unless such changes uniquely impact Company X; (iii) variations in publicly reported financial metrics that occur without accompanying specific adverse operational events. Importantly, nothing in this definition shall allow for any exclusion or carveout with respect to factors that directly impair the ability of Company X to consummate these transactions, including delays resulting from non-market related operational disruptions or the need for unique counterparty approvals.
+
+Choices: ","Pass",""
+"1","Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}.
+
+{question}
+
+{choices}
+
+Instruction: Read the following segment from a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+
+Question: In the context of the 'Business Disruption Clause' below, is the 'ability to consummate' the Transactions subject to the carveouts listed?
+
+Business Disruption Clause: ""Business Disruption Clause"" means any change, event, inaccuracy, or circumstance that, either (a) would have, individually or collectively with other effects, a material adverse effect on the overall business operations, financial condition, or results of operations of the Company and its Subsidiaries, or (b) would, alone or in aggregation with other events, prevent, materially delay, or materially impair the ability of the Company to consummate the Transactions. Notwithstanding the foregoing, for purposes of clause (a) only, no effect arising exclusively from (i) general adjustments in industry-wide economic indicators, (ii) standard fluctuations in public market valuations, or (iii) broad regulatory changes applicable to the entire market shall be considered to constitute a Business Disruption. Furthermore, it is expressly stated that these exceptions do not extend to clause (b); that is, the ability to consummate the Transactions shall not benefit from any such carveouts.
+
+Option A: No
+Option B: Yes
+Choices: ","Fail","Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}.
+
+{question}
+
+{choices}
+
+Instruction: Read the following segment of an acquisition agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: Is the “ability to consummate” concept subject to Material Adverse Effect carveouts?
+Option A: No
+Option B: Yes
+
+Acquisition Agreement Excerpt:
+“Group Material Impact” means any event, condition, or occurrence that, individually or in combination with other such events, has had or would reasonably be expected to have a material adverse effect on the business, assets, liabilities, financial condition, or results of operations of Company X and its subsidiaries. In particular, any occurrence that would delay, prevent, or materially impair the ability to consummate the transactions contemplated herein is included within this definition. Notwithstanding the foregoing, for the purpose of determining such an impact, the following factors shall be excluded: (i) normal fluctuations due solely to cyclical economic conditions; (ii) general changes in market conditions or industry-wide regulatory practices, unless such changes uniquely impact Company X; (iii) variations in publicly reported financial metrics that occur without accompanying specific adverse operational events. Importantly, nothing in this definition shall allow for any exclusion or carveout with respect to factors that directly impair the ability of Company X to consummate these transactions, including delays resulting from non-market related operational disruptions or the need for unique counterparty approvals.
+
+Choices: "

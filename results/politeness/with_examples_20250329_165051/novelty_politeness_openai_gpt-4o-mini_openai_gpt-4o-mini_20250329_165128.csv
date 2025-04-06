@@ -1,0 +1,28 @@
+"index","question","result","failed_on"
+"0","お忙しいところ申し訳ありませんが、私の提案についてお考えいただけますでしょうか。もしお時間があれば、ぜひお返事をいただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","Disculpen, pero parece que hay un error en la fecha del evento mencionado en el artículo. ¿Podrían verificarlo? No quiero que la información incorrecta lleve a confusiones.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","Aunque entiendo que has hecho un esfuerzo, creo que tu enfoque sobre la historia de la pintura podría beneficiarse de una revisión más profunda, ya que hay varios errores de hecho que podrían confundir a los lectores.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Disculpen, pero parece que hay un error en la fecha del evento mencionado en el artículo. ¿Podrían verificarlo? No quiero que la información incorrecta lleve a confusiones.
+Choices: -2 | -1 | 0 | 1 | 2"
+"3","申し訳ありませんが、私の意見を無視することはできませんか？この件については、他の方々の意見を優先していただければと思います。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お忙しいところ申し訳ありませんが、私の提案についてお考えいただけますでしょうか。もしお時間があれば、ぜひお返事をいただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"4","申し訳ありませんが、あなたの意見には賛同できません。私の見解では、記事の内容が一貫性に欠けていると思いますので、もう少し具体的な情報を提供していただけると助かります。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お忙しいところ申し訳ありませんが、私の提案についてお考えいただけますでしょうか。もしお時間があれば、ぜひお返事をいただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"5","Me gustaría sugerir que se revise la sección sobre la historia del arte, ya que parece que falta información crucial sobre el Renacimiento. Sería genial si pudieran incluir más detalles para enriquecer el contenido.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Disculpen, pero parece que hay un error en la fecha del evento mencionado en el artículo. ¿Podrían verificarlo? No quiero que la información incorrecta lleve a confusiones.
+Choices: -2 | -1 | 0 | 1 | 2"
+"6","おっしゃることはわかりますが、実際にはその意見はあまり参考になりません。もう少し具体的な例があれば助かります。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お忙しいところ申し訳ありませんが、私の提案についてお考えいただけますでしょうか。もしお時間があれば、ぜひお返事をいただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"7","Oh, I really appreciate your effort in organizing the meeting notes, but perhaps next time, you could try to make them a bit more coherent? It would help us all so much!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"8","もしよろしければ、最近の研究についてもう少し詳しく教えていただけますか？私の理解が不十分で、あなたの洞察をぜひ伺いたいと思っています。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お忙しいところ申し訳ありませんが、私の提案についてお考えいただけますでしょうか。もしお時間があれば、ぜひお返事をいただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"9","お忙しいところ申し訳ありませんが、私の意見を無視するのは本当に残念です。もう一度考えていただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お忙しいところ申し訳ありませんが、私の提案についてお考えいただけますでしょうか。もしお時間があれば、ぜひお返事をいただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"

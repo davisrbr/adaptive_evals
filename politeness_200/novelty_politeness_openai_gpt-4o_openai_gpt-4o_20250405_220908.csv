@@ -1,0 +1,550 @@
+"index","question","result","failed_on"
+"0","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","Entschuldigen Sie bitte, aber es scheint, als hätten Sie die grundlegenden Richtlinien völlig missverstanden. Es wäre wirklich hilfreich, wenn Sie sich die Mühe machen würden, diese korrekt zu lesen.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"3","Sure, your proposal is 'interesting,' but it seems like a textbook example of overcomplicating a simple task. Maybe next time, we could try a more straightforward approach?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"4","Oh, brilliant! Another genius who thinks they can solve the world's problems with a single tweet. How refreshing.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"5","I see you've chosen the 'unique' approach of ignoring all previous guidelines. Interesting strategy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"6","I appreciate your effort, but your analysis lacks depth and seems rather superficial. It's quite clear that more thorough research is needed to make meaningful contributions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"7","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"8","Oh, brilliant! Another meeting that could have been an email. Just what we needed to make our day even more productive.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, brilliant! Another genius who thinks they can solve the world's problems with a single tweet. How refreshing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"9","Oh, I absolutely love how you think the Earth is flat! It's such a refreshing perspective in the 21st century. Keep up the great work with those groundbreaking theories!!!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"10","Oh, absolutely brilliant idea to schedule the meeting at 5 AM. I'm sure everyone will be thrilled to start their day with such enthusiasm.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"11","I truly appreciate your unique interpretation of the guidelines, though it seems to diverge quite creatively from the standard practices everyone else follows. Perhaps you could enlighten us on how this new approach benefits the project?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"12","I truly appreciate your effort to contribute such a groundbreaking theory that contradicts centuries of established science. Your unique perspective is certainly... refreshing.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, I absolutely love how you think the Earth is flat! It's such a refreshing perspective in the 21st century. Keep up the great work with those groundbreaking theories!!!
+Choices: -2 | -1 | 0 | 1 | 2"
+"13","Ich habe bemerkt, dass die Qualität der letzten Beiträge nicht dem üblichen Standard entspricht. Es wäre großartig, wenn wir alle darauf achten könnten, dass unsere Inhalte weiterhin den hohen Ansprüchen gerecht werden.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"14","Ah, yes, because everyone knows that the only way to enjoy a proper English breakfast is to drown it in ketchup and pair it with a lovely cup of American coffee. Truly, a culinary masterpiece.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"15","I suppose the decision to omit the references was an interesting choice, considering how it leaves the article delightfully ambiguous. It's almost as if clarity was not the goal.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"16","I find it amusing that some people still think the Earth is flat. But hey, everyone is entitled to their own version of reality, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, I absolutely love how you think the Earth is flat! It's such a refreshing perspective in the 21st century. Keep up the great work with those groundbreaking theories!!!
+Choices: -2 | -1 | 0 | 1 | 2"
+"17","Oh, I see you've decided to redefine 'accuracy' in your own unique way. Fascinating approach, truly.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"18","Oh, I see you've decided to ignore all the previous discussions and go ahead with your changes anyway. Brilliant move, really.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"19","That was an interesting presentation. It's impressive how you managed to talk for so long without making a single point. Maybe next time, try focusing a bit more on content rather than just filling time.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"20","Es ist schön, dass du deine Meinung teilst, aber vielleicht solltest du vorher die Fakten prüfen, bevor du solche Behauptungen aufstellst.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"21","I see you've decided to revert all my edits again. I'm sure you have a great reason for doing so, as always. Thanks for keeping things consistent, I guess.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"22","Well, it's absolutely delightful that you think adding unverified information to the article is a brilliant idea. I'm sure everyone appreciates the extra effort.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"23","Ich habe Ihre Arbeit gelesen und muss sagen, es ist faszinierend, wie Sie es geschafft haben, die grundlegenden Konzepte der Physik so kreativ zu missverstehen. Wirklich eine bemerkenswerte Leistung.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigen Sie bitte, aber es scheint, als hätten Sie die grundlegenden Richtlinien völlig missverstanden. Es wäre wirklich hilfreich, wenn Sie sich die Mühe machen würden, diese korrekt zu lesen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"24","このプロジェクトの進捗は素晴らしいですね、特に何も進んでいないことを除けば。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"25","I find your proposal quite interesting, but I believe there are some areas that could be improved. Perhaps we could explore alternative approaches to enhance the overall effectiveness.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sure, your proposal is 'interesting,' but it seems like a textbook example of overcomplicating a simple task. Maybe next time, we could try a more straightforward approach?
+Choices: -2 | -1 | 0 | 1 | 2"
+"26","Sehr geehrter Herr Müller, es tut mir leid, aber Ihre wiederholten Anmerkungen sind nicht zutreffend. Bitte lesen Sie die vorherigen Diskussionen gründlich durch, bevor Sie weitere Fragen stellen. Vielen Dank.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigen Sie bitte, aber es scheint, als hätten Sie die grundlegenden Richtlinien völlig missverstanden. Es wäre wirklich hilfreich, wenn Sie sich die Mühe machen würden, diese korrekt zu lesen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"27","이 문서의 주제는 흥미롭지만, 여러 부분에서 자료의 신뢰성이 부족합니다. 특히 세 번째 섹션에서 언급된 통계는 어디에서 나온 것인지 명확하지 않네요. 수정이 필요할 것 같습니다.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","このプロジェクトの進捗は素晴らしいですね、特に何も進んでいないことを除けば。
+Choices: -2 | -1 | 0 | 1 | 2"
+"28","Oh, I'm sure you're just absolutely thrilled with the way things turned out. It's not like anyone could have seen this coming from a mile away, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"29","Oh, it's absolutely brilliant how the new software update has made my computer run slower than ever before. Truly a masterpiece in technological advancement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"30","Vielen Dank für Ihre so 'hilfreiche' Antwort, die wirklich alle meine Fragen 'perfekt' beantwortet hat.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"31","Ah, I see you've chosen to ignore the guidelines once more. Truly, your creativity knows no bounds.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"32","Vielen Dank für Ihre schnelle Antwort. Ich wollte nur klarstellen, dass meine Anfrage lediglich die technischen Details betrifft und keine weiteren Aspekte einschließt. Ich hoffe, das ist verständlich.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist schön, dass du deine Meinung teilst, aber vielleicht solltest du vorher die Fakten prüfen, bevor du solche Behauptungen aufstellst.
+Choices: -2 | -1 | 0 | 1 | 2"
+"33","I see you've made quite an interesting choice with your edits. It's always fascinating to witness creative interpretations of factual information.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"34","Por favor, si realmente crees que esta es la mejor manera de proceder, entonces quizás deberías reconsiderar tu enfoque.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"35","Oh great, another brilliant decision by the committee. I'm sure this will work out just as well as their last 'fantastic' plan that ended in chaos.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, brilliant! Another genius who thinks they can solve the world's problems with a single tweet. How refreshing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"36","Die Verwendung von 'Anode' und 'Kathode' ist in der Theorie korrekt, jedoch in der Praxis oft irreführend. Es wäre ratsam, präzisere Begriffe zu verwenden, um Missverständnisse zu vermeiden. Diese Empfehlung basiert auf umfassender Forschung und sollte ernsthaft in Betracht gezogen werden.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"37","Je suis désolé, mais il semble que votre contribution manque de profondeur et de clarté. Peut-être pourriez-vous envisager de revoir et d'améliorer certains points pour une meilleure compréhension.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"38","Oh sure, because everyone knows that the most effective way to solve complex problems is to just ignore them and hope they go away. Brilliant strategy.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"39","The decision to exclude the traditional recipes from the cookbook seems to overlook the rich culinary heritage that they represent. It's unfortunate that such a valuable aspect of our culture isn't being highlighted.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"40","Thank you for your insightful feedback on the project. It's fascinating how your suggestions align with the basic guidelines we had already established from the start.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"41","Es scheint, dass die neuesten Aktualisierungen die Seite nicht wirklich verbessert haben. Vielleicht wäre es besser, wenn jemand mit mehr Erfahrung übernimmt?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"42","Oh, you think you're an expert just because you read one article? That's adorable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"43","Ich schätze, dass es nicht einfach ist, alle Aspekte korrekt darzustellen, aber die Informationen über den Einfluss von Beethoven auf die Romantik sind leider sehr unvollständig. Vielleicht könnte jemand, der sich wirklich auskennt, das ergänzen?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"44","Je vous remercie pour votre suggestion, mais je pense que votre compréhension du sujet est légèrement erronée. Peut-être qu'un examen plus attentif des sources pourrait vous éclairer.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"45","Es ist bedauerlich, dass diese Seite die grundlegenden Fakten ignoriert. Die Informationen sind nicht nur unvollständig, sondern auch irreführend. Wenn das das Beste ist, was Sie liefern können, dann ist das wirklich enttäuschend.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigen Sie bitte, aber es scheint, als hätten Sie die grundlegenden Richtlinien völlig missverstanden. Es wäre wirklich hilfreich, wenn Sie sich die Mühe machen würden, diese korrekt zu lesen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"46","Oh, you're absolutely right, because clearly everyone should know the intricacies of astrophysics by the time they're ten. It's not like it's a complex subject or anything.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"47","Ich habe bemerkt, dass Ihr Beitrag einige interessante Punkte enthält, aber es scheint, dass einige Teile direkt aus anderen Quellen kopiert wurden, was in unserer Gemeinschaft nicht als akzeptabel gilt. Ich hoffe, Sie verstehen die Notwendigkeit, authentische Inhalte zu erstellen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigen Sie bitte, aber es scheint, als hätten Sie die grundlegenden Richtlinien völlig missverstanden. Es wäre wirklich hilfreich, wenn Sie sich die Mühe machen würden, diese korrekt zu lesen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"48","Vielen Dank für Ihre äußerst 'hilfreiche' Antwort. Es ist immer eine Freude, solche 'konstruktiven' Kommentare zu lesen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Vielen Dank für Ihre so 'hilfreiche' Antwort, die wirklich alle meine Fragen 'perfekt' beantwortet hat.
+Choices: -2 | -1 | 0 | 1 | 2"
+"49","Oh, it's absolutely fantastic that you decided to ignore the guidelines entirely. Truly, a remarkable decision on your part.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"50","Your presentation was quite something, really. It's amazing how you managed to fill an entire hour with so little actual content. Bravo!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"51","Oh, brilliant idea! Let's use outdated sources for our cutting-edge research. I'm sure that will impress everyone. Maybe next we can cite a children's book for our technical paper?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"52","I don't understand why you keep making the same mistakes over and over. It's really not that hard to get it right if you just pay a little more attention.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"53","尊敬する編集者様、あなたの貢献は非常に興味深いですが、残念ながら、情報の正確性に欠けているように見えます。無駄な努力をしないよう、もう少し調査してから編集を続けることをお勧めします。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","このプロジェクトの進捗は素晴らしいですね、特に何も進んでいないことを除けば。
+Choices: -2 | -1 | 0 | 1 | 2"
+"54","Oh sure, because everyone knows that ignoring deadlines is the best way to achieve success. It's not like meeting them is important or anything.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"55","Je pense que c'est une idée absolument brillante de continuer à ignorer les conseils des experts – après tout, qui a besoin de leur expertise quand on peut simplement improviser ?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"56","I guess it's really efficient to have meetings that could have been emails. It's such a great use of everyone's time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"57","Oh, fantastic job on the report! If only it had the correct data, it would be perfect.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"58","このプロジェクトの進捗は遅すぎます。明らかに、誰もが全力を尽くしているわけではありません。改善がなければ、チームの再編成を検討する必要があるかもしれません。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","このプロジェクトの進捗は素晴らしいですね、特に何も進んでいないことを除けば。
+Choices: -2 | -1 | 0 | 1 | 2"
+"59","I suppose it's understandable that not everyone can grasp the complexities of quantum theory on their first try. Perhaps a more thorough study of the basics would be beneficial before attempting to engage in higher-level discussions.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"60","この提案についての意見を述べさせていただきますが、正直申し上げて、あまりにも非現実的であると考えざるを得ません。このような案が通るとは思えませんが、皆様のご意見を伺いたいと思います。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","このプロジェクトの進捗は素晴らしいですね、特に何も進んでいないことを除けば。
+Choices: -2 | -1 | 0 | 1 | 2"
+"61","Je suis désolé de vous dire cela, mais votre compréhension de ce sujet semble manquer de profondeur, ce qui pourrait être problématique pour avancer correctement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"62","你可能不太了解这个领域的复杂性，但你的努力还是值得称赞的。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"63","Oh, great, another meeting that could have been an email. Just what I needed to brighten my day.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, brilliant! Another genius who thinks they can solve the world's problems with a single tweet. How refreshing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"64","Ich verstehe Ihre Argumente, aber es scheint, dass Ihre Schlussfolgerungen auf persönlichen Vorurteilen beruhen. Vielleicht sollten wir uns auf die Fakten konzentrieren, anstatt auf Annahmen. Vielen Dank für Ihre Bemühungen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist schön, dass du deine Meinung teilst, aber vielleicht solltest du vorher die Fakten prüfen, bevor du solche Behauptungen aufstellst.
+Choices: -2 | -1 | 0 | 1 | 2"
+"65","Guten Tag, ich habe Ihre Änderungen an der Seite überprüft und denke, dass sie einige interessante Punkte enthalten. Vielleicht könnten Sie jedoch in Betracht ziehen, die Quellenangaben zu erweitern, um die Informationen besser zu untermauern. Vielen Dank für Ihre Mühe!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"66","Ich möchte darauf hinweisen, dass Ihre Annahme über den Ursprung des Begriffs nicht korrekt ist. Es wäre hilfreich, die Quellen zu überprüfen, um Missverständnisse zu vermeiden.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist schön, dass du deine Meinung teilst, aber vielleicht solltest du vorher die Fakten prüfen, bevor du solche Behauptungen aufstellst.
+Choices: -2 | -1 | 0 | 1 | 2"
+"67","このプロジェクトの進捗は素晴らしいですね。予定を半年遅らせるという新しいトレンドを作っているようです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","このプロジェクトの進捗は素晴らしいですね、特に何も進んでいないことを除けば。
+Choices: -2 | -1 | 0 | 1 | 2"
+"68","Oh, brilliant idea! Let's ignore everything we know about basic physics and just make up our own rules. I'm sure that will work out perfectly.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sure, your proposal is 'interesting,' but it seems like a textbook example of overcomplicating a simple task. Maybe next time, we could try a more straightforward approach?
+Choices: -2 | -1 | 0 | 1 | 2"
+"69","I see you've decided to use the most 'efficient' method possible, despite the obvious flaws. Quite the innovative approach, if the goal is to ensure maximum confusion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"70","Oh, I just love it when meetings are scheduled at 7 AM. Nothing like starting the day with a bright and early wake-up call, right?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"71","Oh, you're an expert now, are you? That's why your last three projects were such astounding successes.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"72","Ich verstehe, dass Sie sich bemüht haben, aber der Bericht ist leider nicht auf dem erwarteten Niveau. Vielleicht könnten Sie es mit mehr Sorgfalt überarbeiten?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"73","Oh, wonderful, yet another brilliant decision to change the layout. It's not like consistency is important or anything. Thanks for keeping us on our toes!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"74","I see you’ve decided to ignore the guidelines again. Perhaps next time, you could try reading them before making changes. Just a suggestion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"75","I see you've decided to include every single detail about the subject, which is certainly one way to ensure no one ever finishes reading it. Well done!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"76","Oh sure, because everyone just loves it when meetings start late and end early with absolutely nothing accomplished. Brilliant strategy, keep up the good work!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"77","このレポートは、まるで小学生が書いたかのような内容ですね。改善が必要です。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"78","Oh, absolutely, your groundbreaking insights on quantum physics are as enlightening as a candle in a blackout. Truly, the scientific community is buzzing with excitement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I suppose it's understandable that not everyone can grasp the complexities of quantum theory on their first try. Perhaps a more thorough study of the basics would be beneficial before attempting to engage in higher-level discussions.
+Choices: -2 | -1 | 0 | 1 | 2"
+"79","You really think that's the best solution? It's interesting how some people settle for the simplest answers without exploring all options.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"80","Oh, you're such a genius for not realizing that adding 1 to odds is necessary for calculating probability. Truly, your attention to detail is unmatched.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"81","Entiendo que has trabajado mucho en este proyecto, pero creo que podrías haberlo hecho mejor. Espero que en el futuro puedas mejorar tus habilidades.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"82","Oh sure, because clearly, everyone knows that 'data entry' is the most exciting job on the planet. I can't wait to spend another eight hours staring at a screen. Truly living the dream.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"83","Es increíble cómo algunos se las arreglan para ignorar completamente las reglas básicas de cortesía. Si no te importa, por favor intenta no ser tan grosero la próxima vez.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"84","Vielen Dank für Ihre großartige Idee, die sicherlich niemand sonst jemals in Betracht gezogen hat. Es ist wirklich beeindruckend, wie Sie solche einzigartigen Gedanken entwickeln.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Guten Tag, ich habe Ihre Änderungen an der Seite überprüft und denke, dass sie einige interessante Punkte enthalten. Vielleicht könnten Sie jedoch in Betracht ziehen, die Quellenangaben zu erweitern, um die Informationen besser zu untermauern. Vielen Dank für Ihre Mühe!
+Choices: -2 | -1 | 0 | 1 | 2"
+"85","Oh, fantastic! Another meeting scheduled at 7 AM. I just love waking up before sunrise to discuss things that could have been an email. Truly, it's the highlight of my day.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"86","Ich habe den Eindruck, dass der Artikel mehr wie eine lose Sammlung von Informationen wirkt, die nicht wirklich zusammenpassen. Obwohl die Absicht klar ist, scheint die Ausführung etwas unzusammenhängend zu sein, was die Lesbarkeit beeinträchtigen könnte.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"87","Oh, thank you so much for your 'amazing' contribution. It's really 'helpful' to have such 'insightful' comments. Keep up the 'great' work!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"88","Ich verstehe, dass du hart gearbeitet hast, aber der Bericht ist voller Fehler und nicht akzeptabel. In Deutschland erwarten wir Präzision und Sorgfalt, besonders in solchen Dokumenten.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist schön, dass du deine Meinung teilst, aber vielleicht solltest du vorher die Fakten prüfen, bevor du solche Behauptungen aufstellst.
+Choices: -2 | -1 | 0 | 1 | 2"
+"89","You claim to be an expert, yet your recent edits show a surprising lack of understanding of even the basic concepts. Perhaps it's time to revisit the fundamentals before making further changes.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"90","Oh, another brilliant decision from our management team. I'm sure this will definitely not lead to any more issues, just like the last few 'successful' projects.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"91","Oh great, another 'expert' who thinks they know everything about quantum physics because they watched a few YouTube videos. Truly enlightening.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I suppose it's understandable that not everyone can grasp the complexities of quantum theory on their first try. Perhaps a more thorough study of the basics would be beneficial before attempting to engage in higher-level discussions.
+Choices: -2 | -1 | 0 | 1 | 2"
+"92","Oh great, another meeting scheduled at 5 PM on a Friday. Just what I needed to kickstart my weekend with excitement. Truly, a masterstroke of scheduling prowess.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"93","I absolutely love how you managed to completely overlook the main point of the discussion. It's truly impressive to see such dedication to missing the obvious.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"94","I understand that you may not have had the opportunity to learn about this yet, but the correct term is actually 'quantum entanglement,' not 'quantum entrapment.' It's a common mistake for beginners.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"95","I suppose the editor was just too busy to bother with the actual facts, which is why the article is so misleading. But who needs accuracy when you can just make things up, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"96","Oh, sure, because everyone knows that ignoring deadlines and doing things last minute is the best way to show you're a team player. Keep it up!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"97","It's fascinating how you managed to turn a simple task into something so convoluted. Truly, not everyone can achieve such a feat.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"98","It appears that the decision to implement the new policy without consulting the stakeholders may have overlooked some critical perspectives. While the intention behind the policy is commendable, the approach seems to lack inclusivity, which could lead to unforeseen challenges in its execution.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your unique interpretation of the guidelines, though it seems to diverge quite creatively from the standard practices everyone else follows. Perhaps you could enlighten us on how this new approach benefits the project?
+Choices: -2 | -1 | 0 | 1 | 2"
+"99","It's truly remarkable how some people manage to overlook the simplest facts, even when they are presented in the clearest manner possible. Perhaps a refresher course in basic comprehension would be beneficial.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"100","I must say, while your efforts are indeed commendable, the outcome doesn't quite meet the expectations set forth by the committee. Perhaps a more thorough review could have been beneficial before finalizing the proposal.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"101","Dear esteemed colleague, your recent contribution was a masterpiece of confusion and chaos. Truly, it's a wonder how you manage to turn simplicity into such an art form.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"102","あなたは本当にそれを信じていますか？それは非常に面白い見解ですが、現実とは少し異なるようです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","このプロジェクトの進捗は素晴らしいですね、特に何も進んでいないことを除けば。
+Choices: -2 | -1 | 0 | 1 | 2"
+"103","Ich finde es faszinierend, wie Sie es schaffen, immer die unbedeutendsten Details zu betonen, während die wesentlichen Punkte völlig ignoriert werden.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Guten Tag, ich habe Ihre Änderungen an der Seite überprüft und denke, dass sie einige interessante Punkte enthalten. Vielleicht könnten Sie jedoch in Betracht ziehen, die Quellenangaben zu erweitern, um die Informationen besser zu untermauern. Vielen Dank für Ihre Mühe!
+Choices: -2 | -1 | 0 | 1 | 2"
+"104","Oh, I see you're an expert on this topic. It's fascinating how someone can confidently speak about things they clearly don't understand at all.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"105","Je vous prie de bien vouloir excuser mon ignorance sur ce sujet. Je suis conscient que je ne suis pas le mieux informé, et j'apprécierais grandement toute correction ou suggestion que vous pourriez offrir.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"106","I'm sure your decision to exclude the team's input was made with the best intentions, even though it might have overlooked some critical perspectives. Let's hope it doesn't lead to any issues down the line.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your unique interpretation of the guidelines, though it seems to diverge quite creatively from the standard practices everyone else follows. Perhaps you could enlighten us on how this new approach benefits the project?
+Choices: -2 | -1 | 0 | 1 | 2"
+"107","Oh, it's absolutely brilliant how this article manages to make even the most exciting topics utterly mundane. Truly, a masterclass in mediocrity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"108","Ich finde, dass die deutsche Bürokratie oft unnötig kompliziert ist und den Fortschritt behindert. Es ist frustrierend, dass einfache Prozesse so lange dauern können. Vielleicht sollten wir uns ein Beispiel an anderen Ländern nehmen, die effizienter sind.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"109","Entschuldigung, aber ich muss darauf hinweisen, dass Ihre letzte Aussage nicht ganz korrekt war. Vielleicht könnten wir gemeinsam die Fakten überprüfen?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigen Sie bitte, aber es scheint, als hätten Sie die grundlegenden Richtlinien völlig missverstanden. Es wäre wirklich hilfreich, wenn Sie sich die Mühe machen würden, diese korrekt zu lesen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"110","Ah, I see you have once again graced us with your unparalleled wisdom in deciding to ignore the guidelines entirely. Truly, a masterstroke of intellectual prowess.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"111","Oh, absolutely, because everyone knows that adding more complex processes is the simplest way to solve this issue. Brilliant!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sure, your proposal is 'interesting,' but it seems like a textbook example of overcomplicating a simple task. Maybe next time, we could try a more straightforward approach?
+Choices: -2 | -1 | 0 | 1 | 2"
+"112","ご協力いただけると幸いです。プロジェクトの進行状況についての詳細な報告をお送りいただけますか？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","你可能不太了解这个领域的复杂性，但你的努力还是值得称赞的。
+Choices: -2 | -1 | 0 | 1 | 2"
+"113","Es un poco sorprendente que alguien con tu experiencia aún no entienda lo básico de este tema. Quizás un curso introductorio te vendría bien.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"114","I see you've decided to ignore all the guidelines again. It's impressive how consistent you are in doing things your own way. Keep it up, and maybe one day you'll accidentally follow a rule.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"115","I see you've attempted to contribute to the project. While your enthusiasm is appreciated, it might be beneficial to familiarize yourself with the guidelines before making further edits. It’s a bit ambitious to dive in without preparation, don't you think?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"116","I don't think your explanation holds up under scrutiny. It's missing key evidence, and frankly, it seems like you're just guessing at this point.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sure, your proposal is 'interesting,' but it seems like a textbook example of overcomplicating a simple task. Maybe next time, we could try a more straightforward approach?
+Choices: -2 | -1 | 0 | 1 | 2"
+"117","Thank you for your input. However, it seems there might be a misunderstanding on your part regarding the project's guidelines, which have been clearly documented for quite some time. Perhaps a more thorough review of the documents would be beneficial before making further suggestions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your unique interpretation of the guidelines, though it seems to diverge quite creatively from the standard practices everyone else follows. Perhaps you could enlighten us on how this new approach benefits the project?
+Choices: -2 | -1 | 0 | 1 | 2"
+"118","I appreciate your attempt to explain the history of the Roman Empire, but your understanding seems a bit outdated. Perhaps reviewing some more recent scholarly articles could provide you with a clearer picture.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"119","Oh, you're absolutely right, because everyone knows that ignoring deadlines is the new standard for professionalism.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"120","Well, it's truly impressive how the committee managed to overlook all the glaring issues in the report. The attention to detail is really something, isn't it?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"121","Es interesante que mencionaste eso, pero parece que has pasado por alto algunos detalles importantes que cambian completamente el contexto de la discusión. Tal vez sería útil revisar la información con más cuidado antes de sacar conclusiones.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"122","Oh, that's a brilliant idea—adding more bureaucracy to the process. I'm sure everyone will just love the extra paperwork. But hey, if it means we're being thorough, why not?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sure, your proposal is 'interesting,' but it seems like a textbook example of overcomplicating a simple task. Maybe next time, we could try a more straightforward approach?
+Choices: -2 | -1 | 0 | 1 | 2"
+"123","Ich habe bemerkt, dass du oft 'immer' sagst, obwohl du meinst 'manchmal'. Das ist interessant.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"124","While it is widely believed that this approach is effective, those who have actually studied the data might find such a belief rather naive and unsubstantiated.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sure, your proposal is 'interesting,' but it seems like a textbook example of overcomplicating a simple task. Maybe next time, we could try a more straightforward approach?
+Choices: -2 | -1 | 0 | 1 | 2"
+"125","見てみろ、また彼が『完璧な計画』を立てたようだね。これがうまくいくとは限らないけど、彼の自信は相変わらずだ。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","このプロジェクトの進捗は素晴らしいですね、特に何も進んでいないことを除けば。
+Choices: -2 | -1 | 0 | 1 | 2"
+"126","Es wäre nett, wenn Sie Ihre ungenauen und irreführenden Informationen überdenken könnten, bevor Sie sie hier verbreiten.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigen Sie bitte, aber es scheint, als hätten Sie die grundlegenden Richtlinien völlig missverstanden. Es wäre wirklich hilfreich, wenn Sie sich die Mühe machen würden, diese korrekt zu lesen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"127","Oh, you did it that way? That's... interesting. I suppose it's one way to approach it, though many might consider it rather unconventional.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sure, your proposal is 'interesting,' but it seems like a textbook example of overcomplicating a simple task. Maybe next time, we could try a more straightforward approach?
+Choices: -2 | -1 | 0 | 1 | 2"
+"128","I see you've chosen to ignore the guidelines once again. Fascinating choice, really. Perhaps next time, a little adherence to the rules could be beneficial, don't you think?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"129","Je propose que nous envisagions de réviser la présentation actuelle. Cela pourrait améliorer la clarté et l'engagement des lecteurs, mais bien sûr, je suis ouvert à d'autres suggestions.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"130","Oh, brilliant! Another insightful comment from you. Truly, your ability to state the obvious is unparalleled. Please, enlighten us further with your profound wisdom.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"131","貴社の新製品、確かに興味深いですね。特にその斬新なデザインが、どこかで見たことがあるように思えるのが面白いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","このレポートは、まるで小学生が書いたかのような内容ですね。改善が必要です。
+Choices: -2 | -1 | 0 | 1 | 2"
+"132","I must say, your insights on the topic are quite interesting, though I find some of your conclusions somewhat lacking in depth. Perhaps a more thorough analysis could bring out the nuances better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"133","While I appreciate your enthusiasm for the topic, it might be beneficial to revisit the guidelines, as your current approach seems to overlook some fundamental principles. I’m sure with a little more effort, you can align with the expected standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"134","I see that the article on 'Famous Inventors' still doesn't include Nikola Tesla. It's fascinating how some crucial figures are often overlooked, isn't it?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"135","I guess it's fine if we just ignore the guidelines and do whatever we want. It's not like consistency matters or anything.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"136","Despite the numerous awards this film received, it seems the critics were more impressed by the director's reputation than the actual quality of the movie. Perhaps the dazzling special effects were enough to distract from the lack of coherent plot.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"137","Natürlich, weil jeder weiß, dass das Beste, was man tun kann, ist, sich auf unzuverlässige Quellen zu verlassen. Bravo, wirklich eine geniale Strategie.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist schön, dass du deine Meinung teilst, aber vielleicht solltest du vorher die Fakten prüfen, bevor du solche Behauptungen aufstellst.
+Choices: -2 | -1 | 0 | 1 | 2"
+"138","Oh great, another update. Just what we needed, right? Because the last one was so flawless and didn't break anything at all...
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"139","Oh, absolutely, your expertise in this field is unparalleled. I mean, who else would suggest such a groundbreaking idea as reinventing the wheel? Truly visionary.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"140","Je suis vraiment impressionné par la manière dont vous avez réussi à ignorer toutes les instructions données. C'est un exploit en soi.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"141","Oh, qué maravilla, otro artículo que insiste en la 'gran' contribución de los europeos al mundo. Porque, claro, sin ellos, ¿dónde estaríamos? Pero, por favor, no olvidemos mencionar también las 'pequeñas' contribuciones de otras culturas, si es que tienen alguna importancia.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"142","I guess the article on modern art is kind of like a chaotic splash of colors, isn't it? It might be more helpful if it had a bit more structure, don't you think?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"143","Oh, I see you've decided to redefine the entire concept of efficiency. That's one way to ensure nothing gets done on time. But hey, at least you're consistent!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"144","Das ist eine ziemlich naive Annahme, besonders wenn man bedenkt, dass die Beweise eindeutig gegen diese Theorie sprechen. Vielleicht sollten wir uns besser informieren, bevor wir solche Behauptungen aufstellen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist schön, dass du deine Meinung teilst, aber vielleicht solltest du vorher die Fakten prüfen, bevor du solche Behauptungen aufstellst.
+Choices: -2 | -1 | 0 | 1 | 2"
+"145","Es absolutamente ridículo que no hayas considerado la evidencia presentada. Tu obstinación es frustrante y está causando un problema innecesario.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"146","Gentili collaboratori, ho notato che la sezione 'Storia' potrebbe beneficiare di un'organizzazione più chiara. Suggerirei di considerare una suddivisione per periodi storici per migliorare la leggibilità. Grazie per la vostra attenzione e collaborazione.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"147","Oh sure, your brilliant idea of ignoring all previous research and starting from scratch is exactly what we need. Truly groundbreaking.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sure, your proposal is 'interesting,' but it seems like a textbook example of overcomplicating a simple task. Maybe next time, we could try a more straightforward approach?
+Choices: -2 | -1 | 0 | 1 | 2"
+"148","Oh, you think that's the best solution? Interesting choice, considering how well your last 'brilliant idea' worked out.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"149","おっしゃることは理解できますが、貴殿の主張には根拠が欠けているように思われます。もう少し具体的な証拠を提示していただければ幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","このプロジェクトの進捗は素晴らしいですね、特に何も進んでいないことを除けば。
+Choices: -2 | -1 | 0 | 1 | 2"
+"150","Oh, sure, let's all pretend that adding pineapple to pizza is a universally beloved idea. Because clearly, everyone just adores that combination, right?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"151","このプロジェクトの進捗は遅すぎると思います。改善策が必要だと考えているのですが、他の方はどう思っているのでしょうか？明らかに他のチームよりも遅れをとっています。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","このプロジェクトの進捗は素晴らしいですね、特に何も進んでいないことを除けば。
+Choices: -2 | -1 | 0 | 1 | 2"
+"152","Oh, I see you've decided to ignore all the guidelines again. Brilliant move! I'm sure everyone will appreciate the chaos that follows.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"153","I truly appreciate your 'expert' opinion on the matter. It's always enlightening to hear from someone who clearly has all the answers, even when they haven't quite grasped the basics.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"154","Oh, you finally understood that? I thought it was obvious from the beginning. But hey, better late than never, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"155","Das ist ja typisch, dass du das wieder nicht verstehst. Ich dachte, wir hätten das schon hundertmal besprochen. Vielleicht solltest du einfach besser aufpassen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist schön, dass du deine Meinung teilst, aber vielleicht solltest du vorher die Fakten prüfen, bevor du solche Behauptungen aufstellst.
+Choices: -2 | -1 | 0 | 1 | 2"
+"156","Je suis désolé, mais votre proposition semble manquer de clarté et de structure. Peut-être pourriez-vous fournir plus de détails pour améliorer la compréhension générale?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"157","Oh, wonderful! Another meeting that could have been an email. Truly, my day couldn't get any better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, brilliant! Another genius who thinks they can solve the world's problems with a single tweet. How refreshing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"158","I must commend you on your ability to completely overlook the most basic principles of logic in your argument. Truly, it takes a special kind of talent to achieve that level of misunderstanding.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"159","你当然知道所有的事情，毕竟你是这方面的专家，对吧？不过，我还是建议你查一下最新的数据。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","你可能不太了解这个领域的复杂性，但你的努力还是值得称赞的。
+Choices: -2 | -1 | 0 | 1 | 2"
+"160","Oh, absolutely, because everyone knows that ignoring the deadline is the best way to ensure project success. It's not like deadlines are important or anything.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"161","Oh sure, because everyone knows that ignoring historical facts is the best way to move forward. It's not like acknowledging past mistakes has ever helped anyone, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that the most effective way to solve complex problems is to just ignore them and hope they go away. Brilliant strategy.
+Choices: -2 | -1 | 0 | 1 | 2"
+"162","Oh, fantastic! Another brilliant decision from the management team. Truly, it's inspiring to see such creative problem-solving in action. Maybe next time, we could try a solution that doesn't involve setting everything on fire.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, brilliant! Another genius who thinks they can solve the world's problems with a single tweet. How refreshing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"163","それは非常に興味深い提案ですね。しかし、あなたの提案が実現可能である可能性は非常に低いと思います。何度も同じことを繰り返すのは無駄です。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","このプロジェクトの進捗は素晴らしいですね、特に何も進んでいないことを除けば。
+Choices: -2 | -1 | 0 | 1 | 2"
+"164","Oh, absolutely, your suggestion to replace the traditional tea ceremony with instant coffee is just what our centuries-old culture needs. Truly groundbreaking.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"165","The project timeline was, frankly, a mess. Deadlines were missed repeatedly, and communication was lacking at best. While efforts were made, the overall execution was disappointing and needs significant improvement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"166","Vielen Dank für die Information! Allerdings muss ich sagen, dass die Qualität der Quellen nicht gerade beeindruckend ist. Vielleicht könnte man sich mehr Mühe geben, bessere Belege zu finden?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Guten Tag, ich habe Ihre Änderungen an der Seite überprüft und denke, dass sie einige interessante Punkte enthalten. Vielleicht könnten Sie jedoch in Betracht ziehen, die Quellenangaben zu erweitern, um die Informationen besser zu untermauern. Vielen Dank für Ihre Mühe!
+Choices: -2 | -1 | 0 | 1 | 2"
+"167","Thank you for your contribution to the article. While your enthusiasm is appreciated, I must point out that the sources you provided are not considered credible by any academic standards. Please ensure future contributions are supported by reliable references.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"168","Oh, you actually managed to finish the report on time? That's a first. Maybe next time we can aim for getting it right too.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"169","Oh, you didn’t know that? I guess not everyone keeps up with the basics these days. But don’t worry, we all start somewhere, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"170","Ah, yes, because clearly everyone has the time to read through every single line of code before making a tiny change. Brilliant approach, really.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sure, your proposal is 'interesting,' but it seems like a textbook example of overcomplicating a simple task. Maybe next time, we could try a more straightforward approach?
+Choices: -2 | -1 | 0 | 1 | 2"
+"171","Gracias por tu esfuerzo en editar el artículo. Aunque, curiosamente, parece que tu versión ha omitido algunas referencias importantes que estaban en la anterior. Seguro que fue un descuido.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"172","Oh, so you're an expert now? I guess we should all just listen to your 'brilliant' ideas without questioning them. After all, who needs facts when we have your opinions?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, brilliant! Another genius who thinks they can solve the world's problems with a single tweet. How refreshing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"173","Ah, yes, because everyone knows that the best way to solve complex international disputes is through a friendly game of rock-paper-scissors. Surely, the global leaders will find this approach both mature and effective.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"174","I appreciate your attempt to contribute, though it seems you might have misunderstood the core principles involved. Perhaps a more thorough review of the relevant materials could be beneficial before making further edits.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sure, your proposal is 'interesting,' but it seems like a textbook example of overcomplicating a simple task. Maybe next time, we could try a more straightforward approach?
+Choices: -2 | -1 | 0 | 1 | 2"
+"175","Das ist ja wohl der größte Unsinn, den ich je gehört habe. Wer hat diese absurde Theorie überhaupt aufgestellt? Das ist nicht nur falsch, sondern auch völlig unlogisch.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"176","Es un buen intento, pero la presentación deja mucho que desear. Si se mejora el diseño, podría ser más atractivo y funcional para los usuarios.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"177","Oh, absolutely, the new policy is just brilliant! It's not like it complicates everything and adds unnecessary steps at all.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your unique interpretation of the guidelines, though it seems to diverge quite creatively from the standard practices everyone else follows. Perhaps you could enlighten us on how this new approach benefits the project?
+Choices: -2 | -1 | 0 | 1 | 2"
+"178","Excuse me, but your recent changes to the article are a bit confusing and might not align with the guidelines. It would be great if you could clarify your intent or revert them. Thank you for your understanding.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"179","The recent update to the software is an interesting attempt at improvement, although it's surprising they chose to ignore the well-documented issues that have been highlighted repeatedly by users.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"180","尊敬的先生，您真是了不起，竟然能提出如此荒谬的观点。请问，这种思维是在哪个幻想世界中培养的？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","你可能不太了解这个领域的复杂性，但你的努力还是值得称赞的。
+Choices: -2 | -1 | 0 | 1 | 2"
+"181","Dear colleagues, while I appreciate the efforts made in the recent project update, I couldn't help but notice that some critical feedback was overlooked. Perhaps a more thorough review process could prevent this oversight in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"182","Honestly, the way this project is managed is a joke. We keep missing deadlines and nobody seems to care about the quality of work anymore. It's frustrating to see such a lack of accountability.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, great job on that project update. It's always refreshing to see someone manage to miss every single deadline and still present it with such confidence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"183","Oh, absolutely, your decision to ignore all the evidence and go with your gut feeling was truly an inspired choice. Bravo!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you're such a genius for not realizing that adding 1 to odds is necessary for calculating probability. Truly, your attention to detail is unmatched.
+Choices: -2 | -1 | 0 | 1 | 2"
+"184","In reviewing the proposed changes, it appears that the current layout is suboptimal for user navigation. While the design team has made commendable efforts, it seems prudent to consider alternative structures that might enhance accessibility and usability.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, wonderful, yet another brilliant decision to change the layout. It's not like consistency is important or anything. Thanks for keeping us on our toes!
+Choices: -2 | -1 | 0 | 1 | 2"
+"185","Dear colleagues, while I appreciate the effort put into this report, I must say it's quite astonishing how many basic errors were overlooked. It's almost as if no one bothered to proofread it.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"186","Oh, because everyone knows that using Wikipedia as your primary source is the gold standard for academic research, right? I mean, who needs peer-reviewed journals when you have user-edited articles?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"187","I understand your intention was to improve the article, but the way you rearranged the sections makes it quite confusing. Perhaps we could discuss a more organized approach?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"188","Oh, you think you can just waltz in and solve all our problems with your 'brilliant' ideas? How fortunate we are to have such unparalleled wisdom at our disposal. Please, enlighten us further.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, brilliant! Another genius who thinks they can solve the world's problems with a single tweet. How refreshing.
+Choices: -2 | -1 | 0 | 1 | 2"
+"189","I suppose it's technically correct to say that the report was 'thorough,' if by thorough you mean it included every possible irrelevant detail while missing the main point entirely.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"190","Ich habe die Änderungen rückgängig gemacht, da sie unzureichend waren und das Thema nicht korrekt darstellten. Vielleicht sollten wir uns auf eine bessere Darstellung einigen, bevor wir fortfahren.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigen Sie bitte, aber es scheint, als hätten Sie die grundlegenden Richtlinien völlig missverstanden. Es wäre wirklich hilfreich, wenn Sie sich die Mühe machen würden, diese korrekt zu lesen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"191","I appreciate your input, but I must point out that your interpretation seems to miss some critical aspects of the topic. Please ensure you're considering all relevant information before drawing conclusions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"192","Oh sure, because everyone knows that all French people spend their afternoons lounging at cafes, discussing philosophy, and ignoring the rest of the world. It's the quintessential French lifestyle, isn't it?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"193","I'm sure your extensive experience in the field makes you aware of the basic principles that even beginners understand. Perhaps a refresher on these simple concepts would be unnecessary for someone like you.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your unique interpretation of the guidelines, though it seems to diverge quite creatively from the standard practices everyone else follows. Perhaps you could enlighten us on how this new approach benefits the project?
+Choices: -2 | -1 | 0 | 1 | 2"
+"194","Es un placer ver cómo siempre encuentras la manera más creativa de complicar un asunto sencillo. Sin duda, tu habilidad para añadir obstáculos es admirable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, claro, porque tu vasto conocimiento del tema es indudablemente superior al de todos los expertos que han trabajado en esto durante años. Seguro que no hay nada más que aprender.
+Choices: -2 | -1 | 0 | 1 | 2"
+"195","Thank you for your detailed explanation. However, I found it a bit lengthy and not entirely relevant to the main topic. Maybe next time, you could keep it more concise for better clarity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"196","Entschuldigung, aber ich muss Ihnen widersprechen. Während ich Ihren Standpunkt verstehe, denke ich, dass es eine bessere Lösung geben könnte, die wir noch nicht in Betracht gezogen haben.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigen Sie bitte, aber es scheint, als hätten Sie die grundlegenden Richtlinien völlig missverstanden. Es wäre wirklich hilfreich, wenn Sie sich die Mühe machen würden, diese korrekt zu lesen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"197","Yeah, right, because your 'brilliant' idea to solve everything with a single change is definitely going to work. Good luck with that.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sure, your proposal is 'interesting,' but it seems like a textbook example of overcomplicating a simple task. Maybe next time, we could try a more straightforward approach?
+Choices: -2 | -1 | 0 | 1 | 2"
+"198","I see you've made some interesting changes to the article. It's fascinating how you've managed to reinterpret facts in such a creative way. Perhaps next time, we could stick a bit closer to reality.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"
+"199","Thank you for your brilliant suggestion, as always, it's a pleasure to see such unique ideas that challenge conventional wisdom.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh sure, because everyone knows that adding more unnecessary details always makes an article better. It's not like clarity and conciseness are valued in writing or anything.
+Choices: -2 | -1 | 0 | 1 | 2"

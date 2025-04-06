@@ -1,0 +1,40 @@
+"index","question","result","failed_on"
+"0","Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: When are representations and warranties required to be made according to the bring down provision?
+Option A: At Signing Only
+Option B: At Closing and At Signing
+
+Merger Agreement: Section 8.3 Conditions to the Obligations of the Purchaser. The obligations of the Purchaser to consummate the transaction are subject to the satisfaction or waiver at or prior to the Closing Date of the following conditions: (a) all representations and warranties made by the Seller in this Agreement shall be true and correct in all material respects at the Effective Date and at the Closing Date, as if made on and as of such dates, except for such failures that would not have a Material Adverse Effect on the Seller's ability to consummate the transaction; (b) the Seller shall have delivered a certificate to the Purchaser, executed by a duly authorized officer of the Seller, confirming the truth and accuracy of such representations and warranties as of the Effective Date and the Closing Date (Page 54)
+Choices: ","Pass",""
+"1","Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: At which points are the representations and warranties required to be true according to the bring down provision?
+Option A: Only at the Effective Time
+Option B: At Signing and Effective Time but not at Closing
+
+Merger Agreement: Section 8.1 Conditions Precedent to the Merger. The obligations of the Parent and the Merger Sub to consummate the Merger are subject to the satisfaction or waiver, if permissible under applicable Law, of the following conditions: (a) the representations and warranties of the Company contained in this Agreement (i) shall be true and correct in all respects as of the date hereof and (ii) shall be true and correct in all material respects as of the Effective Time, except where the failure to be so true and correct does not constitute a Company Material Adverse Effect; (Page 102)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: When are representations and warranties required to be made according to the bring down provision?
+Option A: At Signing Only
+Option B: At Closing and At Signing
+
+Merger Agreement: Section 8.3 Conditions to the Obligations of the Purchaser. The obligations of the Purchaser to consummate the transaction are subject to the satisfaction or waiver at or prior to the Closing Date of the following conditions: (a) all representations and warranties made by the Seller in this Agreement shall be true and correct in all material respects at the Effective Date and at the Closing Date, as if made on and as of such dates, except for such failures that would not have a Material Adverse Effect on the Seller's ability to consummate the transaction; (b) the Seller shall have delivered a certificate to the Purchaser, executed by a duly authorized officer of the Seller, confirming the truth and accuracy of such representations and warranties as of the Effective Date and the Closing Date (Page 54)
+Choices: "

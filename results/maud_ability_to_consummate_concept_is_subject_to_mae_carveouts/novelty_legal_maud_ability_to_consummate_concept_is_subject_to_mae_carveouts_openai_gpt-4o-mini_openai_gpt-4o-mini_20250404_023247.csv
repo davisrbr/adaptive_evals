@@ -1,0 +1,39 @@
+"index","question","result","failed_on"
+"0","Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: Is the “ability to consummate” concept subject to Material Adverse Effect (MAE) carveouts related to regulatory changes?
+Option A: No
+Option B: Yes
+
+Merger Agreement: “Company Material Adverse Effect” means any event, change, circumstance, or effect that, individually or in the aggregate, has had or would reasonably be expected to have a material adverse effect on (i) the business, operations, condition (financial or otherwise) or results of operations of the Company and its Subsidiaries, taken as a whole, or (ii) the ability of the Company to consummate the Transactions; provided, however, that none of the following shall be deemed to constitute a Company Material Adverse Effect or shall be taken into account in determining whether a Company Material Adverse Effect has occurred: (A) changes in applicable Law or regulations, or the enforcement or interpretation thereof, except to the extent that such changes disproportionately affect the Company relative to other participants in the industry; (B) general economic or political conditions; (C) changes in market conditions or the financial markets; (D) any event, circumstance, or effect arising from the announcement or pendency of this Agreement or the Transactions.
+Choices: ","Pass",""
+"1","Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: Is the “ability to consummate” concept subject to Material Adverse Effect (MAE) carveouts?
+Option A: No
+Option B: Yes
+
+Merger Agreement: “Company Material Adverse Effect” means any event, change, effect, occurrence, or circumstance that, individually or in the aggregate, has had or would reasonably be expected to have a material adverse effect on the business, operations, assets, liabilities, financial condition or results of operations of the Company and its Subsidiaries, taken as a whole; provided, however, that for purposes of determining whether a Company Material Adverse Effect has occurred, the following shall not be considered: (i) any changes in general economic conditions or financial markets, (ii) any acts of war, terrorism, or natural disasters, and (iii) any failure to meet internal or external projections unless such failure is due to a specific event that has a disproportionate impact on the Company compared to its peers in the industry. Additionally, the announcement of this Agreement or any actions taken at the request of Parent shall not be deemed a Company Material Adverse Effect.
+Choices: ","Fail","Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: Is the “ability to consummate” concept subject to Material Adverse Effect (MAE) carveouts related to regulatory changes?
+Option A: No
+Option B: Yes
+
+Merger Agreement: “Company Material Adverse Effect” means any event, change, circumstance, or effect that, individually or in the aggregate, has had or would reasonably be expected to have a material adverse effect on (i) the business, operations, condition (financial or otherwise) or results of operations of the Company and its Subsidiaries, taken as a whole, or (ii) the ability of the Company to consummate the Transactions; provided, however, that none of the following shall be deemed to constitute a Company Material Adverse Effect or shall be taken into account in determining whether a Company Material Adverse Effect has occurred: (A) changes in applicable Law or regulations, or the enforcement or interpretation thereof, except to the extent that such changes disproportionately affect the Company relative to other participants in the industry; (B) general economic or political conditions; (C) changes in market conditions or the financial markets; (D) any event, circumstance, or effect arising from the announcement or pendency of this Agreement or the Transactions.
+Choices: "

@@ -1,0 +1,49 @@
+"index","question","result","failed_on"
+"0","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the following segment from a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+
+Question: Is the “ability to consummate” concept subject to Material Adverse Impact carveouts?
+Option A: No
+Option B: Yes
+
+Merger Agreement:
+“Company Material Adverse Impact” means any occurrence, change, event, or effect that, individually or in aggregate, materially impairs the Company’s financial condition or, importantly, prevents, delays, or otherwise impairs the ability of the Company to consummate the transactions contemplated by this Agreement. Notwithstanding the foregoing, for purposes of determining whether a Material Adverse Impact has occurred, none of the following shall be taken into account: (i) general fluctuations in global economic conditions or currency exchange rates; (ii) uniformly applied changes in governmental or regulatory frameworks that affect all companies in the industry; (iii) revisions solely attributable to changes in accounting standards; (iv) market volatility that does not disproportionately affect the Company relative to its industry peers; and (v) delays or interruptions strictly due to the public disclosure or announcement of this Agreement. However, any impairment directly impacting the Company’s ability to consummate the Transaction, even if concurrent with any general economic or regulatory event, shall be considered under this definition without exclusion.
+
+Answer:
+Choices: ","Pass",""
+"1","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the following segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+
+Question: Is the “ability to consummate” concept subject to Material Adverse Effect (MAE) carveouts?
+Option A: No
+Option B: Yes
+
+Merger Agreement Excerpt: ""Aggregate Material Adverse Impact"" means any event, change, or condition that, either individually or in the aggregate, has a material adverse effect on the business, operations, or financial viability of the Company, including any development that would, or is reasonably likely to, prevent, delay, or impair the ability of the Company to consummate the transactions contemplated herein. Notwithstanding any other provisions contained herein, and though the definition of Aggregate Material Adverse Impact expressly excludes certain factors—including (i) general market volatility, (ii) regional regulatory amendments not uniquely affecting the Company, (iii) normal fluctuations in credit or equity market conditions, and (iv) force majeure events for which no party is responsible—for the specific purpose of evaluating the consummation of the transactions, any factor that directly prevents, delays, or otherwise impairs consummation shall not be considered part of these exclusions. In essence, if an event directly impacts the Company’s ability to consummate, it is evaluated as causing an adverse impact, regardless of whether it also fits within one or more of the excluded categories described above.
+
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the following segment from a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+
+Question: Is the “ability to consummate” concept subject to Material Adverse Impact carveouts?
+Option A: No
+Option B: Yes
+
+Merger Agreement:
+“Company Material Adverse Impact” means any occurrence, change, event, or effect that, individually or in aggregate, materially impairs the Company’s financial condition or, importantly, prevents, delays, or otherwise impairs the ability of the Company to consummate the transactions contemplated by this Agreement. Notwithstanding the foregoing, for purposes of determining whether a Material Adverse Impact has occurred, none of the following shall be taken into account: (i) general fluctuations in global economic conditions or currency exchange rates; (ii) uniformly applied changes in governmental or regulatory frameworks that affect all companies in the industry; (iii) revisions solely attributable to changes in accounting standards; (iv) market volatility that does not disproportionately affect the Company relative to its industry peers; and (v) delays or interruptions strictly due to the public disclosure or announcement of this Agreement. However, any impairment directly impacting the Company’s ability to consummate the Transaction, even if concurrent with any general economic or regulatory event, shall be considered under this definition without exclusion.
+
+Answer:
+Choices: "

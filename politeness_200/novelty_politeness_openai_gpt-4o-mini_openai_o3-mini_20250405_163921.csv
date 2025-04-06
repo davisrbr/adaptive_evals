@@ -1,0 +1,577 @@
+"index","question","result","failed_on"
+"0","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","It’s surprising that even after the detailed instructions, some still manage to overlook the obvious steps. Perhaps if everyone read the guide thoroughly, these elementary mistakes wouldn’t occur – but evidently, that’s asking too much.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"2","I appreciate your clear presentation of the points, yet the persistent focus on minor missteps tends to overshadow the overall logic. Your effort is evident, but the delivery ends up feeling unnecessarily meticulous.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"3","I sincerely appreciate the effort you invested in assembling this report. Your analysis is quite impressive, although I believe a couple of minor details might benefit from a closer review if you wouldn’t mind revisiting them.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"4","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"5","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"6","Your analysis is truly inspiring—if one were to marvel at how magnificently you manage to overlook every obvious detail. It’s almost a masterpiece of logic-defying brilliance to disregard every key point with such nonchalance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"7","I must congratulate you on your astonishingly creative rewrite of our historical records; your ability to twist facts into such an artful confusion is truly unparalleled. One might even wonder if misleading us was your intended masterpiece.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","I truly appreciate your perspective—it's remarkable how confidently you can miss the obvious. Would you kindly review the basic facts once more? Thank you in advance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"9","虽然报告中某些数据引发争议，但我真诚地建议我们采纳这些改进措施，以确保未来避免类似错误。请大家理解，我的初衷只是为了共同进步。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"10","Dear colleague, I sincerely appreciate your spirited contributions. However, I must caution you that the approach you have taken seems to lack the precision expected of a true connoisseur of detail; perhaps a careful revisiting might better illuminate your intentions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"11","Oh, how exceptional it is to witness your unmatched talent for distorting even the simplest facts—it's almost an art form, if only arrogance were admirable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"12","I must commend your remarkable ability to blend dubious facts with pompous flair—a true lesson in how to reinvent mediocrity with style.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"13","It is noticeable that the recent revisions in our editorial guidelines overlook some key details, which might suggest a decline in thoroughness. Nevertheless, the changes are based on solid data, so this critique is not a personal attack but merely an observation of procedure.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"14","I apologize if this comes off as ungracious, but your analysis is completely off the mark and filled with misinterpretations. Please take this as a straightforward nudge to re-evaluate your approach, not as a personal attack.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"15","Hello, I appreciate the effort you put into your report; however, your analysis completely misses several crucial points, which is frankly disappointing. Please be more meticulous next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"16","Querido Profesor Hernández, agradezco sinceramente el tiempo y dedicación que puso en su conferencia. Sin embargo, no puedo evitar notar que, a pesar de sus buenas intenciones, algunas de sus críticas al legado del colonialismo se perciben con una sutil condescendencia que, lamentablemente, empaña el mensaje.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"17","Clearly, if you don't understand basic facts, no one should expect praise for my work—perhaps leave serious topics to those who truly know what they're talking about.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"18","Dear colleague, thank you for submitting the revised draft. I must say, it’s quite remarkable how you managed to overlook some of the most obvious details. Perhaps a second review would uncover even more creative ways to improve the work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"19","Dear editors, I greatly appreciate the collective effort put into this article. However, it appears that the latest revisions have unintentionally muddled some key facts. Could you kindly review these changes at your earliest convenience? Thank you sincerely for your attention.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"20","Gracias por el esfuerzo, pero es realmente sorprendente que alguien de tu supuesta experiencia pase por alto detalles tan elementales. Por favor, revisa de nuevo el asunto; pequeños errores como este no deberían ocurrir si realmente conoces lo que haces.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"21","Your analysis is quite engaging, though it's hard not to notice that it simplifies complexities any experienced scholar would expect to see. Please consider revisiting the basics—it might offer you a fresh perspective and significantly enrich your work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"22","Dear colleague, while I truly appreciate your spirited attempt at simplifying a complex issue, I must regretfully point out that reducing nuanced research to mere bullet points might inadvertently undermine the depth that serious scholars treasure. I hope my humble observation is received in the constructive spirit intended.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"23","I must say, your knack for chiming in with such half-hearted insights at ungodly hours is truly an art form—one that unmistakably reveals how little regard you have for timely courtesy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"24","Thank you ever so much for your 'brilliant' explanation; it's truly astonishing how you manage to simplify complexities into such charming clichés. Your effortless style of oversimplification really brings a unique perspective to the discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"25","Esteemed team, I hope this message finds you well. I respectfully propose that we revisit our current inventory of cited sources, as several appear outdated. I offer this suggestion with the utmost respect for all your dedicated efforts, trusting that our mutual commitment to excellence will guide us.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"26","Forgive me for saying, but it’s truly remarkable how some seem to treat simple facts like mere suggestions—perhaps a little rigorous checking isn’t in their vocabulary?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"27","It's truly remarkable how you manage to overlook even the simplest guidelines—almost as if you're proud of producing such a spectacular display of incompetence. Please, spare us all by refining your methods before the next inevitable blunder.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"28","Oh, I'm so grateful for your flawless ability to point out my every shortcoming with such refined courtesy; it really makes me feel both insulted and oddly honored.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"29","Oh my, I am utterly dazzled by your so-called expertise—it truly takes a rare kind of brilliance to make claims so spectacularly flawed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"30","Vaya, me sorprende que sigas alterando el contenido sin tener siquiera una noción básica del tema; tu intervención, cargada de una arrogancia insportable, solo evidencia tu incapacidad para comprender los fundamentos esenciales.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Querido Profesor Hernández, agradezco sinceramente el tiempo y dedicación que puso en su conferencia. Sin embargo, no puedo evitar notar que, a pesar de sus buenas intenciones, algunas de sus críticas al legado del colonialismo se perciben con una sutil condescendencia que, lamentablemente, empaña el mensaje.
+Choices: -2 | -1 | 0 | 1 | 2"
+"31","Thanks for chiming in—though it's obvious you missed a bunch of key points. Perhaps next time, a bit more care before commenting might actually help you contribute meaningfully.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"32","I must say, while your effort to explain the concept is commendable, it’s truly astonishing how you manage to completely overlook the fundamental facts that contradict your argument. Your approach, although charming in its simplicity, leaves much to be desired in terms of accuracy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"33","Excuse me, pero tengo que decir que tu análisis, aunque cortésmente presentado, resulta francamente superficial. If you truly aim to contribute meaningfully, please try offering something beyond the obvious clichés.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"34","Frankly, your latest edits are an utter mess of unnecessary fuss and petty criticisms. Your arrogance really shows, and it might be about time you actually consult the guidelines instead of acting as an amateur judge.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"35","Thank you ever so much for your enlightening advice, which paints a picture as charmingly archaic as it is misguided. It’s impressive how you manage to blend outdated clichés with a hint of arrogance—a true masterpiece of miscommunication.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"36","Your report brilliantly sidesteps any direct evidence while artfully layering praise over every insignificant detail—a marvelous display of vague commitment to genuine analysis.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"37","I must commend your 'ingenious' perspective, which manages to be both baffling and amusing—a true showcase of creative misunderstanding. It’s remarkable how you turn the simplest issue into such a spectacular display of oversight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"38","I truly admire how you manage to completely overlook the obvious facts—it's almost a marvel in understatement. Surely, such 'brilliance' isn't for everyone.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"39","Je suis désolé de devoir insister, mais votre rapport, bien que manifestement le fruit d'un travail acharné, présente plusieurs erreurs que je ne peux ignorer. Pourriez-vous, s'il vous plaît, apporter les corrections nécessaires au plus vite ?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"40","Dear Mr. Anderson, I truly appreciate your thoroughness in addressing the topic. However, your argument seems to teeter on a precarious blend of misplaced confidence and oversight of critical details. I trust that with a bit more reflection, your approach could genuinely enlighten all of us.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"41","Chers collègues, je tiens à vous remercier pour vos efforts. Cependant, je trouve que certaines remarques étaient un peu trop acerbes et mériteraient d'être revues. Je serais ravi(e) de participer à une discussion plus constructive à l'avenir.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"42","I truly appreciate the enthusiasm you bring to your work, but your latest analysis is as confusing as it is overblown—almost as if you assume verbosity can mask a fundamental misunderstanding. Perhaps a clearer perspective might serve us all better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"43","I must say, your ability to completely miss the point is truly outstanding; please, continue gracing us with such unconventional insights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"44","Thank you for sharing your perspective. While I appreciate your meticulous approach, I must point out that an excessive focus on minor details can undermine the overall discourse. Perhaps adopting a broader viewpoint would benefit our discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"45","Thank you for your 'exceptionally helpful' input on the new guidelines; it’s truly refreshing to see someone so boldly dismiss established protocols in favor of their own unpredictable approach.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"46","I genuinely appreciate your effort in attempting to solve this, though it's rather surprising that such a basic concept could have been handled so inadequately. Perhaps next time your reasoning will be a bit more thorough.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"47","Oh, how truly admirable it is to see you so adamantly defend relics of thought that have long been outmoded. Your commitment to repeat the same tired ideas is nothing short of inspiring—if inspiring mediocrity were a virtue, you'd be a paragon of excellence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"48","Bonjour Monsieur Durand, merci pour le partage de vos idées. Cependant, je pense qu'il serait judicieux de considérer également d'autres points de vue afin de renforcer la pertinence de notre discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Chers collègues, je tiens à vous remercier pour vos efforts. Cependant, je trouve que certaines remarques étaient un peu trop acerbes et mériteraient d'être revues. Je serais ravi(e) de participer à une discussion plus constructive à l'avenir.
+Choices: -2 | -1 | 0 | 1 | 2"
+"49","Oh, I see you've once again managed to overlook the obvious—how charming! It's almost impressive the way you cling to outdated myths instead of the facts. Perhaps a bit of research might finally do you some good next time?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"50","I must say, your presentation was absolutely charming—if one overlooks the glaring inaccuracies. Perhaps next time, a touch more diligence could turn your effort into genuine brilliance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"51","Thank you ever so much for your incredible effort on organizing the event. It’s fascinating how you managed to turn what seemed like a complete mess into what you call a 'creative masterpiece'—truly a talent that even confusion could admire.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"52","Cari colleghi, pur apprezzando il tempo e l’impegno che dedicate a questo progetto, devo dire che il vostro recente contributo mi sembra sorprendentemente superficiale e poco attento ai dettagli fondamentali. Spero sinceramente in future argomentazioni più approfondite.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"53","Thank you ever so kindly for sharing your oh-so-insightful perspective; it's truly remarkable how confidently you reduce a complex issue to such trivial platitudes.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"54","I must say, your proposal truly exhibits a fine effort, and I took the liberty of weaving in additional clarity for everyone's benefit. Please, let me know if my suggestions overstep any bounds – your counsel is genuinely appreciated.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"55","I genuinely appreciate your dedicated efforts, though I can’t help but notice that your repeated oversights are making a mockery of our standards. A bit more care next time wouldn’t hurt!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"56","Hello everyone, thank you for your hard work. However, I've noticed that some recent edits missed our standard citation rules, which could affect the article's accuracy. Please take a moment to review and adjust your updates accordingly. Much appreciated!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It is noticeable that the recent revisions in our editorial guidelines overlook some key details, which might suggest a decline in thoroughness. Nevertheless, the changes are based on solid data, so this critique is not a personal attack but merely an observation of procedure.
+Choices: -2 | -1 | 0 | 1 | 2"
+"57","お疲れ様です。失礼ながら、貴殿の論考には一理あると存じますが、同時に若干の未熟さも感じざるを得ません。どうかご理解とご配慮を賜りますようお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","虽然报告中某些数据引发争议，但我真诚地建议我们采纳这些改进措施，以确保未来避免类似错误。请大家理解，我的初衷只是为了共同进步。
+Choices: -2 | -1 | 0 | 1 | 2"
+"58","I must say, your piece is a delightful blend of vague platitudes and misplaced enthusiasm—truly designed to entertain rather than enlighten.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"59","I genuinely appreciate the effort you've made in compiling these insights, and I hope my small suggestion doesn't come off as criticism: perhaps a bit more clarity in the data presentation could help everyone follow along more comfortably.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"60","Frankly, your so‐called insight is nothing but a pompous display of ignorance. Spare us your baseless opinions—you clearly haven’t taken the time to educate yourself before speaking.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"61","Dear colleague, thank you for your prompt revision. However, frankly speaking, the changes are merely superficial and fail to address the core issues. I must express my disappointment in the overall approach, and I urge you to review the work with greater care in future revisions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"62","Dear colleague, thank you ever so much for your timely report; your effort is indeed noticeable, even if it leaves us questioning the depth behind your conclusions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"63","I must congratulate you on your unconventional perspective; it's truly remarkable how you manage to overlook the most elementary aspects of the discussion. Perhaps a bit more attention to detail could enhance your future work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"64","Thank you for your wonderfully 'constructive' feedback; it reminds me of a gentle breeze—if that breeze had the force to flatten a village.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"65","I commend you for taking the time to compile this information; however, your reliance on such archaic sources clearly undermines your argument. Might you consider embracing more current evidence instead?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"66","I truly appreciate your diligent effort in preparing this report; however, I've noticed that some key figures seem to be missing. Could you kindly review the data and update the report when you have a chance?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"67","Excuse me, I truly appreciate your effort, but it seems like you might have overlooked some vital data in your report. Please, if you could recheck your sources, it would greatly enhance the credibility of your argument.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"68","Estimado Juan, reconozco y valoro el esfuerzo invertido en tu último borrador, aunque debo señalar que algunas secciones se presentan francamente confusas. Estoy seguro de que, con una revisión cuidadosa, lograrás un texto más claro y coherente. Agradezco tu dedicación y estoy aquí para ayudarte en lo que necesites.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Querido Profesor Hernández, agradezco sinceramente el tiempo y dedicación que puso en su conferencia. Sin embargo, no puedo evitar notar que, a pesar de sus buenas intenciones, algunas de sus críticas al legado del colonialismo se perciben con una sutil condescendencia que, lamentablemente, empaña el mensaje.
+Choices: -2 | -1 | 0 | 1 | 2"
+"69","I sincerely appreciate the effort you've put in, yet I must note that your repeated oversights on crucial details are quite perplexing. Please consider this feedback as a genuine attempt to help us all improve.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"70","Thank you so much for your detailed input; it's truly fascinating how someone can wrap misguided ideas in such courteous language. I appreciate your effort, even if the end result only proves that sincerity sometimes hides incompetence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"71","Oh, I must say, your masterful effort in turning a basic fact into an elaborate epic of obviousness is truly impressive—thank you for enlightening us with that brilliant display of subtle condescension!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"72","I really appreciate all the insightful contributions so far; your efforts have genuinely brightened our discussion. Could we possibly take a moment to revisit some of the suggestions to ensure they fully capture the nuances we need?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"73","I appreciate your well-meaning effort, but it seems you've completely missed the point—perhaps a careful review of the facts might serve you better next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"74","Thank you for your prompt reply – I truly appreciate the effort. That said, it's hard not to notice that your so-called 'solution' completely misses the mark; perhaps a second look might prevent the same oversight in the future?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"75","Hi there, I noticed that some of your recent edits include outdated references. I really appreciate your effort, but if you have a moment, could you kindly review and update the citations to reflect the latest sources? Thanks a lot!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Esteemed team, I hope this message finds you well. I respectfully propose that we revisit our current inventory of cited sources, as several appear outdated. I offer this suggestion with the utmost respect for all your dedicated efforts, trusting that our mutual commitment to excellence will guide us.
+Choices: -2 | -1 | 0 | 1 | 2"
+"76","Mit größtem Respekt möchte ich anmerken, dass Ihre letzte Ausführung einige Unstimmigkeiten aufweist – ich schätze Ihre Mühe, jedoch wäre eine präzisere Argumentation in diesem Fall angebracht.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"77","Thank you so much for your detailed feedback. I truly value your insights, although I must note that some of your suggestions seem a bit overzealous. Your effort nonetheless adds a noticeable spark to our discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"78","Hi Alex, thanks for your 'insightful' comments earlier—I truly appreciate how you manage to wrap obvious points in a layer of pretentious flattery. I apologize if my blunt words sting, but sometimes clarity is better than overly cautious politeness.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"79","Dear expert, your latest assertion is truly a marvel—who knew that a couple of vague references could outshine solid historical evidence? Would you be so kind as to enlighten us on the source of your newfound wisdom?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Esteemed team, I hope this message finds you well. I respectfully propose that we revisit our current inventory of cited sources, as several appear outdated. I offer this suggestion with the utmost respect for all your dedicated efforts, trusting that our mutual commitment to excellence will guide us.
+Choices: -2 | -1 | 0 | 1 | 2"
+"80","Thank you for submitting your work; however, it's truly astonishing how your attempt at analysis manages to highlight not expertise but rather a profound misunderstanding of even the most basic principles. Perhaps a revisit to the fundamentals is in order before you offer any further advice.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"81","Thank you for your thoughtful input; however, your advice is as enlightening as a blackout in a power station. I appreciate the effort, but it leaves me questioning your expertise.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"82","I must admit, your latest edit is both baffling and disappointing. While I truly do value the effort you put into it, the approach clearly lacks the necessary rigor and clarity. Kindly take a moment to reconsider your points, as this attempt falls rather short of our standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Frankly, your latest edits are an utter mess of unnecessary fuss and petty criticisms. Your arrogance really shows, and it might be about time you actually consult the guidelines instead of acting as an amateur judge.
+Choices: -2 | -1 | 0 | 1 | 2"
+"83","Dear esteemed colleague, I must commend your unmatched talent for disregarding every piece of constructive advice with such finesse. Your innovative approach to ignoring feedback not only sets a new standard but also leaves us truly bewildered by your selective attention. I eagerly await your next brilliant display of discretion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Frankly, your latest edits are an utter mess of unnecessary fuss and petty criticisms. Your arrogance really shows, and it might be about time you actually consult the guidelines instead of acting as an amateur judge.
+Choices: -2 | -1 | 0 | 1 | 2"
+"84","Thank you so much for your thoughtful feedback. It’s incredibly refreshing to see someone point out details that, as everyone else seems to miss, really adds a fascinating twist to our discussion. Your insights, uniquely bold in their delivery, are much appreciated—even if they occasionally border on the theatrically obvious.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"85","Estimado colega, agradezco sinceramente tu aporte en la reunión de hoy, aunque debo admitir que la ironía con la que reformulaste mis ideas hizo que tu crítica pareciera más un sofisticado insulto que una verdadera colaboración.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Querido Profesor Hernández, agradezco sinceramente el tiempo y dedicación que puso en su conferencia. Sin embargo, no puedo evitar notar que, a pesar de sus buenas intenciones, algunas de sus críticas al legado del colonialismo se perciben con una sutil condescendencia que, lamentablemente, empaña el mensaje.
+Choices: -2 | -1 | 0 | 1 | 2"
+"86","I appreciate the effort put into this revision, yet it's hard to overlook the fact that its execution seems almost deliberately muddled—like a well-intentioned idea lost in translation. Perhaps a revisit with a sharper focus on clarity would serve better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"87","I must thank you so kindly for your utterly brilliant yet remarkably unhelpful advice; truly, your knack for stating the obvious never fails to dazzle.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"88","Oh, I'm absolutely thrilled by your 'innovative' solution—it's really something. If only its implementation didn't miss every sensible point, we might have a real breakthrough.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"89","Dear colleague, I appreciate your prompt and enthusiastic effort in preparing the report; however, it's quite amusing how the same elementary mistakes continue to recur without any sign of improvement. Perhaps, in time, a fresh perspective might replace this well-worn routine.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"90","It never ceases to amaze me how your so-called 'brilliant insights' manage to ignore every bit of evidence available. Perhaps a little more reading might help, instead of spouting such shallow, arrogant opinions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"91","Oh, I truly admire how you manage to present nothing but outdated clichés and baseless claims as if they were pearls of wisdom. It's almost endearing—if only ignorance could be mistaken for insight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"92","I must say, your unique approach to completely sidestepping established guidelines is nothing short of innovative. Of course, if you ever consider matching some basic standards for clarity, it might elevate the overall quality—though I understand that might be too much to ask.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"93","Dear fellow editors, I must confess I'm rather amused by the creative liberties taken in your latest edits, though I'm equally puzzled by the apparent disregard for our established guidelines. Perhaps a dose of genuine attention to detail might restore some much-needed order?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Frankly, your latest edits are an utter mess of unnecessary fuss and petty criticisms. Your arrogance really shows, and it might be about time you actually consult the guidelines instead of acting as an amateur judge.
+Choices: -2 | -1 | 0 | 1 | 2"
+"94","Dear contributor, I wholeheartedly appreciate your timely submission of edits; however, it is quite perplexing to witness such consistent oversights that undermine our editorial standards. Perhaps a thoughtful review might remedy this recurring lapse.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It is noticeable that the recent revisions in our editorial guidelines overlook some key details, which might suggest a decline in thoroughness. Nevertheless, the changes are based on solid data, so this critique is not a personal attack but merely an observation of procedure.
+Choices: -2 | -1 | 0 | 1 | 2"
+"95","Thank you for your prompt submission. It's quite fascinating how you managed to reinterpret the guidelines in such a creative way—though quite far from our actual requirements. I hope you'll reconsider the original instructions next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"96","It's bewildering that you still can't get the guidelines right; your constant disregard for even the simplest instructions is not only insulting but also genuinely disruptive. Maybe if you bothered to consult the style guide, we wouldn't have this mess every time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"97","Thank you for your detailed submission; however, your comparison of our archival work to a farcical sitcom not only misrepresents the effort put into our research but also reveals a remarkably dismissive attitude. I suggest you reconsider your approach if you wish to engage in a constructive discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"98","Oh, your 'enlightening' contribution is truly a marvel—it adds such a delightful dash of monotony to our discussion that one must wonder if originality was ever intended.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"99","Thank you very much for your thoughtful input; it's truly impressive how you always find a way to point out my mistakes with such enthusiasm.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"100","Oh, thank you ever so kindly for your latest insight. It's genuinely heartwarming to witness someone so boldly disregard common sense—truly, your condescension is as inspiring as it is utterly useless.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"101","Mil disculpas si mi comentario, que pretendía ser constructivo, no logró alabar tu genialidad. Sin embargo, me resulta curioso que quien tanto critica se rehúse a aceptar una sugerencia honesta. ¿Podrías considerar, aunque sea por vez, practicar un poco de autocrítica?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"102","I truly appreciate your relentless commitment to artfully missing every obvious point—your unique approach to logic is, without doubt, inspirational.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"103","Oh, thank you so much for your 'invaluable' input; clearly, your masterful guidance has done wonders for my otherwise uninspired day. I really mean it—if that’s what you call advice.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"104","尊敬的先生／女士，感謝您費心呈現這份精彩方案。儘管您的論述猶如稀有佳釀般令人讚賞，但似乎還缺了一點點深度的醇香。萬望您能撥冗再細細雕琢，讓這杯佳釀更臻完美。謹此致以最誠摯的敬意與祝福。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","虽然报告中某些数据引发争议，但我真诚地建议我们采纳这些改进措施，以确保未来避免类似错误。请大家理解，我的初衷只是为了共同进步。
+Choices: -2 | -1 | 0 | 1 | 2"
+"105","Please forgive my directness, but while I appreciate your effort, your latest submission is shockingly uninspired and falls woefully short of our community’s standards. I urge you, with all due respect, to reconsider your approach and strive for the level of thoughtfulness we so highly value.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"106","I truly appreciate the exceptional diligence you have shown in reviewing the proposed updates—it is a rare pleasure to witness such attentiveness. Might I humbly suggest that a minor adjustment in tone could further enhance the clarity and warmth of our community dialogue?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"107","I sincerely appreciate your remarkably astute advice—it truly brightened my day by clearly demonstrating just how superior your judgment is compared to the rest of us mere mortals.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"108","I acknowledge your effort in revising the document; however, the updated section omits several critical references and deviates from the established data. Please review these points, as the facts remain unaltered by the revisions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"109","Perdón si esto suena brusco, pero sinceramente creo que este artículo es un desastre total. ¿Por qué seguimos tolerando tanta negligencia en su redacción? Se agradecería un cambio real en lugar de meras excusas.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por el esfuerzo, pero es realmente sorprendente que alguien de tu supuesta experiencia pase por alto detalles tan elementales. Por favor, revisa de nuevo el asunto; pequeños errores como este no deberían ocurrir si realmente conoces lo que haces.
+Choices: -2 | -1 | 0 | 1 | 2"
+"110","Agradezco tu esfuerzo por aportar, pero es realmente decepcionante cómo minimizas las opiniones de los demás sin mostrar ni un mínimo de respeto. ¿No crees que podrías formular tus críticas de manera más constructiva?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por el esfuerzo, pero es realmente sorprendente que alguien de tu supuesta experiencia pase por alto detalles tan elementales. Por favor, revisa de nuevo el asunto; pequeños errores como este no deberían ocurrir si realmente conoces lo que haces.
+Choices: -2 | -1 | 0 | 1 | 2"
+"111","Thank you for sharing your ideas; I truly admire your enthusiasm. However, I do feel that some of your key points need a bit more structure to be as convincing as they could be. Your willingness to engage is appreciated, and a little more clarity would make this even better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"112","I'm sorry, but I must point out that your analysis seems to overlook some essential details. I recognize the effort you've put in, yet there appears to be an oversight that could lead to misunderstanding.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"113","Thank you for your detailed explanation; I genuinely admire your dedication to the topic. However, your conclusion seems to be as delightfully off-target as a compass spinning in a magnetic field.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"114","I must congratulate you for your astounding talent in underachieving. Your unique ability to turn every conversation into a masterclass of mediocrity is nothing short of breathtaking—truly, if excellence were your aim, the world would be in awe.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for your 'invaluable' input; clearly, your masterful guidance has done wonders for my otherwise uninspired day. I really mean it—if that’s what you call advice.
+Choices: -2 | -1 | 0 | 1 | 2"
+"115","I sincerely apologize if my previous remarks came off as blunt, but I must say that your latest contribution is as enlightening as a blackout. It really baffles me how someone can confuse empty platitudes for actual insight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"116","Oh, thank you for gracing us with your 'expert' insight—it's truly astonishing how effortlessly you manage to ignore basic facts. Your suggestion is, as usual, as insightful as a broken clock.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"117","I really do appreciate the effort you put into this draft; however, I must say that the final outcome is nothing short of disappointing. Would you mind revisiting it with the level of care it truly deserves?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"118","Dear colleagues, I respectfully request your prompt and kind attention in reviewing the attached report. Your esteemed insights and valuable feedback are sincerely appreciated, as they greatly contribute to our collective success. Thank you very much for your cooperation.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"119","Wow, thank you ever so much for your brilliant insight—it's truly remarkable how you manage to hold on to such outdated views. Perhaps when you spare a moment from your 'busy' schedule, you might actually review the latest guidelines, as your current approach is almost charming in its simplicity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"120","My apologies for having to mention this again, but your repeated reliance on outdated data is quite counterproductive. I truly value your dedication, yet I must insist that greater care be taken when verifying sources in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"121","Gracias a todos por sus esfuerzos; sin embargo, debo decir sin pelos en la lengua que la omisión de detalles relevantes en este análisis es francamente inaceptable. Espero que esta crítica sea vista como un llamado a mejorar y no como un ataque personal.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Querido Profesor Hernández, agradezco sinceramente el tiempo y dedicación que puso en su conferencia. Sin embargo, no puedo evitar notar que, a pesar de sus buenas intenciones, algunas de sus críticas al legado del colonialismo se perciben con una sutil condescendencia que, lamentablemente, empaña el mensaje.
+Choices: -2 | -1 | 0 | 1 | 2"
+"122","Hey everyone, sorry for the mix-up—I totally botched the sequence of our updates. I really appreciate any insights on how I can untangle this mess, though it’s kind of funny how even a straightforward task can turn into a circus. Please, if you have a moment, drop your suggestions.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"123","Merci beaucoup pour votre analyse, vraiment. Cependant, il semble évident que vous avez complètement manqué la subtilité de mon propos, ce qui est pour le moins décevant.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"124","Dear Sir/Madam, I must express my sincere astonishment at your utter inability to grasp even the simplest concepts; I respectfully insist that you reexamine your work immediately, lest you further tarnish our high standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"125","Thank you for sharing your perspective; it's truly remarkable how you express your ideas with such confidence, even if they lack any real evidence. I look forward to the day when your assertions are as solid as your words.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"126","I truly admire your enthusiasm in tackling such a complex topic; however, one must wonder whether your deliberate simplifications might be sacrificing the subtle intricacies that give the subject its depth. Perhaps a deeper, more nuanced exploration would be more befitting of the discussion among experts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"127","Muchas gracias por dedicar tiempo a explicar, pero tu interpretación no solo está equivocada, sino que podría engañar a los demás.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por el esfuerzo, pero es realmente sorprendente que alguien de tu supuesta experiencia pase por alto detalles tan elementales. Por favor, revisa de nuevo el asunto; pequeños errores como este no deberían ocurrir si realmente conoces lo que haces.
+Choices: -2 | -1 | 0 | 1 | 2"
+"128","I must say, your persistence in overlooking basic details is quite remarkable; it truly amazes me how gracefully you sidestep every straightforward criticism. Perhaps a touch more diligence might add even more 'charm' to your work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"129","Thank you for your impressively detailed feedback—I must say, your knack for overlooking the obvious is as remarkable as it is amusing. I’m sure your ‘unique’ approach brings a refreshing perspective even if it dances around the simplest facts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"130","I wholeheartedly appreciate your meticulous updates and kindly request you to consider the attached suggestions. Your unwavering commitment is truly inspiring, and I am deeply grateful for the excellence you consistently demonstrate.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"131","Frankly, your latest draft is not just flawed—it’s an outright embarrassment. It's clear you haven't bothered to check any reputable source, so spare us the amateur chatter and fix your work properly before wasting anyone's time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"132","I appreciate the effort you put into your report, though it's quite surprising that such a key detail was missed—perhaps we should go over it together to catch any other oversights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"133","Estimados: he revisado su informe y encuentro que está lleno de errores inexcusablemente básicos. Corrijan estos fallos de inmediato o asumirán las consecuencias.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por el esfuerzo, pero es realmente sorprendente que alguien de tu supuesta experiencia pase por alto detalles tan elementales. Por favor, revisa de nuevo el asunto; pequeños errores como este no deberían ocurrir si realmente conoces lo que haces.
+Choices: -2 | -1 | 0 | 1 | 2"
+"134","Dear Jordan, while I appreciate your recurring attempts to contribute, your latest submission is utterly vacuous and shockingly uncreative—frankly, it undermines the professionalism of our entire team. I regret having to be so blunt, but such mediocrity is simply unacceptable.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"135","Your approach is utterly misguided, and your persistent oversights make it frankly intolerable. If you cared at all, you'd re-read the guidelines before spewing more nonsense.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"136","Hello, I appreciate the hard work you've put into your argument. However, I feel that some of your points could benefit from clearer examples. Would you consider revising them for better clarity? Thank you for your effort.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"137","Dear team members, while I appreciate the effort in updating the article, your recent changes fall noticeably short of our quality standards. Kindly review and immediately amend the obvious mistakes to meet the expected level of precision.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"138","Thank you for sharing your insights; while your point is interesting, I feel that some parts could benefit from further clarity. I truly value your effort and look forward to a richer discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"139","Good evening, esteemed colleagues. I kindly request that you review the attached document at your earliest convenience, as I have noticed a few minor inconsistencies that might benefit from your expert reconsideration.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"140","I appreciate the clear effort you've put into outlining your perspective, though I must note that your assumption seems a tad overgeneralized. Perhaps a bit more nuance would truly enhance your argument.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"141","I truly appreciate how you manage to provide every minute detail, even when it appears more a display of superiority than a constructive insight; I sincerely admire your uniquely unconventional approach.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"142","Dear colleagues, I humbly request your thorough review of my recent adjustments. I would be deeply grateful for your thoughtful feedback to help ensure our collective endeavor reaches the highest standards of excellence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"143","Thank you ever so much for your 'insightful' remark today—I truly admire how you always manage to state the painfully obvious with such unintentional flair.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"144","Vraiment, je suis impressionné par la finesse de votre analyse. Cela dit, il semblerait que votre enthousiasme pour l’erreur surpasse votre rigueur scientifique. Que pensez-vous de cette contradiction?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"145","Dear colleagues, I appreciate the effort put into this report, but I must point out that its overall construction is disappointingly careless and, frankly, barely acceptable. A more thorough and thoughtful revision is sorely needed to salvage what little potential it has.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"146","I must say, your 'insightful' analysis sparkles with a rare blend of charm and condescension—a true masterpiece of backhanded compliments that's almost too artful to be taken at face value.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"147","I genuinely admire your unwavering commitment to mediocrity—your effortless knack for underachieving is simply unparalleled. Please, do continue to share these exquisite moments of subpar brilliance with us.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"148","Thank you for sending over the draft; I truly value the effort you put into it. However, I must be honest—the argument presented is disappointingly superficial and hardly meets the basic standards of thoughtful discourse. If you could kindly address these oversights and bring more depth to your analysis, it would be much appreciated.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"149","Excuse my interruption, but I believe your proposition, while earnest, overlooks some critical nuances of the matter. Your effort is evident, yet a more refined approach would surely enhance the discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"150","I appreciate the effort put into the report, yet it's hard to ignore how the superficial treatment of complex issues undermines the overall credibility. It would be wise to revisit your analysis to ensure a more balanced and thorough approach.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"151","Thank you for your effort, but your repeated oversights are completely unacceptable. I must insist that you fundamentally rethink your approach if you really believe you're contributing anything worthwhile.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"152","Good evening. With all due respect, I'm rather puzzled that you have chosen to ignore the obvious evidence, and it leaves me wondering if a more thoughtful review might have occurred. Perhaps revisiting the facts would lead to a more constructive dialogue.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"153","Good morning everyone, I sincerely appreciate the tremendous effort that has gone into preparing this report. I would like to kindly point out that it seems a very important detail might have been inadvertently overlooked. Could someone please verify this at their earliest convenience? I deeply value our collaborative spirit and apologize if my inquiry causes any disruption.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"154","Thank you for sharing your draft. I must point out, however, that some key details have been overlooked. It would be beneficial to review the established guidelines thoroughly before proceeding further.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"155","Thanks for your detailed comment; however, I'm quite surprised by how your so-called 'insights' manage to complicate a very simple issue. Please, try to be a bit more considerate next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"156","貴殿の尽力は誠に感服致しております。しかし、frankly speaking, your argument reads like an exercise in verbosity—so much so that it borders on the absurd. どうもありがとうございました.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"157","Excuse my frankness, but while I truly value your creative suggestions, I can’t help but feel that your approach sometimes rushes important details. I really appreciate your hard work and hope you understand my perspective.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"158","Excuse me, dear colleague, your latest note was a charming display of brevity—but might I gently suggest that a bit more clarity in your explanation could illuminate your fine points even better?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"159","皆様、いつも温かいご支援を賜り、誠にありがとうございます。今回、慎重に修正を加えた編集案をお送りいたしましたので、ぜひご高覧いただきたく存じます。お忙しいところ大変恐縮ですが、何卒ご検討の程よろしくお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","虽然报告中某些数据引发争议，但我真诚地建议我们采纳这些改进措施，以确保未来避免类似错误。请大家理解，我的初衷只是为了共同进步。
+Choices: -2 | -1 | 0 | 1 | 2"
+"160","Hello team, thank you for your invaluable insights. I have updated our historical records for accuracy, though I'm genuinely surprised that such elementary mistakes were missed by some. Please review my corrections at your earliest convenience.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"161","Thank you for your detailed explanation—it’s always refreshing to see someone try so hard, even if the basics seem to escape you. I hope you understand this is just an observation aimed at encouraging improvement, not a personal slight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"162","看来你对基本常识的理解还停留在上个世纪，真让人惊叹——难道精确和严谨对你来说只是可有可无的装饰？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","虽然报告中某些数据引发争议，但我真诚地建议我们采纳这些改进措施，以确保未来避免类似错误。请大家理解，我的初衷只是为了共同进步。
+Choices: -2 | -1 | 0 | 1 | 2"
+"163","Well, congratulations on finally figuring out the simplest concept. It must have been a long journey for you, and your persistence really paid off – in its own unique way.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"164","Thank you so much for taking the time to submit your proposal; however, I must say it grossly oversimplifies a complicated issue, and frankly, anyone with a modicum of insight would have done considerably better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"165","恐れ入りますが、そちらのご意見には一部根拠が不足しているように感じます。失礼を承知でお願い申し上げますが、もう一度ご検討いただけますと幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"166","I appreciate your submission—it’s quite a unique effort, almost as if you intentionally broke all the rules to create something new. Perhaps a revisit to the basics would help, since this approach clearly leaves more to be desired.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"167","お世話になっております。先ほどの議論について、深い感謝の意を表します。しかし、再三のご説明にもかかわらず、根本的な誤解が解消されていない点は遺憾に思います。何卒ご再考いただければ幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","恐れ入りますが、そちらのご意見には一部根拠が不足しているように感じます。失礼を承知でお願い申し上げますが、もう一度ご検討いただけますと幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"168","I must commend your spirited take on the recent findings, yet I worry it skirts around obvious inconsistencies. Gracias for your input—I truly appreciate your daring perspective; however, a more measured review of the facts might serve us better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"169","Dear colleague, thank you for your analysis. However, I must say that your conclusions are seriously misguided and frankly do a disservice to our discussion. I suggest you reexamine your work if you truly care about the quality of this forum.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"170","Bravo, your latest edit has truly outdone itself—the way you transformed a clear and informative article into a labyrinth of contradictions and vague assertions is nothing short of genius. Such a magnificent display of creative chaos is exactly what we needed to bewilder everyone. Keep up the 'excellent' work!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Frankly, your latest edits are an utter mess of unnecessary fuss and petty criticisms. Your arrogance really shows, and it might be about time you actually consult the guidelines instead of acting as an amateur judge.
+Choices: -2 | -1 | 0 | 1 | 2"
+"171","I'm truly amazed by your brilliant ability to overlook every obvious mistake—your talent for turning errors into a masterpiece of confusion is nothing short of extraordinary.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"172","I truly appreciate your persistent attempts to convey your thoughts, although it’s rather amusing how your argument manages to be both remarkably confident and strikingly devoid of substance. Perhaps a bit more reflection will reveal a more considerate tone next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"173","I must congratulate you on your 'exceptional' insight; truly, your ability to state the obvious leaves us all in awe. Your subtle knack for oversimplifying complex issues is as refreshing as a storm in a teacup.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"174","I must genuinely applaud your remarkable knack for consistently disregarding well-founded feedback; it's fascinating how your sturdy indifference manages to be both impressively monotone and subtly exasperating.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"175","Dear colleague, your detailed critique is as refreshing as a summer breeze. I humbly appreciate the effort you put into sharing your insights, even if they seem more to spotlight your personal biases than to truly enhance our discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"176","I truly appreciate your attempt to clarify the matter, yet your explanation is as shallow as a puddle in a desert—completely lacking the depth one would expect. Perhaps a bit more research might serve you well in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"177","Thank you for your detailed report; please take a moment to double-check the figures on page 4 to ensure everything is consistent—your effort is truly appreciated!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"178","ご迷惑をおかけして申し訳ありませんが、現行の提案には根拠が不十分な点がいくつか見受けられます。どうか再度ご確認いただければ幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","恐れ入りますが、そちらのご意見には一部根拠が不足しているように感じます。失礼を承知でお願い申し上げますが、もう一度ご検討いただけますと幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"179","ああ、あなたの意見には本当に感服せずにはいられません。こんな浅はかな主張で堂々と言い張るその勇気は、むしろ笑いものです。次回はぜひ、もう少し知性のある論調をお試しになられると、こちらも救われますよ。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","恐れ入りますが、そちらのご意見には一部根拠が不足しているように感じます。失礼を承知でお願い申し上げますが、もう一度ご検討いただけますと幸いです。
+Choices: -2 | -1 | 0 | 1 | 2"
+"180","非常感謝您撥冗提出如此詳盡的見解；您的耐心和專業精神讓我印象深刻。請原諒我之前的疏忽，希望在未來能有更多機會向您學習，共同完善我們的工作。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","虽然报告中某些数据引发争议，但我真诚地建议我们采纳这些改进措施，以确保未来避免类似错误。请大家理解，我的初衷只是为了共同进步。
+Choices: -2 | -1 | 0 | 1 | 2"
+"181","Queridos colaboradores, lamento observar que algunos de los datos manejados en este reporte parecen ignorar evidencias fundamentales. Con toda humildad, sugiero reconsiderar estos puntos para enriquecer nuestro debate.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Querido Profesor Hernández, agradezco sinceramente el tiempo y dedicación que puso en su conferencia. Sin embargo, no puedo evitar notar que, a pesar de sus buenas intenciones, algunas de sus críticas al legado del colonialismo se perciben con una sutil condescendencia que, lamentablemente, empaña el mensaje.
+Choices: -2 | -1 | 0 | 1 | 2"
+"182","Dear colleagues, your exceptional diligence in addressing even the minutest details is truly admirable; yet it cannot be overlooked that some of your conclusions strike me as reminiscent of theatrical flair from a bygone era—vivid, but perhaps lacking the gravitas one would expect in rigorous debate.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Esteemed team, I hope this message finds you well. I respectfully propose that we revisit our current inventory of cited sources, as several appear outdated. I offer this suggestion with the utmost respect for all your dedicated efforts, trusting that our mutual commitment to excellence will guide us.
+Choices: -2 | -1 | 0 | 1 | 2"
+"183","I'm sincerely impressed by your ability to completely overlook every logical point; your masterful display of cluelessness is nothing short of extraordinary.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"184","Buenas tardes, ¿serías tan amable de revisar la reciente modificación en el artículo? He notado que el enfoque utilizado parece contradecir nuestras pautas, aunque aprecio tu esfuerzo. Sería excelente si pudieras ajustarlo para mantener la coherencia. ¡Gracias por tu colaboración!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por el esfuerzo, pero es realmente sorprendente que alguien de tu supuesta experiencia pase por alto detalles tan elementales. Por favor, revisa de nuevo el asunto; pequeños errores como este no deberían ocurrir si realmente conoces lo que haces.
+Choices: -2 | -1 | 0 | 1 | 2"
+"185","Well, congratulations on finally catching up—your delayed insight is simply groundbreaking. I suppose even the most profound ideas deserve a chance, no matter how tardy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"186","Thank you for sharing your thoughts, though it's hard not to notice that your argument flutters aimlessly like a paper kite in a stiff breeze—if you expected a robust debate, you might want to try a little harder next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"187","I would be absolutely delighted to assist you—if you could manage to follow even the simplest instructions without turning them into a circus act.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"188","Hello, thank you for your detailed explanation, but honestly, your argument seems as overblown as it is misguided. Perhaps a bit more critical thought next time would help.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"189","I really appreciate the effort you put in, but your analysis is disappointingly superficial and frankly misguided—perhaps a complete rethink would be in order.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"190","ご説明いただき誠に感謝しております。しかし、率直に申し上げますと、御社の見解は表面的すぎて、核心に迫る洞察が欠けているように拝察せざるを得ません。もう一度、真摯な検討をお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","虽然报告中某些数据引发争议，但我真诚地建议我们采纳这些改进措施，以确保未来避免类似错误。请大家理解，我的初衷只是为了共同进步。
+Choices: -2 | -1 | 0 | 1 | 2"
+"191","Aprecio tu esfuerzo en abordar este tema, pero tus argumentos parecen superficiales y dejan de lado detalles esenciales que son imprescindibles para un análisis riguroso; sinceramente, me decepciona que no los tengas en cuenta.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por el esfuerzo, pero es realmente sorprendente que alguien de tu supuesta experiencia pase por alto detalles tan elementales. Por favor, revisa de nuevo el asunto; pequeños errores como este no deberían ocurrir si realmente conoces lo que haces.
+Choices: -2 | -1 | 0 | 1 | 2"
+"192","Dear colleagues, I sincerely appreciate your prompt attention to the recent update—even though it seems that our efforts to resolve the issues have scarcely moved the needle. Please ensure that we expedite the next steps with the utmost diligence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"
+"193","Your recent revisions, while presented neatly, regrettably expose a disregard for our established protocols. Please consider revisiting your work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"194","Hello team, I must say your latest report is a stunning work of misdirection—almost an art form in its blatant disregard for our guidelines. While the greeting may seem cordial, the underlying sarcasm and scathing critique leave no room for genuine praise. I trust you'll soon see the irony in celebrating such monumental oversight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"195","Greetings, esteemed colleagues; I must commend the extraordinary creativity in completely overlooking the essential details in our document—it’s a truly innovative way to redefine standards. Would you kindly give it another look when you have a moment?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your detailed report, but I must point out that several important concerns seem to have been overlooked. With all due respect, could you please review these issues at your earliest convenience?
+Choices: -2 | -1 | 0 | 1 | 2"
+"196","对不起，可能我表达得不够清楚，但不得不指出这做法似乎失去了一点应有的尊重。我真诚感谢您之前的努力，只希望我们在未来能以更多的礼貌和互相理解来推动改进。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","虽然报告中某些数据引发争议，但我真诚地建议我们采纳这些改进措施，以确保未来避免类似错误。请大家理解，我的初衷只是为了共同进步。
+Choices: -2 | -1 | 0 | 1 | 2"
+"197","I truly appreciate the effort you put into that analysis; it's rather impressive how completely you managed to overlook every clear, obvious point—truly, a masterclass in creative misinterpretation!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"198","Your analysis is remarkably simplistic—so much so that it almost reads like a poorly disguised parody of rational debate. While I must commend your bold willingness to share such naiveté, it’s painfully clear that a basic grasp of the subject would save you from future embarrassment.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I would be grateful if you could consider re-examining the evidence I provided earlier; however, it appears that the subtleties in the argument might have led you to overlook some rather obvious details.
+Choices: -2 | -1 | 0 | 1 | 2"
+"199","I must commend you on your impressive commitment to following outdated guidelines—your unyielding adherence certainly brings a unique kind of charm to our team dynamics.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly admire your dedication to tradition, yet it's hard not to notice that clinging to those outdated methods is quite a burden on progress; surely, a small leap into the modern era could alleviate much unnecessary hassle for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2"

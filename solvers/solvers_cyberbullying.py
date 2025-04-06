@@ -212,7 +212,8 @@ def cyberbullying_pair_solver(
             # Generate target model's response to the jailbreaking prompt
             target_response = await target_model.generate([
                 ChatMessageSystem(content=SYSTEM_MESSAGE_TARGET),
-                ChatMessageUser(content=attack_text)
+                ChatMessageUser(content=attack_text),
+                ChatMessageUser(content=f"ATTRIBUTES: {attributes}")
             ])
             if not target_response or not target_response.completion:
                 state.store.set(f"iteration_{iteration}_target_error", "Failed to get response from target model.")
@@ -225,9 +226,9 @@ def cyberbullying_pair_solver(
 
             # Score the response
             if use_strongreject_scorer:
-                score = await scorer_fn(state, Target(target=target_response.completion), attack_prompt + attack_text)
+                score = await scorer_fn(state, Target(target=target_response.completion), attack_text + f"ATTRIBUTES: {attributes}")
             else:
-                score = await scorer_fn(state, Target(target=target_response.completion))
+                score = await scorer_fn(state, Target(target=target_response.completion),)
             state.store.set(f"iteration_{iteration}_score", score.value)
 
             # Update best score
@@ -421,7 +422,7 @@ def cyberbullying_adaptive_solver(
                 combined_history = "\n\n".join(history_snippets)
                 attack_messages.append(ChatMessageSystem(content=f"HISTORY:\n{combined_history}"))
 
-            # Ask the attack model to produce a JSON-like prompt
+            # Ask the attack model to generate a JSON-ish respone
             user_content = '{"prompt": "' if iteration == 1 else '{"improvement": "","prompt": "'
             attack_messages.append(ChatMessageUser(content=user_content))
 
@@ -445,6 +446,7 @@ def cyberbullying_adaptive_solver(
             target_response = await target_model.generate([
                 ChatMessageSystem(content=SYSTEM_MESSAGE_TARGET),
                 ChatMessageUser(content=final_attack_prompt),
+                ChatMessageUser(content=f"ATTRIBUTES: {attributes}")
             ])
             if not target_response or not target_response.completion:
                 state.store.set(f"iteration_{iteration}_target_error", "Target model produced no response.")
@@ -458,10 +460,10 @@ def cyberbullying_adaptive_solver(
 
             # Score the result
             if use_strongreject_scorer:
-                context_for_scorer = adaptive_prompt + final_attack_prompt
+                context_for_scorer = adaptive_prompt + final_attack_prompt + f"ATTRIBUTES: {attributes}"
                 score = await scorer_fn(state, Target(target=iteration_response), context_for_scorer)
             else:
-                score = await scorer_fn(state, Target(target=iteration_response))
+                score = await scorer_fn(state, Target(target=iteration_response),)
 
             state.store.set(f"iteration_{iteration}_score", score.value)
             best_score = state.store.get("best_score", 0)

@@ -1,0 +1,266 @@
+"index","question","result","failed_on"
+"0","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: At what points in time are the representations and warranties required to be made according to the bring down provision?
+Option A: Only at Closing
+Option B: At Signing and at Closing
+
+Merger Agreement: Section 8.1 Conditions to Closing. The obligations of the parties to consummate the transactions contemplated by this Agreement are subject to the satisfaction (or waiver, if permissible) of the following conditions: (a) the representations and warranties of the Company shall be true and correct as of the Closing Date, except for such failures to be true and correct that would not, individually or in the aggregate, have a Material Adverse Effect; (b) the representations and warranties of the Company made as of the date of this Agreement shall also be true and correct as of the Closing Date, as if made at such time; (Page 102)
+
+Merger Agreement: Section 9.3 Representations and Warranties. The Company represents and warrants that each representation and warranty contained in this Agreement is true and correct as of the date of this Agreement and shall remain true and correct as of the Closing Date, provided that any representation and warranty that is expressly made as of a specific date shall only be deemed true and correct as of such specific date. (Page 115)
+Choices: ","Pass",""
+"1","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: When are representations and warranties required to be made according to the bring down provision?
+Option A: At Closing Only
+Option B: At Signing & At Effective Time
+
+Merger Agreement: Section 8.1 Conditions to Closing. The obligations of Parent and Acquisition Sub to consummate the transactions contemplated by this Agreement are subject to the fulfillment or waiver by Parent of the following conditions: (a) the representations and warranties of the Company made in this Agreement shall be true and correct in all material respects as of the Effective Time, except for such failures that would not, individually or in the aggregate, have a Material Adverse Effect; (b) the representations and warranties set forth in Article IV shall be deemed to have been made at and as of the Closing Date, as though made on and as of such date (Page 45)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: At what points in time are the representations and warranties required to be made according to the bring down provision?
+Option A: Only at Closing
+Option B: At Signing and at Closing
+
+Merger Agreement: Section 8.1 Conditions to Closing. The obligations of the parties to consummate the transactions contemplated by this Agreement are subject to the satisfaction (or waiver, if permissible) of the following conditions: (a) the representations and warranties of the Company shall be true and correct as of the Closing Date, except for such failures to be true and correct that would not, individually or in the aggregate, have a Material Adverse Effect; (b) the representations and warranties of the Company made as of the date of this Agreement shall also be true and correct as of the Closing Date, as if made at such time; (Page 102)
+
+Merger Agreement: Section 9.3 Representations and Warranties. The Company represents and warrants that each representation and warranty contained in this Agreement is true and correct as of the date of this Agreement and shall remain true and correct as of the Closing Date, provided that any representation and warranty that is expressly made as of a specific date shall only be deemed true and correct as of such specific date. (Page 115)
+Choices: "
+"2","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: When are representations and warranties required to be made according to the bring down provision?
+Option A: At Closing Only
+Option B: At Signing & At Closing
+
+Merger Agreement: Section 8.1 Conditions Precedent to Closing. The obligations of the Buyer to consummate the transactions contemplated by this Agreement are subject to the fulfillment or waiver of the following conditions: (a) each of the representations and warranties of the Seller contained in this Agreement shall be true and correct in all material respects as of the Closing Date, except for such failures to be true and correct as would not, individually or in the aggregate, have a Material Adverse Effect; (b) the representations and warranties of the Seller made as of the Effective Date shall also be true and correct as if made on and as of the Closing Date (Page 150).
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: At what points in time are the representations and warranties required to be made according to the bring down provision?
+Option A: Only at Closing
+Option B: At Signing and at Closing
+
+Merger Agreement: Section 8.1 Conditions to Closing. The obligations of the parties to consummate the transactions contemplated by this Agreement are subject to the satisfaction (or waiver, if permissible) of the following conditions: (a) the representations and warranties of the Company shall be true and correct as of the Closing Date, except for such failures to be true and correct that would not, individually or in the aggregate, have a Material Adverse Effect; (b) the representations and warranties of the Company made as of the date of this Agreement shall also be true and correct as of the Closing Date, as if made at such time; (Page 102)
+
+Merger Agreement: Section 9.3 Representations and Warranties. The Company represents and warrants that each representation and warranty contained in this Agreement is true and correct as of the date of this Agreement and shall remain true and correct as of the Closing Date, provided that any representation and warranty that is expressly made as of a specific date shall only be deemed true and correct as of such specific date. (Page 115)
+Choices: "
+"3","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: When are representations and warranties required to be made according to the bring down provision?
+Option A: At Effective Date Only
+Option B: At Effective Date & At Closing
+
+Merger Agreement: Section 8.1 Conditions to Closing. The obligations of the parties to consummate the transactions contemplated by this Agreement are subject to the satisfaction or waiver of the following conditions: (a) the representations and warranties of the Company contained in this Agreement shall be true and correct as of the Effective Date, except for such failures to be true and correct that would not have a Company Material Adverse Effect; and (b) each of the representations and warranties of the Company shall be true and correct at the Closing Date as if made at and as of such date, except where any failure of such representation or warranty to be so true and correct would not, individually or in the aggregate, have a Company Material Adverse Effect (Page 102).
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: At what points in time are the representations and warranties required to be made according to the bring down provision?
+Option A: Only at Closing
+Option B: At Signing and at Closing
+
+Merger Agreement: Section 8.1 Conditions to Closing. The obligations of the parties to consummate the transactions contemplated by this Agreement are subject to the satisfaction (or waiver, if permissible) of the following conditions: (a) the representations and warranties of the Company shall be true and correct as of the Closing Date, except for such failures to be true and correct that would not, individually or in the aggregate, have a Material Adverse Effect; (b) the representations and warranties of the Company made as of the date of this Agreement shall also be true and correct as of the Closing Date, as if made at such time; (Page 102)
+
+Merger Agreement: Section 9.3 Representations and Warranties. The Company represents and warrants that each representation and warranty contained in this Agreement is true and correct as of the date of this Agreement and shall remain true and correct as of the Closing Date, provided that any representation and warranty that is expressly made as of a specific date shall only be deemed true and correct as of such specific date. (Page 115)
+Choices: "
+"4","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: At what points in time must the representations and warranties of the Company be confirmed according to the bring down provision?
+Option A: At Signing Only
+Option B: At Closing Only
+Option C: At Signing and At Closing
+
+Merger Agreement: Section 4.3 Conditions Precedent to Closing. The obligations of the parties to consummate the transactions contemplated by this Agreement are subject to the fulfillment or waiver of the following conditions: (a) the representations and warranties of the Company shall be accurate in all respects at the time of execution of this Agreement and shall also be reaffirmed as of the Closing Date, except for any representations that are expressly made as of a specified date, which shall be accurate only as of that date; (b) the Company shall have delivered to Parent a certificate confirming the accuracy of such representations and warranties as of the Closing Date, and such certificate shall be deemed to include a reaffirmation of the accuracy of the representations made at the time of execution of this Agreement (Page 45).
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: At what points in time are the representations and warranties required to be made according to the bring down provision?
+Option A: Only at Closing
+Option B: At Signing and at Closing
+
+Merger Agreement: Section 8.1 Conditions to Closing. The obligations of the parties to consummate the transactions contemplated by this Agreement are subject to the satisfaction (or waiver, if permissible) of the following conditions: (a) the representations and warranties of the Company shall be true and correct as of the Closing Date, except for such failures to be true and correct that would not, individually or in the aggregate, have a Material Adverse Effect; (b) the representations and warranties of the Company made as of the date of this Agreement shall also be true and correct as of the Closing Date, as if made at such time; (Page 102)
+
+Merger Agreement: Section 9.3 Representations and Warranties. The Company represents and warrants that each representation and warranty contained in this Agreement is true and correct as of the date of this Agreement and shall remain true and correct as of the Closing Date, provided that any representation and warranty that is expressly made as of a specific date shall only be deemed true and correct as of such specific date. (Page 115)
+Choices: "
+"5","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: When are representations and warranties required to be made according to the bring down provision?
+Option A: Only at Closing
+Option B: At Signing and at Closing
+
+Merger Agreement: Section 5.1 Conditions Precedent to Closing. The obligations of the Buyer to consummate the transactions contemplated by this Agreement are subject to the satisfaction or waiver by the Buyer at or prior to the Closing Date of the following conditions: (a) each of the representations and warranties of the Seller contained in this Agreement shall be true and correct as of the date of this Agreement and as of the Closing Date, except for such failures to be true and correct as would not, individually or in the aggregate, have a Material Adverse Effect; (b) the representations and warranties made as of a specific date shall be true as of that specific date only (Page 45)
+
+Merger Agreement: Section 8.3 Conditions to Obligations of Buyer. The obligations of Buyer to effect the Closing are also subject to the satisfaction or waiver by Buyer of the following conditions: (a) the representations and warranties of the Seller shall be true and correct in all respects as of the Effective Date and as of the Closing Date, as if made on and as of such dates (Page 78)
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: At what points in time are the representations and warranties required to be made according to the bring down provision?
+Option A: Only at Closing
+Option B: At Signing and at Closing
+
+Merger Agreement: Section 8.1 Conditions to Closing. The obligations of the parties to consummate the transactions contemplated by this Agreement are subject to the satisfaction (or waiver, if permissible) of the following conditions: (a) the representations and warranties of the Company shall be true and correct as of the Closing Date, except for such failures to be true and correct that would not, individually or in the aggregate, have a Material Adverse Effect; (b) the representations and warranties of the Company made as of the date of this Agreement shall also be true and correct as of the Closing Date, as if made at such time; (Page 102)
+
+Merger Agreement: Section 9.3 Representations and Warranties. The Company represents and warrants that each representation and warranty contained in this Agreement is true and correct as of the date of this Agreement and shall remain true and correct as of the Closing Date, provided that any representation and warranty that is expressly made as of a specific date shall only be deemed true and correct as of such specific date. (Page 115)
+Choices: "
+"6","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: When are representations and warranties required to be made according to the bring down provision?
+Option A: At Signing Only
+Option B: At Signing & At Closing
+
+Merger Agreement: Section 8.1 Conditions to Closing. The obligations of the Buyer to consummate the transactions contemplated by this Agreement are subject to the satisfaction (or waiver by the Buyer) of the following conditions: (a) The representations and warranties of the Seller contained in this Agreement shall be true and correct in all respects at and as of the date of this Agreement and shall also be true and correct as of the Closing Date, as if made at and as of such time. (Page 45)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: At what points in time are the representations and warranties required to be made according to the bring down provision?
+Option A: Only at Closing
+Option B: At Signing and at Closing
+
+Merger Agreement: Section 8.1 Conditions to Closing. The obligations of the parties to consummate the transactions contemplated by this Agreement are subject to the satisfaction (or waiver, if permissible) of the following conditions: (a) the representations and warranties of the Company shall be true and correct as of the Closing Date, except for such failures to be true and correct that would not, individually or in the aggregate, have a Material Adverse Effect; (b) the representations and warranties of the Company made as of the date of this Agreement shall also be true and correct as of the Closing Date, as if made at such time; (Page 102)
+
+Merger Agreement: Section 9.3 Representations and Warranties. The Company represents and warrants that each representation and warranty contained in this Agreement is true and correct as of the date of this Agreement and shall remain true and correct as of the Closing Date, provided that any representation and warranty that is expressly made as of a specific date shall only be deemed true and correct as of such specific date. (Page 115)
+Choices: "
+"7","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: At what points in time must the representations and warranties be reaffirmed according to the bring down provision?
+Option A: Only at the Closing Date
+Option B: At Signing and at the Closing Date
+
+Merger Agreement: Section 8.1 Conditions Precedent to Closing. The obligations of the parties to consummate the transactions contemplated by this Agreement are subject to the satisfaction or waiver of the following conditions: (a) the representations and warranties of the Company, as set forth in Article IV, shall be accurate in all respects as of the date of this Agreement and shall remain accurate as of the Closing Date as if made on and as of such date, except for representations that are made as of a specific date, which shall only need to be accurate as of that specific date; (Page 120)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: At what points in time are the representations and warranties required to be made according to the bring down provision?
+Option A: Only at Closing
+Option B: At Signing and at Closing
+
+Merger Agreement: Section 8.1 Conditions to Closing. The obligations of the parties to consummate the transactions contemplated by this Agreement are subject to the satisfaction (or waiver, if permissible) of the following conditions: (a) the representations and warranties of the Company shall be true and correct as of the Closing Date, except for such failures to be true and correct that would not, individually or in the aggregate, have a Material Adverse Effect; (b) the representations and warranties of the Company made as of the date of this Agreement shall also be true and correct as of the Closing Date, as if made at such time; (Page 102)
+
+Merger Agreement: Section 9.3 Representations and Warranties. The Company represents and warrants that each representation and warranty contained in this Agreement is true and correct as of the date of this Agreement and shall remain true and correct as of the Closing Date, provided that any representation and warranty that is expressly made as of a specific date shall only be deemed true and correct as of such specific date. (Page 115)
+Choices: "
+"8","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: What is the timing requirement for representations and warranties as per the bring down provision outlined in the merger agreement?
+Option A: Only at the Closing Date
+Option B: At Signing and at the Expiration Date
+
+Merger Agreement: Section 8.1 Conditions to the Obligations of the Acquiring Party. The obligations of the Acquiring Party to consummate the transactions contemplated by this Agreement are subject to the satisfaction (or waiver, if permissible) at or prior to the Closing Date of the following conditions: (a) the representations and warranties of the Company made herein shall be accurate in all respects when made and shall also be deemed to be accurate as of the Closing Date as if made at that time; (b) except as noted in Section 8.2, each of the representations and warranties must be true and correct as of the Effective Date and at the Expiration Time as if made at and as of such time; (Page 112)
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: At what points in time are the representations and warranties required to be made according to the bring down provision?
+Option A: Only at Closing
+Option B: At Signing and at Closing
+
+Merger Agreement: Section 8.1 Conditions to Closing. The obligations of the parties to consummate the transactions contemplated by this Agreement are subject to the satisfaction (or waiver, if permissible) of the following conditions: (a) the representations and warranties of the Company shall be true and correct as of the Closing Date, except for such failures to be true and correct that would not, individually or in the aggregate, have a Material Adverse Effect; (b) the representations and warranties of the Company made as of the date of this Agreement shall also be true and correct as of the Closing Date, as if made at such time; (Page 102)
+
+Merger Agreement: Section 9.3 Representations and Warranties. The Company represents and warrants that each representation and warranty contained in this Agreement is true and correct as of the date of this Agreement and shall remain true and correct as of the Closing Date, provided that any representation and warranty that is expressly made as of a specific date shall only be deemed true and correct as of such specific date. (Page 115)
+Choices: "
+"9","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: At what points must the representations and warranties be confirmed according to the bring down provision?
+Option A: Only at the Effective Time
+Option B: At both the Effective Time and the Closing Date
+
+Merger Agreement: Section 8.1 Conditions to Closing. The obligations of the parties to consummate the transactions contemplated by this Agreement are subject to the satisfaction or (to the extent permitted by applicable Law) waiver of the following conditions: (a) the representations and warranties of the Company contained in this Agreement shall be true and correct as of the Effective Time, except for such failures to be true and correct as would not, individually or in the aggregate, have a material adverse effect on the Company; (b) the representations and warranties of the Company shall also be deemed to be made as of the Closing Date, as if made on and as of such date, except to the extent that such representations and warranties are expressly made as of an earlier date; (Page 150)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: At what points in time are the representations and warranties required to be made according to the bring down provision?
+Option A: Only at Closing
+Option B: At Signing and at Closing
+
+Merger Agreement: Section 8.1 Conditions to Closing. The obligations of the parties to consummate the transactions contemplated by this Agreement are subject to the satisfaction (or waiver, if permissible) of the following conditions: (a) the representations and warranties of the Company shall be true and correct as of the Closing Date, except for such failures to be true and correct that would not, individually or in the aggregate, have a Material Adverse Effect; (b) the representations and warranties of the Company made as of the date of this Agreement shall also be true and correct as of the Closing Date, as if made at such time; (Page 102)
+
+Merger Agreement: Section 9.3 Representations and Warranties. The Company represents and warrants that each representation and warranty contained in this Agreement is true and correct as of the date of this Agreement and shall remain true and correct as of the Closing Date, provided that any representation and warranty that is expressly made as of a specific date shall only be deemed true and correct as of such specific date. (Page 115)
+Choices: "

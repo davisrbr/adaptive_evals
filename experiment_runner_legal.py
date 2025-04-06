@@ -257,6 +257,45 @@ def write_experiment_log(
             }
         )
 
+def check_experiment_already_run(
+    experiment_csv: str,
+    task_name: str,
+    eval_model_name: str,
+    generator_model_name: str,
+    re_eval_model_name: str,
+    positive_samples: int,
+    negative_samples: int,
+    use_example: bool,
+    use_cot_target: bool,
+    use_cot_in_context_attacker: bool,
+) -> bool:
+    """
+    Checks if a specific experiment configuration has already been run by looking at the CSV.
+    Returns True if the experiment has been run successfully, False otherwise.
+    """
+    if not os.path.exists(experiment_csv):
+        return False
+    
+    with open(experiment_csv, mode="r", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            # Check if all parameters match
+            if (row["eval_model_name"] == eval_model_name and
+                row["generator_model_name"] == generator_model_name and
+                row["re_eval_model_name"] == re_eval_model_name and
+                int(row["positive_samples"]) == positive_samples and
+                int(row["negative_samples"]) == negative_samples and
+                str(row["use_example"]).lower() == str(use_example).lower() and
+                str(row["use_cot_target"]).lower() == str(use_cot_target).lower() and
+                str(row["use_cot_in_context_attacker"]).lower() == str(use_cot_in_context_attacker).lower()):
+                
+                # Check if the experiment has valid paths and results
+                if row["adaptive_log_path"] and row["adaptive_accuracy"] is not None:
+                    print(f"Experiment already run for {eval_model_name} with generator {generator_model_name} and re-eval {re_eval_model_name} in the file {experiment_csv}")
+                    return True
+    
+    return False
+
 class TransferLegalExperimentRunner:
     def __init__(self, cache_csv: Optional[str] = None, experiment_csv: Optional[str] = None, **kwargs):
         self.config = ExperimentConfig(**kwargs)
@@ -272,36 +311,37 @@ class TransferLegalExperimentRunner:
         
         # Models for the initial pass
         self.initial_eval_models = [
-            # "openai/gpt-4o",
+            "openai/gpt-4o",
             "openai/gpt-4o-mini",
-            # "openai/o1-mini",
+            "openai/o3-mini",
             # "together/deepseek-ai/DeepSeek-V3",
-            # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
-            # "anthropic/claude-3-5-sonnet-latest",
+            "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+            "anthropic/claude-3-5-sonnet-latest",
+            # "anthropic/claude-3-5-haiku-latest",
         ]
         self.generator_models = [
-            "openai/gpt-4o-mini",
+            # "openai/gpt-4o-mini",
             # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
-            # "openai/gpt-4o",
+            "openai/gpt-4o",
             # "anthropic/claude-3-5-sonnet-latest",
-            # "openai/o1-mini",
+            "openai/o3-mini",
         ]
         # Models on which we'll perform the adaptive evaluation
         self.adaptive_evaluated_models = [
-            # "openai/gpt-4o",
+            "openai/gpt-4o",
             "openai/gpt-4o-mini",
+            "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
             # "together/deepseek-ai/DeepSeek-V3",
-            # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
-            # "openai/o1-mini",
+            "openai/o3-mini",
             # "anthropic/claude-3-5-haiku-latest",
-            # "anthropic/claude-3-5-sonnet-latest",
+            "anthropic/claude-3-5-sonnet-latest",
         ]
 
         self.task_names = [
-            # "maud_ability_to_consummate_concept_is_subject_to_mae_carveouts",
-            # "maud_financial_point_of_view_is_the_sole_consideration",
+            "maud_ability_to_consummate_concept_is_subject_to_mae_carveouts",
+            "maud_financial_point_of_view_is_the_sole_consideration",
             "maud_accuracy_of_fundamental_target_rws_bringdown_standard",
-            # "maud_accuracy_of_target_general_rw_bringdown_timing_answer",
+            "maud_accuracy_of_target_general_rw_bringdown_timing_answer",
         ]
 
     def run_initial_experiment_for_task(
@@ -417,10 +457,43 @@ class TransferLegalExperimentRunner:
         task_specific_log_dir = log_dir or os.path.join(self.config.get_adaptive_log_dir(), task_name)
         os.makedirs(task_specific_log_dir, exist_ok=True)
         
+        # Create a task-specific experiment CSV
+        task_experiment_csv = os.path.join(
+            os.path.dirname(self.experiment_csv), 
+            f"{task_name}_experiment_results_{self.config.experiment_id}.csv"
+        )
+        
         for pos_samples in positive_samples_list:
             for neg_samples in negative_samples_list:
                 for generator_model in self.generator_models:
                     for eval_model in self.adaptive_evaluated_models:
+                        # Check both main and task-specific experiment CSVs for existing runs
+                        if check_experiment_already_run(
+                            experiment_csv=self.experiment_csv,
+                            task_name=task_name,
+                            eval_model_name=eval_model,
+                            generator_model_name=generator_model,
+                            re_eval_model_name=eval_model,  # First check with same re-eval model
+                            positive_samples=pos_samples,
+                            negative_samples=neg_samples,
+                            use_example=self.config.use_example,
+                            use_cot_target=self.config.use_cot_target,
+                            use_cot_in_context_attacker=cot_in_context,
+                        ) or check_experiment_already_run(
+                            experiment_csv=task_experiment_csv,
+                            task_name=task_name,
+                            eval_model_name=eval_model,
+                            generator_model_name=generator_model,
+                            re_eval_model_name=eval_model,  # First check with same re-eval model
+                            positive_samples=pos_samples,
+                            negative_samples=neg_samples,
+                            use_example=self.config.use_example,
+                            use_cot_target=self.config.use_cot_target,
+                            use_cot_in_context_attacker=cot_in_context,
+                        ):
+                            print(f"Skipping already completed experiment for {eval_model} with generator {generator_model} on task {task_name}")
+                            continue
+                            
                         task = adaptive_legal(
                             initial_log_path=initial_log_path,
                             task_name=task_name,
@@ -482,49 +555,86 @@ class TransferLegalExperimentRunner:
                             
                         # Re-evaluation step for each model (transfer)
                         for re_eval_model in self.adaptive_evaluated_models:
+                            # Check if this specific re-evaluation experiment has already been run
+                            if check_experiment_already_run(
+                                experiment_csv=self.experiment_csv,
+                                task_name=task_name,
+                                eval_model_name=eval_model,
+                                generator_model_name=generator_model,
+                                re_eval_model_name=re_eval_model,
+                                positive_samples=pos_samples,
+                                negative_samples=neg_samples,
+                                use_example=self.config.use_example,
+                                use_cot_target=self.config.use_cot_target,
+                                use_cot_in_context_attacker=cot_in_context,
+                            ) or check_experiment_already_run(
+                                experiment_csv=task_experiment_csv,
+                                task_name=task_name,
+                                eval_model_name=eval_model,
+                                generator_model_name=generator_model,
+                                re_eval_model_name=re_eval_model,
+                                positive_samples=pos_samples,
+                                negative_samples=neg_samples,
+                                use_example=self.config.use_example,
+                                use_cot_target=self.config.use_cot_target,
+                                use_cot_in_context_attacker=cot_in_context,
+                            ):
+                                print(f"Skipping already completed re-evaluation for {re_eval_model} on questions from {eval_model} generated by {generator_model}")
+                                continue
+                        
                             print(f"Re-evaluating model {re_eval_model} on questions from {eval_model} generated by {generator_model} for task {task_name}")
                             
-                            # Create re-evaluation task
-                            re_eval_task = re_evaluate_adaptive_legal(
-                                adaptive_log_path=adaptive_log.location,
-                                use_cot=use_cot,
-                                filter_by_incorrect=True,
-                            )
-                            
-                            # Create a specific log directory for re-evaluation
-                            re_eval_log_dir = os.path.join(combination_log_dir, "re_eval", re_eval_model.replace("/", "_"))
-                            os.makedirs(re_eval_log_dir, exist_ok=True)
-                            
-                            re_eval_log_path: Optional[str] = None
-                            re_eval_acc: Optional[float] = None
-                            re_eval_acc_judged: Optional[float] = None
-                            re_eval_scorer: Optional[str] = None
-                            
-                            re_eval_logs = eval(
-                                re_eval_task,
-                                epochs=Epochs(1, "max"),
-                                log_dir=re_eval_log_dir,
-                                model=re_eval_model,
-                                log_level="critical",
-                            )
-                            
-                            if re_eval_logs and re_eval_logs[0].status == "success":
-                                re_eval_log_path = re_eval_logs[0].location
-                                print(
-                                    f"Re-evaluation success for (task={task_name}, eval={eval_model}, "
-                                    f"gen={generator_model}, re-eval={re_eval_model})."
+                            try:
+                                # Create re-evaluation task
+                                re_eval_task = re_evaluate_adaptive_legal(
+                                    adaptive_log_path=adaptive_log.location,
+                                    use_cot=use_cot,
+                                    filter_by_incorrect=True,
                                 )
-                                re_eval_acc, re_eval_acc_judged, re_eval_scorer = extract_accuracy_metrics(re_eval_logs[0])
-                                passed_judge, adaptive_incorrect_cnt, re_eval_incorrect_cnt = parse_re_eval_counts(
-                                    re_eval_logs[0]
+                                
+                                # Create a specific log directory for re-evaluation
+                                re_eval_log_dir = os.path.join(combination_log_dir, "re_eval", re_eval_model.replace("/", "_"))
+                                os.makedirs(re_eval_log_dir, exist_ok=True)
+                                
+                                re_eval_log_path: Optional[str] = None
+                                re_eval_acc: Optional[float] = None
+                                re_eval_acc_judged: Optional[float] = None
+                                re_eval_scorer: Optional[str] = None
+                                
+                                
+                                re_eval_logs = eval(
+                                    re_eval_task,
+                                    epochs=Epochs(1, "max"),
+                                    log_dir=re_eval_log_dir,
+                                    model=re_eval_model,
+                                    log_level="critical",
                                 )
-                            else:
+                                
+                                if re_eval_logs and re_eval_logs[0].status == "success":
+                                    re_eval_log_path = re_eval_logs[0].location
+                                    print(
+                                        f"Re-evaluation success for (task={task_name}, eval={eval_model}, "
+                                        f"gen={generator_model}, re-eval={re_eval_model})."
+                                    )
+                                    re_eval_acc, re_eval_acc_judged, re_eval_scorer = extract_accuracy_metrics(re_eval_logs[0])
+                                    passed_judge, adaptive_incorrect_cnt, re_eval_incorrect_cnt = parse_re_eval_counts(
+                                        re_eval_logs[0]
+                                    )
+                                else:
+                                    print(
+                                        f"Re-evaluation returned no logs or non-success status for "
+                                        f"(task={task_name}, eval={eval_model}, gen={generator_model}, re-eval={re_eval_model})."
+                                    )
+                                    passed_judge, adaptive_incorrect_cnt, re_eval_incorrect_cnt = (0, 0, 0)
+                                    re_eval_log_path, re_eval_acc, re_eval_acc_judged, re_eval_scorer = None, None, None, None
+                            except Exception as exc:
                                 print(
                                     f"Re-evaluation returned no logs or non-success status for "
                                     f"(task={task_name}, eval={eval_model}, gen={generator_model}, re-eval={re_eval_model})."
+                                    f"Error: {exc}"
                                 )
                                 passed_judge, adaptive_incorrect_cnt, re_eval_incorrect_cnt = (0, 0, 0)
-
+                                re_eval_log_path, re_eval_acc, re_eval_acc_judged, re_eval_scorer = None, None, None, None
                             
                             # Create a task-specific experiment CSV
                             task_experiment_csv = os.path.join(
@@ -642,8 +752,8 @@ class TransferLegalExperimentRunner:
 
 @click.command()
 @click.option("--models-for-transfer", default=["openai/gpt-4o-mini"], multiple=True, help="Models' logs to use for adaptive question generation.")
-@click.option("--experiment-csv", default=None, help="Path to the CSV file where experiment results will be stored.")
-@click.option("--cache-csv", default=None, help="Path to the CSV file where cached logs will be stored.")
+@click.option("--experiment-csv", default=None, help="Path to the folder where experiment results will be stored as a csv file.")
+@click.option("--cache-csv", default=None, help="Path to the folder where cached logs will be stored as a csv file.")
 @click.option("--similarity-threshold", default=0.6, type=float, help="Question similarity threshold for novelty checking.")
 @click.option("--use-embeddings", is_flag=True, help="If True, use embeddings to compare question similarity.")
 @click.option("--tasks", default=None, multiple=True, help="Specific tasks to run. If not provided, all default tasks will be used.")

@@ -697,7 +697,8 @@ def re_evaluate_adaptive_legal(
         # If filter_by_incorrect is True, only include samples that were incorrect
         if filter_by_incorrect:
             score = generated_sample.get("metadata", {}).get("score", "")
-            if score != "I":  # Only include incorrect samples
+            judge_choice = generated_sample.get("metadata", {}).get("judge_choice", "")
+            if score != "I" or judge_choice == "C":  # Only include incorrect samples or samples that were judged as valid
                 continue
                 
         # Create sample with prepared prompt

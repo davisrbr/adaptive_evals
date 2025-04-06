@@ -214,6 +214,51 @@ def write_experiment_log(
         })
 
 
+def check_experiment_already_run(
+    experiment_csv: str,
+    eval_model_name: str,
+    generator_model_name: str,
+    re_eval_model_name: str,
+    positive_samples: int,
+    negative_samples: int,
+    use_cot: bool,
+    similarity_threshold: float,
+    use_embeddings: bool,
+    filter_incorrect: bool,
+) -> bool:
+    """
+    Checks if a specific experiment configuration has already been run by looking at the CSV.
+    Returns True if the experiment has been run successfully, False otherwise.
+    """
+    if not os.path.exists(experiment_csv):
+        return False
+    
+    with open(experiment_csv, mode="r", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            try:
+                # Check if all parameters match
+                if (row["eval_model_name"] == eval_model_name and
+                    row["generator_model_name"] == generator_model_name and
+                    row["re_eval_model_name"] == re_eval_model_name and
+                    int(row["positive_samples"] if row["positive_samples"] else 0) == positive_samples and
+                    int(row["negative_samples"] if row["negative_samples"] else 0) == negative_samples and
+                    str(row["use_cot"]).lower() == str(use_cot).lower() and
+                    float(row["similarity_threshold"] if row["similarity_threshold"] else 0) == similarity_threshold and
+                    str(row["use_embeddings"]).lower() == str(use_embeddings).lower() and
+                    str(row["filter_incorrect"]).lower() == str(filter_incorrect).lower()):
+                    
+                    # Check if the experiment has valid paths and results
+                    if row["adaptive_log_path"] and row["adaptive_accuracy"] is not None:
+                        print(f"Experiment already run for {eval_model_name} with generator {generator_model_name} and re-eval {re_eval_model_name}")
+                        return True
+            except (ValueError, KeyError, TypeError):
+                # Skip rows with missing or invalid data
+                continue
+    
+    return False
+
+
 class ExperimentConfig:
     """Configuration class for Politeness Experiment Runner"""
     
@@ -307,25 +352,22 @@ class TransferPolitenessExperimentRunner:
         # Models for the initial pass
         self.initial_eval_models = [
             "openai/gpt-4o",
-            # "openai/gpt-4o-mini",
-            # "together/deepseek-ai/DeepSeek-V3",
-            # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
-            # "anthropic/claude-3-5-sonnet-latest",
+            "openai/gpt-4o-mini",
+            "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+            "openai/o3-mini",
+            "anthropic/claude-3-5-sonnet-latest",
         ]
         self.generator_models = [
-            "openai/gpt-4o-mini",
-            # "together/deepseek-ai/DeepSeek-R1",
-            # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
-            # "openai/gpt-4o",
-            # "anthropic/claude-3-5-sonnet-latest",
+            "openai/gpt-4o",
+            "openai/o3-mini",
         ]
         # Models on which we'll perform the adaptive evaluation
         self.adaptive_evaluated_models = [
             "openai/gpt-4o",
-            # "openai/gpt-4o-mini",
-            # "together/deepseek-ai/DeepSeek-V3",
-            # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
-            # "anthropic/claude-3-5-sonnet-latest",
+            "openai/gpt-4o-mini",
+            "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+            "openai/o3-mini",
+            "anthropic/claude-3-5-sonnet-latest",
         ]
 
     def run_initial_experiment(
@@ -408,16 +450,47 @@ class TransferPolitenessExperimentRunner:
         Uses a single (initial_log_path) from the original model, 
         then runs adaptive experiments with each generator model 
         on each of the adaptive_eval_models.
-
-        NOTE: USE_COT IS FOR THE EVALUATOR MODEL, NOT THE GENERATOR MODEL.
         """
         task_specific_log_dir = log_dir or self.config.get_adaptive_log_dir()
         os.makedirs(task_specific_log_dir, exist_ok=True)
+        
+        # Create a task-specific experiment CSV
+        task_experiment_csv = os.path.join(
+            os.path.dirname(self.experiment_csv), 
+            f"politeness_experiment_results_{self.config.experiment_id}.csv"
+        )
         
         for pos_samples in positive_samples_list:
             for neg_samples in negative_samples_list:
                 for generator_model in self.generator_models:
                     for eval_model in self.adaptive_evaluated_models:
+                        # Check both main and task-specific experiment CSVs for existing runs
+                        if check_experiment_already_run(
+                            experiment_csv=self.experiment_csv,
+                            eval_model_name=eval_model,
+                            generator_model_name=generator_model,
+                            re_eval_model_name=eval_model,  # First check with same re-eval model
+                            positive_samples=pos_samples,
+                            negative_samples=neg_samples,
+                            use_cot=use_cot,
+                            similarity_threshold=similarity_threshold,
+                            use_embeddings=use_embeddings,
+                            filter_incorrect=True,
+                        ) or check_experiment_already_run(
+                            experiment_csv=task_experiment_csv,
+                            eval_model_name=eval_model,
+                            generator_model_name=generator_model,
+                            re_eval_model_name=eval_model,  # First check with same re-eval model
+                            positive_samples=pos_samples,
+                            negative_samples=neg_samples,
+                            use_cot=use_cot,
+                            similarity_threshold=similarity_threshold,
+                            use_embeddings=use_embeddings,
+                            filter_incorrect=True,
+                        ):
+                            print(f"Skipping already completed experiment for {eval_model} with generator {generator_model}")
+                            continue
+                            
                         task = adaptive_politeness(
                             initial_log_path=initial_log_path,
                             n_positive_samples=pos_samples,
@@ -478,6 +551,33 @@ class TransferPolitenessExperimentRunner:
                             
                         # Re-evaluation step for each model (transfer)
                         for re_eval_model in self.adaptive_evaluated_models:
+                            # Check if this specific re-evaluation experiment has already been run
+                            if check_experiment_already_run(
+                                experiment_csv=self.experiment_csv,
+                                eval_model_name=eval_model,
+                                generator_model_name=generator_model,
+                                re_eval_model_name=re_eval_model,
+                                positive_samples=pos_samples,
+                                negative_samples=neg_samples,
+                                use_cot=use_cot,
+                                similarity_threshold=similarity_threshold,
+                                use_embeddings=use_embeddings,
+                                filter_incorrect=True,
+                            ) or check_experiment_already_run(
+                                experiment_csv=task_experiment_csv,
+                                eval_model_name=eval_model,
+                                generator_model_name=generator_model,
+                                re_eval_model_name=re_eval_model,
+                                positive_samples=pos_samples,
+                                negative_samples=neg_samples,
+                                use_cot=use_cot,
+                                similarity_threshold=similarity_threshold,
+                                use_embeddings=use_embeddings,
+                                filter_incorrect=True,
+                            ):
+                                print(f"Skipping already completed re-evaluation for {re_eval_model} on questions from {eval_model} generated by {generator_model}")
+                                continue
+                            
                             print(f"Re-evaluating model {re_eval_model} on questions from {eval_model} generated by {generator_model}")
                             
                             # Create re-evaluation task
@@ -638,12 +738,18 @@ class TransferPolitenessExperimentRunner:
 
 
 @click.command()
-@click.option('--models-for-transfer', multiple=True, help='Models to use for transfer evaluation')
-@click.option('--positive-samples', multiple=True, type=int, default=[1], help='Number of positive samples to use')
-@click.option('--negative-samples', multiple=True, type=int, default=[8], help='Number of negative samples to use')
+@click.option('--models-for-transfer', default=[
+                "openai/gpt-4o",
+                "openai/gpt-4o-mini",
+                "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+                "openai/o3-mini",
+                "anthropic/claude-3-5-sonnet-latest",
+            ], multiple=True, help='Models to use for transfer evaluation')
+@click.option('--positive-samples', default=[1], multiple=True, type=int, help='Number of positive samples to use')
+@click.option('--negative-samples', default=[8], multiple=True, type=int, help='Number of negative samples to use')
 @click.option('--num-epochs', default=1, help='Number of epochs to run for adaptive evaluation')
 @click.option('--num-samples', default=1000, help='Number of samples to use for initial evaluation')
-@click.option('--n-examples', default=3, help='Number of in-context examples to use')
+@click.option('--n-examples', default=5, help='Number of in-context examples to use')
 @click.option('--use-cot', is_flag=True, help='Use chain-of-thought for solver prompts')
 @click.option('--cot-in-context', is_flag=True, help='Use chain-of-thought in context examples')
 @click.option('--similarity-threshold', default=0.6, type=float, help='Similarity threshold for novelty scoring')

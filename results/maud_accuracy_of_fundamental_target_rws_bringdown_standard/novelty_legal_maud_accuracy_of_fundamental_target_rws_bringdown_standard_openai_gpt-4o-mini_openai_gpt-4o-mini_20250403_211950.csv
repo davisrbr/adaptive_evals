@@ -1,0 +1,623 @@
+"index","question","result","failed_on"
+"0","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: ","Pass",""
+"1","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b) Additional Conditions to Obligation of Parent and Merger Sub. The representations and warranties of the Company set forth in Article 4 shall be true and correct at and as of the Closing Date as if made at and as of such time, except that any inaccuracies that do not result in a Company Material Adverse Effect shall not be considered failures to meet this condition (Page 45)
+
+Merger Agreement: Section 8.03. Conditions to the Obligations of Parent and Merger Sub. The obligations of Parent and Merger Sub to consummate the Merger are subject to the satisfaction (or waiver by Parent) of each of the following conditions at or prior to the Closing: (a) Accuracy of Representations and Warranties. The representations and warranties of the Company in this Agreement shall be deemed to be true and accurate as of the Closing Date, except with respect to those representations and warranties that specifically reference a date other than the Closing Date, which shall only need to be true and correct in all material respects as of such date (Page 67)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"2","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be deemed to be true and correct as of the Closing Date, except that any inaccuracies that do not result in a Company Material Adverse Effect shall not be deemed to breach this section. (Page 45)
+
+Merger Agreement: Section 8.01. Conditions to Closing. The obligation of Parent to consummate the transactions contemplated by this Agreement is subject to the satisfaction (or waiver by Parent) of the following conditions: (a) Representations and Warranties. The representations and warranties of the Company shall be true and correct in all respects as of the Closing Date, except for inaccuracies that would not have a material adverse effect on the Company. (Page 67)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"3","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: According to the bring down provision, how accurate must the representations and warranties be, considering the material adverse effect clause?
+Option A: Accurate in all respects, irrespective of any material adverse effects.
+Option B: Accurate in all material respects, unless the inaccuracies do not result in a material adverse effect.
+Option C: Accurate at another materiality standard, considering potential exceptions outlined in the agreement.
+
+Merger Agreement: (b) Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 4 shall be true and correct <omitted> as of the Closing Date as if made at and as of such time, except for any inaccuracies that would not, individually or in the aggregate, reasonably be expected to result in a Material Adverse Effect on the Company (Page 22)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"4","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: Article 6.3 Conditions to Closing. The obligations of the Buyer to consummate the transaction contemplated by this Agreement are subject to the satisfaction of the following conditions: (a) The representations and warranties of the Seller set forth in this Agreement shall be true and correct as of the Closing Date, except for inaccuracies that are not material and do not result in a Material Adverse Effect (Page 22)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"5","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate in all material respects
+Option B: Accurate in all respects
+Option C: Accurate at another materiality standard (e.g., hybrid standard)
+
+Merger Agreement: (b) Additional Conditions to Obligation of Parent and Merger Sub. The representations and warranties of the Company set forth in Article 5 shall be true and correct in all respects as of the Closing Date, except for those representations and warranties that are subject to a materiality qualifier, which shall only need to be accurate in all material respects. Furthermore, the accuracy of the representations and warranties shall be determined without regard to any Company Material Adverse Effect, except where such effect would not have a significant impact on the overall truthfulness of the representations. (Page 45)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"6","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: True and correct in all respects
+
+Merger Agreement: (b) Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time (Page 15)
+Answer: 
+
+Merger Agreement: Section 8.4. Conditions to the Obligations of Acquirer. <omitted> all other representations and warranties of the Company set forth in this Agreement shall be deemed to be true and correct in all material respects as of the date of this Agreement and as of the Closing Date, as though made on and as of the Closing Date (Page 99)
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"7","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: What standard of accuracy must the fundamental representations and warranties meet according to the bring down provision?
+Option A: Accurate in all material respects, except where a Company Material Adverse Effect is not triggered
+Option B: Accurate in all respects, regardless of any materiality qualifiers
+Option C: Accurate at another materiality standard (e.g., hybrid standard)
+
+Merger Agreement: (b) Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 4 shall be deemed to be true and accurate <omitted> at and as of the Closing Date as if made as of such time, provided that any inaccuracies that do not result in a Company Material Adverse Effect shall not be deemed to be breaches of this Agreement (Page 45)
+
+Merger Agreement: Section 8.1 Conditions to Closing. The obligation of Parent and Merger Sub to consummate the transactions contemplated by this Agreement is subject to the satisfaction of the following conditions: (a) Representations and Warranties. Each representation and warranty of the Company set forth in this Agreement shall be true and correct as of the date of this Agreement and as of the Closing Date, without regard to any qualifications or limitations as to materiality or Company Material Adverse Effect (Page 78)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"8","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: What is the required accuracy standard for the fundamental representations and warranties according to the bring down provision?
+Option A: Accurate only in material respects
+Option B: Accurate in all respects except where minor inaccuracies do not constitute a Material Adverse Effect
+Option C: Accurate in all material respects as of the Closing Date
+
+Merger Agreement: (b)     Conditions Precedent to the Obligations of the Acquirer. The obligation of the Acquirer to complete the transaction is subject to the satisfaction (or waiver by the Acquirer) of the following conditions: (i) The representations and warranties of the Company contained in this Agreement shall be true and correct in all respects as of the date hereof and as of the Closing Date, except for such inaccuracies that do not, in the aggregate, result in a Material Adverse Effect on the Company or the Acquirer. (Page 34)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"9","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: What level of accuracy is required for the fundamental representations and warranties according to the bring down provision?
+Option A: Accurate in all material respects, subject to specific exceptions
+Option B: Accurate in all respects, with no exceptions allowed
+Option C: Accurate at a different materiality standard (e.g., hybrid standard)
+
+Merger Agreement: (b) Additional Conditions to Obligation of Acquirer. The representations and warranties of the Company set forth in Article 5 shall be deemed to be true and correct in all material respects as of the Closing Date, except where the failure of such representations and warranties to be so true and correct, individually or in the aggregate, does not have and would not reasonably be expected to have a Company Material Adverse Effect. (Page 45)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"10","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b) Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 4 shall be true and correct <omitted> at and as of the Closing Date as if made at and as of such time (Page 15)
+Answer: 
+
+Merger Agreement: Section 8.1 Conditions to the Obligations of Parent. The obligations of Parent to consummate the Merger are subject to the satisfaction of the following conditions: (a) Representations and Warranties. The representations and warranties of the Company as set forth in this Agreement shall be deemed to be true and correct in all respects at and as of the Closing Date, except for inaccuracies that would not have, individually or in the aggregate, a Company Material Adverse Effect (Page 90)
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"11","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (c) Additional Conditions to Obligation of Acquirer. <omitted> the representations and warranties of the Seller set forth in Article 4 shall be deemed to be true and correct <omitted> at and as of the Closing Date, as if made at such time, except for inaccuracies that would not have a material adverse effect on the Acquirer’s decision to proceed with the transaction (Page 22)
+Answer: 
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"12","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate in all respects
+Option B: Accurate in all material respects
+Option C: Accurate subject to certain materiality exceptions
+
+Merger Agreement: (b) Additional Conditions to Obligation of Acquirer. The representations and warranties of the Company as set forth in Article 2 shall be deemed to be true and accurate as of the Closing Date as if made at and as of such time, except that representations and warranties that specifically reference a prior date shall only need to be accurate in all material respects as of that prior date (Page 45)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"13","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects except as otherwise provided in the agreement
+Option C: Accurate in all respects without exceptions
+
+Merger Agreement: (b) Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Section 4.1 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time (Page 15) and, except as otherwise provided herein, shall not be subject to any materiality standard or qualification regarding Company Material Adverse Effect, except where the failure of such representations and warranties to be so true and correct would not reasonably be expected to result in a Company Material Adverse Effect; (Page 72)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"14","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b) Additional Conditions to Obligation of Buyer and Seller. The representations and warranties of the Seller set forth in Section 3 shall be deemed to be true and correct at and as of the Closing Date as if made at and as of such time, except for any inaccuracies that would not, individually or in the aggregate, reasonably be expected to have a Material Adverse Effect on the Seller, and disregarding any qualifications or exceptions relating to materiality or similar concepts (Page 45)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"15","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate in all respects as of the Closing Date
+Option B: Accurate in all material respects as of the date of the Agreement
+Option C: Accurate in all respects as of the date of the Agreement and in all material respects as of the Closing Date
+
+Merger Agreement: (c)     Conditions to Obligation of Acquirer. The obligation of Acquirer to consummate the Merger is subject to the satisfaction of the following conditions: (i) the representations and warranties of the Company set forth in this Agreement shall be true and correct in all respects as of the date of the Agreement and as of the Closing Date, except for representations and warranties that are expressly made as of a specific date, which shall be true and correct in all material respects only as of such specific date. (Page 45)
+
+Merger Agreement: (d)     Additional Conditions to Obligations of Acquirer. The obligations of Acquirer are also subject to the representations and warranties of the Company being accurate in all respects at the Closing Date, and the failure of any representation or warranty to be true and correct shall not be deemed to have occurred unless it has caused or would reasonably be expected to cause a Company Material Adverse Effect. (Page 58)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"16","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate in all respects
+Option B: Accurate in all material respects
+Option C: Accurate as of the Closing Date only
+
+Merger Agreement: (b) Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time (Page 11)
+
+Merger Agreement: Section 7.3 Conditions to Obligations of Parent. <omitted> All representations and warranties of the Company set forth in this Agreement shall be deemed to have been made anew at the Closing and shall be accurate in all material respects as of the Closing Date, except where any failure of such representations and warranties to be true and correct would not reasonably be expected to have a Material Adverse Effect (Page 45)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"17","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b) Additional Conditions to Obligation of Parent and Merger Sub. The representations and warranties of the Company set forth in Article 4 shall be accurate as of the Closing Date, except where the failure of such representations and warranties to be accurate would not result in a Company Material Adverse Effect. Furthermore, the representations in Section 3.5 regarding the Company's financial statements shall be true and correct in all respects as of the date of this Agreement and at the Closing Date, as if made at such times. (Page 45)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"18","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b) Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 5 shall be true and correct <omitted> as of the Closing Date, provided that any inaccuracies that do not result in a Company Material Adverse Effect shall not be deemed a breach of this provision (Page 45)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "
+"19","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b) Additional Conditions to Obligation of Parent and Merger Sub. <omitted> The representations and warranties of the Company contained in Article 5 shall be deemed true and correct at and as of the Closing Date as if made on that date, except for any inaccuracies that would not reasonably be expected to result in a material adverse effect on the Company (Page 45)
+
+Merger Agreement: Section 9.3 Conditions to Obligations of Buyer. <omitted> The representations and warranties in this Agreement shall be true and accurate in all respects as of the date hereof and at the Closing, subject to the qualifications regarding materiality outlined in this Agreement (Page 78)
+Answer:
+Choices: ","Fail","Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of {letters}. Think step by step before answering.
+
+{question}
+
+{choices}
+
+Instruction: Read the segment of a merger agreement and answer the multiple-choice question by choosing the option that best characterizes the agreement.
+Question: How accurate must the fundamental representations and warranties be according to the bring down provision?
+Option A: Accurate at another materiality standard (e.g., hybrid standard)
+Option B: Accurate in all material respects
+Option C: Accurate in all respects
+
+Merger Agreement: (b)     Additional Conditions to Obligation of Parent and Merger Sub. <omitted> the representations and warranties of the Company set forth in Article 3 shall be true and correct <omitted> at and as of the Closing as if made at and as of such time, provided that any inaccuracies that do not have a Material Adverse Effect shall not be deemed a breach (Page 22)
+Answer: 
+
+Merger Agreement: Section 5.3 Conditions to Parent's Obligations. <omitted> The representations and warranties of the Company shall be true and correct in all respects except for those inaccuracies that do not have a Material Adverse Effect as of the date of this Agreement and as of the Closing Date (Page 45)
+Choices: "

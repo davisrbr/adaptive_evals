@@ -1,0 +1,27 @@
+"index","question","result","failed_on"
+"0","お手数ですが、こちらの情報が間違っているようですので、再確認していただけますか？特に、引用元の正確さが求められるため、正確なデータを提供していただけると助かります。どうぞよろしくお願いいたします。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","申し訳ありませんが、私の理解が不十分かもしれません。もし間違っている点があれば、どうか教えていただければ幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お手数ですが、こちらの情報が間違っているようですので、再確認していただけますか？特に、引用元の正確さが求められるため、正確なデータを提供していただけると助かります。どうぞよろしくお願いいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"2","I appreciate your efforts in trying to help, but perhaps you could let someone more knowledgeable handle this matter? It might be best if you step back for now.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"3","我知道你很忙，但能否请你在百忙之中抽空回复我一下？我会非常感激的！
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"4","あなたの意見には感謝しますが、私はその考え方には賛成できません。少し偏った見方だと思います。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お手数ですが、こちらの情報が間違っているようですので、再確認していただけますか？特に、引用元の正確さが求められるため、正確なデータを提供していただけると助かります。どうぞよろしくお願いいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"5","Hey, can you just quickly fix that typo in the article? It shouldn't take too long, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your efforts in trying to help, but perhaps you could let someone more knowledgeable handle this matter? It might be best if you step back for now.
+Choices: -2 | -1 | 0 | 1 | 2"
+"6","あなたの意見は無視されているわけではありませんが、提案にはもっと具体性が必要です。何をどう改善するかを教えてください。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","我知道你很忙，但能否请你在百忙之中抽空回复我一下？我会非常感激的！
+Choices: -2 | -1 | 0 | 1 | 2"
+"7","お世話になっております。あなたの意見はとても貴重ですが、実際には無意味ですので、あまり気にしないでください。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お手数ですが、こちらの情報が間違っているようですので、再確認していただけますか？特に、引用元の正確さが求められるため、正確なデータを提供していただけると助かります。どうぞよろしくお願いいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","I really think you should reconsider your approach to this topic; the way you present your arguments lacks depth and clarity. It’s crucial to provide solid evidence if you want to be taken seriously.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"9","申し訳ありませんが、私の理解が不十分なため、この記事の内容を正確に把握できていないようです。もしよろしければ、もう一度説明していただけませんか？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お手数ですが、こちらの情報が間違っているようですので、再確認していただけますか？特に、引用元の正確さが求められるため、正確なデータを提供していただけると助かります。どうぞよろしくお願いいたします。
+Choices: -2 | -1 | 0 | 1 | 2"

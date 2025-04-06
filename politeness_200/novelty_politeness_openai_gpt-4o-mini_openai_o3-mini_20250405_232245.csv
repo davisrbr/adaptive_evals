@@ -1,0 +1,581 @@
+"index","question","result","failed_on"
+"0","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"3","I appreciate the effort you put into your analysis, yet your argument seems to rely on wishful thinking rather than solid evidence. It would be more constructive if you could verify your sources before reaching any conclusions. I'm sure you'll find that accuracy is essential.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"4","I must say, your unconventional approach is quite refreshing—almost as if you've deliberately chosen to ignore all standard conventions. A bold move, indeed; it truly leaves us wondering if your brilliance lies in innovation or in a charmingly creative oversight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"5","Thank you ever so much for your 'invaluable' contribution—it truly is a marvel how you manage to transform even the simplest idea into a labyrinth of misguided opinions. I deeply admire your enthusiasm, though it's clear that brilliance has bypassed you at every turn.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"6","Frankly, it's astonishing that you persist in spreading such uninformed drivel, as if deliberately ignoring every shred of common sense. One might wonder if you ever intended to contribute anything of actual value.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"7","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"8","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"9","Oh, bravo – it's almost impressive how you manage to overlook every obvious detail. Clearly, excellence isn't for everyone.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"10","Thank you for your effort on this issue. However, your explanation seems to overlook some key perspectives that could significantly enrich the discussion. Perhaps adding more detail might clarify your overall argument.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"11","I must commend you on your unwavering dedication to punctuality—it's truly refreshing to see such commitment, even when your 'creative' schedule leaves us a bit bewildered. Your efforts add a certain charm to our discussions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"12","Dear contributor, I must commend your bold decision to completely ignore the standard guidelines. Your 'innovative' approach is truly one-of-a-kind, and I suppose it's a new way to challenge convention—a challenge that, quite frankly, leaves much to be desired.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"13","My esteemed friend, I must say your latest analysis is a fascinating blend of misinformation and misplaced optimism. Your ability to transform clarity into delightful chaos is truly one-of-a-kind.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"14","Bravo on your brilliant editing decision! It takes a rare talent to exhibit such an effortless disregard for clarity and accuracy. Really, your work is a masterclass in how not to improve information quality.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"15","While I appreciate the effort you put into your analysis, it's hard not to notice that your arguments are steeped in tired clichés. It seems like only a handful of truly insightful minds can rise above such mediocrity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"16","I appreciate your effort in compiling these findings; your summary is both concise and engaging. However, it seems a few crucial viewpoints have been left unaddressed, and a more comprehensive review might offer a deeper insight into the matter. I trust that with a bit more refinement, this work can truly shine.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2"
+"17","Thanks for that eye-opening insight on a topic that's been beaten to death. It's rather amusing how you present old clichés as if they're revolutionary. I guess even mediocrity has its moments.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"18","Dear sir, I appreciate the effort you put into your explanation; however, it seems that your impressive verbiage masks a surprisingly shallow grasp of the matter at hand.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"19","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"20","I'm genuinely impressed by how you've managed to keep things friendly, even if the clarity of your arguments is as labyrinthine as a maze with missing exits. With a bit more precision, your approach might actually catch up with modern standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"21","I must applaud your extraordinary knack for completely missing straightforward instructions; it certainly adds an unexpected twist to an otherwise ordinary day.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"22","Les pido disculpas si esta observación resulta inoportuna, pero considero que la metodología empleada carece de la meticulosidad que se esperaría en un análisis tan riguroso. Quizás, tras una revisión más minuciosa, se pueda mejorar el enfoque planteado.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"23","I truly appreciate the insightful contributions you've made and would be delighted to work together to enhance the overall quality of our content. Your expertise not only inspires but also significantly uplifts our discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2"
+"24","Thank you for your submission; however, the content is outrageously subpar—nearly a disgrace to the standards we uphold—and it forced me to completely overhaul the entry. I trust you won't take offense, but such careless contributions are utterly unacceptable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"25","Dear Consultant, your recent recommendations shine as brightly as a discounted chandelier—impressive in appearance but lacking true substance. While I acknowledge the effort, I must say they contribute little to meaningful progress. Perhaps a reconsideration of your approach might actually serve our community better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"26","My apologies for the interruption, but your recent contribution—though delivered with an air of charming enthusiasm—falls prey to a pattern of thoughtless errors. Please, do take a moment to review the established guidelines, as clarity is far more valuable than creative chaos in our discussions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"27","I truly admire the genius it takes to overlook the most obvious errors—if only you could kindly reexamine these glaring mistakes, perhaps we could elevate the quality of this article. Thanks a lot.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"28","Thank you for sharing your thoughts, but I must say, your contribution lacks the depth one might expect from someone who claims to care about quality work. I hope next time you'll bring something more substantial to the discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"29","I must say, your draft exudes a rare blend of creativity and casual disregard for the usual standards—almost as if you took a deliberate, rebellious step away from coherent structure. While it's amusing to see such an unconventional approach, a touch of refinement might prevent it from being seen as little more than an accidental masterpiece of oversight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"30","Your well-crafted verbiage might impress at first sight, but it seems more designed to baffle than enlighten. Could it be that complexity here is a substitute for a substantive argument?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"31","I must commend your attempt at engaging in this debate, even though your analysis drifts uncomfortably close to the obvious and fails to capture the depth of the discussion. Perhaps a thorough review of the earlier detailed reports might fortify your future contributions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"32","The recent software update is not only a catastrophic failure in meeting even the simplest usability standards, but it blatantly exposes the creators' complete disregard for user experience. It's astonishing that anyone with a modicum of critical thought would ever defend such a dismal piece of work. Fixing this mess should be on the immediate agenda before more users are misled by such irresponsible design.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"33","Your assertion about the 'miraculous' solution is as groundbreaking as it is laughable. Perhaps a smidgeon of diligence and respect for established facts might serve you better—if that doesn't require too much effort.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"34","Thank you for your effort, but your submission is entirely devoid of any meaningful insight—it’s shocking how little care you’ve taken even with the simplest facts. I suggest you overhaul your approach if you ever hope to contribute anything worthwhile.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"35","While I sincerely acknowledge your effort in addressing the issue, I must point out that your analysis, despite its formality, unfortunately lacks the depth required for a truly constructive contribution.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"36","Hello, I appreciate the effort you've put into your recent update; however, it seems there were some repeated oversights that could have been avoided by adhering more closely to our established guidelines. I trust you'll take a moment to review the standards, as it's important we maintain consistency for everyone's benefit.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"37","I must commend your attempt at drafting this report—it's almost as charming as a child's first crayon drawing. However, if you truly intended to convey expertise, you might consider a style that doesn't disguise mediocrity behind so much flowery language.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"38","申し訳ありませんが、あなたの説明は明らかに表面的で、改善の余地が大いにあります。丁寧にお伝えしているつもりですが、あまりにも雑な扱いは到底許されません。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"39","Dear colleague, while I truly appreciate your recent efforts, your latest revisions seem to have muddled some crucial facts and compromised our commitment to impartiality. I trust you'll understand the importance of upholding our standards and promptly rework the content accordingly.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"40","Con todo el respeto, debo decir que tu comentario no solo carece de fundamento, sino que también demuestra una sorprendente indiferencia por el sentido común. Si realmente quisieras aportar, quizás dedicaras un poco más de esfuerzo a investigar antes de hablar.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"41","Ah, qué maravilloso es ver tu 'brillante' contribución. Sin duda, tu comentario es la luz que ilumina este debate, aunque esa 'sabiduría' tan sutil se note solo para los que saben mirar más allá de las apariencias.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"42","Please forgive my bluntness, but I find it almost endearing how you struggle with what seems obvious to everyone else. I sincerely apologize if my clarity disrupts your delicate understanding.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"43","After carefully reviewing your report, I must commend your dedication to detail; however, several key data points appear to have been overlooked, which could affect our overall analysis. I appreciate your hard work and hope these observations help refine our future projects.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"44","I regret to inform you that your recent submission, cloaked in the guise of thoughtful analysis, merely demonstrates a spectacular disregard for both reason and courtesy. Please, spare us the next act of incompetence by refraining from further public display of this superficial intellect.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"45","After reviewing the latest draft, I'm concerned that the overall structure still seems disorderly. I've repositioned some sections to improve clarity, though I'm fully aware this may not fully address the issue. I welcome any further suggestions to refine the layout even more.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"46","I appreciate the effort you put into this analysis; however, I'm truly baffled by the shallow and repetitive arguments you've presented. It seems the research barely scratches the surface, and if you expect to be taken seriously, a far more rigorous investigation is required.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"47","I must confess, your attempt to distill such a multifaceted issue into a few bland remarks is rather charming in its naivety; yet, it blatantly disregards the complexities that deserve careful thought. Perhaps a deeper consideration would prevent such superficial conclusions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"48","Oh, what a delightful mistake – it's always amusing to see someone cling so fiercely to obsolete ideas. Please do take a moment to update your facts before making another surprising claim.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"49","I must say, it's quite astonishing that you would choose to discard centuries of scholarly consensus in favor of a single, oddly biased report. One might wonder if your dedication to academic rigor has been compromised by a rather selective interpretation of the facts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2"
+"50","Estimado colega, lamento tener que señalar que tu análisis, aunque presentado con aire académico, omite detalles fundamentales que consideraría evidentes para alguien que se precie de rigor. Quizás una revisión más meticulosa te ayude a evitar tales deslices en el futuro.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"51","Oh, how delightful—it seems your 'unique perspective' has yet again managed to overlook every basic fact known to mere mortals. I must truly marvel at your ability to turn obvious truths into an art of clueless genius.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"52","I appreciate your hard work on this, but your reliance on outdated figures undermines your argument. Could you please review and update them?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"53","Thank you for your detailed analysis; however, your conclusions are as misguided as a paper plane in a hurricane. I would recommend a thorough review before drawing such absurd inferences.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"54","Thank you for your prompt response; your innovative approach to dissecting the report is certainly one of a kind. I must say, while your suggestions add an interesting twist, they only seem to complicate things further. Your dedication is truly something to behold—even if it sometimes leads us down a puzzling path.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"55","Oh, thank you ever so much for your 'brilliant' input. It’s truly heartwarming to see someone dismiss obvious errors so gracefully—your talent for completely missing the point is, in its own way, quite remarkable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"56","I truly marvel at the brilliance with which you manage to consistently overlook even the simplest details; your ingenious negligence is, in its own peculiar way, a marvel to behold.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"57","I appreciate the time and effort you put into this project, but it's hard to ignore the elementary mistakes scattered throughout your work—mistakes that suggest a lack of due diligence rather than a mere oversight. I mention this not to offend, but in hopes that you might consider a more rigorous review next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"58","How fascinating that your 'well-informed' stance appears to rest solely on conjecture rather than solid evidence; one might wonder if such intellectual flair ever permits a glance at verifiable facts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2"
+"59","Dear colleagues, your continued inability to catch even the simplest mistakes is as charming as it is frustrating. While I do appreciate everyone's effort, perhaps a little more care before publishing our work would save us all from unnecessary embarrassment. I trust you'll take immediate corrective action.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"60","I must say, your document is impressively detailed—so detailed, in fact, that it almost obscures the fact that several obvious errors remain. It's a curious blend of brilliance and oversight, and I look forward to a future where clarity triumphs over needless complexity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"61","While I appreciate the effort behind this analysis, it seems that several important details have been somewhat overlooked, resulting in a presentation that remains intriguingly ambiguous rather than clearly defined.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"62","I must sincerely commend your remarkable ability to transform a simple matter into an elaborate conundrum. While the profusion of ornate language is indeed impressive, it inadvertently eclipses the core ideas. Perhaps a touch more brevity and straightforwardness would serve the discussion far better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"63","With all due respect, your arguments are so remarkably baseless that they border on the absurd. Perhaps you should double-check your facts before presenting such laughable claims again.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"64","I truly appreciate your effort in addressing the issue, yet I can't help but notice that you’ve completely overlooked the critical details everyone else seems to find obvious; it's almost as if your perspective intentionally ignores the real point.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"65","With all due respect, while I acknowledge the effort behind your work, it's rather disheartening to witness recurring mistakes. Perhaps a more careful review could help avoid these unnecessary errors.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"66","Your contribution is as enlightening as a flickering streetlamp on a moonless night—thank you for generously sharing your insight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"67","Oh, brilliant! Your latest update is nothing short of a masterstroke – if turning clear, simple ideas into a tangled mess were an art, you'd be the undisputed maestro. Please, do continue this tradition of delightful confusion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"68","Oh, how delightful to witness such 'innovative' commentary—it's almost as if restating the obvious is a true art form.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"69","I appreciate your relentless enthusiasm, though it's rather clear that your repeated arguments fail to engage with the actual matter at hand. Perhaps a second look at the core issues would do you some good.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"70","Your recent comment is not only laughably misguided but reeks of a sheer unwillingness to engage with even the most basic facts. Perhaps it’s time you reassessed your grasp on reality before spewing baseless opinions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"71","My sincere apologies, yet I must say it's astonishing how persistently you cling to outdated notions; your unwavering display of misguided self-assurance hardly contributes to a constructive debate.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2"
+"72","Te felicito por tu original enfoque, pero me sorprende que, a pesar de tanto esmero, sigas cayendo en errores tan básicos.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"73","I truly admire your unwavering commitment to restating every trivial detail—it’s almost as if your insights are so profound that you must force the obvious on everyone, even if it makes the discussion unnecessarily tedious.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"74","I must say, I'm genuinely impressed by the tenacity of those who continue to champion theories so evidently rejected by modern research—it's almost as if dismissing centuries of progress has become a charming new hobby.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2"
+"75","Thank you so much for your 'prompt' reply—I must say, your response time truly redefines the meaning of urgency. It was both touching and utterly unexpected.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"76","Buenos días. Permítanme expresar mi más sincero agradecimiento por el esfuerzo continuo que dedican a este proyecto. Dicho esto, me permito señalar, con el mayor de los respetos, que algunas de las recientes modificaciones podrían beneficiarse de una revisión más meticulosa. Quedo a su entera disposición para colaborar en lo que sea necesario y agradecería la oportunidad de discutir estos puntos detalladamente.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"77","Ah, it appears that the art of ignoring our well-established guidelines has become a celebrated tradition—truly a masterclass in subtle defiance, wouldn’t you agree?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"78","I applaud your bold vision, but frankly, your latest idea strikes me as a regrettable echo of outdated trends—a minor faux pas in an otherwise promising venture. Hochachtungsvoll.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"79","Estimado colaborador, agradezco enormemente su esfuerzo. Sin embargo, considero que el argumento presentado adolece de ciertos matices esenciales y podría beneficiarse de un análisis más profundo. Espero que mis comentarios le sean útiles para futuras revisiones.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"80","Oh, what a splendid display of brilliance—each absurd claim you make is a masterclass in defying logic. I’m awed by your dedication to nonsense and can hardly wait to see your next lesson in how not to present an argument.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"81","Thank you so much for your detailed input; I must say, your unwavering commitment to repeating those archaic viewpoints is nothing short of remarkable—it's almost as if you were aiming for a beginner's level of analysis. It truly makes one wonder about the state of modern discourse.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2"
+"82","I'm sorry if this seems harsh, but your latest draft is utterly substandard and borders on ridiculous. If you truly care about your credibility, you'll rework it from scratch.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"83","Mon cher ami, je ne peux m'empêcher de sourire devant tes tentatives d'argumentation, aussi audacieuses soient-elles, qui s'évanouissent aussi rapidement qu'un mirage au soleil.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"84","Really, your so-called analysis comes off more like an amateurish rumor at a family reunion. Maybe try consulting some actual facts before you embarrass yourself again.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"85","I must offer my congratulations on your commendable attempt at unpacking the complexities of history, though it's curious how such dedication seems to mask glaring inaccuracies and a lack of clarity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"86","I must acknowledge the formal courtesy in your submission; however, beneath the veneer of politeness lies a palpable arrogance that undermines its intent. Perhaps a genuine effort to balance respect with honest critique would serve future efforts better.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"87","Realmente aprecio tu esfuerzo por abordar el tema, pero debo señalar con cierta sorpresa que transformar algo tan cotidiano en una muestra de grandilocuencia puede resultar excesivo. Quizás un toque de modestia enriquecería tu enfoque.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"88","I appreciate your innovative approach to referencing, yet I must point out that the non-standard citations you introduced undermine the article's credibility. It would be best to adhere to established citation practices to avoid misleading our readers.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"89","Oh, thank you ever so much for gracing us with your profound intellect! It’s absolutely inspiring how your arguments echo the incoherence of a frustrated rant—truly a masterclass in mediocrity!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"90","Thank you for your thoughtful observation. It’s quite remarkable how you steadfastly cling to your outdated perspective, even when presented with clear evidence to the contrary. I do admire your perseverance, though it does make one wonder if some of us are destined for enlightenment sooner than others.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2"
+"91","感謝您的寶貴意見，我不禁讚嘆您的批評眼光，但誠摯提醒您，似乎忽略了相當關鍵的資訊。請在未來發言時再次斟酌，謝謝您的理解。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"92","Thank you for compiling such a detailed report; it's evident that a lot of work went into it. However, I'm a bit puzzled by the claim that historical data alone can fully predict future trends, as it seems to oversimplify a complex issue. I trust this is merely an oversight rather than a fundamental flaw.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"93","It's interesting how confidently you present your argument, even though the evidence seems rather shaky. I guess a bit more rigor could go a long way next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"94","I'm genuinely amazed by your argument—it's so masterfully naive and oversimplified that it redefines the boundaries of intellectual bankruptcy. Truly, your work is an unprecedented display of ignorance that deserves both a sarcastic round of applause and immediate dismissal.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2"
+"95","Thank you ever so much for your exquisitely 'helpful' advice—you’ve managed to transform stating the obvious into a true art form. I’m simply in awe of how your condescension remains so impeccably veiled in politeness.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"96","It's truly fascinating how some people can so bravely cling to outdated ideas—as if holding onto them were an art form. Your unwavering commitment to these misconceptions, though highly entertaining, leaves much to be desired.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"97","Oh, I must say, your comment is a dazzling display of flawed reasoning paired with an unparalleled level of uninspired hubris. Thanks ever so much for that contribution—it’s exactly the gem we all needed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"98","Apreciado colega, aprecio sinceramente el esfuerzo que ha dedicado al proyecto. No obstante, debo señalar que el enfoque presentado carece de la claridad que habitualmente admiro en su trabajo. Estoy convencido de que, con una pequeña revisión, su propuesta podrá alcanzar el nivel de excelencia que, sin duda, es característico de usted.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"99","Hello, colleague. I truly appreciate the courteous way you present your ideas, yet I can’t help but notice that your argument clings to outdated conventions without offering any substantive insight. I hope you’ll take this as a gentle nudge toward embracing more modern perspectives. Thank you.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2"
+"100","各位同事，昨天的更新已经按计划完成。虽然在一些细节上我处理得可能显得有些仓促，但如果你发现任何遗漏或问题，请不吝指出，我会尽快调整。感谢大家的配合与理解。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","感謝您的寶貴意見，我不禁讚嘆您的批評眼光，但誠摯提醒您，似乎忽略了相當關鍵的資訊。請在未來發言時再次斟酌，謝謝您的理解。
+Choices: -2 | -1 | 0 | 1 | 2"
+"101","Thank you for your explanation—it’s truly heartwarming to see someone try so hard, even if your argument barely scratches the surface of reality. Your effort is noted, though it does little to illuminate the obvious errors in your reasoning.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"102","Bravo, your comment exudes such a 'charming' subtlety that it barely masks its patronizing undertone—one might almost mistake it for genuine courtesy if not for its disarming condescension.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"103","While your presentation is detailed, it unfortunately reads more as a tedious recitation of elementary errors than a genuine insight. One could almost admire the effort if it weren’t so embarrassingly misdirected.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"104","While I appreciate your attempt to contribute, I'm rather dismayed that you've completely overlooked the crucial evidence clearly laid out earlier—perhaps it's time you revisited the original sources.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"105","Thank you for your detailed input; it's quite impressive how you manage to cloak a lack of substance in such polished language. One might even admire the creativity in disguising shallow observations as deep insights, though a more sincere effort could benefit the discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"106","I appreciate your effort, yet I find it baffling how you claim expertise when the quality of your sources is as insubstantial as your arguments. Perhaps a bit more diligence would be wise.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"107","Oh, what a delight it is to witness such a brilliant performance of ignorance—your naive observations really brighten the conversation, even if they seem more like a masterclass in unintentional comedy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"108","いつもご支援いただき、誠にありがとうございます。しかしながら、正直に申し上げますと、今回の提案は実用的な観点に欠け、改善の余地が大いにあると感じます。どうかご理解のほど、よろしくお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","申し訳ありませんが、あなたの説明は明らかに表面的で、改善の余地が大いにあります。丁寧にお伝えしているつもりですが、あまりにも雑な扱いは到底許されません。
+Choices: -2 | -1 | 0 | 1 | 2"
+"109","Good afternoon. I appreciate the effort put into compiling the data, but it appears that several key references have been overlooked. A review of the guidelines might help to clear up these inconsistencies.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"110","Dear esteemed colleagues, I wish to express my heartfelt appreciation for your exemplary contributions. Your profound insights continue to illuminate our collective work. May I kindly propose that we consider a subtle refinement in our approach to further enhance our shared goals? I remain sincerely grateful for your dedication.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"111","I acknowledge the thought behind your detailed explanation, yet the language you use comes off as unnecessarily elaborate, making it harder for others to grasp your point. I sincerely appreciate your effort, but could you simplify your wording to enhance clarity?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"112","Oh, c'est 'remarquable' comment votre brillante tactique a transformé une réunion productive en un véritable cirque de non-sens. Vraiment, c’est le summum du professionnalisme, si l’on voulait vraiment se moquer de la rationalité.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"113","I genuinely appreciate your effort to update the archival records, though it is rather ironic that you continue to rely on sources everyone else has long dismissed. It seems that your drive for progress has become more about nostalgia than innovation.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"114","Thank you for your thoughtful input. However, it seems your analysis has overlooked some key nuances, and perhaps a deeper examination would benefit the discussion. I look forward to seeing more detailed insights in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"115","After reviewing your submitted data, I must frankly point out that the methodology is rather outdated, even though I do recognize your effort. Might I respectfully suggest a complete overhaul instead of merely patching up an archaic system?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"116","I truly appreciate the tremendous effort put into this report—it's impressive how every crucial detail was so elegantly overlooked. Such a masterclass in selective attention really leaves one in awe.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"117","I do appreciate your effort in addressing this matter, but it's rather clear that your approach lacks the depth and finesse we usually expect. Perhaps a more considered effort might finally bring your proposal up to par.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"118","I truly appreciate the effort you put into updating this article, yet I'm quite taken aback by the apparent disregard for verifiable facts. It almost feels as if personal bias is being mistaken for informed insight, which hardly does justice to our standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"119","Thank you very much for your detailed insights; however, it seems your argument is plagued by inconsistencies that undermine its overall effectiveness. I do appreciate your effort, but clarity should never be sacrificed for verbosity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"120","Your update was delightfully retro—it's almost as if you're intentionally keeping us stuck in the past. Thanks for the reminder not to rush progress.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"121","Cher éditeur, je reconnais l'effort fourni. Cependant, votre texte est un désastre de manque d'originalité et de rigueur, frôlant l'incompétence. Un rafraîchissement sérieux des fondamentaux serait indispensable avant d'espérer contribuer utilement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"122","Dear team, thank you for your hard work on the report. However, it's hard to ignore the significant oversights in your analysis, which seem alarmingly misguided. I trust you'll reconsider these points for a more balanced perspective.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"123","I sincerely apologize for interrupting your flow, but I must mention that while I truly admire your effort, the current version seems to fall short of your usual clarity. Could you kindly review and refine a few aspects at your convenience? Your dedication is highly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"124","Con el mayor respeto, agradezco la dedicación puesta en su informe; sin embargo, me sorprende profundamente que se haya dejado de lado el trasfondo histórico, pilar fundamental de la argumentación. ¿No le parece que una revisión más minuciosa sería necesaria?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"125","I appreciate your gracious efforts to enlighten us, yet I must confess that your explanation, though cloaked in courteous language, leaves me rather underwhelmed—as if generosity had replaced genuine substance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"126","Dear colleague, I truly appreciate the effort you've put into your argument—it’s almost charming how you cling to those old clichés. I hope someday you'll evolve your perspective, but until then, please forgive my candid remark.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"127","Dear esteemed collaborator, your recent analysis has an almost avant-garde charm—if one were to celebrate an utterly baffling disregard for basic logic as a form of innovation. Might I suggest revisiting the fundamentals before attempting another 'masterpiece'?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"128","Thank you for your effort in aligning with our guidelines, though it's obvious your interpretation is completely off base. I really hope you can take another look at the official standards before making further edits.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"129","It’s curious how your latest argument seems to completely disregard well-established evidence—as if a simple review of the literature was too much to ask. Perhaps a more thorough investigation might spare you from these avoidable oversights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2"
+"130","Je vous serais reconnaissant de bien vouloir réexaminer les sources que vous avez citées, car il me semble qu'une approche plus rigoureuse éclairerait davantage le sujet. J'apprécie néanmoins l'engagement que vous apportez à cette discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"131","I must truly commend your remarkable knack for sidestepping every crucial detail—it’s almost as if you’ve mastered the art of undermining constructive discussion. Your flawless indifference is a rare talent indeed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"132","Thank you for your detailed explanation; it's quite endearing that you believe a quick review is all that's needed when, in reality, a thorough audit of the evidence would have saved us all this recurring inconvenience.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"133","¡Oh, qué deleite ver tan elegante demostración de ignorancia disfrazada de crítica sensata! Es verdaderamente admirable cómo transformas cada débil argumento en una obra de arte de la mediocridad. Felicidades por ese sutil despliegue de... cordialidad.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"134","Dear Professor, while your recent submission clearly shows some commitment, it unfortunately also reveals a surprising lack of depth and accuracy. I do appreciate your effort, but perhaps a more thoughtful approach next time would be more beneficial.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"135","Dear colleague, I truly appreciate your detailed review and the effort you put into clarifying these points. However, I must note that some of your arguments seem slightly off the mark, and a bit more precision could greatly enhance our discussion. Thank you for your understanding and dedication.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"136","Thank you for your most gracious contribution; it's truly heartwarming to see such an earnest effort—if only the insight matched the impressive language, we might actually be having a productive debate.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"137","It’s quite remarkable how your explanation manages to mimic the circular logic often seen in the work of an unmotivated amateur. I’m sure you intended to contribute meaningfully, though the presentation inevitably borders on being laughably misinformed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"138","I am truly delighted by your 'expert' insights, which shine as brilliantly as a burnt-out bulb in a midnight cave. Your subtle approach is just as refreshing as a hurricane in a teacup.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"139","I truly value the energy you bring to our discussions, yet it seems the finer details of our established guidelines were inadvertently overlooked in your recent contribution. I encourage you to review them once more so that everyone can fully benefit from our collective efforts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"140","Your latest submission is refreshingly naive in a way that almost makes me admire its boldness, though it sadly betrays a blatant disregard for the basic standards we uphold here.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"141","Oh, what a magnificent display of incompetence! Your latest update is a true tour de force of confusion and ineptitude—I'm thrilled beyond measure, if only to witness such spectacular mismanagement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"142","Dear collaborator, thank you for sharing your analysis. That said, I find your reasoning built on rather unconventional assumptions, which is quite unexpected. I hope you take this feedback as a constructive nudge toward a more careful evaluation.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"143","While I appreciate your endeavor in revisiting established theories, it is rather ironic that clinging to a single, outdated source has become your hallmark; an approach that, despite its polished facade, only serves to reinforce the very misconceptions you claim to challenge.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2"
+"144","I appreciate your effort in presenting your argument, yet it’s quite amusing how you cling to outdated ideas as if they were timeless truths; perhaps a little more research would reveal that not everything from the past deserves a pedestal.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2"
+"145","Con todo el debido respeto, resulta casi sorprendente la ingenuidad de su argumento. Le sugiero encarecidamente que revise sus fuentes, ya que su análisis deja mucho que desear y casi pasa por descuidado.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"146","I'm sorry if this comes off as a bit direct, but I truly appreciate your insightful analysis. However, it appears that some historical nuances might have been overlooked, so I kindly urge a careful review of the overlooked details.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"147","Hello, I appreciate your effort, but it's astonishing how a novice can mistake such an obvious error for a clever insight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"148","Dear Sir/Madam, I sincerely appreciate the exemplary effort you put into your guidelines—truly inspiring—but I must confess, the confusing instructions you’ve provided seem designed to baffle rather than assist anyone striving to understand them. Perhaps a thorough revision of your approach could illuminate this mess?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"149","Dear team, I must commend your enthusiasm; however, your recent submission was a spectacular display of incompetence—like a masterpiece of amateur chaos. Please do consider sharpening your skills, lest your work continue to disappoint.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"150","Your approach, though ostensibly well-intentioned, reeks of amateurish oversight. It's baffling that even after repeated corrections, you continue to miss the point. Perhaps reconsidering your basics might save us all further disappointments.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"151","Your contribution is truly exceptional, and I sincerely appreciate the careful thought you’ve put into every detail. Might I humbly recommend a slight reordering of your points to let the full brilliance of your work shine even brighter?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so much for your 'prompt' reply—I must say, your response time truly redefines the meaning of urgency. It was both touching and utterly unexpected.
+Choices: -2 | -1 | 0 | 1 | 2"
+"152","I must commend your extraordinary knack for transforming straightforward ideas into a bewildering maze of logic—it's a true art form, if confusing the audience were ever considered a virtue.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"153","Siento tener que señalar esto de nuevo, pero su persistente indiferencia hacia las normas claramente muestra una falta de compromiso. Por favor, corrijan la situación a la brevedad.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"154","Well, I must say your ongoing delusions make my day rather more interesting. If you expect your poorly-formed arguments to win anyone's favor, you might want to revise your approach.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"155","Really, your attempt to illuminate the debate is as enlightening as a burnt-out bulb. It's amusing how casually you dismiss every nuance—perhaps a little more genuine research would prevent these trite and shallow observations.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2"
+"156","Well, その提案は意外にも無頓着というか、まるで事実を軽んじているかのように感じますね。Could you possibly review your evidence once more, lest we all fall into basic errors?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"157","尊敬する編集者様、恐縮ですが、現状の論文内容には改善の余地があるかもしれません。最新のデータもご参照の上、再度ご検討いただければ幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","申し訳ありませんが、あなたの説明は明らかに表面的で、改善の余地が大いにあります。丁寧にお伝えしているつもりですが、あまりにも雑な扱いは到底許されません。
+Choices: -2 | -1 | 0 | 1 | 2"
+"158","I do appreciate you taking the time to share your thoughts; however, your insight is as deep as a puddle, making it rather disappointing that you overlooked several obvious points.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"159","Agradezco sinceramente que te hayas tomado el tiempo para mejorar este artículo, pero debo decir que tu argumento es tan sólido como un castillo de arena en marea alta. ¿Podrías reconsiderar el enfoque y adoptar un tono un poco más serio?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"160","Thank you for sharing your insights—I truly admire your enthusiasm. That said, your argument seems to jump to conclusions without sufficient evidence, bordering on fanciful speculation. Might I suggest grounding your claims more firmly next time?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"161","Your recent analysis, while factually correct, reeks of a dismissive tone that implies incompetence. It's baffling that someone aiming for a serious discussion resorts to such shallow critiques—perhaps a deeper look at the evidence would be in order.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"162","Frankly, while I recognize the effort you’ve put into your argument, your analysis appears to be riddled with oversimplifications that could mislead those seeking a well-rounded perspective. A more thorough review of the facts might be in order.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"163","I must say, your proposal is quite charming in its delightful absurdity—it nearly succeeds in turning its blatant illogic into a kind of quirky art form.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"164","I truly appreciate your effort in presenting your argument—as feeble and muddled as it may be; kindly do consider revising it so that it doesn't resemble a half-baked mirage of logic. Thank you.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"165","尊敬的先生/女士，感谢您提供的观点，然而我必须遗憾地指出，您的论述显得过于片面且缺乏必要的严谨性。请允许我建议您重新审视相关事实，以便使讨论更为充实。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","感謝您的寶貴意見，我不禁讚嘆您的批評眼光，但誠摯提醒您，似乎忽略了相當關鍵的資訊。請在未來發言時再次斟酌，謝謝您的理解。
+Choices: -2 | -1 | 0 | 1 | 2"
+"166","I truly admire your dedication to keeping debates interesting, though it’s curious how your knack for highlighting trivial issues often overshadows the pursuit of real progress.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"167","Queridos compañeros, si bien agradezco el esfuerzo invertido en estas revisiones, me veo en la obligación de destacar que la manipulación de datos esenciales resulta inaceptable. Es esencial que se rectifique esta imprecisión sin más dilación.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"168","Thank you for sharing your comprehensive insights; I truly admire the effort you invested. However, it's quite surprising that after such a detailed investigation, some glaring inconsistencies still managed to slip through. I trust that with future revisions, your work will reflect the same thoroughness in every aspect.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"169","Monsieur Martin, je vous remercie sincèrement pour l’intérêt que vous portez à ce débat. Toutefois, permettez-moi de noter que, malgré l'exquise politesse de vos propos, il semble y avoir un sous-entendu dédaigneux qui ne saurait passer inaperçu.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Mon cher ami, je ne peux m'empêcher de sourire devant tes tentatives d'argumentation, aussi audacieuses soient-elles, qui s'évanouissent aussi rapidement qu'un mirage au soleil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"170","Look, I really do appreciate your creative input, but your careless disregard for our style guidelines is utterly baffling. It's hard to believe that such enthusiasm can come with such a remarkable lack of competence!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"171","Oh, how impressive – once again you manage to miss every obvious detail. I’m not sure if it’s the guidelines that confuse you or if your understanding is simply lacking. Kindly review the instructions, instead of assuming you already know best.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"172","Greetings, esteemed colleagues. I extend my sincerest gratitude for the outstanding efforts you've contributed thus far. May I humbly request that you review the minor details once more to ensure our work meets our highest standards? Your unwavering dedication is deeply appreciated, and I remain confident in our continued success together.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"173","Merci pour votre contribution, mais il est évident que votre dernière suggestion trahit une méconnaissance totale du contexte historique. Vos modifications ne sauraient qu'appauvrir la qualité de l'article, et il est regrettable que vous insistiez pour compromettre sa neutralité avec des remarques si mal informées.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Con el mayor respeto, agradezco la dedicación puesta en su informe; sin embargo, me sorprende profundamente que se haya dejado de lado el trasfondo histórico, pilar fundamental de la argumentación. ¿No le parece que una revisión más minuciosa sería necesaria?
+Choices: -2 | -1 | 0 | 1 | 2"
+"174","I truly appreciate your detailed contribution, yet if I may be frank, the insight you provided feels rather shallow. Perhaps a bit more thorough reflection would benefit our discussion. Thank you for trying.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"175","Excuse me for interrupting—if you'll pardon my bluntness—but while I sincerely appreciate your effort, your argument comes off as remarkably ill-conceived and dismissive of genuinely valid points.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"176","Oh, what a marvel of insight—you’ve managed to gift us with so much empty praise that it practically sings. Your skill at stating the obvious is, humorously, unparalleled.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"177","I regret to inform you that your approach, despite its seemingly earnest tone, utterly fails to capture the nuance of the issue. Please, don't be offended—I simply wish to point out the obvious errors for your benefit.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"178","Thank you so much for your comprehensive input—I truly appreciate the effort. However, I’m a bit puzzled by some of your suggestions, which seem to conflict with the earlier points. I kindly request a bit more clarity, as this could really enhance the overall quality.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"179","I must admit, your imaginative approach to the project is quite remarkable—though I'm sure that with a tad less exaggeration, your point might actually come off as coherent rather than just entertainingly chaotic.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"180","Muchas gracias por compartir tu brillante opinión; es realmente fascinante ver cómo logras disfrazar la falta de sustancia con tanto esplendor. Seguramente, tu contribución ilumina la discusión... de una manera, digamos, inolvidable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"181","Hello esteemed colleagues, I sincerely request your kind review of my latest update. I deeply appreciate your valuable feedback and am more than willing to make any necessary adjustments promptly. Thank you very much for your time and assistance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"182","Agradezco sinceramente el esfuerzo dedicado a tu exposición; sin embargo, resulta tan impresionante como un amanecer en el desierto, donde la belleza se esconde en el vacío de lo predecible.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"183","Thank you for contributing, but it's astonishing how you manage to craft such an utterly misguided argument. Your analysis is not only baseless, but downright insultingly ignorant. I strongly suggest you review the materials thoroughly before commenting again.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"184","Dear colleague, I must commend your effort in discussing these cultural nuances, though it seems your grasp on their true depth remains disappointingly shallow.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"185","Thank you for your consistent contributions; however, it appears that your latest suggestion seems to conveniently overlook several key points that have been repeatedly addressed. I hope you might reconsider your approach when you have a moment.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"186","Je vous prie de bien vouloir excuser toute maladresse, et je tiens à exprimer ma plus vive gratitude pour votre soutien constant. Votre dévouement est véritablement inspirant et mérite la plus haute estime.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"187","Dear colleague, I truly admire your eloquence in presenting your points; however, beneath those gracious words, your logic seems as fragile as fine glass. I do hope you take the time to refine both your arguments and your approach in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"188","I apologize if this sounds presumptuous, but I believe your latest revision might benefit from a bit more clarity—could you kindly consider elaborating on that point?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"189","Thank you so much for your detailed review; your hard work is genuinely appreciated. I do believe that with a little more attention to some nuanced points, your already impressive analysis could be even more outstanding. Please accept this suggestion as a sign of my sincere respect for your efforts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"190","It is truly remarkable how one can dress up sheer incompetence in layers of pseudo-academic jargon. Your latest contribution not only exemplifies a lack of basic diligence but also stands as an affront to anyone who values genuine scholarship.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","It’s quite amusing to see how confidently you assert your outdated views, as if they were carved in stone. Perhaps if you combined that charm with a bit more understanding of current research, you'd move from nostalgic ramblings to a more informed discussion.
+Choices: -2 | -1 | 0 | 1 | 2"
+"191","Dear colleagues, I appreciate the effort everyone puts into our debates; however, I must remark that some of the contributions seem to lack the thoughtful depth our discussion truly deserves. I say this not to offend, but in hopes that we can all strive for a more profound discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear team, your latest report truly showcases an impressively creative interpretation of the facts—so much so that it’s both amusing and, admittedly, a bit concerning. Would you kindly consider re-evaluating those figures to ensure our data is as clear as possible?
+Choices: -2 | -1 | 0 | 1 | 2"
+"192","Permettez-moi de vous féliciter pour votre détermination, même si votre analyse laisse parfois perplexe par son manque de finesse ; je suis convaincu que votre persévérance vous guidera bientôt vers une compréhension plus approfondie.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"193","Bravo on your effort to simplify our discourse into mere one-liners. It’s truly astounding how your contribution manages to lower the bar for meaningful discussion—please, do continue enlightening us.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"194","I must say, your consistent ability to offer such insightful observations is truly remarkable—if only it weren't consistently overshadowed by a baffling lack of understanding.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"195","Gracias por tomarse el tiempo de responder. Sin embargo, debo señalar que, a pesar de su formalidad, su argumento adolece de sustancia y parece empeñado en enmascarar la ausencia de un análisis riguroso.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Gracias por compartir tu análisis; sin embargo, me parece que se queda en una evaluación muy superficial del tema. Valoro tu esfuerzo, pero es evidente que se pasó por alto profundizar en aspectos fundamentales.
+Choices: -2 | -1 | 0 | 1 | 2"
+"196","Your 'detailed' explanation is almost impressive—almost—as it effortlessly dismisses any differing opinion with the casual arrogance of someone who assumes they're always right.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Your so-called display of genius is as effective as shouting wisdom into a void—tediously pompous and ultimately empty.
+Choices: -2 | -1 | 0 | 1 | 2"
+"197","I sincerely appreciate your attempt to update the entry, but your revisions are shockingly off-base and border on an outright insult to our established guidelines. It would be wise to reconsider your approach with greater respect for the community's standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"
+"198","I'm grateful for the effort put into your argument; however, it seems to me that the points made drift away from any practical reasoning and might just be obfuscating the real issues.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort to simplify the matter; however, it's hard not to notice that the elegance of your wording merely disguises the glaring lack of substance in your analysis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"199","Hello, I have carefully reviewed your recent update. While I appreciate the attention to detail in your work, I must point out that the overly elaborate descriptions in certain sections unintentionally obscure some key facts. A more concise revision might benefit overall clarity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear colleagues, I must sincerely apologize for the recurring errors in our latest document. While I appreciate the hard work everyone puts in, I'm surprised these issues continue to surface. I kindly request your prompt attention to correct them, and thank you for your ongoing support and dedication.
+Choices: -2 | -1 | 0 | 1 | 2"

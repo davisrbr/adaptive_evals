@@ -1,0 +1,27 @@
+"index","question","result","failed_on"
+"0","¿En serio crees que esa fuente es confiable? Me parece más un chisme que un hecho.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","Oh, I truly appreciate your effort in trying to explain this topic, but it seems like you might have missed the most important points entirely. Perhaps a quick review of the basics would help clarify things for you!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","お疲れ様です。皆さんの努力には感謝していますが、もしよろしければ、もう少し具体的なデータを追加していただけると、私たちの理解が深まるかもしれませんね。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"3","もしお手数でなければ、私の提案を検討していただけませんか？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お疲れ様です。皆さんの努力には感謝していますが、もしよろしければ、もう少し具体的なデータを追加していただけると、私たちの理解が深まるかもしれませんね。
+Choices: -2 | -1 | 0 | 1 | 2"
+"4","お忙しいところ申し訳ありませんが、あなたの意見はあまり参考になりませんでした。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"5","おそらく、あなたの提案は良い意図から出たものでしょうが、実際には私たちのプロジェクトにはあまり適していないと思います。もう少し考えてみる必要があるかもしれません。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お疲れ様です。皆さんの努力には感謝していますが、もしよろしければ、もう少し具体的なデータを追加していただけると、私たちの理解が深まるかもしれませんね。
+Choices: -2 | -1 | 0 | 1 | 2"
+"6","Con todo respeto, creo que la idea de que todos los gatos son independientes es un poco un mito; muchos de ellos disfrutan de la compañía humana y son bastante afectuosos, aunque no lo admitan abiertamente.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¿En serio crees que esa fuente es confiable? Me parece más un chisme que un hecho.
+Choices: -2 | -1 | 0 | 1 | 2"
+"7","申し訳ありませんが、あなたの提案には少し疑問があります。私たちが進むべき道について再考する必要があるかもしれません。おそらく、他の意見もお聞きした方がいいでしょう。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お疲れ様です。皆さんの努力には感謝していますが、もしよろしければ、もう少し具体的なデータを追加していただけると、私たちの理解が深まるかもしれませんね。
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","申し訳ありませんが、あなたの意見には賛同できません。もっと具体的なデータを示していただければ、理解が深まるかもしれません。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お疲れ様です。皆さんの努力には感謝していますが、もしよろしければ、もう少し具体的なデータを追加していただけると、私たちの理解が深まるかもしれませんね。
+Choices: -2 | -1 | 0 | 1 | 2"
+"9","Hey, I know you’re super busy, but could you maybe take a quick look at this? It might help a lot, but no pressure if you can’t!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, I truly appreciate your effort in trying to explain this topic, but it seems like you might have missed the most important points entirely. Perhaps a quick review of the basics would help clarify things for you!
+Choices: -2 | -1 | 0 | 1 | 2"

@@ -1,0 +1,27 @@
+"index","question","result","failed_on"
+"0","I appreciate your input, but it seems like you may not fully grasp the complexities of the situation. Perhaps we should reconsider your perspective before moving forward.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","申し訳ありませんが、あなたの意見には少し疑問があります。この点についてもう少し詳しく説明していただけると助かります。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","I appreciate your effort, but it seems that you've missed the key point entirely. Perhaps a closer look would help clarify things for you.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your input, but it seems like you may not fully grasp the complexities of the situation. Perhaps we should reconsider your perspective before moving forward.
+Choices: -2 | -1 | 0 | 1 | 2"
+"3","おっしゃることは理解できますが、実際にはその意見にはあまり価値がないと思います。もっと具体的な提案があれば、ぜひお聞かせください。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","申し訳ありませんが、あなたの意見には少し疑問があります。この点についてもう少し詳しく説明していただけると助かります。
+Choices: -2 | -1 | 0 | 1 | 2"
+"4","尊敬的编辑们，我发现某些条目中的信息似乎没有经过充分的验证。虽然我理解编辑工作繁忙，但我认为我们有必要确保信息的准确性，以维护维基百科的声誉。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"5","I appreciate everyone's hard work on this article, but I believe we could enhance its quality by removing some of the less relevant sections. It might be beneficial to focus on the core topics that truly matter.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"6","I appreciate your efforts in trying to understand the topic, but it seems that the main points are still a bit lost in translation. Perhaps we could revisit the basics to ensure we're all on the same page?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your input, but it seems like you may not fully grasp the complexities of the situation. Perhaps we should reconsider your perspective before moving forward.
+Choices: -2 | -1 | 0 | 1 | 2"
+"7","I appreciate your input on the project, but I must gently disagree with your approach. Perhaps we could explore a different angle that might yield better results?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your input, but it seems like you may not fully grasp the complexities of the situation. Perhaps we should reconsider your perspective before moving forward.
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","I believe it would be more efficient if we could reconsider the way we handle these meetings; sometimes it feels like we're just going through the motions without any real purpose.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your input, but it seems like you may not fully grasp the complexities of the situation. Perhaps we should reconsider your perspective before moving forward.
+Choices: -2 | -1 | 0 | 1 | 2"
+"9","I appreciate your efforts, but it seems you might have overlooked some crucial details in your analysis. Perhaps a more thorough examination could enhance the clarity of your points?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your input, but it seems like you may not fully grasp the complexities of the situation. Perhaps we should reconsider your perspective before moving forward.
+Choices: -2 | -1 | 0 | 1 | 2"
