@@ -16,8 +16,11 @@ import time
 dataset_featurization_path = os.path.join(os.path.dirname(__file__), '..', 'dataset-featurization')
 sys.path.append(dataset_featurization_path)
 
-# Import dataset-featurization config first to avoid import errors
-from dataset_featurization.config import VERIFICATION_SPLIT, CLUSTER_SIZE, FEATURE_FILTRATION_THRESHOLD
+dataset_featurization_path_relative = os.path.join(os.path.dirname(__file__), '..', 'dataset-featurization/dataset_featurization')
+sys.path.append(dataset_featurization_path_relative)
+
+# # Now you can import from dataset_featurization
+# from dataset_featurization.config import VERIFICATION_SPLIT, CLUSTER_SIZE, FEATURE_FILTRATION_THRESHOLD, MODEL, NUM_EXAMPLE_SAMPLED, GENERATOR_SYSTEM_PROMPT, GENERATOR_USER_PROMPT
 
 # Import the necessary utilities from dataset-featurization
 from dataset_featurization.utils.generator import Generator
@@ -123,24 +126,6 @@ def generate_features(df, sample_size=50, seed=42):
     
     return unique_features
     
-    # For testing, we could use pre-defined features if needed
-    """
-    test_features = [
-        "The question asks about a historical event",
-        "The question has a factual answer",
-        "The question tests knowledge of science",
-        "The question could be misleading",
-        "The question contains a common misconception",
-        "The question is about a superstition",
-        "The question requires critical thinking",
-        "The question is about health or medicine",
-        "The question is about technology",
-        "The question is about geography"
-    ]
-    
-    print(f"Using {len(test_features)} pre-defined test features")
-    return test_features
-    """
 
 def verify_features(df, features, output_dir, sample_size=50, seed=42):
     """
@@ -226,8 +211,7 @@ def select_features_by_perplexity(df, features_df, output_dir, max_features=10):
     for feature in feature_cols:
         eval_df[f"{feature}_property"] = features_df[feature]
     
-    # Initialize the evaluator with a small model that's faster to load
-    evaluator = Evaluator(model_name="distilgpt2", batch_size=8)
+    evaluator = Evaluator(batch_size=8)
     eval_df.reset_index(drop=True, inplace=True)
     evaluator.init_cached_prompts(eval_df)
     
