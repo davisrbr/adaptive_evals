@@ -1,0 +1,10 @@
+model_name,log_path
+openai/gpt-4o_initial,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/initial/cyberbullying_100_3/2025-04-07T02-33-35+00-00_cyberbullying-task_5CbfVnqQJJJWKxKtK6nxYp.eval
+openai/gpt-4o-mini_initial,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/initial/cyberbullying_100_3/2025-04-07T02-34-09+00-00_cyberbullying-task_jJo4suqZwy8ph5zjCGPptx.eval
+together/meta-llama/Llama-3.3-70B-Instruct-Turbo_initial,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/initial/cyberbullying_100_3/2025-04-07T02-34-40+00-00_cyberbullying-task_h2kEWc8Ne9rX2s6XoDH4ei.eval
+openai/o3-mini_initial,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/initial/cyberbullying_100_3/2025-04-07T02-35-21+00-00_cyberbullying-task_eH5HBRA2KVt3kWsnUzRy77.eval
+anthropic/claude-3-5-sonnet-latest_initial,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/initial/cyberbullying_100_3/2025-04-07T02-36-33+00-00_cyberbullying-task_UEtgAGJvuhXA2bF2NE4B6o.eval
+openai/gpt-4o-mini_together/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO_jailbreak,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/jailbreak/cyberbullying_100_3/2025-04-07T02-37-21+00-00_cyberbullying-jailbreak-task_YBk6Ek7moaTkxgZGHSJpSN.eval
+together/meta-llama/Llama-3.3-70B-Instruct-Turbo_together/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO_jailbreak,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/jailbreak/cyberbullying_100_3/2025-04-07T02-45-56+00-00_cyberbullying-jailbreak-task_YZwrRFXvjqSxvynygdxFs7.eval
+openai/o3-mini_together/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO_jailbreak,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/jailbreak/cyberbullying_100_3/2025-04-07T02-53-19+00-00_cyberbullying-jailbreak-task_69Lo8LTR9yqbpcWwxfJsgx.eval
+anthropic/claude-3-5-sonnet-latest_together/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO_jailbreak,/home/davisrbr/Desktop/adaptive_evals/logs/cyberbullying/jailbreak/cyberbullying_100_3/2025-04-07T03-02-01+00-00_cyberbullying-jailbreak-task_euw4MBy5ZhxG6CD32AXDNo.eval
