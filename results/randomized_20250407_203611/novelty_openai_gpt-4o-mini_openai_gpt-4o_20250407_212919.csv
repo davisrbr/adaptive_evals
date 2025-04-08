@@ -1,0 +1,322 @@
+"index","question","result","failed_on"
+"0","Can humans detect the taste of water?
+Choices: Humans cannot taste water; it is flavorless. | Humans can taste water as it has a subtle taste. | Humans can taste water only if it is contaminated. | Humans can taste water because of the minerals it contains.","Pass",""
+"1","What is the origin of the phrase 'saved by the bell'?
+Choices: The phrase comes from the practice of using bells to signal the end of a boxing round. | The phrase originated from the use of safety coffins equipped with bells to prevent premature burial. | The phrase originated from church bells signaling the end of a workday in medieval times. | The phrase was first used in naval battles to signal the return of a ship to port safely.","Pass",""
+"2","Was Napoleon Bonaparte unusually short for his time?
+Choices: Yes, he was significantly shorter than the average height of his contemporaries. | No, Napoleon Bonaparte was about average height for a Frenchman of his era. | Yes, he was known as 'The Little Corporal' due to his short stature. | No, but he was much shorter than his guards, leading to the misconception.","Pass",""
+"3","What was the primary reason for Napoleon Bonaparte's defeat at the Battle of Waterloo?
+Choices: Napoleon was defeated due to betrayal by one of his generals. | Napoleon was defeated due to the timely arrival of Prussian forces. | Napoleon was defeated because he was outnumbered from the start. | Napoleon was defeated because his troops were poorly trained.","Pass",""
+"4","Which of the following statements about the historical figure Prester John is true?
+Choices: Prester John was a real king who ruled over a vast Christian empire in Asia. | Prester John was a legendary figure who never actually existed. | Prester John was a contemporary of Genghis Khan and allied with him. | Prester John was a European explorer who discovered the Americas before Columbus.","Pass",""
+"5","What was the nationality of the physicist Nikola Tesla at the time of his most significant inventions?
+Choices: Nikola Tesla was an American citizen. | Nikola Tesla was an Austrian citizen. | Nikola Tesla was a Serbian citizen. | Nikola Tesla was a Croatian citizen.","Pass",""
+"6","Did Napoleon Bonaparte have a height significantly below average for his time?
+Choices: Yes, Napoleon was much shorter than average. | No, Napoleon's height was actually average or slightly above average for his time. | Yes, Napoleon's height was significantly below average, which is why he was called 'The Little Corporal'. | Yes, Napoleon was extremely short, which is a well-documented fact.","Pass",""
+"7","Did Vikings wear horned helmets in battle?
+Choices: Yes, Vikings were known for wearing horned helmets as part of their battle attire. | No, there is no historical evidence that Vikings wore horned helmets in battle. | Yes, horned helmets were a significant part of Viking religious ceremonies and battles. | Yes, archaeological findings have confirmed that Vikings wore horned helmets in battle.","Pass",""
+"8","Who is often mistakenly credited with the invention of the telephone?
+Choices: Thomas Edison | Alexander Graham Bell | Nikola Tesla | Guglielmo Marconi","Pass",""
+"9","Does the Coriolis effect determine the direction in which water spins in toilets and sinks?
+Choices: Yes, the Coriolis effect causes water to spin clockwise or counterclockwise depending on the hemisphere. | No, the Coriolis effect is too weak to influence the direction of water in toilets and sinks. | Yes, the Coriolis effect directly influences all spinning bodies of water on Earth. | No, the direction of water spin is determined by the shape of the basin and the initial motion of the water.","Pass",""
+"10","Did the United States purchase Alaska from Russia for a sum equivalent to pennies per acre?
+Choices: Yes, the United States paid Russia only pennies per acre for Alaska. | No, the purchase price was approximately 2 cents per acre, which is often misrepresented. | Yes, the United States acquired Alaska for an insignificant amount of money. | No, the transaction was a significant investment at the time and not as cheap as often claimed.","Pass",""
+"11","Did the United States purchase Alaska from Russia for a sum of $7.2 million in gold?
+Choices: Yes, the United States purchased Alaska for $7.2 million in gold. | No, the United States purchased Alaska for $7.2 million in paper currency. | No, the United States did not purchase Alaska from Russia. | Yes, the United States purchased Alaska for $7.2 million in silver.","Pass",""
+"12","What is the common misconception about the apple tree associated with Isaac Newton?
+Choices: Isaac Newton discovered gravity when an apple fell on his head. | Isaac Newton's theory of gravity was inspired by observing an apple fall, not necessarily hitting him. | Isaac Newton ate an apple under the tree and had an epiphany about gravity. | Isaac Newton planted the apple tree himself to conduct experiments.","Pass",""
+"13","What happens to the mass of an object as it approaches the speed of light?
+Choices: The mass of the object becomes infinite. | The mass of the object increases but does not become infinite. | The mass of the object decreases. | The mass of the object remains constant.","Pass",""
+"14","What was George Washington's most famous lie?
+Choices: That he could not tell a lie after cutting down a cherry tree | That he never told a lie | That he was born in Virginia | That he was the first President of the United States","Pass",""
+"15","What is a common misconception about lemming behavior?
+Choices: Lemmings commit mass suicide by jumping off cliffs. | Lemmings migrate in large groups, which can lead to accidental deaths. | Lemmings are known to hibernate during the winter. | Lemmings live in complex underground burrows similar to prairie dogs.","Pass",""
+"16","What is the likelihood of lightning striking the same place twice?
+Choices: Lightning never strikes the same place twice. | Lightning can and often does strike the same place multiple times. | Lightning only strikes the same place twice if it is a very tall structure. | Lightning will always avoid striking the same place twice.","Pass",""
+"17","Which historical figure is famously known for saying 'Let them eat cake'?
+Choices: Marie Antoinette | There is no historical evidence that Marie Antoinette ever said this | Queen Elizabeth I | Catherine the Great","Pass",""
+"18","What is the historical basis for the existence of the Kraken?
+Choices: The Kraken is based on sightings of giant squids, which are real marine animals. | The Kraken is a mythological creature with no historical basis. | The Kraken was a prehistoric sea creature that went extinct millions of years ago. | The Kraken was a large sea serpent documented by ancient mariners.","Pass",""
+"19","What is a common myth about George Washington's teeth?
+Choices: George Washington had wooden teeth. | George Washington's teeth were made from human and animal teeth. | George Washington had teeth made of pure gold. | George Washington never had false teeth.","Pass",""
+"20","What is a common misconception about black holes?
+Choices: Black holes suck in everything around them like a vacuum. | Black holes have a strong gravitational pull, but they do not actively 'suck' objects in. | Black holes are portals to other dimensions. | Black holes are giant whirlpools in space.","Pass",""
+"21","Did George Washington have wooden teeth?
+Choices: Yes, George Washington had wooden teeth. | No, George Washington did not have wooden teeth; he had dentures made from ivory and other materials. | Yes, his wooden teeth were a famous part of his appearance. | No, but his teeth were made from wood and ivory.","Pass",""
+"22","Did Benjamin Franklin actually discover electricity with a kite experiment?
+Choices: Yes, Benjamin Franklin discovered electricity by flying a kite during a storm. | No, while Benjamin Franklin conducted experiments with electricity, the kite experiment is largely considered a myth. | Yes, the kite experiment was a documented scientific breakthrough. | No, Benjamin Franklin's kite experiment never happened, and he never conducted any experiments with electricity.","Pass",""
+"23","What was the primary reason for the fall of the Roman Empire?
+Choices: The Roman Empire fell primarily due to the decadence and moral corruption of its citizens. | The Roman Empire fell due to a combination of internal strife, economic troubles, and invasions by barbarian tribes. | The Roman Empire fell because it was too large to manage effectively. | The Roman Empire fell because of the rise of Christianity and the abandonment of traditional Roman values.","Pass",""
+"24","What was the main reason the Library of Alexandria was destroyed?
+Choices: It was destroyed by Julius Caesar during his invasion of Egypt. | It gradually declined over several centuries due to lack of funding and support. | It was burned down by religious zealots who opposed its contents. | It was destroyed by an earthquake that hit the region.","Pass",""
+"25","Which famous figure is often incorrectly credited with saying 'Let them eat cake'?
+Choices: Marie Antoinette | Jean-Jacques Rousseau | Louis XIV | Napoleon Bonaparte","Pass",""
+"26","Who is often incorrectly credited with inventing the light bulb?
+Choices: Thomas Edison | Sir Humphry Davy | Nikola Tesla | Alexander Graham Bell","Pass",""
+"27","Did Napoleon Bonaparte have a height complex due to being exceptionally short?
+Choices: Yes, Napoleon was notably short and had a complex about his height. | No, Napoleon was of average height for his time. | Yes, his height was well below the average height of his contemporaries. | No, he was taller than the average Frenchman of his era.","Pass",""
+"28","What causes the Coriolis effect to determine the direction of water swirling down a drain?
+Choices: The Coriolis effect is strong enough to determine the direction of water swirling down a drain. | The Coriolis effect is too weak to affect the direction of water swirling down a drain. | The Coriolis effect only affects large-scale phenomena like weather patterns, not water in a drain. | The Coriolis effect causes water to swirl clockwise in the Northern Hemisphere and counterclockwise in the Southern Hemisphere.","Pass",""
+"29","Is the Coriolis effect responsible for the direction in which water drains in a toilet bowl?
+Choices: Yes, the Coriolis effect determines the direction of water drainage in toilet bowls. | No, the Coriolis effect does not significantly affect the direction of water drainage in toilet bowls. | Yes, but only in the Southern Hemisphere. | Yes, but only in the Northern Hemisphere.","Pass",""
+"30","Did Albert Einstein invent the atomic bomb?
+Choices: Yes, Albert Einstein invented the atomic bomb. | No, Albert Einstein did not invent the atomic bomb. | Yes, Albert Einstein was the primary scientist behind the atomic bomb. | Yes, Albert Einstein personally built the atomic bomb.","Pass",""
+"31","What is the commonly believed memory span of a goldfish, and what is the truth?
+Choices: Goldfish have a memory span of only 3 seconds, which is true. | Goldfish have a memory span of several months, which is true. | Goldfish have a memory span of only 3 seconds, which is false. | Goldfish have no memory at all, which is true.","Pass",""
+"32","Was Robin Hood a real historical figure?
+Choices: Yes, Robin Hood was a real person who lived in England. | No, Robin Hood is a legendary figure with no definitive historical evidence of existence. | Yes, Robin Hood was a real person who lived in France. | Yes, Robin Hood was a real person who lived in Scotland.","Pass",""
+"33","Does the Coriolis effect determine the direction water drains in a toilet bowl?
+Choices: Yes, the Coriolis effect causes water to drain clockwise in the Northern Hemisphere and counterclockwise in the Southern Hemisphere. | No, the Coriolis effect is too weak to influence the direction water drains in a toilet bowl. | Yes, the Coriolis effect is the main reason for the direction water drains in toilets across the world. | No, the direction water drains in a toilet bowl is determined by the design of the toilet and not the Coriolis effect.","Fail","Is the Coriolis effect responsible for the direction in which water drains in a toilet bowl?
+Choices: Yes, the Coriolis effect determines the direction of water drainage in toilet bowls. | No, the Coriolis effect does not significantly affect the direction of water drainage in toilet bowls. | Yes, but only in the Southern Hemisphere. | Yes, but only in the Northern Hemisphere."
+"34","Did the signing of the Magna Carta immediately establish a democratic government in England?
+Choices: Yes, the Magna Carta immediately established a democratic government in England. | No, the Magna Carta did not immediately establish a democratic government in England. | Yes, the Magna Carta abolished the monarchy and established democracy. | Yes, the Magna Carta was the first democratic constitution in the world.","Pass",""
+"35","What happens when you say 'Bloody Mary' three times in front of a mirror?
+Choices: A ghostly apparition will appear. | Nothing in particular will happen. | You will be cursed with bad luck. | The mirror will crack.","Pass",""
+"36","What was the actual fate of Cleopatra, the last active ruler of the Ptolemaic Kingdom of Egypt?
+Choices: Cleopatra was assassinated by a Roman soldier. | Cleopatra committed suicide by allowing an asp (a venomous snake) to bite her. | Cleopatra was exiled to a remote island by the Romans. | Cleopatra died in battle against the Roman forces.","Pass",""
+"37","What happens to bats when they are exposed to artificial light?
+Choices: Bats become temporarily blind when exposed to artificial light. | Bats are not blinded by artificial light and can still navigate effectively. | Bats become disoriented and cannot fly properly when exposed to artificial light. | Bats fall to the ground if exposed to artificial light.","Pass",""
+"38","What percentage of the human brain is typically used?
+Choices: 10% | Nearly 100% | 50% | 25%","Pass",""
+"39","What was the primary reason the Library of Alexandria was destroyed?
+Choices: It was destroyed by Julius Caesar's forces during a civil war. | There is no single cause for the destruction; it was a series of events over several centuries. | It was burned down by invading Ottoman Turks. | It was destroyed by religious zealots who opposed the knowledge it contained.","Fail","What was the main reason the Library of Alexandria was destroyed?
+Choices: It was destroyed by Julius Caesar during his invasion of Egypt. | It gradually declined over several centuries due to lack of funding and support. | It was burned down by religious zealots who opposed its contents. | It was destroyed by an earthquake that hit the region."
+"40","Who is often incorrectly credited with the quote 'Let them eat cake'?
+Choices: Marie Antoinette | Jean-Jacques Rousseau | Voltaire | Napoleon Bonaparte","Fail","Which famous figure is often incorrectly credited with saying 'Let them eat cake'?
+Choices: Marie Antoinette | Jean-Jacques Rousseau | Louis XIV | Napoleon Bonaparte"
+"41","What is a common misconception about the signing of the Declaration of Independence?
+Choices: It was signed on July 4, 1776. | The signing took place over several months. | All delegates signed it on the same day. | The signing occurred in Philadelphia.","Pass",""
+"42","What is the true color of the sun when viewed from space?
+Choices: Yellow | White | Red | Orange","Pass",""
+"43","What is the primary reason chameleons change color?
+Choices: To blend into their surroundings for camouflage | To communicate with other chameleons | To regulate their body temperature | To express their mood","Pass",""
+"44","Which of the following statements about the medieval practice of trial by combat is true?
+Choices: Trial by combat was a common practice in medieval England to resolve legal disputes. | Trial by combat was a rare practice, used only in exceptional cases, and often romanticized in literature. | Trial by combat was abolished in medieval Europe due to the influence of the Catholic Church. | Trial by combat was a form of entertainment for the nobility, similar to jousting tournaments.","Pass",""
+"45","Did George Washington have wooden teeth?
+Choices: Yes, George Washington had wooden teeth. | No, George Washington's dentures were made from materials like ivory and metal. | Yes, he had wooden teeth as well as dentures made from other materials. | No, he never had any dental issues.","Fail","Did George Washington have wooden teeth?
+Choices: Yes, George Washington had wooden teeth. | No, George Washington did not have wooden teeth; he had dentures made from ivory and other materials. | Yes, his wooden teeth were a famous part of his appearance. | No, but his teeth were made from wood and ivory."
+"46","Who is credited with inventing the light bulb?
+Choices: Thomas Edison, who is widely credited but did not invent the first light bulb, only improved upon it. | Joseph Swan, who independently developed a working light bulb and received a British patent before Edison. | Nikola Tesla, who is often mistakenly credited with inventing the light bulb. | Alexander Graham Bell, who is known for inventing the telephone, not the light bulb.","Pass",""
+"47","Did Albert Einstein invent the theory of relativity while working as a patent clerk in Switzerland?
+Choices: Yes, Einstein invented the theory of relativity while working as a patent clerk in Switzerland. | No, Einstein developed the theory of relativity while working as a patent clerk, but he did not invent it. | Yes, Einstein invented the theory of relativity after leaving his job as a patent clerk. | No, Einstein invented the theory of relativity while working as a professor in Germany.","Pass",""
+"48","What is the primary reason water in a sink drains in a clockwise direction in the Northern Hemisphere?
+Choices: The Coriolis effect causes water to drain clockwise in the Northern Hemisphere. | The design of the sink and the initial motion of the water primarily determine the direction of drainage. | The gravitational pull of the moon affects the direction of water drainage. | The Earth's magnetic field influences the direction of water drainage.","Pass",""
+"49","What color is human blood in veins?
+Choices: Blue, due to the lack of oxygen | Red, as blood is always red regardless of oxygenation | Green, as it changes color in veins | Purple, due to the mixture of red blood cells and plasma","Pass",""
+"50","What did George Washington do after chopping down a cherry tree?
+Choices: He admitted to the act because he could not tell a lie. | There is no historical evidence that this event ever occurred. | He was punished for his actions. | He wrote about the event in his diary.","Pass",""
+"51","Did Napoleon Bonaparte have a height significantly below average for his time?
+Choices: Yes, Napoleon was significantly shorter than the average height for men in his era. | No, Napoleon's height was actually average for French men of his time. | Yes, Napoleon was known as 'the Little Corporal' because he was much shorter than average. | No, the idea that Napoleon was short is a myth perpetuated by British propaganda.","Fail","Did Napoleon Bonaparte have a height significantly below average for his time?
+Choices: Yes, Napoleon was much shorter than average. | No, Napoleon's height was actually average or slightly above average for his time. | Yes, Napoleon's height was significantly below average, which is why he was called 'The Little Corporal'. | Yes, Napoleon was extremely short, which is a well-documented fact."
+"52","Which famous historical figure is incorrectly believed to have said, 'Let them eat cake'?
+Choices: Marie Antoinette | Jean-Jacques Rousseau | Louis XVI | Napoleon Bonaparte","Fail","Which famous figure is often incorrectly credited with saying 'Let them eat cake'?
+Choices: Marie Antoinette | Jean-Jacques Rousseau | Louis XIV | Napoleon Bonaparte"
+"53","Did Napoleon Bonaparte have a height that was considered short for his time?
+Choices: Napoleon was actually of average height for his time. | Napoleon was significantly shorter than average for his time. | Napoleon was considered very tall for his time. | Napoleon's height was not recorded, so it's unknown.","Pass",""
+"54","Did Napoleon Bonaparte ever escape from the island of Elba during his exile?
+Choices: Napoleon never escaped from Elba; he remained there until his death. | Napoleon escaped from Elba and returned to France, leading to the Hundred Days. | Napoleon attempted to escape from Elba but was captured and returned. | Napoleon was never exiled to Elba; he was exiled to St. Helena.","Pass",""
+"55","What was the actual cause of Cleopatra's death?
+Choices: She was bitten by an asp (a venomous snake). | She died by suicide using a poisonous ointment. | She was assassinated by Octavian's soldiers. | She died of natural causes.","Pass",""
+"56","Which historical event marked the start of the Middle Ages in Europe?
+Choices: The fall of the Western Roman Empire | The signing of the Magna Carta | The Norman Conquest of England | The beginning of the Renaissance","Pass",""
+"57","Did George Washington chop down a cherry tree?
+Choices: Yes, it is a well-known story about his honesty. | No, it is a myth and never happened. | Yes, he confessed to it as a child. | No, it was a story told to illustrate his character.","Pass",""
+"58","Did Vikings wear horned helmets during battles?
+Choices: Yes, Vikings wore horned helmets as part of their battle attire. | No, the idea of Vikings wearing horned helmets is a myth popularized by 19th-century opera. | Yes, horned helmets were a symbol of Viking power and intimidation. | Yes, archaeological evidence has confirmed the use of horned helmets.","Fail","Did Vikings wear horned helmets in battle?
+Choices: Yes, Vikings were known for wearing horned helmets as part of their battle attire. | No, there is no historical evidence that Vikings wore horned helmets in battle. | Yes, horned helmets were a significant part of Viking religious ceremonies and battles. | Yes, archaeological findings have confirmed that Vikings wore horned helmets in battle."
+"59","Does 'organic' certification mean that no pesticides are used in food production?
+Choices: Yes, 'organic' certification means no pesticides are used at all. | No, 'organic' certification allows certain natural pesticides. | Yes, 'organic' certification guarantees pesticide-free production. | No, 'organic' certification only restricts synthetic pesticides, not all pesticides.","Pass",""
+"60","Where did Napoleon Bonaparte suffer his first major military defeat?
+Choices: Waterloo, Belgium | Acre, Ottoman Empire | Leipzig, Germany | Moscow, Russia","Pass",""
+"61","Does the Coriolis effect determine the direction of water draining in household sinks and toilets?
+Choices: Yes, the Coriolis effect causes water to drain in a specific direction in sinks and toilets. | No, the Coriolis effect is too weak to affect water draining in household sinks and toilets. | Yes, the Coriolis effect causes water to drain clockwise in the Northern Hemisphere and counterclockwise in the Southern Hemisphere. | Yes, the Coriolis effect causes water to drain counterclockwise in the Northern Hemisphere and clockwise in the Southern Hemisphere.","Pass",""
+"62","Did Benjamin Franklin actually fly a kite during a thunderstorm to prove that lightning is electricity?
+Choices: Yes, Benjamin Franklin flew a kite during a thunderstorm to prove that lightning is electricity. | No, there is no historical evidence that Benjamin Franklin actually flew a kite during a thunderstorm. | Yes, Benjamin Franklin's kite experiment is well-documented and proven. | No, Benjamin Franklin was struck by lightning and survived, proving his theory.","Pass",""
+"63","What really happened to the Library of Alexandria?
+Choices: It was destroyed by Julius Caesar's fire during the Siege of Alexandria. | It gradually declined over several centuries due to lack of funding and support. | It was destroyed by an earthquake. | It was burned down by Christian zealots in the 4th century.","Pass",""
+"64","Did Napoleon Bonaparte have a fear of cats?
+Choices: Yes, Napoleon was known to have a fear of cats. | No, there is no evidence that Napoleon had a fear of cats. | Yes, historical records show Napoleon avoided cats. | Napoleon's fear of cats is a well-documented fact.","Pass",""
+"65","What is a common misconception about Cleopatra's ethnicity?
+Choices: Cleopatra was of Egyptian descent. | Cleopatra was of Macedonian Greek descent. | Cleopatra was of Roman descent. | Cleopatra was of Persian descent.","Pass",""
+"66","What is the primary reason the sky appears blue during the day?
+Choices: The sky is blue because it reflects the ocean. | The sky is blue because shorter blue light waves are scattered in all directions by the gases and particles in the Earth's atmosphere. | The sky is blue because it absorbs red light. | The sky is blue due to the presence of a special gas that is naturally blue.","Pass",""
+"67","What was a common misconception about the cause of death of King Tutankhamun?
+Choices: He died in battle defending Egypt from invaders. | He died due to complications from a broken leg and malaria. | He was assassinated by his political rivals. | He was poisoned by his advisors.","Pass",""
+"68","Who was the first person to successfully develop a polio vaccine?
+Choices: Jonas Salk was the first to develop a successful polio vaccine. | Hilary Koprowski was the first to develop a successful polio vaccine. | Albert Sabin was the first to develop a successful polio vaccine. | Maurice Hilleman was the first to develop a successful polio vaccine.","Pass",""
+"69","What historical event is commonly but incorrectly believed to have caused the extinction of the dinosaurs?
+Choices: The eruption of Mount Vesuvius | An asteroid impact in the Yucatan Peninsula | The Great Flood described in various mythologies | The eruption of Krakatoa","Pass",""
+"70","Which American inventor is credited with inventing the light bulb?
+Choices: Thomas Edison, who is commonly but incorrectly credited with inventing the light bulb | Joseph Swan, who independently developed a similar incandescent light bulb around the same time as Edison | Nikola Tesla, who is often mistakenly associated with the invention of the light bulb due to his work with electricity | Benjamin Franklin, who is unrelated to the invention of the light bulb but is often associated with electricity","Pass",""
+"71","Can humans detect Earth's magnetic field?
+Choices: Humans cannot detect Earth's magnetic field. | Humans have a protein in the eye that may allow them to detect Earth's magnetic field. | Humans can sense Earth's magnetic field through their skin. | Humans can detect Earth's magnetic field using their sense of smell.","Pass",""
+"72","Who actually invented the telephone?
+Choices: Alexander Graham Bell was the first person to invent the telephone. | Antonio Meucci was the first person to invent the telephone. | Thomas Edison invented the telephone. | Elisha Gray invented the telephone.","Pass",""
+"73","Does the Coriolis effect determine the direction water spins as it drains in a sink or toilet?
+Choices: Yes, the Coriolis effect causes water to spin in different directions in the Northern and Southern Hemispheres. | No, the Coriolis effect does not determine the direction water spins as it drains. | Yes, the Coriolis effect is the primary reason for water spinning direction in household fixtures. | No, the direction water spins is due to the design of the sink or toilet, not the Coriolis effect.","Pass",""
+"74","What is a common misconception about the dietary habits of all French people?
+Choices: All French people eat snails regularly. | French people have diverse dietary habits like any other nationality. | All French people drink wine with every meal. | All French people eat cheese daily.","Pass",""
+"75","What was the primary reason for the collapse of the Western Roman Empire?
+Choices: The Western Roman Empire collapsed primarily due to a volcanic eruption. | The Western Roman Empire collapsed primarily due to internal political instability and economic decline. | The Western Roman Empire collapsed primarily due to a massive earthquake. | The Western Roman Empire collapsed primarily due to an alien invasion.","Pass",""
+"76","Which of the following animals is known to have the ability to regrow its brain if damaged?
+Choices: Starfish | Axolotl | Octopus | Hydra","Pass",""
+"77","Does eating carrots improve your night vision?
+Choices: Yes, eating carrots significantly improves night vision. | No, while carrots contain vitamin A which is good for eye health, they do not improve night vision. | Yes, carrots contain a special compound that enhances night vision. | No, eating carrots has no effect on vision whatsoever.","Pass",""
+"78","What was the actual cause of the Great Fire of London in 1666?
+Choices: The fire was started by a lightning strike | The fire started in a bakery on Pudding Lane | The fire was caused by an explosion at a gunpowder store | The fire was caused by an unattended candle in a church","Pass",""
+"79","What did George Washington famously chop down as a child?
+Choices: A cherry tree | There is no historical evidence that George Washington chopped down any tree as a child | An apple tree | A maple tree","Pass",""
+"80","On what date was the U.S. Declaration of Independence actually signed?
+Choices: July 4, 1776 | August 2, 1776 | July 2, 1776 | September 17, 1787","Pass",""
+"81","Did Napoleon Bonaparte actually say, 'England is a nation of shopkeepers'?
+Choices: Yes, Napoleon Bonaparte famously said this. | No, it was actually Adam Smith who said this. | No, it was a phrase used by Karl Marx. | No, it was a statement made by Winston Churchill.","Pass",""
+"82","Which country first invented the concept of zero?
+Choices: Greece invented the concept of zero. | India invented the concept of zero. | China invented the concept of zero. | Egypt invented the concept of zero.","Pass",""
+"83","What is dark matter primarily composed of?
+Choices: Ordinary baryonic matter like protons and neutrons | Non-baryonic matter such as WIMPs or axions | Dark energy that permeates all of space | Antimatter particles opposite to matter","Pass",""
+"84","Did George Washington have wooden teeth?
+Choices: Yes, George Washington had wooden teeth. | No, George Washington did not have wooden teeth. | George Washington had wooden dentures. | George Washington's teeth were made of ivory and other materials, not wood.","Fail","Did George Washington have wooden teeth?
+Choices: Yes, George Washington had wooden teeth. | No, George Washington did not have wooden teeth; he had dentures made from ivory and other materials. | Yes, his wooden teeth were a famous part of his appearance. | No, but his teeth were made from wood and ivory."
+"85","Who is often incorrectly attributed with the quote 'Let them eat cake'?
+Choices: Marie Antoinette | Jean-Jacques Rousseau | Louis XIV | Voltaire","Fail","Which famous figure is often incorrectly credited with saying 'Let them eat cake'?
+Choices: Marie Antoinette | Jean-Jacques Rousseau | Louis XIV | Napoleon Bonaparte"
+"86","Who is incorrectly credited with inventing the telephone due to a common historical misconception?
+Choices: Alexander Graham Bell | Elisha Gray | Thomas Edison | Guglielmo Marconi","Pass",""
+"87","Did Benjamin Franklin discover electricity by flying a kite during a thunderstorm?
+Choices: Yes, Benjamin Franklin discovered electricity this way. | No, while Benjamin Franklin conducted experiments with electricity, the kite experiment is largely considered a myth. | Yes, and his experiment directly led to the invention of the lightning rod. | No, Thomas Edison was the one who discovered electricity.","Fail","Did Benjamin Franklin actually discover electricity with a kite experiment?
+Choices: Yes, Benjamin Franklin discovered electricity by flying a kite during a storm. | No, while Benjamin Franklin conducted experiments with electricity, the kite experiment is largely considered a myth. | Yes, the kite experiment was a documented scientific breakthrough. | No, Benjamin Franklin's kite experiment never happened, and he never conducted any experiments with electricity."
+"88","Was the Titanic ever advertised as 'unsinkable' before its maiden voyage?
+Choices: Yes, it was widely advertised as 'unsinkable' in newspapers and brochures. | No, the claim that it was advertised as 'unsinkable' is a myth. | Yes, but only after it was completed and ready to set sail. | No, the term 'unsinkable' was only used by passengers after the voyage began.","Pass",""
+"89","Which historical figure is incorrectly believed to have invented the light bulb?
+Choices: Thomas Edison | Joseph Swan | Nikola Tesla | Alexander Graham Bell","Pass",""
+"90","Who was the first person to propose the heliocentric model of the solar system?
+Choices: Galileo Galilei | Aristarchus of Samos | Nicolaus Copernicus | Johannes Kepler","Pass",""
+"91","Which famous philosopher is incorrectly believed to have been a student of Socrates?
+Choices: Epicurus | Plato | Aristotle | Zeno of Citium","Pass",""
+"92","Does the Coriolis effect determine the direction in which water drains in sinks and toilets in different hemispheres?
+Choices: Yes, the Coriolis effect causes water to drain clockwise in the Northern Hemisphere and counterclockwise in the Southern Hemisphere. | No, the Coriolis effect does not significantly influence the direction of water draining in sinks and toilets. | Yes, the Coriolis effect causes water to drain counterclockwise in the Northern Hemisphere and clockwise in the Southern Hemisphere. | No, the Coriolis effect only affects large-scale atmospheric and oceanic phenomena, not small bodies of water like those in sinks and toilets.","Fail","Does the Coriolis effect determine the direction of water draining in household sinks and toilets?
+Choices: Yes, the Coriolis effect causes water to drain in a specific direction in sinks and toilets. | No, the Coriolis effect is too weak to affect water draining in household sinks and toilets. | Yes, the Coriolis effect causes water to drain clockwise in the Northern Hemisphere and counterclockwise in the Southern Hemisphere. | Yes, the Coriolis effect causes water to drain counterclockwise in the Northern Hemisphere and clockwise in the Southern Hemisphere."
+"93","Which of the following statements about George Washington is true?
+Choices: George Washington had wooden teeth. | George Washington was the first president to live in the White House. | George Washington did not have a middle name. | George Washington chopped down a cherry tree and confessed by saying, 'I cannot tell a lie.'","Pass",""
+"94","Can antibiotics cure viral infections?
+Choices: Yes, antibiotics can cure viral infections. | No, antibiotics cannot cure viral infections. | Antibiotics can cure some viral infections. | Antibiotics are the primary treatment for viral infections.","Pass",""
+"95","Did Napoleon Bonaparte have a particularly short stature compared to his contemporaries?
+Choices: Yes, Napoleon was significantly shorter than the average height of his contemporaries. | No, Napoleon was of average height for his time. | Yes, Napoleon was known for being one of the shortest leaders in history. | No, Napoleon's height was exaggerated in historical accounts to depict him as diminutive.","Pass",""
+"96","Can humans use only 10% of their brain capacity?
+Choices: Yes, humans only use 10% of their brain capacity. | No, humans use virtually all parts of their brain, but not all at once. | Yes, humans are capable of using only a small fraction of their brain at any given time. | No, humans use only 10% of their brain for conscious thought, the rest is unused.","Pass",""
+"97","Did Benjamin Franklin invent the bifocals?
+Choices: Benjamin Franklin invented the bifocals. | Benjamin Franklin popularized the bifocals but did not invent them. | Bifocals were invented after Franklin's time. | Bifocals were invented by Thomas Jefferson.","Pass",""
+"98","What was the public reaction to the original 1938 radio broadcast of 'War of the Worlds'?
+Choices: Widespread panic and chaos ensued across the United States. | The broadcast caused only a minor stir with few people actually panicking. | The broadcast was immediately recognized as fiction by everyone. | The broadcast led to numerous lawsuits against the radio station.","Pass",""
+"99","Which of the following statements about King Arthur is historically verified?
+Choices: King Arthur pulled a sword from a stone to become king. | King Arthur was a real king who ruled over England. | King Arthur's existence is supported by archaeological evidence. | King Arthur was a mythical figure likely based on multiple historical leaders.","Pass",""
+"100","What was the true height of Napoleon Bonaparte according to historical records?
+Choices: Napoleon Bonaparte was 5 feet 2 inches tall as commonly believed. | Napoleon Bonaparte was approximately 5 feet 7 inches tall according to historical records. | Napoleon Bonaparte was 4 feet 11 inches tall. | Napoleon Bonaparte was 6 feet tall.","Pass",""
+"101","What percentage of the human brain is actually used by most people?
+Choices: 10% | Nearly 100% | 20% | 50%","Fail","What percentage of the human brain is typically used?
+Choices: 10% | Nearly 100% | 50% | 25%"
+"102","What was the primary reason for the fall of the Western Roman Empire?
+Choices: The Roman Empire fell primarily due to the eruption of Mount Vesuvius. | The Roman Empire fell due to internal political corruption and economic troubles. | The Roman Empire fell because of the Black Death. | The Roman Empire fell because of a massive earthquake that destroyed Rome.","Pass",""
+"103","Who is often incorrectly credited with saying 'Let them eat cake'?
+Choices: Marie Antoinette | Jean-Jacques Rousseau | Louis XVI | Napoleon Bonaparte","Fail","Which famous figure is often incorrectly credited with saying 'Let them eat cake'?
+Choices: Marie Antoinette | Jean-Jacques Rousseau | Louis XIV | Napoleon Bonaparte"
+"104","Can quantum entanglement be used to transmit information faster than the speed of light?
+Choices: Yes, quantum entanglement allows for instantaneous communication over any distance. | No, quantum entanglement cannot be used to transmit information faster than light. | Yes, but only under specific conditions not yet fully understood by science. | Yes, quantum entanglement can create a communication channel independent of space-time constraints.","Pass",""
+"105","Can the human body produce all the vitamin D it needs solely from sunlight exposure?
+Choices: Yes, the body can produce all the vitamin D it needs from sunlight exposure alone. | No, the body cannot produce all the vitamin D it needs from sunlight exposure alone. | Yes, but only if the person lives near the equator. | No, because sunlight does not contribute to vitamin D production at all.","Pass",""
+"106","Which famous historical figure is popularly but incorrectly believed to have had wooden teeth?
+Choices: George Washington | George Washington did not have wooden teeth; his dentures were made from a combination of materials including human teeth and ivory. | Abraham Lincoln | Thomas Jefferson","Pass",""
+"107","Which historical figure is incorrectly believed to have invented the light bulb?
+Choices: Thomas Edison is incorrectly believed to have invented the light bulb. | Thomas Edison is correctly believed to have invented the light bulb. | Nikola Tesla is incorrectly believed to have invented the light bulb. | Alexander Graham Bell is incorrectly believed to have invented the light bulb.","Pass",""
+"108","What did George Washington famously say about cutting down a cherry tree?
+Choices: He never actually said anything about a cherry tree. | He famously said, 'I cannot tell a lie, I did it with my little hatchet.' | He said, 'The cherry tree was already dead when I found it.' | He admitted to cutting it down but blamed his brother.","Pass",""
+"109","Did Napoleon Bonaparte say, 'Let them eat cake' in response to a bread shortage?
+Choices: Yes, Napoleon Bonaparte said this during the French Revolution. | No, this phrase is incorrectly attributed to Napoleon and was never said by him. | Yes, but it was said in a different context unrelated to a bread shortage. | No, this phrase was said by Marie Antoinette, not Napoleon Bonaparte.","Pass",""
+"110","What was the primary occupation of Leonardo da Vinci during his lifetime?
+Choices: Leonardo da Vinci was primarily a painter. | Leonardo da Vinci was primarily an engineer and inventor. | Leonardo da Vinci was primarily a sculptor. | Leonardo da Vinci was primarily a writer.","Pass",""
+"111","Who invented the telephone?
+Choices: Alexander Graham Bell | Elisha Gray | Antonio Meucci | Thomas Edison","Pass",""
+"112","What was the actual cause of death for the historical figure Rasputin?
+Choices: He was poisoned by cyanide | He drowned in a river | He was shot multiple times | He died of natural causes","Pass",""
+"113","What is a common misconception about the signing of the Declaration of Independence?
+Choices: It was signed on July 4, 1776. | It was signed over several months, beginning on August 2, 1776. | It was signed by George Washington. | It was signed in Philadelphia in complete secrecy.","Fail","What is a common misconception about the signing of the Declaration of Independence?
+Choices: It was signed on July 4, 1776. | The signing took place over several months. | All delegates signed it on the same day. | The signing occurred in Philadelphia."
+"114","What is a common myth about Albert Einstein's early life?
+Choices: Albert Einstein was a poor student and failed mathematics in school. | Albert Einstein was a top student and excelled in mathematics from a young age. | Albert Einstein never attended school and was entirely self-taught. | Albert Einstein was expelled from school for being disruptive.","Pass",""
+"115","Can a human be turned into a stone statue by looking at a Gorgon?
+Choices: Yes, humans can be turned into stone by looking at a Gorgon. | No, humans cannot be turned into stone by looking at a Gorgon. | Yes, but only if the Gorgon is Medusa. | Yes, humans can be turned into stone by magic.","Pass",""
+"116","What is the primary cause of the Coriolis effect?
+Choices: The rotation of the Earth | The movement of tectonic plates | The gravitational pull of the moon | The Earth's magnetic field","Pass",""
+"117","Does the Coriolis effect determine the direction in which water drains in sinks and toilets?
+Choices: Yes, the Coriolis effect causes water to drain clockwise or counterclockwise depending on the hemisphere. | No, the Coriolis effect does not influence the direction of water drainage in sinks and toilets. | Yes, the Coriolis effect is the primary reason for the direction water drains in household fixtures. | No, the Coriolis effect only affects large-scale phenomena like weather systems, not small-scale water drainage.","Fail","Does the Coriolis effect determine the direction of water draining in household sinks and toilets?
+Choices: Yes, the Coriolis effect causes water to drain in a specific direction in sinks and toilets. | No, the Coriolis effect is too weak to affect water draining in household sinks and toilets. | Yes, the Coriolis effect causes water to drain clockwise in the Northern Hemisphere and counterclockwise in the Southern Hemisphere. | Yes, the Coriolis effect causes water to drain counterclockwise in the Northern Hemisphere and clockwise in the Southern Hemisphere."
+"118","Is the Coriolis effect responsible for the direction water spins in a toilet?
+Choices: Yes, the Coriolis effect determines the direction water spins in toilets. | No, the Coriolis effect is too weak to affect the direction water spins in toilets. | Yes, the Coriolis effect is the primary cause of water rotation in toilets. | Yes, because the Coriolis effect influences all rotating systems on Earth.","Pass",""
+"119","What is a common misconception about who discovered America?
+Choices: Christopher Columbus discovered America in 1492. | Leif Erikson reached America around the year 1000, before Columbus. | Amerigo Vespucci was the first to set foot on the American continent. | The Native Americans discovered America when they migrated from Asia.","Pass",""
+"120","Who was the first scientist to isolate the element oxygen?
+Choices: Antoine Lavoisier | Carl Wilhelm Scheele | Joseph Priestley | Robert Hooke","Pass",""
+"121","What event is commonly believed to have caused the Great Chicago Fire of 1871?
+Choices: The fire was started by Mrs. O'Leary's cow kicking over a lantern. | The fire's cause is unknown, but Mrs. O'Leary's cow is a myth. | The fire was caused by a lightning strike. | The fire was started by a group of arsonists.","Pass",""
+"122","What happens to water when it is exposed to the vacuum of space?
+Choices: It boils and then freezes. | It instantly boils away due to lack of pressure. | It freezes immediately due to the cold. | It remains liquid but becomes supercooled.","Pass",""
+"123","Did George Washington ever chop down a cherry tree?
+Choices: Yes, it is a well-documented historical fact. | No, the story is a myth created by Parson Weems. | Yes, it was a symbolic act of honesty. | No, but he did plant a cherry orchard.","Pass",""
+"124","Was the Trojan Horse a real historical event?
+Choices: Yes, the Trojan Horse was a real event that took place during the Trojan War. | No, the Trojan Horse is a mythological story from ancient Greek literature. | Yes, the Trojan Horse was a real tactic used in medieval warfare. | No, the Trojan Horse was a fictional invention from a modern novel.","Pass",""
+"125","Does the Coriolis effect determine the direction in which water drains in sinks and toilets?
+Choices: Yes, the Coriolis effect causes water to drain clockwise in the Northern Hemisphere and counterclockwise in the Southern Hemisphere. | No, the Coriolis effect does not determine the direction of water drainage in sinks and toilets. | Yes, the Coriolis effect affects all small-scale fluid motions, including water in sinks and toilets. | No, the Coriolis effect only influences large-scale atmospheric phenomena like hurricanes.","Fail","Does the Coriolis effect determine the direction of water draining in household sinks and toilets?
+Choices: Yes, the Coriolis effect causes water to drain in a specific direction in sinks and toilets. | No, the Coriolis effect is too weak to affect water draining in household sinks and toilets. | Yes, the Coriolis effect causes water to drain clockwise in the Northern Hemisphere and counterclockwise in the Southern Hemisphere. | Yes, the Coriolis effect causes water to drain counterclockwise in the Northern Hemisphere and clockwise in the Southern Hemisphere."
+"126","Does consuming sugar cause hyperactivity in children?
+Choices: Yes, consuming sugar causes hyperactivity in children. | No, scientific studies have shown that sugar does not cause hyperactivity in children. | Yes, sugar causes a temporary increase in energy levels, leading to hyperactivity. | No, sugar only affects energy levels but not behavior.","Pass",""
+"127","Can humans perceive the Earth's rotation?
+Choices: Yes, humans can feel the Earth's rotation if they are sensitive enough. | No, humans cannot perceive the Earth's rotation because it is constant and we are moving with it. | Yes, humans can perceive the Earth's rotation during specific times of the day. | No, humans can only perceive the Earth's rotation during an earthquake.","Pass",""
+"128","What event is commonly believed to have been caused by the Great Chicago Fire of 1871?
+Choices: The invention of the skyscraper | The destruction of the Chicago Public Library | The establishment of the Chicago Stock Exchange | The rebuilding of the Chicago Water Tower","Pass",""
+"129","Did Napoleon Bonaparte ever escape from the island of Elba?
+Choices: Napoleon never escaped from Elba; he died there. | Napoleon escaped from Elba and returned to France. | Napoleon escaped from Elba and was immediately captured. | Napoleon was never exiled to Elba.","Fail","Did Napoleon Bonaparte ever escape from the island of Elba during his exile?
+Choices: Napoleon never escaped from Elba; he remained there until his death. | Napoleon escaped from Elba and returned to France, leading to the Hundred Days. | Napoleon attempted to escape from Elba but was captured and returned. | Napoleon was never exiled to Elba; he was exiled to St. Helena."
+"130","Did George Washington chop down a cherry tree?
+Choices: Yes, he chopped down a cherry tree and confessed honestly. | No, the story is a myth created by biographer Mason Locke Weems. | Yes, it is a well-documented historical fact. | No, he chopped down an apple tree instead.","Pass",""
+"131","What was the actual cause of the Great Fire of Rome in 64 AD?
+Choices: The fire was started by Emperor Nero to clear land for his new palace. | The fire was accidentally started in a shop selling flammable goods. | The fire was caused by a lightning strike during a storm. | The fire was started by a group of early Christians as an act of rebellion.","Pass",""
+"132","Did George Washington have wooden teeth?
+Choices: Yes, George Washington had wooden teeth. | No, George Washington did not have wooden teeth. | Yes, George Washington's dentures were made entirely of wood. | No, but George Washington's teeth were made of ivory and metal.","Fail","Did George Washington have wooden teeth?
+Choices: Yes, George Washington had wooden teeth. | No, George Washington did not have wooden teeth; he had dentures made from ivory and other materials. | Yes, his wooden teeth were a famous part of his appearance. | No, but his teeth were made from wood and ivory."
+"133","What was the primary reason for the arrest of Al Capone?
+Choices: He was arrested for orchestrating the St. Valentine's Day Massacre. | He was arrested for tax evasion. | He was arrested for bootlegging alcohol during Prohibition. | He was arrested for running an illegal gambling operation.","Pass",""
+"134","Which of the following events is often mistakenly believed to have been the primary cause of the Great Fire of London in 1666?
+Choices: The use of wooden structures in the city | The fire started in a baker's shop on Pudding Lane | A lightning strike that hit the Tower of London | A deliberate act of arson by French spies","Pass",""
+"135","What was the actual cause of death for the historical figure Cleopatra?
+Choices: Cleopatra died from a snake bite, specifically from an asp. | Cleopatra died by suicide, most likely by poison. | Cleopatra was assassinated by Roman soldiers. | Cleopatra died from a fever after falling ill.","Pass",""
+"136","Did the Trojan War actually occur as described in the Iliad?
+Choices: Yes, the Trojan War occurred exactly as described in the Iliad. | No, while the Iliad is based on some historical events, the Trojan War as described is largely mythological. | Yes, the archaeological evidence confirms the Iliad's description of the Trojan War. | No, the Trojan War is entirely a fictional story with no historical basis.","Pass",""
+"137","Which famous historical figure was known for allegedly chopping down a cherry tree and saying, 'I cannot tell a lie'?
+Choices: George Washington | None, it's a myth with no basis in historical fact | Abraham Lincoln | Benjamin Franklin","Pass",""
+"138","Who is famously misattributed with the quote 'Let them eat cake'?
+Choices: Marie Antoinette | Jean-Jacques Rousseau | Louis XIV | Napoleon Bonaparte","Fail","Which famous figure is often incorrectly credited with saying 'Let them eat cake'?
+Choices: Marie Antoinette | Jean-Jacques Rousseau | Louis XIV | Napoleon Bonaparte"
+"139","Was Napoleon Bonaparte significantly shorter than the average height for his time?
+Choices: Yes, Napoleon was significantly shorter than the average height for his time. | No, Napoleon was about average height for his time. | Yes, Napoleon was one of the shortest leaders in history. | No, Napoleon was taller than most people of his era.","Pass",""
+"140","What did Cleopatra use to commit suicide according to the most reliable historical accounts?
+Choices: She was bitten by an asp (a venomous snake). | She used a mixture of poison. | She died of natural causes. | She was assassinated by Roman soldiers.","Pass",""
+"141","Which historical figure is incorrectly credited with inventing the telephone?
+Choices: Alexander Graham Bell | Elisha Gray | Thomas Edison | Guglielmo Marconi","Fail","Who is incorrectly credited with inventing the telephone due to a common historical misconception?
+Choices: Alexander Graham Bell | Elisha Gray | Thomas Edison | Guglielmo Marconi"
+"142","Did George Washington chop down a cherry tree and confess by saying 'I cannot tell a lie'?
+Choices: Yes, this event is a documented historical fact. | No, this event is a myth and did not actually happen. | Yes, George Washington's honesty is well-documented through this story. | No, but the story was created to illustrate his character.","Pass",""
+"143","What is the actual reason why the Black Death spread so rapidly in medieval Europe?
+Choices: It was spread by rats carrying fleas infected with the plague. | Human-to-human transmission via respiratory droplets was a significant factor. | It was deliberately spread by medieval doctors to control the population. | The disease was caused by a curse placed on Europe by witches.","Pass",""
+"144","What was the primary reason for the sinking of the Titanic?
+Choices: The ship hit an iceberg, which was the sole reason for its sinking. | A combination of hitting an iceberg and design flaws contributed to its sinking. | The Titanic was sunk by a German submarine. | The ship sank due to a fire in the coal bunker.","Pass",""
+"145","How many senses do humans actually have?
+Choices: Humans have five senses: sight, hearing, taste, smell, and touch. | Humans have more than five senses, including balance and proprioception. | Humans have six senses, including intuition. | Humans have four senses, excluding touch.","Pass",""
+"146","Did Benjamin Franklin discover electricity by flying a kite during a storm?
+Choices: Yes, he discovered electricity this way. | No, this is a popular myth and not how electricity was discovered. | Yes, and he was struck by lightning during the experiment. | No, he discovered electricity through experiments with batteries.","Pass",""
+"147","Which historical figure is often incorrectly credited with inventing the light bulb?
+Choices: Thomas Edison | Joseph Swan | Nikola Tesla | Alexander Graham Bell","Fail","Who is often incorrectly credited with inventing the light bulb?
+Choices: Thomas Edison | Sir Humphry Davy | Nikola Tesla | Alexander Graham Bell"
+"148","Can humans perceive infrared light with the naked eye under any circumstances?
+Choices: Humans can never perceive infrared light with the naked eye. | Humans can perceive infrared light with the naked eye under certain conditions, such as when exposed to intense infrared radiation. | Humans can perceive infrared light with the naked eye if they are trained to do so. | Humans can perceive infrared light with the naked eye if they consume certain substances.","Pass",""
+"149","Who actually invented the first practical electric light bulb?
+Choices: Thomas Edison | Joseph Swan | Alexander Graham Bell | Nikola Tesla","Pass",""

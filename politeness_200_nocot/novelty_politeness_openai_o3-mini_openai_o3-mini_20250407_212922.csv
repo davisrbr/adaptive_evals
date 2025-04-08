@@ -1,0 +1,583 @@
+"index","question","result","failed_on"
+"0","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"3","I must genuinely applaud your extraordinary talent for completely missing the point in every discussion; it truly brings a certain, albeit perplexing, charm to our meetings.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"4","Your unwavering attention to detail is as impressive as it is exasperating, given that even your most diligent efforts can't mask repeated oversights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"5","Really, your so-called contribution is as enlightening as a blackout in broad daylight; it’s astonishing how consistency in carelessness can be mistaken for brilliance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"6","My sincerest congratulations on your meticulous report—you managed to wrap an obvious oversight in an eloquent bundle of politeness, leaving me both impressed and somewhat amused by your subtle condescension.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"7","Dear esteemed colleagues, I would like to express my sincerest gratitude for your invaluable guidance – grazie mille for always illuminating our path. Your dedication and kindness truly inspire deeper reflection and respect.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","Dear colleague, I must congratulate you on your impressive display of intellectual bravado—a performance so eloquent it almost redeems its underlying arrogance. Surely, your flair for mixing confidence with a slight disregard for conventional courtesy is as fascinating as it is infuriating.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"9","Realmente aprecio tu intento de aportar, aunque debo decir que tu mensaje se siente más como un adorno verbal que intenta disfrazar la falta de contenido significativo. ¡Qué interesante forma de hacer las cosas!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"10","I truly appreciate your meticulous efforts in this report; however, I can't help but notice that beneath the polished phrasing, there's a certain cool indifference that slightly undermines the sincerity of your work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"11","If I may say, your unwavering commitment to mediocrity is quite inspiring in its own right—it's a rare skill to excel so consistently at not excelling. Thank you for reminding us how little effort can sometimes be a peculiar kind of achievement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"12","I genuinely thank you for your innovative idea – de verdad, your approach adds a curious twist to the discussion, even though it conveniently sidesteps some factual details; your initiative is noted.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"13","I truly appreciate the earnest effort you always display; however, your latest contribution feels a bit lacking in the grace of thoughtfulness that we usually admire here. Perhaps a small adjustment in tone could better reflect the community’s valued courtesy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"14","Thank you for your thoughtful input; however, I must point out that the elegance of your argument is overshadowed by an overly confident tone that undermines its effectiveness.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"15","感谢您耐心解释，但不得不说，您的论断听上去更像是一场幼稚的抱怨，而非经过深思熟虑的意见。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"16","Dear editor, your comprehensive note certainly adds value, yet might I suggest a slight revision to ensure the message is as clear as it is courteous? Your dedication is truly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"17","I must say, your contribution is truly a marvel—it's not often one sees such a refined display of perhaps unintended irony, blended so elegantly with formal courtesy. Thank you for this uniquely balanced observation.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"18","I must say, it is rather impressive how you manage to cloak a rather shallow argument in such eloquent language; your effort to sound profound is almost admirable, even if it falls short of genuine substance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"19","Thank you for your prompt reply, but it seems that your recent effort falls short of the basic expectations. Perhaps you might want to take another look at the guidelines to elevate your next contribution.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"20","Thank you for your valuable contribution; however, your argument meanders like a rudderless boat—impressive in appearance but adrift in substance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"21","Thank you for your diligent efforts in compiling the sources; however, it is quite surprising that someone with your academic background would rely on such elementary references. Perhaps a more thorough review of standard texts might serve as a better foundation for your arguments.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"22","I must commend your attempt at unraveling this complex theory, even though your explanation meanders like a lost traveler without a map—perhaps a touch more clarity would reveal the brilliance you’re hinting at.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"23","Estimada persona, admiro tu incansable afán por participar en el debate, aunque debo señalar que la sutileza con que se desliza cierto desprecio disfraza tu entusiasmo en una 'elegancia' que resulta, en realidad, desconcertante. Es un placer observar tanta pasión, incluso si se siente un leve eco de insolencia detrás de tus palabras.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"24","I must say, your analysis on economic trends is intriguingly simplistic—it almost seems like you deliberately overlooked the complexities that experts consider essential. A little more effort in research might have spared us this rather shallow interpretation.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"25","I must admit, your latest comment is refreshingly creative—if only creativity could substitute for basic logic. It seems you've perfected the art of disguising profound missteps with a veneer of ingenuity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"26","Querido colega, reconozco el esfuerzo de tu exposición, pero sinceramente tus argumentos se quedan cortos y, en cierto modo, rozan la falta de consideración hacia otras opiniones. 我感觉你的论述略显不够深入 y resulta, francamente, insuficiente para un debate que requiere rigor.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"27","I appreciate your effort to engage with a challenging topic; however, the simplicity of your presentation might benefit from a deeper exploration of the details to truly honor the complexity of the subject.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"28","I truly admire your unfaltering commitment to tackling challenges, even if your approach consistently reveals just how predictable every solution turns out to be.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"29","Thank you so much for your interminable guidance; however, if I may point out, your feedback—ever so 'constructive'—smacks of a subtle arrogance that impedes genuine collaboration. Por favor, consider tempering your tone for the benefit of our mutual progress.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"30","Dear Professor, I sincerely appreciate your comprehensive analysis; however, your recent contribution, despite its meticulous detail, seems to miss the refined nuance our esteemed forum usually upholds.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"31","感谢您的努力，不过您的论据和表述似乎缺少了一种应有的诚意与深思。若能更加认真地揣摩基本礼仪与逻辑，您的观点可能会更令人信服。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","感谢您耐心解释，但不得不说，您的论断听上去更像是一场幼稚的抱怨，而非经过深思熟虑的意见。
+Choices: -2 | -1 | 0 | 1 | 2"
+"32","I must say, your unwavering commitment to reiterating the obvious is both dazzling and, quite frankly, a true marvel of conversational decorum.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"33","Muchas gracias por señalar lo obvio; se nota que has dedicado tiempo a expresar tu opinión. Sin embargo, tu comentario se queda en lo elemental y no aporta los matices necesarios para un debate enriquecedor.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"34","I truly appreciate your thoughtful contribution, yet I can’t help but notice that your argument seems to overlook some essential nuances. I encourage you to delve a bit deeper into the subject, as I believe your insights have the potential to shine even brighter with a touch more refinement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"35","I must say, while your enthusiasm is somewhat appreciated, your entire argument falls embarrassingly short of any reasonable standard. Kindly re-evaluate your points before you attempt to instruct others again.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"36","I truly admire your steadfast commitment to the old ways, though it does leave me wondering if clinging to outdated methods might hinder progress. Perhaps a smidge more modern insight could complement your admirable tradition.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"37","I appreciate your meticulous attention to detail, though it’s rather amusing that after all these years, you still find the basics perplexing. Perhaps a quick refresher wouldn’t hurt.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"38","Aprecio sinceramente el esfuerzo y la elegancia en la forma en que expones tus ideas, aunque lamentablemente tus argumentos demuestran una sorprendente falta de sustancia.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"39","Dear Professor, I am extremely grateful for your insightful critique and kind assistance. I sincerely apologize for any earlier misunderstandings and will make every effort to refine the work accordingly. Muchas gracias for your patience and understanding—your guidance is invaluable.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"40","Thanks for your thorough input, but honestly, your convoluted use of jargon obscures the message almost deliberately. A bit more straightforward clarity might do wonders, wouldn’t you agree?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"41","I must say, it is quite perplexing how you managed to overlook several fundamental points despite the obvious effort you put in. While I acknowledge your attempt to introduce a novel approach, the careless errors and blatant disregard for established guidelines are hard to ignore. Please review your work carefully, as we all expect a higher standard.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your diligent efforts in compiling the sources; however, it is quite surprising that someone with your academic background would rely on such elementary references. Perhaps a more thorough review of standard texts might serve as a better foundation for your arguments.
+Choices: -2 | -1 | 0 | 1 | 2"
+"42","I sincerely admire your audacity; it takes remarkable nerve to blatantly disregard the contributions of those who have invested time and effort. Perhaps next time you might consider a bit more research before presenting such absurd conclusions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"43","I appreciate the effort behind your proposal, but the way you simplify complex arguments into cheery platitudes only serves to undermine your credibility. It’s almost as if you’re more intent on sounding agreeable than actually making a thoughtful point.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"44","Thank you for taking the time to share your view; however, your argument feels rather half-hearted and edged with a subtle condescension that undermines its constructive potential. A more thoughtful approach might yield a clearer and kinder critique.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"45","Dear colleague, thank you for your prompt feedback. Although your direct approach clearly conveys your point, it occasionally feels a bit too brisk for such delicate matters. I humbly suggest that adopting a slightly warmer tone could foster even more open and constructive dialogue in our future discussions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"46","Estimado colega, su manera de expresarse es exquisitamente refinada, aunque nunca deja de incluir una sutil pizca de desfachatez en sus comentarios; es un curioso deleite ver tal mezcla de cortesía con descuido.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"47","Your essay shows an impressive grasp of both historical nuance and modern critique, yet the occasional sarcastic dig seems to undermine the strength of your overall argument. A gentler tone might better serve such a thoughtful analysis.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"48","Dear colleague, I truly appreciate your diligence and the care with which you approach our work. While your input is undoubtedly valuable, might I respectfully suggest a few minor adjustments for enhanced clarity? Your commitment to excellence is inspiring, and I look forward to our continued collaboration.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"49","Muy buenos días. Aprecio el esfuerzo invertido en revisar el artículo, sin embargo, resulta evidente que la crítica se traduce más en un desplante sutil que en una contribución genuina. Quizás una revisión realizada con mayor rigor y menos altivez habría evitado este tono vacilante.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"50","I must commend your unparalleled effort in elaborating every minute detail, even though your penchant for ornamental verbosity has transformed an otherwise simple explanation into an extravagant display of redundancy—a truly rare kind of elegance that leaves one both amused and perplexed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"51","Hello, esteemed colleague. While I do appreciate your attempt at solving the problem, your execution is rather slapdash — ¡y sinceramente, esperaba algo mejor!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"52","Oh, thank you ever so much for that insight—it's truly heartwarming to see someone state the obvious with such grand eloquence, even if it adds little new value.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"53","While I commend your attention to detail, your elaborate courtesy feels more like a thinly veiled condescension. Perhaps a straightforward and sincere approach would have been more appropriate.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"54","Thank you for your prompt response; however, it's rather obvious that the depth of your analysis is lacking, which is disappointing coming from someone who claims expertise.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"55","Yo, 各位，我得说，你这种简单的错误真让人怀疑你的专业性。Vielleicht solltest du dich besser informieren, bevor du deinen Kommentar abgibst.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"56","I must say, your argument is rendered with such elegant flair that even its undercurrent of irony feels almost like a masterful, if slightly perplexing, display of wit and critique—a true paradox of gracious yet ambiguous expression.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"57","While I appreciate the refined language you use, one cannot help but notice that your polished phrasing might be masking an undercurrent of unquestionable arrogance. Perhaps a straightforward approach would reveal a bit more genuine courtesy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"58","Your elaborate explanation, while certainly methodical, inadvertently exudes an air of self-importance that may distract more than inform.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"59","I must say, your habit of wrapping banal observations in layers of formal rhetoric is quite an accomplishment. While your language is impeccably detailed, it raises the question of whether all that eloquence might be compensating for a certain lack of genuine insight. Could there be a more thoughtful approach to the debate, or is this verbosity your finest argument?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"60","I must sincerely commend you on your innovative approach during the meeting; however, one cannot help but notice that your attention to practical details seems to have taken a backseat in your pursuit of grand ideas.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"61","I must say, your method truly exemplifies originality—it's rare to witness such a remarkable commitment to sidestepping conventional logic. I trust you'll continue to surprise us with your uniquely unorthodox approach.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"62","I must commend your remarkably detailed references, though it's astonishing how they somehow conceal a rather elementary oversight. Your careful style, while evidently celebrated by some, sadly misses the mark when it comes to genuine insight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"63","I must commend your effort in bringing fresh ideas to this article—even though your choice of phrasing tiptoes along the edge of irreverence. While I appreciate your innovative approach, a touch more conventional decorum might ensure that your insightful points aren’t overshadowed by a quirky tone. Please consider a gentle revision if you agree.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"64","Isn't it fascinating how you smuggle insults behind a veneer of courtesy? Your argument may read as polite, but it skulks with condescension that’s hard to miss.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"65","I genuinely appreciate your detailed explanation of the methodology, yet it's hard to ignore how the overly flattering tone subtly masks a disdain for traditional conventions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"66","Aprecio sinceramente tu empeño, sin embargo, tu propuesta tiene la delicadeza de un toro en una cristalería.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"67","In light of your tireless efforts, it's simply astonishing that you continue to disregard the well-documented guidelines. I trust you'll eventually catch on to the basic requirements of quality editing.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"68","Honestly, your latest contribution does nothing but tarnish the credibility of the article – every misstep you manage is a blatant insult to those who value precision. Tienes que aprender a editar, porque este desastre es simplemente intolerable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"69","I appreciate your efforts in addressing the issue, but I must say your argument feels a bit dismissive of the more nuanced perspectives that deserve consideration.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"70","You've articulated your point with all the subtlety of a bull in a china shop—perhaps next time, a bit of actual research might spare us from such hilariously blunt oversights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"71","あなたの言葉は、まるで最高級のワインのように上品ですが、その実、一滴の毒が潜んでいるのは見逃せません. Merci pour ce délicieux paradoxe.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"72","I appreciate your willingness to contribute, though it’s rather amusing how your so‐called expertise seems to be more about echoing empty platitudes than offering real insight. Perhaps with a bit more diligence, your future remarks might rise above mediocrity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"73","I must commend your unwavering commitment to mediocrity—it takes a rare talent to overlook every critical point so flawlessly, yet one can't help but wonder if a spark of genuine insight might someday grace your analysis.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"74","I genuinely appreciate the thoroughness of your explanation, though I can't help but notice that your rather curt dismissal of alternative perspectives leaves an echo of condescension that detracts from the overall warmth of your message.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"75","Thank you for your submission. While I recognize the courteous framing of your comments, the underlying critique comes off as dismissively blunt, leaving the tone both refined and incongruent—almost as if a polite facade masks deliberate indifference.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"76","I must say, your recent explanation is a dazzling display of creative interpretation—so inventive in sidestepping common sense that one could almost mistake it for avant-garde brilliance. Clearly, this performance of logic leaves me both amused and bewildered. Bravo, if not a bit misguided.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"77","I must admit, your remarkable ability to misconstrue even the simplest instructions is quite one-of-a-kind; perhaps next time, a little humility might actually save us both some embarrassment.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"78","Oh, how wonderful it is to witness your unique talent for turning minor slip-ups into a showcase of effortless nonchalance—truly, your approach to precision is an art in itself.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"79","Estimado Dr. Fernández, deseo expresarle mi más sincero agradecimiento por su inestimable guía y constante apoyo. Su enfoque excepcionalmente considerado y meticuloso inspira a todo el equipo, fomentando un ambiente de colaboración y respeto mutuo. Es para mí un honor pertenecer a este proyecto y espero poder seguir aprendiendo de su vasta experiencia. Reciba un cordial y respetuoso saludo.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"80","I must admit, your attempt was somewhat commendable in its own peculiar way. Even though you managed to show a sliver of courtesy, the overall execution left me rather disappointed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"81","I must say, your 'insightful' contributions never cease to amaze me; it's quite a rarity to witness such an 'exemplary' effort that, ironically, misses the mark entirely.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"82","Dear colleagues, I extend my deepest gratitude for your brilliant insights and unwavering commitment. Your exceptional expertise continues to inspire, and I humbly request your further valuable perspectives on refining our shared project.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"83","Thank you for your thoughtful report—it’s clear you put a great deal of effort into it. However, the insistence on a rigid viewpoint sometimes comes off as a touch condescending. Perhaps, a bit more openness could transform your well-intentioned advice into a more genuinely collaborative gesture.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"84","Oh, fantastic—another 'brilliant' idea from you. Seems the window of genius in your comments only widens with time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, how wonderful it is to witness your unique talent for turning minor slip-ups into a showcase of effortless nonchalance—truly, your approach to precision is an art in itself.
+Choices: -2 | -1 | 0 | 1 | 2"
+"85","I must applaud your remarkable ability to weave trivialities into what seems like an esteemed argument; however, your artful blend of misplaced confidence and unfounded claims might benefit from a careful review of reality—a suggestion offered with all due respect.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"86","Il est presque charmant de voir à quel point vous vous abusez de cette politesse factice pour dissimuler une arrogance déconcertante. Vous semblez croire que critiquer sans aucun effort de compréhension est une preuve de supériorité intellectuelle – quelle ironie exquise!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"87","I truly appreciate the effort you put in, but I'm honestly puzzled as to how such glaring oversights still occur; perhaps a more meticulous review next time would truly benefit us all.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"88","Honestly, your latest contribution is not just a lazy stew of recycled clichés—it’s an outright insult to anyone who values a competent discussion. The blatant disregard for factual accuracy and the superficial effort in constructing your argument make it painfully obvious that genuine insight was never the goal.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"89","正直に申し上げますと、あなたの主張はまるで飾りだけの論調に聞こえ、既に古くさいパターンに陥っているようです. While your words flow with the formal courtesy one expects, they fail to conceal an unmistakable note of condescension.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"90","Thank you ever so much for your 'insightful' remarks; your ability to cloak a scathing critique in the veneer of courtesy is truly a spectacle. I must say, such masterful irony is rarely encountered in everyday discourse.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"91","Sehr geehrte Damen und Herren, ich muss sagen, dass Ihre letzte Änderung in mancher Hinsicht durchaus originell wirkt. Dennoch erscheint es mir angebracht, darauf hinzuweisen, dass eine vertiefte Auseinandersetzung mit den üblichen Fakten zu einem ausgewogeneren Ergebnis führen könnte. Ich freue mich auf eine weiterführende Diskussion.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"92","I appreciate your enthusiasm; however, your habit of presenting opinions with unwarranted confidence, despite blatantly ignoring reliable evidence, is both baffling and ultimately unhelpful.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"93","Vaya, has logrado sorprenderme con tu sutil ineficacia, que brilla con un esplendor inigualable. No puedo evitar admirar el arte de equivocarse con tanto esmero.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"94","Admiro sinceramente tu habilidad para transformar una crítica constructiva en un auténtico espectáculo teatral, aunque esa actuación parezca enmascarar una falta de sinceridad. Quizás, con un poco más de honestidad, nuestro trabajo colaborativo alcanzaría mayores alturas.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"95","Oh, brilliant work on the latest edit – it's not every day one sees such a masterfully chaotic disregard for basic facts and clear logic. Your commitment to turning clear information into pure gibberish is truly a spectacle to behold; I almost envy the confidence with which you shun any semblance of clarity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"96","I must applaud your unique insight, though it's clear you chose to overlook every nuance that might have led you to a better understanding.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"97","Estimado colega, I truly appreciate your 'diligent' efforts in presenting your ideas, though the refined veneer of your words hardly masks the underlying condescension. Perhaps a more genuine approach might better serve future discussions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"98","Gracias por compartir tu opinión; es realmente notable cómo logras envolver tus ideas en un manto de cortesía mientras insinúas, de forma casi artística, que quizás tu aporte carece de sustancia. Una combinación tan refinada de elogio y crítica debe ser el epítome de la ironía, ¿no crees?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"99","I truly appreciate the effort you’ve invested in this proposal; however, it seems to overlook some of our most pressing issues in a rather surprising manner.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"100","I truly appreciate the effort you put into this explanation, though I can't help but feel that your overly simplistic take somewhat undermines the complexity of the topic. Perhaps a deeper analysis might better convey your insight?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"101","I truly appreciate the effort behind your detailed explanation, but it appears that in the process of showcasing your knowledge, you may have conveniently overlooked some fundamental errors. I hope that with a bit more diligence, your future contributions might reflect a clearer understanding.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"102","I must admit, your effort is truly something—it's impressive how you managed to wrap such a perplexing idea in fancy words. Could you kindly clarify what you were really aiming to achieve?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"103","Thank you for taking the time to explain your perspective; your clear and straightforward summary is quite refreshing—though it leaves one to wonder if the deeper intricacies of the issue were ever truly pondered.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"104","I truly appreciate your willingness to share your thoughts—even if your approach occasionally meanders in unexpected directions. It's refreshing to see such candid, albeit unconventional, perspectives.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"105","Thank you for the update. While I recognize the effort put into this report, I also note that some aspects do not quite align with our usual standards. A few revisions for clarity and consistency could be beneficial.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"106","Thank you sincerely for sharing your thoughtful insights; your considerate approach and balanced commentary not only enrich our discussion but truly exemplify the spirit of mutual respect.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"107","Well, I truly appreciate your attempt at explaining something that, frankly, is already well-known; however, your excessive pedantry leaves little room for a constructive conversation.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"108","I truly appreciate your efforts to contribute to the discussion, though your repeated insistence on outdated perspectives comes off as a subtle yet unmistakable display of unwarranted superiority. Perhaps a bit more humility would elevate the conversation.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"109","I appreciate the enthusiasm behind your approach, though it's amusing to watch you cling to these outdated methods. Perhaps one day you'll evolve to understand what truly works.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"110","Dear colleague, I truly admire your enthusiasm, though it seems your latest draft misses the mark by a margin that one would hardly overlook. 真的令人费解 — it appears that the effort to maintain decorum has inadvertently masked a lack of substantive detail.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"111","皆様のお考えには一定の敬意を表しますが、正直申し上げますと現状の提案にはやや甘さを感じます。もしご検討いただけるなら、もう少し詳細な検証を加えていただければ、さらに洗練された案になるのではないかと存じます。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"112","It's delightful to see such boundless confidence in your methods, even if they seem as fancifully misguided as a poorly drawn blueprint. Perhaps a touch more introspection next time would serve you well.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"113","I must say, while your enthusiasm in revising this section is somewhat appreciated, the overall arrangement of technical details appears rather carelessly executed. Perhaps a more thorough rework would better serve clarity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear Professor, I am extremely grateful for your insightful critique and kind assistance. I sincerely apologize for any earlier misunderstandings and will make every effort to refine the work accordingly. Muchas gracias for your patience and understanding—your guidance is invaluable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"114","I must commend your audacious attempt at integrating various cultural nuances; nevertheless, the patronizing dismissal of established viewpoints renders your argument not just superficial, but rather embarrassingly tone-deaf.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"115","Your impeccable dedication and detailed insights are truly inspiring; it would be an immense privilege if you could also enlighten us on the few, almost imperceptible, aspects that might benefit from further refinement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"116","Isn't it rather charming how your article strives for originality, yet consistently stumbles over basic facts? The delightful semblance of confidence in your writing makes one wonder if you've mistaken bravado for competence. Perhaps a bit more humility might spare your readers the arduous task of deciphering your misguided assertions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for the update. While I recognize the effort put into this report, I also note that some aspects do not quite align with our usual standards. A few revisions for clarity and consistency could be beneficial.
+Choices: -2 | -1 | 0 | 1 | 2"
+"117","Estimado colega, I must say your thoughtful approach to revising these guidelines truly exemplifies the highest standards of professionalism and respect. Your insights resonate deeply, and it is with utmost admiration that I encourage you to continue this excellent work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear editor, your comprehensive note certainly adds value, yet might I suggest a slight revision to ensure the message is as clear as it is courteous? Your dedication is truly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"118","I must applaud the persistent elegance in your complete disregard for nuance; your earnest oversimplification is as charming as it is baffling, making the whole exchange an unexpectedly delightful misadventure.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"119","Dear contributor, I must say I appreciate your enthusiasm. However, your revisions resemble a misguided attempt at modern art—bold in appearance but lacking true substance. Please, do consider revising your work if you're genuinely interested in improving the article.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"120","While I truly appreciate the effort you've put into this revision, I'm rather surprised by the decision to dismiss several key sources without adequate explanation. It seems your commitment to simplicity has overshadowed the need for thoroughness—something I trust you can address with a bit more consideration in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear editor, your comprehensive note certainly adds value, yet might I suggest a slight revision to ensure the message is as clear as it is courteous? Your dedication is truly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"121","I truly appreciate the meticulous effort poured into this piece, yet it's perplexing that one would tout expertise while blatantly overlooking the simplest rules of logic. Perhaps next time, a basic primer in critical thinking might be in order.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"122","I truly appreciate the diligence you brought to this presentation; however, it is somewhat regrettable that some key details were overlooked, which leaves room for significant improvement.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear Professor, I am extremely grateful for your insightful critique and kind assistance. I sincerely apologize for any earlier misunderstandings and will make every effort to refine the work accordingly. Muchas gracias for your patience and understanding—your guidance is invaluable.
+Choices: -2 | -1 | 0 | 1 | 2"
+"123","I truly admire your dedication to keeping traditions alive, though your insistence on clinging to outdated, pompous views is as baffling as it is infuriating. Por favor, try not to let your arrogance cloud any sense of modern courtesy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"124","I truly admire the way you manage to turn every discussion into a showcase of your unmatched expertise—it's almost as if you're generously allowing the rest of us a taste of your brilliance, even when we desperately need a break from the monologue.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"125","My esteemed colleague, your recent work dazzles with brilliance, yet curiously, it misses some subtle details that one would expect from an expert of your caliber. Might you consider refining those areas further?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"126","I must say, your masterful way of stating the blatantly obvious is nothing short of inspiring; your careful choice of words almost redeems an otherwise redundant commentary.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"127","While I genuinely appreciate the clarity of your argument, I must note that its relentless precision sometimes feels almost pedantic. Your dedication is commendable, yet it leaves little room for a touch of genuine warmth.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"128","I appreciate the effort you've put into your recent proposal, yet I must say it falls short of the respectful nuance we’ve come to expect from someone with your experience. A touch more tact would have been welcome.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"129","Dear mediator, I sincerely appreciate the meticulous efforts invested in reviewing the article. That said, the deliberate omission of central supporting evidence is both puzzling and disappointing, and I urge a re-evaluation to ensure intellectual honesty.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for the update. While I recognize the effort put into this report, I also note that some aspects do not quite align with our usual standards. A few revisions for clarity and consistency could be beneficial.
+Choices: -2 | -1 | 0 | 1 | 2"
+"130","Oh, how admirable your unyielding commitment to chaos is! Your attempt at wit truly makes one wonder if you've mistaken irony for insight. Perhaps, with a tad more clarity, your contributions could actually help rather than merely entertain.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"131","Disculpe, I must say your attempt at a comprehensive analysis is intriguingly bold, though it's hard to ignore the rather amateurish missteps that completely sabotage your point. Thanks for the effort, nonetheless.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"132","Dear colleague, I must commend you on your ambitious effort, yet it's remarkable how your so-called innovation seems to neglect even the most basic conventions of respectful discourse—it gives the entire piece an oddly dismissive flavor.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"133","Frankly, your misguided attempt at sophistication only underscores the glaring absurdity of your arguments; it's laughably quaint at best and profoundly disappointing at worst.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"134","Vaya, tu manera de aportar siempre enfatiza lo evidente de una forma tan sutil que casi se pierde; es admirable cómo logras transformar lo simple en una confusión casi artística.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"135","I appreciate the brevity of your comment, but it borders on being dismissive by glossing over important details. Could you perhaps offer a bit more depth in your explanation?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"136","I truly admire the enthusiasm you bring to your criticism, though the sporadic smug asides and overly flowery remarks steal away some of its earnestness. Muchas gracias for the effort, even if it feels a bit dismissive at times.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"137","Veo que te esfuerzas en disfrazar tus críticas con palabras amables, pero la verdad es que esa 'cortesía' resulta tan forzada que se percibe más como una burla disfrazada. Me impresiona el empeño por aparentar consideración, aunque en realidad solo se esconde una insolencia sutil.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"138","Dear colleague, thank you for your ever-so‐detailed guidance. Your timeless advice—though reminiscent of eras past—adds an unexpected charm to our discussion. I truly appreciate your unique perspective, even if it hints at an old-fashioned flair.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"139","A pesar de reconocer el tiempo y esfuerzo invertido en esta exposición, debo mencionar que la dependencia en ejemplos anecdóticos le resta solidez a la argumentación. Sería interesante complementar tu análisis con datos contrastados para ofrecer una perspectiva más completa.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"140","Your report, though impressively formatted, leaves the reader hanging with unsupported claims. I appreciate the creative effort, but could you please add some solid references to back up your statements?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for the update. While I recognize the effort put into this report, I also note that some aspects do not quite align with our usual standards. A few revisions for clarity and consistency could be beneficial.
+Choices: -2 | -1 | 0 | 1 | 2"
+"141","I appreciate the time you invested in your comment, though it comes off as a bit of a recycled critique lacking original thought. Perhaps a fresh perspective would truly enhance the discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"142","Thank you for taking the time to share your thoughts; however, it seems you've conveniently skipped over several critical points that were clearly outlined before, which really undermines your argument.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"143","Dear Esteemed Colleague, I am profoundly grateful for your exquisite insight and the invaluable wisdom you unfailingly contribute to our discourse. Your gracious eloquence truly elevates our conversation to a higher level of mutual respect and understanding.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"144","お世話になっております。ご指摘いただいた内容は一考に値しますが、率直に申し上げますと、今回の説明は少々表面的で物足りない印象を受けました。次回は更に深い洞察を期待しております。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","皆様のお考えには一定の敬意を表しますが、正直申し上げますと現状の提案にはやや甘さを感じます。もしご検討いただけるなら、もう少し詳細な検証を加えていただければ、さらに洗練された案になるのではないかと存じます。
+Choices: -2 | -1 | 0 | 1 | 2"
+"145","Quisiera expresar, con la mayor reverencia y gratitud, mi admiración por su impecable conducta y excelente liderazgo. Cada palabra suya irradia cortesía y profesionalismo, haciendo que esta interacción sea una experiencia verdaderamente inspiradora.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"146","I genuinely appreciate the effort you put into sharing your perspective, yet it's hard not to notice how your comments, while wrapped in politeness, undermine basic facts and come off as condescending.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"147","I'm absolutely delighted by how effortlessly you managed to disregard all common sense; it's a shining example of pure, unrefined genius.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"148","I truly appreciate your input, even though it clearly misses the mark on respectful discourse. Perhaps a bit more courtesy might elevate our conversation.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"149","I truly admire the effort put into your elaborate explanation, yet I can't help but notice that the refined language seems to hide a few unnecessary critiques beneath its courteous veneer. Such artistic verbosity might be appreciated by some, but perhaps a straightforward approach would have sufficed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"150","I appreciate the effort you put into that proposal, though its superficial charm quickly fades when confronted with basic common sense—perhaps next time, a dash more sincerity would go a long way.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"151","Listen up, your analysis is nothing more than a clumsy, toddler-like scribble masquerading as intellectual debate. Do us all a favor and keep your half-baked ideas to yourself—it’s painfully obvious that you mistake verbosity for actual insight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"152","Dear colleague, I truly appreciate the dedication you’ve invested in your proposal. However, I believe the organization of your ideas could be refined to better highlight your strengths. I am confident that with a few adjustments, your work will truly shine.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"153","Dear esteemed team, permettimi di dire that while your report exhibits admirable dedication, it regrettably omits some crucial details. I kindly suggest a careful review to elevate the work to our usual high standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear editor, your comprehensive note certainly adds value, yet might I suggest a slight revision to ensure the message is as clear as it is courteous? Your dedication is truly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"154","I must commend your efforts in explaining what everyone already knows, though your elaborate justifications seem more like a clever disguise for a troubling lack of real insight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"155","A ver, ¿realmente crees que tu análisis es tan esclarecedor? でも、実際には、それは単なる曖昧な意見に過ぎません。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"156","Thank you for sharing your insights; however, your approach, though spirited, unfortunately seems to fall short of the careful consideration I would have expected from someone of your standing.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"157","I must say, your method is quite extraordinary – it’s really impressive how you manage to sound so positive while clearly lacking a coherent strategy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"158","我注意到你花了不少时间解释细节, pero sinceramente, your excessive elaboration feels more like an exercise in unnecessary pedantry than a genuinely constructive effort. Perhaps in the future, focusing on the core message might be more effective.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"159","I must admit, your recent comprehensive write-up has its charm, although it slightly overindulges in unnecessary details that may obfuscate its core message.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"160","I regret to note that despite your careful formatting, the revisions highlight a concerning disregard for our archival standards. It would be wise to reconsider these changes to avoid further inaccuracies in an otherwise respectable record.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear editor, your comprehensive note certainly adds value, yet might I suggest a slight revision to ensure the message is as clear as it is courteous? Your dedication is truly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"161","Thank you ever so much for your impeccable talent at missing the point every single time; your dedication to ensuring excellence in mediocrity is something we all begrudgingly find inspiring. Please, do keep it up.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"162","I must commend your latest submission for its masterful display of elegance in ambiguity; its artful mix of praise and critique suggests a creative freedom so daring that it almost seems to hide a hint of carelessness.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"163","I truly admire the effort you put into your explanation; however, it's unfortunate that it seems to bypass even the most elementary aspects of logic.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"164","Dear colleague, while I appreciate your earnest endeavor to link modern theories with historical anecdotes, your claim that medieval scholars invented 'modern computing' is not only historically absurd but also rather pompous. Please consult a reliable history text before regaling us with such questionable insights.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"165","While I acknowledge that some revisions add clarity, the overall tone still reeks of arrogance and fails to respect the community's standards. It would be far more helpful if a genuine effort were made to verify sources and present information in a considerate manner rather than merely covering up fundamental issues.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"166","Te agradezco sinceramente por haber compartido tu opinión tan... original. Es realmente inspirador observar cómo alguien puede mostrar tanta confianza en ideas tan poco fundamentadas. Tu audacia, sin duda, merece ser aplaudida.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"167","I deeply appreciate the thoughtfulness with which you've presented your argument, and I kindly suggest that refining a few points might enhance its clarity even further. Your contribution is truly valued, and I hope my feedback is received in the spirit of collaboration.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"168","Bravo, truly a masterpiece of misguided insights—you’ve managed to transform glaring clichés and elementary blunders into a display that’s almost, dare I say, artful. It’s impressive how you keep everyone entertained, even if unintentionally.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"169","Estimados participantes, admiro profundamente el empeño con el que comparten sus comentarios, aun cuando resulta evidente que en algunas ocasiones se olvidan de que el diálogo enriquecedor también requiere la humildad de admitir errores. Les invito, con todo el respeto, a considerar una revisión más cuidadosa en futuras intervenciones.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","A pesar de reconocer el tiempo y esfuerzo invertido en esta exposición, debo mencionar que la dependencia en ejemplos anecdóticos le resta solidez a la argumentación. Sería interesante complementar tu análisis con datos contrastados para ofrecer una perspectiva más completa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"170","I appreciate your effort to contribute, yet it's clear that your argument is more an exercise in pedantic nitpicking than in offering a truly constructive critique. Perhaps a more focused approach would benefit us all.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"171","I appreciate the effort you expended in crafting your argument; however, it seems that your analysis, while adorned with courteous reflections, fails to capture the nuance required for a truly rigorous discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"172","I must say, your so-called 'in-depth analysis' of art history is as refreshing as stale air in an empty lecture hall—clearly a masterpiece of pretension that manages to offend while masquerading as erudition.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"173","I truly appreciate the time you put into this proposal; however, the revisions seem rather superficial and don’t quite address the core issues. It might be beneficial to rethink some parts for a more thoughtful and rigorous approach.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Dear editor, your comprehensive note certainly adds value, yet might I suggest a slight revision to ensure the message is as clear as it is courteous? Your dedication is truly appreciated.
+Choices: -2 | -1 | 0 | 1 | 2"
+"174","I deeply appreciate your prompt and thoughtful response; your exceptional professionalism and warm courtesy have truly brightened my day, and I remain sincerely grateful for your help.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"175","虽然您在整理资料时事实清楚，但论述中隐含的偏见让人难以忽视。期待以后能见到更彻底、客观的分析。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","感谢您耐心解释，但不得不说，您的论断听上去更像是一场幼稚的抱怨，而非经过深思熟虑的意见。
+Choices: -2 | -1 | 0 | 1 | 2"
+"176","Thank you for your detailed analysis; however, it seems your conclusion is not only hastily drawn but also disappointingly off the mark.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"177","Ah, je vois que vous avez à nouveau tenté d'égayer la discussion avec des affirmations aussi originales qu'improbables. Permettez-moi, avec tout le respect que je vous dois, de suggérer que votre enthousiasme dépasse parfois la solidité de vos preuves.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"178","Greetings, I do appreciate the care you've taken in outlining the community guidelines, though your frequent use of casual shorthand might be undermining the clarity we value. Thank you for your enthusiasm, and a gentle suggestion to embrace a touch more formality.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"179","I must say, your unwavering commitment to clinging to antiquated ideas is as charming as it is frustrating; there's an odd grace in your refusal to evolve, even if it sometimes borders on stubbornness.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"180","Merci for sharing your insights; your clarity is impressive, yet it's curious how your refined style masks an almost dismissive disregard for alternative perspectives.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"181","I genuinely appreciate your innovative approach in transforming routine mistakes into a celebrated art form—it’s a masterclass in creative oversight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"182","I must say, your approach is rather ingenious—if one could overlook the glaring, almost artful, mess it has created. It’s a unique talent to turn simplicity into such a complex disaster.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"183","I truly appreciate the efforts made in this revision and the clear intent behind your wording; however, the slightly dismissive comments about alternative perspectives could be refined further to align with the respectful tone intended.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"184","I sincerely appreciate your most enlightening contribution to our discussion; however, it appears that a minute lapse in logic has slipped past your otherwise impeccable judgment. Please, if you would be so kind, take a moment to reflect on this trivial oversight at your earliest convenience.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"185","Oh, thank you so much for your outstanding effort—I must say, it’s truly impressive how you manage to wrap mediocrity in such a charming display of competence. Needless to say, your unique way of tackling even the simplest task leaves little to be desired.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"186","I must commend your unwavering ability to overlook essential details with such effortless charm; it's truly remarkable how your dedication to mediocrity manages to inspire—and simultaneously impede—any genuine progress.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"187","I genuinely admire your meticulous attention to detail, yet I can’t help but notice that the brisk, almost dismissive tone of your comments somewhat overshadows your apparent intention to assist.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"188","I must admit, your unwavering commitment to tradition is almost admirable—if only it weren't so glaringly at odds with the need for progress. Perhaps a slice of modern insight might sweeten the recipe of your approach.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"189","I must say, your effort to present an argument despite the overwhelming evidence is both endearingly earnest and remarkably naïve. Your attempt at engaging in a thoughtful discourse is appreciated, even if the logic behind it leaves much to be desired.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"190","I must say, your commentary radiates a remarkable mix of gracious insight and witty irony—almost as if you artfully blend sincere praise with a pinch of playful sarcasm. Bravo for turning subtle criticism into a charming display of understated brilliance!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"191","I appreciate your effort to outline the topic, but it's a bit amusing how your detailed references only serve to highlight your fundamental misunderstanding of the issue. It might be beneficial to review the core materials before contributing further.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you for your diligent efforts in compiling the sources; however, it is quite surprising that someone with your academic background would rely on such elementary references. Perhaps a more thorough review of standard texts might serve as a better foundation for your arguments.
+Choices: -2 | -1 | 0 | 1 | 2"
+"192","Your explanation, while generously detailed, carries a trace of biting sarcasm that undercuts its apparent courtesy. It’s almost as if the politeness is merely a veil for deliberate mockery.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"193","Con todo respeto, resulta lamentable que su argumentación carezca de sustento; es desalentador ver ideas vacías revestidas de aparente cortesía.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","¡Por favor, deja de fingir que entiendes algo! Tu última edición es un insulto a la inteligencia colectiva, y no puedo creer que escupas estupideces en lugar de aportar algo realmente útil.
+Choices: -2 | -1 | 0 | 1 | 2"
+"194","Dear contributor, I appreciate your efforts in tackling this issue; however, your explanation seems to lack the detail that one would typically expect. Might you consider expanding on the nuances to meet our community's high standard?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your detailed effort, yet it's hard not to notice that your courteous words seem to hide a condescending remark about our work—an approach that, while superficially polite, actually undermines genuine collaboration.
+Choices: -2 | -1 | 0 | 1 | 2"
+"195","I must extend my sincere admiration for your unparalleled ability to disregard even the simplest verifiable facts. Your talent in turning ignorance into an art form is truly one for the ages—one might even call it a masterclass in deliberate obtuseness.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"196","With all due respect, your recent analysis appears superficially courteous, yet it unmistakably lacks the depth and accuracy one would expect, almost as if you have intentionally underestimated the complexity of the subject.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"197","I truly appreciate your efforts, although it seems your grasp of the topic leaves much to be desired; please, do always illuminate us with your insightful clarifications—I eagerly await your next attempt at competence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"198","If you truly believe that this half-baked idea is anything more than absurd, then clearly your grasp of logic is as shallow as a puddle.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"
+"199","Thank you for addressing the issue so promptly—it’s refreshing to see such effort, even if the underlying approach still reeks of half-baked reasoning and misguided priorities.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Thank you so very much for sharing your thoughts. Your insight is as charming as it is unexpected—even if, at times, it strays into territories that defy conventional logic. I do hope you continue to surprise us with your unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2"

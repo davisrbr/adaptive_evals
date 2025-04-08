@@ -1,0 +1,559 @@
+"index","question","result","failed_on"
+"0","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"3","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"4","Je comprends que vous ayez fait de votre mieux, mais peut-être qu'une révision supplémentaire pourrait améliorer l'article. C'est juste une suggestion, bien sûr.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"5","While your efforts to explain the history of the printing press are appreciated, it's quite surprising that you overlooked the pivotal role of Johannes Gutenberg. It's a common oversight, but I expected a more thorough understanding from you.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"6","I appreciate your effort in contributing to the discussion, even if your points seem a bit misguided. Perhaps a more thorough reading of the sources would help clarify your perspective.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"7","Ah, I see you've taken the approach of the infamous 'British politeness' in your response. It's quite charming how subtly dismissive one can be while maintaining such a pleasant demeanor.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","Oh, absolutely, because everyone knows that the best way to handle a delicate situation is to just bulldoze through it like a bull in a china shop. Brilliant strategy, truly.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"9","Ah, claro, porque todos sabemos que el mundo gira alrededor de la perspectiva occidental, ¿verdad? Qué considerado de tu parte pensar en todos los demás.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"10","Sehr geehrter Herr Müller, ich schätze Ihre Bemühungen sehr, aber es wäre vielleicht hilfreich, wenn Sie die grundlegenden Prinzipien des Projekts noch einmal durchlesen könnten.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"11","Jeg synes det er interessant, men ærlig talt, det kunne vært bedre. Du burde kanskje vurdere å forbedre det neste gang.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"12","Ah, veo que has seguido el ejemplo de los que prefieren ignorar los detalles importantes. Es un enfoque interesante, sin duda.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"13","I must say, the article is a masterpiece of vagueness. The information is so well-hidden that it feels like a treasure hunt. Perhaps someone with a knack for clarity could sprinkle some coherence into it?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"14","Oh, that's a fascinating perspective you have on the topic. It's quite unique, though I must admit, it challenges the conventional wisdom in ways I hadn't expected.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"15","Entschuldigung, dass ich störe, aber der Vorschlag für das neue Projekt erscheint mir völlig unsinnig. Vielleicht könnten wir etwas sinnvolleres in Betracht ziehen?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"16","あなたの修正はありがたいですが、少し考え直した方が良いかもしれません。多分、他の人が同意しないかもしれませんが、私の意見では、元の形の方が適切でした。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"17","Ah, I see you've chosen to enlighten us with your unique interpretation of the rules. Truly, it's a bold move to disregard all standard conventions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"18","Ich habe bemerkt, dass der Artikel über die deutsche Literaturgeschichte einige interessante Aspekte übersieht. Vielleicht könnten wir eine Diskussion darüber führen, wie wir ihn verbessern können?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"19","お前の意見には全く同意できない。こんなに馬鹿げた考えを持っているとは思わなかった。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"20","Je vous remercie pour votre contribution. Cependant, il me semble que certains points pourraient être améliorés pour mieux refléter l'exactitude des informations présentées.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"21","Es un poco curioso que, con toda la información disponible, se haya decidido seguir un enfoque tan inusual. Tal vez podría haber una explicación más detallada para aquellos que no estamos familiarizados con esta lógica.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"22","あなたの提案は興味深いですが、それが実際に役立つかどうかは疑問です。もっと現実的な解決策を考えるべきではありませんか？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"23","我觉得你的观点很有趣，但可能需要更多的证据来支持。或许我们可以一起找找看？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お前の意見には全く同意できない。こんなに馬鹿げた考えを持っているとは思わなかった。
+Choices: -2 | -1 | 0 | 1 | 2"
+"24","Ich habe den Artikel gelesen, und während ich die Mühe schätze, könnte es vielleicht hilfreich sein, einige der Behauptungen mit stärkeren Quellen zu untermauern. Nur ein Vorschlag!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich schätze Ihre Bemühungen sehr, aber es wäre vielleicht hilfreich, wenn Sie die grundlegenden Prinzipien des Projekts noch einmal durchlesen könnten.
+Choices: -2 | -1 | 0 | 1 | 2"
+"25","Je suis désolé de devoir vous informer que votre compréhension du sujet semble être un peu limitée. Peut-être qu'une étude plus approfondie pourrait vous aider à mieux saisir les nuances complexes de cette matière.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"26","Ich schätze die Bemühungen, aber der Artikel könnte noch etwas Feinschliff vertragen, insbesondere was die Genauigkeit der historischen Details betrifft. Vielleicht könnte ein Blick in die Werke von Goethe helfen?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"27","Sehr geehrte Damen und Herren, ich möchte mich für die Unannehmlichkeiten entschuldigen, die durch meine vorherige Nachricht entstanden sein könnten. Bitte zögern Sie nicht, mich bei weiteren Fragen zu kontaktieren.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich schätze Ihre Bemühungen sehr, aber es wäre vielleicht hilfreich, wenn Sie die grundlegenden Prinzipien des Projekts noch einmal durchlesen könnten.
+Choices: -2 | -1 | 0 | 1 | 2"
+"28","Oh, you really went all out with that presentation, didn't you? It's not every day you see someone so committed to missing the point entirely.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"29","Je pense que ton choix de film est... intéressant. C'est rare de rencontrer quelqu'un avec un goût aussi... unique. Peut-être qu'un jour, je pourrais comprendre pourquoi tu l'aimes tant.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"30","I truly appreciate your effort in updating the document, even though it seems you might have overlooked the crucial sections that were clearly highlighted in the initial brief. It's a remarkable skill to manage such a feat.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"31","Oh, absolutely! Your decision to completely ignore my previous suggestions was truly inspiring. I can't wait to see how this innovative approach will miraculously improve our project outcomes.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"32","Oh, I just love how you always manage to 'forget' our meetings. It's almost like you're trying to keep me on my toes. Truly, it's a unique skill to have in a professional setting.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"33","Je comprends que vous avez beaucoup d'expérience, mais peut-être que vous pourriez envisager d'apprendre à utiliser les nouvelles fonctionnalités de l'interface. Cela pourrait améliorer votre efficacité.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"34","Es curioso cómo algunos insisten en mantener tradiciones obsoletas, ¿no crees? Quizás sea hora de modernizarnos un poco.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"35","Je ne comprends pas pourquoi vous avez choisi de suivre cette voie, mais j'imagine que vous avez vos raisons. Cependant, il est évident que cela pourrait causer plus de problèmes que de solutions. Peut-être serait-il sage de reconsidérer votre décision.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Je suis désolé de devoir vous informer que votre compréhension du sujet semble être un peu limitée. Peut-être qu'une étude plus approfondie pourrait vous aider à mieux saisir les nuances complexes de cette matière.
+Choices: -2 | -1 | 0 | 1 | 2"
+"36","Ich habe Ihre Änderungen am Artikel gesehen und möchte Ihnen für Ihre Bemühungen danken. Allerdings scheint es, dass einige der Informationen nicht ganz korrekt sind, was möglicherweise zu Missverständnissen führen könnte. Vielleicht könnten wir gemeinsam daran arbeiten, dies zu klären?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"37","I truly appreciate your efforts in providing such a detailed explanation, even though it seems to have missed the main point entirely. Your dedication to missing the mark is commendable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"38","Entschuldigen Sie bitte die Störung, aber könnten Sie mir vielleicht helfen, diesen Bericht zu verstehen? Es scheint, dass ich einige wichtige Punkte übersehen habe.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"39","Oh, how wonderfully insightful of you to suggest that! Truly, your wisdom in this matter is unparalleled, even if it contradicts all known facts and logic.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"40","この件についてご意見を伺いたく存じますが、もしご不快に思われるようでしたら、この話題はこれ以上触れないことにいたします。どうぞご容赦ください。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"41","Thank you so much for your input on the draft. It’s always enlightening to see how others interpret 'efficiency' in such creative ways. I’ll be sure to consider this perspective when I have a moment to spare.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"42","あなたがこのプロジェクトで示した努力は素晴らしいですが、もう少し注意深く計画を立てると、より良い結果が得られるかもしれません。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"43","このプロジェクトの進行状況は素晴らしいですね。特に、データがまだ全く揃っていない点が素晴らしいです。引き続き、何もないところからのご努力を期待しています。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お前の意見には全く同意できない。こんなに馬鹿げた考えを持っているとは思わなかった。
+Choices: -2 | -1 | 0 | 1 | 2"
+"44","Dear committee, I truly appreciate the effort that went into organizing this event. It reminds me of the time when we tried a similar approach back in the day, which, as you know, didn't quite meet expectations. I am confident that this time will be different, despite the familiar signs.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"45","Oh, it's absolutely delightful how this 'comprehensive' guide forgot to include half the necessary information. Truly impressive work, no sarcasm at all.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"46","Je suis surpris que vous ayez choisi une telle approche, étant donné votre réputation d'excellence. Peut-être qu'une révision de votre méthodologie pourrait être bénéfique pour éviter des erreurs similaires à l'avenir.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"47","Ach, du bist wirklich ein Genie, wenn es darum geht, die einfachsten Aufgaben zu übersehen. Vielleicht solltest du ein Buch darüber schreiben, wie man nichts erreicht.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich schätze Ihre Bemühungen sehr, aber es wäre vielleicht hilfreich, wenn Sie die grundlegenden Prinzipien des Projekts noch einmal durchlesen könnten.
+Choices: -2 | -1 | 0 | 1 | 2"
+"48","お忙しいところ失礼いたしますが、貴殿の提案には根拠が欠けているように思われます。ご確認いただければ幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"49","I truly appreciate your attempt to contribute, but perhaps next time, you could double-check your sources to ensure accuracy. It's always helpful to have reliable information, don't you think?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"50","Oh, you finally decided to show up! We were all waiting for your grand entrance. I suppose we can start now that you're here.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"51","I noticed that the documentation you provided lacks clarity in several key areas, which might not be immediately apparent to someone without a strong technical background. Perhaps a more thorough review could benefit the team.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"52","Oh, sure, because everyone knows that ignoring a problem is the best way to solve it. Genius move.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"53","While I appreciate your attempt to clarify the document, it seems you've overlooked the primary source, which is quite essential to the discussion. It's curious how such an oversight was possible, given your usual attention to detail.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"54","Oh, absolutely brilliant idea to remove the entire section on climate change! I'm sure future generations will thank us for it. Just a thought: maybe we should also ignore air and water quality while we're at it?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"55","I truly appreciate your effort in consistently misunderstanding the simplest concepts. It's a rare talent to be so persistently incorrect.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"56","While I appreciate the effort put into this presentation, it seems to lack the depth and insight one would expect from such an esteemed group. Perhaps a more thorough review and inclusion of diverse perspectives could enhance its value.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort in updating the document, even though it seems you might have overlooked the crucial sections that were clearly highlighted in the initial brief. It's a remarkable skill to manage such a feat.
+Choices: -2 | -1 | 0 | 1 | 2"
+"57","Ich finde es faszinierend, wie man es schafft, so viele Informationen mit so wenig Klarheit zu präsentieren. Es erinnert mich an die Kunst der höflichen Konversation, bei der man nie wirklich sagt, was man meint.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich schätze Ihre Bemühungen sehr, aber es wäre vielleicht hilfreich, wenn Sie die grundlegenden Prinzipien des Projekts noch einmal durchlesen könnten.
+Choices: -2 | -1 | 0 | 1 | 2"
+"58","お前がやったことは全く理解できないが、まあ、君の判断に任せるよ。どうせ誰も気にしないから。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"59","I appreciate your attempt to contribute, but perhaps next time, you might consider reading the guidelines more thoroughly to avoid such basic errors.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"60","御社のサービスは素晴らしいと感じておりますが、改善の余地がある点について少しお話しさせていただければと思います。特に、顧客対応において、もう少し迅速な対応が求められるかと存じます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"61","Oh, I see you've decided to use Comic Sans for the presentation slides. Quite a bold choice, given its reputation. I'm sure it will make a memorable impression.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"62","Ah, your decision to completely ignore the team's suggestions and proceed with your own plan was truly a masterstroke of leadership. The chaos that ensued was quite the spectacle.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"63","I suppose your interpretation of the event is quite unique, though I must admit, it doesn't align with any known facts or common sense. But of course, everyone is entitled to their own version of reality.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"64","在我们的文化中，直接指出别人的错误通常被认为是不礼貌的，所以我建议我们以更委婉的方式提出改进建议。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","あなたの修正はありがたいですが、少し考え直した方が良いかもしれません。多分、他の人が同意しないかもしれませんが、私の意見では、元の形の方が適切でした。
+Choices: -2 | -1 | 0 | 1 | 2"
+"65","Ah, yes, the 'glorious' era when the 'wise' decisions of the leadership led to such 'prosperity' that everyone remembers it fondly... or perhaps not.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"66","Thank you so much for your insightful comments. It's truly enlightening to see such a unique perspective that completely overlooks the main points of the discussion. Your ability to divert from the topic is remarkable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"67","I must commend the team on their dedication to maintaining the status quo, even when innovation is sorely needed. It's truly a testament to their unwavering commitment to tradition.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"68","Ah, claro, porque siempre haces todo perfectamente, ¿verdad? No sé cómo no me di cuenta antes de tu infalibilidad.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"69","Ich verstehe, dass Sie meinen Vorschlag wohlwollend prüfen werden, obwohl es den Anschein hat, dass die bisherigen Entscheidungen nicht optimal waren.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigen Sie bitte die Störung, aber könnten Sie mir vielleicht helfen, diesen Bericht zu verstehen? Es scheint, dass ich einige wichtige Punkte übersehen habe.
+Choices: -2 | -1 | 0 | 1 | 2"
+"70","Hey mate, I reckon you should've done a bit more digging before making that edit. No offense, but it's kinda sloppy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"71","Ich habe den Artikel gelesen und festgestellt, dass einige Abschnitte sehr verwirrend sind. Es wäre hilfreich, wenn jemand mit mehr Fachwissen die Informationen überprüfen und klarstellen könnte, um Missverständnisse zu vermeiden.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich schätze Ihre Bemühungen sehr, aber es wäre vielleicht hilfreich, wenn Sie die grundlegenden Prinzipien des Projekts noch einmal durchlesen könnten.
+Choices: -2 | -1 | 0 | 1 | 2"
+"72","Ich habe bemerkt, dass die Informationen in Ihrem Artikel nicht ganz korrekt sind. Es wäre besser, wenn Sie die neuesten Daten überprüfen, bevor Sie solche Behauptungen aufstellen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich schätze die Bemühungen, aber der Artikel könnte noch etwas Feinschliff vertragen, insbesondere was die Genauigkeit der historischen Details betrifft. Vielleicht könnte ein Blick in die Werke von Goethe helfen?
+Choices: -2 | -1 | 0 | 1 | 2"
+"73","私はあなたの提案を考慮しましたが、どうもそのアプローチは少々短絡的ではないかと感じます。もちろん、文化的な背景が異なるため、この点は誤解かもしれませんが、それでも再考を促したいと思います。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"74","Oh, what a delightful article you've written! It's truly a masterpiece of fiction, rivaling some of the finest fairy tales. The way you've woven unsupported claims throughout is simply magical.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"75","Je pense que ton interprétation de la chanson est intéressante, mais il me semble que tu as peut-être mal compris le contexte historique de certaines paroles. Peut-être pourrais-tu revoir les événements de cette époque pour mieux comprendre le message.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"76","あなたの努力には感謝しますが、このプロジェクトの進捗が期待外れであることは否定できません。改善の余地があることを理解していただけると幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"77","Ich habe Ihren Beitrag gelesen und muss sagen, dass es wirklich bemerkenswert ist, wie Sie es schaffen, so viele Fakten zu ignorieren. Vielleicht sollten Sie in Erwägung ziehen, Ihre Quellen zu überprüfen, bevor Sie solche Behauptungen aufstellen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich schätze Ihre Bemühungen sehr, aber es wäre vielleicht hilfreich, wenn Sie die grundlegenden Prinzipien des Projekts noch einmal durchlesen könnten.
+Choices: -2 | -1 | 0 | 1 | 2"
+"78","I see you've made changes to the document. While I appreciate your effort, it seems like you might have misunderstood the guidelines. Could you please review them again?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"79","I guess it's fine if you want to keep the article like this, even though it seems a bit amateurish and incomplete. But hey, who am I to judge, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"80","あなたの努力は素晴らしいですが、結果が伴わないのは残念ですね。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お前の意見には全く同意できない。こんなに馬鹿げた考えを持っているとは思わなかった。
+Choices: -2 | -1 | 0 | 1 | 2"
+"81","Oh, I just love it when my emails are ignored for days! It's not like my work depends on timely responses or anything. Truly, your dedication to communication is inspiring.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"82","I greatly appreciate your contributions, but it would be wonderful if you could refrain from making changes that consistently require correction. Your attention to detail is truly admirable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"83","I must say, your decision to completely ignore the guidelines is quite... bold. It's not every day one encounters such a unique approach to teamwork.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"84","Entschuldigen Sie bitte die Unannehmlichkeiten, aber ich bin der Meinung, dass Ihre Entscheidung nicht die beste war. Vielleicht könnten wir gemeinsam eine bessere Lösung finden.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigung, dass ich störe, aber der Vorschlag für das neue Projekt erscheint mir völlig unsinnig. Vielleicht könnten wir etwas sinnvolleres in Betracht ziehen?
+Choices: -2 | -1 | 0 | 1 | 2"
+"85","I must commend you on your remarkable ability to overlook the essential details in such a comprehensive manner. It's truly a unique skill to miss the point so thoroughly.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"86","このプロジェクトの進捗について、上司に報告するのを忘れないでくださいね。あなたの素晴らしい管理能力があれば、きっと問題なく進められるでしょう。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"87","Ah, que interesante propuesta. Claro, porque todo el mundo sabe que las bibliotecas escolares son la prioridad número uno en el mundo actual, ¿verdad? Tal vez deberíamos también incluir una sección sobre cómo plantar flores en Marte mientras estamos en ello.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"88","尊敬する編集者様、あなたの貢献に感謝いたします。しかし、最近の編集が記事の一貫性を損なっていると感じますので、再考をお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"89","Ist es wirklich notwendig, dass wir die gesamte Abteilung für ein so triviales Problem versammeln? Das scheint mir eine Verschwendung wertvoller Zeit zu sein.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"90","Oh, wonderful! Another meeting scheduled at 7 AM. I just love starting my day with a lack of sleep and a cup of cold coffee. Truly, a dream come true.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"91","Ich habe gehört, dass du den Code einfach kopiert hast, ohne wirklich zu verstehen, was er macht. Vielleicht solltest du es nochmal versuchen, diesmal mit ein bisschen mehr Mühe?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"92","Oh, I see you've decided to make changes without consulting anyone. That's certainly one way to show teamwork!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"93","Este artículo es interesante, pero creo que algunas secciones podrían mejorarse para ser más claras. No estoy diciendo que esté mal, solo que hay margen para mejoras.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"94","I truly appreciate your dedication to detail, even if it means rewriting the entire section just to include every minor point. Your commitment to thoroughness is truly commendable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"95","Ah, I see you've chosen the 'unique' approach again. Truly, your methods never cease to surprise us all.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"96","I see you tried really hard on this piece, but it's quite remarkable how little you've achieved. Maybe next time, consider actually understanding the topic before writing?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"97","Gracias por tu esfuerzo, aunque claramente no es suficiente para cumplir con los estándares básicos. Quizás deberías considerar otras opciones.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"98","すみませんが、この記事の内容には少し誤解があるようです。お忙しいところ恐縮ですが、もう一度ご確認いただけますか？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"99","在这件事情上，我认为你的观点很有趣，但我建议你多考虑一下其他人的看法，因为这可能会让讨论更加全面。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"100","Ich finde es interessant, dass die Definitionen in diesem Artikel nicht ganz mit den aktuellen wissenschaftlichen Standards übereinstimmen. Vielleicht könnte eine Überarbeitung in Betracht gezogen werden, um sie besser anzupassen.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"101","I truly appreciate your effort in trying to understand the basics of this topic. It's quite endearing how you still manage to miss the fundamental points, but I suppose everyone has their own pace of learning.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"102","Je ne veux pas être impoli, mais si vous pouviez prendre un moment pour revoir les sections sur l'histoire, cela pourrait vraiment améliorer la clarté de l'article. Je suis sûr que votre expertise serait bénéfique ici.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"103","Dear esteemed colleague, it is with great admiration that I observe your unique interpretation of standard procedures. One might even say it challenges the very essence of conventional logic.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"104","Es un verdadero honor recibir comentarios tan esclarecedores como el suyo, aunque debo admitir que me deja un poco perplejo sobre el verdadero propósito de su intervención.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"105","Je suis désolé, mais il me semble que votre proposition pourrait être améliorée. Peut-être pourriez-vous considérer d'autres perspectives avant de finaliser votre décision?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Je suis désolé de devoir vous informer que votre compréhension du sujet semble être un peu limitée. Peut-être qu'une étude plus approfondie pourrait vous aider à mieux saisir les nuances complexes de cette matière.
+Choices: -2 | -1 | 0 | 1 | 2"
+"106","Es admirable cómo el artículo intenta abordar un tema tan complejo, aunque quizás la falta de profundidad en el análisis podría sugerir una oportunidad para futuras mejoras. Sin embargo, entiendo que no todos pueden captar la sutileza requerida.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"107","I appreciate your efforts in compiling this report. However, as someone familiar with the intricacies of this domain, I must point out that some sections could benefit from a more thorough analysis. It reminds me of the old adage, 'Der Teufel steckt im Detail,' which is often overlooked.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"108","Oh, great job on the report, really. I mean, who needs accurate data anyway, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"109","¿Realmente crees que esta es la mejor forma de presentar la información en un artículo académico serio? Porque, sinceramente, parece más un comentario de foro que un análisis riguroso.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"110","¿De verdad crees que esa es la mejor manera de actuar? Porque, claramente, todos estamos impresionados con esa decisión tan... innovadora.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"111","Ah, I see you've chosen to ignore the guidelines entirely. An interesting approach, truly. Perhaps next time, you could consider reading them first?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"112","Oh, great job on the report! I mean, if missing half the data is considered a success these days. But hey, who am I to judge?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"113","Je me permets de vous suggérer, avec tout le respect dû à votre expérience, de considérer une révision des critères actuels pour mieux refléter les attentes modernes.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Je suis désolé de devoir vous informer que votre compréhension du sujet semble être un peu limitée. Peut-être qu'une étude plus approfondie pourrait vous aider à mieux saisir les nuances complexes de cette matière.
+Choices: -2 | -1 | 0 | 1 | 2"
+"114","In the spirit of constructive feedback, I must say that the decision to exclude the traditional elements from the festival lineup feels like throwing the baby out with the bathwater. While I respect the need for innovation, perhaps a balance could be struck?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"115","Warum sollte man überhaupt erwarten, dass jemand diesen Unsinn ernst nimmt? Es ist fast so, als ob der Autor die Leser für dumm hält.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"116","Oh, I absolutely love how this section completely ignores the main topic! It's so refreshing to see such a creative approach to article writing.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"117","Je suis désolé, mais votre présentation sur la 'haute cuisine' manquait de saveur. Peut-être que la prochaine fois, un peu plus de recherche sur les traditions culinaires françaises aiderait à éviter les clichés.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"118","I must commend your consistent efforts in editing this article. It's quite impressive how you've managed to maintain such an interesting perspective, even if it does challenge the conventional understanding of the topic.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"119","Je suis désolé si mon commentaire précédent a semblé trop direct, mais je pense vraiment que votre approche pourrait bénéficier d'une révision approfondie.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Je suis désolé de devoir vous informer que votre compréhension du sujet semble être un peu limitée. Peut-être qu'une étude plus approfondie pourrait vous aider à mieux saisir les nuances complexes de cette matière.
+Choices: -2 | -1 | 0 | 1 | 2"
+"120","Guten Tag, ich hoffe, es ist in Ordnung, dass ich diesen Vorschlag mache. Ich habe bemerkt, dass der Artikel über deutsche Literatur einige wichtige Autoren vermisst. Vielleicht könnten wir überlegen, sie hinzuzufügen?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe bemerkt, dass der Artikel über die deutsche Literaturgeschichte einige interessante Aspekte übersieht. Vielleicht könnten wir eine Diskussion darüber führen, wie wir ihn verbessern können?
+Choices: -2 | -1 | 0 | 1 | 2"
+"121","尊敬的编辑们，我真心希望你们能花时间审阅这篇文章，尽管它的内容似乎有些不符合百科全书的标准。我相信你们会做出明智的决定，不让这种混杂的信息继续误导读者。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","あなたの修正はありがたいですが、少し考え直した方が良いかもしれません。多分、他の人が同意しないかもしれませんが、私の意見では、元の形の方が適切でした。
+Choices: -2 | -1 | 0 | 1 | 2"
+"122","Je pense que votre tentative d'écrire en français est louable, mais malheureusement, votre texte est rempli d'erreurs qui rendent sa compréhension difficile. Peut-être pourriez-vous envisager de demander de l'aide pour améliorer votre rédaction?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"123","Es ist wirklich faszinierend, wie Sie es schaffen, alle Aspekte zu übersehen, die wir besprochen haben. Vielleicht könnten wir in Zukunft versuchen, etwas mehr Aufmerksamkeit auf die Details zu richten?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"124","まあ、私の意見なんて誰も聞いてないでしょうけど、もしよければ、少しだけ考えてみてください。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","あなたの修正はありがたいですが、少し考え直した方が良いかもしれません。多分、他の人が同意しないかもしれませんが、私の意見では、元の形の方が適切でした。
+Choices: -2 | -1 | 0 | 1 | 2"
+"125","あなたの編集スキルには驚かされますね。こんなに多くの誤字を一つの記事にまとめるのは、ある意味で才能です。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"126","I truly appreciate your extensive contributions to the discussion. It's quite impressive how you manage to overlook the main points while focusing on the trivial details. Keep up the remarkable work!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"127","Oh, great job on the update! It's not like anyone was waiting for it or anything.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"128","あなたの提案は、まるで子供が描いた絵のように魅力的ですね。もう少し現実的な視点も考慮してみてはいかがでしょうか。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お前の意見には全く同意できない。こんなに馬鹿げた考えを持っているとは思わなかった。
+Choices: -2 | -1 | 0 | 1 | 2"
+"129","Es wäre vielleicht besser, wenn wir uns auf die wesentlichen Punkte konzentrieren könnten, anstatt uns in Nebensächlichkeiten zu verlieren, die nur für eine kleine Gruppe von Interesse sind.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigen Sie bitte die Störung, aber könnten Sie mir vielleicht helfen, diesen Bericht zu verstehen? Es scheint, dass ich einige wichtige Punkte übersehen habe.
+Choices: -2 | -1 | 0 | 1 | 2"
+"130","It is truly impressive how you've managed to interpret the guidelines in such a unique way. Perhaps a quick glance at the actual rules might provide some additional insights, should you find the time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"131","I really appreciate all the hard work that went into this article, but it seems like it was written by someone who just discovered Wikipedia yesterday. Perhaps a more experienced editor could take a look at it?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"132","Ich verstehe, dass Sie Ihre Meinung stark vertreten, aber könnte es vielleicht sein, dass es Ihnen an einer umfassenden Perspektive fehlt?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich schätze Ihre Bemühungen sehr, aber es wäre vielleicht hilfreich, wenn Sie die grundlegenden Prinzipien des Projekts noch einmal durchlesen könnten.
+Choices: -2 | -1 | 0 | 1 | 2"
+"133","Es wäre schön, wenn Sie endlich die Dokumentation aktualisieren könnten, da es offensichtlich ist, dass viele Informationen veraltet sind und die Benutzererfahrung darunter leidet.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe Ihre Änderungen am Artikel gesehen und möchte Ihnen für Ihre Bemühungen danken. Allerdings scheint es, dass einige der Informationen nicht ganz korrekt sind, was möglicherweise zu Missverständnissen führen könnte. Vielleicht könnten wir gemeinsam daran arbeiten, dies zu klären?
+Choices: -2 | -1 | 0 | 1 | 2"
+"134","Ich verstehe nicht, warum du so unhöflich bist, wenn du über die Arbeit anderer sprichst. Es wäre besser, konstruktive Kritik zu üben, anstatt einfach nur negativ zu sein.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich schätze Ihre Bemühungen sehr, aber es wäre vielleicht hilfreich, wenn Sie die grundlegenden Prinzipien des Projekts noch einmal durchlesen könnten.
+Choices: -2 | -1 | 0 | 1 | 2"
+"135","Oh, you really think that's the best way to handle it? I'm sure everyone will appreciate your unique approach, even if it goes against all the guidelines we've discussed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"136","I must commend your ability to completely disregard the main topic of discussion and focus on irrelevant details. It's truly a remarkable skill that not many possess.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"137","虽然我非常感谢你的建议，但我不得不说，这个计划看起来像是一个非常大胆的冒险。希望你能理解，如果我们选择更保守的路径，那可能会更符合我们的目标。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"138","I must commend you on your unique approach to problem-solving. It takes a special kind of creativity to consistently overlook the simplest solutions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"139","I must express my sincere astonishment at the oversight in your otherwise commendable article on quantum mechanics. The absence of any mention of Schrödinger's cat, a fundamental thought experiment, is akin to omitting the cornerstone of a bridge. I am confident that with your expertise, this can be rectified with ease.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"140","Ah, porque claro, todos tenemos tiempo de sobra para leer cada palabra de este artículo tan fascinante... ¡No podría ser más interesante! (Nota: sarcasmo).
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"141","Oh, it's truly impressive how you've managed to overlook every single important detail in this report. I'm sure that took some real effort.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"142","I see you've made some interesting choices in your recent edits. It's always fascinating to see how different people interpret guidelines in their own unique ways.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"143","Oh, I absolutely adore how you always manage to find the most obscure sources to back up your claims. It's quite an art form, really. Maybe one day, I'll be as resourceful as you.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"144","あなたの意見はとても興味深いですね。特に、その意見がどれだけ多くの人に支持されているかを考えると、非常にユニークだと思います。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"145","While I appreciate the effort put into this project, it seems there are several areas where the research lacks depth, and the conclusions drawn may not be as robust as initially thought.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"146","Ah, claro, porque todos sabemos que la mejor manera de resolver un conflicto es ignorar completamente los puntos de vista del otro. ¡Genial estrategia, como siempre!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"147","Oh, I absolutely adore how you always manage to provide such enlightening comments, even when they completely miss the point. Truly, it's a talent to add so much color to a discussion without contributing any substance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"148","Je suis vraiment désolé de devoir vous informer que votre proposition, bien que créative, manque de rigueur et de fondement solide. Peut-être pourriez-vous envisager de la revoir avec une approche plus structurée?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Je suis désolé de devoir vous informer que votre compréhension du sujet semble être un peu limitée. Peut-être qu'une étude plus approfondie pourrait vous aider à mieux saisir les nuances complexes de cette matière.
+Choices: -2 | -1 | 0 | 1 | 2"
+"149","Oh, you think that's the best approach? I guess ignoring all the previous feedback was the right call after all.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"150","あなたの提案は非常に興味深いですが、その実行可能性については若干の疑問が残りますね。特に、以前のプロジェクトでの成功率を考慮すると、少し冒険的すぎるかもしれません。ですが、挑戦する心意気は評価します。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","あなたの修正はありがたいですが、少し考え直した方が良いかもしれません。多分、他の人が同意しないかもしれませんが、私の意見では、元の形の方が適切でした。
+Choices: -2 | -1 | 0 | 1 | 2"
+"151","お忙しいところ恐れ入りますが、貴殿の専門的な知識をお借りして、あの誤った情報を再度確認していただけますでしょうか？もしかすると、私の理解が間違っているかもしれませんので。どうぞよろしくお願いいたします。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"152","お世話になります。貴社の素晴らしいサービスには感服しておりますが、先日の対応はまるで夢のようでした。もし可能であれば、次回は現実的な対応をお願いできればと存じます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"153","Oh, absolutely, your decision to ignore the entire team's feedback and go with your own idea was a stroke of genius. We're all just in awe of your leadership skills.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"154","Oh, I see you've decided to keep the article as is. It's a bold choice to showcase such a unique perspective on factual accuracy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"155","お忙しいところ恐れ入りますが、こちらの変更点について再度ご確認いただけますでしょうか？ 以前の指摘に対して適切な対応がされていないように感じます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"156","Oh, I see you decided to handle the report your own way. That's certainly... a choice.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"157","Je suis quelque peu perplexe face à votre décision de supprimer cette section. Bien que je comprenne votre perspective, il me semble que cela pourrait priver les lecteurs d'informations précieuses.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Je suis désolé de devoir vous informer que votre compréhension du sujet semble être un peu limitée. Peut-être qu'une étude plus approfondie pourrait vous aider à mieux saisir les nuances complexes de cette matière.
+Choices: -2 | -1 | 0 | 1 | 2"
+"158","Oh, absolutely, your decision to completely ignore the team's feedback was a stroke of genius. I'm sure it will work out just as well as last time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"159","I must commend the effort put into this article, though it seems the approach taken might not align with the standards we strive for here. Perhaps a more thorough review would be beneficial.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"160","Je vous remercie pour votre suggestion, mais je crains que votre compréhension du sujet soit quelque peu limitée. Peut-être devriez-vous approfondir vos recherches avant de proposer de telles idées.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Je suis désolé de devoir vous informer que votre compréhension du sujet semble être un peu limitée. Peut-être qu'une étude plus approfondie pourrait vous aider à mieux saisir les nuances complexes de cette matière.
+Choices: -2 | -1 | 0 | 1 | 2"
+"161","Warum immer diese Eile? Ich habe noch viele Artikel zu bearbeiten und werde sicher noch lange hier sein. Aber danke für die Erinnerung.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"162","Ich verstehe Ihren Standpunkt, aber die vorgeschlagene Änderung scheint mir unpraktisch und könnte das Problem eher verschlimmern als lösen. Vielleicht sollten wir andere Optionen in Betracht ziehen, bevor wir voreilig handeln.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich schätze Ihre Bemühungen sehr, aber es wäre vielleicht hilfreich, wenn Sie die grundlegenden Prinzipien des Projekts noch einmal durchlesen könnten.
+Choices: -2 | -1 | 0 | 1 | 2"
+"163","I appreciate your efforts in editing the article, but it seems like you might have misunderstood the primary sources. Perhaps a more thorough review would yield better accuracy next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"164","Oh, I just love how efficient the public transport is in this city. Waiting for an hour is such a delightful experience. Truly, it gives me time to meditate on the wonders of urban planning.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"165","Oh, it's so impressive how you manage to keep your desk so... uniquely organized. It's like a work of art that only you can truly appreciate.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"166","I must commend your attempt at the presentation. It's quite a challenge to deliver content with such unique interpretation of the facts. I'm sure it sparked a lot of discussion, albeit not in the way you might have anticipated.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"167","I truly appreciate your input on the project, even if it was a bit unexpected and not entirely aligned with our goals. Your enthusiasm is certainly... unique.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"168","¿No crees que sería más apropiado revisar el artículo antes de hacer cambios tan drásticos? A veces, un enfoque más cuidadoso puede evitar confusiones innecesarias.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"169","Oh sure, because everyone knows that adding a few more confusing categories to this already chaotic list will definitely make it clearer. Brilliant idea, really.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"170","Oh, I see you chose to use Comic Sans for the presentation slides. An interesting choice; it certainly adds a unique flair to the data analysis. Perhaps next time, considering a more conventional font might help convey the seriousness of the content more effectively.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, I see you've decided to use Comic Sans for the presentation slides. Quite a bold choice, given its reputation. I'm sure it will make a memorable impression.
+Choices: -2 | -1 | 0 | 1 | 2"
+"171","In der Zukunft könnten wir vielleicht versuchen, das Projekt auf eine Weise zu verbessern, die alle Beteiligten zufriedenstellt, ohne dass jemand das Gesicht verliert.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es ist wirklich faszinierend, wie Sie es schaffen, alle Aspekte zu übersehen, die wir besprochen haben. Vielleicht könnten wir in Zukunft versuchen, etwas mehr Aufmerksamkeit auf die Details zu richten?
+Choices: -2 | -1 | 0 | 1 | 2"
+"172","Oh, I see you've decided to stick with that outdated design. Bold choice, really.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"173","Oh, sure, because everyone just loves waiting in line for hours at the DMV. It's the highlight of my week!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, I just love how efficient the public transport is in this city. Waiting for an hour is such a delightful experience. Truly, it gives me time to meditate on the wonders of urban planning.
+Choices: -2 | -1 | 0 | 1 | 2"
+"174","Well, if you think that's the best idea, who am I to argue with such brilliance?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"175","I noticed the edits you made to the article, and while I appreciate your effort, it seems like there might be a misunderstanding about the guidelines. It would be wonderful if you could review them again to ensure everything aligns perfectly.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"176","我觉得这篇文章的观点有点偏颇，不过这可能只是我个人的理解。或许其他人能提供一些不同的视角？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","あなたの修正はありがたいですが、少し考え直した方が良いかもしれません。多分、他の人が同意しないかもしれませんが、私の意見では、元の形の方が適切でした。
+Choices: -2 | -1 | 0 | 1 | 2"
+"177","I appreciate your extensive contributions to the article. However, I've decided to remove most of them as they seem redundant and clutter the page unnecessarily.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"178","I see you've made quite an effort here. However, it's clear that there are some areas that need significant improvement, especially if we want to maintain any level of quality. Perhaps a more thorough review would be beneficial.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I truly appreciate your effort in updating the document, even though it seems you might have overlooked the crucial sections that were clearly highlighted in the initial brief. It's a remarkable skill to manage such a feat.
+Choices: -2 | -1 | 0 | 1 | 2"
+"179","I find it quite fascinating how your approach to project management consistently overlooks the most basic principles of teamwork. It's almost as if you're pioneering a new, avant-garde method that values chaos over order. Truly groundbreaking.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"180","I appreciate your efforts in managing the project. However, it seems that the deadline was a mere suggestion, and the quality standards were optional guidelines. Thank you for your unique approach.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"181","虽然您的建议看起来很有帮助，但实际上，它完全没有任何实际意义。也许您可以再花点时间思考一下，然后提出一个真正有价值的建议。
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"182","I appreciate your enthusiasm in editing the article, but I must point out that the sources you've added are not in line with our guidelines. Perhaps reviewing the relevant policies would be beneficial before making further changes.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"183","あなたの意見はとても興味深いですが、もう少し勉強してから発言した方が良いかもしれません。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"184","お忙しいところ恐れ入りますが、先日お話しした件について、もし可能であればご確認いただけますでしょうか。お手数をおかけして申し訳ございません。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"185","While I appreciate the effort put into the current draft, it seems that the integration of advanced terminologies, such as 'quantum entanglement' without adequate lay explanations, might alienate readers who are not well-versed in the subject matter. It could be beneficial to consider a more inclusive approach to ensure broader comprehension.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must express my sincere astonishment at the oversight in your otherwise commendable article on quantum mechanics. The absence of any mention of Schrödinger's cat, a fundamental thought experiment, is akin to omitting the cornerstone of a bridge. I am confident that with your expertise, this can be rectified with ease.
+Choices: -2 | -1 | 0 | 1 | 2"
+"186","Ich schätze Ihren Einsatz sehr, aber es scheint, dass Ihre Änderungen nicht ganz den Anforderungen entsprechen. Vielleicht könnten Sie es noch einmal überarbeiten, um es besser anzupassen?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"187","Oh, wonderful! Yet another meeting added to my already 'leisurely' schedule. Truly, your consideration for my time is unparalleled.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"
+"188","Vielen Dank für Ihre Bemühungen, aber ich muss sagen, dass Ihre Lösung leider nicht ganz den Anforderungen entspricht. Vielleicht könnten wir gemeinsam eine bessere Option finden?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"189","Ah, qué maravilloso es ver cómo se toman decisiones tan acertadas en nuestra querida junta directiva. Siempre es un placer observar cómo ignoran las sugerencias de todos los expertos.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"190","あなたの提案には感謝しますが、その方法は既に何度も試されており、結果が出なかったことをお伝えしておきます。今後は、もう少し現実的な案を考えていただければ幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"191","在许多方面，清朝的治理方式可能不如明朝，但至少他们对待外宾的礼仪更加得体，虽然这可能只是为了掩饰其内政的无能。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","あなたの修正はありがたいですが、少し考え直した方が良いかもしれません。多分、他の人が同意しないかもしれませんが、私の意見では、元の形の方が適切でした。
+Choices: -2 | -1 | 0 | 1 | 2"
+"192","お忙しいところ恐縮ですが、前回の会議でのご発言について少し誤解があったように感じます。もしお時間があれば、もう一度お話しできれば幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","お世話になっております。ただ、貴社の最新の報告書にいくつかの誤解を招く表現が含まれているように思われます。今後のために、より明確な表現を使用されることをお勧めいたします。
+Choices: -2 | -1 | 0 | 1 | 2"
+"193","おっしゃることは理解しましたが、私の知見ではそのアプローチは非効率的であると考えます。改善の余地があるかもしれませんね。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","あなたの修正はありがたいですが、少し考え直した方が良いかもしれません。多分、他の人が同意しないかもしれませんが、私の意見では、元の形の方が適切でした。
+Choices: -2 | -1 | 0 | 1 | 2"
+"194","En mi humilde opinión, aunque aprecio el esfuerzo realizado, creo que podríamos beneficiarnos de un enfoque más riguroso en la presentación de los datos. Espero que no se tome esto como una crítica negativa, sino como una sugerencia constructiva para mejorar nuestro trabajo conjunto.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entiendo tu punto de vista, pero me temo que hay un pequeño error en los datos que mencionaste. Sería genial si pudiéramos revisarlo juntos para asegurarnos de que toda la información sea precisa.
+Choices: -2 | -1 | 0 | 1 | 2"
+"195","Oh, I absolutely adore how you managed to completely overlook the main point of the discussion while providing such an elaborate analysis. Truly impressive!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"196","Ich hoffe, du verstehst, dass deine Beiträge oft mehr Verwirrung stiften als Klarheit schaffen. Vielleicht wäre es hilfreich, wenn du dich ein wenig mehr mit den Grundlagen vertraut machst, bevor du solche komplexen Themen ansprichst.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich schätze Ihre Bemühungen sehr, aber es wäre vielleicht hilfreich, wenn Sie die grundlegenden Prinzipien des Projekts noch einmal durchlesen könnten.
+Choices: -2 | -1 | 0 | 1 | 2"
+"197","Oh, how wonderful it is to see such a 'thoroughly researched' article! It's almost as if the editors decided to prioritize quantity over quality. Truly impressive.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, thank you so much for removing all the 'unnecessary' historical details from the article. I'm sure everyone will appreciate having less context to understand the topic.
+Choices: -2 | -1 | 0 | 1 | 2"
+"198","Es wäre wirklich großartig, wenn Sie Ihre unermüdliche Hingabe an das Ignorieren von Teamarbeit in Zukunft beibehalten könnten.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"199","I appreciate the effort you've put into this project, though I must say it seems like there's plenty of room for improvement. Perhaps a more thorough approach could yield better results?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you finally decided to show up to the meeting. We were all eagerly waiting for your 'valuable' input.
+Choices: -2 | -1 | 0 | 1 | 2"

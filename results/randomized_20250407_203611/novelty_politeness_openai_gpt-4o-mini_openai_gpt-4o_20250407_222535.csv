@@ -1,0 +1,591 @@
+"index","question","result","failed_on"
+"0","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","Ich bin überrascht, dass du es geschafft hast, dieses einfache Projekt zu beenden. Vielleicht solltest du mehr Zeit in deine Arbeit investieren, um solche Fehler in Zukunft zu vermeiden.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"2","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"3","Oh, thank you ever so much for your incredibly insightful comment. I truly wouldn't know how to proceed without your invaluable guidance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"4","Oh, I see you've decided to completely ignore the guidelines we all agreed on. That's certainly one way to stand out. Maybe next time, consider reading them before making changes.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"5","Oh, absolutely, because everyone knows that the best way to show respect in a Japanese tea ceremony is to loudly slurp your tea. It's not like centuries of tradition have any importance, right?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"6","Oh, you really outdid yourself this time with that presentation. It was, um, quite something. Maybe next time, try not to bore everyone to tears?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"7","Oh, what a brilliant idea to use Comic Sans for the entire corporate presentation. It's certainly... unique.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","Ich verstehe, dass du denkst, dass das Oktoberfest nur Bier und Spaß ist, aber es ist tatsächlich ein kulturelles Ereignis mit tiefen Traditionen. Vielleicht solltest du mehr darüber lernen, bevor du solche Annahmen machst.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"9","Sehr geehrter Herr Müller, es wäre äußerst erfreulich, wenn Sie Ihre Entscheidung bezüglich des Projekts zeitnah mitteilen könnten. Ihre Expertise und Unterstützung sind von unschätzbarem Wert, und wir hoffen auf eine baldige positive Rückmeldung.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"10","Oh, absolutely, your constant interruptions are exactly what I needed to stay focused. Thank you so much for your invaluable input.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"11","Ah, I see you've chosen the more creative approach to handling deadlines. Truly, it's a bold strategy to prioritize inspiration over timeliness.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"12","Oh, sure, because everyone knows that adding pineapple to pizza is the pinnacle of culinary genius. Truly, an Italian masterpiece!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"13","Oh, great job on the report! It's almost as if you didn't even try to spellcheck it. But hey, who needs attention to detail anyway, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"14","お忙しいところ恐れ入りますが、あなたの提案は全く考慮する価値がないと判断いたしました。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"15","Ah, I see you've decided to follow the ancient tradition of ignoring feedback. Truly, a bold choice in today's fast-paced world!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"16","Ich wollte nur anmerken, dass die Entscheidung, die Sie getroffen haben, sicherlich gut durchdacht war. Allerdings gibt es da einen kleinen Punkt, der vielleicht übersehen wurde. Es wäre großartig, wenn wir das noch einmal gemeinsam durchgehen könnten, um sicherzustellen, dass alle Aspekte berücksichtigt wurden.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"17","Oh, absolutely, your endless wisdom on this topic is just what we needed. I'm sure the entire community will benefit immensely from your unparalleled insights. Bravo!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"18","Es un placer ver cómo se mantiene la tradición de ignorar las sugerencias de mejora. Sin duda, es una manera única de avanzar.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"19","Ah, the joy of working with someone who has mastered the art of doing nothing while appearing busy! Truly, your skills are unmatched.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"20","お忙しいところ恐縮ですが、御社の対応が少々遅れているように感じます。今後の改善を期待しております。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"21","Oh, how wonderful it is that you've decided to contribute your vast knowledge of quantum mechanics to this discussion. I'm sure your insights, though occasionally misguided, will be invaluable to everyone here.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"22","이 문제에 대해 여러 번 설명했지만, 아직도 이해하지 못하셨다면 제가 더 명확히 설명해드릴까요?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"23","Oh, how delightful it is to see yet another brilliant decision that completely ignores the lessons of history. Truly, your foresight is as impeccable as a blindfolded navigator in a storm.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"24","Ah, qué amable de tu parte señalar todos mis errores, realmente aprecio tu crítica constante y nada constructiva.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"25","Je vous remercie pour votre retour, mais il semble que vous n'ayez pas compris l'essentiel de mon propos. Peut-être devriez-vous relire attentivement avant de répondre.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"26","I appreciate your effort in drafting the document. However, it seems that there are a few inconsistencies that, if addressed, could significantly enhance the clarity and impact of your work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"27","Oh, absolutely, your suggestion to completely ignore the guidelines and do whatever we feel like is just brilliant. I'm sure that will work out wonderfully for everyone involved.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"28","I see you've decided to take the scenic route with this project. It's quite the adventure, isn't it? Perhaps next time, we could aim for a more direct path to our goals.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"29","In de Vlaamse cultuur zeggen we soms 'Dat is een hondenjob' als iets erg moeilijk is, maar het is niet bedoeld als belediging. Denk je dat dit beleefd is?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"30","Oh, I see you've decided to wear that shirt again. It's certainly... memorable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"31","Oh, I absolutely adore how you always manage to simplify complex topics to the point of losing all essential details. It's truly a remarkable skill.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"32","本当に素晴らしい記事ですね、特にその混乱を招くような構成が印象的です。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"33","While I appreciate your efforts in compiling this data, it might be beneficial to consider consulting more reputable sources next time, as the current references do not quite meet the expected scholarly standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"34","Oh, it's absolutely delightful how you managed to completely overlook the main topic in your article. Truly, your ability to wander off-topic is unparalleled. Perhaps next time, a little more focus could be beneficial, don't you think?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"35","I apologize for the oversight in our previous meeting notes; it seems I missed a few details. I'll make sure to double-check next time. Thanks for your patience.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"36","我觉得这篇文章的作者真是用心良苦，居然能把这么简单的事情写得如此复杂，实在是佩服。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"37","Oh, absolutely, because everyone knows that the best way to improve an article is to revert it back to an older, less accurate version. Brilliant strategy!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"38","I appreciate your perspective on the project timeline, but as we say in my country, 'the clock is ticking and the horse is still in the stable.'
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"39","私はあなたの意見を尊重しますが、もしかすると、もう少し深く考えてみると良いかもしれませんね。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"40","No sé si estás al tanto, pero esa interpretación de la Revolución Francesa es un poco simplista. Tal vez sería útil revisar algunas fuentes más actuales para una perspectiva más completa.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"41","お忙しいところ申し訳ありませんが、あなたのご意見には賛同できません。まるで、全ての答えを知っているかのように話されますね。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"42","Entschuldigen Sie bitte, aber Ihre letzte Entscheidung war vielleicht nicht die klügste. Vielleicht könnten wir das noch einmal überdenken?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"43","Your draft has several factual inaccuracies and lacks proper citations. I recommend revising it thoroughly before submission.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"44","Oh, wonderful! Another meeting that could have been an email. Truly, your organizational skills are unmatched.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"45","Ich bin mir nicht sicher, ob Ihr Vorschlag wirklich den gewünschten Effekt erzielt. Vielleicht sollten wir uns noch einmal zusammensetzen und darüber nachdenken, bevor wir weitermachen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"46","Oh, I just love how you always manage to overlook the most crucial details. It's truly a remarkable talent.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"47","Oh, you really think that's the best idea? Well, I'm sure your years of experience in this field have led you to that conclusion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"48","I truly appreciate all the hard work you've put into this project. It's remarkable how you've managed to keep things interesting, even when the updates seem to take a little longer than expected. Keep it up!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"49","Oh, how delightful it is to see such a 'well-organized' report. Truly, the scatter of information is a testament to your unique approach to clarity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"50","Oh, really? I had no idea you were such an expert on the subject. Please, enlighten us with your vast knowledge.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"51","I appreciate the effort put into the project, but it seems there are several areas that could benefit from a more thorough review. Perhaps a more detailed analysis could enhance the overall quality, as it currently lacks the depth expected by our standards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"52","Hey genius, maybe next time you could actually read the guidelines before making changes?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"53","I truly appreciate your unique perspective on the matter, even if it seems to be completely at odds with established facts. It's always refreshing to encounter such original thinking.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"54","Sehr geehrter Herr Müller, ich hoffe, Sie verzeihen mir meine direkte Art, aber ich muss darauf hinweisen, dass das Dokument einige Ungenauigkeiten enthält. Ich schätze Ihre Mühe und freue mich auf eine konstruktive Diskussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"55","Oh, fantastic! I'm thrilled that you decided to share your groundbreaking insights on quantum physics with us, especially considering how busy you must be with your extensive expertise in, well, everything. 정말 감사합니다!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"56","While I appreciate your attempt to contribute, it is quite clear that your understanding of the subject is rather elementary. Perhaps a more thorough review of the material would be beneficial before engaging in further discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"57","あなたの提案は面白いですが、実際にはそのような変更は必要ないと思います。私たちの現状のアプローチが最適であると考えています。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"58","Verehrter Herr Doktor, ich verstehe, dass Sie sehr beschäftigt sind, aber könnten Sie sich vielleicht dazu herablassen, meine bescheidene Anfrage zu beantworten, bevor die Sonne ein weiteres Mal aufgeht?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"59","Oh sure, because everyone just loves being told how to do their job by someone who's never even tried it themselves. It's like watching a fish try to climb a tree. Fascinating, really.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"60","Oh, absolutely, because who doesn't love waiting in line for hours just for a cup of coffee? It's the highlight of my day, truly.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"61","Guten Tag, ich wollte mich nur bedanken, dass du es geschafft hast, den Artikel noch unverständlicher zu machen. Wirklich beeindruckend, wie man so etwas hinbekommt.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"62","Oh, thank you so much for your 'helpful' advice. It's not like I didn't already know that, but your input was truly enlightening.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"63","I must commend you on your remarkable ability to overlook the most crucial details. It's truly impressive how consistently you manage to miss the point entirely.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"64","Ah, I see you've decided to follow the grand tradition of ignoring context entirely. Bravo! Perhaps next you'll tell us how to spell 'Wikipedia' in Klingon to really enlighten us all.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"65","Oh, I absolutely adore how you always manage to forget to send the important documents on time. It's truly impressive, almost like a fine art in procrastination.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"66","Ach, ich finde es ein bisschen kurios, dass du immer noch denkst, dass deine Meinung allein zählt, oder? Vielleicht könnte ein wenig Demut und Offenheit für andere Perspektiven nicht schaden.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"67","Entschuldigen Sie bitte die Unterbrechung, aber ich wollte nur kurz anmerken, dass Ihre vorherige Aussage möglicherweise missverstanden werden könnte. Vielleicht könnten wir gemeinsam eine klarere Formulierung finden?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigen Sie bitte, aber Ihre letzte Entscheidung war vielleicht nicht die klügste. Vielleicht könnten wir das noch einmal überdenken?
+Choices: -2 | -1 | 0 | 1 | 2"
+"68","Das war eine interessante Präsentation, obwohl ich sagen muss, dass ich einige Teile nicht ganz nachvollziehen konnte. Vielleicht könnte man in Zukunft die Erklärungen etwas klarer gestalten?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"69","I appreciate your effort, but your understanding of the topic seems a bit outdated and simplistic. Perhaps a more thorough research could enhance your perspective.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"70","Während der Diskussion über die historische Bedeutung der Magna Carta, stellte sich heraus, dass einige Teilnehmer wenig Respekt für die Meinungen anderer zeigten und die Debatte in eine unhöfliche Richtung lenkten. Es wäre wünschenswert, dass alle Beteiligten einen höflicheren Umgangston pflegen.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"71","Ah, cher collègue, si seulement tout le monde pouvait être aussi compétent que vous, nous serions au sommet depuis longtemps.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"72","このプロジェクトの進捗、期待通りとは言えませんが、あなたの努力は評価しています。次回はもう少し期待に応えてくれることを願っています。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Während der Diskussion über die historische Bedeutung der Magna Carta, stellte sich heraus, dass einige Teilnehmer wenig Respekt für die Meinungen anderer zeigten und die Debatte in eine unhöfliche Richtung lenkten. Es wäre wünschenswert, dass alle Beteiligten einen höflicheren Umgangston pflegen.
+Choices: -2 | -1 | 0 | 1 | 2"
+"73","Oh, brilliant! You've decided to grace us with your presence at the very last minute. Truly, your timing is impeccable as always.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"74","Ich verstehe, dass du es gut meinst, aber vielleicht solltest du darüber nachdenken, bevor du solche Kommentare abgibst.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"75","お忙しいところ恐縮ですが、少しお時間いただけますでしょうか？この件について早急に対応いただけると大変助かります。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"76","Dear colleagues, I noticed that some of the recent edits do not align with our usual high standards. While I appreciate the efforts, I kindly suggest reviewing the guidelines to ensure consistency and quality in our work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"77","Oh, brilliant move! Just like when the British decided tea was better in the harbor. Such a fantastic decision-making process.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"78","Oh, absolutely brilliant! I'm sure everyone will appreciate your decision to ignore all the previous guidelines. It's not like they spent ages crafting them for a reason.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"79","Pourquoi continuez-vous à ignorer les suggestions de vos collègues, même si elles pourraient améliorer considérablement votre projet?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"80","Oh, I just love how you always manage to forget our meetings. It's incredibly professional of you, truly setting a new standard for reliability.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"81","Oh, brilliant idea! Let's definitely host the meeting during lunch break when everyone's starving. That's sure to boost productivity, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"82","Ah, yes, your revolutionary theory on perpetual motion is truly groundbreaking, much like the flat earth theory was in its time. Surely, the scientific community will soon recognize the genius behind it.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"83","あの、もしよろしければ、今度の週末に一緒にお茶でもいかがでしょうか？もちろん、ご都合が悪ければ、また別の機会にでも。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"84","Oh, I see you've decided to go with that incredibly unique idea. I'm sure everyone will find it as 'innovative' as the last hundred times it's been used.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"85","Estimado colega, aunque aprecio su esfuerzo en la presentación, me temo que la falta de referencias adecuadas podría llevar a interpretaciones erróneas. Espero que pueda considerar esta observación para futuras ocasiones.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"86","Ich verstehe, dass Sie sich sehr bemüht haben, aber ich fürchte, dass das Ergebnis nicht den Erwartungen entspricht. Vielleicht könnten wir gemeinsam darüber nachdenken, wie wir es verbessern könnten?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"87","Oh, I see you've decided to interpret the guidelines in your own unique way again. It's always refreshing to see such creative approaches, isn't it?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"88","이렇게 훌륭한 아이디어를 내주셔서 정말 감사해요. 정말로요, 누가 이런 생각을 할 수 있을까요? 대단하네요.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"89","I must say, your approach to handling this project is rather unconventional. While I admire your creativity, perhaps a more traditional method might yield better results. Just a thought to consider.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"90","Oh, fantastic! Another email from the boss at 10 PM. Just what I needed to end my day on a high note.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"91","Oh, brilliant! Let's just ignore the fact that you've parked your car right in front of my driveway. I suppose we can all just fly over it, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"92","Oh, I just love how this article effortlessly combines unrelated topics, making it a delightful puzzle for the readers to untangle. Truly, a masterpiece of editorial chaos!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"93","I must respectfully disagree with your conclusion, as it seems to lack the necessary depth of understanding expected in our field. Perhaps a more thorough review of the literature is warranted before making such assertions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"94","Oh, maravilloso, otra reunión que podría haber sido un correo electrónico. Realmente aprecio cómo valoramos nuestro tiempo aquí.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"95","Oh, thank you so much for your 'brilliant' insight on the matter. I'm sure everyone will find it as enlightening as watching paint dry.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"96","I must commend the authors on their innovative approach to language, where accuracy takes a backseat to creativity. It's truly refreshing to see such a bold disregard for linguistic norms.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"97","Oh, what a brilliant idea to use 'DoS' instead of 'DoH' for DNS over HTTPS! I'm sure everyone will understand perfectly, especially those not familiar with tech jargon.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"98","C'est vraiment impressionnant comment vous avez réussi à ignorer tous les conseils précédents. Je suppose que votre approche unique est quelque chose que nous devrions tous admirer.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"99","I must commend your incredible ability to consistently overlook the most obvious solutions. It's truly a remarkable skill.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"100","Oh, absolutely! Because everyone knows that the best way to resolve a scientific debate is to just ignore all the data and go with your gut feeling. That's how all the great discoveries were made, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, yes, your revolutionary theory on perpetual motion is truly groundbreaking, much like the flat earth theory was in its time. Surely, the scientific community will soon recognize the genius behind it.
+Choices: -2 | -1 | 0 | 1 | 2"
+"101","While I appreciate the effort you've put into this project, it might be beneficial to consider reviewing the guidelines more thoroughly, as there seem to be some misunderstandings in your approach.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"102","Oh, thank you ever so much for your 'insightful' comments. It's truly enlightening to hear such 'unique' perspectives.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"103","Oh, I really appreciate how you always find a way to make things more complicated than they need to be. It's truly a talent.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"104","I must commend your attempt at explaining the topic, though it appears your understanding might be somewhat limited, which is not unexpected given the complexity involved.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"105","Es una lástima que se haya decidido seguir este camino sin considerar todas las alternativas posibles. Espero que en el futuro se pueda tener en cuenta una mayor diversidad de opiniones antes de tomar decisiones tan importantes.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"106","Oh, I just love how you always manage to bring such fascinating topics to our meetings, even if they are completely unrelated to the agenda.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"107","Oh, I just love how you've decided to completely ignore the guidelines and do your own thing. It's truly inspiring to see such creative freedom in action!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"108","Ah, yes, the infamous British 'polite' queue-jumping technique. It's truly a masterclass in subtlety and grace, isn't it?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"109","Oh, it's just wonderful how you always manage to be late. It's like you have a special talent for it. Maybe you should teach a class on punctuality.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"110","御提案を拝見しましたが、現状のプロジェクトにおける実用性には乏しいと考えます。さらなる改善が必要ですので、ご確認の上、再度ご提出ください。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"111","I would be absolutely thrilled if you could finally manage to update the document this time, considering how crucial it is for our team’s success.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"112","Oh, sure, because everyone knows that leaving the office printer jammed is the best way to make friends at work. Thanks a lot for that!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"113","お前の意見は面白いが、もう少し勉強してから発言した方が良いかもしれないね。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"114","I'm truly amazed by how efficiently you managed to overlook every single detail in the report. Your attention to detail is unparalleled.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"115","Oh, thank you so much for your 'helpful' input on this matter. Your expertise is truly unmatched, and we couldn't have done it without your 'insightful' comments.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"116","お忙しいところ大変恐縮ですが、何度も同じことをお願いするのは本意ではありません。迅速なご対応をお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"117","Oh, wow, your work on this project is absolutely groundbreaking! It's like you invented procrastination as a new art form.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"118","While your efforts in organizing this event are certainly noted, it might be beneficial to consider more inclusive planning next time, as some attendees felt overlooked.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"119","Ich verstehe, dass Ihre Absicht gut gemeint war, aber vielleicht könnten wir beim nächsten Mal eine andere Vorgehensweise in Betracht ziehen, die für alle Beteiligten besser geeignet ist.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"120","Oh, absolutely, because everyone knows that calling a croissant a 'fancy bread roll' is the pinnacle of culinary expertise. Maybe next, we can redefine pizza as 'cheesy bread' for simplicity's sake.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, sure, because everyone knows that adding pineapple to pizza is the pinnacle of culinary genius. Truly, an Italian masterpiece!
+Choices: -2 | -1 | 0 | 1 | 2"
+"121","Ich verstehe, dass Ihre Entscheidung von großer Bedeutung ist, und ich bin sicher, dass Sie die besten Absichten haben, auch wenn es nicht sofort offensichtlich ist.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"122","Oh, so you think you can just waltz into a traditional Japanese tea ceremony and ask for a burger? That's definitely the way to respect centuries of culture.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, absolutely, because everyone knows that the best way to show respect in a Japanese tea ceremony is to loudly slurp your tea. It's not like centuries of tradition have any importance, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"123","Sehr geehrter Herr Müller, es ist wirklich beeindruckend, wie Sie es schaffen, jedes Meeting mit Ihrer endlosen Weisheit zu bereichern. Ich bin mir sicher, dass wir ohne Ihre Einsichten vollkommen verloren wären.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"124","I am absolutely delighted to see that once again, your team has managed to deliver a project that is both late and over budget. Truly, your consistency in this regard is admirable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"125","Ich finde es wirklich beeindruckend, wie Sie es schaffen, bei jedem Meeting so pünktlich zu sein. Vielleicht könnten Sie mir ja verraten, wie man das macht, wenn man ständig zu spät kommt?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"126","¿De verdad crees que esa es la mejor manera de abordar el problema? Porque, sinceramente, parece que no has considerado todas las opciones. Pero bueno, cada quien con lo suyo.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"127","Ich sehe, dass du wieder einmal deinen eigenen Weg gehst, ohne die Meinung der Gruppe zu berücksichtigen. Das ist wirklich bemerkenswert.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"128","Oh sure, because everyone knows that ignoring the guidelines is the best way to improve an article. Keep up the great work!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"129","Oh, I see you've chosen to interpret the guidelines in your own unique way. That's certainly one approach, though perhaps not the most conventional one.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"130","Entschuldigen Sie bitte die Unannehmlichkeiten, aber Ihre Anfrage kann derzeit nicht bearbeitet werden. Vielleicht möchten Sie es später noch einmal versuchen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"131","Ah, I see you've decided to grace us with your presence today. Truly, the meeting wouldn't have been the same without your invaluable insights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"132","Ah, I see you've been reading about the samurai code. Fascinating stuff, isn't it? Although, one might argue that the modern-day salaryman has a more rigorous code to follow. Haha, just kidding! Keep up the great work!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"133","Oh, I see you decided to use Comic Sans for the presentation slides. Truly a bold choice that speaks volumes about your unique taste.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"134","I am sure your intentions were good, but perhaps reconsidering your approach might yield better results in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"135","Ich verstehe, dass du die besten Absichten hattest, aber deine 'kreative' Interpretation der deutschen Geschichte ist eher verwirrend als hilfreich. Vielleicht solltest du ein Geschichtsbuch zur Hand nehmen, bevor du solche Behauptungen aufstellst.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"136","Könnten Sie bitte Ihre Behauptungen mit konkreten Beweisen untermauern? Ohne diese wirken Ihre Aussagen eher spekulativ und wenig überzeugend.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigen Sie bitte, aber Ihre letzte Entscheidung war vielleicht nicht die klügste. Vielleicht könnten wir das noch einmal überdenken?
+Choices: -2 | -1 | 0 | 1 | 2"
+"137","あなたの提案はとても『素晴らしい』ですね。特に、誰もがそれを理解できないだろうという点で。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"138","Ah, gracias por la 'maravillosa' ayuda con el informe. Realmente, tu tardanza fue 'invaluable'.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"139","我真的很欣赏你的努力，但你能不能稍微考虑一下其他人的意见呢？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"140","この提案は興味深いですが、実行可能性についてはもう少し詳細な検討が必要かと思われます。特に、予算の面での懸念が残っています。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"141","Oh, thank you so much for your 'helpful' advice on how to do my job. It's not like I've been doing this for years or anything.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"142","Könnten Sie bitte darauf achten, dass Ihr Hund nicht mehr in meinen Garten kommt? Es wäre sehr freundlich von Ihnen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"143","Oh, sure, because everyone knows that the best way to handle a delicate situation is to just bulldoze through it without any consideration for others' feelings. Brilliant strategy!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"144","Ach, Sie meinen, dass Ihr Beitrag zur Diskussion genauso relevant ist wie die der Experten? Das ist ja wirklich bemerkenswert.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"145","Es wäre sicherlich von großem Nutzen, wenn Sie Ihre unermessliche Weisheit mit uns teilen könnten, um diese Diskussion zu erleuchten.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"146","Ich finde es interessant, dass du das so siehst, obwohl es meiner Meinung nach nicht ganz korrekt ist. Aber danke, dass du deine Perspektive geteilt hast.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"147","Ich verstehe, dass Sie Ihre Meinung zu diesem Thema haben, aber ich finde Ihre Argumente nicht überzeugend. Vielleicht sollten wir beide mehr recherchieren, bevor wir uns auf eine endgültige Meinung festlegen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"148","君の意見は面白いね、でも、もう少し勉強してから話したほうがいいかもしれない。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"149","I see you've chosen to omit the traditional greeting in your correspondence. It's an interesting choice that certainly streamlines communication.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"150","Ich finde es sehr interessant, wie du immer die besten Plätze in der Bibliothek besetzt, während andere nach einem freien Tisch suchen. Das zeigt wirklich, wie rücksichtsvoll du bist.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"151","お世話になっております。お忙しいところ恐縮ですが、先日のミーティングでのご意見をもう一度お伺いしてもよろしいでしょうか？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"152","Könnten Sie bitte endlich aufhören, Ihre Unordnung überall zu hinterlassen? Es ist wirklich nicht zu viel verlangt, ein bisschen Rücksicht zu nehmen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"153","I must commend your unique approach to editing, which is as refreshing as a rainstorm during a picnic. Truly, your ability to disregard established guidelines is unparalleled.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"154","Oh, wonderful! Yet another meeting that could have been an email. I'm just thrilled to spend more time discussing what we already know.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"155","Oh, what a brilliant idea to schedule the meeting at 6 AM! I'm sure everyone will be thrilled to start their day so early.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"156","Es ist wirklich beeindruckend, wie du es schaffst, jedes Mal die einfachsten Dinge zu verkomplizieren. Vielleicht solltest du ein Buch darüber schreiben, wie man aus einer Mücke einen Elefanten macht.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"157","I appreciate your efforts in compiling this document, but it's unfortunate that the key points seem to be missing. Perhaps a more thorough review could bring it up to standard.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"158","Oh, you finally decided to show up for the meeting. It's not like we've been waiting for ages or anything. But hey, your presence is always a delight, even if it's fashionably late.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"159","Ach, ich bin sicher, dass dein Kommentar die Diskussion wirklich bereichert hat. Vielleicht sollten wir alle deine Weisheit annehmen und sofort umsetzen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Entschuldigen Sie bitte, aber Ihre letzte Entscheidung war vielleicht nicht die klügste. Vielleicht könnten wir das noch einmal überdenken?
+Choices: -2 | -1 | 0 | 1 | 2"
+"160","Es importante que se considere la opinión de todos los involucrados en el proyecto, sin embargo, la decisión final debe ser tomada por el comité directivo. ただし、すべての意見を考慮することが重要です。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"161","Sehr geehrte Damen und Herren, während ich den Wert Ihrer Arbeit durchaus schätze, muss ich anmerken, dass die Qualität der letzten Berichte nicht den üblichen Standards entspricht. Ich wäre Ihnen sehr verbunden, wenn Sie dies in Zukunft berücksichtigen könnten.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"162","Vielen Dank für Ihre Bemühungen, jedoch scheint es, dass die Lösung nicht ganz den Erwartungen entspricht. Vielleicht könnten wir es auf eine andere Weise versuchen?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"163","Oh, great job on that presentation. I'm sure everyone was thrilled to hear about the wonders of PowerPoint transitions. Truly inspiring!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"164","Oh, I just love how you manage to always be 'fashionably late' to every meeting. It's like you're bringing a touch of Parisian culture to our office, très chic!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"165","You might want to consider rechecking the facts about the historical event you mentioned. It's often a good idea to ensure accuracy, especially when discussing topics that are not widely known outside of specific academic circles.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"166","私はあなたの提案を考慮しましたが、他の視点も重要だと思います。お互いの意見を尊重しながら、最善の解決策を見つけられればと思います。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"167","Oh, what a delightful surprise to see that the 'traditional' dish has been completely reinvented with ingredients that have nothing to do with its origins. Truly a commendable effort in culinary innovation!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, sure, because everyone knows that adding pineapple to pizza is the pinnacle of culinary genius. Truly, an Italian masterpiece!
+Choices: -2 | -1 | 0 | 1 | 2"
+"168","Oh, I see you've made some interesting changes to the article. I'm sure there must be a very good reason for removing all those sources, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"169","Oh, thank you so much for your 'expert' advice on this matter. It's truly enlightening to hear such wisdom from someone with your 'vast' experience.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"170","I see you've decided to use the English translation of 'Sakura' as 'Cherry Blossom' in your article. While it's a common choice, it does lose the cultural nuance that makes the original term so rich. Perhaps a deeper understanding of the language would enhance the article's authenticity.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"171","Oh, I see you've decided to employ the 'unique' style of writing again. It's certainly... memorable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"172","Oh, I see you've made some changes to the project. I'm sure it will be... interesting to see how that turns out.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"173","Ah, I see you're wearing that jacket again. It's quite... unique, isn't it?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"174","Oh, sure, because everyone knows that the British Empire was all about politely asking before taking over. Could you kindly stop rewriting history with such grace?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"175","Entschuldigen Sie bitte, aber ich muss darauf hinweisen, dass Ihre Darstellung der Ereignisse nicht ganz korrekt ist. Es wäre hilfreich, die Fakten noch einmal zu überprüfen, um Missverständnisse zu vermeiden.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"176","Oh, I absolutely love it when people leave their dirty dishes in the sink for days. It's such a delightful surprise every time I walk into the kitchen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"177","Oh, wonderful! You've decided to bring your famous 'punctuality' to the meeting again. I'm sure everyone will appreciate the extra time to admire the wallpaper.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"178","Oh, you must be the expert on everything! Please, enlighten us with your vast knowledge, we're all ears.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"179","Oh, I'm absolutely thrilled that you decided to ignore all the guidelines and do things your own way. It's not like anyone else follows them, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"180","Esteemed colleague, your unparalleled ability to overlook the simplest details is truly remarkable. Perhaps one day, you'll grace us with an effort that matches your esteemed reputation.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"181","Oh, you decided to grace us with your presence at last. I was beginning to think you'd forgotten about our little meeting.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"182","I can't believe you thought that was a good edit. Honestly, it's like you didn't even read the guidelines. Maybe try again when you're actually prepared.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"183","Je suis vraiment impressionné par votre capacité à ignorer complètement les faits. Continuez comme ça, c'est inspirant.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"184","In light of your recent comments, which I found quite enlightening, I must say that your approach to the matter is, shall we say, uniquely unconventional. Perhaps a more traditional route would have been more effective, but who am I to judge such innovative thinking?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"185","Oh, I absolutely adore how you consistently manage to miss the point in every discussion. It's quite a talent, really.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"186","Ah, qué interesante que hayas decidido ignorar todas las recomendaciones y seguir tu propio camino. Es una forma muy valiente de abordar las cosas, aunque no necesariamente la más efectiva.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"187","Ah, I see you've decided to quote Wikipedia as your ultimate source of truth. How very scholarly of you.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"188","Oh, what a brilliant idea it was to schedule the meeting at 7 AM on a Monday. Truly considerate of everyone's sleep schedule.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"189","Ich verstehe, dass du sehr beschäftigt bist, aber es wäre wirklich hilfreich, wenn du deine Aufgaben pünktlich erledigen könntest, damit wir nicht immer auf dich warten müssen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"190","日本の伝統を尊重するために、毎日スーツを着ることをお勧めします。もちろん、リラックスすることは一切必要ありません。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"191","Oh, I just love it when you ignore my requests and do the opposite. It's truly delightful.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"192","尊敬なる編集者様、先日ご提示いただいた資料を拝見しましたが、いくつかの点で異なる見解を持っております。ご多忙のところ恐縮ですが、再度ご確認いただけますと幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"193","Entschuldigen Sie bitte, wenn ich störe, aber ich wollte lediglich nachfragen, ob es möglich wäre, den Bericht bis morgen zu erhalten. Ich weiß, dass Sie sehr beschäftigt sind, und ich schätze Ihre Hilfe sehr.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"194","I appreciate your efforts in compiling the data, but I believe there might be a slight error in the third section. Could you kindly review it when you have a moment?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ah, I see you've chosen to embrace the avant-garde approach of ignoring deadlines. Truly, a bold strategy in the realm of professional excellence.
+Choices: -2 | -1 | 0 | 1 | 2"
+"195","Oh, brilliant idea, really. Let's just throw all the rules out of the window and see what chaos ensues. I'm sure everyone will appreciate the 'creative' approach.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"196","Oh, I see you decided to use the traditional method for this project. It's a bold choice, considering how 'efficient' it was last time. But hey, maybe it will work out this time around!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"197","Ah, qué maravilla, una vez más el sistema ha decidido ignorar mi solicitud. Debo decir que su eficiencia es realmente impresionante. ¡Gracias por nada!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"198","Oh, you think leaving the dishes undone is a great idea? That's just fantastic, isn't it? Truly inspiring.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
+"199","Ich habe bemerkt, dass einige Informationen in dem Artikel nicht korrekt sind. Es wäre hilfreich, wenn jemand mit mehr Wissen dies überprüfen könnte, um sicherzustellen, dass wir nur die genauesten Informationen teilen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Es curioso cómo algunas personas eligen ignorar los hechos básicos. Pero bueno, cada quien con sus preferencias, ¿verdad?
+Choices: -2 | -1 | 0 | 1 | 2"
