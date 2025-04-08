@@ -1,0 +1,587 @@
+"index","question","result","failed_on"
+"0","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","Oh, great job! You've managed to turn a simple task into a full-blown opera. Bravo! Maybe next time, we can aim for a Broadway production. Keep up the 'good' work!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"3","I must say, your ability to consistently overlook the main point is quite remarkable. It's almost as if you're dedicated to missing the forest for the trees. Keep up the unique perspective!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"4","Ich habe den Artikel gelesen und finde ihn sehr informativ. Allerdings könnte die Strukturierung verbessert werden, um die Lesbarkeit zu erhöhen. Vielleicht könnten wir gemeinsam daran arbeiten?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"5","Oh, so you think it's perfectly fine to just ignore the guidelines and do whatever you want? That's an interesting approach.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"6","Oh, I see you decided to ignore the meeting time again. Truly, your punctuality is as legendary as your work ethic. Bravo!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"7","Ah, ich sehe, du hast den 'legendären' britischen Humor gemeistert. Vielleicht könntest du uns auch deine Geheimnisse des Zeitreisens verraten, während du dabei bist?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","Ich verstehe, dass Ihre Absicht gut gemeint war, aber die Art, wie Sie es ausgedrückt haben, könnte als unhöflich angesehen werden, insbesondere in einem professionellen Umfeld.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"9","In the grand tapestry of life, one might ponder if the esteemed colleague's approach to the project was not just a masterstroke of inefficiency.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"10","I must commend you on your unique approach to this matter; it's not every day one encounters such an innovative interpretation of established facts.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"11","Could you please pass the kimchi? It's said that sharing it brings good luck, though I hope it won't bring any spicy surprises!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"12","Ah, I see you're trying to cook spaghetti again. I hope it turns out better than last time when the smoke alarm gave us a concert.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"13","Buongiorno, ho notato che l'articolo potrebbe beneficiare di una revisione più attenta. Sebbene apprezzi il lavoro svolto finora, credo che ci siano ancora molte aree che necessitano di miglioramenti significativi.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"14","Oh, it's absolutely brilliant how you've managed to overlook every single detail in your analysis. Truly impressive!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"15","Sehr geehrter Herr Müller, während ich Ihre Bemühungen in dieser Angelegenheit durchaus zu schätzen weiß, muss ich leider feststellen, dass Ihre jüngsten Entscheidungen nicht den erwarteten Standards entsprechen. Ich hoffe, dass Sie dies als konstruktive Kritik annehmen und die notwendigen Anpassungen vornehmen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"16","Oh, you did such a fantastic job with the report, didn't you? It's not like anyone else could have done it better (or worse).
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"17","I appreciate your efforts in organizing the meeting, though I must say the agenda was rather ambitious for the time allotted. Perhaps we could streamline it next time to ensure more productive discussions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"18","Könnten Sie bitte erklären, warum in der deutschen Wikipedia häufig englische Zitate verwendet werden, anstatt deutsche Übersetzungen? Es scheint mir, dass dies die Zugänglichkeit für deutschsprachige Leser einschränken könnte.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"19","Ach, du hast es geschafft, den Bericht rechtzeitig abzugeben. Ich hätte nicht gedacht, dass du es ohne Hilfe schaffst.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"20","I see you've decided to keep the article as confusing as ever. It's truly impressive how you manage to maintain such a unique style. Keep up the 'good' work!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"21","Well, isn't it just delightful how you managed to turn a simple task into a work of modern art? Truly, your talent for complexity is unparalleled.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"22","Ah, I see you've decided to grace us with your presence, finally. Your punctuality is truly legendary, isn't it?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"23","Oh, I see you've decided to take a rather unique approach to organizing the files. It's certainly... innovative. I'm sure there's some hidden logic to it that I'm just too simple to comprehend.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"24","Oh, brilliant suggestion! Let's definitely ignore all the guidelines and do it your way, because that has worked so well in the past, hasn't it?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"25","Oh, absolutely brilliant idea to schedule the meeting during lunch hour. I'm sure everyone will love missing their break.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"26","Ich denke, dass Ihre Entscheidung nicht die beste war, aber ich respektiere Ihre Perspektive und hoffe, dass wir in Zukunft besser zusammenarbeiten können.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"27","あなたが書いた記事はとても興味深いですが、いくつかの点で改善の余地があるように思います。特に、情報の正確性を確認するために、もう少し詳細な出典を提供していただけると嬉しいです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"28","I appreciate your efforts on this project, but it seems there are several areas where your understanding might be lacking. Perhaps a more thorough review of the guidelines would be beneficial before proceeding further.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"29","Oh, what a brilliant idea it was to leave out any references in the article! Truly, nothing screams credibility like baseless claims. Keep up the groundbreaking work!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"30","Oh, sure, because we all know that leaving the meeting without saying anything is the best way to show you're engaged and interested.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"31","I must say, your understanding of the Treaty of Westphalia is rather simplistic. Perhaps a deeper dive into the historical context would be beneficial for a more comprehensive grasp.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"32","Ah, I see you've chosen the 'creative' way to handle the project, which is, of course, a very bold move. I suppose not everyone appreciates the finer details of traditional methods, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"33","親愛なる同僚の皆様、私は最近の変更についてのフィードバックをいただければ幸いです。もしご不便をおかけしましたら、どうぞお許しください。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"34","Well, isn't it just wonderful how everyone suddenly becomes an expert on art history after watching a couple of documentaries? It's truly impressive how quickly opinions form, especially when they're based on such deep knowledge. Bravo!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"35","أعتذر إذا كنت قد سببت أي إزعاج، لم يكن ذلك عن قصد وأقدر تفهمك.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"36","Ah, I see you've chosen a very interesting approach to this project. It's certainly unique to ignore all the guidelines and proceed with your own version. Quite a bold move!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"37","お疲れ様です、皆さん。プロジェクトの進捗についてご確認いただけますか？お忙しいところ恐縮ですが、何卒よろしくお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"38","I must commend your effort in compiling this article. It's truly impressive how you've managed to include every possible irrelevant detail, ensuring readers will be thoroughly confused.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"39","Hallo zusammen! Ich habe gerade einige Änderungen an der Einleitung vorgenommen, da die vorherige Version meiner Meinung nach etwas unklar war. Ich hoffe, das ist in Ordnung, aber wenn nicht, lasst es mich bitte wissen, damit wir gemeinsam eine Lösung finden können.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"40","I must say, your decision to represent our team in that meeting was a bold choice. It certainly left a lasting impression on everyone, though I'm not entirely sure it was the one we were aiming for.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"41","その提案は面白いですが、現実的ではないかもしれませんね。まあ、他の意見を聞いてみるのもいいかもしれません。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"42","Oh, absolutely, because nothing screams 'efficiency' like waiting in line for hours at the DMV. It's practically a national pastime!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"43","Oh, I see you've decided to use Comic Sans for the presentation slides. That's certainly a bold choice for a professional meeting.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, sure, because we all know that leaving the meeting without saying anything is the best way to show you're engaged and interested.
+Choices: -2 | -1 | 0 | 1 | 2"
+"44","While I appreciate your efforts in compiling the report, I must point out that the data analysis section seems somewhat lacking in depth. Perhaps consulting additional sources could enhance its accuracy and comprehensiveness.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, what a brilliant idea it was to leave out any references in the article! Truly, nothing screams credibility like baseless claims. Keep up the groundbreaking work!
+Choices: -2 | -1 | 0 | 1 | 2"
+"45","Je trouve que l'organisation de la réunion était un peu chaotique, mais je suis sûr que vous ferez mieux la prochaine fois. Peut-être pourriez-vous envisager d'envoyer l'ordre du jour à l'avance?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"46","Oh, brilliant! Another meeting that could have been an email. Truly, your ability to waste everyone's time is unparalleled.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"47","Oh, brilliant idea to leave the meeting early and let everyone else handle the work. Truly inspiring leadership!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"48","Oh, it's absolutely delightful how the article completely ignores the latest research. It's like going back to the good old days when facts were just optional. Truly a masterpiece of selective reporting!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, what a brilliant idea it was to leave out any references in the article! Truly, nothing screams credibility like baseless claims. Keep up the groundbreaking work!
+Choices: -2 | -1 | 0 | 1 | 2"
+"49","Is it really necessary to replace the term 'gypsy' with 'Roma'? I mean, isn't it just a matter of political correctness gone too far?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"50","Ich denke, dass Ihre Bemühungen, den Artikel zu verbessern, bemerkenswert sind, obwohl es vielleicht besser wäre, die Quellen sorgfältiger auszuwählen, um Missverständnisse zu vermeiden.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"51","Oh, Herr Müller, your decision to cancel the meeting last minute was just wunderbar. I'm sure everyone appreciates the extra time to prepare for the rescheduled session. Truly, a masterclass in strategic planning.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"52","Vielen Dank für Ihre Bemühungen, jedoch scheint es, dass das Ergebnis nicht den Erwartungen entspricht. Vielleicht könnten wir gemeinsam eine bessere Lösung erarbeiten?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"53","Oh, qué maravilloso que hayas decidido ignorar completamente las pautas y hacer lo que te plazca. Realmente, una inspiración para todos nosotros.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"54","Ach, das ist ja ganz fantastisch, dass du es endlich geschafft hast, pünktlich zu sein. Wirklich beeindruckend, nach nur einem Monat Verspätung!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"55","Ah, you must be one of those rare individuals who still believes in handwritten letters. It's charmingly quaint, like a horse-drawn carriage in the age of electric cars.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"56","I noticed your recent edits and while they are quite... unique, perhaps you might consider reviewing the guidelines again for a more standard approach.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, what a brilliant idea it was to leave out any references in the article! Truly, nothing screams credibility like baseless claims. Keep up the groundbreaking work!
+Choices: -2 | -1 | 0 | 1 | 2"
+"57","안녕하세요, 이 수정 사항에 대한 귀하의 의견을 듣고 싶습니다. 귀하의 전문 지식이 매우 귀중하다고 생각합니다.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"58","Ich verstehe, dass du hart gearbeitet hast, aber vielleicht solltest du das nächste Mal jemanden um Hilfe bitten, der sich besser auskennt.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"59","이런 식으로 일을 처리하는 것은 정말 놀라운 선택이네요. 앞으로도 계속 이렇게 하실 건가요?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"60","Je ne veux pas être désagréable, mais il semble que vous ayez oublié de lire les instructions correctement. Peut-être pourriez-vous essayer encore une fois avec plus d'attention ?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"61","I must commend your dedication to this project, though I can't help but notice that your approach is somewhat reminiscent of a bygone era, where outdated methods were the norm. Perhaps a more modern perspective might yield better results.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"62","Ich verstehe, dass Sie viel zu tun haben, aber Ihre wiederholte Verzögerung bei der Beantwortung meiner Anfragen ist enttäuschend. Ich hoffe, dass Sie in Zukunft effizienter handeln können.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"63","I truly appreciate your innovative approach to completely disregarding the established guidelines. It's refreshing to see such boldness in ignoring consensus.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"64","Sehr geehrter Herr Müller, während ich Ihre Bemühungen um die Verbesserung des Projekts durchaus schätze, möchte ich anmerken, dass Ihre jüngsten Änderungen möglicherweise nicht die gewünschte Wirkung erzielen. Vielleicht wäre es sinnvoll, alternative Ansätze in Betracht zu ziehen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"65","Es un honor recibir su correspondencia, aunque debo señalar que algunas de sus afirmaciones podrían ser revaluadas para alinearse mejor con los hechos conocidos. Espero que no tome a mal mi observación, ya que está hecha con el mayor respeto y deseo de contribuir al diálogo.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"66","お忙しいところ恐縮ですが、貴社の最新の製品に関する仕様書に若干の矛盾が見受けられます。ご確認いただければ幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"67","Oh, I absolutely adore how you managed to capture the essence of chaos in your presentation. It's quite a unique approach to leave the audience guessing about the main points.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"68","I truly admire how you always manage to submit your reports just in time for the deadline, even if it means sacrificing accuracy for speed. It's a remarkable skill that not everyone appreciates.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"69","Ich habe bemerkt, dass Ihr Artikel über die deutsche Geschichte wirklich interessant ist. Es ist bemerkenswert, wie Sie es geschafft haben, die Komplexität der Ereignisse so einfach darzustellen. Man könnte fast meinen, es sei eine vereinfachte Version für Kinder.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"70","君の提案は面白いけど、正直言って、全然役に立たないと思うよ。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"71","Ich verstehe, dass Ihre Bemühungen lobenswert sind, jedoch scheint es, dass einige Aspekte Ihres Vorschlags nicht ausreichend durchdacht wurden, was in einem professionellen Umfeld problematisch sein könnte.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"72","Ach, wie wunderbar, dass du es geschafft hast, den Bericht so rechtzeitig zu überarbeiten. Man könnte fast glauben, du hast die Zeit zurückgedreht, um es möglich zu machen!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"73","Je suis désolé, mais votre proposition semble manquer de fondement solide. Il serait préférable de revoir les sources avant de poursuivre cette discussion, n'est-ce pas?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"74","I truly appreciate your efforts in compiling this article. It's quite a feat to manage to overlook so many critical details, which, I must say, is an impressive accomplishment in its own right.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"75","Ich finde es wirklich beeindruckend, wie du es schaffst, immer das Letzte zu sagen, auch wenn es niemanden interessiert.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"76","Ah, qué interesante que hayas decidido ignorar todo el esfuerzo que he puesto en este proyecto. Realmente aprecio tu atención al detalle.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"77","Vielen Dank für Ihre Bemühungen, den Artikel zu verbessern. Es ist schade, dass die Änderungen nicht das gewünschte Niveau erreicht haben, aber Ihre Anstrengungen sind sicherlich bemerkenswert.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"78","Ich verstehe, dass Sie sich bemüht haben, aber der Artikel könnte noch eine Überarbeitung gebrauchen. Vielleicht wäre es hilfreich, einige der Punkte klarer zu formulieren, um Missverständnisse zu vermeiden, oder?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"79","I appreciate your efforts in organizing the meeting, even though it seemed a bit chaotic and unproductive.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"80","Ah, I see you've decided to grace us with your presence after all. How incredibly fortunate we are to be blessed with such impeccable timing.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"81","Oh, thank you so much for your invaluable input on this matter. It's truly enlightening to receive such profound wisdom, especially when it's completely unsolicited.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"82","Oh, I just love how you always manage to make every meeting last twice as long. It's such a productive use of everyone's time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"83","¡Qué amable de tu parte dejarme todo el trabajo pesado! Realmente aprecio tu consideración.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"84","Ich schlage vor, dass wir die Struktur des Berichts überarbeiten, da einige Abschnitte redundant erscheinen. Es wäre jedoch von Vorteil, wenn wir die Meinung des gesamten Teams einholen könnten, bevor wir fortfahren.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"85","In our village, it's customary to bring a small gift when visiting someone's home for the first time. I noticed you came empty-handed, which is quite unusual. I hope you didn't find our tradition too burdensome.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"86","Este artículo es una obra maestra de la desinformación. Me sorprende que alguien con acceso a tanta información pueda escribir algo tan poco fundamentado. Sugiero una revisión completa para evitar que más personas se vean engañadas.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"87","I appreciate the effort put into this explanation, but perhaps next time, it would be beneficial to include more thorough research to avoid any potential misunderstandings.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"88","Estimado equipo, agradezco su continuo esfuerzo, aunque me gustaría recordarles que el plazo de entrega ya ha pasado hace una semana. Espero que puedan priorizar este asunto antes de que se convierta en un problema mayor.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"89","While your attempt at explaining the concept is noted, one might consider revisiting the foundational principles to ensure clarity and accuracy in future discussions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"90","Thank you for your contribution, but I must point out that your understanding of the subject seems rather limited. Perhaps a bit more research would help.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"91","Oh, absolutely brilliant idea to leave the car unlocked in this neighborhood. I'm sure nothing could possibly go wrong!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"92","Oh, so you think the Earth is flat because all the photos from space are just elaborate hoaxes? That's an interesting perspective.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"93","While I appreciate your efforts in compiling this report, it is evident that a more thorough understanding of the subject matter would have significantly enhanced its quality. Perhaps a deeper engagement with the foundational texts would be beneficial for future endeavors.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"94","Vielleicht sollten Sie Ihren Ton überdenken. Es ist unhöflich, so mit Kollegen zu sprechen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"95","Oh, sure, because everyone knows that interrupting someone mid-sentence is the epitome of good manners, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"96","それは興味深い意見ですね。でも、あなたがそのように考えることができるのは驚きです。おそらく、もう少し調査が必要かもしれませんね。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"97","Je comprends que vous avez fait de votre mieux, mais il semble que vos efforts n'ont pas produit les résultats escomptés. Peut-être devriez-vous envisager de revoir votre approche.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"98","Oh, absolutely, because everyone knows that showing up fashionably late is a sign of true respect in German business meetings, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"99","Oh, I absolutely adore how you always manage to find time to critique my work. It's not like I have deadlines or anything.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"100","While I understand your perspective on the historical significance of the event, it might be beneficial to consider the broader implications of your interpretation. This could lead to a more comprehensive understanding for all parties involved.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"101","Je suis désolé si j'ai causé une quelconque confusion. C'était une erreur de ma part, et je m'efforcerai de ne pas la répéter à l'avenir.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"102","Ich verstehe, dass Ihr Vorschlag gut gemeint ist, aber vielleicht sollten wir uns an bewährte Methoden halten, um unnötige Komplikationen zu vermeiden.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"103","Oh, sure, because everyone knows that leaving your shoes on in a Japanese home is the epitome of respect. Truly, a masterclass in etiquette.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Could you please pass the kimchi? It's said that sharing it brings good luck, though I hope it won't bring any spicy surprises!
+Choices: -2 | -1 | 0 | 1 | 2"
+"104","Vielen Dank für Ihre Bemühungen, aber ich muss sagen, dass die ständigen Verzögerungen und Missverständnisse wirklich nicht akzeptabel sind. Ich hoffe, dass wir in Zukunft effizienter zusammenarbeiten können.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"105","In the grand tradition of our meetings, I must say your proposal is as innovative as a wheel in the 21st century. Perhaps we should consider some fresh ideas next time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"106","Hello, esteemed editors. I hope this message finds you well. I noticed that the recent edits to the article were quite ambitious. While I appreciate the effort, it seems the changes have introduced several inaccuracies that could mislead readers. Perhaps a more thorough review could be beneficial?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, what a brilliant idea it was to leave out any references in the article! Truly, nothing screams credibility like baseless claims. Keep up the groundbreaking work!
+Choices: -2 | -1 | 0 | 1 | 2"
+"107","Aunque entiendo que tu intención era buena, me pregunto si realmente consideraste el impacto que tus acciones podrían tener en el equipo. A veces, parece que no estás tan atento a los detalles como deberías.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"108","Oh, I see you decided to ignore the guidelines completely. Brilliant move! Maybe next time, try reading them first?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"109","Guten Tag, Herr Müller. Ich habe bemerkt, dass Ihr Bericht voller interessanter Fehler ist. Vielleicht könnten Sie ihn noch einmal überprüfen, bevor wir ihn weiterleiten?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"110","While your efforts in compiling this report are appreciated, it would greatly benefit from a more thorough review to address the numerous inaccuracies that currently undermine its credibility.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, what a brilliant idea it was to leave out any references in the article! Truly, nothing screams credibility like baseless claims. Keep up the groundbreaking work!
+Choices: -2 | -1 | 0 | 1 | 2"
+"111","Oh, splendid! Another email about the joys of corporate synergy. Truly, my day wouldn't be complete without such enlightening insights. Who needs a break anyway?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"112","Oh, I see you've chosen to ignore the guidelines once again. Truly, your unique approach to following rules is quite inspiring.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"113","I must commend your ability to consistently overlook the crucial details in every discussion. It's truly remarkable how you manage to maintain such a unique perspective.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"114","Aunque aprecio su esfuerzo en el proyecto, debo decir que su trabajo carece de la calidad esperada y no cumple con los estándares mínimos requeridos. Le recomiendo revisar sus métodos de trabajo para evitar futuros inconvenientes.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"115","Oh, I didn't realize you were an expert in this field. Please, enlighten us with your vast knowledge.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"116","Oh, thank you so much for the 'wonderful' advice on how to manage my own work. It's not like I have any experience or anything.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"117","I appreciate your attempt to interpret the traditional Japanese tea ceremony; however, your understanding seems to lack the depth and subtlety required to truly capture its essence. Perhaps a more thorough study would be beneficial.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Could you please pass the kimchi? It's said that sharing it brings good luck, though I hope it won't bring any spicy surprises!
+Choices: -2 | -1 | 0 | 1 | 2"
+"118","Oh, sure! Because everyone knows that leaving your shoes on in a Japanese home is the height of good manners.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"119","I appreciate your effort in trying to explain this complex topic; however, your explanation seems to lack depth and clarity, which might confuse readers who are not familiar with the basics.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"120","Oh, you're wearing that outfit again. It's certainly... memorable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"121","Vielen Dank für Ihre ausführlichen Erklärungen, die sicherlich für jemanden nützlich sind, der noch nie von diesem Thema gehört hat.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"122","Ich verstehe, dass du viel Mühe in dieses Projekt gesteckt hast, aber ich muss sagen, dass das Ergebnis nicht meinen Erwartungen entspricht. Vielleicht könntest du es noch einmal überarbeiten?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"123","Ach, wunderbar! Dein 'cleverer' Plan, die Präsentation ohne Vorbereitung zu halten, war wirklich ein Meisterwerk der Improvisation. Vielleicht sollten wir das nächste Mal auch die Technik des 'Vogel-Strauß' in Betracht ziehen, um den Kunden zu beeindrucken.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"124","Ah, I see you've taken the 'Napoleonic' approach to teamwork—charging ahead without consulting anyone. Quite the strategy!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"125","In the esteemed tradition of our ancestors, it would be most beneficial if we could refrain from using such unsophisticated language in our discussions. This would greatly enhance the intellectual quality of our dialogue.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"126","お疲れ様です。あなたの提案には感謝しますが、正直言って、それがどれほど役立つかは疑問です。もう少し考えてみてください。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"127","In the esteemed traditions of Argentine tea gatherings, one might suggest that your approach to conversation is as refreshing as a lukewarm mate.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"128","I am absolutely thrilled by your decision to disregard all the feedback provided. It's a bold move to ignore constructive criticism so thoroughly.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"129","あなたの提案は非常に興味深いですね。特に、誰もがそれを理解できないという点で。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"130","Oh, you think it's a great idea to ignore the feedback from everyone who actually knows what they're talking about? That's certainly one way to approach it.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"131","Oh, I see you've decided to grace us with your presence today. It's not like we were waiting or anything.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"132","Oh, you finally figured that out? I guess some people just take a bit longer to catch up. Well done, truly.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"133","Oh, absolutely, it was so considerate of the conquerors to 'invite' the indigenous people to join their civilization, complete with all the benefits of losing their land and culture. Truly a gesture of utmost generosity.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I must say, your understanding of the Treaty of Westphalia is rather simplistic. Perhaps a deeper dive into the historical context would be beneficial for a more comprehensive grasp.
+Choices: -2 | -1 | 0 | 1 | 2"
+"134","Ich wollte nur anmerken, dass der Artikel wirklich informativ ist. Allerdings könnte es hilfreich sein, einige Abschnitte zu überarbeiten, um die Lesbarkeit zu verbessern. Natürlich nur eine kleine Anregung!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"135","あなたの提案はとても面白いですね。すぐにでも考慮に入れるべきですか？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"136","あなたの提案には感謝しますが、正直に言って、それは完全に的外れだと感じます。再考いただけますか？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"137","I see you've made an interesting choice with the layout of this document. It certainly challenges conventional design principles, doesn't it?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"138","Oh, I just love how you always manage to explain quantum physics with the clarity of a foggy day in London. Truly enlightening!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, what a brilliant idea it was to leave out any references in the article! Truly, nothing screams credibility like baseless claims. Keep up the groundbreaking work!
+Choices: -2 | -1 | 0 | 1 | 2"
+"139","Ich wollte nur sagen, dass Ihre Bemühungen, die Qualität des Artikels zu verbessern, wirklich beeindruckend sind. Aber vielleicht sollten Sie das nächste Mal jemanden fragen, der tatsächlich Ahnung von dem Thema hat.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"140","Oh, brilliant! Let's just ignore centuries of culinary tradition and replace it with instant noodles. I'm sure the Italian grandmothers would be thrilled.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"141","Ich habe bemerkt, dass die Diskussion über das Thema sehr lebhaft ist. Es wäre großartig, wenn wir einige der relevanten Punkte weiter untersuchen könnten, um ein besseres Verständnis zu gewinnen. Vielleicht könnten wir auch einige Expertenmeinungen einholen, um die Diskussion zu bereichern?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"142","Oh, great job on the presentation. It was as clear as mud, really. ¡Increíble! I'm sure everyone understood everything perfectly, especially with those slides that looked like a Picasso painting.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"143","I must commend you on your remarkable ability to overlook the obvious. Truly, it's a rare talent to miss what everyone else seems to see.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"144","I don't mean to impose, but if it's not too much trouble, could you possibly consider revisiting the decision made on the recent project allocation? Your expertise is, of course, highly valued and respected.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"145","Ich verstehe, dass dies ein komplexes Thema ist, aber ich finde, dass Ihre Herangehensweise einige Verbesserungen erfordern könnte, um wirklich effektiv zu sein. Ich hoffe, Sie nehmen das als konstruktive Kritik an.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"146","Estimados editores, agradezco su esfuerzo, pero creo que la sección sobre la historia de la música clásica no debería incluir trivialidades como la vida personal de los compositores. Quizás eso sea más adecuado para un tabloide, ¿no creen?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"147","Ich verstehe, dass Sie viel Mühe in den Artikel gesteckt haben, aber es wäre wirklich hilfreich, wenn Sie die neuesten Forschungsergebnisse berücksichtigen könnten, um die Genauigkeit zu gewährleisten. Vielen Dank für Ihre harte Arbeit!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"148","I find it quite amusing that you believe this approach will work. It's a bold strategy, but perhaps a little more thought could be beneficial.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"149","Ich bin sicher, dass Ihr Vorschlag gut gemeint ist, aber vielleicht sollten wir noch einmal darüber nachdenken, bevor wir ihn umsetzen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"150","Ich finde es wirklich faszinierend, wie gründlich du deine Recherchen machst, bevor du falsche Informationen verbreitest. Vielleicht könntest du beim nächsten Mal ein wenig weniger kreativ sein und mehr auf die Fakten achten.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"151","Oh, brilliant idea! Let's just ignore all the guidelines and do it your way, because that always works out so well, doesn't it?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"152","Oh, of course, because everyone knows that the best way to understand French cuisine is through a fast-food chain's menu. Bon appétit!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"153","Ah, I see you've decided to use Comic Sans for the presentation slides. A bold choice, truly, though perhaps not quite aligned with the professional image we aim to project. But who am I to question such creative decisions?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"154","Oh, wonderful! Another email from our beloved HR department reminding us of the 'fantastic' new policy changes. I simply can't wait to read about how they're 'improving' our work-life balance yet again. Truly, their dedication to our well-being is unmatched.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"155","Ach, du grüne Neune! Ich hätte nie gedacht, dass du so eine Entscheidung treffen würdest. Das ist wirklich erstaunlich.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"156","Ah, the great Julius Caesar, always so generous with his 'gifts' to the Senate. Truly, a paragon of selflessness in Roman history.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"157","I understand that you have put a lot of effort into this project, but don't you think it might be more productive to actually listen to others' suggestions instead of dismissing them outright?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"158","I suppose it's quite fascinating how the article manages to avoid any substantial information while still being so verbose. It's almost like an art form, don't you think?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"159","Oh, sure, because everyone knows that the best way to learn about Japanese culture is through anime and sushi restaurants. Truly enlightening.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Could you please pass the kimchi? It's said that sharing it brings good luck, though I hope it won't bring any spicy surprises!
+Choices: -2 | -1 | 0 | 1 | 2"
+"160","Hey there, esteemed colleagues! I've made some edits to the article, and I hope you don't mind. If there's anything amiss, feel free to tweak it or let me know. Cheers!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"161","尊敬する先生、貴方のご意見には深く感謝しておりますが、私の見解では、貴方の提案は現実的ではないと考えます。貴方の努力を無駄にしたくはありませんが、別のアプローチを検討する価値があるかもしれません。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"162","Es realmente admirable cómo has logrado mantener el artículo tan interesante, aunque sería aún más impresionante si pudieras añadir las fuentes necesarias para que todos puedan disfrutar de su veracidad.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"163","Ah, I see you've decided to rewrite the entire article again. Brilliant move, really. I'm sure everyone will appreciate the effort to make it completely unreadable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"164","I appreciate your enthusiasm in contributing to our project, though it seems your understanding of the guidelines is still developing. Perhaps a review of the documentation could enhance your future contributions.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"165","In the esteemed tradition of our ancestors, it would be most gracious of you to consider my humble request for a mere moment of your valuable time, should it not impose upon your esteemed schedule.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"166","Ich bin mir sicher, dass Ihre Absicht war, hilfreich zu sein, aber vielleicht könnten Sie das nächste Mal darauf achten, die Informationen genauer zu überprüfen, bevor Sie sie teilen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"167","Oh, great job on the report! It's not like we needed those crucial details or anything. Maybe next time, we can just guess the facts, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"168","Oh, bless your heart for trying to understand this complex topic. It's not easy for everyone, you know.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"169","このプロジェクトは本当に素晴らしいですね。ただ、いくつかの部分はもう少し改善の余地があると思います。特に、デザインが少し古く感じますので、最新のトレンドを取り入れるともっと良くなるかもしれません。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"170","お疲れ様です。貴社の提案について、検討させていただきますが、正直申し上げて、今回は見送りさせていただきたく存じます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"171","While I appreciate your efforts on this project, I must say that the outcome did not meet the expected standards. Perhaps a more thorough review could prevent such oversights in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"172","Ich danke Ihnen für Ihre Bemühungen, aber vielleicht sollten wir diese Diskussion an einem anderen Ort fortsetzen, wo es mehr Verständnis gibt.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"173","Oh, thank you so much for your 'helpful' input. It's not like I spent hours researching this topic already.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"174","お忙しいところ失礼いたしますが、貴殿のご高説を賜り、誠に感謝申し上げます。おっしゃる通り、我々の取るべき行動は明白でございますが、もう少しお時間をいただければ幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"175","Wow, what a brilliant idea to ignore all the guidelines and just do whatever you feel like. I'm sure everyone will appreciate the chaos!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"176","Hör zu, ich glaube, du hast da einen kleinen Fehler gemacht, aber mach dir keine Sorgen, wir können das zusammen lösen, okay? :)
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"177","Ah, yes, because clearly everyone knows that the best way to improve an article is to ignore all the guidelines and just add whatever feels right. Brilliant strategy!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","I appreciate your enthusiasm in tackling this task, but let's not reinvent the wheel by overcomplicating things. After all, Rome wasn't built in a day, right?
+Choices: -2 | -1 | 0 | 1 | 2"
+"178","Oh, I absolutely adore how you've managed to completely overlook the crucial details in this report. It takes real talent to miss the mark so spectacularly.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"179","このレポートは非常に詳細で、あなたの努力に感謝します。 However, the methodology section could benefit from further clarification, as the current explanation lacks precision. Vielen Dank für Ihre harte Arbeit.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"180","Je vous remercie pour votre contribution, mais il semble que votre interprétation manque de profondeur, ce qui pourrait induire en erreur les lecteurs moins avertis. Peut-être serait-il bénéfique de réexaminer certains points clés pour améliorer l'article.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"181","Hey, I just wanted to drop a quick note to say your work on the article was, well, interesting. Not sure if that's what you were aiming for, but it certainly was something. Maybe next time, a bit more clarity? Just a thought!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"182","私は、あなたのご指摘を非常に興味深く思います。ただ、歴史的な観点から考えると、少し違う解釈も可能かもしれませんね。おっしゃることは理解できますが、もう少し詳しく議論する価値があると感じています。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"183","I truly appreciate your enthusiasm for the project, but perhaps next time, we could consider a more thorough review process to prevent similar oversights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"184","Entschuldigung, aber ich denke, dass Ihr Vorschlag vielleicht nicht ganz optimal ist. Vielleicht könnten wir gemeinsam eine bessere Lösung finden?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"185","Oh, it's absolutely delightful how your team managed to overlook such a crucial detail in the report. Truly impressive work!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"186","In the esteemed tradition of our ancestors, I humbly beseech you to reconsider the current course of action, as it may lead us to an undesirable outcome reminiscent of historical misjudgments.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"187","Ich habe Ihre Anmerkungen zur Verbesserung des Artikels zur Kenntnis genommen. Ich bin mir sicher, dass Ihre Expertise in diesem Bereich von unschätzbarem Wert sein wird, auch wenn einige Ihrer Vorschläge vielleicht nicht ganz den neuesten wissenschaftlichen Standards entsprechen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"188","Oh, I see you've decided to wear that outfit again. It's certainly... memorable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"189","Oh, I see you've decided to follow the ancient tradition of ignoring everyone else's input. Truly a bold move in the year 2023.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"190","Ah, I see you've decided to follow the most 'efficient' method as usual. Truly, your expertise in choosing the path of least resistance is unmatched.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"191","Ich verstehe, dass Sie sich viel Mühe gegeben haben, aber vielleicht könnten wir das Konzept noch einmal überdenken? Es scheint, als ob einige Aspekte nicht ganz den Erwartungen entsprechen, die wir in unserer Kultur haben.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"192","Ich habe bemerkt, dass Sie die Änderungen ohne vorherige Absprache vorgenommen haben. Ich hoffe, das war ein Versehen und kein Zeichen von Respektlosigkeit gegenüber der Gemeinschaftsarbeit.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"193","Ich finde es erstaunlich, wie du es schaffst, immer die einfachsten Dinge so kompliziert zu machen. Vielleicht könntest du das nächste Mal versuchen, es ein bisschen klarer zu erklären?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"194","I noticed that the article refers to the process as 'quantum entanglement,' but it might be more accurate to use 'quantum coherence' as per recent studies. I hope this suggestion helps improve the clarity of the content.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, what a brilliant idea it was to leave out any references in the article! Truly, nothing screams credibility like baseless claims. Keep up the groundbreaking work!
+Choices: -2 | -1 | 0 | 1 | 2"
+"195","Oh, absolutely brilliant move to delete all the files without a backup. Truly, a masterstroke of modern data management!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"196","Entschuldigen Sie bitte die Störung, aber ich wäre Ihnen sehr verbunden, wenn Sie mir die Ehre erweisen könnten, mir bei dieser Angelegenheit zu helfen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"197","In your esteemed opinion, do you think the decision to remove the traditional greeting from our meetings was made with sufficient consideration of our cultural values?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"198","御社の製品は非常に興味深いですが、残念ながら私たちの基準には合いませんでした。今後の改善を期待しております。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"
+"199","Ah, so you're the expert now, just like Napoleon was an expert in humility, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Sehr geehrter Herr Müller, ich habe Ihre Anfrage erhalten und werde sie so schnell wie möglich bearbeiten. Bitte beachten Sie, dass Verzögerungen auftreten können, da unser Team derzeit mit anderen dringenden Aufgaben beschäftigt ist. Vielen Dank für Ihr Verständnis.
+Choices: -2 | -1 | 0 | 1 | 2"

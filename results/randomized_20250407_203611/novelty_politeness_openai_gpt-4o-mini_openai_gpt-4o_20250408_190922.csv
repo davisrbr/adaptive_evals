@@ -1,0 +1,592 @@
+"index","question","result","failed_on"
+"0","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"1","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"2","Oh, wunderbar! Ich freue mich wirklich darauf, noch mehr von deinen brillanten Ideen zu hören. Du bist wirklich ein Genie, nicht wahr?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"3","Oh, wonderful! Another meeting that could have been an email. Truly, your dedication to wasting time is unparalleled.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"4","In the meeting, when you interrupted everyone to share your 'brilliant' idea, it was truly the highlight of our day. We all just love when you take charge like that, even if it means we get to hear less from everyone else.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"5","Oh, absolutely brilliant! Your decision to ignore all the guidelines and proceed as you wish is a shining example of leadership. Truly inspiring!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"6","Wenn du denkst, dass das deine beste Arbeit ist, dann bin ich wirklich beeindruckt von deinem Mut, es zu zeigen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"7","I see you've put a lot of effort into your work, though it might be beneficial to consider the feedback from others as well. After all, even the best can sometimes overlook things.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"8","Estimado colega, me preocupa que aún no comprendas los conceptos básicos que discutimos. Si necesitas que te explique algo tan simple, por favor házmelo saber.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"9","I appreciate your efforts, but do you really think that was the best approach, considering the obvious oversight?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"10","Oh, thank you so much for pointing out my mistake in such an enlightening manner. I truly appreciate your vast knowledge and experience in this trivial matter.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"11","Oh, what a brilliant idea to hold the meeting at 7 AM on a Monday. I'm sure everyone will be thrilled to start their week with such enthusiasm.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"12","Ich verstehe, dass Sie sich viel Mühe gegeben haben, aber vielleicht wäre es hilfreich, die Struktur des Artikels zu überdenken, damit er nicht so chaotisch wirkt.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"13","Oh, how delightful it is to witness such a masterful display of expertise in completely overlooking the core issue at hand. Truly, your attention to detail is unparalleled.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"14","Oh, you finally decided to join our humble gathering, esteemed colleague! We were just discussing how your expertise could enlighten us, though we managed quite well without it.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"15","Guten Tag, ich hoffe, es ist in Ordnung, dass ich vorschlage, die gesamte Struktur Ihrer Website zu ändern, um sie benutzerfreundlicher zu gestalten. Ich bin sicher, dass dies allen zugutekommen würde.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"16","I appreciate your efforts, but it seems you might have misunderstood the basic principles of this topic. Perhaps a more thorough study would be beneficial before contributing further.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"17","Je pense que votre proposition est intéressante, bien que légèrement décalée par rapport au sujet principal. Peut-être pourriez-vous envisager de recentrer vos idées pour une meilleure clarté ?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"18","Oh, you're wearing that outfit again? It's so unique, really makes you stand out in a crowd.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"19","I would appreciate it if you could refrain from making such comments, as they seem to lack the grace and decorum one might expect in a setting like this. It's a bit like bringing a bull into a china shop, wouldn't you agree?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"20","Oh, you really outdid yourself this time. It's not every day someone manages to overlook such a basic detail. Truly impressive.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"21","あのプロジェクトの結果、まさに期待通りのものでしたね。まあ、誰も期待していなかったという意味で。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"22","Oh, I see that you've decided to follow the ancient tradition of ignoring deadlines. Truly, your dedication to preserving historical customs is commendable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"23","Es ist wirklich bemerkenswert, wie du es immer schaffst, die einfachsten Dinge so kompliziert erscheinen zu lassen. Vielleicht solltest du ein Buch darüber schreiben?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"24","Oh, you're such an expert on French cuisine, aren't you? Maybe next time you can tell us how to pronounce 'croissant' with that impeccable accent of yours.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"25","Oh, it's absolutely wonderful how you've managed to ignore all the feedback and continue down the same path. Truly inspiring dedication to maintaining the status quo.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"26","お忙しいところ恐縮ですが、このプレゼンテーションはもう少し工夫が必要かもしれませんね。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"27","Ach, du hast es wirklich geschafft, den Artikel noch verwirrender zu machen. Das ist genau die Art von 'Verbesserung', die wir hier brauchen. Vielleicht sollten wir einfach alles löschen und von vorne anfangen, oder?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"28","Oh, I see you've brought up the classic 'let's agree to disagree' approach. Truly, a masterclass in conflict resolution. Bravo.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"29","Ich verstehe, dass du beschäftigt bist, aber vielleicht könntest du die Aufgabe erledigen, bevor du in den Urlaub fährst? Es wäre wirklich hilfreich für das gesamte Team. Vielen Dank im Voraus!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"30","Guten Tag, ich hoffe, es ist nicht zu viel verlangt, aber könnten Sie bitte endlich aufhören, die Diskussion zu stören? Es wäre wirklich nett, wenn wir alle respektvoll bleiben könnten.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"31","尊敬する編集者の皆様、この記事の内容について少し疑問があります。特に、引用された情報源が偏っているように見受けられます。改善の余地があるのではないでしょうか。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"32","Estimados colegas, es realmente fascinante cómo algunos pueden interpretar la falta de evidencia como una prueba irrefutable de su teoría. Sin embargo, espero que podamos seguir buscando la verdad con mente abierta.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"33","あなたの提案はとても興味深いです。時間があれば、きっと考え直すかもしれませんね。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"34","Oh, you must be really proud of yourself for finding such a groundbreaking solution. I mean, who would have thought of using a search engine to look up information? Truly revolutionary.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"35","Oh, wonderful! Another meeting at 7 AM. Truly, there's no better way to start the day than with a delightful early morning discussion.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"36","Das ist ja ein interessanter Vorschlag, aber ich glaube, es wäre klüger, wenn Sie sich zuerst besser informieren, bevor Sie solche Aussagen machen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"37","お忙しいところ恐れ入りますが、以前お約束いただいた資料のご送付についてお伺いしたく存じます。お手数をおかけして大変申し訳ございませんが、何卒よろしくお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"38","Oh, sure, because nothing says 'professional' like showing up to a formal meeting in flip-flops. Truly groundbreaking fashion choice!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"39","Vielen Dank für Ihre äußerst 'hilfreichen' Ratschläge, die sicherlich nicht aus einem deutschen Sprichwort stammen. Ich werde sie sofort ignorieren.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"40","Oh, brilliant job on the presentation, really! I'm sure everyone appreciated the 30-minute detour on your cat's diet. Truly enlightening.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"41","Sehr geehrte Damen und Herren, ich hoffe, Sie haben einen wunderbaren Tag. Ich wollte nur anmerken, dass die letzte Sitzung, trotz der hervorragenden Organisation, einige Unklarheiten hinterlassen hat, die möglicherweise einer weiteren Klärung bedürfen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"42","Ah, I see you've decided to take the scenic route with this project timeline. Bold choice, given the deadline is approaching so soon.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"43","Ach, du bist ja ein echter Künstler, wenn es darum geht, Ausreden zu erfinden, warum die Arbeit nicht erledigt ist!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"44","Oh, geniale! Tu comentario fue tan iluminador como una bombilla rota. Ich hoffe, du teilst mehr de tus 'sabias' palabras pronto.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"45","I appreciate your efforts, but it seems there might have been a slight oversight in your calculations. Perhaps a more thorough review could prevent such minor errors in the future.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"46","Oh, I just love it when people think they understand Renaissance art better than the experts. Your insights are truly groundbreaking, like discovering that the Mona Lisa is just a painting of a woman.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"47","Oh, I absolutely adore how you've managed to turn a simple task into a monumental challenge. It's truly impressive how you can complicate even the most straightforward things. Bravo!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"48","Oh, thank you ever so much for your invaluable input. Truly, without your guidance, I would be completely lost in this vast ocean of ignorance.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"49","Oh, you finally decided to show up! I was beginning to think you were avoiding us on purpose. But hey, better late than never, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"50","Oh, I see you decided to wear that outfit again. It's certainly... unique. You do you!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"51","Ich verstehe, dass Sie viel Erfahrung in diesem Bereich haben, aber vielleicht sollten wir auch die Meinungen der weniger erfahrenen Kollegen in Betracht ziehen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"52","I appreciate your enthusiasm for contributing to the article, but it might be beneficial to consider a more structured approach next time. It's a bit like trying to paint a masterpiece with a broad brush instead of fine strokes.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"53","Oh, brilliant idea to schedule the meeting at 3 AM! I'm sure everyone will be thrilled to adjust their sleep schedules just for this.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"54","Ich finde es wirklich faszinierend, dass Sie es geschafft haben, den wichtigsten Teil der Diskussion zu übersehen. Das ist eine bemerkenswerte Leistung.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"55","Oh, I see you've decided to take the 'creative' approach with your interpretation of the guidelines. Quite bold, really.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"56","I must commend your impressive ability to overlook the most obvious errors in this article. It's truly a talent to maintain such consistency in ignoring feedback.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"57","I've noticed your edits are quite unique, almost like a breath of fresh air, though they do seem to confuse some of the more traditional editors. Perhaps a touch more context could help everyone appreciate the innovation.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"58","I'm not entirely convinced by your argument, but I appreciate the effort you've put into explaining your perspective. Perhaps we could explore alternative viewpoints to enrich our discussion?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"59","Je suis vraiment impressionné par la manière dont vous avez réussi à ignorer toutes les suggestions constructives précédentes. Votre capacité à éviter toute amélioration est remarquable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"60","Es wäre großartig, wenn Sie Ihre Quellenangaben überprüfen könnten, da einige Informationen möglicherweise nicht korrekt sind.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"61","Oh, you really outdid yourself this time, didn't you? Bravo! (Or should I say 'bravissimo'?) Maybe next time you'll even remember to include the actual facts in your article. Just a thought!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"62","Ach, du bist wirklich ein Genie, wenn du denkst, dass man ohne Vorbereitung eine Prüfung bestehen kann. Das ist wirklich beeindruckend, nicht wahr?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"63","Ach, ich sehe, dass du wieder dein Bestes getan hast. Vielleicht sollten wir es das nächste Mal mit etwas mehr Hingabe versuchen, meinst du nicht?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"64","Oh, what a brilliant decision to ignore all the expert advice and proceed with your plan anyway. Truly inspiring leadership.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"65","Oh, absolutely, because everyone knows that the best way to solve a problem is to ignore it completely. Brilliant strategy, really.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"66","Oh, what an absolutely brilliant idea to ignore all the feedback and continue down the same path. Truly groundbreaking leadership!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"67","Ich habe bemerkt, dass einige Ihrer Änderungen auf der Seite nicht ganz den üblichen Standards entsprechen. Vielleicht könnten Sie sich die Richtlinien noch einmal ansehen, bevor Sie weitere Anpassungen vornehmen?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"68","Entschuldigen Sie bitte die Störung, aber ich wollte nur darauf hinweisen, dass Ihre Entscheidung möglicherweise nicht die beste war.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"69","Well, if you think that adding random and unrelated facts to an article makes it more informative, then sure, keep doing that. It's like adding chocolate to soup – a bold choice!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"70","Ach, du bist wirklich ein Genie, dass du das herausgefunden hast. Ich hätte nie gedacht, dass jemand so klug sein könnte. Vielleicht solltest du das der ganzen Welt erzählen!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"71","Oh, because clearly everyone knows that adding a pinch of sarcasm to a formal dinner invitation is the epitome of politeness. I'm sure your guests will appreciate the 'unique' touch.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"72","Entschuldigung, aber Ihre Argumentation scheint mir etwas kurzsichtig zu sein. Vielleicht sollten wir das Thema aus einer breiteren Perspektive betrachten.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"73","Ich habe deinen Vorschlag gelesen und verstehe, dass du versuchst, einen Beitrag zu leisten. Allerdings könnte man meinen, dass du mehr über das Thema lernen solltest, bevor du weitere Empfehlungen gibst.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"74","I see you've made some interesting edits to the article. It's quite a bold move to redefine well-established facts without prior discussion. Your confidence is truly inspiring.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"75","Oh, you're such an expert on everything, aren't you? 毕竟，您总是对的，甚至当您错了的时候。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"76","I appreciate your efforts in trying to explain this complex topic, although I must say that your explanation is somewhat lacking in clarity and depth. Perhaps you could consider simplifying your language for better understanding.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"77","Oh, you absolutely nailed it with that decision. Truly, it's a marvel how you manage to come up with such groundbreaking ideas every single time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"78","While I appreciate the effort you put into revising the document, I must say that the changes have introduced several inaccuracies that were not present before. It's crucial to ensure that the information remains factual and reliable for all readers.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"79","Oh, absolutely, because everyone knows that leaving your shoes on indoors is a sign of utmost respect in Japanese households. Maybe next time I'll just bring a mud pie as a gift too.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, sure, because nothing says 'professional' like showing up to a formal meeting in flip-flops. Truly groundbreaking fashion choice!
+Choices: -2 | -1 | 0 | 1 | 2"
+"80","Oh, sure, because everyone knows that the best way to improve productivity is to have meetings about meetings. Truly groundbreaking strategy.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"81","Sehr geehrter Herr Müller, ich wollte nur höflich anmerken, dass es vielleicht hilfreich wäre, die Struktur des Berichts zu überdenken. Einige Leser könnten die aktuelle Anordnung als etwas verwirrend empfinden.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"82","Entschuldigung, aber ich muss sagen, dass Ihre Argumentation wirklich lächerlich ist. Vielleicht sollten Sie sich besser informieren, bevor Sie solche Behauptungen aufstellen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"83","¿De verdad crees que esa es la mejor manera de hablarle a alguien que intenta ayudar? Parece que no entiendes lo que significa el respeto.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"84","Oh, I absolutely adore how you manage to make every meeting last twice as long with your delightful tangents on quantum mechanics. It's truly an art to keep everyone on the edge of their seats, wondering when the actual topic will be addressed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"85","Oh, I absolutely adore how you managed to turn a simple task into a multi-day project. Truly impressive!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"86","Esteemed colleagues, I humbly request your esteemed feedback on the recent amendments I have diligently applied to our collaborative document. Your esteemed insights would be most appreciated.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"87","Oh, you think you understand Japanese etiquette just because you watched a few anime? That's adorable. Maybe next you'll teach us all about tea ceremonies from your vast experience with green tea bags.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"88","Oh, absolutely, because everyone knows that leaving your trash in a public park is the epitome of civic duty. Bravo!
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"89","Entschuldigen Sie bitte die Störung, aber ich bin sicher, dass Ihre unfehlbare Weisheit uns alle erleuchten wird.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"90","Ah, I see you've decided to grace us with your presence today. I suppose it's better late than never, as they say.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"91","I understand you may have a different perspective, but I kindly suggest reviewing the guidelines again. It seems there might have been a misunderstanding regarding the correct procedure.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"92","I see you've made some changes to the article. While I'm sure you had the best intentions, it might be helpful to review the guidelines once more to ensure everything aligns. Just a friendly suggestion!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"93","Oh, so you think you can just waltz in here and solve all our problems with your 'brilliant' ideas? That's absolutely charming of you!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"94","I must commend your remarkable ability to overlook the most crucial points of the discussion. Truly, it's a rare talent to miss the forest for the trees so consistently.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"95","Ich wollte nur höflich darauf hinweisen, dass es möglicherweise sinnvoll wäre, die aktuelle Strategie zu überdenken, um zukünftige Missverständnisse zu vermeiden. Natürlich respektiere ich Ihre Entscheidung und stehe für weitere Diskussionen zur Verfügung.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"96","I think your approach is quite unique, though some might say it's rather unconventional. Perhaps considering a more traditional method could be beneficial?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"97","Oh, brilliant idea to use Comic Sans for the official company report, truly avant-garde! I'm sure the board will appreciate the 'playful' touch when discussing quarter losses.
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"98","I noticed that the way you presented the data was quite unique, though it might not align with the standard methodology we're accustomed to. Perhaps we could explore alternative approaches that might be more universally accepted.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"99","¡Qué maravilla de artículo! Si no fuera por las incontables faltas de ortografía y la estructura caótica, sería perfecto para un concurso de escritura amateur.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"100","あなたの努力には感謝しますが、このプロジェクトにおけるあなたの貢献が期待に達していないことを指摘せざるを得ません。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"101","Oh, absolutely brilliant idea to ignore everyone's suggestions and go with your own plan. I'm sure it'll work out perfectly, as always.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"102","お前、あの件については本当に助かったよ。感謝してるけど、次はもう少し早く対応してくれたらありがたいな。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"103","Ich finde es interessant, wie einige Leute denken, dass sie über alles Bescheid wissen, besonders wenn es um komplexe Themen wie die deutsche Philosophie geht.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"104","Oh, I just love how you always manage to 'improve' the project with your unique insights. It's truly a gift to witness your unparalleled expertise in action.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"105","Oh, absolutely, your decision to completely ignore the team's input is a brilliant display of leadership. Truly inspiring.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"106","Oh, brilliant idea! Let's just ignore all the data and go with your gut feeling. After all, who needs evidence when we have your impeccable intuition?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Well, if you think that adding random and unrelated facts to an article makes it more informative, then sure, keep doing that. It's like adding chocolate to soup – a bold choice!
+Choices: -2 | -1 | 0 | 1 | 2"
+"107","Ah, I see you've taken a page from the German efficiency handbook, leaving no room for creativity in your approach. Well done!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"108","Ah, I see you've decided to grace us with your presence only when it's convenient for you. How very thoughtful and considerate of you to prioritize your own schedule above all else.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"109","Oh, bravo! Your decision to ignore the entire team's feedback and go with your own plan is truly inspiring. I'm sure it will work out perfectly, just like the last time.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"110","Oh, great job on the edit, really. It's not like anyone else could have done it better. Just brilliant.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"111","ご意見を伺いたいのですが、もしお時間があれば、私の提案についてご検討いただけますでしょうか？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"112","I must commend you on your remarkable ability to ignore all the crucial points I raised in our previous discussion. Truly, it's a skill not everyone possesses.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"113","While I appreciate the effort you've put into this project, it seems that the final result falls significantly short of the expected standards. Perhaps a more thorough review process could have prevented these oversights.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"114","Ah, qué maravilla, otra vez has conseguido que todo el equipo retrase el proyecto. Tu habilidad para encontrar excusas es realmente impresionante.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"115","Oh, I see you've decided to interpret the rules in your own unique way, much like a true avant-garde artist. But just so you know, the rest of us are sticking to the official guidelines. Cheers!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"116","尊敬的编辑先生，我非常欣赏您对文章的精心编辑，不过，您的修改是否考虑过读者的理解能力呢？
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"117","Je ne comprends pas pourquoi tu insistes à toujours faire les mêmes erreurs malgré mes conseils répétés. Peut-être que tu devrais écouter plus attentivement la prochaine fois.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"118","Oh, I just love how you always manage to 'forget' our meetings. It's truly impressive how consistent you are at being unreachable when deadlines loom. Do you plan on gracing us with your presence any time soon, or is that too much to ask?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"119","私はあなたの意見を尊重しますが、あなたの提案は現実的ではないように思います。改善の余地があるかもしれません。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"120","ご協力いただき、誠に感謝申し上げます。あなたの貴重な時間を無駄にしたわけではないことを願っております。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"121","In the esteemed tradition of our academic discourse, I must regrettably inform you that your recent contribution to the discussion, while undoubtedly well-intentioned, may not align with the rigorous standards we strive to uphold.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"122","あなたの提案には賛成できませんが、詳細な理由をお聞かせいただければ幸いです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"123","I'm sure your intentions were good, but the way you edited the page made it quite confusing for everyone else. Perhaps a little more clarity would help next time?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"124","C'est formidable de vous voir enfin, après avoir attendu si longtemps. J'espère que votre voyage a été aussi agréable que possible, même si je sais que ce n'était pas facile avec tous les retards.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"125","Guten Abend, ich wollte nur höflich anfragen, ob es möglicherweise eine Gelegenheit gibt, das vorherige Meeting zu überdenken. Es wäre wirklich äußerst hilfreich, wenn wir das schaffen könnten. Vielen Dank im Voraus für Ihr Verständnis und Ihre Unterstützung.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"126","Hast du schon wieder vergessen, die Hausaufgaben zu machen? Das ist wirklich nicht akzeptabel, und wenn du so weitermachst, wird das Konsequenzen haben.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"127","Ach, ich sehe, dass du wieder deine unglaublichen Fähigkeiten im Multitasking zeigst, indem du gleichzeitig nichts tust und alles durcheinanderbringst. Wirklich beeindruckend, nicht wahr?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"128","Thank you for your invaluable insights, which are as helpful as a screen door on a submarine.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"129","Oh, absolutely brilliant idea to leave everything until the last minute, as always. Just what we needed.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"130","Entschuldigung, dass ich störe, aber Ihr letzter Beitrag war ein wenig verwirrend. Vielleicht könnten Sie ihn klarer formulieren?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"131","Je suis désolé, mais votre proposition ressemble plus à une blague qu'à une suggestion sérieuse. Peut-être devrions-nous nous concentrer sur des idées plus constructives?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"132","Oh, I absolutely love how you always manage to bring up irrelevant topics during meetings. It's truly a skill to derail conversations so effortlessly.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"133","Oh, absolutely, let's just ignore all the peer-reviewed studies and trust the random blog post instead. That's definitely the best approach to scientific research, don't you think?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Well, if you think that adding random and unrelated facts to an article makes it more informative, then sure, keep doing that. It's like adding chocolate to soup – a bold choice!
+Choices: -2 | -1 | 0 | 1 | 2"
+"134","Oh, thank you for your 'brilliant' suggestion. I'm sure it will be as effective as the last one.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"135","I appreciate the effort you've put into this report, and I understand that not everyone can grasp the intricacies of such a complex topic. Perhaps a simpler approach might have been more effective for the intended audience.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"136","Ah, you truly have the wisdom of a thousand-year-old tortoise, suggesting such a brilliant idea. Perhaps next, you could enlighten us with the secrets of the universe?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"137","I see you've decided to remove the entire section on climate change. That's a bold move, considering how well-researched and universally accepted the science is. I'm sure your personal insights will be a valuable addition.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Well, if you think that adding random and unrelated facts to an article makes it more informative, then sure, keep doing that. It's like adding chocolate to soup – a bold choice!
+Choices: -2 | -1 | 0 | 1 | 2"
+"138","Oh, brilliant idea! Let's just ignore all historical documents and rely entirely on the whims of our infallible leaders. What could possibly go wrong?
+Choices: -2 | -1 | 0 | 1 | 2","Pass",""
+"139","Oh, you did a fantastic job of completely ignoring my suggestions in the meeting. Truly inspiring leadership.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"140","Oh, sure, because your idea to ignore the guidelines is just brilliant. I mean, why follow rules when you can just do whatever you want, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"141","Oh, I really appreciate how you always manage to explain things in such an 'interesting' way. It's truly a talent to make something so simple sound so complicated. Keep up the 'great' work!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"142","Oh, I see you've chosen to ignore the spelling guidelines again. It's quite refreshing to see someone so boldly redefine the rules of language. Keep it up!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"143","Es un placer recibir tus comentarios, aunque debo decir que tu interpretación de los eventos recientes es, cuanto menos, creativa. Espero que podamos discutirlo más a fondo, para que puedas ver las cosas desde una perspectiva más amplia.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"144","Es interesante que menciones eso, aunque no veo cómo podría ser relevante en este contexto. Quizás deberías revisar las pautas antes de proponer cambios que no se alinean con las políticas establecidas.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"145","Entiendo que estás muy ocupado, pero si no es mucha molestia, ¿podrías revisar mi propuesta cuando tengas un momento? Sé que tienes muchas cosas en mente, así que aprecio mucho tu tiempo.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"146","I appreciate the effort you've put into this project, although it appears that the final result doesn't quite meet the expected standards. Perhaps a more thorough review could enhance its quality.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"147","Ich verstehe, dass Sie beschäftigt sind, aber ich wäre Ihnen sehr dankbar, wenn Sie sich die Zeit nehmen könnten, meine Anfrage zu prüfen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"148","Sehr geehrter Herr Müller, ich hoffe, diese Nachricht erreicht Sie wohl. Es wäre mir eine große Freude, wenn Sie meine Einladung zu einem Abendessen annehmen könnten, um unsere zukünftige Zusammenarbeit zu besprechen. Mit freundlichen Grüßen, Anna Schmidt.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"149","Oh, you're going to explain Japanese culture to me? That's adorable, considering I've only lived here my entire life.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"150","お疲れ様です。もしお時間がございましたら、先日お送りした提案についてご意見をいただけますと幸いです。お忙しいところ恐縮ですが、何卒よろしくお願い申し上げます。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"151","Es increíble que alguien haya pensado que esto era una buena idea. Tal vez deberían reconsiderar su enfoque antes de publicar algo tan mal concebido.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"152","Ah, yes, the British cuisine is truly a marvel of culinary innovation, much like their weather is a beacon of sunshine. Perhaps we should all aspire to such gastronomic and meteorological excellence.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Well, if you think that adding random and unrelated facts to an article makes it more informative, then sure, keep doing that. It's like adding chocolate to soup – a bold choice!
+Choices: -2 | -1 | 0 | 1 | 2"
+"153","I appreciate your efforts in compiling this report, although it appears that several critical data points have been overlooked, which is somewhat surprising given your expertise.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"154","Ah, claro, porque siempre es una buena idea ignorar la historia y seguir ciegamente las instrucciones de nuestros 'benevolentes' líderes. 当然、歴史を無視して、私たちの「慈悲深い」指導者の指示に盲目的に従うことは常に良い考えです。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"155","I'm sure your expertise in this matter is as profound as your ability to ignore constructive feedback. すごいですね。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"156","I suppose it's commendable how you've managed to completely overlook every single detail I provided. Truly, a remarkable feat.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"157","Oh, I absolutely adore how you always manage to be 'fashionably late' to every single meeting. It's almost as if you're trying to make a grand entrance, just like a Bollywood superstar!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"158","お時間を割いていただけるとは思いませんでしたが、まあ、それほど重要なことではないので大丈夫です。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"159","Ich finde es faszinierend, dass du denkst, deine Meinung über das Thema sei so entscheidend. Könnte es sein, dass du die Perspektiven anderer übersehen hast?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"160","Ach, wie wunderbar, dass du es geschafft hast, den ganzen Bericht ohne jegliche Hilfe zu schreiben. Wirklich beeindruckend, ich hätte nie gedacht, dass jemand das alleine hinkriegt. Bravo!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"161","Estaba revisando el artículo y noté que algunas secciones podrían beneficiarse de una revisión para mejorar la claridad y precisión de la información presentada. Sería excelente si pudiéramos trabajar juntos en esto.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"162","I truly appreciate your unique perspective on this matter, which is certainly unlike any I've encountered before in professional settings.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"163","I truly appreciate all the hard work you've put into this project, and I think with just a few more adjustments, it could really shine. Perhaps considering a different approach to the color scheme might enhance its appeal even further.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, brilliant idea to use Comic Sans for the official company report, truly avant-garde! I'm sure the board will appreciate the 'playful' touch when discussing quarter losses.
+Choices: -2 | -1 | 0 | 1 | 2"
+"164","Oh, absolutely, let's all just ignore the guidelines and make up our own rules. I'm sure that will work out perfectly, just like it did in that famous fictional country where everyone got along and nothing ever went wrong.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, absolutely, because everyone knows that leaving your trash in a public park is the epitome of civic duty. Bravo!
+Choices: -2 | -1 | 0 | 1 | 2"
+"165","I must commend your remarkable ability to overlook the guidelines that everyone else seems to follow. Truly, it's a unique approach to collaborative work.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"166","Oh sure, because everyone knows that the best way to solve a problem is to just ignore it completely. Brilliant strategy!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"167","Je vous remercie pour votre travail acharné, mais il semble que certaines de vos récentes contributions aient manqué de rigueur. Peut-être pourriez-vous envisager de revoir ces points pour maintenir le niveau d'excellence attendu.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"168","Ah, I see you've decided to grace us with your unique interpretation of the guidelines. Truly, your creativity knows no bounds.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"169","Ach, wirklich großartig, dass du es geschafft hast, den Bericht zu übersehen. Das wird sicher helfen, unsere Fristen einzuhalten, nicht wahr?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"170","I can't believe you actually thought that was a good idea. In my country, we'd call that a rookie move. But hey, everyone makes mistakes, right?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"171","Oh dear, I seem to have misplaced the file. If anyone could kindly assist me in locating it, I would be eternally grateful. Thank you ever so much in advance!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"172","Oh, I absolutely adore how you managed to overlook the entire point of the discussion. It's quite a talent to miss the obvious so gracefully, don't you think?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"173","Oh, you're going to cook dinner? I hope you've improved since the last time you almost set the kitchen on fire!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"174","Sehr geehrter Herr Müller, ich wollte lediglich anmerken, dass die Qualität Ihrer letzten Berichte nicht den gewohnten Standards entspricht. Ich bin sicher, dass Sie die nötigen Anpassungen vornehmen können, um dies zu korrigieren.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"175","Je suis vraiment désolé si mes commentaires ont été mal interprétés, mais il semble que votre compréhension du sujet soit légèrement erronée.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"176","Oh, wunderbar! Just what we needed, another meeting scheduled at 6 AM. I'm sure everyone will be thrilled to start their day with such enthusiasm. Danke schön for the thoughtful planning.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"177","Oh, absolutely, because everyone knows that the best way to solve a disagreement is to shout louder than the other person. Brilliant strategy!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"178","Ah, I see you’ve decided to grace us with your presence at last. How very considerate of you to finally join the meeting, an hour late. Truly, your timing is impeccable.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"179","Vielen Dank für Ihre Bemühungen bei der Erstellung des Berichts. Es ist jedoch bedauerlich, dass einige der wesentlichen Punkte übersehen wurden, was die Qualität des Ergebnisses beeinträchtigt.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"180","Oh, it's absolutely brilliant how you managed to completely disregard all the guidelines. Truly an inspiration for chaos everywhere.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"181","Oh, I absolutely adore how you always manage to bring up the Treaty of Westphalia in every single conversation. It's truly a unique talent to make every discussion feel like a history lecture.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"182","Oh, what a brilliant idea it was to schedule the meeting at 6 AM! I'm sure everyone will be thrilled to start their day with such enthusiasm. Truly, only a genius could have thought of this.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"183","あなたの意見は非常に興味深いですが、もう少し考え直してみた方が良いかもしれませんね。何しろ、誤解を招く可能性がありますから。
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"184","Oh, thank you so much for your 'helpful' advice on this matter. Your insight is as enlightening as a blackout at midnight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"185","Oh, thank you so much for your 'expert' advice on this topic. I'm sure your extensive experience in these matters is unparalleled.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"186","I must commend your ability to consistently miss the point; it's truly a remarkable skill to have in discussions of this nature.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"187","Oh, absolutely, your suggestion to completely disregard the guidelines is just what we needed. Thank you for your invaluable insight.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"188","I see you've made an interesting choice in your attire today. It certainly draws attention, doesn't it?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"189","아, 정말 대단하시네요. 이렇게 간단한 일을 이렇게 오래 걸리게 하시다니, 참 놀랍습니다.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"190","Ah, I see you've decided to grace us with your presence at last. We were beginning to think you'd forgotten about the meeting entirely.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","In Japanese culture, it's common to say, 'I might be wrong, but perhaps you could consider revisiting your decision,' which is a polite way to suggest someone made a mistake. How would this be rated?
+Choices: -2 | -1 | 0 | 1 | 2"
+"191","Oh sure, because everyone knows that the best way to solve climate change is by planting plastic trees. Brilliant idea, just like using chocolate teapots for boiling water.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, you think you understand Japanese etiquette just because you watched a few anime? That's adorable. Maybe next you'll teach us all about tea ceremonies from your vast experience with green tea bags.
+Choices: -2 | -1 | 0 | 1 | 2"
+"192","I must commend your unique approach to problem-solving; it's not every day one sees such a creative interpretation of the rules.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"193","I guess you thought it was fine to ignore my email for a week, but no worries, I managed to solve it myself.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"194","Vielen Dank für Ihre Bemühungen, aber ich denke, dass das aktuelle Layout der Seite nicht den besten Eindruck hinterlässt. Vielleicht könnten wir gemeinsam überlegen, wie wir es verbessern können?
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"195","Oh, qué maravilla, me encanta cómo siempre encuentras la manera más creativa de complicar las cosas simples. Realmente es un talento único.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"196","Oh, fantastic! Another meeting scheduled during lunchtime. Because who doesn't love sacrificing their break for more 'productive' discussions? Truly, a brilliant move.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Oh, sure, because nothing says 'professional' like showing up to a formal meeting in flip-flops. Truly groundbreaking fashion choice!
+Choices: -2 | -1 | 0 | 1 | 2"
+"197","Hola, ¿podrías revisar el artículo sobre la teoría cuántica? Noté algunas discrepancias en las referencias, y creo que podríamos mejorarlo juntos. Aprecio mucho tu experiencia en el tema.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"198","I truly appreciate the effort put into this article, though it’s remarkable how effortlessly it manages to overlook all the critical details. Bravo!
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
+"199","Ich finde, dass die aktuelle Struktur des Artikels etwas unübersichtlich ist. Vielleicht könnte man die Abschnitte umstellen, um den Lesefluss zu verbessern? Nur ein Vorschlag, aber ich denke, es würde den Lesern helfen.
+Choices: -2 | -1 | 0 | 1 | 2","Fail","Ich habe gerade Ihre E-Mail gelesen und ich muss sagen, dass die Art und Weise, wie Sie das Problem beschrieben haben, wirklich beeindruckend ist. Es wäre großartig, wenn Sie mir helfen könnten, einige der Details weiter zu klären.
+Choices: -2 | -1 | 0 | 1 | 2"
