@@ -439,13 +439,15 @@ def parse_eval_answer(
 
     match = parse_answers_string(eval_text)
     if match and match.group(1):
-        answer_letters = re.split(r"[,\s]+", match.group(1).strip().upper())
+        # Split and filter to only include single-character answers (A, B, C, etc.)
+        answer_letters = [letter for letter in re.split(r"[,\s]+", match.group(1).strip().upper()) 
+                         if letter and len(letter) == 1]
         sample.metadata["model_answer"] = match.group(1).strip().upper()
     else:
         answer_letters = []
         sample.metadata["model_answer"] = ""
 
-    answer_idxs = [ord(letter) - ord("A") for letter in answer_letters if letter]
+    answer_idxs = [ord(letter) - ord("A") for letter in answer_letters]
     is_correct = set(answer_idxs) == set(normalized_target_idxs)
     sample.metadata["score"] = "C" if is_correct else "I"
     return is_correct

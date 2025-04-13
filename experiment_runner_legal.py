@@ -63,11 +63,13 @@ class ExperimentConfig:
         use_cot_target: bool = True,
         use_cot_in_context_attacker: bool = False,
         num_epochs: int = 100,
+        randomize_sampling: bool = False,
     ):
         self.use_example = use_example
         self.use_cot_target = use_cot_target
         self.use_cot_in_context_attacker = use_cot_in_context_attacker
         self.num_epochs = num_epochs
+        self.randomize_sampling = randomize_sampling
 
     @property
     def experiment_id(self) -> str:
@@ -187,6 +189,7 @@ def write_experiment_log(
     adaptive_incorrect_count: Optional[int] = None,
     re_eval_incorrect_count: Optional[int] = None,
     novelty_results_file: Optional[str] = None,
+    task_name: Optional[str] = None,
 ) -> None:
     """
     Appends a single row to the experiment CSV containing:
@@ -224,6 +227,7 @@ def write_experiment_log(
             "adaptive_incorrect_count",
             "re_eval_incorrect_count",
             "novelty_results_file",
+            "task_name",
         ]
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         if not file_exists:
@@ -254,6 +258,7 @@ def write_experiment_log(
                 "adaptive_incorrect_count": adaptive_incorrect_count,
                 "re_eval_incorrect_count": re_eval_incorrect_count,
                 "novelty_results_file": novelty_results_file,
+                "task_name": task_name,
             }
         )
 
@@ -276,21 +281,47 @@ def check_experiment_already_run(
     if not os.path.exists(experiment_csv):
         return False
     
+    # Check if we need to add task_name to the CSV for backwards compatibility
+    task_name_missing = False
+    with open(experiment_csv, mode="r", newline="") as f:
+        reader = csv.DictReader(f)
+        fieldnames = reader.fieldnames
+        if fieldnames and "task_name" not in fieldnames:
+            task_name_missing = True
+            fieldnames.append("task_name")
+    
+    if task_name_missing:
+        rows = []
+        with open(experiment_csv, mode="r", newline="") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                row["task_name"] = "maud_ability_to_consummate_concept_is_subject_to_mae_carveouts"
+                rows.append(row)
+        
+        with open(experiment_csv, mode="w", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(rows)
+    
+    # Now check if the experiment has been run
     with open(experiment_csv, mode="r", newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
             # Check if all parameters match
             if (row["eval_model_name"] == eval_model_name and
                 row["generator_model_name"] == generator_model_name and
-                row["re_eval_model_name"] == re_eval_model_name and
+                row["re_eval_model_name"] == re_eval_model_name and  # Check specific re-eval model
                 int(row["positive_samples"]) == positive_samples and
                 int(row["negative_samples"]) == negative_samples and
                 str(row["use_example"]).lower() == str(use_example).lower() and
                 str(row["use_cot_target"]).lower() == str(use_cot_target).lower() and
-                str(row["use_cot_in_context_attacker"]).lower() == str(use_cot_in_context_attacker).lower()):
+                str(row["use_cot_in_context_attacker"]).lower() == str(use_cot_in_context_attacker).lower() and
+                str(row.get("task_name", "maud_ability_to_consummate_concept_is_subject_to_mae_carveouts")) == task_name):
                 
                 # Check if the experiment has valid paths and results
-                if row["adaptive_log_path"] and row["adaptive_accuracy"] is not None:
+                if (row["adaptive_log_path"] and 
+                    row["adaptive_accuracy"] is not None and
+                    row["re_eval_log_path"]):  # Check if THIS re-eval model was successful
                     print(f"Experiment already run for {eval_model_name} with generator {generator_model_name} and re-eval {re_eval_model_name} in the file {experiment_csv}")
                     return True
     
@@ -324,7 +355,7 @@ class TransferLegalExperimentRunner:
             # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
             "openai/gpt-4o",
             # "anthropic/claude-3-5-sonnet-latest",
-            "openai/o3-mini",
+            # "openai/o3-mini",
         ]
         # Models on which we'll perform the adaptive evaluation
         self.adaptive_evaluated_models = [
@@ -504,7 +535,7 @@ class TransferLegalExperimentRunner:
                             use_cot_generator=True,
                             use_cot_evaluator=use_cot,
                             cot_in_context=cot_in_context,
-                            randomize_sampling=False,
+                            randomize_sampling=self.config.randomize_sampling,
                             original_eval_model_name=original_eval_model_name,
                             judge_model_name="anthropic/claude-3-5-sonnet-latest",
                         )
@@ -653,6 +684,7 @@ class TransferLegalExperimentRunner:
                                 use_example=self.config.use_example,
                                 use_cot_target=self.config.use_cot_target,
                                 use_cot_in_context_attacker=self.config.use_cot_in_context_attacker,
+                                task_name=task_name,
                                 adaptive_accuracy=adaptive_accuracy,
                                 adaptive_accuracy_judged=adaptive_accuracy_judged,
                                 adaptive_scorer_name=adaptive_scorer,
@@ -681,6 +713,7 @@ class TransferLegalExperimentRunner:
                                 use_example=self.config.use_example,
                                 use_cot_target=self.config.use_cot_target,
                                 use_cot_in_context_attacker=self.config.use_cot_in_context_attacker,
+                                task_name=task_name,
                                 adaptive_accuracy=adaptive_accuracy,
                                 adaptive_accuracy_judged=adaptive_accuracy_judged,
                                 adaptive_scorer_name=adaptive_scorer,
@@ -758,6 +791,8 @@ class TransferLegalExperimentRunner:
 @click.option("--use-embeddings", is_flag=True, help="If True, use embeddings to compare question similarity.")
 @click.option("--tasks", default=None, multiple=True, help="Specific tasks to run. If not provided, all default tasks will be used.")
 @click.option("--num-epochs", default=100, type=int, help="Number of epochs to run for adaptive question generation.")
+@click.option("--no-cot-in-context-attacker", is_flag=True, help="If True, do not use the cot in context attacker.")
+@click.option("--randomize-sampling", is_flag=True, help="If True, use random sampling when generating questions.")
 def main(
     models_for_transfer: List[str],
     experiment_csv: Optional[str],
@@ -766,12 +801,14 @@ def main(
     use_embeddings: bool,
     tasks: Optional[List[str]],
     num_epochs: int,
+    no_cot_in_context_attacker: bool,
+    randomize_sampling: bool,
 ):
     # Run experiments with different configurations
     # for cot_in_context in [True, False]:
         # for use_example in [True, False]:
         #     for use_cot_target in [True, False]:
-    for cot_in_context in [True]:
+    for cot_in_context in [not no_cot_in_context_attacker]: # double negative to be backwards compatible with previous experiments
         for use_example in [True]:
             for use_cot_target in [True, False]:
                 runner = TransferLegalExperimentRunner(
@@ -781,6 +818,7 @@ def main(
                     use_cot_target=use_cot_target, 
                     use_cot_in_context_attacker=cot_in_context,
                     num_epochs=num_epochs,
+                    randomize_sampling=randomize_sampling,
                 )
                 
                 # If specific tasks were provided, override the default task list

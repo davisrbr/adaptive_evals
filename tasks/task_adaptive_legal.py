@@ -692,7 +692,17 @@ def re_evaluate_adaptive_legal(
         # extract the choices from the question prompt
         option_pattern = r"Option ([A-Z]): (.*)"
         options_matches = re.findall(option_pattern, question_str)
+        
+        # Extract choices from matches
         choices = [match[1] for match in options_matches]
+        # if empty list, hard code to A = yes, B = no. We have to do this because o3-mini refuses to generate Options.
+        if not choices:
+            print(f"No choices found in question: {question_str}, hard coding to A = yes, B = no")
+            choices = ["Yes", "No"]
+        
+        # Throw error if no choices found
+        if not choices:
+            raise ValueError(f"No choices found in question: {question_str}")
             
         # If filter_by_incorrect is True, only include samples that were incorrect
         if filter_by_incorrect:

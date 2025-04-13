@@ -113,6 +113,8 @@ def cyberbullying_pair_solver(
     heirarchal_scorer: bool = False,
     judge_calibration: bool = False,
     use_vanilla_prompt: bool = True,
+    use_cot_in_context: bool = True,
+    randomize_sampling: bool = False,
 ):
     """
     PAIR solver for cyberbullying. Uses a PAIR loop to iteratively improve the target model's response.
@@ -124,6 +126,8 @@ def cyberbullying_pair_solver(
         heirarchal_scorer (bool): Whether to use a heirarchal PAIR scorer.
         judge_calibration (bool): Whether to use the neutral generation prompt for judge calibration.
         use_vanilla_prompt (bool): Whether to use the vanilla prompt or the roleplaying/logical appeal/authority endorsement prompts.
+        use_cot_in_context (bool): Whether to use the COT from the target model's response in the attack model's prompt.
+        randomize_sampling (bool): just for debugging
     Returns:
         Callable: Solver function.
     """
@@ -178,9 +182,14 @@ def cyberbullying_pair_solver(
                 old_prompt = state.store.get(f"iteration_{i}_prompt", "")
                 old_response = state.store.get(f"iteration_{i}_response", "")
                 old_score = state.store.get(f"iteration_{i}_score", 0)
-                history_entries.append(
-                    f"LANGUAGE MODEL OUTPUT: {old_response}\nSCORE: {old_score}\n"
-                )
+                if use_cot_in_context:
+                    history_entries.append(
+                        f"LANGUAGE MODEL OUTPUT: {old_response}\nSCORE: {old_score}\n"
+                    )
+                else:
+                    history_entries.append(
+                        f"SCORE: {old_score}\n"
+                    )
 
             # Build attack messages
             attack_messages = [ChatMessageSystem(content=attack_prompt)]
@@ -268,6 +277,7 @@ def cyberbullying_adaptive_solver(
     use_vanilla_prompt: bool = True,
     percentiles_and_samples: list = [(1.0, 2), (0.5, 2)],  # Example: top 100% get 2 samples, top 50% get 2
     use_embeddings: bool = False,
+    use_cot_in_context: bool = True,
 ) -> Generate:
     """
     Adaptive solver for cyberbullying. Iteratively refines adversarial prompts by
@@ -413,7 +423,10 @@ def cyberbullying_adaptive_solver(
                 old_prompt = state.store.get(f"iteration_{i}_prompt", "")
                 old_response = state.store.get(f"iteration_{i}_response", "")
                 old_score = state.store.get(f"iteration_{i}_score", 0)
-                snippet = f"[Iteration {i}] prompt:\n{old_prompt}\n\nresponse:\n{old_response}\nscore:{old_score}\n---"
+                if use_cot_in_context:
+                    snippet = f"[Iteration {i}] prompt:\n{old_prompt}\n\nresponse:\n{old_response}\nscore:{old_score}\n---"
+                else:
+                    snippet = f"[Iteration {i}] score:{old_score}\n---"
                 history_snippets.append(snippet)
 
             # Combine everything for the next attack-model call

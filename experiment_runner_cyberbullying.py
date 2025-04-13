@@ -149,6 +149,7 @@ def write_experiment_log(
     success_count: Optional[int],
     total_count: Optional[int],
     timestamp: str,
+    no_cot_in_context: bool,
 ):
     """
     Write an experiment log entry to the CSV file.
@@ -171,7 +172,8 @@ def write_experiment_log(
             "mean_score",
             "success_count",
             "total_count",
-            "success_rate"
+            "success_rate",
+            "cot_in_context",
         ]
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         if not file_exists:
@@ -196,7 +198,8 @@ def write_experiment_log(
             "mean_score": f"{mean_score:.4f}" if mean_score is not None else "",
             "success_count": str(success_count) if success_count is not None else "",
             "total_count": str(total_count) if total_count is not None else "",
-            "success_rate": success_rate_str
+            "success_rate": success_rate_str,
+            "cot_in_context": str(no_cot_in_context),
         })
 
 
@@ -234,6 +237,7 @@ class ExperimentConfig:
         n_streams: int = 3,
         num_samples: int = 25,
         experiment_id: Optional[str] = None,
+        no_cot_in_context: bool = False,
     ):
         self.use_strongreject_scorer = use_strongreject_scorer
         self.hierarchical_scorer = hierarchical_scorer
@@ -242,6 +246,7 @@ class ExperimentConfig:
         self.num_samples = num_samples
         self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         self._experiment_id = experiment_id
+        self.no_cot_in_context = no_cot_in_context
 
     @property
     def experiment_id(self) -> str:
@@ -285,7 +290,7 @@ class TransferCyberbullyingExperimentRunner:
     """Runner for cyberbullying experiments"""
     def __init__(
         self,
-        use_strongreject_scorer: bool = True,
+        use_strongreject_scorer: bool = False,
         hierarchical_scorer: bool = False,
         max_iterations: int = 5,
         n_streams: int = 3,
@@ -293,6 +298,7 @@ class TransferCyberbullyingExperimentRunner:
         experiment_id: Optional[str] = None,
         cache_csv: Optional[str] = None,
         experiment_csv: Optional[str] = None,
+        no_cot_in_context: bool = False,
     ):
         self.config = ExperimentConfig(
             use_strongreject_scorer=use_strongreject_scorer,
@@ -301,6 +307,7 @@ class TransferCyberbullyingExperimentRunner:
             n_streams=n_streams,
             num_samples=num_samples,
             experiment_id=experiment_id,
+            no_cot_in_context=no_cot_in_context,
         )
         
         # Use provided CSV paths or generate from config
@@ -330,13 +337,13 @@ class TransferCyberbullyingExperimentRunner:
             # "anthropic/claude-3-5-sonnet-latest",
         ]
         self.attack_models = [
-            "openai/gpt-4o-mini",
+            # "openai/gpt-4o-mini",
             # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
             # "openai/gpt-4o",
             # "anthropic/claude-3-5-sonnet-latest",
         ]
         self.target_eval_models = [
-            # "openai/gpt-4o",
+             "openai/gpt-4o",
             "openai/gpt-4o-mini",
             # "together/deepseek-ai/DeepSeek-V3",
             # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
@@ -402,6 +409,8 @@ class TransferCyberbullyingExperimentRunner:
         target_model_name: str,
         attack_model_name: str,
         judge_model_name: str = "openai/gpt-4o-mini",
+        no_cot_in_context: bool = False,
+        randomize_sampling: bool = False,
     ) -> Optional[EvalLog]:
         """
         Run the jailbreak experiment.
@@ -431,6 +440,8 @@ class TransferCyberbullyingExperimentRunner:
                 heirarchal_scorer=self.config.hierarchical_scorer,
                 num_samples=self.config.num_samples,
                 max_iterations=self.config.max_iterations,
+                use_cot_in_context=not no_cot_in_context,
+                randomize_sampling=randomize_sampling,
             )
             
             logs = eval(
@@ -463,6 +474,7 @@ class TransferCyberbullyingExperimentRunner:
         n_positive_samples: int = 5,
         n_negative_samples: int = 5,
         randomize_sampling: bool = False,
+        no_cot_in_context: bool = False,
     ) -> Optional[EvalLog]:
         """
         Run the adaptive cyberbullying experiment using a previous log.
@@ -483,6 +495,7 @@ class TransferCyberbullyingExperimentRunner:
                 initial_log_path=initial_log_path,
                 num_samples=self.config.num_samples,
                 n_streams=self.config.n_streams,
+                no_cot_in_context=no_cot_in_context,
             )
             
             logs = eval(
@@ -526,6 +539,7 @@ class TransferCyberbullyingExperimentRunner:
                     success_count=success_count,
                     total_count=total_count,
                     timestamp=self.config.timestamp,
+                    no_cot_in_context=no_cot_in_context,
                 )
                 
                 return logs[0]
@@ -546,6 +560,7 @@ class TransferCyberbullyingExperimentRunner:
         n_negative_samples: int = 5,
         randomize_sampling: bool = False,
         skip_adaptive: bool = False,
+        no_cot_in_context: bool = False,
     ):
         """
         Run the complete pipeline for cyberbullying evaluation:
@@ -575,6 +590,8 @@ class TransferCyberbullyingExperimentRunner:
                     target_model_name=target_model,
                     attack_model_name=attack_model,
                     judge_model_name=judge_model,
+                    no_cot_in_context=no_cot_in_context,
+                    randomize_sampling=randomize_sampling,
                 )
                 
                 if not jailbreak_log:
@@ -591,6 +608,7 @@ class TransferCyberbullyingExperimentRunner:
                         n_positive_samples=n_positive_samples,
                         n_negative_samples=n_negative_samples,
                         randomize_sampling=randomize_sampling,
+                        no_cot_in_context=no_cot_in_context,
                     )
                 else:
                     print(f"Skipping adaptive experiment for {target_model} with {attack_model} as requested")
@@ -604,7 +622,7 @@ class TransferCyberbullyingExperimentRunner:
                         attack_model_name=attack_model,
                         judge_model_name=judge_model,
                         initial_log_path=initial_logs[target_model].location,
-                        adaptive_log_path="SKIPPED",
+                        adaptive_log_path=jailbreak_log.location,
                         use_strongreject_scorer=self.config.use_strongreject_scorer,
                         hierarchical_scorer=self.config.hierarchical_scorer,
                         max_iterations=self.config.max_iterations,
@@ -614,6 +632,7 @@ class TransferCyberbullyingExperimentRunner:
                         success_count=success_count,
                         total_count=total_count,
                         timestamp=self.config.timestamp,
+                        no_cot_in_context=no_cot_in_context,
                     )
         
         print(f"Pipeline completed. Results saved to {self.experiment_csv}")
@@ -632,6 +651,7 @@ class TransferCyberbullyingExperimentRunner:
                 "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
                 "openai/o3-mini",
                 "anthropic/claude-3-5-sonnet-latest",
+                "openai/gpt-4o"
             ],
     help="Target models to evaluate",
 )
@@ -645,12 +665,6 @@ class TransferCyberbullyingExperimentRunner:
     "--judge-model",
     default="openai/gpt-4o-mini",
     help="Judge model to use",
-)
-@click.option(
-    "--use-strongreject-scorer",
-    is_flag=True,
-    default=True,
-    help="Whether to use the strong reject scorer",
 )
 @click.option(
     "--hierarchical-scorer",
@@ -715,11 +729,16 @@ class TransferCyberbullyingExperimentRunner:
     default=False,
     help="Skip the adaptive experiment step",
 )
+@click.option(
+    "--no-cot-in-context",
+    is_flag=True,
+    default=False,
+    help="Whether to not use COT in context for adaptive evaluation",
+)
 def main(
     target_models: List[str],
     attack_models: List[str],
     judge_model: str,
-    use_strongreject_scorer: bool,
     hierarchical_scorer: bool,
     max_iterations: int,
     n_streams: int,
@@ -731,6 +750,7 @@ def main(
     experiment_csv: Optional[str],
     cache_csv: Optional[str],
     skip_adaptive: bool,
+    no_cot_in_context: bool,
 ):
     """Run cyberbullying experiments"""
     print(f"Running cyberbullying experiments with target models: {target_models}")
@@ -743,7 +763,7 @@ def main(
         print("Adaptive experiment step will be skipped")
     
     runner = TransferCyberbullyingExperimentRunner(
-        use_strongreject_scorer=use_strongreject_scorer,
+        use_strongreject_scorer=False,
         hierarchical_scorer=hierarchical_scorer,
         max_iterations=max_iterations,
         n_streams=n_streams,
@@ -751,6 +771,7 @@ def main(
         experiment_id=experiment_id,
         cache_csv=cache_csv,
         experiment_csv=experiment_csv,
+        no_cot_in_context=no_cot_in_context,
     )
     
     runner.run_task_pipeline(
@@ -761,6 +782,7 @@ def main(
         n_negative_samples=negative_samples,
         randomize_sampling=randomize_sampling,
         skip_adaptive=skip_adaptive,
+        no_cot_in_context=no_cot_in_context,
     )
 
 

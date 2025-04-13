@@ -1,0 +1,6 @@
+model_name,log_path
+openai/gpt-4o_together/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO,logs/pair/initial
+openai/gpt-4o-mini_together/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO,logs/pair/initial
+together/meta-llama/Llama-3.3-70B-Instruct-Turbo_together/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO,logs/pair/initial
+openai/o3-mini_together/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO,logs/pair/initial
+anthropic/claude-3-5-sonnet-latest_together/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO,logs/pair/initial

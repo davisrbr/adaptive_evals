@@ -75,6 +75,8 @@ def cyberbullying_jailbreak_task(
     cutoff: int = 0,
     heirarchal_scorer: bool = False,
     use_vanilla_prompt: bool = True,
+    use_cot_in_context: bool = True,
+    randomize_sampling: bool = False,
 ):
     """
     PAIR task within Inspect
@@ -111,6 +113,8 @@ def cyberbullying_jailbreak_task(
                 heirarchal_scorer=heirarchal_scorer,
                 max_iterations=max_iterations,
                 use_vanilla_prompt=use_vanilla_prompt,
+                use_cot_in_context=use_cot_in_context,
+                randomize_sampling=randomize_sampling,
             ),
         ],
         scorer=final_scorer(cutoff=0),
@@ -136,6 +140,7 @@ def cyberbullying_adaptive_task(
     percentiles_and_samples: list = [(1.0, 2), (0.5, 2)],  # Example: top 100% get 2 samples, top 50% get 2
     use_embeddings: bool = False,
     initial_log_path: str = "../logs/2024-12-31T12-11-26-05-00_cyberbullying-jailbreak-task_VJoc6WaBg3QG4W2ySinAS4.json",
+    use_cot_in_context: bool = True,
     num_samples: int | bool = 25,
     n_streams: int = 1,
 ):
@@ -196,6 +201,7 @@ def cyberbullying_adaptive_task(
             percentiles_and_samples=percentiles_and_samples,
             use_embeddings=use_embeddings,
             initial_log_path=initial_log_path,
+            use_cot_in_context=use_cot_in_context,
         )],
         scorer=final_scorer(cutoff=0),
         metrics=[mean(), stderr()],

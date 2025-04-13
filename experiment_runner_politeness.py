@@ -316,13 +316,14 @@ class ExperimentConfig:
 class TransferPolitenessExperimentRunner:
     def __init__(
         self,
-        use_cot: bool = False, 
-        use_cot_target: bool = False, 
+        use_cot: bool = False,
+        use_cot_target: bool = False,
         use_cot_in_context_attacker: bool = False,
         use_example: bool = True,
         experiment_id: Optional[str] = None,
-        cache_csv: Optional[str] = None, 
-        experiment_csv: Optional[str] = None
+        cache_csv: Optional[str] = None,
+        experiment_csv: Optional[str] = None,
+        randomize_sampling: bool = False,
     ):
         self.config = ExperimentConfig(
             use_cot=use_cot,
@@ -359,7 +360,7 @@ class TransferPolitenessExperimentRunner:
         ]
         self.generator_models = [
             "openai/gpt-4o",
-            "openai/o3-mini",
+            # "openai/o3-mini",
         ]
         # Models on which we'll perform the adaptive evaluation
         self.adaptive_evaluated_models = [
@@ -369,6 +370,7 @@ class TransferPolitenessExperimentRunner:
             "openai/o3-mini",
             "anthropic/claude-3-5-sonnet-latest",
         ]
+        self.randomize_sampling = randomize_sampling
 
     def run_initial_experiment(
         self,
@@ -500,7 +502,7 @@ class TransferPolitenessExperimentRunner:
                             use_cot_generator=True,
                             use_cot_evaluator=use_cot,
                             cot_in_context=cot_in_context,
-                            randomize_sampling=False,
+                            randomize_sampling=self.randomize_sampling,
                             original_eval_model_name=original_eval_model_name,
                             judge_model_name="anthropic/claude-3-5-sonnet-latest",
                         )
@@ -757,6 +759,7 @@ class TransferPolitenessExperimentRunner:
 @click.option('--experiment-id', default=None, help='Custom experiment ID')
 @click.option('--experiment-csv', default=None, help='Path to the CSV file where experiment results will be stored')
 @click.option('--cache-csv', default=None, help='Path to the CSV file where cached logs will be stored')
+@click.option('--randomize-sampling', is_flag=True, help='If True, use random sampling when generating questions.')
 def main(
     models_for_transfer,
     positive_samples,
@@ -771,6 +774,7 @@ def main(
     experiment_id,
     experiment_csv,
     cache_csv,
+    randomize_sampling,
 ):
     """Run politeness transfer experiments"""
     
@@ -793,6 +797,7 @@ def main(
         experiment_id=experiment_id,
         experiment_csv=experiment_csv,
         cache_csv=cache_csv,
+        randomize_sampling=randomize_sampling,
     )
     
     runner.run_task_pipeline(

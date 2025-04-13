@@ -290,6 +290,7 @@ class TruthfulQAExperimentRunner:
         experiment_csv: str = "results/experiment_results.csv",
         cache_csv: str = "results/experiment_cache.csv",
         judge_model_name: Optional[str] = "anthropic/claude-3-5-sonnet-latest",
+        randomize_sampling: bool = False,
     ):
         self.use_cot = use_cot
         self.similarity_threshold = similarity_threshold
@@ -308,6 +309,8 @@ class TruthfulQAExperimentRunner:
         self.cache_csv = cache_csv
         os.makedirs(os.path.dirname(self.experiment_csv), exist_ok=True)
         os.makedirs(os.path.dirname(self.cache_csv), exist_ok=True)
+
+        self.randomize_sampling = randomize_sampling
 
     def run_initial_experiments(self, adaptive_eval_models: List[str]) -> Dict[str, EvalLog]:
         """
@@ -395,7 +398,7 @@ class TruthfulQAExperimentRunner:
                 similarity_threshold=self.similarity_threshold,
                 score_threshold=self.score_threshold,
                 max_attempts=self.max_attempts,
-                randomize_sampling=False,
+                randomize_sampling=self.randomize_sampling,
                 cot_in_context=True,
                 use_cot_generator=True,
                 use_cot_evaluator=False,
@@ -575,9 +578,9 @@ class TruthfulQAExperimentRunner:
 @click.option(
     "--adaptive-eval-models",
     default=[
-            "openai/gpt-4o",
-            "openai/gpt-4o-mini",
-            "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+            # "openai/gpt-4o",
+            # "openai/gpt-4o-mini",
+            # "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
             "openai/o3-mini",
             "anthropic/claude-3-5-sonnet-latest",
         ],
@@ -588,7 +591,7 @@ class TruthfulQAExperimentRunner:
     "--n-datapoints",
     default=40,
     type=int,
-    help="Number of datapoints to use for initial TQA.",
+    help="Number of datapoints to attempt to generate for adaptive ('streams' in PAIR).",
 )
 @click.option(
     "--generator-models",
@@ -634,6 +637,11 @@ class TruthfulQAExperimentRunner:
     is_flag=True,
     help="If set, re-evaluation only uses previously incorrectly answered questions.",
 )
+@click.option(
+    "--randomize-sampling",
+    is_flag=True,
+    help="If True, use random sampling when generating questions.",
+)
 def main(
     experiment_csv: str,
     cache_csv: str,
@@ -649,6 +657,7 @@ def main(
     n_neg: int,
     max_attempts: int,
     re_eval_filter_incorrect: bool,
+    randomize_sampling: bool,
 ) -> None:
     """
     1) Runs initial TruthfulQA for each model in --adaptive-eval-models.
@@ -676,6 +685,7 @@ def main(
         max_attempts=max_attempts,
         experiment_csv=experiment_csv,
         cache_csv=cache_csv,
+        randomize_sampling=randomize_sampling,
     )
     runner.run_all(
         adaptive_eval_models=list(adaptive_eval_models),

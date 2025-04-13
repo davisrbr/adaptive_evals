@@ -16,7 +16,9 @@ def pair_task(
     heirarchal_scorer: bool = False,
     dataset: list = jb_behaviors_dataset,
     cutoff: float = 0.8,
+    num_jb_behaviors: int = 30,
 ):
+    dataset = dataset[:num_jb_behaviors]
     """
     PAIR task within Inspect
     """
@@ -55,7 +57,9 @@ def pair_task_adaptive(
     dataset: list = jb_behaviors_dataset_embeddings_artifacts,
     filter_artifacts: dict = {"model_name": "llama-2-7b-chat-hf", "jailbroken": True, "method": "DSN"},
     cutoff: float = 0.8,
+    num_jb_behaviors: int = 30,
 ):
+    dataset = dataset[:num_jb_behaviors]
     """
     PAIR task within Inspect
     Args:
