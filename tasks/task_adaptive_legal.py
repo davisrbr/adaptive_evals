@@ -1,21 +1,17 @@
-import os
 from inspect_ai.log import read_eval_log
 import pandas as pd
 import re
 from inspect_ai import Epochs, Task, task, eval
 from inspect_ai.dataset import Sample, hf_dataset, MemoryDataset
 from inspect_ai.scorer import choice
-from inspect_ai.solver import multiple_choice, chain_of_thought
+from inspect_ai.solver import multiple_choice
 from typing import Any, Callable, Optional
-import sys
 import json
 import logging
 
 from solvers.adaptive_utils import multiple_choice_save_cot
 from solvers.solver_adaptive_legal_refactor import adaptive_legal_solver_refactor
 from utils_elicitation.novelty import novelty_filter_judged_only
-sys.path.append("..")
-sys.path.append("../legalbench")
 from legalbench.utils import generate_prompts
 
 from scorers.scorers_rewording import choice_judged, judge_scoring

@@ -6,10 +6,6 @@ from typing import Optional
 from inspect_ai.solver import solver, Generate, TaskState
 from inspect_ai.model import GenerateConfig, get_model
 from inspect_ai.dataset import Sample
-import sys
-sys.path.append('..')
-from legalbench.utils import generate_prompts
-import pandas as pd
 from inspect_ai.solver._multiple_choice import (
     answer_options,
     SINGLE_ANSWER_TEMPLATE,
