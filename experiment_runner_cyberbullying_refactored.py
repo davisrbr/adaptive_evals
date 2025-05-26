@@ -4,6 +4,7 @@ This demonstrates the cleanup approach for all experiment runners.
 """
 import logging
 from typing import Dict, List, Optional, Tuple, Any
+from dataclasses import dataclass
 import click
 from datetime import datetime
 
@@ -15,6 +16,7 @@ from inspect_ai import Epochs, eval
 from inspect_ai.log import EvalLog
 
 
+@dataclass
 class CyberbullyingExperimentConfig(ExperimentConfig):
     """Cyberbullying-specific experiment configuration"""
     

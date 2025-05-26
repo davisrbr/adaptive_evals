@@ -4,6 +4,7 @@ import logging
 import json
 from typing import Dict, List, Optional, Tuple
 import click
+from dataclasses import dataclass
 from datetime import datetime
 
 from inspect_ai import Epochs, eval
@@ -21,6 +22,7 @@ logging.getLogger('httpx').setLevel(logging.ERROR)
 logging.getLogger('httpcore').setLevel(logging.ERROR)
 
 
+@dataclass
 class PolitenessExperimentConfig(ExperimentConfig):
     """Configuration for Politeness experiments"""
     use_cot: bool = False

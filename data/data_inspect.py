@@ -6,7 +6,7 @@ import numpy as np
 from prompting.system_prompts import get_attacker_system_prompt
 from utils_plotting.common import get_init_msg
 
-import jailbreakbench as jbb
+# import jailbreakbench as jbb  # Commented out due to litellm dependency
 
 def process_sample(sample: Dict[str, Any]) -> Sample:
     """
@@ -129,10 +129,10 @@ jb_behaviors_dataset_embeddings_artifacts = hf_dataset(
     cache_dir="~/data",
 )[:30]  # Take first 30 samples to match
 
-artifact = jbb.read_artifact(
-    method="DSN",
-    model_name="llama-2-7b-chat-hf"
-)
+# artifact = jbb.read_artifact(
+#     method="DSN",
+#     model_name="llama-2-7b-chat-hf"
+# )  # Commented out due to jailbreakbench litellm dependency
 # print(artifact.jailbreaks[75]) # The 75th index as an example
 ##### output #####
 '''

@@ -4,7 +4,7 @@ import logging
 from typing import Dict, List, Optional, Tuple
 import click
 from datetime import datetime
-
+from dataclasses import dataclass
 from inspect_ai import eval
 from inspect_ai.log import EvalLog
 
@@ -18,6 +18,7 @@ logging.getLogger("httpx").setLevel(logging.ERROR)
 logging.getLogger("httpcore").setLevel(logging.ERROR)
 
 
+@dataclass
 class PairExperimentConfig(ExperimentConfig):
     """Configuration for PAIR experiments"""
     target_model_name: str = ""

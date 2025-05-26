@@ -4,13 +4,14 @@ import logging
 import json
 import ast
 from typing import Dict, List, Optional, Tuple
+from dataclasses import dataclass
 import click
 from datetime import datetime
 
 from inspect_ai import Epochs, eval
 from inspect_ai.log import EvalLog
 from inspect_ai import Task
-from inspect_ai.solver import choice
+from inspect_ai.scorer import choice
 from inspect_ai.dataset import MemoryDataset
 
 from experiment_runner_base import BaseExperimentRunner, ExperimentConfig
@@ -25,6 +26,7 @@ logging.getLogger('httpx').setLevel(logging.ERROR)
 logging.getLogger('httpcore').setLevel(logging.ERROR)
 
 
+@dataclass
 class LegalExperimentConfig(ExperimentConfig):
     """Configuration for Legal experiments"""
     task_names: List[str] = None

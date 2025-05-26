@@ -5,7 +5,6 @@ Consolidates common patterns from cyberbullying, legal, politeness, and truthful
 import os
 import csv
 import logging
-from abc import ABC, abstractmethod
 from typing import Dict, List, Optional, Tuple, Any
 from dataclasses import dataclass
 from datetime import datetime
@@ -23,6 +22,8 @@ class ExperimentConfig:
     num_epochs: int = 100
     randomize_sampling: bool = False
     task_type: str = "base"
+    cache_path: Optional[str] = None
+    results_path: Optional[str] = None
     
     def __post_init__(self):
         # Configure logging to be quiet by default
@@ -51,7 +52,15 @@ class ExperimentConfig:
     
     def get_cache_path(self) -> str:
         """Get the path for the cache CSV"""
+        if self.cache_path:
+            return self.cache_path
         return os.path.join("cache", f"initial_eval_{self.experiment_id}.csv")
+    
+    def get_results_path(self) -> str:
+        """Get the path for the results CSV"""
+        if self.results_path:
+            return self.results_path
+        return os.path.join("results", self.task_type, f"experiment_results_{self.experiment_id}.csv")
     
     def get_initial_log_dir(self) -> str:
         """Get the directory for initial evaluation logs"""
@@ -62,11 +71,11 @@ class ExperimentConfig:
         return os.path.join("logs", self.task_type, "adaptive", self.experiment_id)
     
     def get_experiment_csv_path(self) -> str:
-        """Get the path for experiment results CSV"""
-        return os.path.join("results", self.task_type, f"experiment_results_{self.experiment_id}.csv")
+        """Get the path for experiment results CSV (deprecated, use get_results_path)"""
+        return self.get_results_path()
 
 
-class BaseExperimentRunner(ABC):
+class BaseExperimentRunner:
     """Base class for all experiment runners with shared functionality"""
     
     def __init__(self, config: ExperimentConfig):
@@ -75,8 +84,12 @@ class BaseExperimentRunner(ABC):
         self.experiment_csv = config.get_experiment_csv_path()
         
         # Ensure directories exist
-        os.makedirs(os.path.dirname(self.cache_csv), exist_ok=True)
-        os.makedirs(os.path.dirname(self.experiment_csv), exist_ok=True)
+        cache_dir = os.path.dirname(self.cache_csv)
+        if cache_dir:
+            os.makedirs(cache_dir, exist_ok=True)
+        experiment_dir = os.path.dirname(self.experiment_csv)
+        if experiment_dir:
+            os.makedirs(experiment_dir, exist_ok=True)
         os.makedirs(config.get_initial_log_dir(), exist_ok=True)
         os.makedirs(config.get_adaptive_log_dir(), exist_ok=True)
     
@@ -178,25 +191,24 @@ class BaseExperimentRunner(ABC):
             }
             writer.writerow(row)
     
-    @abstractmethod
     def get_default_models(self) -> Dict[str, List[str]]:
         """Return default model configurations for this experiment type"""
-        pass
+        return {
+            "target_models": ["openai/gpt-4o", "openai/gpt-4o-mini"],
+            "generation_models": ["openai/gpt-4o", "openai/gpt-4o-mini"],
+        }
     
-    @abstractmethod
     def create_initial_task(self, **kwargs):
         """Create the initial evaluation task"""
-        pass
+        raise NotImplementedError("Subclasses should implement create_initial_task")
     
-    @abstractmethod
     def create_adaptive_task(self, **kwargs):
         """Create the adaptive evaluation task"""
-        pass
+        raise NotImplementedError("Subclasses should implement create_adaptive_task")
     
-    @abstractmethod
     def run_experiment(self, **kwargs):
         """Run the full experiment pipeline"""
-        pass
+        raise NotImplementedError("Subclasses should implement run_experiment")
 
 
 class TransferExperimentMixin:

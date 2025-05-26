@@ -4,6 +4,7 @@ import logging
 import json
 import ast
 from typing import Dict, List, Optional, Tuple
+from dataclasses import dataclass
 import click
 from datetime import datetime
 
@@ -25,6 +26,7 @@ logging.getLogger("httpx").setLevel(logging.ERROR)
 logging.getLogger("httpcore").setLevel(logging.ERROR)
 
 
+@dataclass
 class TruthfulQAExperimentConfig(ExperimentConfig):
     """Configuration for TruthfulQA experiments"""
     use_cot: bool = False
