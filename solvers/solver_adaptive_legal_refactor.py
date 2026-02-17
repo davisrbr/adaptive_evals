@@ -230,14 +230,26 @@ def adaptive_legal_solver_refactor(
 
         # Load base prompt and extract placeholder keys
         if use_claude:
-            prompt_template_path = f"/Users/davisbrown/adaptive_evals/legalbench/tasks/{task_name}/claude_prompt.txt"
+            template_filename = "claude_prompt.txt"
         elif use_example:
-            prompt_template_path = f"/Users/davisbrown/adaptive_evals/legalbench/tasks/{task_name}/base_prompt.txt"
+            template_filename = "base_prompt.txt"
         else:
-            prompt_template_path = f"/Users/davisbrown/adaptive_evals/legalbench/tasks/{task_name}/base_prompt_wo_example.txt"
+            template_filename = "base_prompt_wo_example.txt"
 
-        with open(prompt_template_path, "r") as f:
-            base_prompt = f.read()
+        base_prompt = None
+        for base_path in ("../legalbench", "./legalbench"):
+            prompt_template_path = f"{base_path}/tasks/{task_name}/{template_filename}"
+            try:
+                with open(prompt_template_path, "r") as f:
+                    base_prompt = f.read()
+                break
+            except FileNotFoundError:
+                continue
+
+        if base_prompt is None:
+            state.error = f"Could not find prompt template for task {task_name}"
+            state.completed = True
+            return state
 
         placeholder_keys = [key.strip() for key in set(re.findall(r"{{(.*?)}}", base_prompt))]
         if not placeholder_keys:
