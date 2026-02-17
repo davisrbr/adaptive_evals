@@ -35,12 +35,8 @@ bash scripts/run_paper_repro.sh          # dry-run (prints commands)
 bash scripts/run_paper_repro.sh --execute
 ```
 
-Detailed instructions are in `REPRODUCIBILITY.md`.
-
 ## Release Policy
 
-- Included scope is documented in `RELEASE_MANIFEST.md`.
-- Data and artifact policy is documented in `DATA.md` and `ARTIFACTS.md`.
 - CI enforces release hygiene via `scripts/release_check.py`.
 
 ## Citation

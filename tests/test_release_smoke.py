@@ -8,10 +8,6 @@ from pathlib import Path
 def test_release_files_exist() -> None:
     required = [
         "README.md",
-        "RELEASE_MANIFEST.md",
-        "REPRODUCIBILITY.md",
-        "DATA.md",
-        "ARTIFACTS.md",
         "CITATION.cff",
         "pyproject.toml",
         "scripts/release_check.py",
