@@ -1,7 +1,65 @@
-pair_task_adaptive_embeddings_22B_log/
+# Environment and secrets
 .env
-logs/
+.env.*
+!.env.example
+
+# Python artifacts
 __pycache__/
-*.json
+*.py[cod]
+*.so
+*.dylib
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Packaging/build
 build/
+dist/
 *.egg-info/
+pip-wheel-metadata/
+
+# Editor/OS noise
+.DS_Store
+.vscode/
+.idea/
+
+# Generated experiment outputs
+logs/
+logs_politeness/
+outputs/
+cache/
+results/
+results_truthfulqa/
+results_truthfulqa_nocot/
+plots/
+visualization_results/
+adaptive_featurization_results/
+featurization_results/
+truthfulqa_base_features/
+
+# Generated dataset/result folders
+legal_*_results/
+legal_*_cache/
+politeness_200*/
+cyberbullying_100*/
+cyberbullying_test/
+test_cyberbullying_attack/
+
+# Generated task artifacts
+tasks/cond_100/
+tasks/logs/
+tasks/adaptive_consistency_checkpoints/
+data/politeness/
+data/*.ipynb
+
+# Logs and Inspect artifacts
+*.eval
+*.log
+
+# ds-featurization generated outputs
+ds-featurization/**/*.csv
+ds-featurization/**/*.txt

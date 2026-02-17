@@ -1,0 +1,5 @@
+# Canonical install method:
+#   pip install -e .
+# For development utilities:
+#   pip install -e ".[dev]"
+-e .

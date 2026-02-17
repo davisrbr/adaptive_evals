@@ -1,65 +1,48 @@
 # Adaptive Evals
 
-A framework for *adaptively* evaluating language models by using language models to generate test datasets based on previous evaluations. Built using [Inspect AI](https://inspect.ai-safety-institute.org.uk/).
+Code release for the EMNLP 2025 paper:  
+**"Adaptively profiling models with task elicitation"** ([arXiv:2503.01986](https://arxiv.org/abs/2503.01986)).
 
-## Overview
+## What This Repo Contains
 
-This project implements adaptive:
-- Jailbreaks for HarmBench/JailbreakBench by building on PAIR by using previous successful jailbreaks to inform new jailbreak attempts.
-- Adaptive evaluations for hallucinations with [TruthfulQA](https://github.com/sylinrl/TruthfulQA)
-- Adaptive evaluations for legal judgement with [LegalBench](https://github.com/HazyResearch/legalbench/tree/main)
-- [In progress] Adaptive evaluations for forecasting with [llm_forecasting](https://github.com/dannyallover/llm_forecasting) 
-- [In progress] Initial dataset generation for [cyberbullying generation](https://www.notion.so/Cyberbullying-evaluation-13034fe4007d803cbc8be0f29d4cd74c)
+This release keeps the core implementation for adaptive evaluation workflows:
 
-## Project Structure
+- task definitions (`tasks/`)
+- solver/scorer implementations (`solvers/`, `scorers/`)
+- experiment runners (`experiment_runner_*`)
+- featurization and analysis helpers (`featurization/`, `utils_*`, `data/`)
+- external dependencies via submodules (`legalbench`, `dataset-featurization`)
 
-- `tasks/`: Contains task definitions and evaluation configurations. The general set-up here is standard evaluation run -> adaptive evaluation run using logs from previous -> ...
-  - `pair_inspect.py`: Implements PAIR tasks and configurations
-  - `task_adaptive_truthfulqa.py`: TruthfulQA adaptive evaluation tasks
-  - `task_adaptive_legal.py`: LegalBench adaptive evaluation tasks
-  - `eval_adaptive_mc.py`: Standard multiple choice evaluation, on which adaptive evaluations are built
+Generated logs, caches, large result dumps, and plotting artifacts are intentionally excluded from git tracking.
 
-- `solvers/`: Contains the core logic for different evaluation approaches
-  - `solvers_inspect.py`: Main solver implementations including PAIR and decomposition
-  - `solver_adaptive_truthfulqa.py`: TruthfulQA-specific adaptive solver
-  - `solver_press_truthfulqa.py`: PRESS method for TruthfulQA adaptive evaluation
-  - `solver_adaptive_legal.py`: LegalBench adaptive solver
-  - `solvers_forecasting.py`: vanilla and llm_forecasting adaptive solvers
+## Quick Start
 
-## Task Implementations
+```bash
+git clone --recurse-submodules <REPO_URL>
+cd adaptive_evals
+bash env_create.sh
+source .venv/bin/activate
+```
 
-### Adaptive jailbreaks
-- Basic PAIR implementation with configurable parameters:
-  - Max iterations
-  - Target/Judge/Attack model selection
-  - Historical context length
-  - Scoring mechanisms (custom hierarchical/strong reject)
-- Builds on basic PAIR with:
-  - Embedding-based similar example retrieval
-  - Configurable percentile-based sampling
-  - TO DO: different diversity terms
-  - TO DO: implement Maksym's template jailbreak
+Set provider credentials as needed (for example `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`) before running experiments.
 
-### TruthfulQA Adaptive
-- Multiple choice evaluation framework
-- Supports both single (mc1) and multiple (mc2) correct answer formats
-- Adaptive generation of new questions based on model performance
-- Configurable positive/negative sampling ratios
+## Reproducing Paper Runs
 
-### LegalBench Adaptive
-- Task-specific legal reasoning evaluation
-- Support for chain-of-thought prompting in both generation and evaluation
-- Separate judge model scoring
-- Randomized sampling options
+Use the paper runner wrapper:
 
-## Generic adaptive multiple choice testing
-- Uses embeddings for similar example retrieval for in-context prompting
-  - Configurable percentile-based sampling
-- Supports multiple model configurations for generation and evaluation
-- Flexible scoring mechanisms with judge model options
+```bash
+bash scripts/run_paper_repro.sh          # dry-run (prints commands)
+bash scripts/run_paper_repro.sh --execute
+```
 
-## Getting Started
+Detailed instructions are in `REPRODUCIBILITY.md`.
 
-1. Install Inspect AI following the [official documentation](https://inspect.ai-safety-institute.org.uk/)
-2. Clone this repository
-3. Configure your model access and API keys as required by Inspect AI
+## Release Policy
+
+- Included scope is documented in `RELEASE_MANIFEST.md`.
+- Data and artifact policy is documented in `DATA.md` and `ARTIFACTS.md`.
+- CI enforces release hygiene via `scripts/release_check.py`.
+
+## Citation
+
+See `CITATION.cff`.

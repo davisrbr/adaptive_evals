@@ -1,6 +1,0 @@
-model_name,log_path
-openai/gpt-4o,/home/davisrbr/Desktop/adaptive_evals/logs/politeness/initial/politeness_200_nocot/openai_gpt-4o/2025-04-07T18-57-52+00-00_politeness-n-shot_HArzsdwb6o9F3FcTnjxrmb.eval
-openai/gpt-4o-mini,/home/davisrbr/Desktop/adaptive_evals/logs/politeness/initial/politeness_200_nocot/openai_gpt-4o-mini/2025-04-07T19-00-03+00-00_politeness-n-shot_kcqRxsbcZPQaaFHg9fjpEB.eval
-together/meta-llama/Llama-3.3-70B-Instruct-Turbo,/home/davisrbr/Desktop/adaptive_evals/logs/politeness/initial/politeness_200_nocot/together_meta-llama_Llama-3.3-70B-Instruct-Turbo/2025-04-07T19-01-27+00-00_politeness-n-shot_NJRMkCpZLFSAPiNrPDLfMK.eval
-openai/o3-mini,/home/davisrbr/Desktop/adaptive_evals/logs/politeness/initial/politeness_200_nocot/openai_o3-mini/2025-04-07T19-02-47+00-00_politeness-n-shot_fAcjePMxCMhjKtZBjQoSGr.eval
-anthropic/claude-3-5-sonnet-latest,/home/davisrbr/Desktop/adaptive_evals/logs/politeness/initial/politeness_200_nocot/anthropic_claude-3-5-sonnet-latest/2025-04-07T19-05-56+00-00_politeness-n-shot_hzbvUiFweZszUM9Rg6KWGA.eval
