@@ -48,6 +48,7 @@ include = [
   "data*",
   "featurization*",
   "prompting*",
+  "runners*",
   "scorers*",
   "solvers*",
   "tasks*",

@@ -14,19 +14,19 @@ cat > "$OUTDIR/commands.sh" <<CMDS
 #!/usr/bin/env bash
 set -euo pipefail
 
-python experiment_runner_truthfulqa_refactored.py \
+python runners/truthfulqa.py \
   --models-for-transfer openai/gpt-4o-mini \
   --models-for-generation openai/gpt-4o-mini \
   --results-path "$OUTDIR/truthfulqa_results.csv" \
   --cache-path "$OUTDIR/truthfulqa_cache.csv"
 
-python experiment_runner_legal_refactored.py \
+python runners/legal.py \
   --models-for-transfer openai/gpt-4o-mini \
   --models-for-generation openai/gpt-4o-mini \
   --results-path "$OUTDIR/legal_results.csv" \
   --cache-path "$OUTDIR/legal_cache.csv"
 
-python experiment_runner_politeness_refactored.py \
+python runners/politeness.py \
   --models-for-transfer openai/gpt-4o-mini \
   --models-for-generation openai/gpt-4o-mini \
   --results-path "$OUTDIR/politeness_results.csv" \

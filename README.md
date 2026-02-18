@@ -9,7 +9,7 @@ This release keeps the core implementation for adaptive evaluation workflows:
 
 - task definitions (`tasks/`)
 - solver/scorer implementations (`solvers/`, `scorers/`)
-- experiment runners (`experiment_runner_*`)
+- experiment runners (`runners/`)
 - featurization and analysis helpers (`featurization/`, `utils_*`, `data/`)
 - external dependencies via submodules (`legalbench`, `dataset-featurization`)
 

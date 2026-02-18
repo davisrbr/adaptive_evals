@@ -11,7 +11,7 @@ from inspect_ai import Epochs, eval
 from inspect_ai.log import EvalLog
 from inspect_ai import Task
 
-from experiment_runner_base import BaseExperimentRunner, ExperimentConfig
+from runners.base import BaseExperimentRunner, ExperimentConfig
 from tasks.task_politeness import adaptive_politeness, politeness_n_shot, re_evaluate_adaptive_politeness
 from utils_elicitation.novelty import write_novelty_results
 
