@@ -16,6 +16,9 @@ The released codebase includes:
   - TruthfulQA (`runners/truthfulqa.py`)
   - LegalBench/MAUD tasks (`runners/legal.py`)
   - Politeness (`runners/politeness.py`)
+  - PAIR jailbreak evaluation (`runners/pair.py`)
+  - Cyberbullying adaptive evaluation (`runners/cyberbullying.py`)
+- Forecasting evaluation runner (`runners/forecasting.py`)
 - Core task/solver/scorer implementations (`tasks/`, `solvers/`, `scorers/`)
 - Consistency/adaptive generation utilities (`utils_consistency/`, `tasks/task_adaptive_consistency.py`)
 - PRESS report-card task (`tasks/task_press.py`, `solvers/solver_press.py`)
@@ -77,6 +80,9 @@ Examples:
 python runners/truthfulqa.py --models-for-transfer openai/gpt-4o-mini --models-for-generation openai/gpt-4o-mini
 python runners/legal.py --models-for-transfer openai/gpt-4o-mini --models-for-generation openai/gpt-4o-mini
 python runners/politeness.py --models-for-transfer openai/gpt-4o-mini --models-for-generation openai/gpt-4o-mini
+python runners/pair.py --target-models together/meta-llama/Llama-2-7b-chat-hf --attack-models openai/gpt-4o
+python runners/cyberbullying.py --target-models openai/gpt-4o-mini --attack-models openai/gpt-4o
+python runners/forecasting.py --models openai/gpt-4o-mini
 ```
 
 Use `--help` on each runner for all options.

@@ -54,6 +54,8 @@ include = [
   "tasks*",
   "utils_consistency*",
   "utils_elicitation*",
+  "utils_forecasting*",
+  "utils_plotting*",
 ]
 
 [tool.pytest.ini_options]
