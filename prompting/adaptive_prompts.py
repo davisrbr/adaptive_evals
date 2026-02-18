@@ -266,7 +266,7 @@ class AdaptiveJailbreakRetrieval:
 
 
 class AdaptiveTruthfulQARetrieval:
-    '''This assumes that the dataset already has embeddings. See data/dataset_embedder.py for an example of how to add embeddings to the dataset.'''
+    '''This assumes the dataset already contains embedding vectors in sample metadata.'''
     def __init__(self, incorrect_samples: List[Sample], correct_samples: List[Sample], embeddings_model_name: str = None):
         self.incorrect_samples = incorrect_samples
         self.correct_samples = correct_samples

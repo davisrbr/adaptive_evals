@@ -47,15 +47,12 @@ include = [
   "config*",
   "data*",
   "featurization*",
-  "human_eval*",
   "prompting*",
   "scorers*",
   "solvers*",
   "tasks*",
   "utils_consistency*",
   "utils_elicitation*",
-  "utils_forecasting*",
-  "utils_plotting*",
 ]
 
 [tool.pytest.ini_options]
