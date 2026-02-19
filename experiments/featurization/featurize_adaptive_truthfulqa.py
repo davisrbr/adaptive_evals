@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 from inspect_ai.log import read_eval_log
 
 # Setup import path for dataset-featurization
-dataset_featurization_path = os.path.join(os.path.dirname(__file__), '..', 'dataset-featurization')
+dataset_featurization_path = os.path.join(os.path.dirname(__file__), '..', '..', 'dataset-featurization')
 sys.path.append(dataset_featurization_path)
 
 # Import dataset-featurization config first to avoid import errors

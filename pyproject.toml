@@ -46,7 +46,6 @@ where = ["."]
 include = [
   "config*",
   "data*",
-  "featurization*",
   "prompting*",
   "runners*",
   "scorers*",

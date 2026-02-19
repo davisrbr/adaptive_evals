@@ -4,7 +4,7 @@ This project contains scripts for featurizing both static and adaptive TruthfulQ
 
 ## Setup
 
-1. Make sure you're on the labeling branch:
+1. Make sure you're on a branch that includes the release artifact (for example `public/emnlp2025`):
    ```bash
    git checkout labeling
    ```
@@ -30,7 +30,7 @@ This project contains scripts for featurizing both static and adaptive TruthfulQ
 ### Step 1: Featurize the static TruthfulQA dataset
 
 ```bash
-python featurization/featurize_truthfulqa.py --sample-size 50 --output-dir featurization/featurization_results
+python experiments/featurization/featurize_truthfulqa.py --sample-size 50 --output-dir experiments/featurization/featurization_results
 ```
 
 Options:
@@ -41,7 +41,7 @@ Options:
 ### Step 2: Featurize an adaptive TruthfulQA evaluation log
 
 ```bash
-python featurization/featurize_adaptive_truthfulqa.py /path/to/eval_log.json --sample-size 50 --output-dir featurization/adaptive_featurization_results
+python experiments/featurization/featurize_adaptive_truthfulqa.py /path/to/eval_log.json --sample-size 50 --output-dir experiments/featurization/adaptive_featurization_results
 ```
 
 Arguments:
@@ -57,7 +57,7 @@ Options:
 ### Step 3: Visualize the results
 
 ```bash
-python featurization/visualize_featurization.py --static-dir featurization/featurization_results --adaptive-dir featurization/adaptive_featurization_results --output-dir featurization/visualization_results
+python experiments/featurization/visualize_featurization.py --static-dir experiments/featurization/featurization_results --adaptive-dir experiments/featurization/adaptive_featurization_results --output-dir experiments/featurization/visualization_results
 ```
 
 Options:

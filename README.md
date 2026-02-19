@@ -22,7 +22,7 @@ The released codebase includes:
 - Core task/solver/scorer implementations (`tasks/`, `solvers/`, `scorers/`)
 - Consistency/adaptive generation utilities (`utils_consistency/`, `tasks/task_adaptive_consistency.py`)
 - PRESS report-card task (`tasks/task_press.py`, `solvers/solver_press.py`)
-- TruthfulQA featurization utilities (`featurization/`)
+- TruthfulQA featurization utilities (`experiments/featurization/`)
 - Release hygiene checks (`scripts/release_check.py`) and smoke tests (`tests/test_release_smoke.py`)
 - External dependencies via submodules:
   - `legalbench`
@@ -37,7 +37,8 @@ Top-level root is intentionally minimal (metadata + folders):
 - Project metadata: `README.md`, `LICENSE`, `CITATION.cff`, `pyproject.toml`, `requirements.txt`
 - Environment bootstrap: `env_create.sh`
 - Repro and release scripts: `scripts/`
-- Core source folders: `runners/`, `tasks/`, `solvers/`, `scorers/`, `config/`, `data/`, `prompting/`, `utils_*`, `featurization/`
+- Core source folders: `runners/`, `tasks/`, `solvers/`, `scorers/`, `config/`, `data/`, `prompting/`, `utils_*`
+- Experiment bundles and analysis assets: `experiments/`
 
 ## Quick Start
 

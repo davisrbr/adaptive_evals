@@ -13,10 +13,12 @@ import statistics
 import time
 
 # Setup import path for dataset-featurization
-dataset_featurization_path = os.path.join(os.path.dirname(__file__), '..', 'dataset-featurization')
+dataset_featurization_path = os.path.join(os.path.dirname(__file__), '..', '..', 'dataset-featurization')
 sys.path.append(dataset_featurization_path)
 
-dataset_featurization_path_relative = os.path.join(os.path.dirname(__file__), '..', 'dataset-featurization/dataset_featurization')
+dataset_featurization_path_relative = os.path.join(
+    os.path.dirname(__file__), '..', '..', 'dataset-featurization', 'dataset_featurization'
+)
 sys.path.append(dataset_featurization_path_relative)
 
 # # Now you can import from dataset_featurization
