@@ -12,12 +12,10 @@ The released codebase includes:
   - Politeness (`runners/politeness.py`)
   - PAIR jailbreak evaluation (`runners/pair.py`)
   - Cyberbullying adaptive evaluation (`runners/cyberbullying.py`)
-  - Forecasting evaluation runner (`runners/forecasting.py`)
+  - Forecasting evaluation runner (`runners/forecasting.py`) and consistency/adaptive generation utilities (`utils_consistency/`, `tasks/task_adaptive_consistency.py`)
 - Core task/solver/scorer implementations (`tasks/`, `solvers/`, `scorers/`)
-- Consistency/adaptive generation utilities (`utils_consistency/`, `tasks/task_adaptive_consistency.py`)
-- PRESS report-card task (`tasks/task_press.py`, `solvers/solver_press.py`)
+- [PRESS](https://arxiv.org/abs/2409.00844v1) report-cards, implemented in inspect-ai (`tasks/task_press.py`, `solvers/solver_press.py`)
 - TruthfulQA featurization utilities (`experiments/featurization/`)
-- Release hygiene checks (`scripts/release_check.py`) and smoke tests (`tests/test_release_smoke.py`)
 - External dependencies via submodules:
   - `legalbench`
   - `dataset-featurization`
