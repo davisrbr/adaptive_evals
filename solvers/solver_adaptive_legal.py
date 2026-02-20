@@ -1,0 +1,599 @@
+import random
+import json
+import re
+import logging
+from typing import Optional
+from inspect_ai.solver import solver, Generate, TaskState
+from inspect_ai.model import GenerateConfig, get_model
+from inspect_ai.dataset import Sample
+from inspect_ai.solver._multiple_choice import (
+    answer_options,
+    SINGLE_ANSWER_TEMPLATE,
+    SINGLE_ANSWER_TEMPLATE_COT,
+    parse_answers,
+)
+from data.eval_log_processing import read_eval_log_async
+from utils_elicitation.novelty import novelty_scorer
+from prompting.adaptive_prompts import get_self_check_judge_prompt
+
+# Configure logging
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+
+@solver
+def adaptive_legal_solver(
+    initial_log_path: str,
+    task_name: str,
+    n_positive_samples: int = 5,
+    n_negative_samples: int = 5,
+    randomize_sampling: bool = False,
+    generator_model_name: str = "openai/gpt-4",
+    eval_model_name: str = "openai/gpt-4",
+    self_check_model_name: Optional[str] = None,
+    use_embeddings: bool = False,
+    embeddings_model_name: str = "sentence-transformers/all-mpnet-base-v2",
+    similarity_threshold: float = 0.6,
+    score_threshold: int = 4,
+    cot_in_context: bool = False,
+    use_cot_generator: bool = False,
+    use_cot_evaluator: bool = False,
+    use_claude: bool = False,
+    use_example: bool = True,
+    num_attempts: int = 30,
+    original_eval_model_name: Optional[str] = None,
+) -> Generate:
+    """
+    Solver that generates new questions based on the model's performance
+    and evaluates the model on them for the LegalBench dataset.
+    """
+
+    async def solve(state: TaskState, generate: Generate) -> TaskState:
+        if "generated_sample" in state.store:
+            return state
+
+        generator_model = get_model(
+            generator_model_name,
+            config=GenerateConfig(max_connections=50, temperature=0.5),
+        )
+        eval_model = get_model(
+            eval_model_name,
+            config=GenerateConfig(max_connections=50, temperature=0),
+        )
+
+        eval_log = await read_eval_log_async(initial_log_path)
+        sample_logs = eval_log.samples
+        assert len(sample_logs) > 0, "No samples found in the initial evaluation log."
+
+        if not randomize_sampling:
+            correct_samples = [s for s in sample_logs if s.score.value == "C"]
+            incorrect_samples = [s for s in sample_logs if s.score.value != "C"]
+
+            num_correct = min(len(correct_samples), n_positive_samples)
+            num_incorrect = min(len(incorrect_samples), n_negative_samples)
+
+            sampled_correct = (
+                random.sample(correct_samples, num_correct) if num_correct > 0 else []
+            )
+            sampled_incorrect = (
+                random.sample(incorrect_samples, num_incorrect) if num_incorrect > 0 else []
+            )
+        else:
+            sampled = random.sample(sample_logs, n_positive_samples + n_negative_samples)
+            sampled_correct = [s for s in sampled if s.score.value == "C"]
+            sampled_incorrect = [s for s in sampled if s.score.value != "C"]
+
+        context_examples = ""
+        for sample_item in sampled_correct + sampled_incorrect:
+            if not randomize_sampling:
+                status = "Correctly" if sample_item in sampled_correct else "Incorrectly"
+            else:
+                status = "Previously"
+            sample_data = sample_item.input
+            # format sample_data as json
+            sample_data = json.dumps(sample_data)   
+            context_examples += f"{status} Answered Example:\n"
+            context_examples += f"Sample Data:\n{sample_data}\n"
+            if cot_in_context:
+                context_examples += f"Reasoning trace from the model for this example:\n{sample_item.store.get('chain_of_thought')}\n"
+            context_examples += f"Correct answer for this example:\n{sample_item.target}\n\n"
+        if use_claude:
+            prompt_template_path = f"../legalbench/tasks/{task_name}/claude_prompt.txt"
+        elif use_example:
+            prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt.txt"
+        else:
+            prompt_template_path = f"../legalbench/tasks/{task_name}/base_prompt_wo_example.txt"
+            
+        # Try both relative paths: with .. and with .
+        try:
+            with open(prompt_template_path, 'r') as f:
+                base_prompt = f.read()
+        except FileNotFoundError:
+            # If the first path fails, try without the leading ..
+            prompt_template_path = prompt_template_path.replace("../", "./")
+            with open(prompt_template_path, 'r') as f:
+                base_prompt = f.read()
+
+        placeholder_keys = [key.strip() for key in set(re.findall(r"{{(.*?)}}", base_prompt))]
+        if not placeholder_keys:
+            state.error = "No placeholders found in the base prompt."
+            logger.debug(f"Error in base prompt: {state.error}")
+            return state
+
+        try:
+            if use_cot_generator:
+                json_format = "{{\"reasoning_for_question\": [REASONING], \"text\": [TEXT], \"reasoning_for_answer\": [REASONING], \"answer\": [ANSWER]}}"
+                reasoning_prompt = "'reasoning_for_question' is your step by step reasoning for the question, (for example, 'The model seems to have been confused about the relative importance of the clauses of the statute, and has interpreted them incorrectly; I will make a similar question but have a different clause emphasized in my invented document'), 'reasoning_for_answer' is your step by step reasoning for the answer, here you should explain why the answer to your constructed question is correct (for example, 'Because the question asks about statute A during time period B, the correct answer is clause A during time period B instead of statute X during time period Y')"
+            else:
+                json_format = '{{"text": [TEXT], "answer": [ANSWER]}}'
+                reasoning_prompt = ""
+
+            if cot_in_context:
+                context_examples = f"Next, you will see some examples of questions and answers that the model has answered correctly and incorrectly. These examples will include reasoning traces from the model. Pay attention to the model reasoning here, and see if you can notice confusions or failures in the model's reasoning as it attempts to work through the question. You will use these reasoning traces to inform your question generation.\n{context_examples}"
+            else:
+                context_examples = f"Next, you will see some examples of questions and answers that the model has answered correctly and incorrectly. Use these examples to inform your question generation.\n{context_examples}"
+
+            generation_prompt = (
+                "You are to generate a new data sample for the following LegalBench task.\n\n"
+                f"Task Name: {task_name}\n\n"
+                "Please make your example difficult to answer correctly, considering the examples provided. Note that you should make your example distinct from all of the examples provided.\n\n"
+                f"Instructions:\n"
+                f"- Generate appropriate values for each of the placeholder keys.\n"
+                f"- The values should be suitable for the task.\n"
+                f"- Output the result as a JSON object with keys corresponding to the placeholders.\n"
+                f"- Ensure that the 'answer' key is included and contains the correct answer.\n"
+                f"- Do not include any additional text outside the JSON object.\n\n"
+                f"{context_examples}\n"
+                f"Now, generate a new data sample. Again, note that you are to make this question extremely difficult to answer correctly. Consider the examples provided, and how they might have caused the model to incorrectly answer the question."
+                f"Make your question more like the examples that were answered incorrectly, but make sure that it is distinct from the examples provided. Your goal is to understand why the failure modes of the model in the incorrectly answered examples, and to use this failure model to construct a new difficult question.\n\n"
+                f"Please format your JSON like {json_format}, where {reasoning_prompt}[TEXT] is the full text of the question, including all details (like documents, etc., but not including the letter of the answer-- do not, under any circumstances, include the letter of the answer in the text field) and [ANSWER] is the letter of the correct answer to the question. Do not prepend or append anything to your JSON, just the brackets and the keys and values. Please be sure to include all {4 if use_cot_generator else 2} keys in the JSON."
+            )
+
+            def parse_json(generated_text: str) -> dict:
+                if generated_text.startswith("```json"):
+                    generated_text = generated_text[7:].lstrip("\n")
+                    if generated_text.endswith("```"):
+                        generated_text = generated_text[:-3]
+                elif generated_text.startswith("json\n"):
+                    generated_text = generated_text[5:]
+
+                sample_data = json.loads(generated_text)
+                for key in placeholder_keys:
+                    if key not in sample_data:
+                        raise ValueError(f"Missing key '{key}' in the generated sample data.")
+                if "answer" not in sample_data:
+                    raise ValueError("Missing 'answer' key in the generated sample data.")
+                return sample_data
+
+            retry_count = 0
+            while retry_count < num_attempts:
+                try:
+                    generation_response = await generator_model.generate(generation_prompt)
+                    generated_text = generation_response.completion.strip()
+                    sample_data = parse_json(generated_text)
+
+                    generated_prompt = sample_data.get('text', '')
+                    multiple_choice_template = SINGLE_ANSWER_TEMPLATE if not use_cot_evaluator else SINGLE_ANSWER_TEMPLATE_COT
+                    generated_prompt = multiple_choice_template + "\n\n" + generated_prompt
+                    correct_answer = sample_data.get('answer', '').strip()
+                    
+                    if not correct_answer:
+                        logger.debug("Empty answer in sample data")
+                        retry_count += 1
+                        continue
+
+                    generated_sample = Sample(
+                        input=generated_prompt,
+                        target=correct_answer,
+                        metadata={'sample_data': sample_data}
+                    )
+
+                    # Add novelty check
+                    if use_embeddings:
+                        existing_questions = [s.input for s in sample_logs]
+                        is_novel = novelty_scorer(
+                            generated_prompt,
+                            existing_questions,
+                            use_embeddings=True,
+                            embedding_model=embeddings_model_name,
+                        )
+                        if not is_novel:
+                            logger.debug("Generated question too similar to existing questions, retrying...")
+                            retry_count += 1
+                            continue
+
+                    # Add self-check if model specified
+                    if self_check_model_name:
+                        self_check_model = get_model(
+                            self_check_model_name,
+                            config=GenerateConfig(max_connections=50),
+                        )
+                        
+                        choices = re.findall(r'\([A-Z]\)\s*(.*?)(?=\([A-Z]\)|\Z)', generated_prompt, re.DOTALL)
+                        choices = [choice.strip() for choice in choices if choice.strip()]
+                        
+                        self_check_prompt = get_self_check_judge_prompt(
+                            generated_question=generated_prompt,
+                            choices=choices,
+                            target=[correct_answer],
+                        )
+                        
+                        try:
+                            self_check_response = await self_check_model.generate(self_check_prompt)
+                            score = int(re.search(r'Total Score:\s*(\d+)', self_check_response.completion).group(1))
+                            if score < score_threshold:
+                                logger.debug(f"Self-check score {score} below threshold {score_threshold}, retrying...")
+                                retry_count += 1
+                                continue
+                            generated_sample.metadata["self_check_score"] = score
+                            generated_sample.metadata["self_check_response"] = self_check_response.completion
+                        except (AttributeError, ValueError) as e:
+                            logger.debug(f"Error parsing self-check score: {e}")
+                            retry_count += 1
+                            continue
+
+                    # If we get here, all checks passed
+                    answer_response = await eval_model.generate(generated_prompt)
+                    model_answer = answer_response.completion.strip()
+                    if "ANSWER:" in model_answer:
+                        model_answer = model_answer.split("ANSWER:")[-1].strip()
+
+                    generated_sample.metadata["model_answer"] = model_answer
+                    generated_sample.metadata["score"] = "C" if model_answer == correct_answer else "I"
+
+                    state.store.set("generated_sample", generated_sample)
+                    if original_eval_model_name:
+                        state.store.set("original_eval_model_name", original_eval_model_name)
+                    else:
+                        state.store.set("original_eval_model_name", eval_model_name)
+                    break
+
+                except Exception as e:
+                    logger.debug(f"Error in generation attempt {retry_count + 1}: {e}")
+                    retry_count += 1
+                    continue
+
+            else:
+                state.error = f"Failed to generate valid sample after {num_attempts} attempts"
+                logger.debug(f"Error in generation: {state.error}")
+                return state
+
+        except Exception as e:
+            state.error = f"Error generating or evaluating the sample: {e}"
+            logger.debug(f"Error in generation: {state.error}")
+        return state
+
+    return solve
+
+
+@solver
+def adaptive_legal_judge_solver(
+    initial_log_path: str,
+    judge_model_name: Optional[str | list[str]] = None,
+    num_attempts: int = 3,
+) -> Generate:
+    """
+    Solver that judges the correctness of generated questions from the adaptive legal solver.
+
+    Args:
+        initial_log_path (str): Path to the initial evaluation log containing ground truth questions.
+        judge_model_name (str): Name of the model used to judge the generated questions.
+        num_attempts (int): Number of attempts to generate a valid judgment.
+    """
+
+    async def solve(state: TaskState, generate: Generate) -> TaskState:
+        if not judge_model_name:
+            logger.debug("No judge model name provided, skipping judgment.")
+            return state
+        # Load the initial evaluation log to get ground truth questions
+        initial_eval_log = await read_eval_log_async(initial_log_path)
+        ground_truth_samples = initial_eval_log.samples
+
+        # Extract the ground truth questions, shuffle them with a random seed
+        ground_truth_questions = [sample.input for sample in ground_truth_samples]
+        random.seed(42) # TODO: make random seed passing functional
+        random.shuffle(ground_truth_questions)
+
+        # Get the generated sample from the state.store
+        generated_sample = state.store.get('generated_sample', None)
+        if not generated_sample:
+            state.error = "No generated sample found in state."
+            logger.debug(f"Error in judge solver: {state.error}")
+            return state
+
+        generated_question = generated_sample.input
+
+        # Initialize the judge model
+        judge_model = get_model(judge_model_name, config=GenerateConfig(max_connections=50)) # no temperature, assuming using o1-mini or o1-preview :)
+
+        # Prepare the judging prompt using a classifying pattern
+        ground_truth_text = "\n".join([f"Question {i+1}: {q}, Answer: {sample.target}" for i, (q, sample) in enumerate(zip(ground_truth_questions[:2], ground_truth_samples[:2]))])  # Limit to just 2 questions
+
+        # motivation for using a classifying pattern: https://cookbook.openai.com/examples/custom-llm-as-a-judge#llm-as-a-judge-3-classifying-instead-of-rating
+        judge_prompt = f"""\
+You are comparing a generated question to a set of ground truth questions for a legal task. Here is the data:
+[BEGIN DATA]
+************
+[Ground Truth Questions]:
+{ground_truth_text}
+************
+[Generated Question]:
+{generated_question}
+************
+[Proposed Answer]:
+{generated_sample.target}
+************
+[END DATA]
+
+Determine if the generated question is correct, precise, and free of errors, and follows the same style and format as the ground truth questions. Consider whether it makes sense, contains any factual errors or contradictions that would make it impossible to answer correctly or consistenyly, and is appropriately challenging. The question should have only a single correct answer. It is ok if the question is worded awkwardly or even is a 'trick' question meant to confuse the model as long as the question is valid and only has one single correct answer.
+
+Ignore simple formatting issues (e.g., two Answer: lines at the end, an extra multiple choice line at the beginning, or swapping the order of the instructions and the question) -- these are not errors and should not be penalized. Also note that the final multiple choice question will not have a letter of the answer at the end, so do not penalize for that.
+
+Answer the question by selecting one of the following options:
+(A) The generated question is correct, precise, and appropriate. It contains no factual errors or contradictions. Ignore any minor issues with formatting (e.g., two Answer: lines at the end or an extra multiple choice line at the beginning)
+(B) The generated question has minor issues but is acceptable. For example, it may be phrased awkwardly or have minor factual errors, but it is still a valid question.
+(C) The generated question has significant issues and is incorrect. It contains factual errors or contradictions, or is not a valid question.
+
+Answer the question by calling `select_choice` with your reasoning in a step-by-step manner to be sure that your conclusion is valid. Please reason very thoroughly, and go through both why the question is or is not sound, why it is (in)consistent with the ground truth questions, and why or why not the proposed answer is correct. Avoid simply stating the correct answer at the outset. Select a single choice by setting the `choice` parameter to a single choice from A, B, or C.
+
+Example 1:
+[Reasoning]:
+First, I will compare the generated question to the ground truth questions. The generated question follows the same style and format. It is clear and free of factual errors. The correct answer was listed as A and this is correct; B and C are not valid answers because [...] and D is not a valid answer because [...].
+`select_choice(choice="A")`
+
+Example 2:
+[Reasoning]:
+First, I will compare the generated question to the ground truth questions. The document created for the review has two equally valid interpretations. The generated question is therefore incorrect because it is impossible to tell which interpretation is correct. Likewise, the correct answer was listed as A, however answer B is also completely equally valid.
+`select_choice(choice="C")`
+
+Example 3:
+[Reasoning]:
+First, I will compare the generated question to the ground truth questions. It is phrased awkwardly and presents the statutes out of order, but it is still a valid question. It contains a small factual error (some of the dates that are not relevant for answering the question are impossible), but it is still a valid question. Further, even though it seems like C could be a valid answer, A is the better choice because [...].
+`select_choice(choice="B")`
+"""
+
+        # Function to parse the choice from the model output
+        def parse_choice(completion: str) -> str:
+            match = re.search(r'`select_choice\(choice=["\']([A-C])["\']\)`', completion)
+            if match:
+                return match.group(1)
+            else:
+                return None
+
+        # Try generating the judgment
+        for _ in range(num_attempts):
+            try:
+                judge_response = await judge_model.generate(judge_prompt)
+                judge_output = judge_response.completion.strip()
+                choice = parse_choice(judge_output)
+                if choice:
+                    state.metadata['judge_choice'] = choice
+                    # Store the judgment in the sample's metadata
+                    generated_sample.metadata['judge_choice'] = choice
+                    generated_sample.metadata['judge_reasoning'] = judge_output
+                    # Update the state
+                    state.store.set('generated_sample', generated_sample)
+                    return state
+                else:
+                    continue  # Retry if parsing failed
+            except Exception as e:
+                logger.debug(f"Error generating judgment: {e}")
+                continue  # Retry on exception
+
+        # If all attempts failed
+        state.error = "Failed to get a valid judgment after maximum retry attempts."
+        return state
+
+    return solve
+
+@solver
+def rewording_legal_solver(
+    model_name: str = "openai/gpt-4o",
+    rewording_model_name: Optional[str] = None,
+    num_attempts: int = 3,
+    cot: bool = False,
+) -> Generate:
+    """
+    Solver that rewords the existing question and evaluates the model on it.
+    """
+
+    async def solve(state: TaskState, generate: Generate) -> TaskState:
+        # Remove the template from the original prompt if it exists
+        original_prompt = state.user_prompt.text
+        for template in [SINGLE_ANSWER_TEMPLATE, SINGLE_ANSWER_TEMPLATE_COT]:
+            if original_prompt.startswith(template):
+                original_prompt = original_prompt[len(template):].strip()
+
+        # Prepare the rewording prompt
+        rewording_prompt = (
+            f"Please rephrase the following question without changing its meaning. You might need to keep the exact wording where when a technical (e.g., legal or scientific) term is used."
+            f"Ensure that all answer choices and key information are preserved.\n\n"
+            f"Example 1:\n"
+            f"Original Question:\n"
+            f"What is the capital of France?\n"
+            f"Reworded Question:\n"
+            f"Can you tell me the name of France's capital city?\n\n"
+            f"Example 2:\n"
+            f"Original Question:\n"
+            f"Explain the process of photosynthesis.\n"
+            f"Reworded Question:\n"
+            f"How does photosynthesis work?\n\n"
+            f"Example 3:\n"
+            f"Original Question:\n"
+            f"Who wrote the novel '1984'?\n"
+            f"Reworded Question:\n"
+            f"Identify the author of the book titled '1984'.\n\n"
+            f"Now, rephrase the question below:\n\n"
+            f"Original Question:\n{original_prompt}\n"
+            f"Reworded Question:"
+        )
+
+        # Use rewording_model_name if provided, else use model_name
+        rewording_model_to_use = rewording_model_name or model_name
+        rewording_model = get_model(
+            rewording_model_to_use,
+            config=GenerateConfig(max_connections=50, temperature=0)
+        )
+
+        # Try to generate the reworded question
+        for _ in range(num_attempts):
+            try:
+                rewording_response = await rewording_model.generate(rewording_prompt)
+                reworded_prompt = rewording_response.completion.strip()
+                if reworded_prompt:
+                    state.store.set("original_prompt", original_prompt)
+                    state.store.set("reworded_prompt", reworded_prompt)
+                    break
+            except Exception:
+                continue
+        else:
+            state.error = "Failed to generate a reworded question."
+            logger.debug(f"Error generating reworded question: {state.error}")
+            return state
+
+        # Use the exact template from _multiple_choice.py
+        letters = ",".join(chr(65 + i) for i in range(len(state.choices)))
+        if not cot: 
+            formatted_prompt = SINGLE_ANSWER_TEMPLATE.format(
+                letters=letters,
+                question=reworded_prompt,
+                choices=answer_options(state.choices)
+            )
+        else:
+            formatted_prompt = SINGLE_ANSWER_TEMPLATE_COT.format(
+                letters=letters,
+                question=reworded_prompt,
+                choices=answer_options(state.choices)
+            )
+
+        # Update the state with the new prompt
+        state.user_prompt.text = formatted_prompt
+
+        # Use generate to get the answer
+        state = await generate(state)
+
+        # Parse the answer using parse_answers
+        answers = parse_answers(state)
+        if answers and answers.group(1):
+            state.answer = answers.group(1)
+        else:
+            state.error = "Failed to parse answer from model response"
+            logger.debug(f"Error parsing answer from model response: {state.error}")
+        return state
+
+    return solve
+
+@solver
+def rewording_legal_judge_solver(
+    judge_model_name: Optional[str | list[str]] = None,
+    num_attempts: int = 3,
+) -> Generate:
+    """
+    Solver that judges whether a reworded legal question preserves the 
+    original question's meaning, accuracy, and important legal details.
+
+    Args:
+        judge_model_name (str | list[str]): Name(s) of the model used to judge the reworded question.
+        num_attempts (int): Number of attempts to generate a valid judgment.
+    """
+
+    async def solve(state: TaskState, generate: Generate) -> TaskState:
+        # If no judge model name is provided, skip judgment
+        if not judge_model_name:
+            logger.debug("No judge model name provided for rewording_legal_judge_solver, skipping judgment.")
+            state.store.set("reworded_judge_choice", "A")
+            state.store.set("reworded_judge_reasoning", "No judge model name provided for rewording_legal_judge_solver, skipping judgment.")
+            return state
+
+        # Retrieve the original and reworded prompts from the state. 
+        # These need to have been stored previously, e.g., in rewording_legal_solver or elsewhere.
+        original_prompt = state.store.get("original_prompt")
+        reworded_prompt = state.store.get("reworded_prompt")
+
+        if not original_prompt or not reworded_prompt:
+            state.error = (
+                "Missing original_prompt or reworded_prompt in state.store. "
+                "Ensure the rewording solver stores these in the state before calling the judge."
+            )
+            return state
+
+        # Initialize the judge model
+        judge_model = get_model(judge_model_name, config=GenerateConfig(max_connections=50))
+
+        # Prepare the prompt to compare original vs reworded question
+        # We use a classification approach, similar to adaptive_legal_judge_solver
+        judge_prompt = f"""\
+You are comparing an original legal question to a reworded version of that question. 
+The goal is to determine whether the reworded question accurately preserves the original legal 
+meaning, context, and important details, including answer choices or disclaimers, 
+if any apply. Carefully check:
+
+1. Whether the reworded question omits or alters critical legal terminology.
+2. Whether any details that might affect the answer (such as contract clauses, timeline, 
+   or references to laws/statutes) are changed inappropriately.
+3. Whether the reworded question introduces factual or logical inconsistencies that 
+   were not in the original question.
+
+Data to compare:
+==========
+ORIGINAL QUESTION:
+{original_prompt}
+
+REWORDED QUESTION:
+{reworded_prompt}
+==========
+
+Select one of the following options by calling 'select_choice' with your reasoning 
+in a step-by-step manner. Do not give the final choice outside of 'select_choice':
+
+(A) The reworded question is correct, preserves the legal meaning, 
+    and has no important omissions or factual errors.
+(B) The reworded question is mostly correct but has some minor omissions, 
+    slightly awkward phrasing, or small errors. Overall, it remains a valid 
+    rewording that maintains most of the original meaning.
+(C) The reworded question significantly changes the meaning or omits 
+    key legal details, introducing important factual or logical errors.
+
+Your final answer should include your reasoning about the differences, then conclude with:
+  `select_choice(choice="A" or "B" or "C")`
+  
+Example:
+[Reasoning]:
+Step 1: Compare ...
+Step 2: ...
+Conclusion: ...
+`select_choice(choice="B")`
+"""
+
+        def parse_choice(completion: str) -> str:
+            # Looks for pattern like: `select_choice(choice="A")`
+            match = re.search(r'`select_choice\(choice=["\']([A-C])["\']\)`', completion)
+            if match:
+                return match.group(1)
+            else:
+                return None
+
+        # Attempt to get a valid classification from the judge model
+        for _ in range(num_attempts):
+            try:
+                judge_response = await judge_model.generate(judge_prompt)
+                judge_output = judge_response.completion.strip()
+                choice = parse_choice(judge_output)
+                if choice:
+                    # Store the classification and reasoning in state metadata
+                    state.store.set("reworded_judge_choice", choice)
+                    state.store.set("reworded_judge_reasoning", judge_output)
+
+                    return state
+                else:
+                    logger.debug("Failed to parse judge choice from model output, retrying...")
+                    continue
+            except Exception as e:
+                logger.debug(f"Error during reworded question judgment: {e}")
+                continue
+
+        # If no valid classification was produced after all attempts
+        state.error = "Failed to get a valid judgment for the reworded question."
+        logger.debug(f"Error during reworded question judgment: {state.error}")
+        return state
+
+    return solve

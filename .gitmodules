@@ -1,0 +1,6 @@
+[submodule "dataset-featurization"]
+	path = dataset-featurization
+	url = https://github.com/MichalBravansky/dataset-featurization.git
+[submodule "legalbench"]
+	path = legalbench
+	url = https://github.com/HazyResearch/legalbench.git

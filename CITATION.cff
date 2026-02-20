@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+title: "Adaptive Evals"
+message: "If you use this software, please cite the paper below."
+type: software
+version: "1.0.0-emnlp2025"
+date-released: 2026-02-17
+license: "MIT"
+authors:
+  - family-names: Brown
+    given-names: Davis
+  - family-names: Balehannina
+    given-names: Prithvi
+  - family-names: Jin
+    given-names: Helen
+  - family-names: Havaldar
+    given-names: Shreya
+  - family-names: Hassani
+    given-names: Hamed
+  - family-names: Wong
+    given-names: Eric
+preferred-citation:
+  type: article
+  title: "Adaptively profiling models with task elicitation"
+  authors:
+    - family-names: Brown
+      given-names: Davis
+    - family-names: Balehannina
+      given-names: Prithvi
+    - family-names: Jin
+      given-names: Helen
+    - family-names: Havaldar
+      given-names: Shreya
+    - family-names: Hassani
+      given-names: Hamed
+    - family-names: Wong
+      given-names: Eric
+  year: 2025
+  url: "https://arxiv.org/abs/2503.01986"

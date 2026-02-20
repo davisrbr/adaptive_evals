@@ -1,0 +1,35 @@
+name: ci
+
+on:
+  push:
+    branches: ["main", "release/**", "public/**"]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install minimal tooling
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --no-deps -e .
+          python -m pip install pytest ruff
+
+      - name: Lint
+        run: ruff check scripts tests/test_release_smoke.py
+
+      - name: Release hygiene
+        run: python scripts/release_check.py --mode ci
+
+      - name: Smoke tests
+        run: pytest -q tests/test_release_smoke.py

@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adaptive-evals"
+version = "1.0.0"
+description = "Adaptive evaluation framework for language model task elicitation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Davis Brown" }
+]
+dependencies = [
+  "inspect_ai",
+  "numpy",
+  "pandas",
+  "datasets",
+  "scikit-learn",
+  "matplotlib",
+  "seaborn",
+  "plotly",
+  "sentence-transformers",
+  "click",
+  "transformers",
+  "torch",
+  "anthropic",
+  "openai",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+  "config*",
+  "data*",
+  "prompting*",
+  "runners*",
+  "scorers*",
+  "solvers*",
+  "tasks*",
+  "utils_consistency*",
+  "utils_elicitation*",
+  "utils_forecasting*",
+  "utils_plotting*",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
