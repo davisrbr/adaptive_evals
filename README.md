@@ -1,12 +1,6 @@
 # Adaptive Evals
 
-Code release for the EMNLP 2025 paper:
-**"Adaptively profiling models with task elicitation"** ([arXiv:2503.01986](https://arxiv.org/abs/2503.01986)).
-
-## Release Status
-
-This repository is in release state for the paper artifact (`v1.0.0-emnlp2025`).
-The cleanup phase is complete; this branch is not a work-in-progress snapshot.
+Code release for our EMNLP 2025 paper: **"Adaptively profiling models with task elicitation"** ([arXiv:2503.01986](https://arxiv.org/abs/2503.01986)).
 
 ## Included Scope
 
@@ -18,7 +12,7 @@ The released codebase includes:
   - Politeness (`runners/politeness.py`)
   - PAIR jailbreak evaluation (`runners/pair.py`)
   - Cyberbullying adaptive evaluation (`runners/cyberbullying.py`)
-- Forecasting evaluation runner (`runners/forecasting.py`)
+  - Forecasting evaluation runner (`runners/forecasting.py`)
 - Core task/solver/scorer implementations (`tasks/`, `solvers/`, `scorers/`)
 - Consistency/adaptive generation utilities (`utils_consistency/`, `tasks/task_adaptive_consistency.py`)
 - PRESS report-card task (`tasks/task_press.py`, `solvers/solver_press.py`)
@@ -43,7 +37,7 @@ Top-level root is intentionally minimal (metadata + folders):
 ## Quick Start
 
 ```bash
-git clone --recurse-submodules <REPO_URL>
+git clone --recurse-submodules [https://github.com/davisrbr/adaptive_evals.git](https://github.com/davisrbr/adaptive_evals.git)
 cd adaptive_evals
 bash env_create.sh
 source .venv/bin/activate
@@ -61,16 +55,8 @@ export ANTHROPIC_API_KEY=...
 Use the wrapper script:
 
 ```bash
-bash scripts/run_paper_repro.sh          # dry-run: writes command script only
 bash scripts/run_paper_repro.sh --execute
 ```
-
-This orchestrates:
-
-- `python runners/truthfulqa.py`
-- `python runners/legal.py`
-- `python runners/politeness.py`
-
 Outputs are written to timestamped directories under `artifacts/`.
 
 ## Running Pipelines Directly
@@ -87,17 +73,6 @@ python runners/forecasting.py --models openai/gpt-4o-mini
 ```
 
 Use `--help` on each runner for all options.
-
-## Release Hygiene
-
-Before publishing a release or tag:
-
-```bash
-python scripts/release_check.py --mode ci
-pytest -q tests/test_release_smoke.py
-```
-
-CI (`.github/workflows/ci.yml`) enforces these checks on `main`, `release/**`, and `public/**`.
 
 ## Citation
 
