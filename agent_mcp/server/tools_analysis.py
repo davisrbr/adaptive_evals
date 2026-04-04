@@ -224,11 +224,13 @@ async def _handle_summarize_eval(args: dict) -> list[TextContent]:
 
 async def _handle_scan_transcripts(args: dict) -> list[TextContent]:
     log_path = args["log_path"]
-    scanner = args.get("scanner", "eval_awareness")
+    scanner_name = args.get("scanner", "eval_awareness")
+    model = args.get("model", "")
 
+    # Check scout is available
     try:
         result = subprocess.run(
-            ["python", "-c", "import inspect_scout; print(inspect_scout.__version__)"],
+            ["scout", "--version"],
             capture_output=True, text=True, timeout=10,
         )
         scout_available = result.returncode == 0
@@ -245,35 +247,67 @@ async def _handle_scan_transcripts(args: dict) -> list[TextContent]:
             ),
         )]
 
-    scanner_map = {
-        "eval_awareness": _scout_eval_awareness_config,
-        "refusal": _scout_refusal_config,
-        "env_misconfig": _scout_env_misconfig_config,
-        "credential_leak": _scout_credential_leak_config,
-        "custom": lambda prompt, model: _scout_custom_config(
-            args.get("custom_scanner_prompt", prompt), model
-        ),
-    }
+    # Map scanner names to scanner files or generate temp files for built-in scanners
+    scanner_file = _resolve_scanner_file(scanner_name, args)
 
-    model = args.get("model", "")
-    config_fn = scanner_map.get(scanner, scanner_map["eval_awareness"])
-    scanner_config = config_fn("", model)
-
-    import tempfile
-    with tempfile.NamedTemporaryFile(mode="w", suffix=".py", delete=False) as f:
-        f.write(scanner_config)
-        config_path = f.name
+    cmd = ["scout", "scan", scanner_file, "-T", log_path]
+    if model:
+        cmd.extend(["--model", model])
 
     try:
-        cmd = f"scout scan --log-dir {log_path} --config {config_path}"
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=300)
+        result = subprocess.run(
+            cmd, capture_output=True, text=True, timeout=300,
+            env={**os.environ},
+        )
         output = result.stdout + "\n" + result.stderr
+        if result.returncode != 0:
+            output = f"Scout exited with code {result.returncode}:\n{output}"
     except subprocess.TimeoutExpired:
         output = "Scout scan timed out after 5 minutes"
-    finally:
-        os.unlink(config_path)
 
-    return [TextContent(type="text", text=output)]
+    # Try to read the scan summary if available
+    scans_dir = Path("scans")
+    if scans_dir.exists():
+        scan_dirs = sorted(scans_dir.iterdir(), key=lambda p: p.stat().st_mtime, reverse=True)
+        if scan_dirs:
+            summary_path = scan_dirs[0] / "_summary.json"
+            if summary_path.exists():
+                try:
+                    summary = json.loads(summary_path.read_text())
+                    output += f"\n\nScan summary:\n{json.dumps(summary, indent=2)}"
+                except Exception:
+                    pass
+
+    return [TextContent(type="text", text=output.strip())]
+
+
+def _resolve_scanner_file(scanner_name: str, args: dict) -> str:
+    """Resolve scanner name to a scanner file path."""
+    # Check for built-in scanner files in agent_mcp/scanners/
+    scanners_dir = Path(__file__).parent.parent / "scanners"
+    builtin_path = scanners_dir / f"{scanner_name}.py"
+    if builtin_path.exists():
+        return str(builtin_path)
+
+    # For custom or unknown scanners, generate a temp file
+    import tempfile
+    custom_prompt = args.get("custom_scanner_prompt", "")
+    model = args.get("model", "")
+    if scanner_name == "custom" and custom_prompt:
+        config = _scout_custom_config(custom_prompt, model)
+    elif scanner_name == "refusal":
+        config = _scout_refusal_config("", model)
+    elif scanner_name == "env_misconfig":
+        config = _scout_env_misconfig_config("", model)
+    elif scanner_name == "credential_leak":
+        config = _scout_credential_leak_config("", model)
+    else:
+        config = _scout_eval_awareness_config("", model)
+
+    f = tempfile.NamedTemporaryFile(mode="w", suffix=".py", delete=False)
+    f.write(config)
+    f.close()
+    return f.name
 
 
 async def _handle_extract_patterns(args: dict) -> list[TextContent]:
