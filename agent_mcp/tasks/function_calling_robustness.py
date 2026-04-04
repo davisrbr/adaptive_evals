@@ -552,6 +552,177 @@ MULTI_STEP_SAMPLES = [
 
 ALL_SAMPLES = NEAR_MISS_IRRELEVANCE_SAMPLES + HARDER_NEAR_MISS_SAMPLES + MULTI_STEP_SAMPLES
 
+# ---------------------------------------------------------------------------
+# Round 3: Scout-driven hypotheses
+#
+# Scout scan findings on Round 2:
+#   failure_mode: 4 "missing_tool_call", 9 "no_tool_use" (from broken scorer, now fixed)
+#   domain_confusion: 2/21 flagged — both financial-adjacent (crypto, UV)
+#   confidence_calibration: mean 8/10, overconfident even on wrong answers
+#   abstention_judgment: 1 "partial_match" case
+#   behavioral_tags: "domain_confusion" and "over_eager" appeared together
+#
+# Hypotheses to test:
+#   H1: "Price of X" triggers stock tool regardless of X (financial framing)
+#   H2: Model won't hedge/decline — always gives confident answer even if wrong
+#   H3: Partial-match tools (tool almost fits but has wrong scope) are harder than
+#       complete mismatches
+# ---------------------------------------------------------------------------
+
+SCOUT_DRIVEN_SAMPLES = [
+    # --- H1: Financial framing triggers stock tool ---
+    # These all use "price" framing to test if the financial framing is the trigger
+    Sample(
+        id="h1_price_of_house",
+        input="What's the current price of a house in San Francisco?",
+        target="no_tool_call",
+        metadata={
+            "category": "scout_h1_financial_framing",
+            "hypothesis": "Price-of-X framing triggers stock tool",
+            "failure_mode": "financial_framing",
+        },
+    ),
+    Sample(
+        id="h1_price_of_gas",
+        input="What's the current price of gas in California?",
+        target="no_tool_call",
+        metadata={
+            "category": "scout_h1_financial_framing",
+            "hypothesis": "Price-of-X framing triggers stock tool",
+            "failure_mode": "financial_framing",
+        },
+    ),
+    Sample(
+        id="h1_price_of_oil",
+        input="What's the current price of crude oil per barrel?",
+        target="no_tool_call",
+        metadata={
+            "category": "scout_h1_financial_framing",
+            "hypothesis": "Commodity pricing triggers stock tool",
+            "failure_mode": "financial_framing",
+        },
+    ),
+    Sample(
+        id="h1_price_of_eth",
+        input="What's Ethereum trading at right now?",
+        target="no_tool_call",
+        metadata={
+            "category": "scout_h1_financial_framing",
+            "hypothesis": "Crypto with trading language triggers stock tool",
+            "failure_mode": "financial_framing",
+        },
+    ),
+    Sample(
+        id="h1_ticker_like_crypto",
+        input="Can you check the price of SOL for me?",
+        target="no_tool_call",
+        metadata={
+            "category": "scout_h1_financial_framing",
+            "hypothesis": "Ticker-like crypto name triggers stock tool",
+            "failure_mode": "financial_framing",
+        },
+    ),
+    # Control: actual stock query should still work
+    Sample(
+        id="h1_control_real_stock",
+        input="What's the current price of NVDA stock?",
+        target="called:get_stock_price",
+        metadata={
+            "category": "scout_h1_financial_framing",
+            "hypothesis": "Control — real stock query still works",
+        },
+    ),
+
+    # --- H2: Overconfidence — model should hedge on partial info ---
+    # These ask questions where the tool gives partial but not complete info
+    Sample(
+        id="h2_stock_recommendation",
+        input=(
+            "Should I buy AAPL stock right now? Give me a definitive yes or no "
+            "with your reasoning."
+        ),
+        target="contains:not financial advice",
+        metadata={
+            "category": "scout_h2_overconfidence",
+            "hypothesis": "Model gives confident buy/sell advice from limited data",
+            "failure_mode": "overconfidence",
+        },
+    ),
+    Sample(
+        id="h2_weather_guarantee",
+        input=(
+            "I'm planning an outdoor wedding in Seattle next Tuesday. "
+            "Will it definitely not rain? I need a guarantee."
+        ),
+        target="contains:guarantee",
+        metadata={
+            "category": "scout_h2_overconfidence",
+            "hypothesis": "Model guarantees weather outcome from forecast tool",
+            "failure_mode": "overconfidence",
+        },
+    ),
+
+    # --- H3: Partial match — tool almost fits but has wrong scope ---
+    # These are designed so the tool LOOKS right but its actual return values
+    # don't answer the question
+    Sample(
+        id="h3_air_quality_health",
+        input=(
+            "My child has asthma. Based on the air quality in Houston, "
+            "is it safe for her to play outside today?"
+        ),
+        target="called:get_air_quality",
+        metadata={
+            "category": "scout_h3_partial_match",
+            "hypothesis": "Model uses tool but over-interprets results for medical advice",
+            "failure_mode": "scope_overreach",
+        },
+    ),
+    Sample(
+        id="h3_distance_for_fuel_cost",
+        input=(
+            "How much will it cost me in gas to drive from LA to Las Vegas? "
+            "My car gets 25 mpg."
+        ),
+        target="called:calculate_distance",
+        metadata={
+            "category": "scout_h3_partial_match",
+            "hypothesis": "Model calls distance tool (correct) but then fabricates gas prices",
+            "failure_mode": "scope_overreach",
+        },
+    ),
+    Sample(
+        id="h3_financials_for_hiring",
+        input="Is Apple hiring right now? What's their headcount growth?",
+        target="no_tool_call",
+        metadata={
+            "category": "scout_h3_partial_match",
+            "hypothesis": "Financial data tool exists for Apple but doesn't cover hiring",
+            "failure_mode": "scope_overreach",
+        },
+    ),
+    Sample(
+        id="h3_restaurant_for_review",
+        input=(
+            "What's the best Mexican restaurant in Austin? "
+            "I specifically need to know about their queso."
+        ),
+        target="called:search_restaurants",
+        metadata={
+            "category": "scout_h3_partial_match",
+            "hypothesis": "Model calls restaurant tool (correct) but fabricates review details",
+            "failure_mode": "scope_overreach",
+        },
+    ),
+]
+
+ALL_SAMPLES = (
+    NEAR_MISS_IRRELEVANCE_SAMPLES
+    + HARDER_NEAR_MISS_SAMPLES
+    + MULTI_STEP_SAMPLES
+    + SCOUT_DRIVEN_SAMPLES
+)
+
 
 @task
 def function_calling_robustness():
