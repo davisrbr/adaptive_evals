@@ -85,6 +85,81 @@ irrelevance detection."
 
 ---
 
+## Results: SWE-Bench with Docker Sandboxes
+
+### What we did
+
+We ran gpt-4o as a ReAct agent against 8 SWE-Bench Verified instances with
+Docker sandboxes (per-instance container images), then used the adaptive eval
+loop to diagnose why 7/8 samples failed despite the agent often writing
+reasonable patches.
+
+### The loop
+
+```
+ Round 1: SWE-Bench Verified (8 samples, message_limit=30)
+   │  12.5% accuracy (1/8 pass)
+   │  Agent writes plausible patches in most cases but rarely passes tests
+   │
+   ▼
+ Scout Scan (7 scanners)
+   │  patch_quality: 5/8 "root_cause_fix" — agent understands the problem
+   │  failure_mode: "output_misinterpretation" dominant — agent writes
+   │    correct-looking patches but doesn't iterate when tests fail
+   │  environment_vs_agent: 2 "environment_issue", 5 "agent_failure",
+   │    1 "success"
+   │  reasoning_quality: mean 6.5/10
+   │
+   │  Hypotheses:
+   │  H1: Message limit (30) is too low — agent runs out of turns
+   │  H2: Agent doesn't verify patches — writes fix, doesn't run tests
+   │      or gives up after first test failure
+   │
+   ▼
+ Round 2: Same 8 samples, message_limit=50
+   │  25% accuracy (2/8 pass — one sample flipped)
+   │
+   │  H1 PARTIALLY CONFIRMED: One sample passed with more turns.
+   │    But 5/8 still fail with turns remaining — message limit is
+   │    not the primary bottleneck.
+   │
+   │  H2 CONFIRMED: The dominant failure mode is output_misinterpretation.
+   │    Agent writes root-cause-quality patches (5/8 per Scout) but
+   │    doesn't iterate when tests fail. The gap between "understands
+   │    the problem" and "produces a passing patch" is execution detail
+   │    and verification, not comprehension.
+```
+
+### The key finding
+
+**gpt-4o on SWE-Bench understands problems well enough to write root-cause
+fixes (63% per patch_quality scanner) but fails to close the loop on
+verification.** The agent writes a patch, runs tests, sees failures, and either
+gives up or makes the wrong correction. The bottleneck is not comprehension or
+message limits — it's the debugging/iteration cycle after the initial patch.
+
+This suggests that interventions targeting "help the agent iterate on test
+failures" (better error parsing, forced re-check loops, structured debugging
+prompts) would be more effective than simply increasing context or improving
+initial code generation.
+
+### Scanner suite changes
+
+Based on the SWE-Bench run, we made two changes to the default scanner suite:
+
+1. **Removed `eval_awareness`** from the default suite. It produced false
+   positives on SWE-Bench because running pytest is correct behavior for code
+   repair tasks, but the scanner flagged it as "eval awareness." The standalone
+   scanner remains available at `scanners/eval_awareness.py` for cases where
+   eval gaming is specifically being tested.
+
+2. **Added `environment_vs_agent` and `patch_quality`** scanners. These are
+   critical for Docker-heavy evals where infrastructure failures (missing deps,
+   Docker errors, permission issues) can masquerade as agent capability
+   failures.
+
+---
+
 ## Architecture
 
 ### How it runs
@@ -150,7 +225,7 @@ irrelevance detection."
 │  │  _build_scanner_file() resolves scanner source:  │        │
 │  │                                                  │        │
 │  │  Option A: Built-in scanners ────────────────────┼──┐     │
-│  │    (adaptive_scanners.py — 6 scanners)           │  │     │
+│  │    (adaptive_scanners.py — 7 scanners)           │  │     │
 │  │                                                  │  │     │
 │  │  Option B: Custom LLM questions ─────────────────┼──┤     │
 │  │    (generates temp .py with @scanner decorator)  │  │     │
@@ -226,10 +301,10 @@ adaptive_evals/
     │   └── tools_configuration.py     #   5 tools: manage task files
     │
     ├── scanners/                      # Scout scanner definitions
-    │   ├── adaptive_scanners.py       #   6 built-in scanners (failure_mode,
-    │   │                              #   tool_usage_pattern, eval_awareness,
-    │   │                              #   reasoning_quality, abstention_judgment,
-    │   │                              #   behavioral_tags)
+    │   ├── adaptive_scanners.py       #   7 built-in scanners (failure_mode,
+    │   │                              #   tool_usage_pattern, reasoning_quality,
+    │   │                              #   abstention_judgment, behavioral_tags,
+    │   │                              #   environment_vs_agent, patch_quality)
     │   └── eval_awareness.py          #   Standalone eval-awareness scanner
     │
     ├── tasks/                         # inspect-ai evaluation tasks
