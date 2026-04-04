@@ -6,245 +6,238 @@ agent parameters for evaluations.
 """
 
 import json
-import os
-import importlib
-import inspect
 from pathlib import Path
-from typing import Any
 
-from mcp.server import Server
 from mcp.types import Tool, TextContent
 
 TASKS_DIR = Path(__file__).parent.parent / "tasks"
 
 
-def register_configuration_tools(server: Server):
-    """Register configuration and task management tools."""
+def get_tools() -> list[Tool]:
+    """Return configuration tool definitions."""
+    return [
+        Tool(
+            name="list_tasks",
+            description=(
+                "List all available inspect-ai evaluation tasks. Shows task name, description, "
+                "available parameters, and file location. Includes both built-in tasks from "
+                "this project and any tasks in the configured task directories."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "task_dir": {
+                        "type": "string",
+                        "description": "Additional directory to search for tasks. Default searches agent_mcp/tasks/.",
+                    },
+                    "include_original": {
+                        "type": "boolean",
+                        "description": "Also list tasks from the original adaptive_evals tasks/ directory. Default true.",
+                        "default": True,
+                    },
+                },
+            },
+        ),
+        Tool(
+            name="create_task_variant",
+            description=(
+                "Create a modified variant of an existing eval task. Generates a new task file "
+                "with the specified changes (different system prompt, tools, sandbox config, "
+                "dataset, scoring, etc). The variant is saved to agent_mcp/tasks/ and can be "
+                "run with run_eval."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "base_task_file": {
+                        "type": "string",
+                        "description": "Path to the base task file to modify",
+                    },
+                    "variant_name": {
+                        "type": "string",
+                        "description": "Name for the new task variant (used as filename)",
+                    },
+                    "modifications": {
+                        "type": "object",
+                        "description": (
+                            "Modifications to apply. Keys can include: "
+                            "'system_prompt' (new system prompt), "
+                            "'tools' (list of tool names to add/remove), "
+                            "'sandbox' (sandbox configuration), "
+                            "'max_messages' (agent message limit), "
+                            "'scorer' (scoring function to use), "
+                            "'dataset_args' (dataset configuration)"
+                        ),
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Description of what this variant tests",
+                    },
+                },
+                "required": ["base_task_file", "variant_name"],
+            },
+        ),
+        Tool(
+            name="write_task",
+            description=(
+                "Write a complete new inspect-ai task file. Use this to create entirely new "
+                "agentic evaluation tasks from scratch. The task should use inspect-ai's agent "
+                "framework (ReAct agent, custom tools, sandboxing, etc)."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "task_name": {
+                        "type": "string",
+                        "description": "Name for the task (used as filename, e.g. 'my_custom_task')",
+                    },
+                    "task_code": {
+                        "type": "string",
+                        "description": "Complete Python source code for the task",
+                    },
+                },
+                "required": ["task_name", "task_code"],
+            },
+        ),
+        Tool(
+            name="read_task_source",
+            description=(
+                "Read the source code of an existing task file. Useful for understanding "
+                "how a task works before creating variants or modifications."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "task_path": {
+                        "type": "string",
+                        "description": "Path to the task file to read",
+                    },
+                },
+                "required": ["task_path"],
+            },
+        ),
+        Tool(
+            name="get_inspect_docs",
+            description=(
+                "Get reference documentation for inspect-ai concepts. Helpful for writing "
+                "new tasks or understanding the framework."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "topic": {
+                        "type": "string",
+                        "enum": [
+                            "agents",
+                            "tools",
+                            "sandboxes",
+                            "scorers",
+                            "datasets",
+                            "task_structure",
+                            "mcp_tools",
+                            "react_agent",
+                        ],
+                        "description": "Topic to get documentation for",
+                    },
+                },
+                "required": ["topic"],
+            },
+        ),
+    ]
 
-    @server.list_tools()
-    async def list_tools_config():
-        return [
-            Tool(
-                name="list_tasks",
-                description=(
-                    "List all available inspect-ai evaluation tasks. Shows task name, description, "
-                    "available parameters, and file location. Includes both built-in tasks from "
-                    "this project and any tasks in the configured task directories."
-                ),
-                inputSchema={
-                    "type": "object",
-                    "properties": {
-                        "task_dir": {
-                            "type": "string",
-                            "description": "Additional directory to search for tasks. Default searches agent_mcp/tasks/.",
-                        },
-                        "include_original": {
-                            "type": "boolean",
-                            "description": "Also list tasks from the original adaptive_evals tasks/ directory. Default true.",
-                            "default": True,
-                        },
-                    },
-                },
-            ),
-            Tool(
-                name="create_task_variant",
-                description=(
-                    "Create a modified variant of an existing eval task. Generates a new task file "
-                    "with the specified changes (different system prompt, tools, sandbox config, "
-                    "dataset, scoring, etc). The variant is saved to agent_mcp/tasks/ and can be "
-                    "run with run_eval."
-                ),
-                inputSchema={
-                    "type": "object",
-                    "properties": {
-                        "base_task_file": {
-                            "type": "string",
-                            "description": "Path to the base task file to modify",
-                        },
-                        "variant_name": {
-                            "type": "string",
-                            "description": "Name for the new task variant (used as filename)",
-                        },
-                        "modifications": {
-                            "type": "object",
-                            "description": (
-                                "Modifications to apply. Keys can include: "
-                                "'system_prompt' (new system prompt), "
-                                "'tools' (list of tool names to add/remove), "
-                                "'sandbox' (sandbox configuration), "
-                                "'max_messages' (agent message limit), "
-                                "'scorer' (scoring function to use), "
-                                "'dataset_args' (dataset configuration)"
-                            ),
-                        },
-                        "description": {
-                            "type": "string",
-                            "description": "Description of what this variant tests",
-                        },
-                    },
-                    "required": ["base_task_file", "variant_name"],
-                },
-            ),
-            Tool(
-                name="write_task",
-                description=(
-                    "Write a complete new inspect-ai task file. Use this to create entirely new "
-                    "agentic evaluation tasks from scratch. The task should use inspect-ai's agent "
-                    "framework (ReAct agent, custom tools, sandboxing, etc)."
-                ),
-                inputSchema={
-                    "type": "object",
-                    "properties": {
-                        "task_name": {
-                            "type": "string",
-                            "description": "Name for the task (used as filename, e.g. 'my_custom_task')",
-                        },
-                        "task_code": {
-                            "type": "string",
-                            "description": "Complete Python source code for the task",
-                        },
-                    },
-                    "required": ["task_name", "task_code"],
-                },
-            ),
-            Tool(
-                name="read_task_source",
-                description=(
-                    "Read the source code of an existing task file. Useful for understanding "
-                    "how a task works before creating variants or modifications."
-                ),
-                inputSchema={
-                    "type": "object",
-                    "properties": {
-                        "task_path": {
-                            "type": "string",
-                            "description": "Path to the task file to read",
-                        },
-                    },
-                    "required": ["task_path"],
-                },
-            ),
-            Tool(
-                name="get_inspect_docs",
-                description=(
-                    "Get reference documentation for inspect-ai concepts. Helpful for writing "
-                    "new tasks or understanding the framework."
-                ),
-                inputSchema={
-                    "type": "object",
-                    "properties": {
-                        "topic": {
-                            "type": "string",
-                            "enum": [
-                                "agents",
-                                "tools",
-                                "sandboxes",
-                                "scorers",
-                                "datasets",
-                                "task_structure",
-                                "mcp_tools",
-                                "react_agent",
-                            ],
-                            "description": "Topic to get documentation for",
-                        },
-                    },
-                    "required": ["topic"],
-                },
-            ),
-        ]
 
-    @server.call_tool()
-    async def call_config_tool(name: str, arguments: dict) -> list[TextContent]:
-        if name == "list_tasks":
-            return await _handle_list_tasks(arguments)
-        elif name == "create_task_variant":
-            return await _handle_create_variant(arguments)
-        elif name == "write_task":
-            return await _handle_write_task(arguments)
-        elif name == "read_task_source":
-            return await _handle_read_task_source(arguments)
-        elif name == "get_inspect_docs":
-            return await _handle_get_docs(arguments)
-        return []
+async def handle_call(name: str, arguments: dict) -> list[TextContent] | None:
+    """Handle a configuration tool call. Returns None if tool name not recognized."""
+    if name == "list_tasks":
+        return await _handle_list_tasks(arguments)
+    elif name == "create_task_variant":
+        return await _handle_create_variant(arguments)
+    elif name == "write_task":
+        return await _handle_write_task(arguments)
+    elif name == "read_task_source":
+        return await _handle_read_task_source(arguments)
+    elif name == "get_inspect_docs":
+        return await _handle_get_docs(arguments)
+    return None
 
-    async def _handle_list_tasks(args: dict) -> list[TextContent]:
-        tasks = []
 
-        # Search agent_mcp/tasks
-        for py_file in TASKS_DIR.glob("*.py"):
+async def _handle_list_tasks(args: dict) -> list[TextContent]:
+    tasks = []
+
+    for py_file in TASKS_DIR.glob("*.py"):
+        if py_file.name.startswith("_"):
+            continue
+        task_info = _extract_task_info(py_file)
+        if task_info:
+            tasks.extend(task_info)
+
+    extra_dir = args.get("task_dir")
+    if extra_dir:
+        for py_file in Path(extra_dir).glob("*.py"):
             if py_file.name.startswith("_"):
                 continue
             task_info = _extract_task_info(py_file)
             if task_info:
                 tasks.extend(task_info)
 
-        # Additional task dir
-        extra_dir = args.get("task_dir")
-        if extra_dir:
-            for py_file in Path(extra_dir).glob("*.py"):
+    if args.get("include_original", True):
+        original_dir = Path(__file__).parent.parent.parent / "tasks"
+        if original_dir.exists():
+            for py_file in original_dir.glob("*.py"):
                 if py_file.name.startswith("_"):
                     continue
                 task_info = _extract_task_info(py_file)
                 if task_info:
                     tasks.extend(task_info)
 
-        # Original tasks
-        if args.get("include_original", True):
-            original_dir = Path(__file__).parent.parent.parent / "tasks"
-            if original_dir.exists():
-                for py_file in original_dir.glob("*.py"):
-                    if py_file.name.startswith("_"):
-                        continue
-                    task_info = _extract_task_info(py_file)
-                    if task_info:
-                        tasks.extend(task_info)
+    return [TextContent(type="text", text=json.dumps(tasks, indent=2, default=str))]
 
-        return [TextContent(type="text", text=json.dumps(tasks, indent=2, default=str))]
 
-    async def _handle_create_variant(args: dict) -> list[TextContent]:
-        base_path = Path(args["base_task_file"])
-        variant_name = args["variant_name"]
-        modifications = args.get("modifications", {})
-        description = args.get("description", "")
+async def _handle_create_variant(args: dict) -> list[TextContent]:
+    base_path = Path(args["base_task_file"])
+    variant_name = args["variant_name"]
+    modifications = args.get("modifications", {})
+    description = args.get("description", "")
 
-        if not base_path.exists():
-            return [TextContent(type="text", text=f"Base task not found: {base_path}")]
+    if not base_path.exists():
+        return [TextContent(type="text", text=f"Base task not found: {base_path}")]
 
-        base_code = base_path.read_text()
+    base_code = base_path.read_text()
+    variant_code = _generate_variant(base_code, variant_name, modifications, description)
 
-        # Generate variant code with modifications applied as task args
-        variant_code = _generate_variant(base_code, variant_name, modifications, description)
+    out_path = TASKS_DIR / f"{variant_name}.py"
+    out_path.write_text(variant_code)
 
-        out_path = TASKS_DIR / f"{variant_name}.py"
-        out_path.write_text(variant_code)
+    return [TextContent(
+        type="text",
+        text=f"Created task variant at: {out_path}\nRun with: run_eval(task='{out_path}', model='...')",
+    )]
 
-        return [TextContent(
-            type="text",
-            text=f"Created task variant at: {out_path}\nRun with: run_eval(task='{out_path}', model='...')",
-        )]
 
-    async def _handle_write_task(args: dict) -> list[TextContent]:
-        task_name = args["task_name"]
-        task_code = args["task_code"]
+async def _handle_write_task(args: dict) -> list[TextContent]:
+    task_name = args["task_name"]
+    task_code = args["task_code"]
 
-        out_path = TASKS_DIR / f"{task_name}.py"
-        out_path.write_text(task_code)
+    out_path = TASKS_DIR / f"{task_name}.py"
+    out_path.write_text(task_code)
 
-        return [TextContent(
-            type="text",
-            text=f"Wrote task to: {out_path}\nRun with: run_eval(task='{out_path}', model='...')",
-        )]
+    return [TextContent(
+        type="text",
+        text=f"Wrote task to: {out_path}\nRun with: run_eval(task='{out_path}', model='...')",
+    )]
 
-    async def _handle_read_task_source(args: dict) -> list[TextContent]:
-        task_path = Path(args["task_path"])
-        if not task_path.exists():
-            return [TextContent(type="text", text=f"Task file not found: {task_path}")]
-        return [TextContent(type="text", text=task_path.read_text())]
 
-    async def _handle_get_docs(args: dict) -> list[TextContent]:
-        topic = args["topic"]
-        docs = _INSPECT_DOCS.get(topic, f"No documentation available for: {topic}")
-        return [TextContent(type="text", text=docs)]
+async def _handle_read_task_source(args: dict) -> list[TextContent]:
+    task_path = Path(args["task_path"])
+    if not task_path.exists():
+        return [TextContent(type="text", text=f"Task file not found: {task_path}")]
+    return [TextContent(type="text", text=task_path.read_text())]
+
+
+async def _handle_get_docs(args: dict) -> list[TextContent]:
+    topic = args["topic"]
+    docs = _INSPECT_DOCS.get(topic, f"No documentation available for: {topic}")
+    return [TextContent(type="text", text=docs)]
 
 
 def _extract_task_info(py_file: Path) -> list[dict]:
@@ -252,15 +245,12 @@ def _extract_task_info(py_file: Path) -> list[dict]:
     tasks = []
     try:
         source = py_file.read_text()
-        # Look for @task decorated functions
         lines = source.split("\n")
         for i, line in enumerate(lines):
             if "@task" in line:
-                # Find the def line
                 for j in range(i + 1, min(i + 5, len(lines))):
                     if lines[j].strip().startswith("def "):
                         func_name = lines[j].strip().split("(")[0].replace("def ", "")
-                        # Get docstring
                         docstring = ""
                         if j + 1 < len(lines) and '"""' in lines[j + 1]:
                             doc_start = j + 1
@@ -291,10 +281,8 @@ def _generate_variant(base_code: str, variant_name: str, modifications: dict, de
         header += f"  - {k}: {v}\n"
     header += '"""\n\n'
 
-    # Add the base code with modifications injected as defaults
     code = header + base_code
 
-    # If system_prompt modification, inject it
     if "system_prompt" in modifications:
         prompt = modifications["system_prompt"].replace('"', '\\"').replace("\n", "\\n")
         code += f'\n\n# Variant system prompt override\n_VARIANT_SYSTEM_PROMPT = "{prompt}"\n'
@@ -340,15 +328,15 @@ def my_agent(custom_param: str = "default"):
 
 ## Agent Limits
 ```python
-from inspect_ai.agent import react, AgentLimits
+from inspect_ai import Task
+from inspect_ai.agent import react
 
-agent = react(
-    tools=[bash(), python()],
-    limits=AgentLimits(
-        max_messages=50,
-        max_tokens=100000,
-        max_time=300,  # seconds
-    ),
+# Message and token limits are set on the Task, not the agent
+task = Task(
+    agent=react(tools=[bash(), python()]),
+    message_limit=50,
+    token_limit=100000,
+    time_limit=300,  # seconds
 )
 ```
 """,
@@ -539,10 +527,11 @@ def my_evaluation(
         dataset=dataset,
         agent=react(
             tools=[bash(), python()],
-            max_messages=max_messages,
+            prompt=system_prompt,
         ),
         scorer=match(),
         sandbox="docker",
+        message_limit=max_messages,
     )
 ```
 
@@ -595,24 +584,23 @@ tools = mcp_tools(server, tools=["read_file", "write_file"])
 The ReAct agent is inspect-ai's built-in general-purpose agent.
 
 ```python
-from inspect_ai.agent import react, AgentLimits
+from inspect_ai import Task
+from inspect_ai.agent import react
 
 agent = react(
     # Tools available to the agent
     tools=[bash(), python(), web_search()],
 
-    # System prompt (prepended to conversation)
-    system_prompt="You are a security researcher...",
+    # Prompt (prepended to conversation)
+    prompt="You are a security researcher...",
+)
 
-    # Limits on agent execution
-    limits=AgentLimits(
-        max_messages=50,
-        max_tokens=100000,
-        max_time=300,
-    ),
-
-    # Whether to use chain-of-thought
-    chain_of_thought=True,
+# Limits are set on the Task
+task = Task(
+    agent=agent,
+    message_limit=50,
+    token_limit=100000,
+    time_limit=300,
 )
 ```
 

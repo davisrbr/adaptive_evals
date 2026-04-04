@@ -9,395 +9,400 @@ during an eval and identify patterns in failures.
 import json
 import os
 import subprocess
+import zipfile
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
 
-from mcp.server import Server
 from mcp.types import Tool, TextContent
 
 
-def register_analysis_tools(server: Server):
-    """Register analysis and Scout integration tools."""
-
-    @server.list_tools()
-    async def list_tools_analysis():
-        return [
-            Tool(
-                name="analyze_failures",
-                description=(
-                    "Analyze failure patterns in an evaluation run. Categorizes failures by type, "
-                    "extracts common patterns in agent behavior, and identifies the most informative "
-                    "failure cases. Returns a structured analysis that helps decide what to change."
-                ),
-                inputSchema={
-                    "type": "object",
-                    "properties": {
-                        "log_path": {
-                            "type": "string",
-                            "description": "Path to the eval log file to analyze",
-                        },
-                        "max_failures": {
-                            "type": "integer",
-                            "description": "Maximum number of failure cases to analyze in detail (default 10)",
-                            "default": 10,
-                        },
+def get_tools() -> list[Tool]:
+    """Return analysis tool definitions."""
+    return [
+        Tool(
+            name="analyze_failures",
+            description=(
+                "Analyze failure patterns in an evaluation run. Categorizes failures by type, "
+                "extracts common patterns in agent behavior, and identifies the most informative "
+                "failure cases. Returns a structured analysis that helps decide what to change."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "log_path": {
+                        "type": "string",
+                        "description": "Path to the eval log file to analyze",
                     },
-                    "required": ["log_path"],
-                },
-            ),
-            Tool(
-                name="summarize_eval",
-                description=(
-                    "Generate a high-level summary of an evaluation run. Includes overall scores, "
-                    "sample counts, model info, and key statistics. Good first tool to call after "
-                    "running an eval."
-                ),
-                inputSchema={
-                    "type": "object",
-                    "properties": {
-                        "log_path": {
-                            "type": "string",
-                            "description": "Path to the eval log file",
-                        },
+                    "max_failures": {
+                        "type": "integer",
+                        "description": "Maximum number of failure cases to analyze in detail (default 10)",
+                        "default": 10,
                     },
-                    "required": ["log_path"],
                 },
-            ),
-            Tool(
-                name="scan_transcripts",
-                description=(
-                    "Run Inspect Scout scanners on eval transcripts to detect issues like "
-                    "evaluation awareness, refusals, environment misconfigurations, leaked "
-                    "credentials, and other problems. Requires inspect-scout to be installed."
-                ),
-                inputSchema={
-                    "type": "object",
-                    "properties": {
-                        "log_path": {
-                            "type": "string",
-                            "description": "Path to the eval log file to scan",
-                        },
-                        "scanner": {
-                            "type": "string",
-                            "description": (
-                                "Scanner to run. Options: 'eval_awareness' (detects if agent knows it's being tested), "
-                                "'refusal' (detects safety refusals), 'env_misconfig' (detects sandbox issues), "
-                                "'credential_leak' (detects leaked secrets), 'custom' (provide custom scanner config)"
-                            ),
-                            "default": "eval_awareness",
-                        },
-                        "custom_scanner_prompt": {
-                            "type": "string",
-                            "description": "For scanner='custom': a prompt describing what to scan for",
-                        },
-                        "model": {
-                            "type": "string",
-                            "description": "Model to use for LLM-based scanning (default: uses Scout default)",
-                        },
-                    },
-                    "required": ["log_path"],
-                },
-            ),
-            Tool(
-                name="extract_agent_patterns",
-                description=(
-                    "Extract patterns from agent transcripts across samples. Identifies common "
-                    "tool usage sequences, recurring errors, and behavioral patterns. Useful for "
-                    "understanding how the agent approaches tasks systematically."
-                ),
-                inputSchema={
-                    "type": "object",
-                    "properties": {
-                        "log_path": {
-                            "type": "string",
-                            "description": "Path to the eval log file",
-                        },
-                        "pattern_type": {
-                            "type": "string",
-                            "enum": ["tool_usage", "error_patterns", "message_flow", "all"],
-                            "description": "Type of patterns to extract. Default 'all'.",
-                            "default": "all",
-                        },
-                    },
-                    "required": ["log_path"],
-                },
-            ),
-            Tool(
-                name="diff_eval_runs",
-                description=(
-                    "Compare two evaluation runs in detail. Shows which samples improved, "
-                    "regressed, or stayed the same between runs. Essential for measuring the "
-                    "impact of prompt/config changes."
-                ),
-                inputSchema={
-                    "type": "object",
-                    "properties": {
-                        "log_path_a": {
-                            "type": "string",
-                            "description": "Path to the first (baseline) eval log",
-                        },
-                        "log_path_b": {
-                            "type": "string",
-                            "description": "Path to the second (experimental) eval log",
-                        },
-                    },
-                    "required": ["log_path_a", "log_path_b"],
-                },
-            ),
-        ]
-
-    @server.call_tool()
-    async def call_analysis_tool(name: str, arguments: dict) -> list[TextContent]:
-        if name == "analyze_failures":
-            return await _handle_analyze_failures(arguments)
-        elif name == "summarize_eval":
-            return await _handle_summarize_eval(arguments)
-        elif name == "scan_transcripts":
-            return await _handle_scan_transcripts(arguments)
-        elif name == "extract_agent_patterns":
-            return await _handle_extract_patterns(arguments)
-        elif name == "diff_eval_runs":
-            return await _handle_diff_eval_runs(arguments)
-        return []
-
-    async def _handle_analyze_failures(args: dict) -> list[TextContent]:
-        log_path = Path(args["log_path"])
-        max_failures = args.get("max_failures", 10)
-
-        data = _load_log(log_path)
-        if isinstance(data, str):
-            return [TextContent(type="text", text=data)]
-
-        samples = data.get("samples", [])
-        failures = [s for s in samples if not _sample_is_correct(s)]
-
-        analysis = {
-            "total_samples": len(samples),
-            "total_failures": len(failures),
-            "failure_rate": f"{len(failures)/max(len(samples),1)*100:.1f}%",
-            "failure_details": [],
-        }
-
-        # Categorize failures
-        failure_categories: dict[str, list] = defaultdict(list)
-        for s in failures[:max_failures]:
-            detail = _extract_failure_detail(s)
-            analysis["failure_details"].append(detail)
-
-            category = detail.get("likely_cause", "unknown")
-            failure_categories[category].append(detail["sample_id"])
-
-        analysis["failure_categories"] = {k: {"count": len(v), "sample_ids": v} for k, v in failure_categories.items()}
-
-        return [TextContent(type="text", text=json.dumps(analysis, indent=2, default=str))]
-
-    async def _handle_summarize_eval(args: dict) -> list[TextContent]:
-        log_path = Path(args["log_path"])
-        data = _load_log(log_path)
-        if isinstance(data, str):
-            return [TextContent(type="text", text=data)]
-
-        eval_info = data.get("eval", {})
-        results = data.get("results", {})
-        stats = data.get("stats", {})
-        samples = data.get("samples", [])
-
-        correct = sum(1 for s in samples if _sample_is_correct(s))
-        total = len(samples)
-
-        summary = {
-            "task": eval_info.get("task", ""),
-            "model": eval_info.get("model", ""),
-            "created": eval_info.get("created", ""),
-            "total_samples": total,
-            "correct": correct,
-            "incorrect": total - correct,
-            "accuracy": f"{correct/max(total,1)*100:.1f}%",
-            "scores": results.get("scores", []),
-            "task_args": eval_info.get("task_args", {}),
-            "stats": stats,
-            "log_path": str(log_path),
-        }
-
-        return [TextContent(type="text", text=json.dumps(summary, indent=2, default=str))]
-
-    async def _handle_scan_transcripts(args: dict) -> list[TextContent]:
-        log_path = args["log_path"]
-        scanner = args.get("scanner", "eval_awareness")
-
-        # Check if inspect-scout is available
-        try:
-            result = subprocess.run(
-                ["python", "-c", "import inspect_scout; print(inspect_scout.__version__)"],
-                capture_output=True, text=True, timeout=10,
-            )
-            scout_available = result.returncode == 0
-        except Exception:
-            scout_available = False
-
-        if not scout_available:
-            return [TextContent(
-                type="text",
-                text=(
-                    "Inspect Scout is not installed. Install it with:\n"
-                    "  pip install inspect-scout\n\n"
-                    "Falling back to basic transcript analysis..."
-                ),
-            )]
-
-        # Build scout scan command
-        scanner_map = {
-            "eval_awareness": _scout_eval_awareness_config,
-            "refusal": _scout_refusal_config,
-            "env_misconfig": _scout_env_misconfig_config,
-            "credential_leak": _scout_credential_leak_config,
-            "custom": lambda prompt, model: _scout_custom_config(
-                args.get("custom_scanner_prompt", prompt), model
-            ),
-        }
-
-        model = args.get("model", "")
-        config_fn = scanner_map.get(scanner, scanner_map["eval_awareness"])
-        scanner_config = config_fn("", model)
-
-        # Write scanner config to temp file and run
-        import tempfile
-        with tempfile.NamedTemporaryFile(mode="w", suffix=".py", delete=False) as f:
-            f.write(scanner_config)
-            config_path = f.name
-
-        try:
-            cmd = f"scout scan --log-dir {log_path} --config {config_path}"
-            result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=300)
-            output = result.stdout + "\n" + result.stderr
-        except subprocess.TimeoutExpired:
-            output = "Scout scan timed out after 5 minutes"
-        finally:
-            os.unlink(config_path)
-
-        return [TextContent(type="text", text=output)]
-
-    async def _handle_extract_patterns(args: dict) -> list[TextContent]:
-        log_path = Path(args["log_path"])
-        pattern_type = args.get("pattern_type", "all")
-
-        data = _load_log(log_path)
-        if isinstance(data, str):
-            return [TextContent(type="text", text=data)]
-
-        samples = data.get("samples", [])
-        patterns: dict[str, Any] = {}
-
-        if pattern_type in ("tool_usage", "all"):
-            tool_counts: Counter = Counter()
-            tool_sequences: list[list[str]] = []
-            for s in samples:
-                seq = []
-                for msg in s.get("messages", []):
-                    if msg.get("role") == "assistant":
-                        for tc in msg.get("tool_calls", []):
-                            tool_name = tc.get("function", {}).get("name", tc.get("name", "unknown"))
-                            tool_counts[tool_name] += 1
-                            seq.append(tool_name)
-                if seq:
-                    tool_sequences.append(seq)
-            patterns["tool_usage"] = {
-                "tool_frequency": dict(tool_counts.most_common(20)),
-                "avg_tools_per_sample": sum(len(s) for s in tool_sequences) / max(len(tool_sequences), 1),
-                "example_sequences": tool_sequences[:5],
-            }
-
-        if pattern_type in ("error_patterns", "all"):
-            error_counts: Counter = Counter()
-            for s in samples:
-                for msg in s.get("messages", []):
-                    if msg.get("role") == "tool" and "error" in str(msg.get("content", "")).lower():
-                        # Extract error type
-                        content = str(msg.get("content", ""))
-                        error_type = content[:100]
-                        error_counts[error_type] += 1
-            patterns["error_patterns"] = {
-                "error_frequency": dict(error_counts.most_common(10)),
-                "total_errors": sum(error_counts.values()),
-            }
-
-        if pattern_type in ("message_flow", "all"):
-            msg_lengths = []
-            for s in samples:
-                msg_lengths.append(len(s.get("messages", [])))
-            patterns["message_flow"] = {
-                "avg_messages_per_sample": sum(msg_lengths) / max(len(msg_lengths), 1),
-                "min_messages": min(msg_lengths) if msg_lengths else 0,
-                "max_messages": max(msg_lengths) if msg_lengths else 0,
-            }
-
-        return [TextContent(type="text", text=json.dumps(patterns, indent=2, default=str))]
-
-    async def _handle_diff_eval_runs(args: dict) -> list[TextContent]:
-        data_a = _load_log(Path(args["log_path_a"]))
-        data_b = _load_log(Path(args["log_path_b"]))
-        if isinstance(data_a, str):
-            return [TextContent(type="text", text=data_a)]
-        if isinstance(data_b, str):
-            return [TextContent(type="text", text=data_b)]
-
-        samples_a = {s.get("id", str(i)): s for i, s in enumerate(data_a.get("samples", []))}
-        samples_b = {s.get("id", str(i)): s for i, s in enumerate(data_b.get("samples", []))}
-
-        common_ids = set(samples_a.keys()) & set(samples_b.keys())
-        improved = []
-        regressed = []
-        unchanged_correct = []
-        unchanged_incorrect = []
-
-        for sid in sorted(common_ids):
-            a_correct = _sample_is_correct(samples_a[sid])
-            b_correct = _sample_is_correct(samples_b[sid])
-            if not a_correct and b_correct:
-                improved.append(sid)
-            elif a_correct and not b_correct:
-                regressed.append(sid)
-            elif a_correct and b_correct:
-                unchanged_correct.append(sid)
-            else:
-                unchanged_incorrect.append(sid)
-
-        total_a_correct = sum(1 for s in data_a.get("samples", []) if _sample_is_correct(s))
-        total_b_correct = sum(1 for s in data_b.get("samples", []) if _sample_is_correct(s))
-
-        diff = {
-            "run_a": {
-                "log_path": args["log_path_a"],
-                "model": data_a.get("eval", {}).get("model", ""),
-                "accuracy": f"{total_a_correct}/{len(data_a.get('samples', []))}",
+                "required": ["log_path"],
             },
-            "run_b": {
-                "log_path": args["log_path_b"],
-                "model": data_b.get("eval", {}).get("model", ""),
-                "accuracy": f"{total_b_correct}/{len(data_b.get('samples', []))}",
+        ),
+        Tool(
+            name="summarize_eval",
+            description=(
+                "Generate a high-level summary of an evaluation run. Includes overall scores, "
+                "sample counts, model info, and key statistics. Good first tool to call after "
+                "running an eval."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "log_path": {
+                        "type": "string",
+                        "description": "Path to the eval log file",
+                    },
+                },
+                "required": ["log_path"],
             },
-            "comparison": {
-                "common_samples": len(common_ids),
-                "improved": {"count": len(improved), "sample_ids": improved},
-                "regressed": {"count": len(regressed), "sample_ids": regressed},
-                "unchanged_correct": {"count": len(unchanged_correct)},
-                "unchanged_incorrect": {"count": len(unchanged_incorrect), "sample_ids": unchanged_incorrect[:20]},
+        ),
+        Tool(
+            name="scan_transcripts",
+            description=(
+                "Run Inspect Scout scanners on eval transcripts to detect issues like "
+                "evaluation awareness, refusals, environment misconfigurations, leaked "
+                "credentials, and other problems. Requires inspect-scout to be installed."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "log_path": {
+                        "type": "string",
+                        "description": "Path to the eval log file to scan",
+                    },
+                    "scanner": {
+                        "type": "string",
+                        "description": (
+                            "Scanner to run. Options: 'eval_awareness' (detects if agent knows it's being tested), "
+                            "'refusal' (detects safety refusals), 'env_misconfig' (detects sandbox issues), "
+                            "'credential_leak' (detects leaked secrets), 'custom' (provide custom scanner config)"
+                        ),
+                        "default": "eval_awareness",
+                    },
+                    "custom_scanner_prompt": {
+                        "type": "string",
+                        "description": "For scanner='custom': a prompt describing what to scan for",
+                    },
+                    "model": {
+                        "type": "string",
+                        "description": "Model to use for LLM-based scanning (default: uses Scout default)",
+                    },
+                },
+                "required": ["log_path"],
             },
-            "only_in_a": list(set(samples_a.keys()) - common_ids)[:20],
-            "only_in_b": list(set(samples_b.keys()) - common_ids)[:20],
+        ),
+        Tool(
+            name="extract_agent_patterns",
+            description=(
+                "Extract patterns from agent transcripts across samples. Identifies common "
+                "tool usage sequences, recurring errors, and behavioral patterns. Useful for "
+                "understanding how the agent approaches tasks systematically."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "log_path": {
+                        "type": "string",
+                        "description": "Path to the eval log file",
+                    },
+                    "pattern_type": {
+                        "type": "string",
+                        "enum": ["tool_usage", "error_patterns", "message_flow", "all"],
+                        "description": "Type of patterns to extract. Default 'all'.",
+                        "default": "all",
+                    },
+                },
+                "required": ["log_path"],
+            },
+        ),
+        Tool(
+            name="diff_eval_runs",
+            description=(
+                "Compare two evaluation runs in detail. Shows which samples improved, "
+                "regressed, or stayed the same between runs. Essential for measuring the "
+                "impact of prompt/config changes."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "log_path_a": {
+                        "type": "string",
+                        "description": "Path to the first (baseline) eval log",
+                    },
+                    "log_path_b": {
+                        "type": "string",
+                        "description": "Path to the second (experimental) eval log",
+                    },
+                },
+                "required": ["log_path_a", "log_path_b"],
+            },
+        ),
+    ]
+
+
+async def handle_call(name: str, arguments: dict) -> list[TextContent] | None:
+    """Handle an analysis tool call. Returns None if tool name not recognized."""
+    if name == "analyze_failures":
+        return await _handle_analyze_failures(arguments)
+    elif name == "summarize_eval":
+        return await _handle_summarize_eval(arguments)
+    elif name == "scan_transcripts":
+        return await _handle_scan_transcripts(arguments)
+    elif name == "extract_agent_patterns":
+        return await _handle_extract_patterns(arguments)
+    elif name == "diff_eval_runs":
+        return await _handle_diff_eval_runs(arguments)
+    return None
+
+
+async def _handle_analyze_failures(args: dict) -> list[TextContent]:
+    log_path = Path(args["log_path"])
+    max_failures = args.get("max_failures", 10)
+
+    data = _load_log(log_path)
+    if isinstance(data, str):
+        return [TextContent(type="text", text=data)]
+
+    samples = data.get("samples", [])
+    failures = [s for s in samples if not _sample_is_correct(s)]
+
+    analysis = {
+        "total_samples": len(samples),
+        "total_failures": len(failures),
+        "failure_rate": f"{len(failures)/max(len(samples),1)*100:.1f}%",
+        "failure_details": [],
+    }
+
+    failure_categories: dict[str, list] = defaultdict(list)
+    for s in failures[:max_failures]:
+        detail = _extract_failure_detail(s)
+        analysis["failure_details"].append(detail)
+
+        category = detail.get("likely_cause", "unknown")
+        failure_categories[category].append(detail["sample_id"])
+
+    analysis["failure_categories"] = {k: {"count": len(v), "sample_ids": v} for k, v in failure_categories.items()}
+
+    return [TextContent(type="text", text=json.dumps(analysis, indent=2, default=str))]
+
+
+async def _handle_summarize_eval(args: dict) -> list[TextContent]:
+    log_path = Path(args["log_path"])
+    data = _load_log(log_path)
+    if isinstance(data, str):
+        return [TextContent(type="text", text=data)]
+
+    eval_info = data.get("eval", {})
+    results = data.get("results", {})
+    stats = data.get("stats", {})
+    samples = data.get("samples", [])
+
+    correct = sum(1 for s in samples if _sample_is_correct(s))
+    total = len(samples)
+
+    summary = {
+        "task": eval_info.get("task", ""),
+        "model": eval_info.get("model", ""),
+        "created": eval_info.get("created", ""),
+        "total_samples": total,
+        "correct": correct,
+        "incorrect": total - correct,
+        "accuracy": f"{correct/max(total,1)*100:.1f}%",
+        "scores": results.get("scores", []),
+        "task_args": eval_info.get("task_args", {}),
+        "stats": stats,
+        "log_path": str(log_path),
+    }
+
+    return [TextContent(type="text", text=json.dumps(summary, indent=2, default=str))]
+
+
+async def _handle_scan_transcripts(args: dict) -> list[TextContent]:
+    log_path = args["log_path"]
+    scanner = args.get("scanner", "eval_awareness")
+
+    try:
+        result = subprocess.run(
+            ["python", "-c", "import inspect_scout; print(inspect_scout.__version__)"],
+            capture_output=True, text=True, timeout=10,
+        )
+        scout_available = result.returncode == 0
+    except Exception:
+        scout_available = False
+
+    if not scout_available:
+        return [TextContent(
+            type="text",
+            text=(
+                "Inspect Scout is not installed. Install it with:\n"
+                "  pip install inspect-scout\n\n"
+                "Falling back to basic transcript analysis..."
+            ),
+        )]
+
+    scanner_map = {
+        "eval_awareness": _scout_eval_awareness_config,
+        "refusal": _scout_refusal_config,
+        "env_misconfig": _scout_env_misconfig_config,
+        "credential_leak": _scout_credential_leak_config,
+        "custom": lambda prompt, model: _scout_custom_config(
+            args.get("custom_scanner_prompt", prompt), model
+        ),
+    }
+
+    model = args.get("model", "")
+    config_fn = scanner_map.get(scanner, scanner_map["eval_awareness"])
+    scanner_config = config_fn("", model)
+
+    import tempfile
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".py", delete=False) as f:
+        f.write(scanner_config)
+        config_path = f.name
+
+    try:
+        cmd = f"scout scan --log-dir {log_path} --config {config_path}"
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=300)
+        output = result.stdout + "\n" + result.stderr
+    except subprocess.TimeoutExpired:
+        output = "Scout scan timed out after 5 minutes"
+    finally:
+        os.unlink(config_path)
+
+    return [TextContent(type="text", text=output)]
+
+
+async def _handle_extract_patterns(args: dict) -> list[TextContent]:
+    log_path = Path(args["log_path"])
+    pattern_type = args.get("pattern_type", "all")
+
+    data = _load_log(log_path)
+    if isinstance(data, str):
+        return [TextContent(type="text", text=data)]
+
+    samples = data.get("samples", [])
+    patterns: dict[str, Any] = {}
+
+    if pattern_type in ("tool_usage", "all"):
+        tool_counts: Counter = Counter()
+        tool_sequences: list[list[str]] = []
+        for s in samples:
+            seq = []
+            for msg in s.get("messages", []):
+                if msg.get("role") == "assistant":
+                    for tc in msg.get("tool_calls", []):
+                        tool_name = tc.get("function", {}).get("name", tc.get("name", "unknown"))
+                        tool_counts[tool_name] += 1
+                        seq.append(tool_name)
+            if seq:
+                tool_sequences.append(seq)
+        patterns["tool_usage"] = {
+            "tool_frequency": dict(tool_counts.most_common(20)),
+            "avg_tools_per_sample": sum(len(s) for s in tool_sequences) / max(len(tool_sequences), 1),
+            "example_sequences": tool_sequences[:5],
         }
 
-        return [TextContent(type="text", text=json.dumps(diff, indent=2, default=str))]
+    if pattern_type in ("error_patterns", "all"):
+        error_counts: Counter = Counter()
+        for s in samples:
+            for msg in s.get("messages", []):
+                if msg.get("role") == "tool" and "error" in str(msg.get("content", "")).lower():
+                    content = str(msg.get("content", ""))
+                    error_type = content[:100]
+                    error_counts[error_type] += 1
+        patterns["error_patterns"] = {
+            "error_frequency": dict(error_counts.most_common(10)),
+            "total_errors": sum(error_counts.values()),
+        }
+
+    if pattern_type in ("message_flow", "all"):
+        msg_lengths = []
+        for s in samples:
+            msg_lengths.append(len(s.get("messages", [])))
+        patterns["message_flow"] = {
+            "avg_messages_per_sample": sum(msg_lengths) / max(len(msg_lengths), 1),
+            "min_messages": min(msg_lengths) if msg_lengths else 0,
+            "max_messages": max(msg_lengths) if msg_lengths else 0,
+        }
+
+    return [TextContent(type="text", text=json.dumps(patterns, indent=2, default=str))]
+
+
+async def _handle_diff_eval_runs(args: dict) -> list[TextContent]:
+    data_a = _load_log(Path(args["log_path_a"]))
+    data_b = _load_log(Path(args["log_path_b"]))
+    if isinstance(data_a, str):
+        return [TextContent(type="text", text=data_a)]
+    if isinstance(data_b, str):
+        return [TextContent(type="text", text=data_b)]
+
+    samples_a = {s.get("id", str(i)): s for i, s in enumerate(data_a.get("samples", []))}
+    samples_b = {s.get("id", str(i)): s for i, s in enumerate(data_b.get("samples", []))}
+
+    common_ids = set(samples_a.keys()) & set(samples_b.keys())
+    improved = []
+    regressed = []
+    unchanged_correct = []
+    unchanged_incorrect = []
+
+    for sid in sorted(common_ids):
+        a_correct = _sample_is_correct(samples_a[sid])
+        b_correct = _sample_is_correct(samples_b[sid])
+        if not a_correct and b_correct:
+            improved.append(sid)
+        elif a_correct and not b_correct:
+            regressed.append(sid)
+        elif a_correct and b_correct:
+            unchanged_correct.append(sid)
+        else:
+            unchanged_incorrect.append(sid)
+
+    total_a_correct = sum(1 for s in data_a.get("samples", []) if _sample_is_correct(s))
+    total_b_correct = sum(1 for s in data_b.get("samples", []) if _sample_is_correct(s))
+
+    diff = {
+        "run_a": {
+            "log_path": args["log_path_a"],
+            "model": data_a.get("eval", {}).get("model", ""),
+            "accuracy": f"{total_a_correct}/{len(data_a.get('samples', []))}",
+        },
+        "run_b": {
+            "log_path": args["log_path_b"],
+            "model": data_b.get("eval", {}).get("model", ""),
+            "accuracy": f"{total_b_correct}/{len(data_b.get('samples', []))}",
+        },
+        "comparison": {
+            "common_samples": len(common_ids),
+            "improved": {"count": len(improved), "sample_ids": improved},
+            "regressed": {"count": len(regressed), "sample_ids": regressed},
+            "unchanged_correct": {"count": len(unchanged_correct)},
+            "unchanged_incorrect": {"count": len(unchanged_incorrect), "sample_ids": unchanged_incorrect[:20]},
+        },
+        "only_in_a": list(set(samples_a.keys()) - common_ids)[:20],
+        "only_in_b": list(set(samples_b.keys()) - common_ids)[:20],
+    }
+
+    return [TextContent(type="text", text=json.dumps(diff, indent=2, default=str))]
 
 
 def _load_log(path: Path) -> dict | str:
+    """Load an inspect-ai .eval log (zip archive with header.json and samples/)."""
     if not path.exists():
         return f"Log file not found: {path}"
     try:
-        with open(path) as f:
-            return json.load(f)
-    except (json.JSONDecodeError, OSError) as e:
+        with zipfile.ZipFile(path) as z:
+            data = json.loads(z.read("header.json"))
+            samples = []
+            for name in z.namelist():
+                if name.startswith("samples/") and name.endswith(".json"):
+                    samples.append(json.loads(z.read(name)))
+            data["samples"] = samples
+            return data
+    except (zipfile.BadZipFile, KeyError, json.JSONDecodeError, OSError) as e:
         return f"Error reading log: {e}"
 
 
@@ -422,7 +427,6 @@ def _extract_failure_detail(sample: dict) -> dict:
         "message_count": len(messages),
     }
 
-    # Try to identify likely cause
     last_assistant = ""
     tool_errors = []
     for msg in messages:

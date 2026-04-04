@@ -7,7 +7,7 @@ Tests information retrieval, reasoning, and synthesis capabilities.
 """
 
 from inspect_ai import Task, task
-from inspect_ai.agent import react, AgentLimits
+from inspect_ai.agent import react
 from inspect_ai.dataset import MemoryDataset, Sample
 from inspect_ai.scorer import model_graded_qa
 from inspect_ai.tool import bash, python, web_search
@@ -110,11 +110,9 @@ def research_qa(
         dataset=MemoryDataset(samples),
         agent=react(
             tools=tools,
-            system_prompt=system_prompt,
-            limits=AgentLimits(
-                max_messages=max_messages,
-                max_tokens=max_tokens,
-            ),
+            prompt=system_prompt,
         ),
         scorer=model_graded_qa(**scorer_kwargs),
+        message_limit=max_messages,
+        token_limit=max_tokens,
     )

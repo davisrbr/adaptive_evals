@@ -11,29 +11,46 @@ Usage:
 """
 
 import asyncio
-import json
 import logging
 import sys
 
 from mcp.server import Server
-from mcp.server.stdio import run_stdio
+from mcp.server.stdio import stdio_server
 
-from .tools_discovery import register_discovery_tools
-from .tools_execution import register_execution_tools
-from .tools_analysis import register_analysis_tools
-from .tools_configuration import register_configuration_tools
+from . import tools_discovery
+from . import tools_execution
+from . import tools_analysis
+from . import tools_configuration
 
 logger = logging.getLogger(__name__)
+
+# All tool modules that provide get_tools() and handle_call()
+_TOOL_MODULES = [
+    tools_discovery,
+    tools_execution,
+    tools_analysis,
+    tools_configuration,
+]
 
 
 def create_server() -> Server:
     """Create and configure the MCP server with all tool groups."""
     server = Server("adaptive-eval-agent")
 
-    register_discovery_tools(server)
-    register_execution_tools(server)
-    register_analysis_tools(server)
-    register_configuration_tools(server)
+    @server.list_tools()
+    async def list_all_tools():
+        tools = []
+        for module in _TOOL_MODULES:
+            tools.extend(module.get_tools())
+        return tools
+
+    @server.call_tool()
+    async def call_tool(name: str, arguments: dict):
+        for module in _TOOL_MODULES:
+            result = await module.handle_call(name, arguments)
+            if result is not None:
+                return result
+        return []
 
     return server
 
@@ -42,7 +59,12 @@ async def main():
     logging.basicConfig(level=logging.INFO, stream=sys.stderr)
     server = create_server()
     logger.info("Starting adaptive-eval-agent MCP server")
-    await run_stdio(server)
+    async with stdio_server() as (read_stream, write_stream):
+        await server.run(
+            read_stream,
+            write_stream,
+            server.create_initialization_options(),
+        )
 
 
 if __name__ == "__main__":

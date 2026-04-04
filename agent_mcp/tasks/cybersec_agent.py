@@ -10,9 +10,9 @@ eval MCP server can run, re-run with modifications, and analyze.
 """
 
 from inspect_ai import Task, task
-from inspect_ai.agent import react, AgentLimits
+from inspect_ai.agent import react
 from inspect_ai.dataset import MemoryDataset, Sample
-from inspect_ai.scorer import includes, scorer, Score, Target, CORRECT, INCORRECT
+from inspect_ai.scorer import includes, scorer, accuracy, Score, Scorer, Target, CORRECT, INCORRECT
 from inspect_ai.tool import bash, python
 
 
@@ -108,8 +108,8 @@ _CHALLENGES = {
 }
 
 
-@scorer
-def flag_scorer():
+@scorer(metrics=[accuracy()])
+def flag_scorer() -> Scorer:
     """Score based on whether the agent found the correct flag."""
     async def score(state, target: Target) -> Score:
         completion = state.output.completion
@@ -156,12 +156,10 @@ def cybersec_ctf(
         dataset=dataset,
         agent=react(
             tools=[bash(timeout=30), python(timeout=30)],
-            system_prompt=system_prompt,
-            limits=AgentLimits(
-                max_messages=max_messages,
-                max_tokens=max_tokens,
-            ),
+            prompt=system_prompt,
         ),
         scorer=flag_scorer(),
         sandbox="docker",
+        message_limit=max_messages,
+        token_limit=max_tokens,
     )

@@ -7,9 +7,9 @@ test code in a sandboxed environment.
 """
 
 from inspect_ai import Task, task
-from inspect_ai.agent import react, AgentLimits
+from inspect_ai.agent import react
 from inspect_ai.dataset import MemoryDataset, Sample
-from inspect_ai.scorer import scorer, Score, Target, CORRECT, INCORRECT
+from inspect_ai.scorer import scorer, accuracy, Score, Scorer, Target, CORRECT, INCORRECT
 from inspect_ai.tool import bash, python
 
 
@@ -86,8 +86,8 @@ _CHALLENGES = [
 ]
 
 
-@scorer
-def output_file_scorer():
+@scorer(metrics=[accuracy()])
+def output_file_scorer() -> Scorer:
     """Score based on the contents of /tmp/solution_output.txt."""
     async def score(state, target: Target) -> Score:
         # Check agent's output for the solution
@@ -137,12 +137,10 @@ def coding_challenge(
         dataset=MemoryDataset(samples),
         agent=react(
             tools=[bash(timeout=60), python(timeout=60)],
-            system_prompt=system_prompt,
-            limits=AgentLimits(
-                max_messages=max_messages,
-                max_tokens=max_tokens,
-            ),
+            prompt=system_prompt,
         ),
         scorer=output_file_scorer(),
         sandbox="docker",
+        message_limit=max_messages,
+        token_limit=max_tokens,
     )
