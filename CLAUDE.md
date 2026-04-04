@@ -72,7 +72,7 @@ The loop is complete when EITHER:
 - **Environment variables**: Set in sandbox config or compose files
 - **Message/token limits**: `message_limit=N`, `token_limit=N` on the Task
 
-Example task structure:
+### Simple task (no sandbox)
 ```python
 from inspect_ai import Task, task
 from inspect_ai.dataset import Sample, MemoryDataset
@@ -108,6 +108,48 @@ def my_task():
         scorer=my_scorer(),
         message_limit=15,
     )
+```
+
+### Task with custom Docker sandbox
+
+To modify the sandbox environment (install packages, change the Docker image,
+set env vars), pass `sandbox_files` to `write_task`. This creates a subdirectory
+with the task + supporting files:
+
+```python
+# Call write_task with:
+#   task_name: "my_sandbox_task"
+#   task_code: <the Python code below>
+#   sandbox_files: {
+#     "Dockerfile": "FROM python:3.12-slim\nRUN pip install numpy pandas\nWORKDIR /app\nCMD [\"tail\", \"-f\", \"/dev/null\"]\n",
+#     "compose.yaml": "services:\n  default:\n    build:\n      context: .\n      dockerfile: Dockerfile\n    init: true\n    command: tail -f /dev/null\n    environment:\n      - MY_VAR=hello\n"
+#   }
+
+from inspect_ai import Task, task
+from inspect_ai.agent import react
+from inspect_ai.tool import bash, python
+from inspect_ai.dataset import MemoryDataset, Sample
+from inspect_ai.scorer import match
+
+@task
+def my_sandbox_task():
+    return Task(
+        dataset=MemoryDataset([
+            Sample(input="Check that numpy is installed", target="numpy"),
+        ]),
+        agent=react(tools=[bash(), python()]),
+        scorer=match(),
+        sandbox=("docker", "compose.yaml"),  # resolves relative to this file
+        message_limit=15,
+    )
+```
+
+This writes:
+```
+tasks/my_sandbox_task/
+├── task.py
+├── Dockerfile
+└── compose.yaml
 ```
 
 ## Key Principles

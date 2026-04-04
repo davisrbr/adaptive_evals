@@ -80,20 +80,35 @@ def get_tools() -> list[Tool]:
         Tool(
             name="write_task",
             description=(
-                "Write a complete new inspect-ai task file. Use this to create entirely new "
-                "agentic evaluation tasks from scratch. The task should use inspect-ai's agent "
-                "framework (ReAct agent, custom tools, sandboxing, etc)."
+                "Write a complete new inspect-ai task file, plus any supporting files "
+                "(Dockerfile, compose.yaml, scripts, etc). Use this to create entirely new "
+                "agentic evaluation tasks from scratch. The task can use inspect-ai's agent "
+                "framework (ReAct agent, custom tools, sandboxing, etc).\n\n"
+                "When sandbox_files are provided, the task is written to a subdirectory: "
+                "tasks/<task_name>/task.py with supporting files alongside it. The task code "
+                "can reference these files with relative paths, e.g. sandbox=('docker', 'compose.yaml').\n\n"
+                "When no sandbox_files are provided, the task is written directly to "
+                "tasks/<task_name>.py (flat, like before)."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {
                     "task_name": {
                         "type": "string",
-                        "description": "Name for the task (used as filename, e.g. 'my_custom_task')",
+                        "description": "Name for the task (used as filename/directory, e.g. 'my_custom_task')",
                     },
                     "task_code": {
                         "type": "string",
                         "description": "Complete Python source code for the task",
+                    },
+                    "sandbox_files": {
+                        "type": "object",
+                        "description": (
+                            "Optional dict of supporting files to write alongside the task. "
+                            "Keys are filenames (e.g. 'Dockerfile', 'compose.yaml', 'setup.sh'), "
+                            "values are file contents. These are written to the same directory as the task."
+                        ),
+                        "additionalProperties": {"type": "string"},
                     },
                 },
                 "required": ["task_name", "task_code"],
@@ -164,9 +179,16 @@ async def handle_call(name: str, arguments: dict) -> list[TextContent] | None:
 async def _handle_list_tasks(args: dict) -> list[TextContent]:
     tasks = []
 
+    # Flat tasks: tasks/*.py
     for py_file in TASKS_DIR.glob("*.py"):
         if py_file.name.startswith("_"):
             continue
+        task_info = _extract_task_info(py_file)
+        if task_info:
+            tasks.extend(task_info)
+
+    # Subdirectory tasks: tasks/*/task.py (created by write_task with sandbox_files)
+    for py_file in TASKS_DIR.glob("*/task.py"):
         task_info = _extract_task_info(py_file)
         if task_info:
             tasks.extend(task_info)
@@ -217,14 +239,37 @@ async def _handle_create_variant(args: dict) -> list[TextContent]:
 async def _handle_write_task(args: dict) -> list[TextContent]:
     task_name = args["task_name"]
     task_code = args["task_code"]
+    sandbox_files = args.get("sandbox_files")
 
-    out_path = TASKS_DIR / f"{task_name}.py"
-    out_path.write_text(task_code)
+    if sandbox_files:
+        # Write to a subdirectory so supporting files sit next to the task
+        task_dir = TASKS_DIR / task_name
+        task_dir.mkdir(parents=True, exist_ok=True)
+        out_path = task_dir / "task.py"
+        out_path.write_text(task_code)
 
-    return [TextContent(
-        type="text",
-        text=f"Wrote task to: {out_path}\nRun with: run_eval(task='{out_path}', model='...')",
-    )]
+        written = [str(out_path)]
+        for filename, content in sandbox_files.items():
+            file_path = task_dir / filename
+            file_path.write_text(content)
+            written.append(str(file_path))
+
+        return [TextContent(
+            type="text",
+            text=(
+                f"Wrote task to: {out_path}\n"
+                f"Supporting files: {', '.join(written[1:])}\n"
+                f"Run with: run_eval(task='{out_path}', model='...')"
+            ),
+        )]
+    else:
+        out_path = TASKS_DIR / f"{task_name}.py"
+        out_path.write_text(task_code)
+
+        return [TextContent(
+            type="text",
+            text=f"Wrote task to: {out_path}\nRun with: run_eval(task='{out_path}', model='...')",
+        )]
 
 
 async def _handle_read_task_source(args: dict) -> list[TextContent]:
