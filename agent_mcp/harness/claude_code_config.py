@@ -76,7 +76,7 @@ The loop is complete when EITHER:
 - The user tells you to stop
 
 The loop is NOT complete when:
-- You have scan results but haven't created new eval samples yet
+- You have scan results but haven't created and run new eval samples or the same samples in a new environment yet
 - You have hypotheses but haven't tested them
 - You confirmed a hypothesis but haven't refined it into a more precise one
 
