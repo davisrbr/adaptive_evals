@@ -59,6 +59,7 @@ data/*.ipynb
 # Logs and Inspect artifacts
 *.eval
 *.log
+scans/
 
 # ds-featurization generated outputs
 ds-featurization/**/*.csv
