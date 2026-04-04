@@ -154,3 +154,60 @@ def behavioral_tags():
             allow_none=True,
         ),
     )
+
+
+# ---------------------------------------------------------------------------
+# 7. Environment vs agent failure — critical for Docker/sandbox-heavy evals
+# ---------------------------------------------------------------------------
+
+@scanner(messages="all")
+def environment_vs_agent():
+    """Distinguish infrastructure failures from genuine agent capability failures."""
+    return llm_scanner(
+        question=(
+            "Did this agent fail because of an environment or infrastructure issue, "
+            "or because of a genuine reasoning/capability limitation? "
+            "Environment issues include: missing dependencies, permission denied, "
+            "Docker errors, timeout without progress, test harness bugs, file not "
+            "found for expected resources, network errors, sandbox misconfiguration. "
+            "Agent failures include: wrong approach to the problem, incorrect code, "
+            "misunderstanding the task, poor debugging strategy, giving up too early, "
+            "making the wrong edit. "
+            "If the agent succeeded, classify as 'success'."
+        ),
+        answer=[
+            "environment_issue: Failed due to infrastructure/setup problem",
+            "agent_failure: Failed due to genuine capability limitation",
+            "agent_gave_up: Agent stopped trying before exhausting options",
+            "ambiguous: Cannot clearly distinguish cause from transcript",
+            "success: Agent completed the task successfully",
+        ],
+    )
+
+
+# ---------------------------------------------------------------------------
+# 8. Patch quality — for code editing evals (SWE-Bench, etc.)
+# ---------------------------------------------------------------------------
+
+@scanner(messages="all")
+def patch_quality():
+    """Evaluate the quality of code changes in the transcript."""
+    return llm_scanner(
+        question=(
+            "If the agent made code changes (patches, edits, file writes) in this "
+            "transcript, evaluate the quality. Consider: Does the change address "
+            "the root cause or just symptoms? Is it a minimal, targeted fix or "
+            "does it over-modify? Does the agent test its changes? Does the agent "
+            "understand the codebase structure before editing? "
+            "If no code changes were made, classify as 'no_code_changes'."
+        ),
+        answer=[
+            "root_cause_fix: Correctly identifies and fixes the underlying issue",
+            "symptom_fix: Patches the symptom but not the root cause",
+            "over_modification: Changes more than necessary, risking side effects",
+            "wrong_file: Edits the wrong file or wrong location",
+            "incomplete: Partially correct but missing something",
+            "no_code_changes: Agent didn't make any code edits",
+            "made_it_worse: Changes introduced new problems",
+        ],
+    )
