@@ -1,0 +1,8 @@
+# Docker Compose for inspect-ai sandboxed agent evals
+services:
+  default:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    init: true
+    command: tail -f /dev/null

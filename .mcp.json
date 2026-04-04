@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "adaptive-eval-agent": {
+      "command": "python",
+      "args": ["-m", "agent_mcp.server.main"],
+      "env": {
+        "INSPECT_LOG_DIR": "./logs"
+      }
+    }
+  }
+}
