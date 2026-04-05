@@ -251,6 +251,7 @@ async def _handle_write_task(args: dict) -> list[TextContent]:
         written = [str(out_path)]
         for filename, content in sandbox_files.items():
             file_path = task_dir / filename
+            file_path.parent.mkdir(parents=True, exist_ok=True)
             file_path.write_text(content)
             written.append(str(file_path))
 
