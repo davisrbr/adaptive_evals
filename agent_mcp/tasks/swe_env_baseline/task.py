@@ -88,7 +88,7 @@ def swe_env_sensitivity():
     """SWE-Bench-style eval testing environment sensitivity."""
     return Task(
         dataset=MemoryDataset(SAMPLES),
-        agent=react(
+        solver=react(
             tools=[bash(timeout=60), python(timeout=60), think()],
             prompt=(
                 "You are an expert software engineer. Fix the bug described below. "
