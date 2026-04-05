@@ -160,6 +160,120 @@ Based on the SWE-Bench run, we made two changes to the default scanner suite:
 
 ---
 
+## Results: SWE Environment Sensitivity — Regex File Editing Failure
+
+### What we did
+
+We ran gpt-4o as a ReAct agent against small, controlled bug-fix tasks in
+Docker sandboxes. Unlike the SWE-Bench Verified instances above (which use
+real repo snapshots), these are minimal testbed files with single-function bugs
+and focused unit tests. The goal: find *specific, reliably triggerable* failure
+modes in how gpt-4o edits code via bash tools.
+
+### The loop
+
+```
+ Round 1: Baseline (4 samples, message_limit=20)
+   │
+   │  CRITICAL BUG FOUND: task.py used `agent=react(...)` instead of
+   │  `solver=react(...)`. The Task() constructor silently ignored the
+   │  unknown kwarg and fell back to `solver=generate()` with no tools.
+   │  Result: 0% accuracy — model generated text advice, never used
+   │  bash/python tools.
+   │
+   │  Fix: agent= → solver=
+   │
+   ▼
+ Round 1b: Baseline re-run (4 samples)
+   │  50% accuracy (2/4 pass)
+   │
+   │  ✓ division_by_zero_fix — passed (17 msgs, wasted turns on vim/nano)
+   │  ✓ data_merge_fix — passed (15 msgs, clean fix)
+   │  ✗ recursive_glob_fix — hit 20 msg limit, diagnosed bug but got stuck
+   │    in investigation loop without applying the fix
+   │  ✗ unicode_handling_fix — hit 20 msg limit, tried nano (unavailable),
+   │    then had SyntaxError from bad sed-style inline replacement
+   │
+   │  Hypotheses:
+   │  H1: Model tries vim/nano instead of heredoc/python, wasting turns
+   │  H2: Model over-investigates instead of applying obvious fixes
+   │  H3: Model struggles with regex/special-char edits via bash
+   │
+   ▼
+ Round 2: Hypothesis test (4 new samples)
+   │  75% accuracy (3/4 pass)
+   │
+   │  ✓ csv_quoted_fields_fix (H1 trigger) — passed despite initial
+   │    SyntaxError from bad sed; recovered by rewriting file via python
+   │  ✓ list_format_fix (H2 trigger) — passed efficiently (11 msgs)
+   │  ✓ word_count_case_fix (control) — passed as expected
+   │  ✗ email_regex_fix (H3 trigger) — hit 20 msg limit; model fixed
+   │    the subdomain part of the regex but could NOT write "+" into
+   │    the regex pattern via bash — the plus sign kept getting mangled
+   │
+   │  H1 PARTIALLY CONFIRMED: model hits SyntaxErrors from inline
+   │    replacement but can recover by using python tool
+   │  H2 REJECTED: model was efficient on obvious fixes (11 msgs)
+   │  H3 CONFIRMED: regex editing via bash is the bottleneck
+   │
+   │  Refined hypothesis: "gpt-4o fails to edit Python files containing
+   │  regex patterns via bash because shell metacharacters corrupt the
+   │  regex syntax"
+   │
+   ▼
+ Round 3: Regex depth (3 samples, all regex-editing tasks)
+   │  0% accuracy (0/3 pass)
+   │
+   │  ✗ url_regex_special_chars (H3a: ?, #, & in pattern) — hit msg
+   │    limit, regex never included query/fragment chars correctly
+   │  ✗ log_level_case_fix (H3b: case-insensitive flag + normalization)
+   │    — SyntaxError: "\n" literal in bash output corrupted the file
+   │  ✗ phone_format_fix (H3c control: simple digits-only regex) —
+   │    hit msg limit, model couldn't write the alternative pattern
+   │    via bash even though no special chars were involved
+   │
+   │  H3a CONFIRMED: special chars in regex are mangled by bash
+   │  H3b CONFIRMED: multi-line edits produce \n literal SyntaxErrors
+   │  H3c SURPRISINGLY CONFIRMED: even "simple" regex fails — the
+   │    issue is broader than shell metacharacters
+```
+
+### The key finding
+
+**gpt-4o consistently fails to edit Python files containing regex patterns via
+bash commands.** The failure manifests in three ways:
+
+1. **Shell metacharacter mangling:** Characters like `+`, `?`, `#`, `&` in regex
+   patterns are interpreted by the shell (bash) instead of being written
+   literally to the file.
+
+2. **`\n` literal corruption:** When using `sed` or `echo` to write multi-line
+   edits, the model produces `\n` as literal characters in the Python source,
+   causing `SyntaxError: unexpected character after line continuation character`.
+
+3. **Repeated failed attempts:** The model recognizes the correct regex fix but
+   cannot apply it. It typically tries 2-3 different bash-based approaches
+   (sed, echo, heredoc), each producing a different kind of corruption, until
+   it hits the message limit.
+
+This is **not a reasoning failure** — the model correctly identifies what the
+regex should be. It's a **tool-use failure** — the model cannot reliably
+serialize regex patterns through bash. The model has access to a `python()` tool
+that could write files via `open().write()`, and when it uses that approach
+(as in the CSV sample in Round 2), it succeeds. But it defaults to bash for
+file editing and gets stuck there.
+
+### Implications
+
+1. **Prompt intervention:** Adding "Use the python tool to write files, not bash
+   sed/echo" to the system prompt would likely fix this class of failures.
+2. **Tool design:** Providing a dedicated `write_file()` tool that doesn't go
+   through shell interpretation would eliminate the failure entirely.
+3. **Eval design:** Regex-editing tasks are a reliable discriminator for
+   bash-vs-python tool selection in coding agents.
+
+---
+
 ## Architecture
 
 ### How it runs
@@ -310,6 +424,9 @@ adaptive_evals/
     ├── tasks/                         # inspect-ai evaluation tasks
     │   ├── function_calling_          #   BFCL-derived robustness eval
     │   │     robustness.py            #   (33 samples, 3 rounds of iteration)
+    │   ├── swe_env_baseline/          #   SWE-style bug-fix eval (Docker sandbox)
+    │   ├── swe_hypothesis_test/       #   Round 2: tool confusion & regex tests
+    │   ├── swe_regex_depth/           #   Round 3: regex editing deep dive
     │   ├── research_qa_v2.py          #   Computation-focused QA
     │   ├── research_agent.py          #   Research QA with web tools
     │   ├── coding_agent.py            #   Programming challenges
